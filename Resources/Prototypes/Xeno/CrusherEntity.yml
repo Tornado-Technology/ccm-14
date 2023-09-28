@@ -4,7 +4,7 @@
   id: MobCrusherXeno
   components:
     - type: Crusher
-    - Type: Xeno
+    - type: Xeno
 
 
 
