@@ -1,0 +1,83 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "...",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "blue_corner_ne"
+        },
+        {
+            "name": "blue_corner_nw"
+        },
+        {
+            "name": "blue_corner_se"
+        },
+        {
+            "name": "blue_corner_sw"
+        },
+        {
+            "name": "blue_inner_ne"
+        },
+        {
+            "name": "blue_inner_nw"
+        },
+        {
+            "name": "blue_inner_se"
+        },
+        {
+            "name": "blue_inner_sw"
+        },
+        {
+            "name": "blue_line_e"
+        },
+        {
+            "name": "blue_line_n"
+        },
+        {
+            "name": "blue_line_s"
+        },
+        {
+            "name": "blue_line_w"
+        },
+        {
+            "name": "red_corner_ne"
+        },
+        {
+            "name": "red_corner_nw"
+        },
+        {
+            "name": "red_corner_se"
+        },
+        {
+            "name": "red_corner_sw"
+        },
+        {
+            "name": "red_inner_ne"
+        },
+        {
+            "name": "red_inner_nw"
+        },
+        {
+            "name": "red_inner_se"
+        },
+        {
+            "name": "red_inner_sw"
+        },
+        {
+            "name": "red_line_e"
+        },
+        {
+            "name": "red_line_n"
+        },
+        {
+            "name": "red_line_s"
+        },
+        {
+            "name": "red_line_w"
+        }
+    ]
+}

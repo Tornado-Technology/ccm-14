@@ -1,0 +1,122 @@
+- type: entity
+  parent: BaseWall
+  id: CMWallHull
+  name: hull wall
+  components:
+    - type: Tag
+      tags:
+        - Wall
+        - RCDDeconstructWhitelist
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull.rsi
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull.rsi
+#    - type: Construction
+#      graph: Girder
+#      node: hullWall
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 600
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/metalbreak.ogg
+            - !type:ChangeConstructionNodeBehavior
+              node: girder
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull
+
+- type: entity
+  parent: BaseWall
+  id: CMWallHullEvac
+  name: hull wall
+  components:
+    - type: Tag
+      tags:
+        - Wall
+        - RCDDeconstructWhitelist
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+#    - type: Construction
+#      graph: Girder
+#      node: hullEvacWall
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 600
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/metalbreak.ogg
+            - !type:ChangeConstructionNodeBehavior
+              node: girder
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull_evac
+
+- type: entity
+  parent: BaseWall
+  id: CMWallHullLab
+  name: hull wall
+  components:
+    - type: Tag
+      tags:
+        - Wall
+        - RCDDeconstructWhitelist
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull_lab.rsi
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull_lab.rsi
+#    - type: Construction
+#      graph: Girder
+#      node: hullLabWall
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 600
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/metalbreak.ogg
+            - !type:ChangeConstructionNodeBehavior
+              node: girder
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull_lab

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "...",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "logo1"
+    },
+    {
+      "name": "logo2"
+    },
+    {
+      "name": "logo3"
+    },
+    {
+      "name": "logo4"
+    },
+    {
+      "name": "logo5"
+    },
+    {
+      "name": "logo6"
+    },
+    {
+      "name": "logo7"
+    },
+    {
+      "name": "logo8"
+    },
+    {
+      "name": "logo9"
+    }
+  ]
+}

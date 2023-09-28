@@ -101,3 +101,19 @@
   rules:
     - Pirates
     - BasicStationEventScheduler
+
+# custom main marine preset
+- type: gamePreset
+  id: Xeno
+  alias:
+    - xeno
+    - xenos
+    - Xenos
+    - xenomorphs
+    - Xenomorphs
+  name: xeno-title
+  description: xeno-description
+  showInVote: false
+  rules:
+    - Xeno
+    - BasicStationEventScheduler
