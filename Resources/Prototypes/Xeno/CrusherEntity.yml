@@ -5,6 +5,34 @@
   components:
     - type: Crusher
     - type: Xeno
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/crusher.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepAlienMedium
+    - type: Tag
+      tags:
+      - FootstepSound
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        400: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        200: 0.7
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 35
+    - type: MovementSpeedModifier
+      baseWalkSpeed : 5
+      baseSprintSpeed : 9
 
 
 
@@ -16,9 +44,11 @@
   components:
     - type: WorldTargetAction
       useDelay: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
       icon:
-        sprite: Objects/Magic/magicactions.rsi
-        state: blink
+        sprite: Actions/Xeno/crusher.rsi
+        state: jump
       itemIconStyle: NoItem
       priority: -12
       event: !type:CrusherJumpEvent
@@ -41,9 +71,9 @@
     canTargetSelf: false
     interactOnMiss: false
     sound: !type:SoundPathSpecifier
-      path: /Audio/Magic/disintegrate.ogg
+      path: /Audio/Effects/alien_roar2.ogg
     icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: gib
+      sprite: Actions/Xeno/crusher.rsi
+      state: stun
     event: !type:CrusherStunEvent
       speech: action-speech-spell-smite
