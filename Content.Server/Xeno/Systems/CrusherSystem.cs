@@ -55,7 +55,7 @@ public sealed partial class CrusherSystem : EntitySystem
 
     private void OnStun(EntityUid uid, CrusherComponent comp, CrusherStunEvent args)
     {
-        if (!HasComp<MobStateComponent>(args.Target)) // todo add xeno component
+        if (!HasComp<MobStateComponent>(args.Target) || HasComp<XenoComponent>(args.Target)) // todo add xeno component
             return;
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(7f), true);
     }
