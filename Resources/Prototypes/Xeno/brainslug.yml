@@ -1,0 +1,93 @@
+- type: entity
+  parent: SimpleMobBase
+  name: brain slug
+  id: MobBrainSlug
+  suffix: qweqwe
+  components:
+    - type: BrainSlug
+    - type: BrainHugging
+      paralyzeTime: 3
+      chansePounce: 100
+    - type: Sprite
+      sprite: Mobs/Aliens/brainslug.rsi
+      drawdepth: SmallMobs
+      noRot: true
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: alive
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Dead:
+          Base: dead
+    - type: Item
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.2
+          density: 100
+          mask:
+            - SmallMobMask
+          layer:
+            - SmallMobLayer
+    - type: Speech
+    - type: Bloodstream
+      bloodMaxVolume: 10
+      bloodReagent: Blood
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: brainslug
+      description: brainslug
+      rules: brainslug
+    - type: GhostTakeoverAvailable
+    - type: MeleeWeapon
+      hidden: true
+      soundHit:
+        path: /Audio/Effects/bite.ogg
+      angle: 0
+      animation: WeaponArcBite
+      damage:
+        types:
+          Piercing: 2
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        25: Dead
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 3
+      baseSprintSpeed: 4
+    - type: Tag
+      tags:
+        - CannotSuicide
+    - type: NoSlip
+    - type: Clothing
+      quickEquip: false
+      sprite: Clothing/Mask/gascentcom.rsi
+      slots:
+        - MASK
+    - type: Blindfold
+
+
+- type: entity
+  id: ActionBrainSlugJump
+  name: jump
+  description: jump desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 0
+      icon:
+        sprite: Actions/brainslug.rsi/borer_jump.png
+        state: borer_jump
+      itemIconStyle: NoItem
+      priority: -12
+      event: !type:BrainSlugJumpActionEvent
+      checkCanAccess: false
+      range: 0
