@@ -25,20 +25,34 @@ public sealed partial class DefilerSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<DefilerComponent, ComponentStartup>(OnStartup);
-        SubscribeLocalEvent<DefilerComponent, DefilerSpitEvent>(OnSpit);
+        SubscribeLocalEvent<DefilerComponent, DefilerDefaultSpitEvent>(OnDefaultSpit);
+        SubscribeLocalEvent<DefilerComponent, DefilerAcidSpitEvent>(OnAcidSpit);
         SubscribeLocalEvent<DefilerComponent, DefilerExplosiveEvent>(OnExsplosive);
     }
 
     protected void OnStartup(EntityUid uid, DefilerComponent component, ComponentStartup args)
     {
-        _actionsSystem.AddAction(uid, component.DefilerSpit);
+        _actionsSystem.AddAction(uid, component.DefilerDefaultSpit);
+        _actionsSystem.AddAction(uid, component.DefilerAcidSpit);
         _actionsSystem.AddAction(uid, component.DefilerExplosive);
     }
 
-    private void OnSpit(EntityUid uid, DefilerComponent comp, DefilerSpitEvent args)
+    private void OnDefaultSpit(EntityUid uid, DefilerComponent comp, DefilerDefaultSpitEvent args)
     {
 
-        var acidBullet = Spawn("ProjectileDefilerSpit", Transform(uid).Coordinates);
+        var defaultBullet = Spawn("ProjectileDefilerDefaultSpit", Transform(uid).Coordinates);
+        var xform = Transform(uid);
+        var mapCoords = args.Target.ToMap(EntityManager);
+        var direction = mapCoords.Position - xform.MapPosition.Position;
+        var userVelocity = _physics.GetMapLinearVelocity(uid);
+
+        _gunSystem.ShootProjectile(defaultBullet, direction, userVelocity, uid, uid);
+    }
+
+    private void OnAcidSpit(EntityUid uid, DefilerComponent comp, DefilerAcidSpitEvent args)
+    {
+
+        var acidBullet = Spawn("ProjectileDefilerAcidSpit", Transform(uid).Coordinates);
         var xform = Transform(uid);
         var mapCoords = args.Target.ToMap(EntityManager);
         var direction = mapCoords.Position - xform.MapPosition.Position;

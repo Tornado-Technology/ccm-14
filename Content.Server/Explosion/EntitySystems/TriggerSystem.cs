@@ -112,7 +112,7 @@ namespace Content.Server.Explosion.EntitySystems
                 return;
 
             var transferSolution = new Solution();
-            transferSolution.AddReagent("Toxin", 1000f);
+            transferSolution.AddReagent("Toxin", 1000f); // todo new special toxin
 
             if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
             {

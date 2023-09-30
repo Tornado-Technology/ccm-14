@@ -1,5 +1,6 @@
+#xeno
 - type: entity
-  name: делифер
+  name: Defiler
   parent: MobXenoQueen
   id: MobDefilerXeno
   components:
@@ -7,10 +8,12 @@
     - type: Xeno
 
 
+
+#acidspit
 - type: entity
-  id: ActionDefilerSpit
-  name: Spit
-  description: Spit desc
+  id: ActionDefilerDefaultSpit
+  name: Default Spit name
+  description: Default Spit desc
   noSpawn: true
   components:
     - type: WorldTargetAction
@@ -20,10 +23,30 @@
         sprite: Objects/Magic/magicactions.rsi
         state: blink
       itemIconStyle: NoItem
-      priority: -12
-      event: !type:DefilerSpitEvent
+      priority: 5
+      event: !type:DefilerDefaultSpitEvent
+
+#acidspit
+- type: entity
+  id: ActionDefilerAcidSpit
+  name: Acid Spit
+  description: Acid Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 0
+      range: 0
+      icon:
+        sprite: Objects/Magic/magicactions.rsi
+        state: blink
+      itemIconStyle: NoItem
+      priority: 6
+      event: !type:DefilerAcidSpitEvent
 
 
+
+
+#kamikadze
 - type: entity
   id: ActionDefilerExplosive
   name: Explosive name
@@ -32,15 +55,31 @@
   components:
   - type: InstantAction
     useDelay: 0
+    priority: 7
     icon: Interface/Actions/scream.png
     event: !type:DefilerExplosiveEvent
     checkCanInteract: false
 
 
+#acidspit projective
 - type: entity
-  id: ProjectileDefilerSpit
-  name: DefilerSpit proj name
-  description: DefilerSpit proj desc
+  id: ProjectileDefilerAcidSpit
+  name: DefilerAcidSpit proj name
+  description: DefilerAcidSpit proj desc
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: SplashOnTrigger
+
+#acidspit projective
+- type: entity
+  id: ProjectileDefilerDefaultSpit
+  name: DefilerDefaultSpit proj name
+  description: DefilerDefaultSpit proj desc
   parent: BaseBulletTrigger
   noSpawn: true
   components:
@@ -52,4 +91,3 @@
     damage:
       types:
         Caustic: 50
-  - type: SplashOnTrigger
