@@ -23,6 +23,11 @@ using Robust.Shared.Physics.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Weapons.Ranged.Events;
+using Content.Server.Fluids.EntitySystems;
+using Content.Server.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.Components;
+using Content.Server.Chemistry.Components;
+
 
 namespace Content.Server.Explosion.EntitySystems
 {
@@ -61,6 +66,11 @@ namespace Content.Server.Explosion.EntitySystems
         [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
         [Dependency] private readonly RadioSystem _radioSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly PuddleSystem _puddleSystem = default!;
+        [Dependency] private readonly SolutionContainerSystem _solutionSystem = default!;
+        [Dependency] private readonly IEntityManager _entManager = default!;
+
+        [Dependency] private readonly SmokeSystem _smoke = default!;
 
         public override void Initialize()
         {
@@ -89,6 +99,33 @@ namespace Content.Server.Explosion.EntitySystems
             SubscribeLocalEvent<AnchorOnTriggerComponent, TriggerEvent>(OnAnchorTrigger);
             SubscribeLocalEvent<SoundOnTriggerComponent, TriggerEvent>(OnSoundTrigger);
             SubscribeLocalEvent<RattleComponent, TriggerEvent>(HandleRattleTrigger);
+            SubscribeLocalEvent<SplashOnTriggerComponent, TriggerEvent>(OnSplashTrigger);
+        }
+
+        private void OnSplashTrigger(EntityUid uid, SplashOnTriggerComponent comp, TriggerEvent args)
+        {
+            var xform = Transform(uid);
+
+            var coords = xform.Coordinates;
+
+            if (!coords.IsValid(EntityManager))
+                return;
+
+            var transferSolution = new Solution();
+            transferSolution.AddReagent("Toxin", 1000f);
+
+            if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
+            {
+                _solutionSystem.TryAddSolution(uid, injectableSolution, transferSolution);
+            }
+
+            var foamEnt = Spawn("Foam", coords);
+            var smoke = EnsureComp<SmokeComponent>(foamEnt);
+            smoke.SpreadAmount = 20;
+
+            _smoke.Start(foamEnt, smoke, transferSolution, 10f);
+
+            _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out var puddleUID);
         }
 
         private void OnSoundTrigger(EntityUid uid, SoundOnTriggerComponent component, TriggerEvent args)

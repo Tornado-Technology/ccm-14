@@ -1,0 +1,55 @@
+- type: entity
+  name: делифер
+  parent: MobXenoQueen
+  id: MobDefilerXeno
+  components:
+    - type: Defiler
+    - type: Xeno
+
+
+- type: entity
+  id: ActionDefilerSpit
+  name: Spit
+  description: Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 0
+      range: 0
+      icon:
+        sprite: Objects/Magic/magicactions.rsi
+        state: blink
+      itemIconStyle: NoItem
+      priority: -12
+      event: !type:DefilerSpitEvent
+
+
+- type: entity
+  id: ActionDefilerExplosive
+  name: Explosive name
+  description: Explosive desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 0
+    icon: Interface/Actions/scream.png
+    event: !type:DefilerExplosiveEvent
+    checkCanInteract: false
+
+
+- type: entity
+  id: ProjectileDefilerSpit
+  name: DefilerSpit proj name
+  description: DefilerSpit proj desc
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 50
+  - type: SplashOnTrigger
