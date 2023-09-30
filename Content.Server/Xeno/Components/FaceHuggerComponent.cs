@@ -4,7 +4,7 @@ namespace Content.Server.Alien;
 
 
 [RegisterComponent]
-public sealed partial class BrainSlugComponent : Component
+public sealed partial class FaceHuggerComponent : Component
 {
 
     public EntityUid EquipedOn;

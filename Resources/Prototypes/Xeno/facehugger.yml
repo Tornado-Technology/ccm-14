@@ -1,15 +1,14 @@
 - type: entity
   parent: SimpleMobBase
-  name: brain slug
-  id: MobBrainSlug
-  suffix: qweqwe
+  name: FaceHugger
+  id: MobFaceHugger
   components:
-    - type: BrainSlug
-    - type: BrainHugging
+    - type: FaceHugger
+    - type: FaceHugging
       paralyzeTime: 3
       chansePounce: 100
     - type: Sprite
-      sprite: Mobs/Aliens/brainslug.rsi
+      sprite: Mobs/Aliens/facehugger.rsi
       drawdepth: SmallMobs
       noRot: true
       layers:
@@ -43,9 +42,9 @@
       allowMovement: true
       allowSpeech: true
       makeSentient: true
-      name: brainslug
-      description: brainslug
-      rules: brainslug
+      name: FaceHugger
+      description: FaceHugger
+      rules: FaceHugger
     - type: GhostTakeoverAvailable
     - type: MeleeWeapon
       hidden: true
@@ -76,7 +75,7 @@
 
 
 - type: entity
-  id: ActionBrainSlugJump
+  id: ActionFaceHuggerJump
   name: jump
   description: jump desc
   noSpawn: true
@@ -84,10 +83,10 @@
     - type: WorldTargetAction
       useDelay: 0
       icon:
-        sprite: Actions/brainslug.rsi/borer_jump.png
+        sprite: Actions/facehugger.rsi
         state: borer_jump
       itemIconStyle: NoItem
       priority: -12
-      event: !type:BrainSlugJumpActionEvent
+      event: !type:FaceHuggerJumpActionEvent
       checkCanAccess: false
       range: 0

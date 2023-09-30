@@ -19,7 +19,7 @@ using Content.Server.NPC.Components;
 
 namespace Content.Server.Alien
 {
-    public sealed class BrainSlugSystem : SharedBrainHuggingSystem
+    public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     {
         [Dependency] private SharedStunSystem _stunSystem = default!;
         [Dependency] private readonly PopupSystem _popup = default!;
@@ -35,24 +35,24 @@ namespace Content.Server.Alien
 
         public override void Initialize()
         {
-            SubscribeLocalEvent<BrainHuggingComponent, ComponentStartup>(OnStartup);
+            SubscribeLocalEvent<FaceHuggingComponent, ComponentStartup>(OnStartup);
 
 
-            SubscribeLocalEvent<BrainHuggingComponent, BrainSlugJumpActionEvent>(OnJumpBrainSlug);
-            SubscribeLocalEvent<BrainSlugComponent, ThrowDoHitEvent>(OnBrainSlugDoHit);
+            SubscribeLocalEvent<FaceHuggingComponent, FaceHuggerJumpActionEvent>(OnJumpFaceHugger);
+            SubscribeLocalEvent<FaceHuggerComponent, ThrowDoHitEvent>(OnFaceHuggerDoHit);
 
-            SubscribeLocalEvent<BrainSlugComponent, GotEquippedEvent>(OnGotEquipped);
-            SubscribeLocalEvent<BrainSlugComponent, BeingUnequippedAttemptEvent>(OnUnequipAttempt);
-            SubscribeLocalEvent<BrainSlugComponent, GotEquippedHandEvent>(OnGotEquippedHand);
-            SubscribeLocalEvent<BrainSlugComponent, GotUnequippedEvent>(OnGotUnequipped);
-            SubscribeLocalEvent<BrainSlugComponent, MobStateChangedEvent>(OnMobStateChanged);
+            SubscribeLocalEvent<FaceHuggerComponent, GotEquippedEvent>(OnGotEquipped);
+            SubscribeLocalEvent<FaceHuggerComponent, BeingUnequippedAttemptEvent>(OnUnequipAttempt);
+            SubscribeLocalEvent<FaceHuggerComponent, GotEquippedHandEvent>(OnGotEquippedHand);
+            SubscribeLocalEvent<FaceHuggerComponent, GotUnequippedEvent>(OnGotUnequipped);
+            SubscribeLocalEvent<FaceHuggerComponent, MobStateChangedEvent>(OnMobStateChanged);
         }
 
-        protected void OnStartup(EntityUid uid, BrainHuggingComponent component, ComponentStartup args)
+        protected void OnStartup(EntityUid uid, FaceHuggingComponent component, ComponentStartup args)
         {
 
-            _actionsSystem.AddAction(uid, component.BrainSlugJumpAction);
-            if(TryComp(uid, out BrainSlugComponent? comp))
+            _actionsSystem.AddAction(uid, component.FaceHuggerJumpAction);
+            if(TryComp(uid, out FaceHuggerComponent? comp))
             {
                 comp.isEgged = false;
                 comp.isDeath = false;
@@ -60,24 +60,24 @@ namespace Content.Server.Alien
         }
 
 
-        private void OnBrainSlugDoHit(EntityUid uid, BrainSlugComponent component, ThrowDoHitEvent args)
+        private void OnFaceHuggerDoHit(EntityUid uid, FaceHuggerComponent component, ThrowDoHitEvent args)
         {
             if (component.IsDeath)
                 return;
-            if (TryComp(args.Target, out SlugInsideComponent? sluginside))
+            if (TryComp(args.Target, out HuggerOnFaceComponent? huggeronface))
             {
                 return;
             }
 
 
-            if(HasComp<BrainSlugComponent>(args.Target))
+            if(HasComp<FaceHuggerComponent>(args.Target))
             {
                 return;
             }
 
-            var slugInsideComp = _entityManager.AddComponent<SlugInsideComponent>(args.Target);
+            var huggeronfaceComp = _entityManager.AddComponent<HuggerOnFaceComponent>(args.Target);
 
-            TryComp(uid, out BrainSlugComponent? defcomp);
+            TryComp(uid, out FaceHuggerComponent? defcomp);
             if (defcomp == null)
             {
                 return;
@@ -120,7 +120,7 @@ namespace Content.Server.Alien
 
 
 
-        private void OnJumpBrainSlug(EntityUid uid, BrainHuggingComponent component, BrainSlugJumpActionEvent args)
+        private void OnJumpFaceHugger(EntityUid uid, FaceHuggingComponent component, FaceHuggerJumpActionEvent args)
         {
             if (args.Handled)
                 return;
@@ -131,13 +131,13 @@ namespace Content.Server.Alien
             var direction = mapCoords.Position - xform.MapPosition.Position;
 
             _throwing.TryThrow(uid, direction, 7F, uid, 10F);
-            if (component.SoundBrainSlugJump != null)
+            if (component.SoundFaceHuggerJump != null)
             {
-                _audioSystem.PlayPvs(component.SoundBrainSlugJump, uid, component.SoundBrainSlugJump.Params);
+                _audioSystem.PlayPvs(component.SoundFaceHuggerJump, uid, component.SoundFaceHuggerJump.Params);
             }
         }
 
-        private void OnGotEquipped(EntityUid uid, BrainSlugComponent component, GotEquippedEvent args)
+        private void OnGotEquipped(EntityUid uid, FaceHuggerComponent component, GotEquippedEvent args)
         {
             if (args.Slot != "mask")
                 return;
@@ -145,40 +145,40 @@ namespace Content.Server.Alien
             component.OwnerId = uid;
             EntityManager.RemoveComponent<CombatModeComponent>(uid);
         }
-        private void OnUnequipAttempt(EntityUid uid, BrainSlugComponent component, BeingUnequippedAttemptEvent args)
+        private void OnUnequipAttempt(EntityUid uid, FaceHuggerComponent component, BeingUnequippedAttemptEvent args)
         {
             if (args.Slot != "mask")
                 return;
             if (component.EquipedOn != args.Unequipee)
                 return;
-            if (HasComp<BrainSlugComponent>(args.Unequipee))
+            if (HasComp<FaceHuggerComponent>(args.Unequipee))
                 return;
             _damageableSystem.TryChangeDamage(args.Unequipee, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10));
             args.Cancel();
         }
 
-        private void OnGotEquippedHand(EntityUid uid, BrainSlugComponent component, GotEquippedHandEvent args)
+        private void OnGotEquippedHand(EntityUid uid, FaceHuggerComponent component, GotEquippedHandEvent args)
         {
             if (component.IsDeath)
                 return;
             _damageableSystem.TryChangeDamage(args.User, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 5));
         }
 
-        private void OnGotUnequipped(EntityUid uid, BrainSlugComponent component, GotUnequippedEvent args)
+        private void OnGotUnequipped(EntityUid uid, FaceHuggerComponent component, GotUnequippedEvent args)
         {
             if (args.Slot != "mask")
                 return;
             component.EquipedOn = new EntityUid();
             var combatMode = EntityManager.AddComponent<CombatModeComponent>(uid);
             _combat.SetInCombatMode(uid, true, combatMode);
-            if (TryComp(uid, out BrainSlugComponent? freq))
+            if (TryComp(uid, out FaceHuggerComponent? freq))
             {
                 freq.InfectionAccumulator = 0;
             }
-            EntityManager.RemoveComponent<SlugInsideComponent>(args.Equipee);
+            EntityManager.RemoveComponent<HuggerOnFaceComponent>(args.Equipee);
             EntityManager.AddComponent<NPCMeleeCombatComponent>(uid);
         }
-        private static void OnMobStateChanged(EntityUid uid, BrainSlugComponent component, MobStateChangedEvent args)
+        private static void OnMobStateChanged(EntityUid uid, FaceHuggerComponent component, MobStateChangedEvent args)
         {
             if (args.NewMobState == MobState.Dead)
             {
@@ -192,7 +192,7 @@ namespace Content.Server.Alien
 
 
 
-            foreach (var comp in EntityQuery<BrainSlugComponent>())
+            foreach (var comp in EntityQuery<FaceHuggerComponent>())
             {
                 comp.Accumulator += frameTime;
 
@@ -209,7 +209,7 @@ namespace Content.Server.Alien
                     {
                         _inventory.TryUnequip(targetId, "mask", true, true);
                         _damageableSystem.TryChangeDamage(comp.OwnerId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 30));
-                        EntityManager.RemoveComponent<SlugInsideComponent>(targetId);
+                        EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
                         comp.EquipedOn = new EntityUid();
                         comp.InfectionAccumulator = 0;
                         return;
@@ -229,7 +229,7 @@ namespace Content.Server.Alien
                     comp.isEgged = true;
                     comp.InfectionAccumulator = 0;
 
-                    if (!HasComp<SlugInsideComponent>(targetId))
+                    if (!HasComp<HuggerOnFaceComponent>(targetId))
                         return;
 
                     _inventory.TryUnequip(targetId, "mask", true, true);
@@ -238,7 +238,7 @@ namespace Content.Server.Alien
 
                     _damageableSystem.TryChangeDamage(targetId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
 
-                    EntityManager.RemoveComponent<SlugInsideComponent>(targetId);
+                    EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
                     comp.EquipedOn = new EntityUid();
                 }
 
