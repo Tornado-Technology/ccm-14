@@ -7,6 +7,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Damage;
 using Robust.Shared.Prototypes;
 using Content.Shared.Damage.Prototypes;
+using Content.Server.Disposal.Unit.Components;
 
 
 namespace Content.Server.Xeno.Systems;
@@ -47,9 +48,14 @@ public sealed partial class CrusherSystem : EntitySystem
         {
             _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(7f), true);
             _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 35));
+            return;
         }
-        else
-            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 100));
+        if (HasComp<DisposalUnitComponent>(args.Target))
+        {
+            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
+            return;
+        }
+        _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 100));
 
     }
 
