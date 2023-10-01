@@ -90,7 +90,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    sprite: Objects/Xeno/spit.rsi
     layers:
       - state: grenade
   - type: SplashOnTrigger
@@ -104,7 +104,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    sprite: Objects/Xeno/spit.rsi
     layers:
       - state: grenade
   - type: Projectile
