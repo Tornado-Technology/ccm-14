@@ -1,0 +1,37 @@
+- type: entity
+  name: Queen
+  parent: MobXeno
+  id: MobXenoBase
+  components:
+    - type: Xeno
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/queen.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        300: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        150: 0.7
+    - type: MovementSpeedModifier
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 12
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 15500
+          mask:
+          - MobMask
+          layer:
+          - MobLayer

@@ -27,7 +27,7 @@ public sealed class RandomPointSpawnerSystem : EntitySystem
             component.Spawned = true;
         }
 
-        var random = _random.Next(0, spawners.Count);
+        var random = _random.Next(0, spawners.Count - 1);
         var targetSpawner = spawners[random];
 
         if (targetSpawner == null)

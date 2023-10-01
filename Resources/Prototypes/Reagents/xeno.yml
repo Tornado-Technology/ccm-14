@@ -1,0 +1,34 @@
+- type: reagent
+  id: XenoAcid
+  name: reagent-name-xeno-acid
+  group: Toxins
+  desc: reagent-desc-xeno-acid
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: slimy
+  color: "#341d5d" # maybe change?
+  boilingPoint: 4200.0
+  meltingPoint: 3550.0
+  viscosity: 0.25
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 20.0 # Do you want to die?
+      - !type:Emote
+        emote: Moans
+        probability: 1.0
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.5
+      - !type:Emote
+        emote: Moans # Hahahaha
+        probability: 1.0

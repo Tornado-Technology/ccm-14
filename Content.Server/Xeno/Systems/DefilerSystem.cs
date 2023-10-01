@@ -7,6 +7,7 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Damage.Prototypes;
 using Content.Server.Weapons.Ranged.Systems;
 using Robust.Server.GameObjects;
+using Robust.Shared.Map;
 
 namespace Content.Server.Xeno.Systems;
 
@@ -18,8 +19,7 @@ public sealed partial class DefilerSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly GunSystem _gunSystem = default!;
     [Dependency] private readonly PhysicsSystem _physics = default!;
-
-
+    [Dependency] private readonly ExplosionSystem _explosionSystem = default!;
 
     public override void Initialize()
     {
@@ -39,22 +39,19 @@ public sealed partial class DefilerSystem : EntitySystem
 
     private void OnDefaultSpit(EntityUid uid, DefilerComponent comp, DefilerDefaultSpitEvent args)
     {
-
-        var defaultBullet = Spawn("ProjectileDefilerDefaultSpit", Transform(uid).Coordinates);
-        var xform = Transform(uid);
-        var mapCoords = args.Target.ToMap(EntityManager);
-        var direction = mapCoords.Position - xform.MapPosition.Position;
-        var userVelocity = _physics.GetMapLinearVelocity(uid);
-
-        _gunSystem.ShootProjectile(defaultBullet, direction, userVelocity, uid, uid);
+        Spit(uid, args.Target, "ProjectileDefilerDefaultSpit");
     }
 
     private void OnAcidSpit(EntityUid uid, DefilerComponent comp, DefilerAcidSpitEvent args)
     {
+        Spit(uid, args.Target, "ProjectileDefilerAcidSpit");
+    }
 
-        var acidBullet = Spawn("ProjectileDefilerAcidSpit", Transform(uid).Coordinates);
+    private void Spit(EntityUid uid, EntityCoordinates target, string projectile)
+    {
+        var acidBullet = Spawn(projectile, Transform(uid).Coordinates);
         var xform = Transform(uid);
-        var mapCoords = args.Target.ToMap(EntityManager);
+        var mapCoords = target.ToMap(EntityManager);
         var direction = mapCoords.Position - xform.MapPosition.Position;
         var userVelocity = _physics.GetMapLinearVelocity(uid);
 
@@ -63,10 +60,7 @@ public sealed partial class DefilerSystem : EntitySystem
 
     private void OnExsplosive(EntityUid uid, DefilerComponent comp, DefilerExplosiveEvent args)
     {
-        var sysMan = IoCManager.Resolve<IEntitySystemManager>();
-        sysMan.GetEntitySystem<ExplosionSystem>().QueueExplosion(uid, "Radioactive", 300, 2, 200, 0, 0, false, uid, true);
+        _explosionSystem.QueueExplosion(uid, "Radioactive", 300, 2, 200, 0, 0, false, uid, true);
         _damageableSystem.TryChangeDamage(uid, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
     }
-
-
 }

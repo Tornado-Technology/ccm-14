@@ -12,6 +12,15 @@
     },
     {
       "name": "stun"
+    },
+    {
+      "name": "acid_spit"
+    },
+    {
+      "name": "default_spit"
+    },
+    {
+      "name": "explosive"
     }
   ]
 }

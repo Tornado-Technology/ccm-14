@@ -112,7 +112,7 @@ namespace Content.Server.Explosion.EntitySystems
                 return;
 
             var transferSolution = new Solution();
-            transferSolution.AddReagent("Toxin", 1000f); // todo new special toxin
+            transferSolution.AddReagent("XenoAcid", 1000f); // TODO: Fix this shit
 
             if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
             {
