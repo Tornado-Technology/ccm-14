@@ -1,7 +1,7 @@
 - type: entity
   parent: SimpleMobBase
-  name: FaceHugger
   id: MobFaceHugger
+  name: Facehugger
   components:
     - type: FaceHugger
     - type: FaceHugging
@@ -76,8 +76,8 @@
 
 - type: entity
   id: ActionFaceHuggerJump
-  name: jump
-  description: jump desc
+  name: Jump
+  description: Jump right at the face!
   noSpawn: true
   components:
     - type: WorldTargetAction
