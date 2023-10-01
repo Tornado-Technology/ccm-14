@@ -1,0 +1,51 @@
+- type: entity
+  name: warrior
+  parent: MobXenoBase
+  id: MobWarriorXeno
+  components:
+    - type: Xeno
+    - type: XenoStun
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/warrior.rsi
+      offset: 0,0.4
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        200: 0.7
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 25
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 9
+
+- type: entity
+  id: ActionXenoStun
+  name: stun
+  description: stun desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 0
+      itemIconStyle: BigAction
+      whitelist:
+        components:
+          - Body
+      canTargetSelf: false
+      interactOnMiss: false
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: stun
+      event: !type:XenoStunEvent
+        speech: action-speech-spell-smite

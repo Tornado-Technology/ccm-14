@@ -23,6 +23,9 @@
       damage:
         groups:
           Brute: 25
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 9
 
 # acidspit
 - type: entity
