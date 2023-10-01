@@ -28,7 +28,6 @@
       baseSprintSpeed: 9
 
 
-
 - type: entity
   id: ActionCrusherJump
   name: jump
