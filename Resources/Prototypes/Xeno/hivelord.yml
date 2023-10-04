@@ -1,24 +1,22 @@
 - type: entity
-  name: крашер
+  name: hivelord
   parent: MobXenoBase
-  id: MobCrusherXeno
+  id: MobHivelordXeno
   components:
-    - type: XenoCrusher
-    - type: XenoCrushDash
-    - type: XenoStun
+    - type: XenoHivelord
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/crusher.rsi
+      sprite: Mobs/Aliens/Xenos/hivelord.rsi
       offset: 0,0.4
       layers:
       - map: ["enum.DamageStateVisualLayers.Base"]
         state: running
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        400: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
         groups:
-          Brute: 35
+          Brute: 20

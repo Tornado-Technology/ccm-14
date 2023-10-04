@@ -1,20 +1,16 @@
-using Content.Shared.Damage;
-
 namespace Content.Server.Alien;
-
 
 [RegisterComponent]
 public sealed partial class FaceHuggerComponent : Component
 {
 
     public EntityUid EquipedOn;
-
     public EntityUid OwnerId;
     public bool isEgged;
     public bool isDeath;
 
     [DataField("infectionEgg")]
-    public string InfectionEgg = "FoodEgg";//XenoEgg
+    public string InfectionEgg = "XenoEgg";
 
     [DataField("damageFrequency"), ViewVariables(VVAccess.ReadWrite)]
     public float DamageFrequency = 1;
@@ -22,7 +18,7 @@ public sealed partial class FaceHuggerComponent : Component
     [ViewVariables] public float Accumulator = 0;
 
     [DataField("infectionFrequency"), ViewVariables(VVAccess.ReadWrite)]
-    public float InfectionFrequency = 10;//60
+    public float InfectionFrequency = 60;
 
     [ViewVariables] public float InfectionAccumulator = 0;
 

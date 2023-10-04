@@ -2,6 +2,7 @@
   name: Queen
   parent: MobXeno
   id: MobXenoBase
+  abstarct: true
   components:
     - type: Xeno
     - type: Sprite
@@ -15,15 +16,14 @@
       thresholds:
         0: Alive
         300: Dead
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        150: 0.7
     - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 9
     - type: MeleeWeapon
       hidden: true
       damage:
         groups:
-          Brute: 12
+          Brute: 25
     - type: Fixtures
       fixtures:
         fix1:

@@ -1,23 +1,25 @@
 - type: entity
-  name: warrior
+  name: runner
   parent: MobXenoBase
-  id: MobWarriorXeno
+  id: MobRunnerXeno
   components:
-    - type: XenoStun
-    - type: XenoWarrior
+    - type: XenoRunner
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Dead
+        125: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/warrior.rsi
+      sprite: Mobs/Aliens/Xenos/runner.rsi
       offset: 0,0.4
       layers:
-        - map: ["enum.DamageStateVisualLayers.Base"]
-          state: running
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
     - type: MeleeWeapon
       hidden: true
       damage:
         groups:
           Brute: 25
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 10
+      baseSprintSpeed: 18

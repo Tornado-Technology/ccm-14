@@ -1,41 +1,34 @@
 using Content.Server.Xeno.Components;
 using Content.Shared.Actions;
 using Content.Shared.Xeno;
-using Content.Shared.Throwing;
 using Content.Shared.Stunnable;
 using Content.Shared.Mobs.Components;
-using Content.Shared.Damage;
-using Robust.Shared.Prototypes;
-using Content.Shared.Damage.Prototypes;
-using Content.Server.Disposal.Unit.Components;
-
 
 namespace Content.Server.Xeno.Systems;
 
 public sealed partial class XenoStunSystem : EntitySystem
 {
-
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
-    [Dependency] private SharedStunSystem _stunSystem = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly SharedStunSystem _stunSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
+
         SubscribeLocalEvent<XenoStunComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoStunComponent, XenoStunEvent>(OnStun);
     }
 
-    protected void OnStartup(EntityUid uid, XenoStunComponent component, ComponentStartup args)
+    private void OnStartup(EntityUid uid, XenoStunComponent component, ComponentStartup args)
     {
-        _actionsSystem.AddAction(uid, component.XenoStun);
+        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnStun(EntityUid uid, XenoStunComponent comp, XenoStunEvent args)
     {
-        if (!HasComp<MobStateComponent>(args.Target) || HasComp<XenoComponent>(args.Target)) // todo add xeno component
+        if (!HasComp<MobStateComponent>(args.Target) || HasComp<XenoComponent>(args.Target))
             return;
-        _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(7f), true);
-    }
 
+        _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(comp.StunTime), comp.Refresh);
+    }
 }

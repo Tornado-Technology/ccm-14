@@ -3,7 +3,10 @@
   parent: MobXenoBase
   id: MobSentinelXeno
   components:
-    - type: Sentinel
+    - type: XenoSentinel
+    - type: XenoSpit
+      action: ActionSentinelDefaultSpit
+      projectile: ProjectileSentinelDefaultSpit
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/sentinel.rsi
@@ -15,17 +18,12 @@
       thresholds:
         0: Alive
         150: Dead
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        200: 0.7
     - type: MeleeWeapon
       hidden: true
       damage:
         groups:
           Brute: 15
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 5
-      baseSprintSpeed: 9
+
 
 # spit
 - type: entity
@@ -44,7 +42,8 @@
         state: default_spit
       itemIconStyle: NoItem
       priority: 5
-      event: !type:SentinelDefaultSpitEvent
+      event: !type:XenoSpitEvent
+
 
 # spit projective
 - type: entity

@@ -1,0 +1,15 @@
+- type: entity
+  name: warlock
+  parent: MobXenoBase
+  id: MobWarlockXeno
+  components:
+    - type: XenoWarlock
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 30
