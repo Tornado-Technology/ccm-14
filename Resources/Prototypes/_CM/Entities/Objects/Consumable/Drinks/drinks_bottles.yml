@@ -1,0 +1,16 @@
+- type: entity
+  parent: DrinkBottleBaseFull
+  id: DrinkWaterWYBottleFull
+  name: Weyland-Yutani Bottled Spring Water
+  description: Overpriced 'Spring' water. Bottled by the Weyland-Yutani Corporation.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Water
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: _CM/Objects/Consumable/Drinks/wy_water.rsi

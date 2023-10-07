@@ -1,0 +1,22 @@
+- type: entity
+  id: BulletPistol9
+  name: bullet (9mm pistol)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 14
+
+- type: entity
+  id: BulletPistol9AP
+  name: bullet (9mm pistol armor-piercing)
+  parent: BaseBulletAP
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 8
+    ignoreResistances: true

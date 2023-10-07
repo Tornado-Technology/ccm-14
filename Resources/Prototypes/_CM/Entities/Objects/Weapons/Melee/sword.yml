@@ -1,0 +1,23 @@
+- type: entity
+  name: M2132 machete
+  parent: BaseItem
+  id: MacheteMarine
+  description: Latest issue of the USCM Machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
+  components:
+  - type: Sharp
+  - type: Tag
+    tags:
+    - Machete
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Melee/machete.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 20
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 15
+    sprite: _CM/Objects/Weapons/Melee/machete.rsi
+  - type: DisarmMalus

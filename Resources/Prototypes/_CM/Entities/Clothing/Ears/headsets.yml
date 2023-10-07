@@ -1,0 +1,41 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingHeadsetMarineBase
+  name: marine alfa radio headset
+  description: This is used by Alfa squad members.
+  components:
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 4
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots:
+    - ears
+    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi
+  - type: GuideHelp
+    guides:
+    - Radio
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineAlfa
+  name: marine alfa radio headset
+  description: This is used by Alfa squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi

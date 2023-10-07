@@ -1,0 +1,10 @@
+- type: entity
+  id: BulletMagnum44
+  name: bullet (.44)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 35

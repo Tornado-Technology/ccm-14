@@ -1,0 +1,40 @@
+- type: entity
+  id: BaseSpeedLoaderMagnum44
+  name: "speed loader (.44)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - SpeedLoaderMagnum44
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeMagnum44
+    capacity: 7
+  - type: Sprite
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  id: SpeedLoaderMagnum44
+  name: "speed loader (.44)"
+  parent: BaseSpeedLoaderMagnum44
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnum44
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-7
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false
+  - type: Appearance

@@ -1,0 +1,40 @@
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskGasRebreather
+  name: rebreather
+  description: A close-fitting device that instantly heats or cools down air when you inhale so it doesn't damage your lungs.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Mask/rebreather.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Mask/rebreather.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasMarine
+  name: gas mask
+  description: A face-covering mask that can be connected to an air supply. Filters harmful gases from the air.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Mask/gas_mask.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Mask/gas_mask.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskCoif
+  name: heat absorbent coif
+  description: A close-fitting cap that covers the top, back, and sides of the head. Can also be adjusted to cover the lower part of the face so it keeps the user warm in harsh conditions.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Mask/coif.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Mask/coif.rsi
+  - type: IdentityBlocker

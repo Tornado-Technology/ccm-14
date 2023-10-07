@@ -1,0 +1,12 @@
+ent-VendingMachineMarineFood = ColMarTech Food Vendor
+    .desc = USCM Food Vendor, containing standard military Prepared Meals.
+ent-VendingMachineMarineEquip = ColMarTech Automated Marine Equipment Rack
+    .desc = An automated rack hooked up to a colossal storage of Marine Rifleman standard-issue equipment.
+ent-VendingMachineMarineUniform = ColMarTech Surplus Uniform Vendor
+    .desc = An automated supply rack hooked up to a small storage of standard marine uniforms.
+ent-VendingMachineMarineWeapons = ColMarTech Automated Weapons Rack
+    .desc = An automated weapon rack hooked up to a big storage of standard-issue weapons.
+ent-VendingMachineMarineMunition = ColMarTech Automated Munition Squad Vendor
+    .desc = An automated supply rack hooked up to a small storage of various ammunition types. Can be accessed by any Marine Rifleman.
+ent-VendingMachineMarineUtilities = ColMarTech Automated Utilities Squad Vendor
+    .desc = An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Marine Rifleman.

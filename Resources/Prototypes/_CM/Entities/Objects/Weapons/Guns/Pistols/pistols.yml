@@ -1,0 +1,87 @@
+- type: entity
+  name: M4A3 service pistol
+  parent: BaseWeaponPistol
+  id: WeaponPistolM4A3
+  description: An M4A3 Service Pistol, once the standard issue sidearm of the Colonial Marines but has recently been replaced with the 88 Mod 4 combat pistol. Fires 9mm pistol rounds.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Pistols/m4a3.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Guns/Pistols/m4a3.rsi
+  - type: Gun
+    fireRate: 5
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolM4A3
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolM4A3
+      gun_chamber:
+        name: Chamber
+        startingItem: BulletPistol9
+        priority: 1
+        whitelist:
+          tags:
+            - BulletPistol9
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: 88 Mod 4 combat pistol
+  parent: BaseWeaponPistol
+  id: WeaponPistol88M4
+  description: Standard issue USCM firearm. Also found in the hands of Weyland-Yutani PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Pistols/88m4.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Guns/Pistols/88m4.rsi
+  - type: Gun
+    fireRate: 5
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  - type: ItemSlots
+    slots:
+#      gun_magazine:
+#        name: Magazine
+#        startingItem: MagazinePistol88M4
+#        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+#        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+#        priority: 2
+#        whitelist:
+#          tags:
+#            - MagazinePistol88M4
+      gun_chamber:
+        name: Chamber
+        startingItem: BulletPistol9
+        priority: 1
+        whitelist:
+          tags:
+            - BulletPistol9
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot

@@ -1,0 +1,29 @@
+- type: entity
+  id: BaseCartridgeMagnum44
+  name: cartridge (.44 magnum)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeMagnum44
+  - type: CartridgeAmmo
+    proto: BulletMagnum44
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeMagnum44
+  name: cartridge (.44)
+  parent: BaseCartridgeMagnum44
+  components:
+  - type: CartridgeAmmo
+    proto: BulletMagnum44

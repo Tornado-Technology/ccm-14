@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMarine
+  name: USCM uniform
+  description: Standard-issue Marine uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/Jumpsuit/marine_jumpsuit.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/Jumpsuit/marine_jumpsuit.rsi

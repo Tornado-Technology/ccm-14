@@ -1,0 +1,79 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineLight
+  name: M3-L pattern light armor
+  description: A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/light_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/light_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineMedium
+  name: M3 pattern marine armor
+  description: A standard Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/medium_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/medium_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineHeavy
+  name: M3-EOD pattern armor
+  description: A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineB12
+  name: B12 pattern marine armor
+  description: A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/b12.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/b12.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90

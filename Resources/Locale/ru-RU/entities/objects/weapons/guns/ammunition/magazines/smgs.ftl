@@ -1,0 +1,12 @@
+ent-BaseMagazineRifleM39 = M39 magazine (10x24mm)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifleM39 = M39 magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM39.desc }
+ent-MagazineRifleM39AP = M39 AP magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM39.desc }
+ent-BaseMagazineRifleM39Ex = M39 extended magazine (10x24mm)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifleM39Ex = M39 extended magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM39Ex.desc }
+ent-MagazineRifleM39AP = M39 AP extended magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM39Ex.desc }

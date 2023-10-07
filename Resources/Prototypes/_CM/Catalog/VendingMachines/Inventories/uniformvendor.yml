@@ -1,0 +1,19 @@
+- type: vendingMachineInventory
+  id: UniformVendInventory
+  startingInventory:
+    ClothingShoesBootsMarine: 15
+    ClothingUniformJumpsuitMarine: 15
+    ClothingHandsGlovesMarine: 15
+    ClothingHeadsetMarineAlfa: 15
+    ClothingHeadHelmetMarine: 15
+    ClothingOuterArmorMarineLight: 15
+    ClothingOuterArmorMarineMedium: 15
+    ClothingOuterArmorMarineHeavy: 15
+    ClothingBackpackMarine: 15
+    ClothingBackpackSatchelMarine: 15
+    ClothingMaskGasMarine: 15
+    ClothingMaskCoif: 10
+    ClothingMaskGasRebreather: 10
+    ClothingEyesGlassesBallistic: 10
+    ClothingEyesGlassesPrescriptionBallistic: 10
+    ClothingEyesGlassesRPG: 10

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/master/icons/obj/items/food.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "MREa"
+    },
+    {
+      "name": "MREb"
+    },
+    {
+      "name": "MREc"
+    },
+    {
+      "name": "MREd"
+    },
+    {
+      "name": "MREe"
+    },
+    {
+      "name": "MREf"
+    },
+    {
+      "name": "MREempty"
+    },
+    {
+      "name": "yummers"
+    },
+    {
+      "name": "entree"
+    },
+    {
+      "name": "chicken_tender"
+    },
+    {
+      "name": "side"
+    },
+    {
+      "name": "cheese_spread"
+    },
+    {
+      "name": "snack"
+    },
+    {
+      "name": "peanuts"
+    },
+    {
+      "name": "dessert"
+    },
+    {
+      "name": "chocolate_brownie"
+    }
+  ]
+}

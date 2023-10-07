@@ -1,0 +1,27 @@
+- type: entity
+  parent: Clothing
+  id: ClothingBackpackSatchelMarine
+  name: USCM satchel
+  description: A heavy-duty satchel carried by some USCM soldiers and support personnel.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Back/Satchels/marinesatch.rsi
+    state: icon
+  - type: Item
+    size: 100
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    capacity: 80
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5

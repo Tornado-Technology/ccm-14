@@ -1,0 +1,16 @@
+- type: vendingMachineInventory
+  id: MunitionVendInventory
+  startingInventory:
+    ClothingShoesBootsMarine: 15
+    ClothingUniformJumpsuitMarine: 15
+    ClothingHandsGlovesMarine: 15
+    ClothingHeadsetMarineAlfa: 15
+    ClothingHeadHelmetMarine: 15
+    BoxMRPFilled: 15
+    ClothingOuterArmorMarineLight: 15
+    ClothingOuterArmorMarineMedium: 15
+    ClothingOuterArmorMarineHeavy: 15
+    ClothingBackpackMarine: 15
+    ClothingBackpackSatchelMarine: 15
+    ClothingMaskGasRebreather: 15
+    MiniFireExtinguisherMarine: 15

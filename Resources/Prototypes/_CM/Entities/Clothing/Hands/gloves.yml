@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesMarine
+  name: marine combat gloves
+  description: Standard issue marine tactical gloves.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Hands/Gloves/black.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Hands/Gloves/black.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-black
+  - type: FingerprintMask

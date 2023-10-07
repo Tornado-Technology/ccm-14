@@ -1,0 +1,32 @@
+- type: entity
+  parent: Clothing
+  id: IDCardMarine
+  name: dog tag
+  description: A marine dog tag.
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _CM/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: default
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: IDCardMarine
+  id: ARiflemanIDCard
+  name: Alpha Rifleman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: Passenger

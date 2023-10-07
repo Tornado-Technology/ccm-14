@@ -1054,3 +1054,23 @@
 - type: Tag
   id: ModularReceiver
 
+- type: Tag
+  id: CartridgeMagnum44
+
+- type: Tag
+  id: MagazinePistolM4A3
+
+- type: Tag
+  id: MagazineRifleM41A
+
+- type: Tag
+  id: MagazineRifleM39
+
+- type: Tag
+  id: MagazineRifleM4RA
+
+- type: Tag
+  id: MagazinePistol88M4
+
+- type: Tag
+  id: SpeedLoaderMagnum44

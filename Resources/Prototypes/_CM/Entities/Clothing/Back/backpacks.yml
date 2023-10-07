@@ -1,0 +1,27 @@
+- type: entity
+  parent: Clothing
+  id: ClothingBackpackMarine
+  name: lightweight IMP backpack
+  description: The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Back/Backpacks/marinepack.rsi
+    state: icon
+  - type: Item
+    size: 100
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    capacity: 100
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5

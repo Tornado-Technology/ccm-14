@@ -1,0 +1,4 @@
+- type: soundCollection
+  id: Whistle
+  files:
+    - /Audio/_CM/Items/whistle.ogg

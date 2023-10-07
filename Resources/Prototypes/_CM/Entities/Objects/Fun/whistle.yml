@@ -1,0 +1,17 @@
+- type: entity
+  parent: BaseItem
+  id: Whistle
+  name: whistle
+  description: A metal pea-whistle. Can be blown while held, or worn in the mouth
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Fun/whistle.rsi
+    state: icon
+  - type: Item
+    sprite: _CM/Objects/Fun/whistle.rsi
+  - type: ItemCooldown
+  - type: EmitSoundOnUse
+    sound:
+      collection: Whistle
+  - type: UseDelay
+    delay: 2.0

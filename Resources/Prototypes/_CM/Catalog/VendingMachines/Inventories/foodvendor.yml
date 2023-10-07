@@ -1,0 +1,14 @@
+- type: vendingMachineInventory
+  id: FoodVendInventory
+  startingInventory:
+    FoodMealChicken: 15
+    FoodMealCornbread: 15
+    FoodMealPasta: 15
+    FoodMealPizza: 15
+    FoodMealPork: 15
+    FoodMealTofu: 15
+    FoodProteinBar: 50
+    DrinkFlaskDefault: 10
+    DrinkFlaskMetal: 10
+    DrinkFlaskMetalUSCM: 5
+    DrinkFlaskMetalWY: 5

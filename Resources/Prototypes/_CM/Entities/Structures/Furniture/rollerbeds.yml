@@ -1,0 +1,26 @@
+- type: entity
+  id: MarineRollerBed
+  name: roller bed
+  parent: RollerBed
+  description: A robust looking rollerbed used for emergencies.
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Furniture/rollerbeds.rsi
+    layers:
+    - state: rollerbed
+      map: ["unfoldedLayer"]
+    - state: rollerbed_folded
+      map: ["foldedLayer"]
+      visible: false
+    - state: rollerbed_buckled
+      map: ["buckledLayer"]
+      visible: false
+  - type: Appearance
+
+- type: entity
+  parent: MarineRollerBed
+  id: MarineRollerBedSpawnFolded
+  suffix: folded
+  components:
+  - type: Foldable
+    folded: true
