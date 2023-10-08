@@ -1,0 +1,65 @@
+- type: entity
+  name: hivelord
+  parent: MobXenoBaseT2
+  id: MobHivelordXeno
+  components:
+    - type: XenoHivelord
+    - type: XenoVines
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/hivelord.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 20
+
+
+# -------------------------------------
+- type: entity
+  id: ActionHivelordBuild
+  name: action-xeno-hivelord-build
+  description: desc-action-xeno-hivelord-build
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      range: 3
+      useDelay: 20
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: build_wall
+      itemIconStyle: NoItem
+      event: !type:XenoHivelordBuildEvent
+      checkCanAccess: false
+# -------------------------------------
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoHivelordPsychicCure
+  name: action-xeno-hivelord-psychic-cure
+  description: desc-action-xeno-hivelord-psychic-cure
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 15
+      itemIconStyle: BigAction
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: psychic_cure
+      event: !type:XenoHivelordPsychicCureEvent
+      canTargetSelf: true
+      interactOnMiss: false
+# -------------------------------------

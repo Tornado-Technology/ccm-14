@@ -11,6 +11,9 @@ public sealed partial class XenoSpitComponent : Component
 
     [DataField("projectile", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Projectile = "ProjectileDefilerAcidSpit";
+
+    [DataField("speed")]
+    public float Speed = 10f;
 }
 
 /// <summary>
@@ -25,4 +28,7 @@ public sealed partial class XenoSpit2Component : Component
 
     [DataField("projectile", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Projectile = "ProjectileDefilerAcidSpit";
+
+    [DataField("speed")]
+    public float Speed = 10f;
 }

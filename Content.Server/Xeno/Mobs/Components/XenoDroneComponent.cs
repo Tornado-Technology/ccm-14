@@ -4,14 +4,14 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 namespace Content.Server.Xeno.Components;
 
 [RegisterComponent]
-public sealed partial class XenoHivelordComponent : Component
+public sealed partial class XenoDroneComponent : Component
 {
     [DataField("actionBuild", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionBuild = "ActionHivelordBuild";
+    public string ActionBuild = "ActionXenoDroneBuild";
 
     [DataField("actionPsychicCure", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionPsychicCure = "ActionXenoHivelordPsychicCure";
+    public string ActionPsychicCure = "ActionXenoDronePsychicCure";
 
     [DataField("buildPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string BuildingWall = "XenoWall";
+    public string BuildingWall = "XenoWallFragile";
 }

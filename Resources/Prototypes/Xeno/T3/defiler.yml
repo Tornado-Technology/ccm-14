@@ -1,6 +1,6 @@
 - type: entity
   name: Defiler
-  parent: MobXenoBase
+  parent: MobXenoBaseT3
   id: MobDefilerXeno
   components:
     - type: XenoDefiler
@@ -37,7 +37,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
-      useDelay: 0
+      useDelay: 20
       range: 0
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar1.ogg
@@ -57,7 +57,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
-      useDelay: 0
+      useDelay: 5
       range: 0
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar2.ogg

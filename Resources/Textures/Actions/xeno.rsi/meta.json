@@ -21,6 +21,15 @@
     },
     {
       "name": "explosive"
+    },
+    {
+      "name": "build_wall"
+    },
+    {
+      "name": "psychic_cure"
+    },
+    {
+      "name": "vines"
     }
   ]
 }

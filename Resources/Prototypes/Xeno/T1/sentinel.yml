@@ -1,6 +1,6 @@
 - type: entity
   name: sentinel
-  parent: MobXenoBase
+  parent: MobXenoBaseT1
   id: MobSentinelXeno
   components:
     - type: XenoSentinel
@@ -33,7 +33,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
-      useDelay: 0
+      useDelay: 5
       range: 0
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar1.ogg
@@ -54,7 +54,7 @@
   noSpawn: true
   components:
     - type: Sprite
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+      sprite: Objects/Xeno/spit.rsi
       layers:
         - state: grenade
     - type: Projectile

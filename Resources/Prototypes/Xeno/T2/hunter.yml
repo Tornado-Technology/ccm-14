@@ -1,16 +1,17 @@
 - type: entity
-  name: runner
-  parent: MobXenoBase
-  id: MobRunnerXeno
+  name: hunter
+  parent: MobXenoBaseT2
+  id: MobHunterXeno
   components:
-    - type: XenoRunner
+    - type: XenoHunter
+    - type: XenoStealth
     - type: MobThresholds
       thresholds:
         0: Alive
-        125: Dead
+        180: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/runner.rsi
+      sprite: Mobs/Aliens/Xenos/hunter.rsi
       offset: 0,0.4
       layers:
       - map: ["enum.DamageStateVisualLayers.Base"]
@@ -21,5 +22,8 @@
         groups:
           Brute: 25
     - type: MovementSpeedModifier
-      baseWalkSpeed: 10
-      baseSprintSpeed: 18
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.4

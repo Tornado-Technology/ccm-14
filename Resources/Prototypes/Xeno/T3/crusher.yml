@@ -1,6 +1,6 @@
 - type: entity
   name: крашер
-  parent: MobXenoBase
+  parent: MobXenoBaseT3
   id: MobCrusherXeno
   components:
     - type: XenoCrusher

@@ -1,6 +1,6 @@
 - type: entity
   name: devourer
-  parent: MobXenoBase
+  parent: MobXenoBaseT3
   id: MobDevourerXeno
   components:
     - type: XenoDevourer

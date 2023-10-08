@@ -1,0 +1,65 @@
+- type: entity
+  name: Drone
+  parent: MobXenoBaseT1
+  id: MobDroneXeno
+  components:
+    - type: XenoDrone
+    - type: XenoVines
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/drone.rsi
+      offset: 0,0.4
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoDroneBuild
+  name: action-xeno-drone-build
+  description: desc-action-xeno-drone-build
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      range: 2
+      useDelay: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: build_wall
+      itemIconStyle: NoItem
+      event: !type:XenoDroneBuildEvent
+      checkCanAccess: false
+# -------------------------------------
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoDronePsychicCure
+  name: action-xeno-drone-psychic-cure
+  description: desc-action-xeno-drone-psychic-cure
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 0
+      itemIconStyle: BigAction
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: psychic_cure
+      event: !type:XenoDronePsychicCureEvent
+      canTargetSelf: true
+      interactOnMiss: false
+# -------------------------------------

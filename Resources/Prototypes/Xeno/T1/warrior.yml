@@ -1,22 +1,23 @@
 - type: entity
-  name: hivelord
-  parent: MobXenoBase
-  id: MobHivelordXeno
+  name: warrior
+  parent: MobXenoBaseT1
+  id: MobWarriorXeno
   components:
-    - type: XenoHivelord
+    - type: XenoStun
+    - type: XenoWarrior
     - type: MobThresholds
       thresholds:
         0: Alive
         200: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/hivelord.rsi
+      sprite: Mobs/Aliens/Xenos/warrior.rsi
       offset: 0,0.4
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
-        state: running
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
     - type: MeleeWeapon
       hidden: true
       damage:
         groups:
-          Brute: 20
+          Brute: 25

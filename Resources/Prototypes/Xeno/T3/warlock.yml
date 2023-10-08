@@ -1,6 +1,6 @@
 - type: entity
   name: warlock
-  parent: MobXenoBase
+  parent: MobXenoBaseT3
   id: MobWarlockXeno
   components:
     - type: XenoWarlock
@@ -13,3 +13,6 @@
       damage:
         groups:
           Brute: 30
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
