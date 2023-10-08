@@ -4,6 +4,7 @@ using Content.Shared.Actions;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Physics.Events;
 
 namespace Content.Server.Xeno.Actions.Systems;
 

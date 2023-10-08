@@ -4,8 +4,6 @@ using Content.Shared.Actions;
 using Content.Shared.Stealth;
 using Content.Shared.Stealth.Components;
 using Content.Shared.Xeno;
-using Robust.Server.GameObjects;
-using Robust.Shared.Map;
 
 namespace Content.Server.Xeno.Actions.Systems;
 

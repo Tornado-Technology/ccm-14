@@ -15,37 +15,20 @@ public sealed partial class XenoSpitEvent : WorldTargetActionEvent { }
 public sealed partial class XenoSpit2Event : WorldTargetActionEvent { }
 public sealed partial class XenoCrushDashEvent : WorldTargetActionEvent { }
 public sealed partial class XenoVinesEvent : InstantActionEvent { }
-public sealed partial class XenoToggleStealthEvent: InstantActionEvent { }
-
-// Sentinel
-public sealed partial class XenoDroneBuildEvent : WorldTargetActionEvent { }
-public sealed partial class XenoDronePsychicCureEvent : EntityTargetActionEvent { }
-public sealed partial class XenoDroneVinesEvent : InstantActionEvent { }
+public sealed partial class XenoToggleStealthEvent : InstantActionEvent { }
+public sealed partial class XenoBuildWallEvent : WorldTargetActionEvent { }
 [Serializable, NetSerializable]
-public sealed partial class XenoDronePsychicCureDoAfterEvent : SimpleDoAfterEvent { }
-[Serializable, NetSerializable]
-public sealed partial class XenoDroneBuildDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class XenoBuildWallDoAfterEvent : SimpleDoAfterEvent
 {
     public readonly MapCoordinates Coordinates;
 
-    public XenoDroneBuildDoAfterEvent(MapCoordinates coordinates)
+    public XenoBuildWallDoAfterEvent(MapCoordinates coordinates)
     {
         Coordinates = coordinates;
     }
 }
-
-// Hivelord
-public sealed partial class XenoHivelordBuildEvent : WorldTargetActionEvent { }
-public sealed partial class XenoHivelordPsychicCureEvent : EntityTargetActionEvent { }
+public sealed partial class XenoPsychicCureEvent : EntityTargetActionEvent { }
 [Serializable, NetSerializable]
-public sealed partial class XenoHivelordPsychicCureDoAfterEvent : SimpleDoAfterEvent { }
-[Serializable, NetSerializable]
-public sealed partial class XenoHivelordBuildDoAfterEvent : SimpleDoAfterEvent
-{
-    public readonly MapCoordinates Coordinates;
-
-    public XenoHivelordBuildDoAfterEvent(MapCoordinates coordinates)
-    {
-        Coordinates = coordinates;
-    }
-}
+public sealed partial class XenoPsychicCureDoAfterEvent : SimpleDoAfterEvent { }
+public sealed partial class XenoPsychicJumpEvent : WorldTargetActionEvent { }
+public sealed partial class XenoEndureEvent : InstantActionEvent { }

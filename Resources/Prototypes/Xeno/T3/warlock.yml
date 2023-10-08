@@ -4,6 +4,15 @@
   id: MobWarlockXeno
   components:
     - type: XenoWarlock
+    - type: XenoStealth
+    - type: XenoPsychicJump
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/warlock.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -16,3 +25,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 12
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.4

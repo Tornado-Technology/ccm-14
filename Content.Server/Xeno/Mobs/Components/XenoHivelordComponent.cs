@@ -1,17 +1,4 @@
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
-
 namespace Content.Server.Xeno.Components;
 
 [RegisterComponent]
-public sealed partial class XenoHivelordComponent : Component
-{
-    [DataField("actionBuild", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionBuild = "ActionHivelordBuild";
-
-    [DataField("actionPsychicCure", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionPsychicCure = "ActionXenoHivelordPsychicCure";
-
-    [DataField("buildPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string BuildingWall = "XenoWall";
-}
+public sealed partial class XenoHivelordComponent : Component { }
