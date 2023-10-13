@@ -1,0 +1,10 @@
+- type: entity
+  id: ActionXenoEvolution
+  name: Xeno Evolution
+  description: View a evolution.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    event: !type:XenoEvolutionActionEvent

@@ -13,7 +13,7 @@
         sprite: Actions/xeno.rsi
         state: rejuvenate
       itemIconStyle: NoItem
-      event: !type:XenoSpitEvent
+      event: !type:XenoSpitRejuvenateEvent
 
 
 - type: entity

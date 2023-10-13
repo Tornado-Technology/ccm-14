@@ -3,6 +3,11 @@
   parent: MobXenoBaseT1
   id: MobWarriorXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobBullXeno
+          evolution: 600
     - type: XenoStun
     - type: XenoWarrior
     - type: MobThresholds

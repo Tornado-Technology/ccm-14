@@ -3,6 +3,11 @@
   parent: MobXenoBaseT2
   id: MobHunterXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobWarlockXeno
+          evolution: 1200
     - type: XenoHunter
     - type: XenoStealth
     - type: MobThresholds
@@ -27,3 +32,5 @@
     - type: StealthOnMove
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
+
+      

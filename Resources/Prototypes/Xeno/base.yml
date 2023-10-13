@@ -10,6 +10,14 @@
   id: MobXenoBase
   components:
     - type: Xeno
+    - type: XenoEvolutions
+    - type: IgnoreUIRange
+    - type: Actions
+    - type: UserInterface
+      interfaces:
+        - key: enum.XenoEvolutionUiKey.Key
+          type: XenoEvolutionBoundUserInterface
+#    - type: ShowXenoAgeIcons
     - type: Insulated
     - type: CombatMode
     - type: InputMover
@@ -53,11 +61,6 @@
           Base: dead
     - type: Puller
       needsHands: false
-    - type: Butcherable
-      butcheringType: Spike
-      spawned:
-      - id: FoodMeatXeno
-        amount: 5
     - type: TypingIndicator
       proto: alien
     - type: Temperature
@@ -119,39 +122,98 @@
       - Pacified
     - type: Buckle
     - type: StandingState
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 5
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT0
+  components:
+    - type: Xeno
+      researchPoints: 1
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 2
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
+
+
 
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT1
   components:
+    - type: Xeno
+      researchPoints: 2
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 4
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 12
+
+
 
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT2
   components:
+    - type: Xeno
+      researchPoints: 4
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 8
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 10
+
+
 
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT3
   components:
+    - type: Xeno
+      researchPoints: 6
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 12
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 8
+
+
 
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT4
   components:
+    - type: Xeno
+      researchPoints: 10
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 20
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 8

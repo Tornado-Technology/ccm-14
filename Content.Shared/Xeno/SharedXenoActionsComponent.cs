@@ -13,6 +13,7 @@ public sealed partial class XenoStunEvent : EntityTargetActionEvent { }
 public sealed partial class XenoExplosiveEvent : InstantActionEvent { }
 public sealed partial class XenoSpitEvent : WorldTargetActionEvent { }
 public sealed partial class XenoSpit2Event : WorldTargetActionEvent { }
+public sealed partial class XenoSpitRejuvenateEvent : WorldTargetActionEvent { }
 public sealed partial class XenoCrushDashEvent : WorldTargetActionEvent { }
 public sealed partial class XenoVinesEvent : InstantActionEvent { }
 public sealed partial class XenoToggleStealthEvent : InstantActionEvent { }
@@ -32,3 +33,5 @@ public sealed partial class XenoPsychicCureEvent : EntityTargetActionEvent { }
 public sealed partial class XenoPsychicCureDoAfterEvent : SimpleDoAfterEvent { }
 public sealed partial class XenoPsychicJumpEvent : WorldTargetActionEvent { }
 public sealed partial class XenoEndureEvent : InstantActionEvent { }
+public sealed partial class XenoRageEvent : InstantActionEvent { }
+public sealed partial class XenoScreechEvent : InstantActionEvent { }

@@ -1,8 +1,13 @@
 - type: entity
-  name: Drone
+  name: drone
   parent: MobXenoBaseT1
   id: MobDroneXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHivelordXeno
+          evolution: 600
     - type: XenoDrone
     - type: XenoVines
     - type: XenoBuildWall

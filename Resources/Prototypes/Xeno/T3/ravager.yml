@@ -4,6 +4,7 @@
   id: MobRavagerXeno
   components:
     - type: XenoEndure
+    - type: XenoRage
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/ravager.rsi
@@ -43,3 +44,12 @@
     Slash: 0.2
     Piercing: 0.2
     Heat: 0.2
+
+
+- type: damageModifierSet
+  id: XenoRavagerRage
+  coefficients:
+    Blunt: 0
+    Slash: 0
+    Piercing: 0
+    Heat: 0

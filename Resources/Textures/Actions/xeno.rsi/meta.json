@@ -39,6 +39,15 @@
     },
     {
       "name": "endure"
+    },
+    {
+      "name": "rage"
+    },
+    {
+      "name": "screech"
+    },
+    {
+      "name": "toxin_spit"
     }
   ]
 }

@@ -3,6 +3,11 @@
   parent: MobXenoBaseT2
   id: MobHivelordXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobGorgerXeno
+          evolution: 1200
     - type: XenoHivelord
     - type: XenoVines
     - type: XenoBuildWall

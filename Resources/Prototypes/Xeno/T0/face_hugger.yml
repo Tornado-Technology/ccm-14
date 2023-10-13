@@ -1,14 +1,28 @@
 - type: entity
-  parent: SimpleMobBase
+  parent: MobXenoBaseT0
   id: MobFaceHugger
-  name: Facehugger
+  name: face-hugger
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRunnerXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobDroneXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobSentinelXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobWarriorXeno
+          evolution: 0
     - type: FaceHugger
     - type: FaceHugging
       paralyzeTime: 3
       chansePounce: 100
     - type: Sprite
-      sprite: Mobs/Aliens/facehugger.rsi
+      sprite: Mobs/Aliens/Xenos/face_hugger.rsi
       drawdepth: SmallMobs
       noRot: true
       layers:
@@ -65,10 +79,9 @@
     - type: Tag
       tags:
         - CannotSuicide
-    - type: NoSlip
     - type: Clothing
       quickEquip: false
-      sprite: Clothing/Mask/gascentcom.rsi
+      sprite: Objects/Xeno/face_hugger.rsi
       slots:
         - MASK
     - type: Blindfold

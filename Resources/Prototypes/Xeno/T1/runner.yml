@@ -3,6 +3,11 @@
   parent: MobXenoBaseT1
   id: MobRunnerXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHunterXeno
+          evolution: 600
     - type: XenoRunner
     - type: MobThresholds
       thresholds:
@@ -23,3 +28,5 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 8
       baseSprintSpeed: 16
+    - type: Polymorphable
+      innatePolymorphs: [ XenoRunnerToHunter ]

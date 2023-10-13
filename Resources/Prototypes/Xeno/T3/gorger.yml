@@ -3,17 +3,13 @@
   parent: MobXenoBaseT3
   id: MobGorgerXeno
   components:
-    - type: XenoHivelord
     - type: XenoVines
       action: ActionXenoGorgerVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
     - type: XenoPsychicCure
       healAmount: 250
-    - type: XenoSpit
-      action: ActionXenoRejuvenate
-      projectile: ProjectileXenoRejuvenate
-      speed: 25
+    - type: XenoSpitRejuvenate
     - type: MobThresholds
       thresholds:
         0: Alive

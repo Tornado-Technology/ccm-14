@@ -23,6 +23,9 @@ public sealed partial class XenoSpitSystem : EntitySystem
 
         SubscribeLocalEvent<XenoSpit2Component, ComponentStartup>(OnStartup2);
         SubscribeLocalEvent<XenoSpit2Component, XenoSpit2Event>(OnSpit2);
+
+        SubscribeLocalEvent<XenoSpitRejuvenateComponent, ComponentStartup>(OnStartupRejuvenate);
+        SubscribeLocalEvent<XenoSpitRejuvenateComponent, XenoSpitRejuvenateEvent>(OnSpitRejuvenate);
     }
 
     private void OnStartup(EntityUid uid, XenoSpitComponent component, ComponentStartup args)
@@ -41,6 +44,16 @@ public sealed partial class XenoSpitSystem : EntitySystem
     }
 
     private void OnSpit2(EntityUid uid, XenoSpit2Component comp, XenoSpit2Event args)
+    {
+        Spit(uid, comp.Projectile, comp.Speed, args.Target);
+    }
+
+    private void OnStartupRejuvenate(EntityUid uid, XenoSpitRejuvenateComponent component, ComponentStartup args)
+    {
+        Starturp(uid, component.Action);
+    }
+
+    private void OnSpitRejuvenate(EntityUid uid, XenoSpitRejuvenateComponent comp, XenoSpitRejuvenateEvent args)
     {
         Spit(uid, comp.Projectile, comp.Speed, args.Target);
     }

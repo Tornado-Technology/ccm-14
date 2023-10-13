@@ -3,6 +3,11 @@
   parent: MobXenoBaseT1
   id: MobSentinelXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobSpitterXeno
+          evolution: 600
     - type: XenoSentinel
     - type: XenoSpit
       action: ActionSentinelDefaultSpit
@@ -23,7 +28,8 @@
       damage:
         groups:
           Brute: 15
-
+    - type: Polymorphable
+      innatePolymorphs: [ XenoSentinelToSpitter ]
 
 # spit
 - type: entity

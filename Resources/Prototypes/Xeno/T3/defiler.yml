@@ -63,7 +63,7 @@
         path: /Audio/Effects/alien_roar2.ogg
       icon:
         sprite: Actions/xeno.rsi
-        state: acid_spit
+        state: toxin_spit
       itemIconStyle: NoItem
       priority: 6
       event: !type:XenoSpit2Event

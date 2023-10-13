@@ -3,6 +3,14 @@
   parent: MobXenoBaseT2
   id: MobBullXeno
   components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobCrusherXeno
+          evolution: 1200
+        - !type:XenoEvolution
+          prototype: MobRavagerXeno
+          evolution: 1800
     - type: XenoBull
     - type: XenoStun
       action: ActionXenoBullStun
