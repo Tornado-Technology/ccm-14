@@ -1,0 +1,84 @@
+- type: entity
+  name: equipment request
+  parent: Paper
+  id: PaperMarineRequest
+  suffix: "Marines Paper"
+  description: 'Ready application for equipment, it remains only to receive the seal of the squad leader.'
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    netsync: false
+    layers:
+    - state: paper
+      color: "#f7e574"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#f7e574"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
+    backgroundModulate: "#f7e574"
+    contentImageModulate: "#f7e574"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 16.0, 16.0, 16.0, 16.0
+    headerImagePath: "/Textures/Interface/Paper/paper_heading_cargo_invoice.svg.96dpi.png"
+    headerMargin: 0.0, 12.0, 0.0, 0.0
+
+- type: entity
+  name: request for a machine gun
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTGMSSmartGun
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х SmartGun[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: request for Benelli M4
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTGMSBenelliM4
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Benelli M4[/bold]\n\nПечать командира отряда:"
+
+
+- type: entity
+  name: Request for a phoenix shotgun
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTGMSFenix
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Феникс[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: request for a Mosinka shotgun
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTGMSMosin
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Мосинку[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: request for an additional turret
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTurret
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения инженера:\n[bold]1х раскладная турель[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: request for additional explosives
+  parent: PaperMarineRequest
+  id: PaperMarineRequestC4
+  suffix: "Marines Paper"
+  components:
+  - type: Paper
+    content: "Запрос снаряжения инженера:\n[bold]3х взрывчатка С-4[/bold]\n\nПечать командира отряда:"
