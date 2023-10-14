@@ -11,6 +11,6 @@
         path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
-        state: explosive
+        state: stealth
       event: !type:XenoToggleStealthEvent
       checkCanInteract: false

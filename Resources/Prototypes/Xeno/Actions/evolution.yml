@@ -5,6 +5,7 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    icon:
+      sprite: Actions/xeno.rsi
+      state: evolve
     event: !type:XenoEvolutionActionEvent

@@ -17,7 +17,7 @@
       interfaces:
         - key: enum.XenoEvolutionUiKey.Key
           type: XenoEvolutionBoundUserInterface
-#    - type: ShowXenoAgeIcons
+#   - type: ShowXenoAgeIcons
     - type: Insulated
     - type: CombatMode
     - type: InputMover

@@ -3,7 +3,6 @@
   parent: MobXenoBaseT4
   id: MobRounyXeno
   components:
-#    - type: XenoWarlock
     - type: XenoStealth
     - type: XenoPsychicJump
     - type: XenoStun
@@ -28,4 +27,4 @@
       baseSprintSpeed: 12
     - type: StealthOnMove
       passiveVisibilityRate: -0.6
-      movementVisibilityRate: 0.4
+      movementVisibilityRate: 0.1

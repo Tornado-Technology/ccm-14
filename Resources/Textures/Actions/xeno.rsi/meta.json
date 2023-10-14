@@ -48,6 +48,12 @@
     },
     {
       "name": "toxin_spit"
+    },
+    {
+      "name": "evolve"
+    },
+    {
+      "name": "stealth"
     }
   ]
 }
