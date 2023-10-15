@@ -13,5 +13,5 @@ public sealed partial class XenoEggComponent : Component
     public TimeSpan CurHatchingTime = TimeSpan.FromSeconds(0f);
 
     [DataField("target", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string Target = "MobFaceHugger";
+    public string Target = "MobFaceHuggerXeno";
 }
