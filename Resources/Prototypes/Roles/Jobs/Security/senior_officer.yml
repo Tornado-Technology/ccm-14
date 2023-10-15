@@ -32,10 +32,10 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorOfficer
     back: ClothingBackpackSecurityFilled
-    shoes: ClothingShoesBootsJackSecFilled # Corvax-Resprite
+    shoes: ClothingShoesBootsCombatFilled
     eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHatBeret
-    outerClothing: ClothingOuterVestArmorSec # Corvax-Resprite
+    outerClothing: ClothingOuterArmorBasic
     id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled

@@ -1,0 +1,56 @@
+# xeno -----------------------
+- type: entity
+  name: Marine Xeno
+  id: SpawnMobMarineXeno
+  parent: MarkerBase
+  suffix: SpawnXenoTGMS
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+    - type: SpawnPoint
+      job_id: Kseno
+
+- type: entity
+  name: Marine Xeno Praetorian
+  id: SpawnMobMarineXenoPraetorian
+  parent: MarkerBase
+  suffix: SpawnXenoTGMS
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+    - type: SpawnPoint
+      job_id: Kseno
+
+- type: entity
+  name: Marine Xeno Queen
+  id: SpawnMobMarineXenoQueen
+  parent: MarkerBase
+  suffix: SpawnXenoTGMS
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+    - type: SpawnPoint
+      job_id: Kseno
+
+- type: entity
+  name: Marine Xeno Runner
+  id: SpawnMobMarineXenoRunner
+  parent: MarkerBase
+  suffix: SpawnXenoTGMS
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+    - type: SpawnPoint
+      job_id: Kseno

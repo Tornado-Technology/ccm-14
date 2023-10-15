@@ -23,7 +23,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetective
     back: ClothingBackpackSecurityFilledDetective
-    shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite
     eyes: ClothingEyesGlassesSunglasses
     head: ClothingHeadHatFedoraBrown
     outerClothing: ClothingOuterVestDetective
