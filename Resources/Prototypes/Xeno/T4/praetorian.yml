@@ -10,10 +10,7 @@
       wallPrototype: XenoWallFortified
     - type: XenoPsychicCure
       healAmount: 250
-    - type: XenoSpit
-      action: ActionXenoRejuvenate
-      projectile: ProjectileXenoRejuvenate
-      speed: 25
+    - type: XenoSpitRejuvenate
     - type: XenoSpit2
       action: ActionDefilerDefaultSpit
       projectile: ProjectileDefilerAcidSpit

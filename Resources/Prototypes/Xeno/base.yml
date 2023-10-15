@@ -11,7 +11,6 @@
   components:
     - type: Xeno
     - type: XenoEvolutions
-    - type: IgnoreUIRange
     - type: Actions
     - type: UserInterface
       interfaces:
@@ -37,7 +36,6 @@
       - Xeno
     - type: Hands
     - type: Body
-      prototype: Animal
     - type: Climbing
     - type: Flashable
     - type: NameIdentifier
@@ -142,6 +140,8 @@
       spawned:
       - id: FoodMeatXeno
         amount: 2
+      - id: TechnologyDisk
+        amount: 1
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 12
@@ -160,6 +160,8 @@
       spawned:
       - id: FoodMeatXeno
         amount: 4
+      - id: TechnologyDisk
+        amount: 1
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 12
@@ -178,6 +180,8 @@
       spawned:
       - id: FoodMeatXeno
         amount: 8
+      - id: TechnologyDisk
+        amount: 3
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 10
@@ -196,6 +200,8 @@
       spawned:
       - id: FoodMeatXeno
         amount: 12
+      - id: TechnologyDisk
+        amount: 5
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 8
@@ -214,6 +220,8 @@
       spawned:
       - id: FoodMeatXeno
         amount: 20
+      - id: TechnologyDisk
+        amount: 10
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 8

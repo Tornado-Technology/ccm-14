@@ -1,5 +1,5 @@
 # Tier 0
-ent-MobFaceHugger = Лицехват
+ent-MobFaceHuggerXeno = Лицехват
     .desc = Даруйте свои смертельные объятия неосторожному путнику.
 
 ent-MobLarvaXeno = Грудолом

@@ -54,6 +54,12 @@
     },
     {
       "name": "stealth"
+    },
+    {
+      "name": "charge"
+    },
+    {
+      "name": "neurotoxin_veil"
     }
   ]
 }

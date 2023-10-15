@@ -10,7 +10,7 @@ namespace Content.Server.Xeno.Actions.Systems;
 public sealed class XenoVinesSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
-
+    [Dependency] private readonly EntityLookupSystem _lookupSystem = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -64,7 +64,7 @@ public sealed class XenoVinesSystem : EntitySystem
 
     private bool IsTileBlockedByVines(EntityCoordinates coords)
     {
-        foreach (var entity in coords.GetEntitiesInTile())
+        foreach (var entity in _lookupSystem.GetEntitiesInRange(coords, 0.001f))
         {
             if (HasComp<XenoVinesObjectComponent>(entity))
                 return true;

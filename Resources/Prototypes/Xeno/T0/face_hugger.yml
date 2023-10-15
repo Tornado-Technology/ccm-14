@@ -1,6 +1,6 @@
 - type: entity
   parent: MobXenoBaseT0
-  id: MobFaceHugger
+  id: MobFaceHuggerXeno
   name: face-hugger
   components:
     - type: XenoEvolutions
@@ -96,8 +96,8 @@
     - type: WorldTargetAction
       useDelay: 0
       icon:
-        sprite: Actions/facehugger.rsi
-        state: borer_jump
+        sprite: Actions/xeno.rsi
+        state: charge
       itemIconStyle: NoItem
       priority: -12
       event: !type:FaceHuggerJumpActionEvent

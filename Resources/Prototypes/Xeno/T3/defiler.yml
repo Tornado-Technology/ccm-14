@@ -8,9 +8,11 @@
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
       projectile: ProjectileDefilerAcidSpit
+      speed: 25
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
       projectile: ProjectileDefilerDefaultSpit
+      speed: 25
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/defiler.rsi
@@ -43,7 +45,7 @@
         path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
-        state: default_spit
+        state: neurotoxin_veil
       itemIconStyle: NoItem
       priority: 5
       event: !type:XenoSpitEvent
