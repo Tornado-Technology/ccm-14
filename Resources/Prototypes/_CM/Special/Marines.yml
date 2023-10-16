@@ -4,6 +4,7 @@
   id: BaseMarine
   noSpawn: true
   components:
+  - type: Marine
   - type: GhostTakeoverAvailable
   - type: LagCompensation
   - type: RangedDamageSound

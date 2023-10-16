@@ -1,16 +1,16 @@
 # Leader
-- type: job
-  id: ERTLeader
-  name: job-name-ertleader
-  description: job-description-ertleader
-  playTimeTracker: JobERTLeader
-  setPreference: false
-  startingGear: ERTLeaderGearEVA
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
+# - type: job
+  # id: ERTLeader
+  # name: job-name-ertleader
+  # description: job-description-ertleader
+  # playTimeTracker: JobERTLeader
+  # setPreference: false
+  # startingGear: ERTLeaderGearEVA
+  # icon: "JobIconNanotrasen"
+  # supervisors: job-supervisors-centcom
+  # canBeAntag: false
+  # accessGroups:
+  # - AllAccess
 
 - type: startingGear
   id: ERTLeaderGear
@@ -44,18 +44,18 @@
     pocket1: Flare
 
 # Engineer
-- type: job
-  id: ERTEngineer
-  name: job-name-ertengineer
-  description: job-description-ertengineer
-  playTimeTracker: JobERTEngineer
-  setPreference: false
-  startingGear: ERTEngineerGearEVA
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
+# - type: job
+  # id: ERTEngineer
+  # name: job-name-ertengineer
+  # description: job-description-ertengineer
+  # playTimeTracker: JobERTEngineer
+  # setPreference: false
+  # startingGear: ERTEngineerGearEVA
+  # icon: "JobIconNanotrasen"
+  # supervisors: job-supervisors-centcom
+  # canBeAntag: false
+  # accessGroups:
+  # - AllAccess
 
 - type: startingGear
   id: ERTEngineerGear
@@ -89,18 +89,18 @@
     pocket1: Flare
 
 # Security
-- type: job
-  id: ERTSecurity
-  name: job-name-ertsecurity
-  description: job-description-ertsecurity
-  playTimeTracker: JobERTSecurity
-  setPreference: false
-  startingGear: ERTEngineerGearEVA
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
+# - type: job
+  # id: ERTSecurity
+  # name: job-name-ertsecurity
+  # description: job-description-ertsecurity
+  # playTimeTracker: JobERTSecurity
+  # setPreference: false
+  # startingGear: ERTEngineerGearEVA
+  # icon: "JobIconNanotrasen"
+  # supervisors: job-supervisors-centcom
+  # canBeAntag: false
+  # accessGroups:
+  # - AllAccess
 
 - type: startingGear
   id: ERTSecurityGear
@@ -136,18 +136,18 @@
     pocket2: FlashlightSeclite
 
 # Medical
-- type: job
-  id: ERTMedical
-  name: job-name-ertmedic
-  description: job-description-ertmedic
-  playTimeTracker: JobERTMedical
-  setPreference: false
-  startingGear: ERTMedicalGearEVA
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
+# - type: job
+  # id: ERTMedical
+  # name: job-name-ertmedic
+  # description: job-description-ertmedic
+  # playTimeTracker: JobERTMedical
+  # setPreference: false
+  # startingGear: ERTMedicalGearEVA
+  # icon: "JobIconNanotrasen"
+  # supervisors: job-supervisors-centcom
+  # canBeAntag: false
+  # accessGroups:
+  # - AllAccess
 
 - type: startingGear
   id: ERTMedicalGear
@@ -183,18 +183,18 @@
     pocket2: Flare
 
 # Janitor
-- type: job
-  id: ERTJanitor
-  name: job-name-ertjanitor
-  description: job-description-ertjanitor
-  playTimeTracker: JobERTJanitor
-  setPreference: false
-  startingGear: ERTJanitorGearEVA
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
+# - type: job
+  # id: ERTJanitor
+  # name: job-name-ertjanitor
+  # description: job-description-ertjanitor
+  # playTimeTracker: JobERTJanitor
+  # setPreference: false
+  # startingGear: ERTJanitorGearEVA
+  # icon: "JobIconNanotrasen"
+  # supervisors: job-supervisors-centcom
+  # canBeAntag: false
+  # accessGroups:
+  # - AllAccess
 
 - type: startingGear
   id: ERTJanitorGear
