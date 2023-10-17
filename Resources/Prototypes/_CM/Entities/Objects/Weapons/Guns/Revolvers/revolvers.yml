@@ -1,7 +1,7 @@
 - type: entity
-  name: M44 combat revolver
+  name: "Magnum VP-60x2"
   parent: BaseWeaponRevolver
-  id: WeaponRevolverM44
+  id: WeaponMagnumVP-60x2
   description: A bulky revolver, occasionally carried by assault troops and officers in the Colonial Marines, as well as civilian law enforcement. Fires .44 Magnum rounds.
   components:
   - type: Sprite
@@ -14,9 +14,9 @@
   - type: RevolverAmmoProvider
     whitelist:
       tags:
-        - CartridgeMagnum44
-        - SpeedLoaderMagnum44
-    proto: CartridgeMagnum44
-    capacity: 7
-    chambers: [ True, True, True, True, True, True, True ]
-    ammoSlots: [ null, null, null, null, null, null, null ]
+        - CartridgeMagnumVP-60x2
+        - SpeedLoaderMagnumVP-60x2
+    proto: CartridgeMagnumVP-60x2
+    capacity: 6
+    chambers: [ True, True, True, True, True, True]
+    ammoSlots: [ null, null, null, null, null, null]

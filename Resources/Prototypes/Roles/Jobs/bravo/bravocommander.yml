@@ -1,0 +1,40 @@
+- type: job
+  id: BravoCommander
+  name: job-name-bravo-commander
+  description: job-description-bravocommander
+  playTimeTracker: JobBravoCommander
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
+      time: 7200
+  startingGear: BravoCommanderGear
+  icon: "JobIconBravoCommander"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+    - Maintenance
+
+- type: startingGear
+  id: BravoCommanderGear
+  equipment:
+    head: ClothingHeadHatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    back: ClothingBackpackSecurityFilled
+    eyes: ClothingEyesGlassesSecurity
+    outerClothing: ClothingOuterCoatWarden
+    id: WardenPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolMk58Nonlethal
+  innerclothingskirt: ClothingUniformJumpskirtWarden
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled

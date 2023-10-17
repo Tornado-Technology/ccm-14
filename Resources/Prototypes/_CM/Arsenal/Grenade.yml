@@ -1,0 +1,32 @@
+- type: entity
+  id: BulletGrenadeBlastMarine
+  parent: BulletGrenadeBlast
+  suffix: "Marines Gear"
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+
+- type: entity
+  id: GrenadeBlastMarine
+  parent: GrenadeBlast
+  name: Grenade Blast
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeBlastMarine
+
+- type: entity
+  id: BulletGrenadeFragMarine
+  parent: BulletGrenadeFrag
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+
+- type: entity
+  id: GrenadeFragMarine
+  parent: GrenadeFrag
+  name: Grenade Frag
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeFragMarine

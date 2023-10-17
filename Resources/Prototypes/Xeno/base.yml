@@ -1,10 +1,70 @@
 - type: entity
-  name: Queen
-  parent: MobXeno
+  abstract: true
+  parent:
+    - BaseMob
+    - MobDamageable
+    - MobAtmosExposed
+    - MobCombat
+    - MobBloodstream
+    - MobFlammable
   id: MobXenoBase
-  abstarct: true
   components:
     - type: Xeno
+    - type: XenoEvolutions
+    - type: Actions
+    - type: UserInterface
+      interfaces:
+        - key: enum.XenoEvolutionUiKey.Key
+          type: XenoEvolutionBoundUserInterface
+#   - type: ShowXenoAgeIcons
+    - type: Insulated
+    - type: CombatMode
+    - type: InputMover
+    - type: MobMover
+    - type: Tool
+      speed: 1.5
+      qualities:
+        - Prying
+      useSound:
+        path: /Audio/Items/crowbar.ogg
+    - type: Reactive
+      groups:
+        Flammable: [Touch]
+        Extinguish: [Touch]
+    - type: NpcFactionMember
+      factions:
+      - Xeno
+    - type: Hands
+    - type: Body
+    - type: Climbing
+    - type: Flashable
+    - type: NameIdentifier
+      group: GenericNumber
+    - type: MobState
+      allowedStates:
+      - Alive
+      - Dead
+    - type: Stamina
+      critThreshold: 200
+    - type: Bloodstream
+      bloodReagent: FluorosulfuricAcid
+    - type: DamageStateVisuals
+      rotate: true
+      states:
+        Alive:
+          Base: running
+        Critical:
+          Base: crit
+        Dead:
+          Base: dead
+    - type: Puller
+      needsHands: false
+    - type: TypingIndicator
+      proto: alien
+    - type: Temperature
+      heatDamageThreshold: 360
+      coldDamageThreshold: -150
+      currentTemperature: 310.15
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/queen.rsi
@@ -20,7 +80,11 @@
       baseWalkSpeed: 5
       baseSprintSpeed: 9
     - type: MeleeWeapon
+      altDisarm: false
       hidden: true
+      angle: 30
+      soundHit:
+        collection: AlienClaw
       damage:
         groups:
           Brute: 25
@@ -35,3 +99,129 @@
           - MobMask
           layer:
           - MobLayer
+    - type: Tag
+      tags:
+        - CannotSuicide
+        - DoorBumpOpener
+        - FootstepSound
+        - DoorBumpOpener
+    - type: NoSlip
+    - type: Perishable # Ummmm the acid kills a lot of the bacteria or something
+      molsPerSecondPerUnitMass: 0.0005
+    - type: Speech
+      speechVerb: LargeMob
+    - type: StatusEffects
+      allowed:
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - ForcedSleep
+      - TemporaryBlindness
+      - Pacified
+    - type: Buckle
+    - type: StandingState
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 5
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT0
+  components:
+    - type: Xeno
+      researchPoints: 1
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 2
+      - id: TechnologyDisk
+        amount: 1
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT1
+  components:
+    - type: Xeno
+      researchPoints: 2
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 4
+      - id: TechnologyDisk
+        amount: 1
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT2
+  components:
+    - type: Xeno
+      researchPoints: 4
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 8
+      - id: TechnologyDisk
+        amount: 3
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 10
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT3
+  components:
+    - type: Xeno
+      researchPoints: 6
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 12
+      - id: TechnologyDisk
+        amount: 5
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 8
+
+
+
+- type: entity
+  abstract: true
+  parent: MobXenoBase
+  id: MobXenoBaseT4
+  components:
+    - type: Xeno
+      researchPoints: 10
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: FoodMeatXeno
+        amount: 20
+      - id: TechnologyDisk
+        amount: 10
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 8

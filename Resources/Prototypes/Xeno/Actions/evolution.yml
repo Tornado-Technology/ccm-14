@@ -1,0 +1,11 @@
+- type: entity
+  id: ActionXenoEvolution
+  name: Xeno Evolution
+  description: View a evolution.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Actions/xeno.rsi
+      state: evolve
+    event: !type:XenoEvolutionActionEvent

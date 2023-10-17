@@ -1,0 +1,12 @@
+- type: vendingMachineInventory
+  id: EquipSpecialistVendInventory
+  startingInventory:
+    ClothingShoesBootsMarine: 1
+    ClothingHeadHelmetMarine: 1
+    ClothingOuterArmorMarineLight: 1
+    ClothingOuterArmorMarineMedium: 1
+    ClothingBackpackMarine: 1
+    BoxMRPFilled: 1
+    MiniFireExtinguisherMarine: 5
+    StorePresetSquadLead: 1
+    C4: 10

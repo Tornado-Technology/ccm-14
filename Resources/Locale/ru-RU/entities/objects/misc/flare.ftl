@@ -1,2 +1,2 @@
-ent-FlareMarine = flare
-    .desc = A red USCM issued flare. There are instructions on the side, it reads 'pull cord, make light'.
+ent-FlareMarine = вспышка
+    .desc = Красная сигнальная ракета, выпущенная USCM. Сбоку есть инструкция, она гласит: "Потяните за шнур, зажгите свет".

@@ -1,21 +1,20 @@
 - type: vendingMachineInventory
   id: EquipVendInventory
   startingInventory:
-    ClothingShoesBootsMarine: 15
-    ClothingUniformJumpsuitMarine: 15
-    ClothingHandsGlovesMarine: 15
-    ClothingHeadsetMarineAlfa: 15
-    ClothingHeadHelmetMarine: 15
-    BoxMRPFilled: 15
-    ClothingOuterArmorMarineLight: 15
-    ClothingOuterArmorMarineMedium: 15
-    ClothingOuterArmorMarineHeavy: 15
-    ClothingBackpackMarine: 15
-    ClothingBackpackSatchelMarine: 15
-    ClothingMaskGasMarine: 15
-    ClothingMaskCoif: 10
-    ClothingMaskGasRebreather: 10
-    MarineRollerBedSpawnFolded: 5
+    ClothingShoesBootsMarine: 4
+    ClothingUniformJumpsuitMarine: 4
+    ClothingHandsGlovesMarine: 4
+    ClothingHeadsetMarineAlfa: 4
+    ClothingHeadHelmetMarine: 4
+    BoxMRPFilled: 4
+    ClothingOuterArmorMarineLight: 4
+    ClothingOuterArmorMarineMedium: 4
+    ClothingOuterArmorMarineHeavy: 4
+    ClothingBackpackMarine: 4
+    ClothingBackpackSatchelMarine: 4
+    ClothingMaskGasMarine: 4
+    ClothingMaskCoif: 4
+    ClothingMaskGasRebreather: 4
     ClothingOuterArmorMarineB12: 5
     MiniFireExtinguisherMarine: 5
     Whistle: 5

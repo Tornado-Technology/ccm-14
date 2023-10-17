@@ -17,6 +17,8 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Hands;
 using Content.Server.NPC.Components;
 using Content.Server.Alien;
+using Content.Shared.Mind;
+using Content.Shared.Xeno;
 
 namespace Content.Server.Xeno.Systems;
 
@@ -32,12 +34,11 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedCombatModeSystem _combat = default!;
-
+    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
 
     public override void Initialize()
     {
         SubscribeLocalEvent<FaceHuggingComponent, ComponentStartup>(OnStartup);
-
 
         SubscribeLocalEvent<FaceHuggingComponent, FaceHuggerJumpActionEvent>(OnJumpFaceHugger);
         SubscribeLocalEvent<FaceHuggerComponent, ThrowDoHitEvent>(OnFaceHuggerDoHit);
@@ -49,10 +50,10 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         SubscribeLocalEvent<FaceHuggerComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
-    protected void OnStartup(EntityUid uid, FaceHuggingComponent component, ComponentStartup args)
+    private void OnStartup(EntityUid uid, FaceHuggingComponent component, ComponentStartup args)
     {
-
         _actionsSystem.AddAction(uid, component.FaceHuggerJumpAction);
+
         if (TryComp(uid, out FaceHuggerComponent? comp))
         {
             comp.isEgged = false;
@@ -60,34 +61,25 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         }
     }
 
-
     private void OnFaceHuggerDoHit(EntityUid uid, FaceHuggerComponent component, ThrowDoHitEvent args)
     {
         if (component.IsDeath)
             return;
-        if (TryComp(args.Target, out HuggerOnFaceComponent? huggeronface))
-        {
-            return;
-        }
 
+        if (TryComp(args.Target, out HuggerOnFaceComponent? huggeronface))
+            return;
 
         if (HasComp<FaceHuggerComponent>(args.Target))
-        {
             return;
-        }
 
         var huggeronfaceComp = _entityManager.AddComponent<HuggerOnFaceComponent>(args.Target);
 
         TryComp(uid, out FaceHuggerComponent? defcomp);
         if (defcomp == null)
-        {
             return;
-        }
-
 
         if (!HasComp<HumanoidAppearanceComponent>(args.Target))
             return;
-
 
         if (TryComp(args.Target, out MobStateComponent? mobState))
         {
@@ -108,7 +100,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         component.EquipedOn = args.Target;
         component.OwnerId = uid;
 
-        EntityManager.RemoveComponent<CombatModeComponent>(uid);
+        RemComp<CombatModeComponent>(uid);
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
         //_damageableSystem.TryChangeDamage(args.Target, component.Damage);
@@ -142,18 +134,26 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     {
         if (args.Slot != "mask")
             return;
+
         component.EquipedOn = args.Equipee;
         component.OwnerId = uid;
-        EntityManager.RemoveComponent<CombatModeComponent>(uid);
+
+        RemComp<CombatModeComponent>(uid);
+
+        if (TryComp<XenoEvolutionsComponent>(uid, out var evol))
+            evol.Enabled = false;
     }
     private void OnUnequipAttempt(EntityUid uid, FaceHuggerComponent component, BeingUnequippedAttemptEvent args)
     {
         if (args.Slot != "mask")
             return;
+
         if (component.EquipedOn != args.Unequipee)
             return;
+
         if (HasComp<FaceHuggerComponent>(args.Unequipee))
             return;
+
         _damageableSystem.TryChangeDamage(args.Unequipee, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10));
         args.Cancel();
     }
@@ -162,6 +162,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     {
         if (component.IsDeath)
             return;
+
         _damageableSystem.TryChangeDamage(args.User, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 5));
     }
 
@@ -169,15 +170,22 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     {
         if (args.Slot != "mask")
             return;
+
         component.EquipedOn = new EntityUid();
         var combatMode = EntityManager.AddComponent<CombatModeComponent>(uid);
+
         _combat.SetInCombatMode(uid, true, combatMode);
+
         if (TryComp(uid, out FaceHuggerComponent? freq))
         {
             freq.InfectionAccumulator = 0;
         }
-        EntityManager.RemoveComponent<HuggerOnFaceComponent>(args.Equipee);
-        EntityManager.AddComponent<NPCMeleeCombatComponent>(uid);
+
+        if (TryComp<XenoEvolutionsComponent>(uid, out var evol))
+            evol.Enabled = true;
+
+        RemComp<HuggerOnFaceComponent>(args.Equipee);
+        EnsureComp<NPCMeleeCombatComponent>(uid);
     }
     private static void OnMobStateChanged(EntityUid uid, FaceHuggerComponent component, MobStateChangedEvent args)
     {
@@ -190,8 +198,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-
-
 
         foreach (var comp in EntityQuery<FaceHuggerComponent>())
         {
@@ -216,6 +222,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
                     return;
                 }
             }
+
             if (comp.Accumulator <= comp.DamageFrequency)
                 continue;
             comp.Accumulator = 0;
@@ -236,14 +243,11 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
                 _inventory.TryUnequip(targetId, "mask", true, true);
 
                 Spawn(comp.InfectionEgg, Transform(comp.OwnerId).Coordinates);
-
                 _damageableSystem.TryChangeDamage(targetId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
 
-                EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
+                RemComp<HuggerOnFaceComponent>(targetId);
                 comp.EquipedOn = new EntityUid();
             }
-
         }
-
     }
 }

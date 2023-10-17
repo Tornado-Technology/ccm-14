@@ -1,0 +1,15 @@
+- type: entity
+  id: ActionXenoRage
+  name: Explosive name
+  description: Explosive desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 600
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: rage
+      event: !type:XenoRageEvent
+      checkCanInteract: false

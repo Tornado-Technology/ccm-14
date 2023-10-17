@@ -1,2 +1,2 @@
-ent-ClothingBackpackMarine = lightweight IMP backpack
-    .desc = The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield.
+ent-ClothingBackpackMarine = легкий рюкзак IMP
+    .desc = Стандартный комплект для вооруженных сил США. Предназначен для переноски снаряжения на поле боя.

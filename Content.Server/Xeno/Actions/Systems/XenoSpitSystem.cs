@@ -4,6 +4,7 @@ using Content.Shared.Actions;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Physics.Events;
 
 namespace Content.Server.Xeno.Actions.Systems;
 
@@ -22,6 +23,9 @@ public sealed partial class XenoSpitSystem : EntitySystem
 
         SubscribeLocalEvent<XenoSpit2Component, ComponentStartup>(OnStartup2);
         SubscribeLocalEvent<XenoSpit2Component, XenoSpit2Event>(OnSpit2);
+
+        SubscribeLocalEvent<XenoSpitRejuvenateComponent, ComponentStartup>(OnStartupRejuvenate);
+        SubscribeLocalEvent<XenoSpitRejuvenateComponent, XenoSpitRejuvenateEvent>(OnSpitRejuvenate);
     }
 
     private void OnStartup(EntityUid uid, XenoSpitComponent component, ComponentStartup args)
@@ -31,7 +35,7 @@ public sealed partial class XenoSpitSystem : EntitySystem
 
     private void OnSpit(EntityUid uid, XenoSpitComponent comp, XenoSpitEvent args)
     {
-        Spit(uid, comp.Projectile, args.Target);
+        Spit(uid, comp.Projectile, comp.Speed, args.Target);
     }
 
     private void OnStartup2(EntityUid uid, XenoSpit2Component component, ComponentStartup args)
@@ -41,7 +45,17 @@ public sealed partial class XenoSpitSystem : EntitySystem
 
     private void OnSpit2(EntityUid uid, XenoSpit2Component comp, XenoSpit2Event args)
     {
-        Spit(uid, comp.Projectile, args.Target);
+        Spit(uid, comp.Projectile, comp.Speed, args.Target);
+    }
+
+    private void OnStartupRejuvenate(EntityUid uid, XenoSpitRejuvenateComponent component, ComponentStartup args)
+    {
+        Starturp(uid, component.Action);
+    }
+
+    private void OnSpitRejuvenate(EntityUid uid, XenoSpitRejuvenateComponent comp, XenoSpitRejuvenateEvent args)
+    {
+        Spit(uid, comp.Projectile, comp.Speed, args.Target);
     }
 
     private void Starturp(EntityUid uid, string action)
@@ -49,13 +63,13 @@ public sealed partial class XenoSpitSystem : EntitySystem
         _actionsSystem.AddAction(uid, action);
     }
 
-    private void Spit(EntityUid uid, string proj, EntityCoordinates target)
+    private void Spit(EntityUid uid, string proj, float speed, EntityCoordinates target)
     {
         var transform = Transform(uid);
         var projectile = Spawn(proj, transform.Coordinates);
         var mapCoords = target.ToMap(EntityManager);
         var direction = mapCoords.Position - transform.MapPosition.Position;
         var userVelocity = _physics.GetMapLinearVelocity(uid);
-        _gunSystem.ShootProjectile(projectile, direction, userVelocity, uid, uid);
+        _gunSystem.ShootProjectile(projectile, direction, userVelocity, uid, uid, speed);
     }
 }

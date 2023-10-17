@@ -1,9 +1,7 @@
 - type: entity
-  name: M37A2 pump shotgun
-  # Don't parent to BaseWeaponShotgun because it differs significantly
+  name: UA 571-C shotgun
   parent: BaseItem
-  id: WeaponShotgunM37
-  description: An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability.
+  id: WeaponShotgunUA571C
   components:
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
@@ -39,9 +37,62 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - ShellShotgun
+      - Cartridge
+      - CartridgeShotGun24Gauge
     capacity: 8
-    proto: ShellShotgun
+    proto: CartridgeShotGun24Gauge
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: K221 shotgun
+  parent: BaseItem
+  id: WeaponShotgunK221
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
+    layers:
+      - state: icon
+        map: [ "enum.GunVisualLayers.Base" ]
+  - type: Item
+    size: 30
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: Gun
+    minAngle: 10
+    maxAngle: 20
+    fireRate: 0.5
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Cartridge
+      - CartridgeShotGun8Gauge
+    capacity: 8
+    proto: CartridgeShotGun8Gauge
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: ContainerContainer

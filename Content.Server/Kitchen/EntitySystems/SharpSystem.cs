@@ -1,4 +1,4 @@
-﻿using Content.Server.Body.Systems;
+using Content.Server.Body.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Interaction;
@@ -118,6 +118,7 @@ public sealed class SharpSystem : EntitySystem
         if (hasBody)
             _bodySystem.GibBody(args.Args.Target.Value, body: body);
 
+        RaiseLocalEvent(args.Args.Target.Value, new SharpAfterEvent());
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
 
         args.Handled = true;

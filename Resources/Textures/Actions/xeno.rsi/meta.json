@@ -21,6 +21,45 @@
     },
     {
       "name": "explosive"
+    },
+    {
+      "name": "build_wall"
+    },
+    {
+      "name": "psychic_cure"
+    },
+    {
+      "name": "vines"
+    },
+    {
+      "name": "rejuvenate"
+    },
+    {
+      "name": "psychic_jump"
+    },
+    {
+      "name": "endure"
+    },
+    {
+      "name": "rage"
+    },
+    {
+      "name": "screech"
+    },
+    {
+      "name": "toxin_spit"
+    },
+    {
+      "name": "evolve"
+    },
+    {
+      "name": "stealth"
+    },
+    {
+      "name": "charge"
+    },
+    {
+      "name": "neurotoxin_veil"
     }
   ]
 }

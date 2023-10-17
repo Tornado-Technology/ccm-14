@@ -1,4 +1,4 @@
-ent-WeaponPistolM4A3 = M4A3 service pistol
-    .desc = An M4A3 Service Pistol, once the standard issue sidearm of the Colonial Marines but has recently been replaced with the 88 Mod 4 combat pistol. Fires 9mm pistol rounds.
-ent-WeaponPistol88M4 = 88 Mod 4 combat pistol
-    .desc = Standard issue USCM firearm. Also found in the hands of Weyland-Yutani PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst.
+ent-WeaponPistolM4A3 = Служебный пистолет M4A3
+    .desc = Служебный пистолет M4A3, когда-то являвшийся стандартным оружием колониальной морской пехоты, но недавно был заменен боевым пистолетом 88 Mod 4. Стреляет 9-миллиметровыми пистолетными патронами.
+ent-WeaponPistol88M4 = Боевой пистолет 88 Mod 4
+    .desc = Огнестрельное оружие USCM стандартного выпуска. Также найдено в руках команд ЧВК Вейланд-Ютани. Стреляет 9-миллиметровыми снарядами, разрушающими броню, и способен произвести 3 выстрела очередью.

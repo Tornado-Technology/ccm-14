@@ -1,0 +1,51 @@
+- type: entity
+  name: praetorian
+  parent: MobXenoBaseT4
+  id: MobPraetorianXeno
+  components:
+    - type: XenoPraetorian
+    - type: XenoVines
+      action: ActionXenoPraetorianVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWallFortified
+    - type: XenoPsychicCure
+      healAmount: 250
+    - type: XenoSpitRejuvenate
+    - type: XenoSpit2
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileDefilerAcidSpit
+      speed: 25
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/praetorian.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 35
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoPraetorianVines
+  parent: ActionXenoVines
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 5
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: vines
+      event: !type:XenoVinesEvent
+      checkCanInteract: false
+# -------------------------------------

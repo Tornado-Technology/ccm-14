@@ -1,2 +1,2 @@
-ent-DrinkWaterWYBottleFull = Weyland-Yutani Bottled Spring Water
-    .desc = Overpriced 'Spring' water. Bottled by the Weyland-Yutani Corporation.
+ent-DrinkWaterWYBottleFull = Бутилированная родниковая вода Weyland-Yutani
+    .desc = "Родниковая" вода по завышенной цене. Разливается по бутылкам корпорацией "Вейланд-Ютани".

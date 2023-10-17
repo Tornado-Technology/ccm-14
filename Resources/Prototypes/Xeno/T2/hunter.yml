@@ -1,0 +1,36 @@
+- type: entity
+  name: hunter
+  parent: MobXenoBaseT2
+  id: MobHunterXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobWarlockXeno
+          evolution: 1200
+    - type: XenoHunter
+    - type: XenoStealth
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        180: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/hunter.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 25
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 12
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.4
+
+      

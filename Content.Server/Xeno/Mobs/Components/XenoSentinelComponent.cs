@@ -1,4 +1,4 @@
-namespace Content.Server.Xeno.Components;
+namespace Content.Server.Xeno.Mobs.Components;
 
 [RegisterComponent]
 public sealed partial class XenoSentinelComponent : Component { }

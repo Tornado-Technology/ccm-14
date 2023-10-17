@@ -1,0 +1,30 @@
+- type: entity
+  name: drone
+  parent: MobXenoBaseT1
+  id: MobDroneXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHivelordXeno
+          evolution: 600
+    - type: XenoDrone
+    - type: XenoVines
+    - type: XenoBuildWall
+    - type: XenoPsychicCure
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/drone.rsi
+      offset: 0,0.4
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15

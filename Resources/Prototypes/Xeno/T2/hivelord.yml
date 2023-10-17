@@ -1,0 +1,32 @@
+- type: entity
+  name: hivelord
+  parent: MobXenoBaseT2
+  id: MobHivelordXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobGorgerXeno
+          evolution: 1200
+    - type: XenoHivelord
+    - type: XenoVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWall
+    - type: XenoPsychicCure
+      healAmount: 150
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/hivelord.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 20

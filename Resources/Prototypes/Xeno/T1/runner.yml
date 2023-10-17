@@ -1,0 +1,32 @@
+- type: entity
+  name: runner
+  parent: MobXenoBaseT1
+  id: MobRunnerXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHunterXeno
+          evolution: 600
+    - type: XenoRunner
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        125: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/runner.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 25
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 8
+      baseSprintSpeed: 16
+    - type: Polymorphable
+      innatePolymorphs: [ XenoRunnerToHunter ]

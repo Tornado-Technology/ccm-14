@@ -1,20 +1,20 @@
 - type: entity
-  id: BaseMagazineRifleM4RA
-  name: "M4RA magazine (10x24mm)"
+  id: BaseMagazineRifleXM43E 
+  name: "XM43E magazine (416 Barratti)"
   parent: BaseItem
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineRifleM4RA
+      - MagazineRifleXM43E
   - type: Item
     size: 5
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle1024
-    capacity: 25
+        - CartridgeRifle416Barratti
+    capacity: 30
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -32,90 +32,15 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineRifleM4RA
-  name: "M4RA magazine (10x24mm)"
-  parent: BaseMagazineRifleM4RA
+  id: MagazineRifleXM43E
+  name: "XM43E magazine (416 Barratti)"
+  parent: BaseMagazineRifleXM43E
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024
+    proto: BulletRifle416Barratti
   - type: Sprite
     layers:
     - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: MagazineRifleM4RAAP
-  name: "M4RA AP magazine (10x24mm)"
-  parent: BaseMagazineRifleM4RA
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024AP
-  - type: Sprite
-    layers:
-    - state: ap
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: BaseMagazineRifleM4RAEx
-  name: "M4RA extended magazine (10x24mm)"
-  parent: BaseItem
-  abstract: true
-  components:
-  - type: Tag
-    tags:
-      - MagazineRifleM4RA
-  - type: Item
-    size: 5
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - CartridgeRifle1024
-    capacity: 40
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra_ex.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: MagazineRifleM4RAEx
-  name: "M4RA extended magazine (10x24mm)"
-  parent: BaseMagazineRifleM4RAEx
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: MagazineRifleM4RAExAP
-  name: "M4RA AP extended magazine (10x24mm)"
-  parent: BaseMagazineRifleM4RAEx
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024AP
-  - type: Sprite
-    layers:
-    - state: ap
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

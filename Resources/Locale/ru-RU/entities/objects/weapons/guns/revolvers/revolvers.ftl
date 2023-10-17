@@ -1,2 +1,2 @@
-ent-WeaponRevolverM44 = M44 combat revolver
-    .desc = A bulky revolver, occasionally carried by assault troops and officers in the Colonial Marines, as well as civilian law enforcement. Fires .44 Magnum rounds.
+ent-WeaponRevolverM44 = Боевой револьвер М44
+    .desc = Громоздкий револьвер, который иногда носят штурмовые отряды и офицеры колониальной морской пехоты, а также гражданские правоохранительные органы. Стреляет патронами "Магнум" 44-го калибра.

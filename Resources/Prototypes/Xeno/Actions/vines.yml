@@ -1,0 +1,15 @@
+- type: entity
+  id: ActionXenoVines
+  name: action-xeno-vines
+  description: desc-action-vines
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 20
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: vines
+      event: !type:XenoVinesEvent
+      checkCanInteract: false

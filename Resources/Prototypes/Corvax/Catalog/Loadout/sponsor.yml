@@ -121,3 +121,10 @@
   id: FancyCrownLoadout
   entity: ClothingHeadHatFancyCrown
   sponsorOnly: true
+
+# kekw
+- type: loadout
+  id: DeveloperCloakLoadout
+  entity: ClothingNeckCloakDeveloper
+  sponsorOnly: true
+

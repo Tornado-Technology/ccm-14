@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridgeMagnum44
-  name: cartridge (.44 magnum)
+  id: BaseCartridgeMagnumVP-60x2
+  name: cartridge (.500SW)
   parent: BaseCartridge
   abstract: true
   components:
   - type: Tag
     tags:
       - Cartridge
-      - CartridgeMagnum44
+      - CartridgeMagnumVP-60x2
   - type: CartridgeAmmo
-    proto: BulletMagnum44
+    proto: BulletMagnumVP-60x2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,9 +21,9 @@
     price: 10
 
 - type: entity
-  id: CartridgeMagnum44
-  name: cartridge (.44)
-  parent: BaseCartridgeMagnum44
+  id: CartridgeMagnumVP-60x2
+  name: cartridge (.500SW)
+  parent: BaseCartridgeMagnumVP-60x2
   components:
   - type: CartridgeAmmo
-    proto: BulletMagnum44
+    proto: BulletMagnumVP-60x2

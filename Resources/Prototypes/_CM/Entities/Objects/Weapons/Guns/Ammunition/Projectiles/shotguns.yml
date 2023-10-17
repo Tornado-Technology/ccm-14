@@ -1,0 +1,27 @@
+- type: entity
+  id: BulletShotGun24Gauge
+  name: bullet (24 Gauge)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+
+- type: entity
+  id: BulletShotGun8Gauge
+  name: bullet (8 Gauge)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 12

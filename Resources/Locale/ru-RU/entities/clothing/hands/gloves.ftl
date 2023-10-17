@@ -1,2 +1,2 @@
-ent-ClothingHandsGlovesMarine = marine combat gloves
-    .desc = Standard issue marine tactical gloves.
+ent-ClothingHandsGlovesMarine = боевые перчатки морской пехоты
+    .desc = Стандартные тактические перчатки морской пехоты.
