@@ -1,8 +1,8 @@
 - type: job
-  id: PilotOfficer
-  name: job-name-pilotofficer
-  description: job-description-pilotofficer
-  playTimeTracker: JobPilotOfficer
+  id: PilotNormandy
+  name: job-name-pilotnormandy
+  description: job-description-pilotnormandy
+  playTimeTracker: JobPilotNormandy
   requirements:
     - !type:DepartmentTimeRequirement
       department: AlphaGarrison
@@ -19,15 +19,15 @@
     - !type:RoleTimeRequirement
       role: JobCharlieMarine
       time: 0
-  startingGear: PilotOfficerGear
+  startingGear: PilotNOfficerGear
   icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
-    - Maintenance
+    - Command
 
 - type: startingGear
-  id: PilotOfficerGear
+  id: PilotNOfficerGear
   equipment:
     head: ClothingHeadHatWarden
     jumpsuit: ClothingUniformJumpsuitWarden

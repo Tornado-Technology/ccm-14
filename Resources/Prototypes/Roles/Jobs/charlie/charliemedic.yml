@@ -23,8 +23,8 @@
   icon: "JobIconCharlieMedic"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSCM
 
 - type: startingGear
   id: CharlieMedicGear

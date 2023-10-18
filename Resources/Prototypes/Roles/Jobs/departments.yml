@@ -95,7 +95,14 @@
     - HeadOperations
     - FieldCommander
     - StaffOfficer
-    - PilotOfficer
+
+- type: department
+  id: Pilots
+  description: department-Pilots-description
+  color: "#7FFFD4"
+  roles:
+    - PilotNormandy
+    - PilotRaptor
 
 - type: department
   id: Xeno

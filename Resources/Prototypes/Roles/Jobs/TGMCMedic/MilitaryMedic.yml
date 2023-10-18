@@ -23,8 +23,8 @@
   icon: "JobIconMilitaryMedic"
   supervisors: job-supervisors-mainmilmedic
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSM
 
 - type: startingGear
   id: MilitaryMedicGear

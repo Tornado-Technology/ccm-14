@@ -23,8 +23,8 @@
   icon: "JobIconAlfaSpecialist"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSAS
 
 - type: startingGear
   id: AlfaSpecialistGear

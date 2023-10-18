@@ -24,7 +24,7 @@
   supervisors: job-supervisors-cmofficer
   canBeAntag: false
   access:
-    - Maintenance
+    - Research
 
 - type: startingGear
   id: MilitaryScientistGear

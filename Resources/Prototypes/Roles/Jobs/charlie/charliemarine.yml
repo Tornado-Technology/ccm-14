@@ -12,7 +12,7 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
-    - Maintenance
+    - TGMSC
 
 - type: startingGear
   id: CharlieMarineGear

@@ -23,8 +23,8 @@
   icon: "JobIconCharlieEngineer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSCE
 
 - type: startingGear
   id: CharlieEngineerGear

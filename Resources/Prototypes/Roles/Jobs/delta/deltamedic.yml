@@ -23,8 +23,8 @@
   icon: "JobIconDeltaMedic"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSDM
 
 - type: startingGear
   id: DeltaMedicGear

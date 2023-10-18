@@ -23,8 +23,8 @@
   icon: "JobIconBravoEngineer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSBE
 
 - type: startingGear
   id: BravoEngineerGear

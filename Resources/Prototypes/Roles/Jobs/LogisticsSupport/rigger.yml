@@ -21,7 +21,7 @@
   supervisors: job-supervisors-supplyofficer
   canBeAntag: false
   access:
-    - Maintenance
+    - Cargo
 
 - type: startingGear
   id: RiggerGear
