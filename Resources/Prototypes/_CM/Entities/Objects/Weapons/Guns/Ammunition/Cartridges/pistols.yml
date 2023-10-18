@@ -1,0 +1,39 @@
+- type: entity
+  id: BaseCartridgePistol45GAP
+  name: cartridge (45GAP)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol45GAP
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgePistol45GAP
+  name: cartridge (45GAP)
+  parent: BaseCartridgePistol45GAP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol45GAP
+
+- type: entity
+  id: BaseCartridgePistol4440
+  name: cartridge (44.40)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol4440
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgePistol4440
+  name: cartridge (44.40)
+  parent: BaseCartridgePistol4440
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol4440

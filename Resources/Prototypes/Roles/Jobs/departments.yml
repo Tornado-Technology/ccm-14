@@ -41,6 +41,54 @@
     - CharlieEngineer
     - CharlieCommander
     - CharlieSpecialist
+  id: CommandersGarrisons
+  description: department-CommandersGarrisons-description
+  color: "#B22222"
+  roles:
+    - AlfaCommander
+    - DeltaCommander
+    - BravoCommander
+    - CharlieCommander
+
+- type: department
+  id: SpecialistsGarrison
+  description: department-SpecialistsGarrison-description
+  color: "#1E90FF"
+  roles:
+    - AlfaSpecialist
+    - DeltaSpecialist
+    - BravoSpecialist
+    - CharlieSpecialist
+
+- type: department
+  id: MedicsGarrison
+  description: department-MedicsGarrison-description
+  color: "#FFD700"
+  roles:
+    - AlfaMedic
+    - DeltaMedic
+    - BravoMedic
+    - CharlieMedic
+    
+- type: department
+  id: EngineersGarrison
+  description: department-EngineersGarrison-description
+  color: "#FFD700"
+  roles:
+    - AlfaEngineer
+    - DeltaEngineer
+    - BravoEngineer
+    - CharlieEngineer
+    
+- type: department
+  id: MarinesGarrison
+  description: department-MarinesGarrison-description
+  color: "#8A2BE2"
+  roles:
+    - AlfaMarine
+    - DeltaMarine
+    - BravoMarine
+    - CharlieMarine
 
 - type: department
   id: MilitaryPolice

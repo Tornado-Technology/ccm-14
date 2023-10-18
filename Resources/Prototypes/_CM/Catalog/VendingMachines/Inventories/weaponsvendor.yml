@@ -1,17 +1,21 @@
 - type: vendingMachineInventory
   id: WeaponsVendInventory
   startingInventory:
-    WeaponSniperM4RA: 15
-    WeaponShotgunM37: 15
-    WeaponSubMachineGunM39: 15
-    WeaponRifleM41A: 15
-    MagazineRifleM4RA: 15
-    MagazineRifleM39: 15
-    MagazineRifleM41A: 15
-    WeaponPistol88M4: 15
-    WeaponRevolverM44: 15
-    WeaponPistolM4A3: 15
-    MagazinePistol88M4: 15
-    SpeedLoaderMagnum44: 15
-    MagazinePistolM4A3: 15
-    MarineCombatKnife: 15
+    WeaponRifleM41A: 4
+    MagazineRifleM41A: 25
+    WeaponRifleM4RA: 4
+    MagazineRifleM4RA: 25
+    WeaponShotgunUA571C: 4
+    MagazineShotgunUA571C: 25
+    WeaponShotgunK221: 4
+    MagazineShotgunK221: 25
+    WeaponSubMachineGunM39: 4
+    MagazineRifleM39: 25
+    WeaponSubMachineGunMSG23W-Y: 4
+    MagazineSmgMSG23W-Y: 25
+    WeaponMagnumVP-60x2: 4
+    SpeedLoaderMagnumVP-60x2: 25
+    WeaponPistolArmatM5Y3: 4
+    MagazinePistolAramatM5Y3: 25
+    WeaponPistol88M4: 4
+    MagazinePistol88M4: 25

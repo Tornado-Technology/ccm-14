@@ -1,26 +1,25 @@
 - type: entity
-  name: M4RA battle rifle
+  name: XM43E
   parent: BaseWeaponRifle
-  id: WeaponSniperM4RA
-  description: The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
+  id: WeaponSniperXM43E
   components:
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
+    sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
+    sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
   - type: Wieldable
   - type: GunWieldBonus
-    minAngle: -4
-    maxAngle: -4
+    minAngle: 0
+    maxAngle: -35
   - type: Gun
-    minAngle: 11
-    maxAngle: 15
-    fireRate: 3.5
+    minAngle: 0
+    maxAngle: 40
+    fireRate: 0.3
     angleIncrease: 3
     angleDecay: 16
     selectedMode: SemiAuto
@@ -32,20 +31,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifleM4RA
+        startingItem: MagazineRifleXM43E
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineRifleM4RA
+            - MagazineRifleXM43E
       gun_chamber:
         name: Chamber
-        startingItem: BulletRifle1024
+        startingItem: BulletRifle416Barratti
         priority: 1
         whitelist:
           tags:
-            - BulletRifle1024
+            - BulletRifle416Barratti
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

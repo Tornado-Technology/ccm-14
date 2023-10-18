@@ -1,2 +1,2 @@
-ent-ClothingUniformJumpsuitMarine = USCM uniform
-    .desc = Standard-issue Marine uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets.
+ent-ClothingUniformJumpsuitMarine = Униформа USCM
+    .desc = Стандартная форма морской пехоты. У них есть осколки легкого кевлара, которые помогают защитить от колющего оружия и пуль.

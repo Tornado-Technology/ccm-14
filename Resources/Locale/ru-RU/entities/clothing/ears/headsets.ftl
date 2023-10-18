@@ -1,2 +1,2 @@
-ent-ClothingHeadsetMarineAlfa = marine alfa radio headset
-    .desc = This is used by Alfa squad members.
+ent-ClothingHeadsetMarineAlfa = морская радиогарнитура alfa
+    .desc = Этим пользуются члены отряда "Альфа".

@@ -1,0 +1,55 @@
+- type: entity
+  id: BaseCartridgeShotGun24Gauge
+  name: cartridge (24 Gauge)22
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BulletShotGun24Gauge
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeShotGun24Gauge
+  name: cartridge (24 Gauge)
+  parent: BaseCartridgeShotGun24Gauge
+  components:
+  - type: CartridgeAmmo
+    count: 8
+    spread: 30
+    proto: BulletShotGun24Gauge
+
+- type: entity
+  id: BaseCartridgeShotGun8Gauge
+  name: cartridge (8 Gauge)22
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BulletShotGun8Gauge
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeShotGun8Gauge
+  name: cartridge (8 Gauge)
+  parent: BaseCartridgeShotGun8Gauge
+  components:
+  - type: CartridgeAmmo
+    count: 6
+    spread: 25
+    proto: BulletShotGun8Gauge

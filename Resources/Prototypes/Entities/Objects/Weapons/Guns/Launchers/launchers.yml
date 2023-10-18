@@ -21,9 +21,9 @@
         ents: []
 
 - type: entity
-  name: china lake
+  name: RPG M5 Launcher
   parent: BaseWeaponLauncher
-  id: WeaponLauncherChinaLake
+  id: WeaponLauncherRPGM5
   description: PLOOP
   components:
   - type: Sprite
@@ -45,7 +45,7 @@
     whitelist:
       tags:
         - Grenade
-    capacity: 3
+    capacity: 1
     proto: GrenadeFrag
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg

@@ -1,6 +1,6 @@
-ent-ClothingMaskGasRebreather = rebreather
-    .desc = A close-fitting device that instantly heats or cools down air when you inhale so it doesn't damage your lungs.
-ent-ClothingMaskGasMarine = gas mask
-    .desc = A face-covering mask that can be connected to an air supply. Filters harmful gases from the air.
-ent-ClothingMaskCoif = heat absorbent coif
-    .desc = A close-fitting cap that covers the top, back, and sides of the head. Can also be adjusted to cover the lower part of the face so it keeps the user warm in harsh conditions.
+ent-ClothingMaskGasRebreather = ребризер
+    .desc = Плотно прилегающее устройство, которое мгновенно нагревает или охлаждает воздух при вдохе, чтобы он не повредил ваши легкие.
+ent-ClothingMaskGasMarine = противогаз
+    .desc = Закрывающая лицо маска, которую можно подсоединить к системе подачи воздуха. Отфильтровывает вредные газы из воздуха.
+ent-ClothingMaskCoif = теплопоглощающая шапочка
+    .desc = Плотно прилегающая шапочка, закрывающая верхнюю, заднюю и боковые части головы. Также может быть отрегулирован таким образом, чтобы закрывать нижнюю часть лица, таким образом, он сохраняет тепло пользователя в суровых условиях.

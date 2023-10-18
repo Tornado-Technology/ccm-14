@@ -1,8 +1,8 @@
-ent-ClothingOuterArmorMarineLight = M3-L pattern light armor
-    .desc = A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed.
-ent-ClothingOuterArmorMarineMedium = M3 pattern marine armor
-    .desc = A standard Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage.
-ent-ClothingOuterArmorMarineHeavy = M3-EOD pattern armor
-    .desc = A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
-ent-ClothingOuterArmorMarineB12 = B12 pattern marine armor
-    .desc = A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
+ent-ClothingOuterArmorMarineLight = Легкая броня образца M3-L
+    .desc = Более легкая, урезанная версия стандартной брони образца M3. Он жертвует долговечностью ради большей скорости.
+ent-ClothingOuterArmorMarineMedium = Морская броня образца M3
+    .desc = Стандартный нагрудный знак колониальной морской пехоты M3 образца. Защищает грудную клетку от баллистических пуль, острых предметов и несчастных случаев. К нему пристегнут небольшой кожаный мешочек для ограниченного хранения.
+ent-ClothingOuterArmorMarineHeavy = Броня с рисунком M3-EOD
+    .desc = Более тяжелая версия стандартной брони образца M3, эта броня в первую очередь предназначена для защиты от баллистических, взрывных и внутренних повреждений, недостатком которой является увеличенный объем и, следовательно, сниженная скорость передвижения, а также незначительная дополнительная защита от стандартных ударов тупым предметом и биологических угроз.
+ent-ClothingOuterArmorMarineB12 = Морская броня образца B12
+    .desc = Более тяжелая версия стандартной брони образца M3, эта броня в первую очередь предназначена для защиты от баллистических, взрывных и внутренних повреждений, недостатком которой является увеличенный объем и, следовательно, сниженная скорость передвижения, а также незначительная дополнительная защита от стандартных ударов тупым предметом и биологических угроз.

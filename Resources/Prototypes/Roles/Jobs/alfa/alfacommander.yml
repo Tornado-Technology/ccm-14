@@ -5,20 +5,17 @@
   playTimeTracker: JobAlfaCommander
   requirements:
     - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      department: SpecialistsGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
+      time: 7200
   startingGear: AlfaCommanderGear
   icon: "JobIconAlfaCommander"
   supervisors: job-supervisors-centcom
