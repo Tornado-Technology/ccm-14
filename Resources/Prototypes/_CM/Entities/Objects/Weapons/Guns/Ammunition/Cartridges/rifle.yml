@@ -1,20 +1,10 @@
 - type: entity
   id: BaseCartridgeRifle1024
-  name: cartridge (10x24 rifle)
-  parent: BaseCartridge
+  name: cartridge (10x24 rifle)22
   abstract: true
   components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - CartridgeRifle
   - type: CartridgeAmmo
     proto: BulletRifle1024
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
@@ -35,3 +25,23 @@
   components:
   - type: CartridgeAmmo
     proto: BulletRifleAP1024
+
+- type: entity
+  id: BaseCartridgeRifle125x60R
+  name: cartridge (12.5x60R rifle)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle125x60R
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeRifle125x60R
+  name: cartridge (12.5x60R rifle)
+  parent: BaseCartridgeRifle125x60R
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle125x60R

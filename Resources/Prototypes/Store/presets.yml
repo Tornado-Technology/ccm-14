@@ -15,3 +15,11 @@
   - UplinkPointless
   currencyWhitelist:
   - Telecrystal
+
+- type: storePreset
+  id: StorePresetSquadLead
+  storeName: SquadLeadStore
+  categories:
+  - StoreWeapon
+  currencyWhitelist:
+  - Telecrystal

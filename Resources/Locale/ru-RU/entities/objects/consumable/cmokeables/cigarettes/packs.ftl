@@ -1,5 +1,5 @@
-ent-CigPackBase4 = cigarette pack
+ent-CigPackBase4 = пачка сигарет
 
   .desc = { ent-['BaseStorageItem', 'BaseBagOpenClose'].desc }
-ent-CigPackLSMini = Lucky Strikes Mini Packet
-    .desc = These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free.
+ent-CigPackLSMini = Мини-пакет Lucky Strikes
+    .desc = Эти четыре упаковки "Лаки" продаются в каждом MRE. Они не так хороши, как "Хабана Реал", которые продаются в "Миссис ЛОУН", но, по крайней мере, они бесплатные.

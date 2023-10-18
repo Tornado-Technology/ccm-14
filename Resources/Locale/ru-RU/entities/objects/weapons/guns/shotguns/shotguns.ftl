@@ -1,2 +1,2 @@
-ent-WeaponShotgunM37 = M37A2 pump shotgun
-    .desc = An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability.
+ent-WeaponShotgunM37 = Дробовик M37A2
+    .desc = Классический дизайн Armat Battlefield Systems, M37A2 сочетает в себе огневую мощь ближнего боя с долговременной надежностью.

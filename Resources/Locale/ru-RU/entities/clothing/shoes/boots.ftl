@@ -1,2 +1,2 @@
-ent-ClothingShoesBootsMarine = marine combat boots
-    .desc = Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.
+ent-ClothingShoesBootsMarine = боевые ботинки морской пехоты
+    .desc = Стандартные боевые ботинки для боевых сценариев или боевых ситуаций. Весь бой, все время.

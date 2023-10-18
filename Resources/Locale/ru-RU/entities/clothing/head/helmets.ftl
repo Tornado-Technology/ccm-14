@@ -1,2 +1,2 @@
-ent-ClothingHeadHelmetMarine = M10 pattern marine helmet
-    .desc = A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral.
+ent-ClothingHeadHelmetMarine = Морской шлем с рисунком M10
+    .desc = Стандартный шлем модели M10. На внутренней этикетке, наряду с информацией о стирке, написано: "Разница между похоронами в открытом гробу и в закрытом гробу.

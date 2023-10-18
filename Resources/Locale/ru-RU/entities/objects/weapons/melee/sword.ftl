@@ -1,2 +1,2 @@
-ent-MacheteMarine = M2132 machete
-    .desc = Latest issue of the USCM Machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
+ent-MacheteMarine = Мачете M2132
+    .desc = Последний выпуск журнала USCM Machete. Отлично подходит для расчистки джунглей или кустарников в отдаленных колониях. Обычно встречается в руках скаутов и следопытов, но его трудно носить с собой в обычном наборе.

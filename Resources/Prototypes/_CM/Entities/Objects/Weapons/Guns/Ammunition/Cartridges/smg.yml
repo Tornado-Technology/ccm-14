@@ -1,0 +1,39 @@
+- type: entity
+  id: BaseCartridgeSmg458Socom
+  name: cartridge (458 Socom)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSmg458Socom
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeSmg458Socom
+  name: cartridge (458 Socom)
+  parent: BaseCartridgeSmg458Socom
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSmg458Socom
+
+- type: entity
+  id: BaseCartridgeSmg450Brushmaster
+  name: cartridge (450Brushmaster)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSmg450Brushmaster
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeSmg450Brushmaster
+  name: cartridge (450Brushmaster)
+  parent: BaseCartridgeSmg450Brushmaster
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSmg450Brushmaster

@@ -1,2 +1,2 @@
-ent-Whistle = whistle
-    .desc = A metal pea-whistle. Can be blown while held, or worn in the mouth.
+ent-Whistle = свисток
+    .desc = Металлический свисток-горошина. Можно выдувать, держа в руке, или носить во рту.

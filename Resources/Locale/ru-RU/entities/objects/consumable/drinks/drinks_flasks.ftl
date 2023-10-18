@@ -1,8 +1,8 @@
-ent-DrinkFlaskDefault = Canteen
-    .desc = You take a sip from your trusty USCM canteen...
-ent-DrinkFlaskMetal = Metal Flask
-    .desc = A metal flask with a decent liquid capacity.
-ent-DrinkFlaskMetalUSCM = USCM Flask
-    .desc = A metal flask embossed with the USCM logo and probably filled with a slurry of water, motor oil, and medicinal alcohol.
-ent-DrinkFlaskMetalWY = W-Y Flask
-    .desc = A metal flask embossed with Weyland-Yutani's signature logo that some corporate bootlicker probably ordered to be stocked in USS military vessels' canteen vendors.
+ent-DrinkFlaskDefault = Фляга
+    .desc = Вы делаете глоток из своей надежной фляжки USCM...
+ent-DrinkFlaskMetal = Металлическая фляга
+    .desc = Металлическая фляга с приличной емкостью для жидкости.
+ent-DrinkFlaskMetalUSCM = USCM фляга
+    .desc = Металлическая фляга с тиснением логотипа USCM, вероятно, наполненная смесью воды, моторного масла и медицинского спирта.
+ent-DrinkFlaskMetalWY = W-Y фляга
+    .desc = Металлическая фляжка с тиснением фирменного логотипа Weyland-Yutani, которую какой-нибудь корпоративный подхалим, вероятно, заказал для продажи поставщикам фляг на военных кораблях США.

@@ -1,0 +1,9 @@
+- type: entity
+  parent: BaseUplinkRadio
+  name: Store for Squad Leader
+  id: StorePresetSquadLead
+  components:
+  - type: Store
+    preset: StorePresetSquadLead
+    balance:
+      Telecrystal: 2

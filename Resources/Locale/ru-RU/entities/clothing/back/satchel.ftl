@@ -1,2 +1,2 @@
-ent-ClothingBackpackSatchelMarine = USCM satchel
-    .desc = A heavy-duty satchel carried by some USCM soldiers and support personnel.
+ent-ClothingBackpackSatchelMarine = Ранец USCM
+    .desc = Тяжелый ранец, который носили некоторые солдаты USCM и вспомогательный персонал.

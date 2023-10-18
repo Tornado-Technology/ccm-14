@@ -1,2 +1,2 @@
-ent-ARiflemanIDCard = Alpha Rifleman ID Card
-    .desc = A marine dog tag.
+ent-ARiflemanIDCard = ID карта Альфа-стрелка.
+    .desc = Жетон морского пехотинца.

@@ -1,10 +1,10 @@
 - type: entity
-  id: BulletMagnum44
-  name: bullet (.44)
+  id: BulletMagnumVP-60x2
+  name: bullet (.500SW)
   parent: BaseBullet
   noSpawn: true
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 30

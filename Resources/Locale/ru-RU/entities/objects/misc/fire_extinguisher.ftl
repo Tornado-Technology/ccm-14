@@ -1,4 +1,4 @@
-ent-FireExtinguisherMarine = fire extinguisher
-    .desc = A traditional red fire extinguisher.
-ent-MiniFireExtinguisherMarine = fire extinguisher
-    .desc = A light and compact fibreglass-framed model fire extinguisher.
+ent-FireExtinguisherMarine = огнетушитель
+    .desc = Традиционный красный огнетушитель.
+ent-MiniFireExtinguisherMarine = огнетушитель
+    .desc = Легкая и компактная модель огнетушителя в рамке из стекловолокна.

@@ -1,22 +1,21 @@
 - type: entity
-  id: BulletPistol9
-  name: bullet (9mm pistol)
+  id: BulletSmg458Socom
+  name: bullet (458 Socom)
   parent: BaseBullet
   noSpawn: true
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 14
+        Piercing: 10
 
 - type: entity
-  id: BulletPistol9AP
-  name: bullet (9mm pistol armor-piercing)
-  parent: BaseBulletAP
+  id: BulletSmg450Brushmaster
+  name: bullet (450 Brushmaster)
+  parent: BaseBullet
   noSpawn: true
   components:
   - type: Projectile
     damage:
       types:
-        Blunt: 8
-    ignoreResistances: true
+        Piercing: 15

@@ -1,7 +1,6 @@
 - type: entity
   id: BaseCartridgeLightRifle
   name: cartridge (.30 rifle)
-  parent: BaseCartridge
   abstract: true
   components:
   - type: Tag
