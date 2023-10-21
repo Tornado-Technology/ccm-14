@@ -1,13 +1,14 @@
 using Content.Shared.Overlays;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
-using Content.Shared.Xeno;
+using Robust.Client.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Overlays;
 
 public sealed class ShowXenoAgeSystem : EntitySystem
 {
+    [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
 
     public override void Initialize()
@@ -19,7 +20,7 @@ public sealed class ShowXenoAgeSystem : EntitySystem
 
     private void OnGetStatusIcon(EntityUid uid, ShowXenoAgeIconsComponent component, ref GetStatusIconsEvent args)
     {
-        if (!HasComp<XenoEvolutionsComponent>(uid))
+        if (!HasComp<ShowXenoAgeIconsComponent>(_player.LocalPlayer?.ControlledEntity))
             return;
 
         args.StatusIcons.Add(_prototype.Index<StatusIconPrototype>("XenoAgeIconAncient"));

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "MIT",
+    "copyright": "https://wiki.tgmc.space/images/f/f2/TGMC_research_money.png",
+    "states": [
+        {
+            "name": "icon"
+        }
+    ]
+}

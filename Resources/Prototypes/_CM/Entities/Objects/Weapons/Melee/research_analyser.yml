@@ -1,0 +1,30 @@
+- type: entity
+  name: research analyser
+  parent: BaseItem
+  id: ResearchAnalyser
+  description: Kill xenomorphs in the name of science!
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Melee/research_analyser.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 20
+        Heat: 10
+        Pircing: 10
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 10
+    sprite: _CM/Objects/Weapons/Melee/research_analyser.rsi
+  - type: DisarmMalus
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Melee/research_analyser.rsi
+    state: icon
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt

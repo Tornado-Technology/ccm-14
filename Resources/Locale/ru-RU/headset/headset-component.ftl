@@ -15,3 +15,6 @@ chat-radio-syndicate = Синдикат
 # not headset but whatever
 chat-radio-handheld = Портативный
 chat-radio-binary = Двоичный
+
+# CM
+chat-radio-hive = Улей

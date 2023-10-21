@@ -231,6 +231,7 @@
   id: BaseMobSpeciesOrganic
   abstract: true
   components:
+  - type: Marine
   - type: Flashable
   - type: Barotrauma
     damage:

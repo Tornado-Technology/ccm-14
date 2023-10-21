@@ -4,6 +4,7 @@
   id: MobQueenXeno
   components:
     - type: XenoQueen
+    - type: XenoLayEgg
     - type: XenoStun
       action: ActionXenoQueenStun
     - type: XenoScreech

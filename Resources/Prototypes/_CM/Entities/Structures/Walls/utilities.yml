@@ -1,0 +1,30 @@
+- type: entity
+  id: WallFOBProtection
+  name: Fuck you!
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: TimedDespawn
+    lifetime: 1560
+  - type: Tag
+    tags:
+      - Wall
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+  - type: Sprite
+    sprite: Objects/Misc/nope.rsi
+    state: icon
+    noRot: true
+    visible: false # Change to true for mapping
+    drawdepth: Overdoors

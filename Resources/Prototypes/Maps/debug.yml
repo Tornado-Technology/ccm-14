@@ -28,9 +28,9 @@
           mapNameTemplate: "Dev"
         - type: StationJobs
           overflowJobs:
-          - Quinn
+          - HeadOperations
           availableJobs:
-            Quinn: [ -1, -1 ]
+            HeadOperations: [ -1, -1 ]
 
 - type: gameMap
   id: TestTeg

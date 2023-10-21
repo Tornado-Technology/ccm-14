@@ -19,8 +19,8 @@
     state: biochemical
   tierPrerequisites:
     1: 0
-    2: 0.75
-    3: 0.75
+    2: 0.3
+    3: 0.3
 
 - type: techDiscipline
   id: Arsenal
