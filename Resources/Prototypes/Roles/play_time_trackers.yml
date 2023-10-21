@@ -4,20 +4,20 @@
   id: Overall
 
 # Jobs
-- type: playTimeTracker
-  id: JobAtmosphericTechnician
+# - type: playTimeTracker
+  # id: JobAtmosphericTechnician
 
-- type: playTimeTracker
-  id: JobBartender
+# - type: playTimeTracker
+  # id: JobBartender
 
-- type: playTimeTracker # Used as a tracker for all borgs and midround borging.
-  id: JobBorg
+# - type: playTimeTracker # Used as a tracker for all borgs and midround borging.
+  # id: JobBorg
 
-- type: playTimeTracker
-  id: JobBotanist
+# - type: playTimeTracker
+  # id: JobBotanist
 
-- type: playTimeTracker
-  id: JobCaptain
+# - type: playTimeTracker
+  # id: JobCaptain
 # Marine tracker -------------------------
 - type: playTimeTracker
   id: JobAlfaMarine
@@ -108,9 +108,12 @@
 
 - type: playTimeTracker
   id: JobStaffOfficer
-
+# Pilots --------------------------------------
 - type: playTimeTracker
-  id: JobPilotOfficer
+  id: JobPilotRaptor
+  
+- type: playTimeTracker
+  id: JobPilotNormandy
 # Xeno ----------------------------------------
 - type: playTimeTracker
   id: JobKseno
@@ -127,134 +130,134 @@
 - type: playTimeTracker
   id: JobCrusher
 #----------------------------------------------
-- type: playTimeTracker
-  id: JobCargoTechnician
+# - type: playTimeTracker
+  # id: JobCargoTechnician
 
-- type: playTimeTracker
-  id: JobCentralCommandOfficial
+# - type: playTimeTracker
+  # id: JobCentralCommandOfficial
 
-- type: playTimeTracker
-  id: JobChaplain
+# - type: playTimeTracker
+  # id: JobChaplain
 
-- type: playTimeTracker
-  id: JobChef
+# - type: playTimeTracker
+  # id: JobChef
 
-- type: playTimeTracker
-  id: JobChemist
+# - type: playTimeTracker
+  # id: JobChemist
 
-- type: playTimeTracker
-  id: JobChiefEngineer
+# - type: playTimeTracker
+  # id: JobChiefEngineer
 
-- type: playTimeTracker
-  id: JobChiefMedicalOfficer
+# - type: playTimeTracker
+  # id: JobChiefMedicalOfficer
 
-- type: playTimeTracker
-  id: JobClown
+# - type: playTimeTracker
+  # id: JobClown
 
-- type: playTimeTracker
-  id: JobDetective
+# - type: playTimeTracker
+  # id: JobDetective
 
-- type: playTimeTracker
-  id: JobERTEngineer
+# - type: playTimeTracker
+  # id: JobERTEngineer
 
-- type: playTimeTracker
-  id: JobERTJanitor
+# - type: playTimeTracker
+  # id: JobERTJanitor
 
-- type: playTimeTracker
-  id: JobERTLeader
+# - type: playTimeTracker
+  # id: JobERTLeader
 
-- type: playTimeTracker
-  id: JobERTMedical
+# - type: playTimeTracker
+  # id: JobERTMedical
 
-- type: playTimeTracker
-  id: JobERTSecurity
+# - type: playTimeTracker
+  # id: JobERTSecurity
 
-- type: playTimeTracker
-  id: JobHeadOfPersonnel
+# - type: playTimeTracker
+  # id: JobHeadOfPersonnel
 
-- type: playTimeTracker
-  id: JobHeadOfSecurity
+# - type: playTimeTracker
+  # id: JobHeadOfSecurity
 
-- type: playTimeTracker
-  id: JobJanitor
+# - type: playTimeTracker
+  # id: JobJanitor
 
-- type: playTimeTracker
-  id: JobLawyer
+# - type: playTimeTracker
+  # id: JobLawyer
 
-- type: playTimeTracker
-  id: JobLibrarian
+# - type: playTimeTracker
+  # id: JobLibrarian
 
-- type: playTimeTracker
-  id: JobMedicalDoctor
+# - type: playTimeTracker
+  # id: JobMedicalDoctor
 
-- type: playTimeTracker
-  id: JobMedicalIntern
+# - type: playTimeTracker
+  # id: JobMedicalIntern
 
-- type: playTimeTracker
-  id: JobMime
+# - type: playTimeTracker
+  # id: JobMime
 
-- type: playTimeTracker
-  id: JobMusician
+# - type: playTimeTracker
+  # id: JobMusician
 
-- type: playTimeTracker
-  id: JobPassenger
+# - type: playTimeTracker
+  # id: JobPassenger
 
-- type: playTimeTracker
-  id: JobParamedic
+# - type: playTimeTracker
+  # id: JobParamedic
 
-- type: playTimeTracker
-  id: JobPsychologist
+# - type: playTimeTracker
+  # id: JobPsychologist
 
-- type: playTimeTracker
-  id: JobQuartermaster
+# - type: playTimeTracker
+  # id: JobQuartermaster
 
-- type: playTimeTracker
-  id: JobReporter
+# - type: playTimeTracker
+  # id: JobReporter
 
-- type: playTimeTracker
-  id: JobResearchAssistant
+# - type: playTimeTracker
+  # id: JobResearchAssistant
 
-- type: playTimeTracker
-  id: JobResearchDirector
+# - type: playTimeTracker
+  # id: JobResearchDirector
 
-- type: playTimeTracker
-  id: JobSalvageSpecialist
+# - type: playTimeTracker
+  # id: JobSalvageSpecialist
 
-- type: playTimeTracker
-  id: JobScientist
+# - type: playTimeTracker
+  # id: JobScientist
 
-- type: playTimeTracker
-  id: JobSecurityCadet
+# - type: playTimeTracker
+  # id: JobSecurityCadet
 
-- type: playTimeTracker
-  id: JobSecurityOfficer
+# - type: playTimeTracker
+  # id: JobSecurityOfficer
 
-- type: playTimeTracker
-  id: JobSeniorEngineer
+# - type: playTimeTracker
+  # id: JobSeniorEngineer
 
-- type: playTimeTracker
-  id: JobSeniorOfficer
+# - type: playTimeTracker
+  # id: JobSeniorOfficer
 
-- type: playTimeTracker
-  id: JobSeniorPhysician
+# - type: playTimeTracker
+  # id: JobSeniorPhysician
 
-- type: playTimeTracker
-  id: JobSeniorResearcher
+# - type: playTimeTracker
+  # id: JobSeniorResearcher
 
-- type: playTimeTracker
-  id: JobServiceWorker
+# - type: playTimeTracker
+  # id: JobServiceWorker
 
-- type: playTimeTracker
-  id: JobStationEngineer
+# - type: playTimeTracker
+  # id: JobStationEngineer
 
-- type: playTimeTracker
-  id: JobTechnicalAssistant
+# - type: playTimeTracker
+  # id: JobTechnicalAssistant
 
-- type: playTimeTracker
-  id: JobWarden
+# - type: playTimeTracker
+  # id: JobWarden
 
-- type: playTimeTracker
-  id: JobBoxer
+# - type: playTimeTracker
+  # id: JobBoxer
 
-- type: playTimeTracker
-  id: JobZookeeper
+# - type: playTimeTracker
+  # id: JobZookeeper

@@ -23,8 +23,8 @@
   icon: "JobIconDeltaSpecialist"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSDS
 
 - type: startingGear
   id: DeltaSpecialistGear

@@ -1,0 +1,71 @@
+- type: entity
+  parent: AirlockMaintGlassLocked
+  id: AirlockHeadOfPersonnelGlassLockedTGMSA
+  suffix: "Marine_Airlock Alfa"
+  components:
+  - type: AccessReader
+    access: [["TGMSA"]]
+- type: entity
+  parent: AirlockMaintGlassLocked
+  id: AirlockHeadOfPersonnelGlassLockedTGMSB
+  suffix: "Marine_Airlock Bravo"
+  components:
+  - type: AccessReader
+    access: [["TGMSB"]]
+- type: entity
+  parent: AirlockMaintGlassLocked
+  id: AirlockHeadOfPersonnelGlassLockedTGMSC
+  suffix: "Marine_Airlock Charle"
+  components:
+  - type: AccessReader
+    access: [["TGMSC"]]
+- type: entity
+  parent: AirlockMaintGlassLocked
+  id: AirlockHeadOfPersonnelGlassLockedTGMSD
+  suffix: "Marine_Airlock Delta"
+  components:
+  - type: AccessReader
+    access: [["TGMSD"]]
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockHeadOfPersonnelGlassLockedTGMSS
+  suffix: "Marine_Airlock SL"
+  components:
+  - type: AccessReader
+    access: [["TGMSS"]]
+
+- type: entity
+  parent: AirlockMaintLocked
+  id: AirlockHeadOfPersonnelLockedTGMSA
+  suffix: "Marine_Airlock Alfa"
+  components:
+  - type: AccessReader
+    access: [["TGMSA"]]
+- type: entity
+  parent: AirlockMaintLocked
+  id: AirlockHeadOfPersonnelLockedTGMSB
+  suffix: "Marine_Airlock Bravo"
+  components:
+  - type: AccessReader
+    access: [["TGMSB"]]
+- type: entity
+  parent: AirlockMaintLocked
+  id: AirlockHeadOfPersonnelLockedTGMSC
+  suffix: "Marine_Airlock Charle"
+  components:
+  - type: AccessReader
+    access: [["TGMSC"]]
+- type: entity
+  parent: AirlockMaintLocked
+  id: AirlockHeadOfPersonnelLockedTGMSD
+  suffix: "Marine_Airlock Delta"
+  components:
+  - type: AccessReader
+    access: [["TGMSD"]]
+- type: entity
+  parent: AirlockCommand
+  id: AirlockHeadOfPersonnelLockedTGMSS
+  suffix: "Marine_Airlock SL"
+  components:
+  - type: AccessReader
+    access: [["TGMSS"]]

@@ -23,8 +23,8 @@
   icon: "JobIconBravoMedic"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSBM
 
 - type: startingGear
   id: BravoMedicGear

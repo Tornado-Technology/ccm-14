@@ -20,8 +20,8 @@
   icon: "JobIconMilitaryPoliceman"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSP
 
 - type: startingGear
   id: MilitaryPolicemanGear

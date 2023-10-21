@@ -6,13 +6,13 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: SpecialistsGarrison
-      time: 7200
+      time: 0
     - !type:DepartmentTimeRequirement
       department: MedicsGarrison
-      time: 7200
+      time: 0
     - !type:DepartmentTimeRequirement
       department: EngineersGarrison
-      time: 7200
+      time: 0
     - !type:DepartmentTimeRequirement
       department: MarinesGarrison
       time: 7200
@@ -20,8 +20,8 @@
   icon: "JobIconCharlieCommander"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSCSL
 
 - type: startingGear
   id: CharlieCommanderGear

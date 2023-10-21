@@ -23,8 +23,8 @@
   icon: "JobIconAlfaMedic"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSAM
 
 - type: startingGear
   id: AlfaMedicGear

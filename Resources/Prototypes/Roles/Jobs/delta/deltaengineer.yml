@@ -23,8 +23,8 @@
   icon: "JobIconDeltaEngineer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSDE
 
 - type: startingGear
   id: DeltaEngineerGear

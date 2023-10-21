@@ -1,8 +1,8 @@
 - type: entity
   save: false
-  name: Marine (Base)
+  name: Marine(Base)
   id: BaseMarine
-  noSpawn: true
+  noSpawn: false
   components:
   - type: Marine
   - type: GhostTakeoverAvailable

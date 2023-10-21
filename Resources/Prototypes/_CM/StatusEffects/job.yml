@@ -144,14 +144,14 @@
   id: JobIconMilitaryPoliceman
   icon:
     sprite: Interface/Misc/job_icons.rsi
-    state: MilitaryPoliceman
+    state: Warden
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryPoliceOfficer
   icon:
     sprite: Interface/Misc/job_icons.rsi
-    state: MilitaryPoliceOfficer
+    state: Polyce
 # Scientist -----------------------------------
 - type: statusIcon
   parent: JobIcon
@@ -223,12 +223,6 @@
     sprite: Interface/Misc/job_icons.rsi
     state: StaffOfficer
 # Xeno --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconCrusher
-  icon:
-    sprite: Interface/Misc/job_icons.rsi
-    state: Crusher
 
 - type: statusIcon
   parent: JobIcon

@@ -1,0 +1,296 @@
+#Chapters of the Operation.-------------------------------
+- type: accessGroup
+  id: Capital_Operation
+  tags:
+  - EmergencyShuttleRepealAll
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Command
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - TGMSS
+  - TGMSA
+  - TGMSB
+  - TGMSC
+  - TGMSD
+#Field Commander------------------------------------------
+- type: accessGroup
+  id: TGMSFC
+  tags:
+  - TGMSS
+  - TGMSA
+  - TGMSB
+  - TGMSC
+  - TGMSD
+  - Command
+  - Engineering
+  - Medical
+  - Chemistry
+  - Detective
+#Marine_SL------------------------------------------------
+- type: accessGroup
+  id: TGMSASL
+  tags:
+  - TGMSS
+  - TGMSA
+  - Command
+  - Engineering
+  - Medical
+  - Chemistry
+  - Detective
+- type: accessGroup
+  id: TGMSBSL
+  tags:
+  - TGMSS
+  - TGMSB
+  - Command
+  - Engineering
+  - Medical
+  - Chemistry
+  - Detective
+- type: accessGroup
+  id: TGMSCSL
+  tags:
+  - TGMSS
+  - TGMSC
+  - Command
+  - Engineering
+  - Medical
+  - Chemistry
+  - Detective
+- type: accessGroup
+  id: TGMSDSL
+  tags:
+  - TGMSD
+  - Command
+  - Engineering
+  - Medical
+  - Chemistry
+  - Detective
+#marine_eng-----------------------------------------------
+- type: accessGroup
+  id: TGMSAE
+  tags:
+  - TGMSS
+  - TGMSA
+  - Engineering
+- type: accessGroup
+  id: TGMSBE
+  tags:
+  - TGMSB
+  - Engineering
+- type: accessGroup
+  id: TGMSCE
+  tags:
+  - TGMSC
+  - Engineering
+- type: accessGroup
+  id: TGMSDE
+  tags:
+  - TGMSD
+  - Engineering
+#marine_med-----------------------------------------------
+- type: accessGroup
+  id: TGMSAM
+  tags:
+  - TGMSA
+  - Medical
+  - Chemistry
+- type: accessGroup
+  id: TGMSBM
+  tags:
+  - TGMSB
+  - Medical
+  - Chemistry
+- type: accessGroup
+  id: TGMSCM
+  tags:
+  - TGMSC
+  - Medical
+  - Chemistry
+- type: accessGroup
+  id: TGMSDM
+  tags:
+  - TGMSD
+  - Medical
+  - Chemistry
+#marine_spec----------------------------------------------
+- type: accessGroup
+  id: TGMSAS
+  tags:
+  - TGMSA
+  - Detective
+- type: accessGroup
+  id: TGMSBS
+  tags:
+  - TGMSB
+  - Detective
+- type: accessGroup
+  id: TGMSCS
+  tags:
+  - TGMSC
+  - Detective
+- type: accessGroup
+  id: TGMSDS
+  tags:
+  - TGMSD
+  - Detective
+#Staff Officers and pilots--------------------------------
+- type: accessGroup
+  id: TGMSSOP
+  tags:
+  - Command
+#Logistics support----------------------------------------
+- type: accessGroup
+  id: TGMSLS
+  tags:
+  - Cargo
+- type: accessGroup
+  id: TGMSLS_
+  tags:
+  - Cargo
+  - Salvag
+  - Quartermaster
+  - Command
+#RND------------------------------------------------------
+- type: accessGroup
+  id: TGMSR
+  tags:
+  - Research
+#stroybata------------------------------------------------
+- type: accessGroup
+  id: TGMSSE
+  tags:
+  - Engineering
+  - Atmospherics
+- type: accessGroup
+  id: TGMSSE_
+  tags:
+  - Engineering
+  - Atmospherics
+  - ChiefEngineer 
+  - Command
+#Polyce---------------------------------------------------
+- type: accessGroup
+  id: TGMSP
+  tags:
+  - EmergencyShuttleRepealAll
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - ResearchDirector
+  - Security
+  - Detective
+  - Brig
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - TGMSS
+  - TGMSA
+  - TGMSB
+  - TGMSC
+  - TGMSD
+- type: accessGroup
+  id: TGMSP_
+  tags:
+  - EmergencyShuttleRepealAll
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Security
+  - Detective
+  - Command
+  - Armory
+  - Brig
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - TGMSS
+  - TGMSA
+  - TGMSB
+  - TGMSC
+  - TGMSD 
+#med------------------------------------------------------
+- type: accessGroup
+  id: TGMSM
+  tags:
+  - Medical
+  - Chemistry
+- type: accessGroup
+  id: TGMSM_
+  tags:
+  - Medical
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Command
+#New acces------------------------------------------------
+- type: accessLevel
+  id: TGMSA
+  name: id-card-access-level-alfa
+
+- type: accessLevel
+  id: TGMSB
+  name: id-card-access-level-brabo
+
+- type: accessLevel
+  id: TGMSC
+  name: id-card-access-level-charle
+
+- type: accessLevel
+  id: TGMSD
+  name: id-card-access-level-delta
+
+- type: accessLevel
+  id: TGMSS
+  name: id-card-access-level-sl

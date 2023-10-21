@@ -20,8 +20,8 @@
   icon: "JobIconSupplyOfficer"
   supervisors: job-supervisors-supplyofficer
   canBeAntag: false
-  access:
-    - Maintenance
+  accessGroups:
+    - TGMSLS_
 
 - type: startingGear
   id: SupplyOfficerGear

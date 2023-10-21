@@ -25,7 +25,7 @@
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
     - type: SpawnPoint
-      job_id: Kseno
+      job_id: Pretor
 
 - type: entity
   name: Marine Xeno Queen
@@ -39,7 +39,7 @@
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
     - type: SpawnPoint
-      job_id: Kseno
+      job_id: MobQueenXeno
 
 - type: entity
   name: Marine Xeno Runner
@@ -53,4 +53,4 @@
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
     - type: SpawnPoint
-      job_id: Kseno
+      job_id: MobRounyXeno
