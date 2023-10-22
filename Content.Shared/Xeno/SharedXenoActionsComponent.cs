@@ -35,3 +35,4 @@ public sealed partial class XenoPsychicJumpEvent : WorldTargetActionEvent { }
 public sealed partial class XenoEndureEvent : InstantActionEvent { }
 public sealed partial class XenoRageEvent : InstantActionEvent { }
 public sealed partial class XenoScreechEvent : InstantActionEvent { }
+public sealed partial class XenoLayEggEvent : InstantActionEvent { }

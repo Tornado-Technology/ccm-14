@@ -22,6 +22,9 @@ public sealed class RandomPointSpawnerSystem : EntitySystem
 
         var spawners = EntityQuery<RandomPointSpawnerComponent>().Where((comp) => comp.GroupId == component.GroupId).ToList();
 
+        if (spawners.Count == 0)
+            return;
+
         foreach (var spawner in spawners)
         {
             component.Spawned = true;
