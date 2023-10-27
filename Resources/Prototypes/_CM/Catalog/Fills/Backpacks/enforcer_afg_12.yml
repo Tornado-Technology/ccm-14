@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingBackpackMarine
+  id: ClothingBackpackShotgunEnforcerAFG-12
+  name: ShotgunEnforcerAFG-12 bundle
+  description: Pop! Pop!
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponShotgunEnforcerAFG-12
+      - id: MagazineShotgun
+        amount: 2

@@ -1,0 +1,18 @@
+- type: entity
+  name: SIG Suppression Fight K-7
+  id: WeaponSIGSuppressionFightK-7
+  parent: BaseWeaponLightMachineGun
+  description: A rather traditionally made SIG with a pleasantly lacquered wooden pistol grip. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/LMGs/l6.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-3
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance

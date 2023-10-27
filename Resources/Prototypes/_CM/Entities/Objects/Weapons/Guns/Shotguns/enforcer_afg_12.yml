@@ -1,0 +1,21 @@
+- type: entity
+  name: Enforcer AFG-12
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunEnforcerAFG-12
+  description: A next-generation Frozen Star shotgun. Uses .50 shotgun shells.
+  components:
+  - type: Gun
+    fireRate: 2
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+  - type: BallisticAmmoProvider

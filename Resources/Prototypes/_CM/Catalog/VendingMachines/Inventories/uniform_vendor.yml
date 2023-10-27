@@ -2,46 +2,21 @@
   id: UniformVendInventory
   startingInventory:
     ClothingUniformJumpsuitMarine: 10
-
     ClothingHandsGlovesMarine: 10
     ClothingShoesBootsMarine: 10
-
+    BoxMRE: 10
     FlashlightLantern: 30
     FireExtinguisherMarine: 10
-
     ClothingOuterArmorMarineLight: 4
     ClothingOuterArmorMarineMedium: 4
     ClothingOuterArmorMarineHeavy: 4
-
     ClothingHeadHelmetMarine: 4
-
     ClothingEyesGlassesBallistic: 5
     ClothingEyesGlassesPrescriptionBallistic: 5
     ClothingEyesGlassesRPG: 5
-
     ClothingBackpackMarine: 2
     ClothingBackpackSatchelMarine: 4
-
     ClothingMaskGasMarine: 4
     ClothingMaskGasRebreather: 4
     ClothingMaskCoif: 6
-#   ClothingHeadsetMarineAlfa: 4
-#   ClothingHeadHelmetMarine: 4
-#   ClothingBackpackMarine: 4
-#   ClothingBackpackSatchelMarine: 4
-#   ClothingMaskGasMarine: 4
-#   ClothingMaskCoif: 4
-#   ClothingMaskGasRebreather: 4
-#   ClothingEyesGlassesBallistic: 4
-#   ClothingEyesGlassesPrescriptionBallistic: 4
-#   ClothingEyesGlassesRPG: 4
-#   ClothingHeadBeretWhite: 4
-#   ClothingHeadBeretDark: 4
-#   ClothingHeadBeretPurple: 4
-#   ClothingHeadBeretLightBlue: 4
-#   ClothingHeadBeretYellow: 4
-#   ClothingHeadBeretRed: 4
-#   ClothingHeadBeretMilitary: 4
-#   ClothingHeadBeretGray: 4
-#   ClothingHeadBeretBlue: 4
-#   ClothingHeadBeretGreen: 4
+    MarineRollerBed: 5

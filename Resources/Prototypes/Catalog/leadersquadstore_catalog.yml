@@ -1,38 +1,39 @@
 - type: listing
-  id: StoreRifleM41A
-  name: Набор M41A
-  description: Набор M41A и бла бла бла
-  productEntity: ClothingCLBackpackFilledRifle
+  id: StoreWeaponSniperXM43E
+  name: Набор XM43E
+  description: "..."
+  productEntity: WeaponSniperXM43E
   cost:
     Telecrystal: 1
   categories:
   - StoreWeapon
 
 - type: listing
-  id: StoreSubMachineGunM39
-  name: store-revolver-M44-name
-  description: store-revolver-M44-desc
-  productEntity: WeaponSubMachineGunM39
+  id: StoreWeaponMinigun
+  name: Набор Minigun
+  description:  "..."
+  productEntity: ClothingBackpackSIGSuppressionFightK-7
   cost:
     Telecrystal: 1
   categories:
   - StoreWeapon
 
 - type: listing
-  id: StoreSniperM4RA
-  name: store-revolver-M44-name
-  description: store-revolver-M44-desc
-  productEntity: WeaponSniperM4RA
+  id: StoreWeaponFlamethrower
+  name: Набор Flamethrower
+  description:  "..."
+  productEntity: WeaponFlamethrower
   cost:
     Telecrystal: 1
   categories:
   - StoreWeapon
 
+
 - type: listing
-  id: StoreShotgunM37
-  name: store-revolver-M44-name
-  description: store-revolver-M44-desc
-  productEntity: WeaponShotgunM37
+  id: StoreWeaponEnforcerAFG-12
+  name: Набор EnforcerAFG-12
+  description:  "..."
+  productEntity: ClothingBackpackShotgunEnforcerAFG-12
   cost:
     Telecrystal: 1
   categories:

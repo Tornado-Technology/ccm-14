@@ -11,12 +11,15 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
   - type: ExplosionResistance
-    damageCoefficient: 0.90
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
 
 - type: entity
   parent: ClothingOuterBase
@@ -31,13 +34,16 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
   - type: ExplosionResistance
-    damageCoefficient: 0.90
-
+    damageCoefficient: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterArmorMarineHeavy
@@ -51,12 +57,15 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
   - type: ExplosionResistance
-    damageCoefficient: 0.90
+    damageCoefficient: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
 
 - type: entity
   parent: ClothingOuterBase
