@@ -519,40 +519,11 @@
       - ForensicPad
       - ClothingEyesGlassesSecurity
       - RiotShield
-      - TargetHuman
-    dynamicRecipes:
-      - CartridgePistolRubber
-      - CartridgeMagnumRubber
-      - ShellShotgunBeanbag
-      - CartridgeRifleRubber
-      - CartridgeLightRifleRubber
-      - MagazineBoxPistolRubber
-      - MagazineBoxMagnumRubber
-      - MagazineBoxRifleRubber
-      - MagazineBoxLightRifleRubber
-      - ShellShotgunIncendiary
-      - CartridgePistolIncendiary
-      - CartridgeMagnumIncendiary
-      - CartridgeLightRifleIncendiary
-      - CartridgeRifleIncendiary
-      - MagazineBoxPistolIncendiary
-      - MagazineBoxMagnumIncendiary
-      - MagazineBoxLightRifleIncendiary
-      - MagazineBoxRifleIncendiary
-      - Signaller
-      - SignalTrigger
-      - VoiceTrigger
-      - TimerTrigger
-      - Truncheon
       - TelescopicShield
+      - TargetHuman
       - HoloprojectorSecurity
-      - FlashPayload
-      - ExplosivePayload
-      - WeaponLaserCarbine
-      - WeaponAdvancedLaser
-      - WeaponLaserCannon
-      - WeaponXrayCannon
-      - WeaponTaser
+      - ClothingEyesHudSecurity
+    dynamicRecipes:
   - type: MaterialStorage
     whitelist:
       tags:
