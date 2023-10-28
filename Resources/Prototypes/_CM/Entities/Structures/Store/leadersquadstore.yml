@@ -1,9 +1,22 @@
 - type: entity
-  parent: BaseUplinkRadio
+  parent: BaseItem
   name: Store for Squad Leader
   id: StoreSquadLead
+  suffix: Full
   components:
+  - type: Sprite
+    sprite: Objects/Devices/distant_store.rsi
+    state: icon
   - type: Store
     preset: StorePresetSquadLead
     balance:
       Telecrystal: 2
+  - type: Item
+    sprite: Objects/Devices/distant_store.rsi
+    state: icon
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key

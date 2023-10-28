@@ -9,11 +9,14 @@
     GasAnalyzer: 5
     C4: 10
     ToolboxElectricalTurretMarine: 5
-    SheetSteel: 3
-    SheetGlass: 3
-    SheetPlastic: 3
-    SheetPlasteel: 1
-    SheetRGlass: 1
+    SheetSteel: 10
+    SheetGlass: 10
+    SheetPlastic: 10
+    SheetPlasteel: 3
+    SheetRGlass: 3
+    CableApcStack: 15
+    CableMVStack: 15
+    CableHVStack: 15
     WelderIndustrial: 2
     WelderIndustrialAdvanced: 1
     ClothingUniformJumpsuitMarine: 1

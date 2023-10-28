@@ -11,7 +11,7 @@
     normalState: normal
     ejectDelay: 1
   - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
+    sprite: _CM/Structures/Machines/VendingMachines/eng_gear.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -33,7 +33,7 @@
     normalState: normal
     ejectDelay: 1
   - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
+    sprite: _CM/Structures/Machines/VendingMachines/med_gear.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -55,7 +55,7 @@
     normalState: normal
     ejectDelay: 1
   - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
+    sprite: _CM/Structures/Machines/VendingMachines/spec_gear.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

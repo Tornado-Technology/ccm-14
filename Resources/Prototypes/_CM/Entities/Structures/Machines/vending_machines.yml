@@ -169,54 +169,6 @@
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachineMedicEquipment
-  name: ColMarTech Automated Medic Equipment Rack
-  description: An automated rack connected to a colossal storage of standard equipment of field doctors.
-  components:
-  - type: VendingMachine
-    pack: EquipMedicalVendInventory
-    offState: off
-    brokenState: broken
-    normalState: normal
-    ejectDelay: 1
-  - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/clothing.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
-
-- type: entity
-  parent: VendingMachine
-  id: VendingMachineEngineerEquipment
-  name: ColMarTech Automated Engineer Equipment Rack
-  description: An automated rack connected to a colossal storage of standard equipment of Engineer.
-  components:
-  - type: VendingMachine
-    pack: EquipEngineerVendInventory
-    offState: off
-    brokenState: broken
-    normalState: normal
-    ejectDelay: 1
-  - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/clothing.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
-
-- type: entity
-  parent: VendingMachine
   id: VendingMachineSpecialistEquipment
   name: ColMarTech Automated Specialist Equipment Rack
   description: Automated shelving connected to a colossal storage of standard equipment for specialists.

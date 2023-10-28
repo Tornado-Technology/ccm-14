@@ -523,7 +523,7 @@
       - TargetHuman
       - HoloprojectorSecurity
       - ClothingEyesHudSecurity
-    dynamicRecipes:
+#   dynamicRecipes:
   - type: MaterialStorage
     whitelist:
       tags:

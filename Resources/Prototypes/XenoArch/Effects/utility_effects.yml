@@ -26,6 +26,10 @@
     - Security
     - Service
     - Supply
+    - Alpha
+    - Bravo
+    - Charlie
+    - Delta
 
 - type: artifactEffect
   id: EffectRandomInstrument

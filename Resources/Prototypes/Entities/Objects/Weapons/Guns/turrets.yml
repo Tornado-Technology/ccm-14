@@ -130,15 +130,6 @@
 
 - type: entity
   parent: BaseWeaponTurret
-  id: WeaponTurretMarine
-  suffix: Marine
-  components:
-    - type: NpcFactionMember
-      factions:
-        - NanoTrasen
-
-- type: entity
-  parent: BaseWeaponTurret
   name: disposable ballistic turret
   id: WeaponTurretSyndicateDisposable
   suffix: Syndicate, Disposable

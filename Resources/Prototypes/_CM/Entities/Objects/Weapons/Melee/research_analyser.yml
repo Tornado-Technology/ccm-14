@@ -9,6 +9,7 @@
     sprite: _CM/Objects/Weapons/Melee/research_analyser.rsi
     state: icon
   - type: MeleeWeapon
+    attackRate: 1.6
     damage:
       types:
         Slash: 20

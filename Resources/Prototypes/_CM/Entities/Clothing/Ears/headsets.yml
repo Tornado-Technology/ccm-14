@@ -20,7 +20,7 @@
   - type: Clothing
     slots:
     - ears
-    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi
+    sprite: Clothing/Ears/Headsets/alfa.rsi
   - type: GuideHelp
     guides:
     - Radio
@@ -34,8 +34,57 @@
   - type: ContainerFill
     containers:
       key_slots:
+      - EncryptionKeyAlpha
       - EncryptionKeyCommon
   - type: Sprite
-    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi
+    sprite: Clothing/Ears/Headsets/alfa.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Ears/Headsets/alfa.rsi
+    sprite: Clothing/Ears/Headsets/alfa.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineBravo
+  name: marine bravo radio headset
+  description: This is used by Bravo squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBravo
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/bravo.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/bravo.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineCharlie
+  name: marine charlie radio headset
+  description: This is used by Charlie squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCharlie
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/charlie.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/charlie.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineDelta
+  name: marine delta radio headset
+  description: This is used by Delta squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyDelta
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/delta.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/delta.rsi

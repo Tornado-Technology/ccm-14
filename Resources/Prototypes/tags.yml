@@ -1089,3 +1089,7 @@
 
 - type: Tag
   id: CartridgeShotGun8Gauge
+
+- type: Tag
+  id: MagazineShotgunAFG-12
+

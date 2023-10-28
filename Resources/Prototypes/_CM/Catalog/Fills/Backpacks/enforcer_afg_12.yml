@@ -7,5 +7,5 @@
   - type: StorageFill
     contents:
       - id: WeaponShotgunEnforcerAFG-12
-      - id: MagazineShotgun
-        amount: 2
+      - id: MagazineShotgunAFG-12
+        amount: 10

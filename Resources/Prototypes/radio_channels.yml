@@ -89,8 +89,44 @@
 - type: radioChannel
   id: Binary
   name: chat-radio-binary
-  keycode: 'д' # Corvax-Localization
+  keycode: 'р' # Corvax-Localization
   frequency: 1001
   color: "#2ed2fd"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Alpha
+  name: chat-radio-alpha
+  keycode: 'а' # Corvax-Localization
+  frequency: 861
+  color: "#cb0000"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Bravo
+  name: chat-radio-bravo
+  keycode: 'б' # Corvax-Localization
+  frequency: 862
+  color: "#f2c659"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Charlie
+  name: chat-radio-charlie
+  keycode: 'ч' # Corvax-Localization
+  frequency: 863
+  color: "#a287cd"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Delta
+  name: chat-radio-delta
+  keycode: 'д' # Corvax-Localization
+  frequency: 864
+  color: "#63aaea"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true

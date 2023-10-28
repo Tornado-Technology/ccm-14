@@ -51,6 +51,10 @@
     - Service
     - Supply
     - Syndicate
+    - Alpha
+    - Bravo
+    - Charlie
+    - Delta
     globalReceive: true
   - type: Physics
     bodyType: KinematicController

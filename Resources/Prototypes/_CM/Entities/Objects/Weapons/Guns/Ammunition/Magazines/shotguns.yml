@@ -92,3 +92,27 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineShotgunAFG-12
+  name: ammo drum AFG-12 (.50 pellet)
+  parent: BaseMagazineShotgun
+  components:
+  - type: Tag
+    tags:
+    - MagazineShotgunAFG-12
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ShellShotgun
+    capacity: 5
+    soundRack:
+      path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
+  - type: Sprite
+    layers:
+    - state: pellets
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

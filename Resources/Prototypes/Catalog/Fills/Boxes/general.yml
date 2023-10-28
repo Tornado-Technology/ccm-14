@@ -426,3 +426,43 @@
     state: box
   - type: RadiationBlockingContainer
     resistance: 2
+
+- type: entity
+  name: alpha encryption key box
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyAlpha
+  components:
+  - type: StorageFill
+    contents:
+      - id: EncryptionKeyAlpha
+        amount: 6
+
+- type: entity
+  name: bravo encryption key box
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyBravo
+  components:
+  - type: StorageFill
+    contents:
+      - id: EncryptionKeyBravo
+        amount: 6
+
+- type: entity
+  name: charlie encryption key box
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyCharlie
+  components:
+  - type: StorageFill
+    contents:
+      - id: EncryptionKeyCharlie
+        amount: 6
+
+- type: entity
+  name: delta encryption key box
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyDelta
+  components:
+  - type: StorageFill
+    contents:
+      - id: EncryptionKeyDelta
+        amount: 6
