@@ -19,6 +19,7 @@
     - type: ShowXenoAgeIcons
     - type: Insulated
     - type: CombatMode
+      combatToggleAction: ActionXenoCombatModeToggle
     - type: InputMover
     - type: MobMover
     - type: Tool
