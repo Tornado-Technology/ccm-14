@@ -1,0 +1,8 @@
+- type: startingGear
+  id: CharlieComfortableGear
+  equipment:
+    jumpsuit: ClothingComfortableUniformMarine
+    shoes: ClothingShoesComfortableBootsMarine
+    head: ClothingHeadHatCatEars
+    ears: ClothingHeadsetMarineCharlie
+    outerClothing: ClothingOuterArmorMarineComfortable
