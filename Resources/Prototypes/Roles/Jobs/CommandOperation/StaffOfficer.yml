@@ -22,7 +22,7 @@
     back: ClothingBackpackSecurityFilled
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterCoatWarden
-    id: WardenPDA
+    id: StaffOfficerIDCard
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal

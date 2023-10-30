@@ -1,0 +1,11 @@
+- type: entity
+  id: StandardTGMSStation
+  parent:
+    - BaseStation
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationAlertLevels
+  noSpawn: true
+  components:
+    - type: Transform
