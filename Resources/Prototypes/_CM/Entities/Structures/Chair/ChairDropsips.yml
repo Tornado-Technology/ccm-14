@@ -1,0 +1,13 @@
+- type: entity
+  name: Десантное кресло
+  id: ChairDropshipSeat
+  parent: SeatBase
+  description: ""
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: /Textures/_CM/Objects/Chair/chair.rsi # Вставить путь до текстурки кресла тут
+    noRot: true
+    layers:
+      - state: chair
