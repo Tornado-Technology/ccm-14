@@ -121,10 +121,8 @@ namespace Content.Server.Explosion.EntitySystems
             }
 
             var foamEnt = Spawn("Foam", coords);
-            var smoke = EnsureComp<SmokeComponent>(foamEnt);
-            smoke.SpreadAmount = 20;
 
-            _smoke.Start(foamEnt, smoke, transferSolution, 10f);
+            _smoke.StartSmoke(foamEnt, transferSolution, 10f, 20);
 
             _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out var puddleUID);
         }
