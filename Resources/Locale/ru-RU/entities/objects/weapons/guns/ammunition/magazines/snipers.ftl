@@ -1,0 +1,12 @@
+ent-BaseMagazineRifleM4RA = M4RA magazine (10x24mm)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifleM4RA = M4RA magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM4RA.desc }
+ent-MagazineRifleM4RAAP = M4RA AP magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM4RA.desc }
+ent-BaseMagazineRifleM4RAEx = M4RA extended magazine (10x24mm)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifleM4RAEx = M4RA extended magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM4RAEx.desc }
+ent-MagazineRifleM4RAExAP = M4RA AP extended magazine (10x24mm)
+    .desc = { ent-BaseMagazineRifleM4RAEx.desc }

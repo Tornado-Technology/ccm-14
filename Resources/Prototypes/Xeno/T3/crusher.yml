@@ -1,0 +1,24 @@
+- type: entity
+  name: крашер
+  parent: MobXenoBaseT3
+  id: MobCrusherXeno
+  components:
+    - type: XenoCrusher
+    - type: XenoCrushDash
+    - type: XenoStun
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/crusher.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        400: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 35

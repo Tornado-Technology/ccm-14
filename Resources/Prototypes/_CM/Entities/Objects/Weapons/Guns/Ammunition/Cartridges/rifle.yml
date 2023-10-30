@@ -1,0 +1,47 @@
+- type: entity
+  id: BaseCartridgeRifle1024
+  name: cartridge (10x24 rifle)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle1024
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeRifle1024
+  name: cartridge (10x24 rifle)
+  parent: BaseCartridgeRifle1024
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle1024
+
+- type: entity
+  id: CartridgeRifle1024AP
+  name: cartridge (10x24 rifle armor-piercing)
+  parent: BaseCartridgeRifle1024
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifleAP1024
+
+- type: entity
+  id: BaseCartridgeRifle125x60R
+  name: cartridge (12.5x60R rifle)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle125x60R
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeRifle125x60R
+  name: cartridge (12.5x60R rifle)
+  parent: BaseCartridgeRifle125x60R
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle125x60R

@@ -1,0 +1,12 @@
+- type: entity
+  parent: BoxMRP
+  id: BoxMRPFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMREEntree
+        - id: FoodMRESide
+        - id: FoodMRESnack
+        - id: FoodMREDessert
+        - id: DrinkWaterWYBottleFull
+        - id: CigPackLSMini

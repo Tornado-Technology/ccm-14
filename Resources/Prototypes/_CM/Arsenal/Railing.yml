@@ -1,0 +1,72 @@
+- type: entity
+  parent: Railing
+  id: MarineRailing
+  name: plasteel railings
+  description: Durable.
+  suffix: "Marines Gear"
+  components:
+  - type: Sprite
+    color: "#AAAAAA"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: MarineRailing
+    node: MarineRailingNode
+
+- type: constructionGraph
+  id: MarineRailing
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MarineRailingNode
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: Plasteel
+              amount: 3
+              doAfter: 3
+
+    - node: MarineRailingNode
+      entity: MarineRailing
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 0.25
+
+- type: construction
+  name: "- plasteel railings"
+  id: MarineRailingConstruction
+  graph: MarineRailing
+  startNode: start
+  targetNode: MarineRailingNode
+  category: construction-category-structures
+  description: The best defense against xenomorphs.
+  icon:
+    sprite: Structures/Walls/railing.rsi
+    state: side
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

@@ -1,0 +1,135 @@
+- type: entity
+  name: Defiler
+  parent: MobXenoBaseT3
+  id: MobDefilerXeno
+  components:
+    - type: XenoDefiler
+    - type: XenoExplosive
+    - type: XenoSpit
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileDefilerAcidSpit
+      speed: 25
+    - type: XenoSpit2
+      action: ActionDefilerAcidSpit
+      projectile: ProjectileDefilerDefaultSpit
+      speed: 25
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/defiler.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        250: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 25
+
+
+# acidspit
+- type: entity
+  id: ActionDefilerDefaultSpit
+  name: Default Spit name
+  description: Default Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 30
+      range: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: neurotoxin_veil
+      itemIconStyle: NoItem
+      priority: 5
+      event: !type:XenoSpitEvent
+
+
+# acidspit
+- type: entity
+  id: ActionDefilerAcidSpit
+  name: Acid Spit
+  description: Acid Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 5
+      range: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: toxin_spit
+      itemIconStyle: NoItem
+      priority: 6
+      event: !type:XenoSpit2Event
+
+
+# acidspit projective
+- type: entity
+  id: ProjectileDefilerAcidSpit
+  name: DefilerAcidSpit proj name
+  description: DefilerAcidSpit proj desc
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Xeno/spit.rsi
+    layers:
+      - state: grenade
+  - type: SplashOnTrigger
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        - Opaque
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+
+# acidspit projective
+- type: entity
+  id: ProjectileDefilerDefaultSpit
+  name: DefilerDefaultSpit proj name
+  description: DefilerDefaultSpit proj desc
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Xeno/spit.rsi
+    layers:
+      - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 50
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        - Opaque
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable

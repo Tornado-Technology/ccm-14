@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "https://cm-ss13.com/wiki/Crusher",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "jump"
+    },
+    {
+      "name": "stun"
+    },
+    {
+      "name": "acid_spit"
+    },
+    {
+      "name": "default_spit"
+    },
+    {
+      "name": "explosive"
+    },
+    {
+      "name": "build_wall"
+    },
+    {
+      "name": "psychic_cure"
+    },
+    {
+      "name": "vines"
+    },
+    {
+      "name": "rejuvenate"
+    },
+    {
+      "name": "psychic_jump"
+    },
+    {
+      "name": "endure"
+    },
+    {
+      "name": "rage"
+    },
+    {
+      "name": "screech"
+    },
+    {
+      "name": "toxin_spit"
+    },
+    {
+      "name": "evolve"
+    },
+    {
+      "name": "stealth"
+    },
+    {
+      "name": "charge"
+    },
+    {
+      "name": "neurotoxin_veil"
+    },
+    {
+      "name": "lay_egg"
+    }
+  ]
+}

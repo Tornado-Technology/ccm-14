@@ -1,0 +1,27 @@
+- type: entity
+  name: praetorian
+  parent: MobXenoBaseT4
+  id: MobPraetorianXeno
+  components:
+    - type: XenoPraetorian
+    - type: XenoPsychicCure
+      healAmount: 250
+    - type: XenoSpitRejuvenate
+    - type: XenoSpit2
+      speed: 25
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/praetorian.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 35

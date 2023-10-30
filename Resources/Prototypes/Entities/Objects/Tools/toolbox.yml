@@ -91,6 +91,13 @@
     price: 1350
 
 - type: entity
+  name: turret toolbox
+  suffix: Marine, Turret
+  parent: ToolboxElectricalTurret
+  id: ToolboxElectricalTurretMarine
+  description: A toolbox with turret.
+
+- type: entity
   name: artistic toolbox
   parent: ToolboxBase
   id: ToolboxArtistic

@@ -1,0 +1,85 @@
+- type: entity
+  name: sentinel
+  parent: MobXenoBaseT1
+  id: MobSentinelXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobSpitterXeno
+          evolution: 600
+    - type: XenoSentinel
+    - type: XenoSpit
+      action: ActionSentinelDefaultSpit
+      projectile: ProjectileSentinelDefaultSpit
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/sentinel.rsi
+      offset: 0,0.4
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15
+    - type: Polymorphable
+      innatePolymorphs: [ XenoSentinelToSpitter ]
+
+# spit
+- type: entity
+  id: ActionSentinelDefaultSpit
+  name: Default Spit name
+  description: Default Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 5
+      range: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: default_spit
+      itemIconStyle: NoItem
+      priority: 5
+      event: !type:XenoSpitEvent
+
+
+# spit projective
+- type: entity
+  id: ProjectileSentinelDefaultSpit
+  name: SentinelDefaultSpit proj name
+  description: SentinelDefaultSpit proj desc
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        - Opaque
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+  - type: Sprite
+    sprite: Objects/Xeno/spit.rsi
+    layers:
+      - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 30 # Lower damage

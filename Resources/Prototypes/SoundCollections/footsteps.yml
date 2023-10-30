@@ -153,3 +153,24 @@
   files:
   - /Audio/Effects/Footsteps/clownspiderstep1.ogg
   - /Audio/Effects/Footsteps/clownspiderstep2.ogg
+
+- type: soundCollection
+  id: FootstepAlienCharge
+  files:
+  - /Audio/Effects/Footsteps/alien/charge1.ogg
+  - /Audio/Effects/Footsteps/alien/charge2.ogg
+  - /Audio/Effects/Footsteps/alien/charge3.ogg
+
+- type: soundCollection
+  id: FootstepAlienLarge
+  files:
+  - /Audio/Effects/Footsteps/alien/large1.ogg
+  - /Audio/Effects/Footsteps/alien/large2.ogg
+  - /Audio/Effects/Footsteps/alien/large3.ogg
+
+- type: soundCollection
+  id: FootstepAlienMedium
+  files:
+  - /Audio/Effects/Footsteps/alien/medium1.ogg
+  - /Audio/Effects/Footsteps/alien/medium2.ogg
+  - /Audio/Effects/Footsteps/alien/medium3.ogg

@@ -1,0 +1,22 @@
+- type: entity
+  id: ActionXenoStun
+  name: stun
+  description: stun desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 15
+      itemIconStyle: BigAction
+      whitelist:
+        components:
+          - Body
+      canTargetSelf: false
+      interactOnMiss: false
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: stun
+      event: !type:XenoStunEvent
+        speech: action-speech-spell-smite
+

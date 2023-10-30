@@ -1,0 +1,83 @@
+- type: entity
+  name: queen
+  parent: MobXenoBaseT4
+  id: MobQueenXeno
+  components:
+    - type: XenoQueen
+    - type: XenoLayEgg
+    - type: XenoStun
+      action: ActionXenoQueenStun
+    - type: XenoScreech
+    - type: XenoVines
+      action: ActionXenoQueenVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWallFortified
+    - type: XenoPsychicCure
+      healAmount: 250
+    - type: XenoSpit
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileDefilerAcidSpit
+    - type: XenoSpit2
+      action: ActionDefilerAcidSpit
+      projectile: ProjectileDefilerDefaultSpit
+    - type: XenoSpitRejuvenate
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/queen.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        800: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 40
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoQueenVines
+  parent: ActionXenoVines
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 5
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: vines
+      event: !type:XenoVinesEvent
+      checkCanInteract: false
+# -------------------------------------
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoQueenStun
+  name: stun
+  description: stun desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      range: 6
+      useDelay: 15
+      itemIconStyle: BigAction
+      whitelist:
+        components:
+          - Body
+      canTargetSelf: false
+      interactOnMiss: false
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: stun
+      event: !type:XenoStunEvent
+        speech: action-speech-spell-smite
+# -------------------------------------

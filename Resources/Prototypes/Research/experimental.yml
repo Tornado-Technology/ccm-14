@@ -1,4 +1,4 @@
-﻿# Tier 1
+﻿# Tier 1 (10000)
 
 - type: technology
   id: BasicRobotics
@@ -8,17 +8,17 @@
     state: drone
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - ProximitySensor
   - Drone
   - ExosuitFabricatorMachineCircuitboard
 
 - type: technology
-  id: BasicAnomalousResearch
-  name: research-technology-basic-anomalous-research
+  id: BasicResearch
+  name: research-technology-basic-research
   icon:
-    sprite: Objects/Specific/Research/anomalyscanner.rsi
+    sprite: Objects/Specific/Research/researchdisk.rsi
     state: icon
   discipline: Experimental
   tier: 1
@@ -29,32 +29,10 @@
   - BorgModuleAnomaly
   - APECircuitboard
   - AnomalyVesselCircuitboard
-
-- type: technology
-  id: BasicXenoArcheology
-  name: research-technology-basic-xenoarcheology
-  icon:
-    sprite: Structures/Machines/artifact_analyzer.rsi
-    state: display
-  discipline: Experimental
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
   - NodeScanner
   - BorgModuleArtifact
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
-
-- type: technology
-  id: AlternativeResearch
-  name: research-technology-alternative-research
-  icon:
-    sprite: Structures/Machines/tech_disk_printer.rsi
-    state: display
-  discipline: Experimental
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
   - TechDiskComputerCircuitboard
 
 - type: technology
@@ -65,11 +43,11 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 7500
+  cost: 2500
   recipeUnlocks:
   - ClothingShoesBootsMag
 
-# Tier 2
+# Tier 2 (5000)
 
 - type: technology
   id: AdvancedParts
@@ -79,51 +57,29 @@
     state: advanced_matter_bin
   discipline: Experimental
   tier: 2
-  cost: 10000
+  cost: 2500
   recipeUnlocks:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
   - NanoManipulatorStockPart
+  - RPED
 
 - type: technology
-  id: AbnormalArtifactManipulation
-  name: research-technology-abnormal-artifact-manipulation
+  id: AdvancedResearch
+  name: research-technology-advanced-research
   icon:
     sprite: Structures/Machines/traversal_distorter.rsi
     state: display
   discipline: Experimental
   tier: 2
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - TraversalDistorterMachineCircuitboard
-
-- type: technology
-  id: MobileAnomalyTech
-  name: research-technology-mobile-anomaly-tech
-  icon:
-    sprite: Objects/Weapons/Guns/Revolvers/chimp.rsi
-    state: base
-  discipline: Experimental
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
   - WeaponPistolCHIMP
   technologyPrerequisites:
-  - BasicAnomalousResearch
+  - BasicResearch
 
-- type: technology
-  id: RapidPartExchange
-  name: research-technology-rped
-  icon:
-    sprite: Objects/Specific/Research/rped.rsi
-    state: icon
-  discipline: Experimental
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - RPED
-
-# Tier 3
+# Tier 3 (10000)
 
 - type: technology
   id: SuperParts
@@ -133,7 +89,7 @@
     state: super_matter_bin
   discipline: Experimental
   tier: 3
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
@@ -147,7 +103,7 @@
     state: base
   discipline: Experimental
   tier: 3
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
     - WeaponForceGun
     - WeaponTetherGun

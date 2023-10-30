@@ -1,0 +1,22 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineComfortable
+  name: M3-C pattern comfortable armor
+  description: Comfortable and lightweight version of standard armor M3-L. So light that you do not lose mobility. By some miracle, she also protects. You are beautiful.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/comfortable_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/comfortable_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0

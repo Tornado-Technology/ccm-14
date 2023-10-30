@@ -11,9 +11,9 @@
           mapNameTemplate: "Empty"
         - type: StationJobs
           overflowJobs:
-            - Passenger
+            - MilitaryScientist
           availableJobs:
-            Passenger: [ -1, -1 ]
+            MilitaryScientist: [ -1, -1 ]
 
 - type: gameMap
   id: Dev
@@ -28,9 +28,9 @@
           mapNameTemplate: "Dev"
         - type: StationJobs
           overflowJobs:
-          - Captain
+          - HeadOperations
           availableJobs:
-            Captain: [ -1, -1 ]
+            HeadOperations: [ -1, -1 ]
 
 - type: gameMap
   id: TestTeg
@@ -45,6 +45,6 @@
           mapNameTemplate: "TEG"
         - type: StationJobs
           overflowJobs:
-            - ChiefEngineer
+            - MilitaryScientist
           availableJobs:
-            ChiefEngineer: [ -1, -1 ]
+            MilitaryScientist: [ -1, -1 ]

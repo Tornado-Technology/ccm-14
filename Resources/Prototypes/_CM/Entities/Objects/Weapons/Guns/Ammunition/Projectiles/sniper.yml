@@ -1,0 +1,10 @@
+- type: entity
+  id: BulletRifle416Barratti
+  name: bullet (416 Barratti)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 200

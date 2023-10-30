@@ -1,0 +1,35 @@
+- type: entity
+  name: larva
+  parent: MobXenoBaseT0
+  id: MobLarvaXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRunnerXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobDroneXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobSentinelXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobWarriorXeno
+          evolution: 0
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/larva.rsi
+      offset: 0,0.4
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        50: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 10

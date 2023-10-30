@@ -1,0 +1,40 @@
+- type: job
+  id: AlfaCommander
+  name: job-name-alfa-commander
+  description: job-description-alfacommander
+  playTimeTracker: JobAlfaCommander
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
+      time: 7200
+  startingGear: AlfaCommanderGear
+  icon: "JobIconAlfaCommander"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+    - TGMSASL
+
+- type: startingGear
+  id: AlfaCommanderGear
+  equipment:
+    head: ClothingHeadHatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    back: ClothingBackpackSecurityFilled
+    eyes: ClothingEyesGlassesSecurity
+    outerClothing: ClothingOuterCoatWarden
+    id: ACommanderIDCard
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolMk58Nonlethal
+  innerclothingskirt: ClothingUniformJumpskirtWarden
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled

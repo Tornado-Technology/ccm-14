@@ -1,6 +1,6 @@
-defaultWindowTitle: Space Station 14 - Corvax Station [RU]
-windowIconSet: /Textures/Logo/icon-ru # Corvax-Theme
-splashLogo: /Textures/Logo/logo-ru.png # Corvax-Theme
+﻿defaultWindowTitle: Colonial Marines 14
+windowIconSet: /Textures/Logo/icon-cm # CM-Theme
+splashLogo: /Textures/Logo/logo-cm.png # CM-Theme
 multiWindow: true
 
 # PJB PLEASE

@@ -1,0 +1,39 @@
+- type: listing
+  id: StoreWeaponSniperXM43E
+  name: Набор Sniper XM43E
+  description: "..."
+  productEntity: ClothingBackpackWeaponSniperXM43E
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon
+
+- type: listing
+  id: StoreWeaponMinigun
+  name: Набор SIG Suppression Fight K-7
+  description:  "..."
+  productEntity: ClothingBackpackSIGSuppressionFightK-7
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon
+
+- type: listing
+  id: StoreWeaponFlamethrower
+  name: Набор Flamethrower
+  description:  "..."
+  productEntity: ClothingBackpackWeaponFlamethrower
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon
+
+- type: listing
+  id: StoreWeaponEnforcerAFG-12
+  name: Набор EnforcerAFG-12
+  description:  "..."
+  productEntity: ClothingBackpackShotgunEnforcerAFG-12
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon

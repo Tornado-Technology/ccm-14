@@ -1,0 +1,18 @@
+- type: entity
+  id: ActionXenoCrushDash
+  name: jump
+  description: jump desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: jump
+      itemIconStyle: NoItem
+      priority: -12
+      event: !type:XenoCrushDashEvent
+      checkCanAccess: false
+      range: 0

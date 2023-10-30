@@ -8,7 +8,7 @@
     state: mop
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - MopItem
   - Holoprojector
@@ -24,7 +24,7 @@
     state: icon
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - UniformPrinterMachineCircuitboard
 
@@ -36,7 +36,7 @@
     state: seedextractor
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - BorgModuleGardening
   - BorgModuleHarvesting
@@ -51,7 +51,7 @@
     state: hamtr
   discipline: CivilianServices
   tier: 1
-  cost: 7500
+  cost: 1000
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -64,21 +64,6 @@
   - VimHarness
 
 - type: technology
-  id: FoodService
-  name: research-technology-food-service
-  icon:
-    sprite: Structures/Machines/juicer.rsi
-    state: juicer1
-  discipline: CivilianServices
-  tier: 1
-  cost: 7500
-  recipeUnlocks: #remove all of these once we have more kitchen equipment
-  - MicrowaveMachineCircuitboard
-  - ReagentGrinderMachineCircuitboard
-  - BoozeDispenserMachineCircuitboard
-  - SodaDispenserMachineCircuitboard
-
-- type: technology
   id: AudioVisualCommunication
   name: research-technology-audio-visual-communication
   icon:
@@ -86,7 +71,7 @@
     state: cameracase
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraWirelessRouterCircuitboard
@@ -95,26 +80,15 @@
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
+  - ComputerTelevisionCircuitboard
+  - SynthesizerInstrument
+  - BorgModuleMusique
+  - BorgModuleLiteracy
+  - BorgModuleClowning
+  - DawInstrumentMachineCircuitboard
+  - MassMediaCircuitboard
 
-- type: technology
-  id: AdvancedEntertainment
-  name: research-technology-advanced-entertainment
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: television
-  discipline: CivilianServices
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-    - ComputerTelevisionCircuitboard
-    - SynthesizerInstrument
-    - BorgModuleMusique
-    - BorgModuleLiteracy
-    - BorgModuleClowning
-    - DawInstrumentMachineCircuitboard
-    - MassMediaCircuitboard
-
-# Tier 2
+# Tier 2 (5000)
 
 - type: technology
   id: RoboticCleanliness
@@ -124,7 +98,7 @@
     state: janitor
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - BorgModuleLightReplacer
   - BorgModuleCleaning
@@ -138,7 +112,7 @@
     state: advmop
   discipline: CivilianServices
   tier: 2
-  cost: 10000
+  cost: 1000
   recipeUnlocks:
   - AdvMopItem
   - MegaSprayBottle
@@ -153,7 +127,7 @@
     state: display
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
   - SheetifierMachineCircuitboard
@@ -166,7 +140,7 @@
     state: honker
   discipline: CivilianServices
   tier: 2
-  cost: 7500
+  cost: 1000
   recipeUnlocks:
   - HonkerHarness
   - HonkerLArm
@@ -186,12 +160,12 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 10000
+  cost: 1000
   recipeUnlocks:
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-# Tier 3
+# Tier 3 (10000)
 
 - type: technology
   id: BluespaceCargoTransport
@@ -201,6 +175,6 @@
     state: display
   discipline: CivilianServices
   tier: 3
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard

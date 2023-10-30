@@ -16,7 +16,6 @@ namespace Content.Shared.Damage
     /// </remarks>
     [RegisterComponent]
     [NetworkedComponent()]
-    [Access(typeof(DamageableSystem), Other = AccessPermissions.ReadExecute)]
     public sealed partial class DamageableComponent : Component
     {
         /// <summary>

@@ -1,0 +1,20 @@
+- type: vendingMachineInventory
+  id: WeaponsVendInventory
+  startingInventory:
+    WeaponRifleM4RA: 4
+    MagazineRifleM4RA: 20
+    WeaponRifleM41A: 4
+    MagazineRifleM41A: 30
+    WeaponSubMachineGunMSG23W-Y: 4
+    MagazineSmgMSG23W: 20
+    WeaponSubMachineGunM39: 3
+    MagazineRifleM39: 15
+    WeaponPistol88M4: 10
+    MagazinePistol88M4: 20
+    WeaponPistolArmatM5Y3: 5
+    MagazinePistolAramatM5Y3: 5
+    WeaponShotgunUA571C: 2
+    WeaponShotgunK221: 4
+    BoxLethalshot: 15
+    MacheteMarine: 5
+    ExGrenade: 10

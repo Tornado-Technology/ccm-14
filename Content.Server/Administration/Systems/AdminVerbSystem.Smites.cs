@@ -793,5 +793,25 @@ public sealed partial class AdminVerbSystem
             Message = Loc.GetString("admin-smite-super-speed-description"),
         };
         args.Verbs.Add(superSpeed);
+
+        Verb charlieVerb = new()
+        {
+            Text = "Charlie",
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/_CM/Clothing/OuterClothing/Armor/comfortable_armor.rsi"), "icon"),
+            Act = () =>
+            {
+                SetOutfitCommand.SetOutfit(args.Target, "CharlieComfortableGear", EntityManager, (_, clothing) =>
+                {
+                    if (HasComp<ClothingComponent>(clothing))
+                        EnsureComp<UnremoveableComponent>(clothing);
+
+                    EnsureComp<ClumsyComponent>(args.Target);
+                });
+            },
+            Impact = LogImpact.Extreme,
+            Message = Loc.GetString("admin-smite-charlie-description")
+        };
+        args.Verbs.Add(charlieVerb);
     }
 }

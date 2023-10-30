@@ -1,0 +1,57 @@
+- type: entity
+  name: XM43E
+  parent: BaseWeaponRifle
+  id: WeaponSniperXM43E
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: 0
+    maxAngle: -35
+  - type: Gun
+    minAngle: 0
+    maxAngle: 40
+    fireRate: 0.3
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleXM43E
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleXM43E
+      gun_chamber:
+        name: Chamber
+        startingItem: BulletRifle416Barratti
+        priority: 1
+        whitelist:
+          tags:
+            - BulletRifle416Barratti
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+

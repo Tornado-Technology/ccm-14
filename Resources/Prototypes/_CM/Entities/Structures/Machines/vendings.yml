@@ -1,0 +1,65 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineEngineer
+  name: ColMarTech Automated Engineer Rack
+  description: An automated Engineer rack hooked up to a big storage of standard-issue weapons.
+  components:
+  - type: VendingMachine
+    pack: EngineerVendorInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 1
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/eng_gear.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineMedical
+  name: ColMarTech Automated Medical Rack
+  description: An automated Medical rack hooked up to a big storage of standard-issue weapons.
+  components:
+  - type: VendingMachine
+    pack: MedicalVendorInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 1
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/med_gear.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineSpecialist
+  name: ColMarTech Automated Specialist Rack
+  description: An automated Specialist rack hooked up to a big storage of standard-issue weapons.
+  components:
+  - type: VendingMachine
+    pack: EquipSpecialistVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 1
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/spec_gear.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]

@@ -1,0 +1,55 @@
+- type: entity
+  name: ravager
+  parent: MobXenoBaseT3
+  id: MobRavagerXeno
+  components:
+    - type: XenoEndure
+    - type: XenoRage
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/ravager.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        1000: Dead
+    - type: Stamina
+      excess: 2000
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 50
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: XenoRavager
+
+
+- type: damageModifierSet
+  id: XenoRavager
+  coefficients:
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.8
+    Heat: 0.8
+
+
+- type: damageModifierSet
+  id: XenoRavagerCrest
+  coefficients:
+    Blunt: 0.2
+    Slash: 0.2
+    Piercing: 0.2
+    Heat: 0.2
+
+
+- type: damageModifierSet
+  id: XenoRavagerRage
+  coefficients:
+    Blunt: 0
+    Slash: 0
+    Piercing: 0
+    Heat: 0

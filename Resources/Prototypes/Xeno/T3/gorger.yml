@@ -1,0 +1,46 @@
+- type: entity
+  name: gorger
+  parent: MobXenoBaseT3
+  id: MobGorgerXeno
+  components:
+    - type: XenoVines
+      action: ActionXenoGorgerVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWallFortified
+    - type: XenoPsychicCure
+      healAmount: 250
+    - type: XenoSpitRejuvenate
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/gorger.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 20
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoGorgerVines
+  parent: ActionXenoVines
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 5
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: vines
+      event: !type:XenoVinesEvent
+      checkCanInteract: false
+# -------------------------------------

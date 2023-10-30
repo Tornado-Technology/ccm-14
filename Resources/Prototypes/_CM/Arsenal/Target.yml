@@ -1,0 +1,68 @@
+- type: entity
+  name: Target xeno
+  id: TargetXeno
+  parent: BaseTarget
+  description: Like alive, but not alive.
+  suffix: "Marines Gear"
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true
+    #scale: 0.8, 0.8
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 15500
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel:
+            min: 10
+            max: 10
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: Target Ravager
+  id: TargetXenoRavager
+  parent: TargetXeno
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true
+
+- type: entity
+  name: Target Burrower
+  id: TargetXenoBurrower
+  parent: TargetXeno
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/burrower.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true

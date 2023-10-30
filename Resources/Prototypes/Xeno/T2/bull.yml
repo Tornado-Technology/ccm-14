@@ -1,0 +1,56 @@
+- type: entity
+  name: bull
+  parent: MobXenoBaseT2
+  id: MobBullXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobCrusherXeno
+          evolution: 1200
+        - !type:XenoEvolution
+          prototype: MobRavagerXeno
+          evolution: 1800
+    - type: XenoBull
+    - type: XenoStun
+      action: ActionXenoBullStun
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        300: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Mobs/Aliens/Xenos/bull.rsi
+      offset: 0,0.4
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 30
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 7.5
+      baseSprintSpeed: 13.5
+
+
+# -------------------------------------
+- type: entity
+  id: ActionXenoBullStun
+  name: action-xeno-bull-stun
+  description: desc-action-bull-stun
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 10
+      itemIconStyle: BigAction
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: stun
+      event: !type:XenoStunEvent
+      canTargetSelf: false
+      interactOnMiss: false
+# -------------------------------------

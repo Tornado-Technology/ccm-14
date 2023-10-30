@@ -1,0 +1,15 @@
+- type: entity
+  id: ActionXenoEndure
+  name: endure name
+  description: endure desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: endure
+      event: !type:XenoEndureEvent
+      checkCanInteract: false

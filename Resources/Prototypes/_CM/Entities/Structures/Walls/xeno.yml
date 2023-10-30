@@ -1,0 +1,91 @@
+- type: entity
+  abstract: true
+  parent: BaseWall
+  id: BaseXenoWall
+  components:
+    - type: Tag
+      tags:
+        - Wall
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: XenoWallsModifier
+
+- type: entity
+  parent: BaseXenoWall
+  id: XenoWallFragile
+  name: Xeno wall fragile
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+      color: "#492eab"
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull_evac
+
+- type: entity
+  parent: BaseXenoWall
+  id: XenoWall
+  name: Xeno wall
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+      color: "#c7990c"
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 75
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull_evac
+
+- type: entity
+  parent: BaseXenoWall
+  id: XenoWallFortified
+  name: Xeno wall fortified
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+      color: "#7d1f1f"
+    - type: Icon
+      sprite: _CM/Structures/Walls/hull_evac.rsi
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 125
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+      destroySound:
+        path: /Audio/Effects/metalbreak.ogg
+    - type: IconSmooth
+      key: walls
+      base: hull_evac
+
+- type: damageModifierSet
+  id: XenoWallsModifier
+  coefficients:
+    Blunt: 0.2
+    Slash: 2
+    Piercing: 0.2
+    Shock: 1

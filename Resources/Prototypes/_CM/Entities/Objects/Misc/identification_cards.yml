@@ -1,0 +1,396 @@
+- type: entity
+  parent: Clothing
+  id: IDCardMarine
+  name: dog tag
+  description: A marine dog tag.
+  suffix: ID_Marine
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _CM/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: default
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+#Commander_Marine--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: ACommanderIDCard
+  name: Alpha Commander ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: AlfaCommander
+    
+- type: entity
+  parent: IDCardMarine
+  id: BCommanderIDCard
+  name: Bravo Commander ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: BravoCommander
+    
+- type: entity
+  parent: IDCardMarine
+  id: CCommanderIDCard
+  name: Charlie Commander ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: CharlieCommander
+    
+- type: entity
+  parent: IDCardMarine
+  id: DCommanderIDCard
+  name: Delta Commander ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: DeltaCommander
+#Specialists_Marine--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: ASpecialistsIDCard
+  name: Alpha Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: AlfaSpecialist
+    
+- type: entity
+  parent: IDCardMarine
+  id: BSpecialistsIDCard
+  name: Bravo Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: BravoSpecialist
+    
+- type: entity
+  parent: IDCardMarine
+  id: CSpecialistsIDCard
+  name: Charlie Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: CharlieSpecialist
+    
+- type: entity
+  parent: IDCardMarine
+  id: DSpecialistsIDCard
+  name: Delta Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: DeltaSpecialist
+#Medic_Marine--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: AMedicIDCard
+  name: Alpha Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: AlfaMedic
+    
+- type: entity
+  parent: IDCardMarine
+  id: BMedicIDCard
+  name: Bravo Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: BravoMedic
+    
+- type: entity
+  parent: IDCardMarine
+  id: CMedicIDCard
+  name: Charlie Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: CharlieMedic
+    
+- type: entity
+  parent: IDCardMarine
+  id: DMedicIDCard
+  name: Delta Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: DeltaMedic
+#Engineers_Marine--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: AEngineerIDCard
+  name: Alpha Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: AlfaEngineer
+    
+- type: entity
+  parent: IDCardMarine
+  id: BEngineerIDCard
+  name: Bravo Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: BravoEngineer
+    
+- type: entity
+  parent: IDCardMarine
+  id: CEngineerIDCard
+  name: Charlie Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: CharlieEngineer
+    
+- type: entity
+  parent: IDCardMarine
+  id: DEngineerIDCard
+  name: Delta Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: DeltaEngineer
+#Rifleman_Marine--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: ARiflemanIDCard
+  name: Alpha Rifleman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: AlfaMarine
+    
+- type: entity
+  parent: IDCardMarine
+  id: BRiflemanIDCard
+  name: Bravo Rifleman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: BravoMarine
+    
+- type: entity
+  parent: IDCardMarine
+  id: CRiflemanIDCard
+  name: Charlie Rifleman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: CharlieMarine
+    
+- type: entity
+  parent: IDCardMarine
+  id: DRiflemanIDCard
+  name: Delta Rifleman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: DeltaMarine
+#MilitaryPolice--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: PolicemanIDCard
+  name: Military Policeman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: MilitaryPoliceman
+    
+- type: entity
+  parent: IDCardMarine
+  id: PoliceOfficerIDCard
+  name: Military Police Officer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: MilitaryPoliceOfficer
+#LogisticsSupport--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: SupplyOfficerIDCard
+  name: Supply Officer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: SupplyOfficer
+    
+- type: entity
+  parent: IDCardMarine
+  id: RiggerIDCard
+  name: Rigger ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: Rigger
+#MilitaryScientist--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: MilitaryScientistIDCard
+  name: Military Scientist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: MilitaryScientist
+#MedicalUnit--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: MilitaryMainMedicIDCard
+  name: Military Main Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: MilitaryMainMedic
+    
+- type: entity
+  parent: IDCardMarine
+  id: MilitaryMedicIDCard
+  name: Military Medic ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: MilitaryMedic
+#ConstructionBattalion--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: ChiefShipsEngineerIDCard
+  name: Chief Ships Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: ChiefShipsEngineer
+    
+- type: entity
+  parent: IDCardMarine
+  id: ShipsEngineerIDCard
+  name: Ships Engineer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: ShipsEngineer
+#Command--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: HeadOperationsIDCard
+  name: Head Operations ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: HeadOperations
+
+- type: entity
+  parent: IDCardMarine
+  id: FieldCommanderIDCard
+  name: Field Commander ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: FieldCommander
+    
+- type: entity
+  parent: IDCardMarine
+  id: StaffOfficerIDCard
+  name: Staff Officer ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: StaffOfficer
+#Pilots--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: PilotNormandyIDCard
+  name: Pilot Normandy ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: PilotNormandy
+    
+- type: entity
+  parent: IDCardMarine
+  id: PilotRaptorIDCard
+  name: Pilot Raptor ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: PilotRaptor

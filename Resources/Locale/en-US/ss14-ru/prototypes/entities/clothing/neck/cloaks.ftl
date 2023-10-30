@@ -30,3 +30,5 @@ ent-ClothingNeckCloakPirateCap = pirate captain cloak
     .desc = A rather fetching black pirate cloak, complete with skull motif.
 ent-ClothingNeckCloakMoth = moth cloak
     .desc = A cloak in the form of moth wings is an unusual and original element of the wardrobe that can attract the attention of others. It is made of a thin fabric imitating moth wings, with soft and fluffy edges. The raincoat is fastened around the neck with Velcro, and has a hood in the shape of a moths head.
+ent-ClothingNeckCloakDeveloper = developer's cloak
+    .desc = Comfortable blue raincoat with beautiful gold trim, full of bug-proof patches.

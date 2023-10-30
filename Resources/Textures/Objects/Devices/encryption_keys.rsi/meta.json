@@ -34,6 +34,10 @@
     {"name": "sci_label"},
     {"name": "sec_label"},
     {"name": "service_label"},
-    {"name": "synd_label"}
+    {"name": "synd_label"},
+    {"name": "alpha_label"},
+    {"name": "bravo_label"},
+    {"name": "charlie_label"},
+    {"name": "delta_label"}
   ]
 }

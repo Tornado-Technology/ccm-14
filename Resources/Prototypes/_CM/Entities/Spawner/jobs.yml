@@ -1,0 +1,442 @@
+# Marine ----------------------
+- type: entity
+  id: SpawnPointAlfaMarine
+  parent: SpawnPointJobBase
+  suffix: SpawnMarineTGMS
+  name: alfa marine
+  components:
+    - type: SpawnPoint
+      job_id: AlfaMarine
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointDeltaMarine
+  parent: SpawnPointJobBase
+  name: delta marine
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: DeltaMarine
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointBravoMarine
+  parent: SpawnPointJobBase
+  name: bravo marine
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: BravoMarine
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointCharlieMarine
+  parent: SpawnPointJobBase
+  name: charlie marine
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: CharlieMarine
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Medic ---------------------------
+- type: entity
+  id: SpawnPointAlfaMedic
+  parent: SpawnPointJobBase
+  name: alfa medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: AlfaMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointDeltaMedic
+  parent: SpawnPointJobBase
+  name: delta medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: DeltaMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointBravoMedic
+  parent: SpawnPointJobBase
+  name: bravo medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: BravoMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointCharlieMedic
+  parent: SpawnPointJobBase
+  name: charlie medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: CharlieMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Engineer ---------------------------
+- type: entity
+  id: SpawnPointAlfaEngineer
+  parent: SpawnPointJobBase
+  name: alfa engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: AlfaEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointDeltaEngineer
+  parent: SpawnPointJobBase
+  name: delta engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: DeltaEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointBravoEngineer
+  parent: SpawnPointJobBase
+  name: bravo engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: BravoEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointCharlieEngineer
+  parent: SpawnPointJobBase
+  name: charlie engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: CharlieEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Specialist ------------------------
+- type: entity
+  id: SpawnPointAlfaSpecialist
+  parent: SpawnPointJobBase
+  name: alfa specialist
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: AlfaSpecialist
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointDeltaSpecialist
+  parent: SpawnPointJobBase
+  name: delta specialist
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: DeltaSpecialist
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointBravoSpecialist
+  parent: SpawnPointJobBase
+  name: bravo specialist
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: BravoSpecialist
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointCharlieSpecialist
+  parent: SpawnPointJobBase
+  name: charlie specialist
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: CharlieSpecialist
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Leader -------------------------
+- type: entity
+  id: SpawnPointAlfaCommander
+  parent: SpawnPointJobBase
+  name: alfa сommander
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: AlfaCommander
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointDeltaCommander
+  parent: SpawnPointJobBase
+  name: delta сommander
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: DeltaCommander
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointBravoCommander
+  parent: SpawnPointJobBase
+  name: bravo сommander
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: BravoCommander
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointCharlieCommander
+  parent: SpawnPointJobBase
+  name: charlie сommander
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: CharlieCommander
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Military Medic -------------
+- type: entity
+  id: SpawnPointMilitaryMedic
+  parent: SpawnPointJobBase
+  name: military medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: MilitaryMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointMilitaryMainMedic
+  parent: SpawnPointJobBase
+  name: military main medic
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: MilitaryMainMedic
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Military Engineer ----------------
+- type: entity
+  id: SpawnPointChiefShipsEngineer
+  parent: SpawnPointJobBase
+  name: chief ships engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: ChiefShipsEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointShipsEngineer
+  parent: SpawnPointJobBase
+  name: ships engineer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: ShipsEngineer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Cargo TGMC --------------
+- type: entity
+  id: SpawnPointSupplyOfficer
+  parent: SpawnPointJobBase
+  name: supply officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: SupplyOfficer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointRigger
+  parent: SpawnPointJobBase
+  name: rigger
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: Rigger
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Scientist --------------
+- type: entity
+  id: SpawnPointMilitaryScientist
+  parent: SpawnPointJobBase
+  name: military scientist
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: MilitaryScientist
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Command --------------------
+- type: entity
+  id: SpawnPointFieldCommander
+  parent: SpawnPointJobBase
+  name: field commander
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: FieldCommander
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointHeadOperations
+  parent: SpawnPointJobBase
+  name: head operations
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: HeadOperations
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointPilotOfficer
+  parent: SpawnPointJobBase
+  name: pilot officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: PilotNormandy
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+        
+- type: entity
+  id: SpawnPointPilotOfficerRaptor
+  parent: SpawnPointJobBase
+  name: pilot officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: PilotRaptor
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointStaffOfficer
+  parent: SpawnPointJobBase
+  name: staff officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: StaffOfficer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+# Police -----------------------
+- type: entity
+  id: SpawnPointMilitaryPoliceOfficer
+  parent: SpawnPointJobBase
+  name: military police officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: MilitaryPoliceOfficer
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointMilitaryPoliceman
+  parent: SpawnPointJobBase
+  name: military policeman
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: MilitaryPoliceman
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity

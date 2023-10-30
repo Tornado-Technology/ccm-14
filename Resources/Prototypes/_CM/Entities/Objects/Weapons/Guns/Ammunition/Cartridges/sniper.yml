@@ -1,0 +1,19 @@
+- type: entity
+  id: BaseCartridgeRifle416Barratti
+  name: cartridge (416 Barratti)22
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle416Barratti
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeRifle416Barratti
+  name: cartridge (416 Barratti)
+  parent: BaseCartridgeRifle416Barratti
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifle416Barratti

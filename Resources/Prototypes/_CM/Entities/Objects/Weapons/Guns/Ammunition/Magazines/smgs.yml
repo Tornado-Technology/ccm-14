@@ -1,0 +1,93 @@
+- type: entity
+  id: BaseMagazineRifleM39
+  name: "M39 magazine (450 Brushmaster)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineRifleM39
+  - type: Item
+    size: 5
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeSmg450Brushmaster
+    capacity: 35
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/m39.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineRifleM39
+  name: "M39 magazine (450 Brushmaster)"
+  parent: BaseMagazineRifleM39
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSmg450Brushmaster
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: BaseMagazineSmgMSG23W-Y
+  name: "MSG 23 W-Y magazine (458 Socom)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineSmgMSG23W-Y
+  - type: Item
+    size: 5
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeSmg458Socom
+    capacity: 50
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/m39.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineSmgMSG23W-Y
+  name: "MSG 23 W-Y magazine (458 Socom)"
+  parent: BaseMagazineSmgMSG23W-Y
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSmg458Socom
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

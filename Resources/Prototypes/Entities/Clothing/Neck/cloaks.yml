@@ -159,3 +159,12 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: TypingIndicatorClothing
     proto: moth
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakDeveloper
+  name: developer's cloak
+  description: Comfortable blue raincoat with beautiful gold trim, full of bug-proof patches.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/developer.rsi

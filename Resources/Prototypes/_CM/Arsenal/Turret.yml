@@ -1,0 +1,89 @@
+- type: entity
+  parent: BaseItem
+  id: MarineTurretUndeployed
+  name: Folding turret
+  description: The engineer's best friend. Must be assembled (Via the construction menu).
+  suffix: "Marines Gear"
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    layers:
+    - state: syndie_broken
+    - state: syndie_lethal
+  - type: Item
+    size: 30
+  - type: Tag
+    tags:
+      - Turret
+
+- type: Tag
+  id: Turret
+
+- type: entity
+  parent: WeaponTurretNanoTrasen
+  name: turret
+  id: WeaponTurretMarine
+  suffix: "Marines Gear"
+  description: The engineer's best friend. It does not understand back.
+  components:
+  - type: Construction
+    graph: MarineTurretGraph
+    node: MarineTurret
+  - type: Repairable
+    fuelcost: 20
+    doAfterDelay: 5
+  - type: PointLight
+    enabled: true
+    radius: 3
+    softness: 5
+    color: "#FFFFFF"
+    autoRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+
+- type: constructionGraph
+  id: MarineTurretGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MarineTurret
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - tag: Turret
+              name: folding turret
+              icon:
+                sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+                state: syndie_broken
+              doAfter: 10
+    - node: MarineTurret
+      entity: WeaponTurretMarine
+
+- type: construction
+  name: "- folding turret"
+  id: MarineTurretConstruction
+  graph: MarineTurretGraph
+  startNode: start
+  targetNode: MarineTurret
+  category: construction-category-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_broken
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

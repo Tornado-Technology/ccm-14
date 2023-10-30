@@ -1,0 +1,44 @@
+- type: entity
+  name: Рапира
+  parent: BaseItem
+  id: Rapier
+  description: Рапира выкована стариком Мифистофелем.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Melee/rapier_cvasoc.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.6
+    damage:
+      types:
+        Slash: 30
+        Piercing: 10
+    soundHit:
+        path: _CM/Audio/Items/rapier.ogg
+  - type: Reflect
+    enabled: true
+    reflectProb: 0.6
+    spread: 90
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 5
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnCollide
+    transferAmount: 5
+    blockSlots: NONE
+  - type: SolutionTransfer
+    maxTransferAmount: 5    
+  - type: Item
+    size: 10
+    sprite: _CM/Objects/Weapons/Melee/rapier_cvasoc.rsi
+  - type: Tag
+    tags:
+    - CaptainSabre
+  - type: DisarmMalus  

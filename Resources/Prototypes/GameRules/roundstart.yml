@@ -96,6 +96,14 @@
   components:
   - type: ZombieRule
 
+# custom main marine gamerule
+- type: entity
+  id: Xeno
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: XenoRule
+
 # event schedulers
 - type: entity
   id: BasicStationEventScheduler

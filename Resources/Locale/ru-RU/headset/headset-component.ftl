@@ -15,3 +15,10 @@ chat-radio-syndicate = Синдикат
 # not headset but whatever
 chat-radio-handheld = Портативный
 chat-radio-binary = Двоичный
+
+# CM
+chat-radio-hive = Улей
+chat-radio-alpha = Альфа
+chat-radio-bravo = Браво
+chat-radio-charlie = Чарли
+chat-radio-delta = Дельта
