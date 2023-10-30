@@ -38,7 +38,7 @@ public sealed class RaptorObserverSystem : EntitySystem
         if (!TryComp<RaptorControlComponent>(component.Control, out var raprot))
             return;
 
-        _action.RemoveAction(component.EjectAction);
+        //_action.RemoveAction(component.EjectAction);
 
         if (raprot != null)
             RemovePilot(uid, component);

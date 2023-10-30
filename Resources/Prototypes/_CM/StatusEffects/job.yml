@@ -211,18 +211,24 @@
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconPilotOfficer
-  icon:
-    sprite: Interface/Misc/job_icons.rsi
-    state: PilotOfficer
-
-- type: statusIcon
-  parent: JobIcon
   id: JobIconStaffOfficer
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: StaffOfficer
-# Xeno --------------------------------------
+# Pilots --------------------------------------
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconPilotOfficer
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: PilotOfficer
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconPilotRaptor
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: PilotOfficerRaptor
+# Xeno ----------------------------------------
 
 - type: statusIcon
   parent: JobIcon

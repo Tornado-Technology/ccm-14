@@ -383,7 +383,20 @@
   suffix: SpawnMarineTGMS
   components:
     - type: SpawnPoint
-      job_id: PilotOfficer
+      job_id: PilotNormandy
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+        
+- type: entity
+  id: SpawnPointPilotOfficerRaptor
+  parent: SpawnPointJobBase
+  name: pilot officer
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: PilotRaptor
     - type: Sprite
       layers:
         - state: green

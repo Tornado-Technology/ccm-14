@@ -20,7 +20,7 @@
       role: JobCharlieMarine
       time: 0
   startingGear: PilotOfficerGear
-  icon: "JobIconPilotOfficer"
+  icon: "JobIconPilotRaptor"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
