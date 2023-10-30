@@ -1,10 +1,10 @@
 - type: gameMap
-  id: Erida
+  id: TGMS_Erida
   mapName: 'TGMS test'
   mapPath: /Maps/TGMS/erida.yml
   minPlayers: 70
   stations:
-    Erida:
+    TGMS_Erida:
       stationProto: StandardTGMSStation
       components:
         - type: StationJobs

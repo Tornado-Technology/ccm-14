@@ -39,7 +39,7 @@ entities:
     - type: LoadedMap
   - uid: 2
     components:
-    - id: DesertTGMS
+    - id: TGMS_Desert
       type: BecomesStation
     - type: MetaData
     - pos: -0.46875,-0.53125

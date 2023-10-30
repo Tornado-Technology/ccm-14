@@ -60,7 +60,7 @@ entities:
     - pos: -0.632804,-2.246296
       parent: 1
       type: Transform
-    - id: EridaTGMS
+    - id: TGMS_Erida
       type: BecomesStation
     - chunks:
         0,0:

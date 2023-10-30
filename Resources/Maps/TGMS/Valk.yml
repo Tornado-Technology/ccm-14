@@ -46,7 +46,9 @@ entities:
   entities:
   - uid: 1
     components:
-    - name: Valkyrie TGMC
+    - id: TGMS_Valkyrie
+      type: BecomesStation
+    - name: Valkyrie TGMS
       type: MetaData
     - pos: -15.496754,-6.9934754
       parent: 48
