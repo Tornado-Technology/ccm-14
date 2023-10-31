@@ -1,5 +1,5 @@
 - type: entity
-  parent: FoodBaseTrash
+  parent: BaseItem
   id: FoodMealTrash
   name: USCM Prepared Meal (Empty)
   description:
