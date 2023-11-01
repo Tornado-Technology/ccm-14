@@ -245,7 +245,6 @@
     fireStackAlternateState: 3
   - type: CombatMode
     canDisarm: true
-    disarm: null
   - type: Climbing
   - type: Cuffable
   - type: Ensnareable

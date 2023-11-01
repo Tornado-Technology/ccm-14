@@ -28,8 +28,6 @@
       damage:
         groups:
           Brute: 15
-    - type: Polymorphable
-      innatePolymorphs: [ XenoSentinelToSpitter ]
 
 # spit
 - type: entity

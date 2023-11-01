@@ -23,7 +23,6 @@
   - type: DisarmMalus
   - type: Clothing
     sprite: _CM/Objects/Weapons/Melee/research_analyser.rsi
-    state: icon
     quickEquip: false
     slots:
     - Back

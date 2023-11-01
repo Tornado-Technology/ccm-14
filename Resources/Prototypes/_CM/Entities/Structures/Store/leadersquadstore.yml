@@ -13,7 +13,6 @@
       Telecrystal: 2
   - type: Item
     sprite: Objects/Devices/distant_store.rsi
-    state: icon
   - type: UserInterface
     interfaces:
     - key: enum.StoreUiKey.Key

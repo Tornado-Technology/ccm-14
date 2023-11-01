@@ -18,11 +18,6 @@
   proto: MobWatcherMagmawing
   groupCount: 3
 
-# TODO: Needs to be more robust
-- type: biomeMarkerLayer
-  id: Xenos
-  proto: MobXeno
-
 - type: biomeMarkerLayer
   id: Carps
   proto: MobCarpDungeon

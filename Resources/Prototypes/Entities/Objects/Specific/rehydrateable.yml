@@ -138,7 +138,6 @@
     - MobAdultSlimesYellowAngry
     - MobSpiderSpace
     - MobBearSpace
-    - MobPurpleSnake
     - MobKangarooSpace
     - MobTick
   - type: CollisionWake

@@ -16,8 +16,6 @@
       thresholds:
         0: Alive
         1000: Dead
-    - type: Stamina
-      excess: 2000
     - type: MeleeWeapon
       hidden: true
       damage:

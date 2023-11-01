@@ -525,34 +525,6 @@
     - MobMonkey
 
 - type: entity
-  name: Purple Snake Spawner
-  id: SpawnMobPurpleSnake
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - state: purple_snake
-      sprite: Mobs/Aliens/Xenos/purple_snake.rsi
-  - type: ConditionalSpawner
-    prototypes:
-    - MobPurpleSnake
-
-- type: entity
-  name: Small Purple Snake Spawner
-  id: SpawnMobSmallPurpleSnake
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - state: small_purple_snake
-      sprite: Mobs/Aliens/Xenos/purple_snake.rsi
-  - type: ConditionalSpawner
-    prototypes:
-    - MobSmallPurpleSnake
-
-- type: entity
   name: Slug Spawner
   id: SpawnMobSlug
   parent: MarkerBase

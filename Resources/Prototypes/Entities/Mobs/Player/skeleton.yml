@@ -10,20 +10,6 @@
     messagePerceivedByOthers: hugging-success-generic-others
 
 - type: entity
-  name: Skeleton Pirate
-  parent: MobSkeletonPerson
-  id: MobSkeletonPirate
-  components:
-  - type: GhostRole
-    name: ghost-role-information-skeleton-pirate-name
-    description: ghost-role-information-skeleton-pirate-description
-  - type: GhostTakeoverAvailable
-  - type: Loadout
-    prototypes: [PirateGear]
-  - type: RandomHumanoidAppearance
-
-
-- type: entity
   name: Skeleton Biker
   parent: MobSkeletonPerson
   id: MobSkeletonBiker

@@ -30,24 +30,6 @@
         task: SimpleHumanoidHostileCompound
 
 - type: entity
-  name: Spirate
-  parent: BaseMobHuman
-  id: MobSpirate
-  description: Yarr!
-  components:
-  - type: NpcFactionMember
-    factions:
-      - Syndicate
-  - type: Loadout
-    prototypes:
-      - PirateGear
-  - type: InputMover
-  - type: MobMover
-  - type: HTN
-    rootTask:
-      task: SimpleHumanoidHostileCompound
-
-- type: entity
   parent: BaseMobHuman
   suffix: Dead
   save: false # mobs are currently not saveable.

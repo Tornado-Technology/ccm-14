@@ -28,5 +28,3 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 8
       baseSprintSpeed: 16
-    - type: Polymorphable
-      innatePolymorphs: [ XenoRunnerToHunter ]

@@ -238,14 +238,6 @@
       - WelderExperimental
       - JawsOfLife
       - ClothingEyesGlassesChemical
-  - type: EmagLatheRecipes
-    emagDynamicRecipes:
-      - ExplosivePayload
-      - WeaponLaserCarbine
-      - WeaponAdvancedLaser
-      - WeaponLaserCannon
-      - WeaponXrayCannon
-      - WeaponTaser
 
 - type: entity
   id: CircuitImprinter
@@ -529,18 +521,6 @@
     - type: Lathe
       idleState: icon
       runningState: icon
-      staticRecipes:
-        - CartridgePistol
-        - CartridgeMagnum
-        - ShellShotgun
-        - ShellShotgunFlare
-        - ShellTranquilizer
-        - CartridgeLightRifle
-        - CartridgeRifle
-        - MagazineBoxPistol
-        - MagazineBoxMagnum
-        - MagazineBoxRifle
-        - MagazineBoxLightRifle
     - type: MaterialStorage
       whitelist:
         tags:
