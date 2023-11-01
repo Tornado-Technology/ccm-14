@@ -1,6 +1,6 @@
 - type: entity
   noSpawn: true
-  parent: [BaseTraitorObjective, BaseLivingObjective]
+  parent: BaseLivingObjective
   id: EscapeShuttleObjective
   name: Escape to centcom alive and unrestrained.
   description: One of our undercover agents will debrief you when you arrive. Don't show up in cuffs.
