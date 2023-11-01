@@ -18,6 +18,12 @@
 
 # - type: playTimeTracker
   # id: JobCaptain
+# ShipsEngineer --------------------------
+- type: playTimeTracker
+  id: JobChiefShipsEngineer
+  
+- type: playTimeTracker
+  id: JobShipsEngineer
 # Marine tracker -------------------------
 - type: playTimeTracker
   id: JobAlfaMarine

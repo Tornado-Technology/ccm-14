@@ -28,7 +28,6 @@
     availableModes:
     - SemiAuto
   - type: BallisticAmmoProvider
-    autoCycle: false
     whitelist:
       tags:
       - ShellShotgun

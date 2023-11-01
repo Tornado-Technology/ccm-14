@@ -73,7 +73,7 @@
   - type: Gun
     fireRate: 7
     soundGunshot:
-      path: /Audio/TGMSArsenal/Audio/M41AShot.ogg
+      path: /Audio/_CM/TGMSArsenal/Audio/M41AShot.ogg
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: ItemSlots

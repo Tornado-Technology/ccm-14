@@ -49,3 +49,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  
+- Type: Tag
+  id: ShellShotgunAFG-12
