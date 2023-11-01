@@ -691,17 +691,6 @@
   - UplinkBundles
 
 - type: listing
-  id: UplinkGrenadeLauncherBundle
-  name: uplink-grenade-launcher-bundle-name
-  description: uplink-grenade-launcher-bundle-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
-  cost:
-    Telecrystal: 25
-  categories:
-  - UplinkBundles
-
-- type: listing
   id: UplinkL6SawBundle
   name: uplink-l6-saw-bundle-name
   description: uplink-l6-saw-bundle-desc

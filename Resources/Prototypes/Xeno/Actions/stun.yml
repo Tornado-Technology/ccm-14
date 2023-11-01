@@ -18,5 +18,5 @@
         sprite: Actions/xeno.rsi
         state: stun
       event: !type:XenoStunEvent
-        speech: action-speech-spell-smite
+
 

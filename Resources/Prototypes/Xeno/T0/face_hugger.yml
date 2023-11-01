@@ -18,9 +18,9 @@
           prototype: MobWarriorXeno
           evolution: 0
     - type: FaceHugger
-    - type: FaceHugging
       paralyzeTime: 3
       chansePounce: 100
+    - type: FaceHugging
     - type: Sprite
       sprite: Mobs/Aliens/Xenos/face_hugger.rsi
       drawdepth: SmallMobs
