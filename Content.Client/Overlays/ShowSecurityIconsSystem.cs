@@ -38,7 +38,8 @@ public sealed class ShowSecurityIconsSystem : EquipmentHudSystem<ShowSecurityIco
     {
         var result = new List<StatusIconPrototype>();
 
-        var jobIconToGet = JobIconForNoId;
+        // Yes, you can make a separate system, but then you will start to abuse the security guards.
+        var jobIconToGet = string.Empty; // var jobIconToGet = JobIconForNoId;
         if (_accessReader.FindAccessItemsInventory(uid, out var items))
         {
             foreach (var item in items)

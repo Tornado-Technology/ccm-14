@@ -196,7 +196,8 @@
     - state: default
   - type: PresetIdCard
     job: DeltaEngineer
-#Rifleman_Marine--------------------------------
+
+# Rifleman_Marine--------------------------------
 - type: entity
   parent: IDCardMarine
   id: ARiflemanIDCard
@@ -205,6 +206,8 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconAlfaMarine
   - type: PresetIdCard
     job: AlfaMarine
     
@@ -216,6 +219,8 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconBravoMarine
   - type: PresetIdCard
     job: BravoMarine
     
@@ -227,6 +232,8 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconCharlieMarine
   - type: PresetIdCard
     job: CharlieMarine
     
@@ -238,9 +245,12 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconDeltaMarine
   - type: PresetIdCard
     job: DeltaMarine
-#MilitaryPolice--------------------------------
+
+# MilitaryPolice --------------------------------
 - type: entity
   parent: IDCardMarine
   id: PolicemanIDCard
@@ -249,6 +259,8 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconMilitaryPoliceman
   - type: PresetIdCard
     job: MilitaryPoliceman
     
@@ -260,9 +272,12 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconMilitaryPoliceOfficer
   - type: PresetIdCard
     job: MilitaryPoliceOfficer
-#LogisticsSupport--------------------------------
+  
+# LogisticsSupport --------------------------------
 - type: entity
   parent: IDCardMarine
   id: SupplyOfficerIDCard
@@ -348,6 +363,8 @@
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+    jobIcon: JobIconCaptain
   - type: PresetIdCard
     job: HeadOperations
 

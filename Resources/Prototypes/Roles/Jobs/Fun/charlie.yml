@@ -4,5 +4,6 @@
     jumpsuit: ClothingComfortableUniformMarine
     shoes: ClothingShoesComfortableBootsMarine
     head: ClothingHeadHatCatEars
+    id: CRiflemanIDCard
     ears: ClothingHeadsetMarineCharlie
     outerClothing: ClothingOuterArmorMarineComfortable

@@ -4,6 +4,11 @@
         <BoxContainer Orientation="Vertical" VerticalExpand="True">
             <BoxContainer Margin="4,4,4,4" Orientation="Vertical">
                 <Label
+                Name="EvolutionLimit"
+                HorizontalAlignment="Left"
+                Access="Public"
+                HorizontalExpand="True" />
+                <Label
                     Name="EvolutionPoints"
                     HorizontalAlignment="Left"
                     Access="Public"
