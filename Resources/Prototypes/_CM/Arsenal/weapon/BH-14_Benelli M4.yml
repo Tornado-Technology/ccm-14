@@ -82,7 +82,6 @@
     - SemiAuto
     - FullAuto
   - type: BallisticAmmoProvider
-    autoCycle: true
     whitelist:
       tags:
       - ShellShotgun
