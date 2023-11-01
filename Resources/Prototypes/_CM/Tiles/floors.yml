@@ -9,7 +9,6 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
 
 - type: tile
@@ -23,7 +22,6 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
 
 - type: tile
@@ -37,7 +35,6 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
 
 - type: tile
@@ -51,7 +48,6 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
 
 - type: tile
@@ -65,7 +61,6 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
 
 - type: tile
@@ -79,5 +74,4 @@
   canCrowbar: true
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: CMFloorTileItemSteel
   heatCapacity: 10000
