@@ -44,6 +44,9 @@ namespace Content.Shared.Roles
         [DataField("requirements")]
         public HashSet<JobRequirement>? Requirements;
 
+        [DataField("ranks")]
+        public List<JobRank> Ranks = new();
+
         [DataField("joinNotifyCrew")]
         public bool JoinNotifyCrew { get; private set; } = false;
 

@@ -1,4 +1,4 @@
-﻿# Tier 1 (10000)
+﻿# Tier 1 (7500)
 
 - type: technology
   id: BasicRobotics
@@ -34,17 +34,6 @@
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
   - TechDiskComputerCircuitboard
-
-- type: technology
-  id: MagnetsTech
-  name: research-technology-magnets-tech
-  icon:
-    sprite: Clothing/Shoes/Boots/magboots.rsi
-    state: icon
-  discipline: Experimental
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
   - ClothingShoesBootsMag
 
 # Tier 2 (5000)

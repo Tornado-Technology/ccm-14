@@ -42,8 +42,32 @@ public sealed partial class XenoEvolutionMenu : DefaultWindow
             var prototype = evolution.Prototype ?? string.Empty;
             var entityPrototype = _prototypeManager.Index<EntityPrototype>(prototype);
 
+            var tier = 0;
+            if (entityPrototype.Components.TryGetComponent("XenoTier", out var comp) && comp is XenoTierComponent)
+            {
+                var component = (XenoTierComponent) comp;
+                tier = component.Tier;
+            }
+
+            EvolutionLimit.Text = $"Ограничение: нет";
+
+            var count = 0;
+            if (state.Tiers.TryGetValue(tier, out var tiers))
+            {
+                count = tiers;
+            }
+
+            var limited = false;
+            if (state.Limit.TryGetValue(tier, out var limit))
+            {
+                limited = limit != -1 && limit <= count;
+                EvolutionLimit.Text = $"Ограничение: {count} / {limit}";
+            }
+
+            var eneabled = state.Evolution >= evolution.Evolution && state.Enabled && !limited;
+
             var texture = _spriteSystem.GetPrototypeIcon(prototype).Default;
-            var newEvolution = new XenoEvolutionControl(entityPrototype.Name, entityPrototype.Description, $"{evolution.Evolution} e.p.", state.Evolution >= evolution.Evolution && state.Enabled, texture);
+            var newEvolution = new XenoEvolutionControl(entityPrototype.Name, entityPrototype.Description, $"{evolution.Evolution} e.p.", eneabled, texture);
             newEvolution.BuyButton.OnButtonDown += args => _owner.Evolve(evolution);
 
             EvolutionsContainer.AddChild(newEvolution);

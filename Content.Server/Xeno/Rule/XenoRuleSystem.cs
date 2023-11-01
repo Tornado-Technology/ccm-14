@@ -1,7 +1,5 @@
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.GameTicking.Rules;
-using Content.Shared.Tag;
-using System.Linq;
 using Content.Server.RoundEnd;
 using Content.Server.GameTicking;
 using Content.Server.Nuke;
@@ -13,13 +11,25 @@ using Content.Server.Xeno.Components;
 
 using WinType = Content.Server.Xeno.Components.WinType;
 using WinCondition = Content.Server.Xeno.Components.WinCondition;
+using Content.Server.Chat.Systems;
+using Robust.Shared.Player;
+using Robust.Shared.Audio;
 
 namespace Content.Server.Xeno.Systems;
 
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
+    public const float AnnouncmentTime = 600f;
+
+    public int Eggs { get; private set; }
+    public int Marines { get; private set; }
+    public int Xenos { get; private set; }
+
     [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
+    [Dependency] private readonly ChatSystem _chatSystem = default!;
+
+    private float _announcmentTime = 0f;
 
     private EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent> Query => EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent>();
 
@@ -30,16 +40,50 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<RoundStartAttemptEvent>(OnStartAttempt);
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
         SubscribeLocalEvent<NukeExplodedEvent>(OnNukeExploded);
+
         SubscribeLocalEvent<XenoComponent, MobStateChangedEvent>(OnXenoMobStateChanged);
+        SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnXenoStartup);
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMarineMobStateChanged);
+        SubscribeLocalEvent<MarineComponent, ComponentStartup>(OnMarineStartup);
+
         SubscribeLocalEvent<XenoEggComponent, DestructionEventArgs>(OnDestruction);
-        SubscribeLocalEvent<XenoEggComponent, ComponentInit>(OnEggComponentInit);
+        SubscribeLocalEvent<XenoEggComponent, ComponentStartup>(OnEggComponentInit);
         SubscribeLocalEvent<NukeDisarmSuccessEvent>(OnNukeDisarm);
+    }
+
+    private void OnMarineStartup(EntityUid uid, MarineComponent component, ComponentStartup args)
+    {
+        CheckRoundShouldEnd();
+    }
+
+    private void OnXenoStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
+    {
+        CheckRoundShouldEnd();
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        _announcmentTime += frameTime;
+
+        if (_announcmentTime < AnnouncmentTime)
+            return;
+
+        _announcmentTime -= AnnouncmentTime;
+
+        var query = Query;
+        while (query.MoveNext(out var uid, out var xeno, out var gameRule))
+        {
+            if (!GameTicker.IsGameRuleAdded(uid, gameRule))
+                continue;
+
+            _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-warning", ("xenos", Xenos), ("marines", Marines)), Loc.GetString("ai-announcement-sender"));
+        }
     }
 
     private void OnStartAttempt(RoundStartAttemptEvent ev)
     {
-        // return;
         var query = Query;
         while (query.MoveNext(out var uid, out var xeno, out var gameRule))
         {
@@ -62,7 +106,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         }
     }
 
-    private void OnEggComponentInit(EntityUid uid, XenoEggComponent component, ComponentInit args)
+    private void OnEggComponentInit(EntityUid uid, XenoEggComponent component, ComponentStartup args)
     {
         CheckRoundShouldEnd();
     }
@@ -101,26 +145,46 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             if (!GameTicker.IsGameRuleAdded(uid, gameRule))
                 continue;
 
-            var eggs = GetCountByTag("XenoEgg");
-            var xenos = GetMobAliveCountByTag("Xeno");
-            var mariens = GetMobAliveCountByTag("Marien");
+            Eggs = Count(typeof(XenoEggComponent));
+            Xenos = GetMobAliveCount<XenoComponent>();
+            Marines = GetMobAliveCount<MarineComponent>();
 
-            if (eggs >= xeno.WinningXenoEggCount)
+            var sender = Loc.GetString("ai-announcement-sender");
+
+            if (Eggs == 20)
             {
-                xeno.WinConditions.Add(WinCondition.EggsWinningCount);
-                SetWinType(uid, WinType.XenoMinor, xeno);
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"), sender, false, colorOverride: Color.Yellow);
+                SoundSystem.Play("/Audio/Misc/redalert.ogg", Filter.Broadcast());
             }
 
-            if (xenos == 0)
+            if (Eggs == 40)
+            {
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"), sender, false, colorOverride: Color.Orange);
+                SoundSystem.Play("/Audio/Misc/siren.ogg", Filter.Broadcast());
+            }
+
+            if (Eggs >= xeno.WinningXenoEggCount)
+            {
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"), sender, false, colorOverride: Color.Red);
+                SoundSystem.Play("/Audio/Misc/delta.ogg", Filter.Broadcast());
+
+                xeno.WinConditions.Add(WinCondition.EggsWinningCount);
+                SetWinType(uid, WinType.XenoMinor, xeno);
+                break;
+            }
+
+            if (Xenos == 0)
             {
                 xeno.WinConditions.Add(WinCondition.AllXenoDied);
                 SetWinType(uid, WinType.MarineMajor, xeno);
+                break;
             }
 
-            if (mariens == 0)
+            if (Marines == 0)
             {
                 xeno.WinConditions.Add(WinCondition.AllMarineDied);
                 SetWinType(uid, WinType.XenoMajor, xeno);
+                break;
             }
         }
     }
@@ -130,6 +194,9 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         var query = Query;
         while (query.MoveNext(out var uid, out var xeno, out var gameRule))
         {
+            if (!GameTicker.IsGameRuleAdded(uid, gameRule))
+                continue;
+
             if (ev.OwningStation == null)
             {
                 xeno.WinConditions.Add(WinCondition.NukeExplodedOnIncorrectLocation);
@@ -161,13 +228,11 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         foreach (var xeno in EntityQuery<XenoRuleComponent>())
         {
             var winText = Loc.GetString($"xeno-{xeno.WinType.ToString().ToLower()}");
-
             ev.AddLine(winText);
 
             foreach (var cond in xeno.WinConditions)
             {
                 var text = Loc.GetString($"xeno-cond-{cond.ToString().ToLower()}");
-
                 ev.AddLine(text);
             }
         }
@@ -182,18 +247,13 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         _roundEndSystem.EndRound();
     }
 
-    private int GetCountByTag(string tag)
-    {
-        return EntityManager.EntityQuery<TagComponent>().Where((comp) => comp.Tags.Contains(tag)).Count();
-    }
-
-    private int GetMobAliveCountByTag(string tag)
+    private int GetMobAliveCount<T>() where T : Component
     {
         var count = 0;
 
-        foreach (var (tagComp, mobStateComp) in EntityManager.EntityQuery<TagComponent, MobStateComponent>())
+        foreach (var (tagComp, mobStateComp) in EntityQuery<T, MobStateComponent>())
         {
-            if (!tagComp.Tags.Contains(tag) || mobStateComp.CurrentState != MobState.Alive)
+            if (mobStateComp.CurrentState != MobState.Alive)
                 continue;
 
             count++;

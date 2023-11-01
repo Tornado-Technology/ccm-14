@@ -5,6 +5,7 @@
   noSpawn: false
   components:
   - type: Marine
+  - type: ShowSecurityIcons # Will allow them to see their own, but not strangers due to changes to the HUD system
   - type: GhostTakeoverAvailable
   - type: LagCompensation
   - type: RangedDamageSound

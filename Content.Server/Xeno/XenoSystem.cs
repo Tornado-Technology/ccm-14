@@ -5,6 +5,7 @@ using Content.Shared.Actions;
 using Content.Shared.Kitchen;
 using Content.Shared.Mind;
 using Content.Shared.Research.Components;
+using Content.Shared.Wieldable;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -19,6 +20,17 @@ public sealed partial class XenoSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+
+    private readonly Dictionary<int, int> _tierLimit = new()
+    {
+        { 0, -1 },
+        { 1, -1 },
+        { 2, 10 },
+        { 3,  5 },
+        { 4, -1 },
+    };
+
+    private readonly Dictionary<int, int> _tiers = new();
 
     /// <summary>
     ///     Timer used to avoid updating the UI state every frame (which would be overkill)
@@ -58,9 +70,21 @@ public sealed partial class XenoSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent>();
-        while (query.MoveNext(out var uid, out var xeno, out var evol))
+        _tiers.Clear();
+
+        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, XenoTierComponent>();
+        while (query.MoveNext(out var uid, out var xeno, out var evol, out var tiers))
         {
+            if (_tiers.TryGetValue(tiers.Tier, out var tier))
+            {
+                _tiers.Remove(tiers.Tier);
+                _tiers.Add(tiers.Tier, tier + 1);
+            }
+            else
+            {
+                _tiers.Add(tiers.Tier, 1);
+            }
+
             if (evol.Evolutions == null || evol.Evolutions.Count == 0)
                 continue;
 
@@ -77,17 +101,17 @@ public sealed partial class XenoSystem : EntitySystem
     private void UpdateEvolutionUI(float frameTime)
     {
         _updateTimer += frameTime;
-        if (_updateTimer >= 1)
+
+        if (_updateTimer < 1)
+            return;
+
+        _updateTimer -= 1;
+
+        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, UserInterfaceComponent>();
+        while (query.MoveNext(out var uid, out var _, out var evolution, out var uiComp))
         {
-            _updateTimer -= 1;
-
-            var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, UserInterfaceComponent>();
-
-            while (query.MoveNext(out var uid, out var _, out var evolution, out var uiComp))
-            {
-                var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer, evolution.Evolutions, evolution.Enabled);
-                _uiSystem.TrySetUiState(uid, XenoEvolutionUiKey.Key, state, ui: uiComp);
-            }
+            var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer, evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);
+            _uiSystem.TrySetUiState(uid, XenoEvolutionUiKey.Key, state, ui: uiComp);
         }
     }
 

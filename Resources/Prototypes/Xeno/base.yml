@@ -11,6 +11,7 @@
   components:
     - type: Xeno
     - type: XenoEvolutions
+    - type: XenoTier
     - type: Actions
     - type: UserInterface
       interfaces:
@@ -140,6 +141,8 @@
   parent: MobXenoBase
   id: MobXenoBaseT0
   components:
+    - type: XenoTier
+      tier: 0
     - type: Butcherable
       butcheringType: Knife
       spawned:
@@ -149,13 +152,13 @@
       baseWalkSpeed: 6
       baseSprintSpeed: 12
 
-
-
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT1
   components:
+    - type: XenoTier
+      tier: 1
     - type: Butcherable
       butcheringType: Knife
       spawned:
@@ -167,13 +170,13 @@
       baseWalkSpeed: 6
       baseSprintSpeed: 12
 
-
-
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT2
   components:
+    - type: XenoTier
+      tier: 2
     - type: Butcherable
       butcheringType: Knife
       spawned:
@@ -185,13 +188,13 @@
       baseWalkSpeed: 5
       baseSprintSpeed: 10
 
-
-
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT3
   components:
+    - type: XenoTier
+      tier: 3
     - type: Butcherable
       butcheringType: Knife
       spawned:
@@ -203,13 +206,13 @@
       baseWalkSpeed: 5
       baseSprintSpeed: 8
 
-
-
 - type: entity
   abstract: true
   parent: MobXenoBase
   id: MobXenoBaseT4
   components:
+    - type: XenoTier
+      tier: 4
     - type: Butcherable
       butcheringType: Knife
       spawned:

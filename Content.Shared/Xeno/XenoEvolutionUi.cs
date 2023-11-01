@@ -10,13 +10,17 @@ public sealed class XenoEvolutionBoundInterfaceState : BoundUserInterfaceState
     public readonly float EvolutionModifer;
     public readonly HashSet<XenoEvolution> Evolutions;
     public readonly bool Enabled;
+    public readonly Dictionary<int, int> Limit;
+    public readonly Dictionary<int, int> Tiers;
 
-    public XenoEvolutionBoundInterfaceState(float evolution, float modifer, HashSet<XenoEvolution> evolutions, bool enabled)
+    public XenoEvolutionBoundInterfaceState(float evolution, float modifer, HashSet<XenoEvolution> evolutions, bool enabled, Dictionary<int, int> limit, Dictionary<int, int> tiers)
     {
         Evolution = evolution;
         EvolutionModifer = modifer;
         Evolutions = evolutions;
         Enabled = enabled;
+        Limit = limit;
+        Tiers = tiers;
     }
 }
 
