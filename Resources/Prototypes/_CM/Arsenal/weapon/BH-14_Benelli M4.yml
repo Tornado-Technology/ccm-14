@@ -107,7 +107,6 @@
     sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
   - type: BallisticAmmoProvider
     capacity: 6
-    autoCycle: true
   - type: ItemSlots
     slots:
       gun_box:
