@@ -30,7 +30,10 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
+  
+- type: Tag
+  id: CartridgeRifle1024
+  
 - type: entity
   id: MagazineRifleM41A
   name: "M41A magazine (10x24mm)"
@@ -77,7 +80,10 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
+  
+- type: Tag
+  id: CartridgeRifle125x60R
+  
 - type: entity
   id: MagazineRifleM4RA
   name: "M4RA magazine (12.5x60R)"
