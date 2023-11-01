@@ -12,7 +12,7 @@ public sealed partial class TraitorRuleComponent : Component
     public readonly List<EntityUid> TraitorMinds = new();
 
     [DataField("traitorPrototypeId", customTypeSerializer: typeof(PrototypeIdSerializer<AntagPrototype>))]
-    public string TraitorPrototypeId = "Traitor";
+    public string TraitorPrototypeId = "MilitaryScientist";
 
     public int TotalTraitors => TraitorMinds.Count;
     public string[] Codewords = new string[3];

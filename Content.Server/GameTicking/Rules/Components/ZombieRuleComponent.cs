@@ -13,7 +13,7 @@ public sealed partial class ZombieRuleComponent : Component
     public Dictionary<string, string> InitialInfectedNames = new();
 
     [DataField("patientZeroPrototypeId", customTypeSerializer: typeof(PrototypeIdSerializer<AntagPrototype>))]
-    public string PatientZeroPrototypeId = "InitialInfected";
+    public string PatientZeroPrototypeId = "Pretor";
 
     /// <summary>
     /// Whether or not the initial infected have been chosen.

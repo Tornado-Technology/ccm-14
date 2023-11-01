@@ -11,7 +11,7 @@ public sealed partial class XenoRageComponent : Component
     public string Action = "ActionXenoRage";
 
     [DataField("passiveModifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string PassiveModifierSet = "XenoRavager";
+    public string PassiveModifierSet = "MobRavagerXeno";
 
     [DataField("modifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string ModifierSet = "XenoRavagerRage";
