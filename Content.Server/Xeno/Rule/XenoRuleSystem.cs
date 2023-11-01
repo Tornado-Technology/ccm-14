@@ -42,9 +42,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<NukeExplodedEvent>(OnNukeExploded);
 
         SubscribeLocalEvent<XenoComponent, MobStateChangedEvent>(OnXenoMobStateChanged);
-        SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnXenoStartup);
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMarineMobStateChanged);
-        SubscribeLocalEvent<MarineComponent, ComponentStartup>(OnMarineStartup);
 
         SubscribeLocalEvent<XenoEggComponent, DestructionEventArgs>(OnDestruction);
         SubscribeLocalEvent<XenoEggComponent, ComponentStartup>(OnEggComponentInit);
@@ -78,6 +76,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             if (!GameTicker.IsGameRuleAdded(uid, gameRule))
                 continue;
 
+            CheckRoundShouldEnd();
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-warning", ("xenos", Xenos), ("marines", Marines)), Loc.GetString("ai-announcement-sender"));
         }
     }
