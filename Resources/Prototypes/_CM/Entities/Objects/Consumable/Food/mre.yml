@@ -1,15 +1,15 @@
 - type: entity
-  parent: FoodTinBaseTrash
+  parent: BaseItem
   id: FoodMealTrash
   name: USCM Prepared Meal (Empty)
-  description: 
+  description:
   components:
   - type: Sprite
     sprite: _CM/Objects/Consumable/Food/mre.rsi
     state: MREempty
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealChicken
   name: USCM Prepared Meal (Chicken)
   description: A tray of standard USCM food. Moist chicken, dry rice and a mildly depressed piece of broccoli fill this tray.
@@ -32,7 +32,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealCornbread
   name: USCM Prepared Meal (Cornbread)
   description: A tray of standard USCM food. Stale cornbread, tomato paste and some green goop fill this tray.
@@ -55,7 +55,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealPasta
   name: USCM Prepared Meal (Pasta)
   description: A tray of standard USCM food. Overcooked spaghetti, waterlogged carrots and two french fries fill this tray.
@@ -78,7 +78,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealPizza
   name: USCM Prepared Meal (Pizza)
   description: A tray of standard USCM food. Cold pizza, wet green beans and a shitty egg fill this tray. Get something other than pizza, lardass.
@@ -101,7 +101,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealPork
   name: USCM Prepared Meal (Pork)
   description: A tray of standard USCM food. Partially raw pork, goopy corn and some watery mashed potatoes fill this tray.
@@ -124,7 +124,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodMealTofu
   name: USCM Prepared Meal (Tofu)
   description: The USCM doesn't serve tofu you grass sucking hippie. The flag signifies your defeat.
@@ -147,7 +147,7 @@
     trash: FoodMealTrash
 
 - type: entity
-  parent: FoodTinBase
+  parent: FoodBase
   id: FoodProteinBar
   name: USCM Protein Bar
   description: The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute.
@@ -306,7 +306,7 @@
   name: MRE component (dessert)
   parent: BaseItem
   id: FoodMREDessert
-  description: An MRE side component. Contains a sweet dessert, to be eaten after the main (or before, if you're rebellious). 
+  description: An MRE side component. Contains a sweet dessert, to be eaten after the main (or before, if you're rebellious).
   components:
   - type: Sprite
     sprite: _CM/Objects/Consumable/Food/mre.rsi
