@@ -31,8 +31,6 @@
     zeroVisible: false
   - type: Appearance
   
-- type: Tag
-  id: CartridgeRifle416Barratti
   
 - type: entity
   id: MagazineRifleXM43E
