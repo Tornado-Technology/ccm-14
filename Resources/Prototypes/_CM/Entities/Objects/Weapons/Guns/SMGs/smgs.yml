@@ -59,7 +59,7 @@
   - type: Appearance
   
   
-- Type: Tag
+- type: Tag
   id: BulletSmg450Brushmaster
   
 - type: entity
@@ -121,5 +121,5 @@
     zeroVisible: true
   - type: Appearance
   
-- Type: Tag
+- type: Tag
   id: BulletSmg458Socom
