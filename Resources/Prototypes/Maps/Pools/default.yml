@@ -1,17 +1,6 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Aspid
-  - Bagel
-  - Barratry
-  - Box
-  - Cluster
-  #- Core
-  - Fland
-  - Kettle
-  - Marathon
-  - Meta
-  - Omega
-  - Origin
-  - Saltern
-  - Packed
+  - TGMS_Erida
+  - TGMS_Desert
+  - TGMS_IceColony
