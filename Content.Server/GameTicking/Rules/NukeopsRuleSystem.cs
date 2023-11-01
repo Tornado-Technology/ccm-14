@@ -87,7 +87,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
     private const string NukeOpsUplinkTagPrototype = "NukeOpsUplink";
 
     [ValidatePrototypeId<AntagPrototype>]
-    public const string NukeopsId = "Quinn";
+    public const string NukeopsId = "Nukeops";
 
     public override void Initialize()
     {

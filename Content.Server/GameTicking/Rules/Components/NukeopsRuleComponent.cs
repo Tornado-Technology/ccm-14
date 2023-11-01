@@ -116,13 +116,13 @@ public sealed partial class NukeopsRuleComponent : Component
     public EntProtoId GhostSpawnPointProto = "SpawnPointGhostNukeOperative";
 
     [DataField]
-    public ProtoId<AntagPrototype> CommanderRoleProto = "Runi";
+    public ProtoId<AntagPrototype> CommanderRoleProto = "NukeopsCommander";
 
     [DataField]
-    public ProtoId<AntagPrototype> OperativeRoleProto = "Pretor";
+    public ProtoId<AntagPrototype> OperativeRoleProto = "Nukeops";
 
     [DataField]
-    public ProtoId<AntagPrototype> MedicRoleProto = "Kseno";
+    public ProtoId<AntagPrototype> MedicRoleProto = "NukeopsMedic";
 
     [DataField]
     public ProtoId<StartingGearPrototype> CommanderStartGearProto = "SyndicateCommanderGearFull";
