@@ -16,9 +16,6 @@
         damage:
           types:
             Caustic: 20.0 # Do you want to die?
-      - !type:Emote
-        emote: Moans
-        probability: 1.0
   reactiveEffects:
     Acidic:
       methods: [ Touch ]
@@ -29,6 +26,3 @@
         damage:
           types:
             Caustic: 0.5
-      - !type:Emote
-        emote: Moans # Hahahaha
-        probability: 1.0
