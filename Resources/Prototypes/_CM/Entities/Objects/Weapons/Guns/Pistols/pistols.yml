@@ -41,7 +41,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-- Type: Tag
+      
+- type: Tag
   id: BulletPistol45GAP
 
 - type: entity
@@ -87,5 +88,5 @@
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
       
-- Type: Tag
+- type: Tag
   id: BulletPistol4440
