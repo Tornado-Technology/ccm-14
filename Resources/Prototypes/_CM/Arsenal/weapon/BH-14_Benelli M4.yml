@@ -28,7 +28,6 @@
     availableModes:
     - SemiAuto
   - type: BallisticAmmoProvider
-    autoCycle: false
     whitelist:
       tags:
       - ShellShotgun
@@ -83,7 +82,6 @@
     - SemiAuto
     - FullAuto
   - type: BallisticAmmoProvider
-    autoCycle: true
     whitelist:
       tags:
       - ShellShotgun
@@ -109,7 +107,6 @@
     sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
   - type: BallisticAmmoProvider
     capacity: 6
-    autoCycle: true
   - type: ItemSlots
     slots:
       gun_box:

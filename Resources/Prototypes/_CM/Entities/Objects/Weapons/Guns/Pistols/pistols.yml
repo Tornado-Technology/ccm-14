@@ -41,6 +41,9 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+      
+- type: Tag
+  id: BulletPistol45GAP
 
 - type: entity
   name: Armat M5Y3
@@ -84,3 +87,6 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+      
+- type: Tag
+  id: BulletPistol4440

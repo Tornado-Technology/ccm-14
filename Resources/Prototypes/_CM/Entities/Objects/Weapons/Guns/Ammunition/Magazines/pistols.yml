@@ -30,7 +30,9 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
+- type: Tag
+  id: CartridgePistol45GAP
+  
 - type: entity
   id: MagazinePistol88M4
   name: "88M4 magazine (45GAP)"
@@ -77,7 +79,10 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
+  
+- type: Tag
+  id: CartridgePistol4440
+  
 - type: entity
   id: MagazinePistolAramatM5Y3
   name: "Aramat M5Y3 magazine (44.40)"

@@ -14,6 +14,8 @@
       types:
         Slash: 30
         Piercing: 10
+    soundHit:
+        path: /Audio/_CM/Items/rapier.ogg
   - type: Reflect
     enabled: true
     reflectProb: 0.6

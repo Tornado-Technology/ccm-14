@@ -55,7 +55,9 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-
+  
+- type: Tag
+  id: BulletRifle1024
 
 - type: entity
   name: M42 pulse rifle
@@ -172,3 +174,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  
+- type: Tag
+  id: BulletRifle125x60R

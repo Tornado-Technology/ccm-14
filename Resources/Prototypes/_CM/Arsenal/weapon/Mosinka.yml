@@ -27,7 +27,6 @@
     availableModes:
     - SemiAuto
   - type: BallisticAmmoProvider
-    autoCycle: false
     capacity: 5
     proto: CartridgeMosin
     whitelist:

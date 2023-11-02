@@ -30,7 +30,8 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
+  
+  
 - type: entity
   id: MagazineRifleXM43E
   name: "XM43E magazine (416 Barratti)"
