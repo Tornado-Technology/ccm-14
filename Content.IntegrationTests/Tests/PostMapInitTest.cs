@@ -43,32 +43,9 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
-            // Corvax-Start
-            "CorvaxAvrite",
-            "CorvaxDelta",
-			"CorvaxSpectrum",
-            "CorvaxGate",
-			"CorvaxGelta",
-            // Corvax-End
-            "Dev",
-            "TestTeg",
-            "Fland",
-            "Meta",
-            "Packed",
-            "Aspid",
-            "Cluster",
-            "Omega",
-            "Bagel",
-            "Origin",
-            "CentComm",
-            "Box",
-            "Europa",
-            "Barratry",
-            "Saltern",
-            "Core",
-            "Marathon",
-            "Kettle",
-            "MeteorArena"
+            "TGMS_Erida",
+            "TGMS_Desert",
+            "TGMS_IceColony",
         };
 
         /// <summary>
