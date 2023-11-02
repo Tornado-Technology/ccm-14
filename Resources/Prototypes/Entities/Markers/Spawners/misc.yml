@@ -6,6 +6,6 @@
   - type: Sprite
     layers:
       - state: green
-  - type: RandomPointSpawner
-    prototypes:
-      - NukeDisk
+#  - type: RandomPointSpawner
+#    prototypes:
+#      - NukeDisk

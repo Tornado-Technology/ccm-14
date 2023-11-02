@@ -124,10 +124,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         var direction = mapCoords.Position - xform.MapPosition.Position;
 
         _throwing.TryThrow(uid, direction, 7F, uid, 10F);
-        if (component.SoundFaceHuggerJump != null)
-        {
-            _audioSystem.PlayPvs(component.SoundFaceHuggerJump, uid, component.SoundFaceHuggerJump.Params);
-        }
     }
 
     private void OnGotEquipped(EntityUid uid, FaceHuggerComponent component, GotEquippedEvent args)

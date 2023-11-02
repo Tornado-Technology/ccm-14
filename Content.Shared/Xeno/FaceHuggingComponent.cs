@@ -10,18 +10,12 @@ namespace Content.Server.Alien;
 [Access(typeof(SharedFaceHuggingSystem))]
 public sealed partial class FaceHuggingComponent : Component
 {
-
     [DataField("chansePounce"), ViewVariables(VVAccess.ReadWrite)]
     public static int ChansePounce = 33;
 
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("soundFaceHuggerJump")]
-    public SoundSpecifier? SoundFaceHuggerJump = new SoundPathSpecifier("/Audio/Animals/facehugger_scream.ogg");
-
-
     [DataField("faceHuggerJumpAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string FaceHuggerJumpAction = "ActionFaceHuggerJump";
-
 
     //[DataField("actionFaceHuggerJump", required: true)]
     public sealed partial class FaceHuggerJumpActionEvent : WorldTargetActionEvent { }
