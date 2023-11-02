@@ -11,9 +11,9 @@
           mapNameTemplate: "Empty"
         - type: StationJobs
           overflowJobs:
-            - CharlieMarine
+            - MilitaryScientist
           availableJobs:
-            CharlieMarine: [ -1, -1 ]
+            MilitaryScientist: [ -1, -1 ]
 
 - type: gameMap
   id: Dev
@@ -45,6 +45,6 @@
           mapNameTemplate: "TEG"
         - type: StationJobs
           overflowJobs:
-            - CharlieMarine
+            - MilitaryScientist
           availableJobs:
-            CharlieMarine: [ -1, -1 ]
+            MilitaryScientist: [ -1, -1 ]

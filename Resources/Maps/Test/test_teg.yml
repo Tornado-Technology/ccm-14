@@ -2645,13 +2645,6 @@ entities:
       type: DeviceNetwork
     missingComponents:
     - UpgradeBattery
-- proto: SpawnPointCharlieMarine
-  entities:
-  - uid: 145
-    components:
-    - pos: 0.5,-0.5
-      parent: 2
-      type: Transform
 - proto: SpawnPointLatejoin
   entities:
   - uid: 144
