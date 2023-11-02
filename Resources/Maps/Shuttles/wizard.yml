@@ -4122,13 +4122,6 @@ entities:
     - pos: 6.5,-2.5
       parent: 768
       type: Transform
-- proto: SpawnPointCaptain
-  entities:
-  - uid: 767
-    components:
-    - pos: -0.5,-9.5
-      parent: 768
-      type: Transform
 - proto: SpawnPointLatejoin
   entities:
   - uid: 762

@@ -10,8 +10,6 @@
 По возможности, лучше использовать анализатор, так как в нём отображается больше инофрмации, чем при визуальном осмотре.
 <Box>
 <GuideEntityEmbed Entity="SignExamroom" Caption="осмотрите пациента"/>
-<GuideEntityEmbed Entity="MedicalPDA"/>
-<GuideEntityEmbed Entity="MedicalInternPDA" Caption="КПК интерна"/>
 <GuideEntityEmbed Entity="HandheldHealthAnalyzer"/>
 </Box>
 
