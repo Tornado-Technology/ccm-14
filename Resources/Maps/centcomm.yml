@@ -4729,13 +4729,6 @@ entities:
     - pos: 10.34866,-7.2899737
       parent: 1668
       type: Transform
-- proto: BoxPDA
-  entities:
-  - uid: 1457
-    components:
-    - pos: 1.5702643,-2.4016738
-      parent: 1668
-      type: Transform
 - proto: BoxSterileMask
   entities:
   - uid: 627

@@ -47,7 +47,7 @@ public sealed class StationJobsTest
       components:
         - type: StationJobs
           overflowJobs:
-          - Passenger
+          - CharlieMarine
           availableJobs:
             TMime: [0, -1]
             TAssistant: [-1, -1]
