@@ -56,6 +56,7 @@ public sealed partial class XenoSystem : EntitySystem
     private void OnStartup(EntityUid uid, XenoEvolutionsComponent component, ComponentStartup args)
     {
         _actionsSystem.AddAction(uid, component.Action);
+
     }
 
     private void OnEvolutionMenu(EntityUid uid, XenoEvolutionsComponent component, XenoEvolutionActionEvent args)

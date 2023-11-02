@@ -1,3 +1,4 @@
+using Content.Shared.Damage.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
@@ -9,10 +10,10 @@ public sealed partial class XenoEndureComponent : Component
     [DataField("action", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Action = "ActionXenoEndure";
 
-    [DataField("passiveModifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField("passiveModifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<DamageModifierSetPrototype>))]
     public string PassiveModifierSet = "XenoRavager";
 
-    [DataField("activeModifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField("activeModifierSet", customTypeSerializer: typeof(PrototypeIdSerializer<DamageModifierSetPrototype>))]
     public string ActiveModifierSet = "XenoRavagerCrest";
 
     [DataField("enabled")]

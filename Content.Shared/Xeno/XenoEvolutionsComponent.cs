@@ -7,14 +7,10 @@ namespace Content.Shared.Xeno;
 [RegisterComponent]
 public sealed partial class XenoEvolutionsComponent : Component
 {
+    public const float BaseEvolutionModifer = 1f;
+
     [DataField("action", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Action = "ActionXenoEvolution";
-
-    /// <summary>
-    ///     Added once per tick according to the formula Evolution += (frameTime * EvolutionModifer)
-    /// </summary>
-    [ViewVariables(VVAccess.ReadOnly)]
-    public const float BaseEvolutionModifer = 1f;
 
     [DataField("evolutions"), ViewVariables(VVAccess.ReadWrite)]
     public HashSet<XenoEvolution> Evolutions = new();
@@ -33,7 +29,7 @@ public sealed partial class XenoEvolutionsComponent : Component
 public sealed partial class XenoEvolution
 {
     [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), ViewVariables(VVAccess.ReadWrite)]
-    public string Prototype = string.Empty;
+    public string Prototype = "MobFaceHuggerXeno";
 
     [DataField("evolution"), ViewVariables(VVAccess.ReadWrite)]
     public float Evolution = 0f;
