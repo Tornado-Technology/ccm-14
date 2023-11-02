@@ -2094,13 +2094,6 @@ entities:
           ents:
           - 246
       type: ContainerContainer
-- proto: SyndicateIDCard
-  entities:
-  - uid: 324
-    components:
-    - pos: 1.57673,-2.3849022
-      parent: 325
-      type: Transform
 - proto: SyndicateShuttleConsoleCircuitboard
   entities:
   - uid: 245
