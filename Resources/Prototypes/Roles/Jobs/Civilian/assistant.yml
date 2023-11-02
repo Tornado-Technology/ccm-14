@@ -15,7 +15,6 @@
     jumpsuit: ClothingUniformJumpsuitColorGrey
     back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
-    id: PassengerPDA
     ears: ClothingHeadsetGrey
   innerClothingSkirt: ClothingUniformJumpskirtColorGrey
   satchel: ClothingBackpackSatchelFilled

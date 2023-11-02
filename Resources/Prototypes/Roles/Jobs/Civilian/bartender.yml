@@ -26,7 +26,6 @@
     outerClothing: ClothingOuterVest
     back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
-    id: BartenderPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtBartender
   satchel: ClothingBackpackSatchelFilled

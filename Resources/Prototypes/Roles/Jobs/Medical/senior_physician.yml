@@ -28,7 +28,6 @@
     back: ClothingBackpackMedicalFilled
     shoes: ClothingShoesColorBlack
     outerClothing: ClothingOuterCoatLabSeniorPhysician
-    id: SeniorPhysicianPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
   innerClothingSkirt: ClothingUniformJumpskirtSeniorPhysician

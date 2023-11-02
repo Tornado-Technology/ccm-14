@@ -21,7 +21,6 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesGaloshes
     head: ClothingHeadHatPurplesoft
-    id: JanitorPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
   innerClothingSkirt: ClothingUniformJumpskirtJanitor
@@ -33,7 +32,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtJanimaid
     back: ClothingBackpackFilled
-    id: JanitorPDA
     head: ClothingHeadHatCatEars
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled

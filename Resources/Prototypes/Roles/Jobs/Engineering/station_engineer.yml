@@ -25,7 +25,6 @@
     back: ClothingBackpackEngineeringFilled
     shoes: ClothingShoesBootsWork
     outerClothing: ClothingOuterVestHazard
-    id: EngineerPDA
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering

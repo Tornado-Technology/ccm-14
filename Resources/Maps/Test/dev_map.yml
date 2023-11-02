@@ -2322,13 +2322,6 @@ entities:
     - pos: -3.2804112,8.786524
       parent: 179
       type: Transform
-- proto: CaptainIDCard
-  entities:
-  - uid: 726
-    components:
-    - pos: 1.0820513,8.752605
-      parent: 179
-      type: Transform
 - proto: CaptainSabre
   entities:
   - uid: 381
@@ -2871,28 +2864,6 @@ entities:
   - uid: 424
     components:
     - pos: -0.6474335,-10.27245
-      parent: 179
-      type: Transform
-- proto: ClownPDA
-  entities:
-  - uid: 91
-    components:
-    - pos: -15.5,2.5
-      parent: 179
-      type: Transform
-  - uid: 762
-    components:
-    - pos: -14.5,1.5
-      parent: 179
-      type: Transform
-  - uid: 864
-    components:
-    - pos: -14.5,2.5
-      parent: 179
-      type: Transform
-  - uid: 912
-    components:
-    - pos: -15.5,1.5
       parent: 179
       type: Transform
 - proto: ComputerAnalysisConsole

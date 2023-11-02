@@ -34,7 +34,6 @@
     back: ClothingBackpackResearchDirectorFilled
     shoes: ClothingShoesColorBrown
     outerClothing: ClothingOuterCoatRnd
-    id: RnDPDA
     ears: ClothingHeadsetRD
   innerClothingSkirt: ClothingUniformJumpskirtResearchDirector
   satchel: ClothingBackpackSatchelResearchDirectorFilled

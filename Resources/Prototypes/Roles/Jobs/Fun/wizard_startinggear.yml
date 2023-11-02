@@ -7,7 +7,6 @@
     head: ClothingHeadHatWizard
     outerClothing: ClothingOuterWizard
     shoes: ClothingShoesWizard
-    id: PassengerPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtColorDarkBlue
   satchel: ClothingBackpackSatchelFilled
@@ -21,7 +20,6 @@
     head: ClothingHeadHatRedwizard
     outerClothing: ClothingOuterWizardRed
     shoes: ClothingShoesWizard
-    id: PassengerPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtColorRed
   satchel: ClothingBackpackSatchelFilled
@@ -35,7 +33,6 @@
     head: ClothingHeadHatVioletwizard
     outerClothing: ClothingOuterWizardViolet
     shoes: ClothingShoesWizard
-    id: PassengerPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtColorPurple
   satchel: ClothingBackpackSatchelFilled
@@ -48,7 +45,6 @@
     back: ClothingBackpackFilled
     outerClothing: ClothingOuterHardsuitWizard
     shoes: ClothingShoesWizard
-    id: PassengerPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtColorPurple
   satchel: ClothingBackpackSatchelFilled

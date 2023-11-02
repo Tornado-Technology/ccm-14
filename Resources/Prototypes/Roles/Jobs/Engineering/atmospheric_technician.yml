@@ -23,7 +23,6 @@
     back: ClothingBackpackAtmosphericsFilled
     shoes: ClothingShoesColorWhite
     eyes: ClothingEyesGlassesMeson
-    id: AtmosPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
   innerClothingSkirt: ClothingUniformJumpskirtAtmos

@@ -29,7 +29,6 @@
     back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
     outerClothing: ClothingOuterArmorBasic
-    id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58Nonlethal
   innerClothingSkirt: ClothingUniformJumpskirtSecGrey # Corvax-Resprite

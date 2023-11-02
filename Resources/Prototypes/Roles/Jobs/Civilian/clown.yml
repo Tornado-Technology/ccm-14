@@ -38,7 +38,6 @@
     mask: ClothingMaskClown
     pocket1: BikeHorn
     pocket2: ClownRecorder
-    id: ClownPDA
     ears: ClothingHeadsetService
   satchel: ClothingBackpackSatchelClownFilled
   duffelbag: ClothingBackpackDuffelClownFilled

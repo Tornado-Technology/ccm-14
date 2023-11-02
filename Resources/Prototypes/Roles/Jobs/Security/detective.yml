@@ -30,7 +30,6 @@
     eyes: ClothingEyesGlassesSunglasses
     head: ClothingHeadHatFedoraBrown
     outerClothing: ClothingOuterVestDetective
-    id: DetectivePDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolsterFilled
   innerClothingSkirt: ClothingUniformJumpskirtDetective

@@ -20,7 +20,6 @@
     jumpsuit: ClothingUniformJumpsuitChaplain
     back: ClothingBackpackChaplainFilled
     shoes: ClothingShoesColorBlack
-    id: ChaplainPDA
     ears: ClothingHeadsetService
   innerClothingSkirt: ClothingUniformJumpskirtChaplain
   satchel: ClothingBackpackSatchelChaplainFilled

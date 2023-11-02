@@ -11,7 +11,6 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
     gloves: ClothingHandsGlovesColorBlack
-    id: PassengerPDA
     ears: ClothingHeadsetGrey
   innerClothingSkirt: ClothingUniformJumpsuitRecruitNT #Wearing a jumpskirt into combat is a little unfitting and silly, so there is no jumpskirt counterpart for any of the Ship VS. Ship suits.
   satchel: ClothingBackpackSatchelFilled
@@ -26,7 +25,6 @@
     back: ClothingBackpackEngineeringFilled
     shoes: ClothingShoesBootsWork
     gloves: ClothingHandsGlovesColorYellow #Should maybe still be in lockers - this is just so people know that they're there and a part of the outfit.
-    id: EngineerPDA
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetAltCommand #Should use the "alt" engineering headset sprite.
@@ -41,7 +39,6 @@
     jumpsuit: ClothingUniformJumpsuitParamedicNT
     back: ClothingBackpackFilled #The medical backpack sprite looks way worse so this will do for now.
     shoes: ClothingShoesColorBlue
-    id: MedicalPDA
     ears: ClothingHeadsetMedical
     eyes: ClothingEyesHudMedical
     gloves: ClothingHandsGlovesLatex
@@ -60,7 +57,6 @@
     back: ClothingBackpackFilled #Again, the regular sprite here looks way worse than the regular backpack.
     shoes: ClothingShoesBootsJack
     gloves: ClothingHandsGlovesCombat
-    id: CEPDA
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetAltCommand #Same as repairman - make this use the alt headset sprite.
     belt: ClothingBeltUtilityEngineering

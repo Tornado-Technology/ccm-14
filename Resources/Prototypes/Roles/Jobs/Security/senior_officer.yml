@@ -39,7 +39,6 @@
     eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHatBeret
     outerClothing: ClothingOuterVestArmorSec # Corvax-Resprite
-    id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal

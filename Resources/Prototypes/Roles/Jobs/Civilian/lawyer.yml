@@ -21,7 +21,6 @@
     jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsLaceup
-    id: LawyerPDA
     ears: ClothingHeadsetSecurity
     # TODO add copy of space law
   inhand:

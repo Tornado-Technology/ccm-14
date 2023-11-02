@@ -11,7 +11,6 @@
     outerClothing: ClothingOuterCoatGentle
     gloves: ClothingHandsGlovesFingerless
     shoes: ClothingShoesBootsJack
-    id: PassengerPDA
     ears: ClothingHeadsetGrey
     pocket1: VehicleSkeletonMotorcycle
     pocket2: VehicleKeySkeletonMotorcycle
@@ -54,7 +53,6 @@
     outerClothing: ClothingOuterHardsuitDeathsquad
     suitstorage: AirTankFilled
     shoes: ClothingShoesBootsMagAdv
-    id: DeathsquadPDA
     pocket1: EnergySword
     pocket2: EnergyShield
     belt: ClothingBeltMilitaryWebbingMedFilled
@@ -130,7 +128,6 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitSyndieCommander
     shoes: ClothingShoesBootsCombatFilled
-    id: SyndiPDA
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbing
@@ -152,7 +149,6 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitMedic
     shoes: ClothingShoesBootsMagSyndie
-    id: SyndiPDA
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbingMedFilled
@@ -172,7 +168,6 @@
     gloves: ClothingHandsGlovesCombat
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
-    id: SyndiPDA #a subtype of this for footsoldiers would probably be good to have
   innerClothingSkirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
   duffelbag: ClothingBackpackDuffelSyndicateOperative
@@ -190,7 +185,6 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
     pocket1: CombatKnife
-    id: SyndiPDA
   innerClothingSkirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
   duffelbag: ClothingBackpackDuffelSyndicateOperative
@@ -209,7 +203,6 @@
     shoes: ClothingShoesBootsCombatFilled
     pocket1: EnergySword
     pocket2: EnergyShield
-    id: SyndiPDA
   innerClothingSkirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
   duffelbag: ClothingBackpackDuffelSyndicateOperative
@@ -227,7 +220,6 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
     pocket1: WeaponPistolViper
-    id: SyndiPDA
   innerClothingSkirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
   duffelbag: ClothingBackpackDuffelSyndicateOperative
@@ -261,7 +253,6 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
     shoes: ClothingShoesBootsCombatFilled
-    id: CBURNPDA
     pocket1: RadioHandheld
     pocket2: WeaponLaserGun
     suitstorage: YellowOxygenTankFilled
@@ -317,7 +308,6 @@
     gloves: ClothingHandsGlovesNitrile
     eyes: ClothingEyesHudMedical
     head: ClothingHeadHatBeretBrigmedic
-    id: BrigmedicPDA
     ears: ClothingHeadsetBrigmedic
     mask: ClothingMaskBreathMedicalSecurity
     belt: ClothingBeltMedicalFilled

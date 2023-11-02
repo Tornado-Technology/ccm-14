@@ -108,15 +108,6 @@
     - id: BoxFolderYellow
 
 - type: entity
-  id: CrateServicePersonnel
-  parent: CrateCommandSecure
-  components:
-  - type: StorageFill
-    contents:
-    - id: BoxPDA
-    - id: BoxID
-
-- type: entity
   id: CrateServiceBooks
   parent: CrateGenericSteel
   components:

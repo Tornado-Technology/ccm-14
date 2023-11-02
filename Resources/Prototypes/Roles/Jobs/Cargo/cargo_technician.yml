@@ -20,7 +20,6 @@
     jumpsuit: ClothingUniformJumpsuitCargo
     back: ClothingBackpackCargoFilled
     shoes: ClothingShoesColorBlack
-    id: CargoPDA
     ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
   innerClothingSkirt: ClothingUniformJumpskirtCargo

@@ -43,7 +43,6 @@
     back: ClothingBackpackCMOFilled
     shoes: ClothingShoesColorBrown
     outerClothing: ClothingOuterCoatLabCmo
-    id: CMOPDA
     ears: ClothingHeadsetCMO
     belt: ClothingBeltMedicalFilled
   innerClothingSkirt: ClothingUniformJumpskirtCMO

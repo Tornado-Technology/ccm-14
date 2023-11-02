@@ -22,7 +22,6 @@
     jumpsuit: ClothingUniformJumpsuitColorWhite
     back: ClothingBackpackScienceFilled
     shoes: ClothingShoesColorWhite
-    id: ResearchAssistantPDA
     ears: ClothingHeadsetScience
   innerClothingSkirt: ClothingUniformJumpskirtColorWhite
   satchel: ClothingBackpackSatchelScienceFilled

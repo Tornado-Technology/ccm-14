@@ -32,8 +32,6 @@
     contents:
       - id: ClothingOuterArmorCaptainCarapace
       - id: NukeDisk
-      - id: PinpointerNuclear
-      - id: CaptainIDCard
       - id: ClothingHeadHatCaptain
       - id: ClothingNeckCloakCap
       - id: ClothingHandsGlovesCaptain
@@ -68,7 +66,6 @@
       - id: ClothingOuterArmorCaptainCarapace
       - id: NukeDisk
       - id: PinpointerNuclear
-      - id: CaptainIDCard
       - id: ClothingHeadHatCaptain
       - id: ClothingNeckCloakCap
       - id: ClothingHandsGlovesCaptain
@@ -106,8 +103,6 @@
       - id: ClothingHeadHatHopcap
       - id: HoPIDCard
       - id: ClothingHeadsetCommand
-      - id: BoxPDA
-      - id: BoxID
       - id: BoxHeadset
       - id: IDComputerCircuitboard
       - id: WeaponDisabler

@@ -41,7 +41,6 @@
     jumpsuit: ClothingUniformJumpsuitQM
     back: ClothingBackpackQuartermasterFilled
     shoes: ClothingShoesColorBrown
-    id: QuartermasterPDA
     ears: ClothingHeadsetQM
     belt: BoxFolderClipboard
     pocket1: AppraisalTool

@@ -22,7 +22,6 @@
     back: ClothingBackpackScienceFilled
     shoes: ClothingShoesColorBlack
     outerClothing: ClothingOuterCoatLabSeniorResearcher
-    id: SeniorResearcherPDA
     ears: ClothingHeadsetScience
   innerClothingSkirt: ClothingUniformJumpskirtSeniorResearcher
   satchel: ClothingBackpackSatchelScienceFilled
