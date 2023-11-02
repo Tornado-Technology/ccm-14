@@ -101,7 +101,6 @@
     contents:
       - id: ClothingNeckCloakHop
       - id: ClothingHeadHatHopcap
-      - id: HoPIDCard
       - id: ClothingHeadsetCommand
       - id: BoxHeadset
       - id: IDComputerCircuitboard
