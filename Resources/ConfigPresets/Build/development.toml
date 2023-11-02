@@ -19,7 +19,8 @@ expedition_cooldown = 30.0
 grid_fill = false
 auto_call_time = 0
 emergency = false
-arrivals = false
+arrivals = true
+arrivals_map = "/Maps/TGMS/Valk.yml"
 
 [admin]
 see_own_notes = true
