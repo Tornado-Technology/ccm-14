@@ -875,7 +875,7 @@ entities:
     - pos: -3.5,-2.5
       parent: 2
       type: Transform
-- proto: SpawnPointAssistant
+- proto: SpawnPointCharlieMarine
   entities:
   - uid: 99
     components:
