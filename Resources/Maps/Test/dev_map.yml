@@ -5661,23 +5661,6 @@ entities:
     - pos: -3.5,10.5
       parent: 179
       type: Transform
-- proto: TGMSBenelliM4
-  entities:
-  - uid: 1199
-    components:
-    - pos: -0.370996,-0.3750331
-      parent: 179
-      type: Transform
-    - containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_box: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-      type: ContainerContainer
 - proto: TGMSBH14
   entities:
   - uid: 1198

@@ -17803,25 +17803,6 @@ entities:
     - pos: 0.5,-45.5
       parent: 1668
       type: Transform
-- proto: CentcomIDCard
-  entities:
-  - uid: 3721
-    components:
-    - pos: -16.521366,8.567018
-      parent: 1668
-      type: Transform
-- proto: CentcomPDA
-  entities:
-  - uid: 2198
-    components:
-    - pos: -1.5134044,0.62284255
-      parent: 1668
-      type: Transform
-  - uid: 6617
-    components:
-    - pos: -20.428675,10.647655
-      parent: 1668
-      type: Transform
 - proto: Chair
   entities:
   - uid: 517

@@ -94,25 +94,27 @@
   - type: StaticPrice
     price: 500
 
-- type: entity
-  name: Benelli M4
-  parent: BaseBeneliM4
-  id: TGMSBenelliM4
-  suffix: "Marines Gear"
-  description: Smoothbore semi-automatic magazine rifle, developed in Italy by Benelli Armi S.p.A. The main weapon of engineers. Uses 6/12g caliber cartridges.
-  components:
-  - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
-  - type: Clothing
-    sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
-  - type: BallisticAmmoProvider
-    capacity: 6
-  - type: ItemSlots
-    slots:
-      gun_box:
-        name: Box
-        startingItem: Box12x70mm
-        priority: 1
-        whitelist:
-          tags:
-            - MagazineCaselessRifle
+# TODO: Fix
+#- type: entity
+#  name: Benelli M4
+#  parent: BaseBeneliM4
+#  id: TGMSBenelliM4
+#  suffix: "Marines Gear"
+#  description: Smoothbore semi-automatic magazine rifle, developed in Italy by Benelli Armi S.p.A. The main weapon of engineers. Uses 6/12g caliber cartridges.
+#  components:
+#  - type: Sprite
+#    sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
+#  - type: Clothing
+#    sprite: /Textures/_CM/TGMSArsenal/Textures/benellim4.rsi
+#  - type: BallisticAmmoProvider
+#    capacity: 6
+#  - type: ItemSlots
+#    slots:
+#      gun_box:
+#        name: Box
+#        startingItem: Box12x70mm
+#        priority: 1
+#        whitelist:
+#          tags:
+#            - MagazineCaselessRifle
+#
