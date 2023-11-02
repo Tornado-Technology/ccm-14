@@ -134,9 +134,6 @@
     spawnRiftAction: ActionSpawnRift
   - type: GenericAntag
     rule: Dragon
-  - type: GuideHelp
-    guides:
-    - MinorAntagonists
 
 - type: entity
   parent: BaseMobDragon
