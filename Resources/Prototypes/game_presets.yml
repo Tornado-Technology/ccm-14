@@ -34,7 +34,7 @@
     - DeathMatch31
 
 - type: gamePreset
-  id: Xeno
+  id: XenoTGCM
   alias:
     - xeno
     - xenos
