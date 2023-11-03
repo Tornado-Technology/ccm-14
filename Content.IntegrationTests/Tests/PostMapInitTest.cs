@@ -47,7 +47,6 @@ namespace Content.IntegrationTests.Tests
             "TGMS_Desert",
             "TGMS_IceColony",
             "TGMS_Valkyrie",
-            "TestTeg",
             "Dev",
             "MeteorArena",
         };

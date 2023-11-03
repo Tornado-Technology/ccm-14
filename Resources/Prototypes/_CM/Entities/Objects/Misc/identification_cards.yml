@@ -3,7 +3,6 @@
   id: IDCardMarine
   name: dog tag
   description: A marine dog tag.
-  suffix: ID_Marine
   noSpawn: true
   components:
   - type: Sprite
@@ -24,176 +23,208 @@
 - type: entity
   parent: IDCardMarine
   id: ACommanderIDCard
-  name: Alpha Commander ID Card
+  name: Alpha Commander dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+    - type: IdCard
+  - jobIcon: JobIconAlfaCommander
   - type: PresetIdCard
     job: AlfaCommander
     
 - type: entity
   parent: IDCardMarine
   id: BCommanderIDCard
-  name: Bravo Commander ID Card
+  name: Bravo Commander dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconBravoCommander
   - type: PresetIdCard
     job: BravoCommander
     
 - type: entity
   parent: IDCardMarine
   id: CCommanderIDCard
-  name: Charlie Commander ID Card
+  name: Charlie Commander dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconCharlieCommander
   - type: PresetIdCard
     job: CharlieCommander
     
 - type: entity
   parent: IDCardMarine
   id: DCommanderIDCard
-  name: Delta Commander ID Card
+  name: Delta Commander dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconDeltaCommander
   - type: PresetIdCard
     job: DeltaCommander
 #Specialists_Marine--------------------------------
 - type: entity
   parent: IDCardMarine
   id: ASpecialistsIDCard
-  name: Alpha Specialist ID Card
+  name: Alpha Specialist dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconAlfaSpecialist
   - type: PresetIdCard
     job: AlfaSpecialist
     
 - type: entity
   parent: IDCardMarine
   id: BSpecialistsIDCard
-  name: Bravo Specialist ID Card
+  name: Bravo Specialist dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconBravoSpecialist
   - type: PresetIdCard
     job: BravoSpecialist
     
 - type: entity
   parent: IDCardMarine
   id: CSpecialistsIDCard
-  name: Charlie Specialist ID Card
+  name: Charlie Specialist dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconCharlieSpecialist
   - type: PresetIdCard
     job: CharlieSpecialist
     
 - type: entity
   parent: IDCardMarine
   id: DSpecialistsIDCard
-  name: Delta Specialist ID Card
+  name: Delta Specialist dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconDeltaSpecialist
   - type: PresetIdCard
     job: DeltaSpecialist
 #Medic_Marine--------------------------------
 - type: entity
   parent: IDCardMarine
   id: AMedicIDCard
-  name: Alpha Medic ID Card
+  name: Alpha Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconAlfaMedic
   - type: PresetIdCard
     job: AlfaMedic
     
 - type: entity
   parent: IDCardMarine
   id: BMedicIDCard
-  name: Bravo Medic ID Card
+  name: Bravo Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconBravoMedic
   - type: PresetIdCard
     job: BravoMedic
     
 - type: entity
   parent: IDCardMarine
   id: CMedicIDCard
-  name: Charlie Medic ID Card
+  name: Charlie Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconCharlieMedic
   - type: PresetIdCard
     job: CharlieMedic
     
 - type: entity
   parent: IDCardMarine
   id: DMedicIDCard
-  name: Delta Medic ID Card
+  name: Delta Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconDeltaMedic
   - type: PresetIdCard
     job: DeltaMedic
 #Engineers_Marine--------------------------------
 - type: entity
   parent: IDCardMarine
   id: AEngineerIDCard
-  name: Alpha Engineer ID Card
+  name: Alpha Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconAlfaEngineer
   - type: PresetIdCard
     job: AlfaEngineer
     
 - type: entity
   parent: IDCardMarine
   id: BEngineerIDCard
-  name: Bravo Engineer ID Card
+  name: Bravo Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconBravoEngineer
   - type: PresetIdCard
     job: BravoEngineer
     
 - type: entity
   parent: IDCardMarine
   id: CEngineerIDCard
-  name: Charlie Engineer ID Card
+  name: Charlie Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconCharlieEngineer
   - type: PresetIdCard
     job: CharlieEngineer
     
 - type: entity
   parent: IDCardMarine
   id: DEngineerIDCard
-  name: Delta Engineer ID Card
+  name: Delta Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconDeltaEngineer
   - type: PresetIdCard
     job: DeltaEngineer
 
@@ -201,7 +232,7 @@
 - type: entity
   parent: IDCardMarine
   id: ARiflemanIDCard
-  name: Alpha Rifleman ID Card
+  name: Alpha Rifleman dog tag
   components:
   - type: Sprite
     layers:
@@ -214,7 +245,7 @@
 - type: entity
   parent: IDCardMarine
   id: BRiflemanIDCard
-  name: Bravo Rifleman ID Card
+  name: Bravo Rifleman dog tag
   components:
   - type: Sprite
     layers:
@@ -227,7 +258,7 @@
 - type: entity
   parent: IDCardMarine
   id: CRiflemanIDCard
-  name: Charlie Rifleman ID Card
+  name: Charlie Rifleman dog tag
   components:
   - type: Sprite
     layers:
@@ -240,7 +271,7 @@
 - type: entity
   parent: IDCardMarine
   id: DRiflemanIDCard
-  name: Delta Rifleman ID Card
+  name: Delta Rifleman dog tag
   components:
   - type: Sprite
     layers:
@@ -254,7 +285,7 @@
 - type: entity
   parent: IDCardMarine
   id: PolicemanIDCard
-  name: Military Policeman ID Card
+  name: Military Policeman dog tag
   components:
   - type: Sprite
     layers:
@@ -267,7 +298,7 @@
 - type: entity
   parent: IDCardMarine
   id: PoliceOfficerIDCard
-  name: Military Police Officer ID Card
+  name: Military Police Officer dog tag
   components:
   - type: Sprite
     layers:
@@ -281,84 +312,98 @@
 - type: entity
   parent: IDCardMarine
   id: SupplyOfficerIDCard
-  name: Supply Officer ID Card
+  name: Supply Officer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconSupplyOfficer
   - type: PresetIdCard
     job: SupplyOfficer
     
 - type: entity
   parent: IDCardMarine
   id: RiggerIDCard
-  name: Rigger ID Card
+  name: Rigger dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconRigger
   - type: PresetIdCard
     job: Rigger
 #MilitaryScientist--------------------------------
 - type: entity
   parent: IDCardMarine
   id: MilitaryScientistIDCard
-  name: Military Scientist ID Card
+  name: Military Scientist dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconMilitaryScientist
   - type: PresetIdCard
     job: MilitaryScientist
 #MedicalUnit--------------------------------
 - type: entity
   parent: IDCardMarine
   id: MilitaryMainMedicIDCard
-  name: Military Main Medic ID Card
+  name: Military Main Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconMilitaryMainMedic
   - type: PresetIdCard
     job: MilitaryMainMedic
     
 - type: entity
   parent: IDCardMarine
   id: MilitaryMedicIDCard
-  name: Military Medic ID Card
+  name: Military Medic dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconMilitaryMedic
   - type: PresetIdCard
     job: MilitaryMedic
 #ConstructionBattalion--------------------------------
 - type: entity
   parent: IDCardMarine
   id: ChiefShipsEngineerIDCard
-  name: Chief Ships Engineer ID Card
+  name: Chief Ships Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconChiefShipsEngineer
   - type: PresetIdCard
     job: ChiefShipsEngineer
     
 - type: entity
   parent: IDCardMarine
   id: ShipsEngineerIDCard
-  name: Ships Engineer ID Card
+  name: Ships Engineer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconShipsEngineer
   - type: PresetIdCard
     job: ShipsEngineer
 #Command--------------------------------
 - type: entity
   parent: IDCardMarine
   id: HeadOperationsIDCard
-  name: Head Operations ID Card
+  name: Head Operations dog tag
   components:
   - type: Sprite
     layers:
@@ -371,43 +416,51 @@
 - type: entity
   parent: IDCardMarine
   id: FieldCommanderIDCard
-  name: Field Commander ID Card
+  name: Field Commander dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+    - type: IdCard
+  - jobIcon: JobIconFieldCommander
   - type: PresetIdCard
     job: FieldCommander
     
 - type: entity
   parent: IDCardMarine
   id: StaffOfficerIDCard
-  name: Staff Officer ID Card
+  name: Staff Officer dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+    - type: IdCard
+  - jobIcon: JobIconStaffOficer
   - type: PresetIdCard
     job: StaffOfficer
 #Pilots--------------------------------
 - type: entity
   parent: IDCardMarine
   id: PilotNormandyIDCard
-  name: Pilot Normandy ID Card
+  name: Pilot Normandy dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconPilotOfficer
   - type: PresetIdCard
     job: PilotNormandy
     
 - type: entity
   parent: IDCardMarine
   id: PilotRaptorIDCard
-  name: Pilot Raptor ID Card
+  name: Pilot Raptor dog tag
   components:
   - type: Sprite
     layers:
     - state: default
+  - type: IdCard
+  - jobIcon: JobIconPilotRaptor
   - type: PresetIdCard
     job: PilotRaptor
