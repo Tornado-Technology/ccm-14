@@ -28,8 +28,8 @@
   - type: Sprite
     layers:
     - state: default
-    - type: IdCard
-  - jobIcon: JobIconAlfaCommander
+  - type: IdCard
+    jobIcon: JobIconAlfaCommander
   - type: PresetIdCard
     job: AlfaCommander
     
@@ -42,7 +42,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconBravoCommander
+    jobIcon: JobIconBravoCommander
   - type: PresetIdCard
     job: BravoCommander
     
@@ -55,7 +55,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconCharlieCommander
+    jobIcon: JobIconCharlieCommander
   - type: PresetIdCard
     job: CharlieCommander
     
@@ -68,7 +68,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconDeltaCommander
+    jobIcon: JobIconDeltaCommander
   - type: PresetIdCard
     job: DeltaCommander
 #Specialists_Marine--------------------------------
@@ -81,7 +81,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconAlfaSpecialist
+    jobIcon: JobIconAlfaSpecialist
   - type: PresetIdCard
     job: AlfaSpecialist
     
@@ -94,7 +94,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconBravoSpecialist
+    jobIcon: JobIconBravoSpecialist
   - type: PresetIdCard
     job: BravoSpecialist
     
@@ -107,7 +107,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconCharlieSpecialist
+    jobIcon: JobIconCharlieSpecialist
   - type: PresetIdCard
     job: CharlieSpecialist
     
@@ -120,7 +120,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconDeltaSpecialist
+    jobIcon: JobIconDeltaSpecialist
   - type: PresetIdCard
     job: DeltaSpecialist
 #Medic_Marine--------------------------------
@@ -133,7 +133,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconAlfaMedic
+    jobIcon: JobIconAlfaMedic
   - type: PresetIdCard
     job: AlfaMedic
     
@@ -146,7 +146,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconBravoMedic
+    jobIcon: JobIconBravoMedic
   - type: PresetIdCard
     job: BravoMedic
     
@@ -159,7 +159,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconCharlieMedic
+    jobIcon: JobIconCharlieMedic
   - type: PresetIdCard
     job: CharlieMedic
     
@@ -172,7 +172,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconDeltaMedic
+    jobIcon: JobIconDeltaMedic
   - type: PresetIdCard
     job: DeltaMedic
 #Engineers_Marine--------------------------------
@@ -185,7 +185,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconAlfaEngineer
+    jobIcon: JobIconAlfaEngineer
   - type: PresetIdCard
     job: AlfaEngineer
     
@@ -198,7 +198,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconBravoEngineer
+    jobIcon: JobIconBravoEngineer
   - type: PresetIdCard
     job: BravoEngineer
     
@@ -211,7 +211,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconCharlieEngineer
+    jobIcon: JobIconCharlieEngineer
   - type: PresetIdCard
     job: CharlieEngineer
     
@@ -224,7 +224,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconDeltaEngineer
+    jobIcon: JobIconDeltaEngineer
   - type: PresetIdCard
     job: DeltaEngineer
 
@@ -318,7 +318,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconSupplyOfficer
+    jobIcon: JobIconSupplyOfficer
   - type: PresetIdCard
     job: SupplyOfficer
     
@@ -331,7 +331,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconRigger
+    jobIcon: JobIconRigger
   - type: PresetIdCard
     job: Rigger
 #MilitaryScientist--------------------------------
@@ -344,7 +344,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconMilitaryScientist
+    jobIcon: JobIconMilitaryScientist
   - type: PresetIdCard
     job: MilitaryScientist
 #MedicalUnit--------------------------------
@@ -357,7 +357,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconMilitaryMainMedic
+    jobIcon: JobIconMilitaryMainMedic
   - type: PresetIdCard
     job: MilitaryMainMedic
     
@@ -370,7 +370,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconMilitaryMedic
+    jobIcon: JobIconMilitaryMedic
   - type: PresetIdCard
     job: MilitaryMedic
 #ConstructionBattalion--------------------------------
@@ -383,7 +383,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconChiefShipsEngineer
+    jobIcon: JobIconChiefShipsEngineer
   - type: PresetIdCard
     job: ChiefShipsEngineer
     
@@ -396,7 +396,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconShipsEngineer
+    jobIcon: JobIconShipsEngineer
   - type: PresetIdCard
     job: ShipsEngineer
 #Command--------------------------------
@@ -422,7 +422,7 @@
     layers:
     - state: default
     - type: IdCard
-  - jobIcon: JobIconFieldCommander
+    jobIcon: JobIconFieldCommander
   - type: PresetIdCard
     job: FieldCommander
     
@@ -435,7 +435,7 @@
     layers:
     - state: default
     - type: IdCard
-  - jobIcon: JobIconStaffOficer
+    jobIcon: JobIconStaffOficer
   - type: PresetIdCard
     job: StaffOfficer
 #Pilots--------------------------------
@@ -448,7 +448,7 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconPilotOfficer
+    jobIcon: JobIconPilotOfficer
   - type: PresetIdCard
     job: PilotNormandy
     
@@ -461,6 +461,6 @@
     layers:
     - state: default
   - type: IdCard
-  - jobIcon: JobIconPilotRaptor
+    jobIcon: JobIconPilotRaptor
   - type: PresetIdCard
     job: PilotRaptor
