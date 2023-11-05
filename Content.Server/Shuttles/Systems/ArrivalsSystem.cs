@@ -60,7 +60,6 @@ public sealed class ArrivalsSystem : EntitySystem
         SubscribeLocalEvent<ArrivalsShuttleComponent, FTLTagEvent>(OnShuttleTag);
 
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundStarting);
-        SubscribeLocalEvent<ArrivalsShuttleComponent, FTLStartedEvent>(OnArrivalsFTL);
 
         // Don't invoke immediately as it will get set in the natural course of things.
         Enabled = _cfgManager.GetCVar(CCVars.ArrivalsShuttles);
@@ -154,81 +153,9 @@ public sealed class ArrivalsSystem : EntitySystem
         _cfgManager.UnsubValueChanged(CCVars.ArrivalsShuttles, SetArrivals);
     }
 
-    private void OnArrivalsFTL(EntityUid shuttleUid, ArrivalsShuttleComponent component, ref FTLStartedEvent args)
-    {
-        if (!TryGetArrivals(out EntityUid arrivals))
-            return;
-
-        var arrivalsMapUid = Transform(arrivals).MapUid;
-        // Don't do anything here when leaving arrivals.
-        if (args.FromMapUid == arrivalsMapUid)
-            return;
-
-        // Any mob then yeet them off the shuttle.
-        if (!_cfgManager.GetCVar(CCVars.ArrivalsReturns) && args.FromMapUid != null)
-        {
-            var pendingEntQuery = GetEntityQuery<PendingClockInComponent>();
-            var arrivalsBlacklistQuery = GetEntityQuery<ArrivalsBlacklistComponent>();
-            var mobQuery = GetEntityQuery<MobStateComponent>();
-            var xformQuery = GetEntityQuery<TransformComponent>();
-            DumpChildren(shuttleUid, ref args, pendingEntQuery, arrivalsBlacklistQuery, mobQuery, xformQuery);
-        }
-
-        var pendingQuery = AllEntityQuery<PendingClockInComponent, TransformComponent>();
-
-        // We're heading from the station back to arrivals (if leaving arrivals, would have returned above).
-        // Process everyone who holds a PendingClockInComponent
-        // Note, due to way DumpChildren works, anyone who doesn't have a PendingClockInComponent gets left in space
-        // and will not warp. This is intended behavior.
-        while (pendingQuery.MoveNext(out var pUid, out _, out var xform))
-        {
-            if (xform.GridUid == shuttleUid)
-            {
-                // Warp all players who are still on this shuttle to a spawn point. This doesn't let them return to
-                // arrivals. It also ensures noobs, slow players or AFK players safely leave the shuttle.
-                TryTeleportToMapSpawn(pUid, component.Station, xform);
-            }
-
-            // Players who have remained at arrives keep their warp coupon (PendingClockInComponent) for now.
-            if (xform.MapUid == arrivalsMapUid)
-                continue;
-
-            // The player has successfully left arrivals and is also not on the shuttle. Remove their warp coupon.
-            RemCompDeferred<PendingClockInComponent>(pUid);
-            RemCompDeferred<AutoOrientComponent>(pUid);
-        }
-    }
-
-    private void DumpChildren(EntityUid uid,
-        ref FTLStartedEvent args,
-        EntityQuery<PendingClockInComponent> pendingEntQuery,
-        EntityQuery<ArrivalsBlacklistComponent> arrivalsBlacklistQuery,
-        EntityQuery<MobStateComponent> mobQuery,
-        EntityQuery<TransformComponent> xformQuery)
-    {
-        if (pendingEntQuery.HasComponent(uid))
-            return;
-
-        var xform = xformQuery.GetComponent(uid);
-
-        if (mobQuery.HasComponent(uid) || arrivalsBlacklistQuery.HasComponent(uid))
-        {
-            var rotation = xform.LocalRotation;
-            _transform.SetCoordinates(uid, new EntityCoordinates(args.FromMapUid!.Value, args.FTLFrom.Transform(xform.LocalPosition)));
-            _transform.SetWorldRotation(uid, args.FromRotation + rotation);
-            return;
-        }
-
-        var children = xform.ChildEnumerator;
-
-        while (children.MoveNext(out var child))
-        {
-            DumpChildren(child.Value, ref args, pendingEntQuery, arrivalsBlacklistQuery, mobQuery, xformQuery);
-        }
-    }
-
     private void OnPlayerSpawn(PlayerSpawningEvent ev)
     {
+        return;
         // Only works on latejoin even if enabled.
         if (!Enabled || _ticker.RunLevel != GameRunLevel.InRound)
             return;
@@ -265,35 +192,6 @@ public sealed class ArrivalsSystem : EntitySystem
                 EnsureComp<AutoOrientComponent>(ev.SpawnResult.Value);
             }
         }
-    }
-
-    private bool TryTeleportToMapSpawn(EntityUid player, EntityUid stationId, TransformComponent? transform = null)
-    {
-        if (!Resolve(player, ref transform))
-            return false;
-
-        var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
-        var possiblePositions = new ValueList<EntityCoordinates>(32);
-
-        // Find a spawnpoint on the same map as the player is already docked with now.
-        while ( points.MoveNext(out var uid, out var spawnPoint, out var xform))
-        {
-            if (spawnPoint.SpawnType == SpawnPointType.LateJoin &&
-                _station.GetOwningStation(uid, xform) == stationId)
-            {
-                // Add to list of possible spawn locations
-                possiblePositions.Add(xform.Coordinates);
-            }
-        }
-
-        if (possiblePositions.Count > 0)
-        {
-            // Move the player to a random late-join spawnpoint.
-            _transform.SetCoordinates(player, transform, _random.Pick(possiblePositions));
-            return true;
-        }
-
-        return false;
     }
 
     private void OnShuttleStartup(EntityUid uid, ArrivalsShuttleComponent component, ComponentStartup args)
@@ -395,20 +293,6 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void SetupArrivalsStation()
     {
-        var mapId = _mapManager.CreateMap();
-
-        if (!_loader.TryLoad(mapId, _cfgManager.GetCVar(CCVars.ArrivalsMap), out var uids))
-        {
-            return;
-        }
-
-        foreach (var id in uids)
-        {
-            EnsureComp<ArrivalsSourceComponent>(id);
-            EnsureComp<ProtectedGridComponent>(id);
-            EnsureComp<PreventPilotComponent>(id);
-        }
-
         // Handle roundstart stations.
         var query = AllEntityQuery<StationArrivalsComponent>();
 
