@@ -2,7 +2,7 @@
   id: TGMS_IceColony
   mapName: 'IceColony_TGMS'
   mapPath: /Maps/TGMS/IceColony.yml
-  minPlayers: 70
+  minPlayers: 0
   stations:
     TGMS_IceColony:
       stationProto: StandardTGMSStation

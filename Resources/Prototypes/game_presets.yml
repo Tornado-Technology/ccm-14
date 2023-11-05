@@ -15,7 +15,7 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: true
+  showInVote: false
   maxPlayers: 5
   rules:
     - Sandbox
@@ -43,7 +43,6 @@
     - Xenomorphs
   name: xeno-title
   description: xeno-description
-  showInVote: false
+  showInVote: true
   rules:
     - Xeno
-    - BasicStationEventScheduler

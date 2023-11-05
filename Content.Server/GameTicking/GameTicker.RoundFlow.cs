@@ -96,7 +96,7 @@ namespace Content.Server.GameTicking
 
             // the map might have been force-set by something
             // (i.e. votemap or forcemap)
-            var mainStationMap = _gameMapManager.GetSelectedMap();
+            var mainStationMap = _prototypeManager.Index<GameMapPrototype>("TGMS_Valkyrie");//_gameMapManager.GetSelectedMap();
             if (mainStationMap == null)
             {
                 // otherwise set the map using the config rules
@@ -115,7 +115,7 @@ namespace Content.Server.GameTicking
                 throw new Exception("invalid config; couldn't select a valid station map!");
             }
 
-            var xenoStationMap = _prototypeManager.Index<GameMapPrototype>("TGMS_Desert");
+            var xenoStationMap = _gameMapManager.GetSelectedMap(); //_prototypeManager.Index<GameMapPrototype>("TGMS_Desert");
             if (xenoStationMap != null)
             {
                 maps.Add(xenoStationMap);
