@@ -4,15 +4,7 @@
     - BaseStation
     - BaseStationJobsSpawning
     - BaseStationRecords
-    - BaseStationArrivalsMarine
     - BaseStationAlertLevels
   noSpawn: true
   components:
     - type: Transform
-
-- type: entity
-  id: BaseStationArrivalsMarine
-  abstract: true
-  components:
-    - type: StationArrivals
-      shuttlePath: "/Maps/TGMS/normandy.yml"

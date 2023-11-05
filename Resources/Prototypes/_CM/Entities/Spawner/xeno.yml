@@ -3,7 +3,7 @@
   name: Marine Xeno
   id: SpawnMobMarineXeno
   parent: MarkerBase
-  suffix: SpawnXenoTGMS
+  suffix: SpawnXenoTGCM
   components:
     - type: Sprite
       layers:
@@ -17,7 +17,7 @@
   name: Marine Xeno Praetorian
   id: SpawnMobMarineXenoPraetorian
   parent: MarkerBase
-  suffix: SpawnXenoTGMS
+  suffix: SpawnXenoTGCM
   components:
     - type: Sprite
       layers:
@@ -31,7 +31,7 @@
   name: Marine Xeno Queen
   id: SpawnMobMarineXenoQueen
   parent: MarkerBase
-  suffix: SpawnXenoTGMS
+  suffix: SpawnXenoTGCM
   components:
     - type: Sprite
       layers:
@@ -39,13 +39,13 @@
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
     - type: SpawnPoint
-      job_id: MobQueenXeno
+      job_id: Quinn
 
 - type: entity
   name: Marine Xeno Runner
   id: SpawnMobMarineXenoRunner
   parent: MarkerBase
-  suffix: SpawnXenoTGMS
+  suffix: SpawnXenoTGCM
   components:
     - type: Sprite
       layers:
@@ -53,4 +53,4 @@
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
     - type: SpawnPoint
-      job_id: MobRounyXeno
+      job_id: Runi
