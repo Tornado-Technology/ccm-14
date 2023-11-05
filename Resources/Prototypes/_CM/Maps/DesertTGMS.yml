@@ -7,6 +7,7 @@
     TGMS_Desert:
       stationProto: StandardTGMSStation
       components:
+        - type: StationSpawning
         - type: StationJobs
           overflowJobs:
             - Kseno

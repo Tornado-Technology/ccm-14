@@ -1,7 +1,21 @@
+- type: entity
+  id: SpawnPointMarine
+  parent: SpawnPointJobBase
+  suffix: SpawnMarineTGMS
+  abstract: true
+  components:
+    - type: MarineSpawn
+    - type: SpawnPoint
+      job_id: AlfaMarine
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
 # Marine ----------------------
 - type: entity
   id: SpawnPointAlfaMarine
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   suffix: SpawnMarineTGMS
   name: alfa marine
   components:
@@ -14,7 +28,7 @@
 
 - type: entity
   id: SpawnPointDeltaMarine
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: delta marine
   suffix: SpawnMarineTGMS
   components:
@@ -27,7 +41,7 @@
 
 - type: entity
   id: SpawnPointBravoMarine
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: bravo marine
   suffix: SpawnMarineTGMS
   components:
@@ -40,7 +54,7 @@
 
 - type: entity
   id: SpawnPointCharlieMarine
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: charlie marine
   suffix: SpawnMarineTGMS
   components:
@@ -53,7 +67,7 @@
 # Medic ---------------------------
 - type: entity
   id: SpawnPointAlfaMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: alfa medic
   suffix: SpawnMarineTGMS
   components:
@@ -66,7 +80,7 @@
 
 - type: entity
   id: SpawnPointDeltaMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: delta medic
   suffix: SpawnMarineTGMS
   components:
@@ -79,7 +93,7 @@
 
 - type: entity
   id: SpawnPointBravoMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: bravo medic
   suffix: SpawnMarineTGMS
   components:
@@ -92,7 +106,7 @@
 
 - type: entity
   id: SpawnPointCharlieMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: charlie medic
   suffix: SpawnMarineTGMS
   components:
@@ -105,7 +119,7 @@
 # Engineer ---------------------------
 - type: entity
   id: SpawnPointAlfaEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: alfa engineer
   suffix: SpawnMarineTGMS
   components:
@@ -118,7 +132,7 @@
 
 - type: entity
   id: SpawnPointDeltaEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: delta engineer
   suffix: SpawnMarineTGMS
   components:
@@ -131,7 +145,7 @@
 
 - type: entity
   id: SpawnPointBravoEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: bravo engineer
   suffix: SpawnMarineTGMS
   components:
@@ -144,7 +158,7 @@
 
 - type: entity
   id: SpawnPointCharlieEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: charlie engineer
   suffix: SpawnMarineTGMS
   components:
@@ -157,7 +171,7 @@
 # Specialist ------------------------
 - type: entity
   id: SpawnPointAlfaSpecialist
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: alfa specialist
   suffix: SpawnMarineTGMS
   components:
@@ -170,7 +184,7 @@
 
 - type: entity
   id: SpawnPointDeltaSpecialist
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: delta specialist
   suffix: SpawnMarineTGMS
   components:
@@ -183,7 +197,7 @@
 
 - type: entity
   id: SpawnPointBravoSpecialist
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: bravo specialist
   suffix: SpawnMarineTGMS
   components:
@@ -196,7 +210,7 @@
 
 - type: entity
   id: SpawnPointCharlieSpecialist
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: charlie specialist
   suffix: SpawnMarineTGMS
   components:
@@ -209,7 +223,7 @@
 # Leader -------------------------
 - type: entity
   id: SpawnPointAlfaCommander
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: alfa сommander
   suffix: SpawnMarineTGMS
   components:
@@ -222,7 +236,7 @@
 
 - type: entity
   id: SpawnPointDeltaCommander
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: delta сommander
   suffix: SpawnMarineTGMS
   components:
@@ -235,7 +249,7 @@
 
 - type: entity
   id: SpawnPointBravoCommander
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: bravo сommander
   suffix: SpawnMarineTGMS
   components:
@@ -248,7 +262,7 @@
 
 - type: entity
   id: SpawnPointCharlieCommander
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: charlie сommander
   suffix: SpawnMarineTGMS
   components:
@@ -261,7 +275,7 @@
 # Military Medic -------------
 - type: entity
   id: SpawnPointMilitaryMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: military medic
   suffix: SpawnMarineTGMS
   components:
@@ -274,7 +288,7 @@
 
 - type: entity
   id: SpawnPointMilitaryMainMedic
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: military main medic
   suffix: SpawnMarineTGMS
   components:
@@ -287,7 +301,7 @@
 # Military Engineer ----------------
 - type: entity
   id: SpawnPointChiefShipsEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: chief ships engineer
   suffix: SpawnMarineTGMS
   components:
@@ -300,7 +314,7 @@
 
 - type: entity
   id: SpawnPointShipsEngineer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: ships engineer
   suffix: SpawnMarineTGMS
   components:
@@ -313,7 +327,7 @@
 # Cargo TGMC --------------
 - type: entity
   id: SpawnPointSupplyOfficer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: supply officer
   suffix: SpawnMarineTGMS
   components:
@@ -326,7 +340,7 @@
 
 - type: entity
   id: SpawnPointRigger
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: rigger
   suffix: SpawnMarineTGMS
   components:
@@ -339,7 +353,7 @@
 # Scientist --------------
 - type: entity
   id: SpawnPointMilitaryScientist
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: military scientist
   suffix: SpawnMarineTGMS
   components:
@@ -352,7 +366,7 @@
 # Command --------------------
 - type: entity
   id: SpawnPointFieldCommander
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: field commander
   suffix: SpawnMarineTGMS
   components:
@@ -365,7 +379,7 @@
 
 - type: entity
   id: SpawnPointHeadOperations
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: head operations
   suffix: SpawnMarineTGMS
   components:
@@ -378,7 +392,7 @@
 
 - type: entity
   id: SpawnPointPilotOfficer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: pilot officer
   suffix: SpawnMarineTGMS
   components:
@@ -391,7 +405,7 @@
         
 - type: entity
   id: SpawnPointPilotOfficerRaptor
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: pilot officer
   suffix: SpawnMarineTGMS
   components:
@@ -404,7 +418,7 @@
 
 - type: entity
   id: SpawnPointStaffOfficer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: staff officer
   suffix: SpawnMarineTGMS
   components:
@@ -417,7 +431,7 @@
 # Police -----------------------
 - type: entity
   id: SpawnPointMilitaryPoliceOfficer
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: military police officer
   suffix: SpawnMarineTGMS
   components:
@@ -430,7 +444,7 @@
 
 - type: entity
   id: SpawnPointMilitaryPoliceman
-  parent: SpawnPointJobBase
+  parent: SpawnPointMarine
   name: military policeman
   suffix: SpawnMarineTGMS
   components:

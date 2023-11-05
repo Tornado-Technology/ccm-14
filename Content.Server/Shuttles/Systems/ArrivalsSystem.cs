@@ -23,6 +23,10 @@ using Robust.Shared.Map;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
+using Robust.Shared.Prototypes;
+using Content.Shared.Roles;
+using Content.Server.Xeno.Components;
+using Content.Server.Xeno;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -36,6 +40,7 @@ public sealed class ArrivalsSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -155,41 +160,65 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void OnPlayerSpawn(PlayerSpawningEvent ev)
     {
-        return;
         // Only works on latejoin even if enabled.
         if (!Enabled || _ticker.RunLevel != GameRunLevel.InRound)
             return;
 
-        if (!HasComp<StationArrivalsComponent>(ev.Station))
-            return;
+        if (ev?.Job?.PrototypeId != null) {
+            var job = _prototypeManager.Index<JobPrototype>(ev.Job.PrototypeId);
 
-        TryGetArrivals(out var arrivals);
-
-        if (TryComp<TransformComponent>(arrivals, out var arrivalsXform))
-        {
-            var mapId = arrivalsXform.MapID;
-
-            var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
-            var possiblePositions = new List<EntityCoordinates>();
-            while ( points.MoveNext(out var uid, out var spawnPoint, out var xform))
+            if (job.JobEntity != null)
             {
-                if (spawnPoint.SpawnType != SpawnPointType.LateJoin || xform.MapID != mapId)
-                    continue;
+                var entity = _prototypeManager.Index<EntityPrototype>(job.JobEntity);
+                if (entity != null)
+                {
+                    if (entity.Components.ContainsKey(nameof(XenoComponent)))
+                    {
+                        var points = EntityQueryEnumerator<XenoSpawnComponent, SpawnPointComponent, TransformComponent>();
+                        var possiblePositions = new List<EntityCoordinates>();
 
-                possiblePositions.Add(xform.Coordinates);
+                        while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
+                        {
+                            if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
+                                continue;
+
+                            possiblePositions.Add(xform.Coordinates);
+                        }
+
+                        if (possiblePositions.Count > 0)
+                        {
+                            var spawnLoc = _random.Pick(possiblePositions);
+                            ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                                spawnLoc,
+                                ev.Job,
+                                ev.HumanoidCharacterProfile,
+                                ev.Station);
+                        }
+                    }
+                }
             }
-
-            if (possiblePositions.Count > 0)
+            else
             {
-                var spawnLoc = _random.Pick(possiblePositions);
-                ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                    spawnLoc,
-                    ev.Job,
-                    ev.HumanoidCharacterProfile,
-                    ev.Station);
+                var points = EntityQueryEnumerator<MarineSpawnComponent, SpawnPointComponent, TransformComponent>();
+                var possiblePositions = new List<EntityCoordinates>();
 
-                EnsureComp<PendingClockInComponent>(ev.SpawnResult.Value);
-                EnsureComp<AutoOrientComponent>(ev.SpawnResult.Value);
+                while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
+                {
+                    //if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
+                    //    continue;
+
+                    possiblePositions.Add(xform.Coordinates);
+                }
+
+                if (possiblePositions.Count > 0)
+                {
+                    var spawnLoc = _random.Pick(possiblePositions);
+                    ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                        spawnLoc,
+                        ev.Job,
+                        ev.HumanoidCharacterProfile,
+                        ev.Station);
+                }
             }
         }
     }

@@ -4,6 +4,7 @@ using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
+using Content.Server.Station.Components;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
@@ -95,7 +96,13 @@ namespace Content.Server.GameTicking
 
             // the map might have been force-set by something
             // (i.e. votemap or forcemap)
-            var mainStationMap = _prototypeManager.Index<GameMapPrototype>("TGMS_Valkyrie");
+            var mainStationMap = _gameMapManager.GetSelectedMap();
+            if (mainStationMap == null)
+            {
+                // otherwise set the map using the config rules
+                _gameMapManager.SelectMapByConfigRules();
+                mainStationMap = _gameMapManager.GetSelectedMap();
+            }
 
             // Small chance the above could return no map.
             // ideally SelectMapByConfigRules will always find a valid map
@@ -139,6 +146,11 @@ namespace Content.Server.GameTicking
                 }
 
                 LoadGameMap(map, toLoad, null);
+
+                if (maps[0] != map)
+                {
+                    _mapManager.DoMapInitialize(toLoad);
+                }
             }
         }
 
