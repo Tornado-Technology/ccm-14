@@ -5,6 +5,7 @@
   parent: MarkerBase
   suffix: SpawnXenoTGCM
   components:
+    - type: XenoSpawn
     - type: Sprite
       layers:
         - state: green
@@ -19,6 +20,7 @@
   parent: MarkerBase
   suffix: SpawnXenoTGCM
   components:
+    - type: XenoSpawn
     - type: Sprite
       layers:
         - state: green
@@ -33,6 +35,7 @@
   parent: MarkerBase
   suffix: SpawnXenoTGCM
   components:
+    - type: XenoSpawn
     - type: Sprite
       layers:
         - state: green
@@ -47,6 +50,7 @@
   parent: MarkerBase
   suffix: SpawnXenoTGCM
   components:
+    - type: XenoSpawn
     - type: Sprite
       layers:
         - state: green
