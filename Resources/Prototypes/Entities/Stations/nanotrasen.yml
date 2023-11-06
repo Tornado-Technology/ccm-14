@@ -12,7 +12,6 @@
     - BaseStation
     - BaseStationCargo
     - BaseStationJobsSpawning
-    - BaseStationRecords
     - BaseStationArrivals
     - BaseStationShuttles
     - BaseStationCentcomm
@@ -41,7 +40,6 @@
   parent:
   - BaseStation
   - BaseStationJobsSpawning
-  - BaseStationRecords
   - BaseStationNanotrasen
   noSpawn: true
   components:

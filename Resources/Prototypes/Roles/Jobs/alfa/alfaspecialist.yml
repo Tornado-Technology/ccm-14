@@ -29,15 +29,6 @@
 - type: startingGear
   id: AlfaSpecialistGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitAlpha_spec
     id: ASpecialistsIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetMarineAlfa

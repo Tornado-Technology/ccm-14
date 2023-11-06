@@ -17,15 +17,6 @@
 - type: startingGear
   id: CharlieMarineGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitcharlie_mar
     id: CRiflemanIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetMarineCharlie

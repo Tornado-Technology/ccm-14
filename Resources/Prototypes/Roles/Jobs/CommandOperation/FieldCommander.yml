@@ -29,15 +29,13 @@
 - type: startingGear
   id: FieldCommanderGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    head: ClothingHeadHatBeretFieldCommander
+    outerClothing: ClothingOuterArmorFieldCommander
+    gloves: ClothingHandsGlovesMarine
+    jumpsuit: ClothingUniformJumpsuitFieldCommander
+    eyes: ClothingEyesGlassesRPG
     id: FieldCommanderIDCard
-    ears: ClothingHeadsetSecurity
+    ears: ClothingHeadsetMarineCommands
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    shoes: ClothingShoesBootsMarine
+    pocket2: ClothingMaskGasFieldCommander

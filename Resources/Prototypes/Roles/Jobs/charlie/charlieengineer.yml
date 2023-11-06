@@ -29,15 +29,6 @@
 - type: startingGear
   id: CharlieEngineerGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitcharlie_eng
     id: CEngineerIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetMarineCharlie

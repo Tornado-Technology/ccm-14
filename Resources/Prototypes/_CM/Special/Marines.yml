@@ -4,6 +4,9 @@
   id: BaseMarine
   noSpawn: false
   components:
+  - type: StatusIcon
+  - type: SleepEmitSound
+  - type: SSDIndicator
   - type: Marine
   - type: ShowSecurityIcons # Will allow them to see their own, but not strangers due to changes to the HUD system
   - type: GhostTakeoverAvailable

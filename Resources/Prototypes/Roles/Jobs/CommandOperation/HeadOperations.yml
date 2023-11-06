@@ -19,13 +19,13 @@
     - !type:RoleTimeRequirement
       role: JobCharlieMarine
       time: 0
-  ranks:
-    - prefix: Командор
-      time: 0
-    - prefix: Вице-адмирал
-      time: 3 #1500 
-    - prefix: Контр-адмирал
-      time: 7500
+  # ranks:
+    # - prefix: Командор
+      # time: 0
+    # - prefix: Вице-адмирал
+      # time: 3 #1500 
+    # - prefix: Контр-адмирал
+      # time: 7500
   startingGear: HeadOperationsGear
   icon: "JobIconCaptain"
   supervisors: job-supervisors-centcom
@@ -36,15 +36,13 @@
 - type: startingGear
   id: HeadOperationsGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    gloves: ClothingHandsGlovesMarine
+    head: ClothingHeadCapCentcomBlack
+    jumpsuit: ClothingUniformJumpsuitHeadOperation
+    eyes: ClothingEyesGlassesRPG
     id: HeadOperationsIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetMarineHeadOperation
+    belt: ClothingBeltRapierFilled
+    shoes: ClothingShoesCentcomBlack
+    pocket1: TGMSMP-412
+    pocket2: SpeedLoaderMagnum357

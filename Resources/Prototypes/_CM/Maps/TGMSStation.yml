@@ -3,8 +3,16 @@
   parent:
     - BaseStation
     - BaseStationJobsSpawning
-    - BaseStationRecords
     - BaseStationAlertLevels
+    - BaseStationArrivalsTGCM
   noSpawn: true
   components:
     - type: Transform
+
+- type: entity
+  id: BaseStationArrivalsTGCM
+  abstract: true
+  components:
+    - type: StationArrivals
+      shuttlePath: "/Maps/TGMS/normandy.yml"
+    

@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingBeltStorageBase
   id: ClothingBeltRapier
-  name: Ножны рапиры
-  description: Ножны для рапиры
+  name: Rapier Sheath
+  abstract: true
+  description: Rapier Scabbard
   components:
   - type: Sprite
     sprite: _CM/Clothing/Belt/rapier.rsi
@@ -25,8 +26,8 @@
 - type: entity
   parent: ClothingBeltStorageBase
   id: ClothingBeltMythistophelRapier
-  name: Ножны рапиры Мифистофеля
-  description: Ножны для рапиры Мифистофеля
+  name: The sheath of the rapier of Mephistopheles
+  description: The sheath for the rapier of Mephistopheles
   components:
     - type: Sprite
       sprite: _CM/Clothing/Belt/rapier.rsi
@@ -45,3 +46,12 @@
             tags:
               - CaptainSabre
     - type: Appearance
+  
+- type: entity
+  id: ClothingBeltRapierFilled
+  parent: ClothingBeltMythistophelRapier
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Rapier

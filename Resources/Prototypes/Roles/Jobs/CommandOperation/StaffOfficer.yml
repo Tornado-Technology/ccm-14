@@ -17,15 +17,11 @@
 - type: startingGear
   id: StaffOfficerGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
-    id: StaffOfficerIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    neck: ClothingNeckHeadphones
+    gloves: ClothingHandsGlovesMarine
+    jumpsuit: ClothingUniformJumpsuitStaffOfficer
+    eyes: ClothingEyesGlassesRPG
+    id: FieldCommanderIDCard
+    ears: ClothingHeadsetMarineCommands
+    belt: ClothingBeltAssault
+    shoes: ClothingShoesCentcomBlack

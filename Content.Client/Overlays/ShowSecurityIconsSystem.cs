@@ -64,8 +64,8 @@ public sealed class ShowSecurityIconsSystem : EquipmentHudSystem<ShowSecurityIco
 
         if (_prototypeMan.TryIndex<StatusIconPrototype>(jobIconToGet, out var jobIcon))
             result.Add(jobIcon);
-        else
-            Log.Error($"Invalid job icon prototype: {jobIcon}");
+        // else
+            // Log.Error($"Invalid job icon prototype: {jobIcon}");
 
         // Add arrest icons here, WYCI.
 
