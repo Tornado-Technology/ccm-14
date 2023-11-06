@@ -29,15 +29,10 @@
 - type: startingGear
   id: PilotNOfficerGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    head: ClothingHeadHelmetMarine
+    jumpsuit: ClothingUniformJumpsuitMarine
+    back: ClothingBackpackMarine
+    shoes: ClothingShoesBootsCombat
+    eyes: ClothingEyesGlassesRPG
     id: PilotNormandyIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetPilotShattle
