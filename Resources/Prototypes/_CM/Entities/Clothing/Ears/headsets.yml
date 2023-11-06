@@ -306,3 +306,34 @@
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
+    
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineCommands
+  name: Field commander radio headset
+  description: To support the communication of all departments on the front line
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommandMarine
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetMarineHeadOperation
+  name: Head Operation radio headset
+  description: Headset for communication with the operation command and crew
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyHeadOperation
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi

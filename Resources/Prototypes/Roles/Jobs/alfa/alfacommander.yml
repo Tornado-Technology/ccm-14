@@ -28,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitAlpha_leader
     id: ACommanderIDCard
-    ears: ClothingHeadsetMarineAlfaLeader
+    ears: ClothingHeadsetCommanderAlfa

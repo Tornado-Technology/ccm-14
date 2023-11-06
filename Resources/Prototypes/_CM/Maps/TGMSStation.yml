@@ -14,5 +14,5 @@
   abstract: true
   components:
     - type: StationArrivals
-      shuttlePath: "/Maps/TGMS/normandy.yml"
+      shuttlePath: /Maps/TGMS/normandy.yml
     
