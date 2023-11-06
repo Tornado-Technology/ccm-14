@@ -29,15 +29,9 @@
 - type: startingGear
   id: MilitaryMedicGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
-    id: MilitaryMedicIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatLab
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled

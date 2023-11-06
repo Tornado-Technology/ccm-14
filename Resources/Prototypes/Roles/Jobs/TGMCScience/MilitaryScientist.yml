@@ -29,15 +29,10 @@
 - type: startingGear
   id: MilitaryScientistGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
-    eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitMilitaryScientist
+    back: ClothingBackpackScience
+    eyes: ClothingEyesGlassesMeson
     id: MilitaryScientistIDCard
-    ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    ears: ClothingHeadsetAltScience
+    belt: ClothingBeltUtilityEngineering
+    shoes: ClothingShoesColorBrown

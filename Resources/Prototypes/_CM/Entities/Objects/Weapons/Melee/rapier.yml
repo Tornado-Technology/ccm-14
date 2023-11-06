@@ -2,7 +2,7 @@
   name: Рапира
   parent: BaseItem
   id: Rapier
-  description: Рапира выкована стариком Мифистофелем.
+  description: The rapier was forged by the old man Mephistopheles.
   components:
   - type: Sharp
   - type: Sprite
@@ -12,10 +12,10 @@
     attackRate: 1.6
     damage:
       types:
-        Slash: 30
+        Slash: 15
         Piercing: 10
     soundHit:
-        path: /Audio/_CM/Items/rapier.ogg
+        path: /Audio/_CM//Items/rapier.ogg
   - type: Reflect
     enabled: true
     reflectProb: 0.6

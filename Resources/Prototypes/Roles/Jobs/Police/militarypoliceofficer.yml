@@ -26,15 +26,12 @@
 - type: startingGear
   id: MilitaryPoliceOfficerGear
   equipment:
-    head: ClothingHeadHatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    back: ClothingBackpackSecurityFilled
+    jumpsuit: ClothingUniformJumpsuitHoS
+    back: ClothingBackpackHOSFilled
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite
+    outerClothing: ClothingOuterCoatHoSTrench
     eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatWarden
+    head: ClothingHeadHatBeretHoS
+    gloves: ClothingHandsGlovesCombat
     id: PoliceOfficerIDCard
     ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtWarden
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
