@@ -1,0 +1,291 @@
+﻿- type: entity
+  id: MarineCAS
+  name: Самолёт поддержки
+  description: Поддержка с воздуха
+  suffix: MarineCAS
+  components:
+  - type: IntrinsicRadioReceiver
+  - type: MobMover
+  - type: InputMover
+  - type: MindContainer
+  - type: Clickable
+  - type: DoAfter
+  - type: Actions
+  - type: InventorySlots
+  - type: Physics
+    ignorePaused: true
+    bodyType: Kinematic
+  - type: Loadout
+    prototypes: [ CASgear ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 15
+        mask:
+        - GhostImpassable
+        context: "aghost"
+        canInteract: true
+  - type: Hands
+  - type: Body
+    prototype: Aghost
+  - type: Input
+    context: "aghost"
+  - type: Examiner
+    skipChecks: true
+  - type: Inventory
+    templateId: CAS
+  - type: Sprite
+    # visible: false
+    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    drawdepth: Ghosts
+    sprite: Markers/atmos.rsi
+    layers:
+      - state: base-hot
+        shader: unshaded
+      - state: fire
+        shader: unshaded
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 10
+    baseWalkSpeed: 6
+  - type: MovementIgnoreGravity
+  - type: UserInterface
+    interfaces:
+      - key: enum.RadarConsoleUiKey.Key
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      - key: enum.RadarConsoleUiKey.Key
+        toggleAction: ActionAGhostShowRadar
+  - type: RadarConsole
+  - type: RandomMetadata
+    nameSegments:
+    - CAS_callsign
+    - CAS_number
+  - type: Visibility
+    layer: 1
+  - type: Eye
+    visibilityMask: 7
+    drawFov: false
+  - type: ContentEye
+    maxZoom: 1.44,1.44
+
+- type: entity
+  id: ArmCAS
+  name: "подвес оружия"
+  parent: PartSilicon
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Mobs/Silicon/drone.rsi
+    state: "l_hand"
+  - type: Icon
+    sprite: Mobs/Silicon/drone.rsi
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+
+- type: inventoryTemplate
+  id: CAS
+  slots:
+  - name: headset
+    slotTexture: ears
+    slotFlags: ALL
+    slotGroup: MainHotbar
+    uiWindowPos: 1,1
+    strippingWindowPos: 0,0
+    displayName: гарнитура
+  - name: pocket1
+    slotTexture: pocket
+    slotFlags: ALL
+    slotGroup: MainHotbar
+    stripTime: 3
+    uiWindowPos: 1,2
+    strippingWindowPos: 0,1
+    displayName: Pocket 1
+    stripHidden: true
+  - name: pocket2
+    slotTexture: pocket
+    slotFlags: ALL
+    slotGroup: MainHotbar
+    stripTime: 3
+    uiWindowPos: 1,3
+    strippingWindowPos: 0,2
+    displayName: Pocket 2
+    stripHidden: true
+
+- type: startingGear
+  id: CASgear
+  equipment:
+    headset: ClothingHeadsetPilotShattle
+
+
+- type: dataset
+  id: CAS_callsign
+  values:
+  - Раптор
+
+- type: dataset
+  id: CAS_number
+  values:
+  - 4
+  - 8
+  - 3
+
+
+- type: entity
+  parent: BaseItem
+  id: MarineArty
+  name: Артудар
+  suffix: MarinesGear
+  description: Зачем ты это читаешь? БЕГИ!
+  components:
+  - type: Sprite
+    sprite: Markers/cross.rsi
+    layers:
+    - state: red
+  - type: Appearance
+  - type: ClusterGrenade
+    fillPrototype: ArtyGrenade
+    maxGrenadesCount: 5
+    delay: 6
+    distance: 5
+  - type: ContainerContainer
+    containers:
+      cluster-flash: !type:Container
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 10
+  - type: LightBehaviour
+    behaviours:
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Nearest
+        maxDuration: 1.0
+        minValue: 0.1
+        maxValue: 1
+        isLooped: true
+        property: Radius
+        enabled: true
+  - type: EmitSoundOnUse
+    sound: /Audio/Announcements/bloblarm.ogg
+
+- type: entity
+  id: ArtyGrenade
+  name: разрывная Кассета
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Item
+    size: 5
+  - type: OnUseTimerTrigger
+    delay: 0.1
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 120 # about a ~4 tile radius
+    canCreateVacuum: false
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 4
+
+- type: entity
+  parent: BaseItem
+  id: MarineCASClusterBomb
+  name: кластерная бомба
+  suffix: MarinesGear
+  description: Разрывной подарок ксеноморфам.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+    scale: 2, 2
+  - type: Appearance
+  - type: ClusterGrenade
+    fillPrototype: ArtyGrenade
+    maxGrenadesCount: 3
+    delay: 6
+    distance: 5
+  - type: ContainerContainer
+    containers:
+      cluster-flash: !type:Container
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Weather/snowstorm.ogg
+      params:
+        volume: 10
+        maxdistance: 20
+  - type: Unremoveable
+
+- type: entity
+  id: ArtyFlare
+  name: осветительная кассета
+  description: "Никогда не выгорает, но довольно хрупкая"
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+    scale: 0.5, 0.5
+  - type: Item
+    sprite: Objects/Misc/flare.rsi
+  - type: PointLight
+    color: Orange
+    castShadows: true
+    radius: 10
+    energy: 5
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound: /Audio/Effects/metalbreak.ogg
+
+- type: entity
+  parent: BaseItem
+  id: MarineCASFlareBomb
+  name: осветительная бомба
+  suffix: MarinesGear
+  description: Да осветит путь их.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+    scale: 2, 2
+  - type: Appearance
+  - type: ClusterGrenade
+    fillPrototype: ArtyFlare
+    maxGrenadesCount: 8
+    delay: 6
+    distance: 10
+  - type: ContainerContainer
+    containers:
+      cluster-flash: !type:Container
+  - type: EmitSoundOnUse
+    sound: /Audio/Effects/Weather/snowstorm.ogg
+  #- type: Unremoveable

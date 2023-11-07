@@ -1053,6 +1053,7 @@
     board: ComputerMassMediaCircuitboard
   - type: DeviceNetworkRequiresPower
   - type: RaptorControl
+    observerId: MarineCAS
   - type: AccessReader
     access: [[ "Command" ]]
   - type: Transform
