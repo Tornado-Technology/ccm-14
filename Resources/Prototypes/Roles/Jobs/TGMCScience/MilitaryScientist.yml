@@ -4,9 +4,6 @@
   description: job-description-militaryscientist
   playTimeTracker: JobMilitaryScientist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0

@@ -4,9 +4,6 @@
   description: job-description-deltaengineer
   playTimeTracker: JobDeltaEngineer
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: DeltaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitdelta_eng
     id: DEngineerIDCard
-    ears: ClothingHeadsetMarineDeltaEngineering
+    ears: ClothingHeadsetMarineDelta

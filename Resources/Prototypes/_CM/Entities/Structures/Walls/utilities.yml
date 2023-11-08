@@ -1,11 +1,11 @@
 - type: entity
   id: WallFOBProtection
-  name: Fuck you!
+  name: Bluespace barrier
   placement:
     mode: SnapgridCenter
   components:
   - type: TimedDespawn
-    lifetime: 1560
+    lifetime: 1200
   - type: Tag
     tags:
       - Wall
@@ -26,5 +26,4 @@
     sprite: Objects/Misc/nope.rsi
     state: icon
     noRot: true
-    visible: false # Change to true for mapping
     drawdepth: Overdoors

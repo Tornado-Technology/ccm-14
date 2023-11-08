@@ -4,9 +4,6 @@
   description: job-description-bravomedic
   playTimeTracker: JobBravoMedic
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: BravoGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitbravo_med
     id: BMedicIDCard
-    ears: ClothingHeadsetBravoMedic
+    ears: ClothingHeadsetMarineBravo

@@ -3,10 +3,6 @@
   name: job-name-staffofficer
   description: job-description-staffofficer
   playTimeTracker: JobStaffOfficer
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
   startingGear: StaffOfficerGear
   icon: "JobIconStaffOfficer"
   supervisors: job-supervisors-centcom

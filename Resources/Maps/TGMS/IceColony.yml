@@ -35,7 +35,7 @@ entities:
   entities:
   - uid: 2
     components:
-    - id: TGMS_IceColony
+    - id: TGCM_IceColony
       type: BecomesStation
     - type: MetaData
     - pos: -0.48513883,-0.60406363

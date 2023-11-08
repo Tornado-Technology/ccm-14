@@ -4,9 +4,6 @@
   description: job-description-charliemedic
   playTimeTracker: JobCharlieMedic
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: CharlieGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitcharlie_med
     id: CMedicIDCard
-    ears: ClothingHeadsetMarineCharlieMedic
+    ears: ClothingHeadsetMarineCharlie

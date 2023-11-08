@@ -14,12 +14,14 @@ using WinCondition = Content.Server.Xeno.Components.WinCondition;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Audio;
+using Content.Shared.Xeno;
 
 namespace Content.Server.Xeno.Systems;
 
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
     public const float AnnouncmentTime = 600f;
+    public const float FOBTime = 1200f;
 
     public int Eggs { get; private set; }
     public int Marines { get; private set; }
@@ -30,6 +32,9 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly ChatSystem _chatSystem = default!;
 
     private float _announcmentTime = 0f;
+    private float _fobTime = 0f;
+
+    private bool _fob = false;
 
     private EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent> Query => EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent>();
 
@@ -49,19 +54,18 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<NukeDisarmSuccessEvent>(OnNukeDisarm);
     }
 
-    private void OnMarineStartup(EntityUid uid, MarineComponent component, ComponentStartup args)
-    {
-        CheckRoundShouldEnd();
-    }
-
-    private void OnXenoStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
-    {
-        CheckRoundShouldEnd();
-    }
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        _fobTime += frameTime;
+        if (_fobTime >= FOBTime && !_fob)
+        {
+            _fobTime -= FOBTime;
+            _fob = true;
+
+            _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"), Loc.GetString("ai-announcement-sender"));
+        }
 
         _announcmentTime += frameTime;
 

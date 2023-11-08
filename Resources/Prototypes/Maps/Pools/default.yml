@@ -1,6 +1,6 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - TGMS_Erida
-  - TGMS_Desert
-  - TGMS_IceColony
+  - TGCM_Erida
+  - TGCM_Desert
+  - TGCM_IceColony

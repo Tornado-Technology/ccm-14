@@ -134,7 +134,14 @@
     - type: ActiveRadio
       channels:
       - Hivemind
-
+    - type: UnpoweredFlashlight
+      toggleAction: ActionToggleLightXeno
+    - type: PointLight
+      enabled: false
+      radius: 6
+      softness: 5
+      color: "#FF33FF"
+      autoRot: true
 
 - type: entity
   abstract: true

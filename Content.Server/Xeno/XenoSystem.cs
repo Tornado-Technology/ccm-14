@@ -1,11 +1,9 @@
 using Content.Server.Mind.Commands;
-using Content.Server.Polymorph.Systems;
 using Content.Server.Research.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Kitchen;
 using Content.Shared.Mind;
 using Content.Shared.Research.Components;
-using Content.Shared.Wieldable;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -41,11 +39,12 @@ public sealed partial class XenoSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoEvolutionsComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<XenoEvolutionsComponent, ComponentStartup>(OnStartupEvolve);
         SubscribeLocalEvent<XenoEvolutionsComponent, XenoEvolutionActionEvent>(OnEvolutionMenu);
         SubscribeLocalEvent<XenoEvolutionsComponent, EvolveMessage>(OnEvolve);
 
         SubscribeLocalEvent<XenoComponent, SharpAfterEvent>(OnSharpAfter);
+        SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
 
     private void OnEvolve(EntityUid uid, XenoEvolutionsComponent component, EvolveMessage args)
@@ -53,10 +52,14 @@ public sealed partial class XenoSystem : EntitySystem
         PolymorphEntity(uid, args.Evolution.Prototype);
     }
 
-    private void OnStartup(EntityUid uid, XenoEvolutionsComponent component, ComponentStartup args)
+    private void OnStartupEvolve(EntityUid uid, XenoEvolutionsComponent component, ComponentStartup args)
     {
         _actionsSystem.AddAction(uid, component.Action);
+    }
 
+    private void OnStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
+    {
+        _actionsSystem.AddAction(uid, component.ActionNightVision);
     }
 
     private void OnEvolutionMenu(EntityUid uid, XenoEvolutionsComponent component, XenoEvolutionActionEvent args)

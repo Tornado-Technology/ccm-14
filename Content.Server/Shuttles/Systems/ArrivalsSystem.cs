@@ -25,7 +25,7 @@ using Robust.Shared.Timing;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
-using Content.Server.Xeno.Components;
+using Content.Shared.Xeno;
 using Content.Server.Xeno;
 
 namespace Content.Server.Shuttles.Systems;

@@ -58,5 +58,6 @@ public sealed class RaptorObserverSystem : EntitySystem
         _mind.TransferTo(mindId, control.Pilot, mind: mind);
 
         control.Pilot = null;
+        control.Observer = null;
     }
 }

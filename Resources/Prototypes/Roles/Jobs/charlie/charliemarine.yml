@@ -3,10 +3,6 @@
   name: job-name-charlie-marine
   description: job-description-charlieamarine
   playTimeTracker: JobCharlieMarine
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: CharlieGarrison
-      time: 0
   startingGear: CharlieMarineGear
   icon: "JobIconCharlieMarine"
   supervisors: job-supervisors-centcom

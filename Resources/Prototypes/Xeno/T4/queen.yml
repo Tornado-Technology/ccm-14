@@ -17,9 +17,11 @@
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
       projectile: ProjectileDefilerAcidSpit
+      speed: 25
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
       projectile: ProjectileDefilerDefaultSpit
+      speed: 25
     - type: XenoSpitRejuvenate
     - type: Sprite
       drawdepth: Mobs

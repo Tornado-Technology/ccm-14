@@ -94,18 +94,7 @@ namespace Content.Server.GameTicking
 
             var maps = new List<GameMapPrototype>();
 
-            // the map might have been force-set by something
-            // (i.e. votemap or forcemap)
-            var mainStationMap = _prototypeManager.Index<GameMapPrototype>("TGMS_Valkyrie");//_gameMapManager.GetSelectedMap();
-            if (mainStationMap == null)
-            {
-                // otherwise set the map using the config rules
-                _gameMapManager.SelectMapByConfigRules();
-                mainStationMap = _gameMapManager.GetSelectedMap();
-            }
-
-            // Small chance the above could return no map.
-            // ideally SelectMapByConfigRules will always find a valid map
+            var mainStationMap = _prototypeManager.Index<GameMapPrototype>("valkyrie");
             if (mainStationMap != null)
             {
                 maps.Add(mainStationMap);
@@ -115,10 +104,19 @@ namespace Content.Server.GameTicking
                 throw new Exception("invalid config; couldn't select a valid station map!");
             }
 
-            var xenoStationMap = _gameMapManager.GetSelectedMap(); //_prototypeManager.Index<GameMapPrototype>("TGMS_Desert");
+            var xenoStationMap = _gameMapManager.GetSelectedMap();
+            if (mainStationMap == null)
+            {
+                mainStationMap = _prototypeManager.Index<GameMapPrototype>("TGCM_Desert");
+            }
+
             if (xenoStationMap != null)
             {
                 maps.Add(xenoStationMap);
+            }
+            else
+            {
+                throw new Exception("invalid config; couldn't select a valid xeno world map!");
             }
 
             if (CurrentPreset?.MapPool != null &&

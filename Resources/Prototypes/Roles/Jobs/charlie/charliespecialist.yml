@@ -4,9 +4,6 @@
   description: job-description-charliespecialist
   playTimeTracker: JobCharlieSpecialist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: CharlieGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0

@@ -623,7 +623,7 @@ entities:
             4176: -84,27
             4177: -83,27
             4178: -82,27
-            4465: -189,1
+            4460: -189,1
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkBox
@@ -5818,7 +5818,7 @@ entities:
             id: WarnCornerSmallSW
           decals:
             49: -64.22151,9.045578
-            4463: -188,3
+            4458: -188,3
         - node:
             color: '#FFFFFFFF'
             id: WarnFull
@@ -6282,7 +6282,7 @@ entities:
             color: '#FFFF00FF'
             id: WarnLineGreyscaleW
           decals:
-            4464: -188,1
+            4459: -188,1
         - node:
             color: '#FFFFFFFF'
             id: WarnLineGreyscaleW
@@ -6329,10 +6329,10 @@ entities:
             1935: -49,11
             1936: -45,11
             1937: -44,11
-            4459: -189,3
-            4460: -190,3
-            4461: -189,0
-            4462: -190,0
+            4454: -189,3
+            4455: -190,3
+            4456: -189,0
+            4457: -190,0
         - node:
             color: '#FFA500FF'
             id: WarnLineS
@@ -6378,8 +6378,8 @@ entities:
             1945: -46,14
             1946: -46,15
             1947: -46,16
-            4456: -188,0
-            4457: -188,2
+            4452: -188,0
+            4453: -188,2
         - node:
             color: '#FFA500FF'
             id: WarnLineW
@@ -88894,6 +88894,8 @@ entities:
     - pos: -188.5,5.5
       parent: 1
       type: Transform
+- proto: SpawnPointPilotOfficerRaptor
+  entities:
   - uid: 2397
     components:
     - pos: -188.5,6.5

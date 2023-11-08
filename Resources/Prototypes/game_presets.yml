@@ -34,13 +34,9 @@
     - DeathMatch31
 
 - type: gamePreset
-  id: XenoTGCM
+  id: NuclearWar
   alias:
-    - xeno
-    - xenos
-    - Xenos
-    - xenomorphs
-    - Xenomorphs
+    - NuclearWar
   name: xeno-title
   description: xeno-description
   showInVote: true

@@ -56,7 +56,7 @@ entities:
     - type: LoadedMap
   - uid: 2
     components:
-    - id: TGMS_Erida
+    - id: TGCM_Erida
       type: BecomesStation
     - name: Erida
       type: MetaData

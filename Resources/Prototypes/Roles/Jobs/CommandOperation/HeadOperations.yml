@@ -4,9 +4,6 @@
   description: job-description-headoperations
   playTimeTracker: JobHeadOperations
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0

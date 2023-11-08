@@ -3,10 +3,6 @@
   name: job-name-alfa-marine
   description: job-description-alfamarine
   playTimeTracker: JobAlfaMarine
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
   startingGear: AlfaMarineGear
   icon: "JobIconAlfaMarine"
   supervisors: job-supervisors-centcom

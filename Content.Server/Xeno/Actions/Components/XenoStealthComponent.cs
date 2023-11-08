@@ -10,5 +10,5 @@ public sealed partial class XenoStealthComponent : Component
     public string Action = "ActionXenoStealth";
 
     [DataField("enabled")]
-    public bool Enabled;
+    public bool Enabled = true;
 }

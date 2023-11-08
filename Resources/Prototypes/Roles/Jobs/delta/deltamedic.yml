@@ -4,9 +4,6 @@
   description: job-description-deltamedic
   playTimeTracker: JobDeltaMedic
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: DeltaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitdelta_med
     id: DMedicIDCard
-    ears: ClothingHeadsetMarineDeltaMedic
+    ears: ClothingHeadsetMarineDelta

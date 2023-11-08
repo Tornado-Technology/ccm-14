@@ -43,10 +43,10 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
-            "TGMS_Erida",
-            "TGMS_Desert",
-            "TGMS_IceColony",
-            "TGMS_Valkyrie",
+            "TGCM_Erida",
+            "TGCM_Desert",
+            "TGCM_IceColony",
+            "valkyrie",
             "Dev",
             "MeteorArena",
         };

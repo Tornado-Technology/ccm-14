@@ -4,9 +4,6 @@
   description: job-description-alfamedic
   playTimeTracker: JobAlfaMedic
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: AlphaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitAlpha_med
     id: AMedicIDCard
-    ears: ClothingHeadsetMarineAlfaMedic
+    ears: ClothingHeadsetMarineAlfa

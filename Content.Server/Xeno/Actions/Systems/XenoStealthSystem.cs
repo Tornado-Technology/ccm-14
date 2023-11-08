@@ -28,10 +28,6 @@ public sealed class XenoStealthSystem : EntitySystem
     private void OnToggle(EntityUid uid, XenoStealthComponent component, XenoToggleStealthEvent args)
     {
         component.Enabled = !component.Enabled;
-
-        if (!component.Enabled && HasComp<StealthComponent>(uid))
-            RemComp<StealthComponent>(uid);
-        else
-            EnsureComp<StealthComponent>(uid);
+        EnsureComp<StealthComponent>(uid).Enabled = component.Enabled;
     }
 }

@@ -16,6 +16,7 @@ public sealed partial class XenoSpit2Event : WorldTargetActionEvent { }
 public sealed partial class XenoSpitRejuvenateEvent : WorldTargetActionEvent { }
 public sealed partial class XenoCrushDashEvent : WorldTargetActionEvent { }
 public sealed partial class XenoVinesEvent : InstantActionEvent { }
+public sealed partial class XenoNightVisionEvent : InstantActionEvent { }
 public sealed partial class XenoToggleStealthEvent : InstantActionEvent { }
 public sealed partial class XenoBuildWallEvent : WorldTargetActionEvent { }
 [Serializable, NetSerializable]

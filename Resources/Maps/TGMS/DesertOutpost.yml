@@ -39,7 +39,7 @@ entities:
     - type: LoadedMap
   - uid: 2
     components:
-    - id: TGMS_Desert
+    - id: TGCM_Desert
       type: BecomesStation
     - name: Desert
       type: MetaData

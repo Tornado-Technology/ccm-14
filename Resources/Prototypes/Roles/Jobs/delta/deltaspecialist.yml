@@ -4,9 +4,6 @@
   description: job-description-deltaspecialist
   playTimeTracker: JobDeltaSpecialist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: DeltaGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0

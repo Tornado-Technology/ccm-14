@@ -1,0 +1,13 @@
+- type: entity
+  id: ActionXenoNightVision
+  name: action-xeno-night-vision
+  description: desc-action-night-vision
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      icon:
+        sprite: Actions/xeno.rsi
+        state: night_vision
+      event: !type:XenoNightVisionEvent
+      checkCanInteract: false

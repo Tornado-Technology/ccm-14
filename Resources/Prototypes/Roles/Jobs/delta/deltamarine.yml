@@ -3,10 +3,6 @@
   name: job-name-delta-marine
   description: job-description-deltamarine
   playTimeTracker: JobDeltaMarine
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: DeltaGarrison
-      time: 0
   startingGear: DeltaMarineGear
   icon: "JobIconDeltaMarine"
   supervisors: job-supervisors-centcom

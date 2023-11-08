@@ -4,9 +4,6 @@
   description: job-description-charlieengineer
   playTimeTracker: JobCharlieEngineer
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: CharlieGarrison
-      time: 0
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
       time: 0
@@ -31,4 +28,4 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitcharlie_eng
     id: CEngineerIDCard
-    ears: ClothingHeadsetMarineCharlieEngineering
+    ears: ClothingHeadsetMarineCharlie

@@ -8,6 +8,8 @@
       healAmount: 250
     - type: XenoSpitRejuvenate
     - type: XenoSpit2
+      action: ActionDefilerAcidSpit
+      projectile: ProjectileDefilerDefaultSpit
       speed: 25
     - type: Sprite
       drawdepth: Mobs
