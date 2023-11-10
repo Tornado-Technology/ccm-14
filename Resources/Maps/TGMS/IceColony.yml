@@ -35,6 +35,7 @@ entities:
   entities:
   - uid: 2
     components:
+    - type: ArrivalsSource
     - id: TGCM_IceColony
       type: BecomesStation
     - type: MetaData

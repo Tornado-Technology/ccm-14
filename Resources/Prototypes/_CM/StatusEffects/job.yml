@@ -204,6 +204,12 @@
 # Command --------------------------------------
 - type: statusIcon
   parent: JobIcon
+  id: JobIconHeadComm
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Head
+- type: statusIcon
+  parent: JobIcon
   id: JobIconFieldCommander
   icon:
     sprite: Interface/Misc/job_icons.rsi
