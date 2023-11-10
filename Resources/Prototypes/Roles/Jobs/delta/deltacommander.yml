@@ -15,7 +15,7 @@
       time: 0
     - !type:DepartmentTimeRequirement
       department: MarinesGarrison
-      time: 7200
+      time: 0
   startingGear: DeltaCommanderGear
   icon: "JobIconDeltaCommander"
   supervisors: job-supervisors-centcom
