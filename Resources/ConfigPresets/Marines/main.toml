@@ -10,4 +10,4 @@ time = 180.0
 
 [hub]
 advertise = true
-tags = "lang:ru,rp:med,region:eu_e,tts"
+tags = "lang:ru,rp:med,region:eu_e"
