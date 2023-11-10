@@ -1,8 +1,8 @@
 ﻿[game]
-hostname = "🛰️ Corvax — CM 👾 [ЗБТ]"
-desc = "CM первый русскоязычный проект в Space Station 14.\nНа CMе средние требования к RP."
+hostname = "🛰️ Corvax — Colonial Marines 🦂 [ЗБТ]"
+desc = "Colonial Marines первый русскоязычный проект в Space Station 14.\nНа Colonial Marines средние требования к RP."
 maxplayers = 120
-soft_max_players = 105
+soft_max_players = 100
 map_rotation = true
 
 [rules]

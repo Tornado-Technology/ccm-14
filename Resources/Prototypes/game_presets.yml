@@ -2,7 +2,6 @@
   id: Extended
   alias:
   - extended
-  - shittersafari
   name: extended-title
   showInVote: false #2boring2vote
   description: extended-description
@@ -28,7 +27,7 @@
   name: death-match-title
   description: death-match-description
   maxPlayers: 15
-  showInVote: true
+  showInVote: false
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31

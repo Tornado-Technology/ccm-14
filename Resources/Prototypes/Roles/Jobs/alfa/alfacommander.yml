@@ -15,7 +15,7 @@
       time: 0
     - !type:DepartmentTimeRequirement
       department: MarinesGarrison
-      time: 7200
+      time: 0
   startingGear: AlfaCommanderGear
   icon: "JobIconAlfaCommander"
   supervisors: job-supervisors-centcom
