@@ -1,11 +1,13 @@
-﻿[game]
+[net]
+tickrate = 30
+max_connections = 120
+
+[game]
 hostname = "🛰️ Corvax — Colonial Marines 🦂 [ЗБТ]"
 desc = "Colonial Marines первый русскоязычный проект в Space Station 14.\nНа Colonial Marines средние требования к RP."
-maxplayers = 120
 soft_max_players = 100
 map_rotation = true
-lobbyduration = 360
-fallbackpreset = "extended"
+lobbyduration = 240
 lobbyenabled = true
 role_timers = true
 artifact_round_end_timer = 0.0
