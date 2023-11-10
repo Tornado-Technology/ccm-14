@@ -1,6 +1,6 @@
 ﻿[net]
 tickrate = 30
-max_connection = 120
+max_connections = 120
 
 [game]
 hostname = "🛰️ Corvax — Colonial Marines 🦂 [ЗБТ]"
