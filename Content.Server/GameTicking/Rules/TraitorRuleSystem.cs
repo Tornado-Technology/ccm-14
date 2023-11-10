@@ -288,6 +288,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         _npcFaction.AddFaction(entity, "Syndicate");
 
         // Give traitors their objectives
+        /*
         if (giveObjectives)
         {
             var maxDifficulty = _cfg.GetCVar(CCVars.TraitorMaxDifficulty);
@@ -303,7 +304,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
                 difficulty += Comp<ObjectiveComponent>(objective.Value).Difficulty;
             }
         }
-
+        */
         return true;
     }
 
