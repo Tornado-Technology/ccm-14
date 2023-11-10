@@ -19,6 +19,10 @@ timerrestart = 30
 map_enabled = true
 preset_enabled = false
 
+[shuttle]
+arrivals = true
+arrivals_returns = true
+
 [server]
 rules_header = "ui-rules-header-corvax" # UPDATE
 rules_file = "RulesCorvax.txt" # UPDATE
