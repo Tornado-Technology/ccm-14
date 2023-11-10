@@ -22,13 +22,13 @@ preset_enabled = false
 
 [server]
 rules_header = "ui-rules-header-corvax" # UPDATE
+rules_file = "RulesCorvax.txt" # UPDATE
 
 [discord]
 rich_main_icon_id = "corvax" # UPDATE
 
 [rules]
 time = 1.0
-rules_file = "RulesCorvax.txt" # UPDATE
 
 [viewport]
 maximum_width = 26
