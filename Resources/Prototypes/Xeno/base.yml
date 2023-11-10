@@ -31,8 +31,8 @@
         path: /Audio/Items/crowbar.ogg
     - type: Reactive
       groups:
-        Flammable: [Touch]
-        Extinguish: [Touch]
+        Flammable: [ Touch ]
+        Extinguish: [ Touch ]
     - type: NpcFactionMember
       factions:
       - Xeno
@@ -142,6 +142,10 @@
       softness: 5
       color: "#FF33FF"
       autoRot: true
+    - type: Prying
+      speedModifier: 2.75
+      pryPowered: true
+      force: true
 
 - type: entity
   abstract: true
