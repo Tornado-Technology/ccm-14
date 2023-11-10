@@ -18,7 +18,7 @@
 # Kekw
 - type: entity
   abstract: true
-  parent: Objective
+  parent: BaseObjective
   id: BaseTraitorObjective
 
 # requires that the player not have a die objective
