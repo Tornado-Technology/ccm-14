@@ -24,7 +24,7 @@
     # - prefix: Контр-адмирал
       # time: 7500
   startingGear: HeadOperationsGear
-  icon: "JobIconCaptain"
+  icon: "JobIconHeadComm"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:

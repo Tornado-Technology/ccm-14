@@ -56,6 +56,7 @@ entities:
     - type: LoadedMap
   - uid: 2
     components:
+    - type: ArrivalsSource
     - id: TGCM_Erida
       type: BecomesStation
     - name: Erida

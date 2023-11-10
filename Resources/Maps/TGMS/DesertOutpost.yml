@@ -39,6 +39,7 @@ entities:
     - type: LoadedMap
   - uid: 2
     components:
+    - type: ArrivalsSource
     - id: TGCM_Desert
       type: BecomesStation
     - name: Desert

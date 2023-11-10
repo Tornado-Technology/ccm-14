@@ -2,7 +2,7 @@
   id: TGCM_Erida
   mapName: Erida
   mapPath: /Maps/TGMS/erida.yml
-  minPlayers: 70
+  minPlayers: 0
   stations:
     TGCM_Erida:
       stationProto: StandardTGMSStation
