@@ -1,10 +1,10 @@
 - type: gameMap
   id: valkyrie
   mapName: Valkyrie
-  mapPath: /Maps/TGMS/Valk.yml
-  minPlayers: 70
+  mapPath: /Maps/TGMS/valkyrie.yml
+  minPlayers: 0
   stations:
-    valkyrie:
+    TGMS_Valkyrie:
       stationProto: StandardTGMSStation
       components:
         - type: StationJobs
