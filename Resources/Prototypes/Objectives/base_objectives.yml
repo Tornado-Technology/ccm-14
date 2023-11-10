@@ -15,6 +15,12 @@
   components:
   - type: Objective
 
+# Kekw
+- type: entity
+  abstract: true
+  parent: Objective
+  id: BaseTraitorObjective
+
 # requires that the player not have a die objective
 - type: entity
   abstract: true
