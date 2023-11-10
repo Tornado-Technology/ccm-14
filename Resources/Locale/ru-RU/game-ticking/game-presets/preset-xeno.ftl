@@ -1,5 +1,5 @@
-xeno-title = Ксеноморфы
-xeno-description = Уничтожьте этих тварей!!!
+xeno-title = Ядерная Война
+xeno-description = [color=red]Взорвите этих тварей![/color]
 
 xeno-xenomajor = [color=crimson]Крупная победа ксеноморфов![/color]
 xeno-xenominor = [color=crimson]Малая победа ксеноморфов![/color]

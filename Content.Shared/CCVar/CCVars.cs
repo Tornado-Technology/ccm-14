@@ -160,7 +160,7 @@ namespace Content.Shared.CCVar
         ///     Controls if the game can force a different preset if the current preset's criteria are not met.
         /// </summary>
         public static readonly CVarDef<bool>
-            GameLobbyFallbackEnabled = CVarDef.Create("game.fallbackenabled", true, CVar.ARCHIVE);
+            GameLobbyFallbackEnabled = CVarDef.Create("game.fallbackenabled", false, CVar.ARCHIVE);
 
         /// <summary>
         ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.

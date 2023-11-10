@@ -94,7 +94,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
-      useDelay: 0
+      useDelay: 10
       icon:
         sprite: Actions/xeno.rsi
         state: charge
