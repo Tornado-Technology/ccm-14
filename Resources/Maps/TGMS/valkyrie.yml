@@ -7824,7 +7824,8 @@ entities:
           -48,3:
             0: 65535
           -47,0:
-            2: 3
+            4: 1
+            2: 2
             0: 65532
           -47,1:
             0: 65535
@@ -55909,13 +55910,33 @@ entities:
     - pos: -187.5,0.5
       parent: 1
       type: Transform
+    - locked: False
+      type: Lock
+    - fixtures:
+        fix1:
+          shape: !type:PolygonShape
+            radius: 0.01
+            vertices:
+            - -0.4,-0.4
+            - 0.4,-0.4
+            - 0.4,0.29
+            - -0.4,0.29
+          mask:
+          - Impassable
+          - LowImpassable
+          layer:
+          - BulletImpassable
+          - Opaque
+          density: 50
+          hard: True
+          restitution: 0
+          friction: 0.4
+      type: Fixtures
     - air:
         volume: 200
         immutable: False
         temperature: 293.1496
         moles:
-        - 1.7459903
-        - 6.568249
         - 0
         - 0
         - 0
@@ -55926,7 +55947,13 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+      open: True
+      removedMasks: 20
       type: EntityStorage
+    - isPlaceable: True
+      type: PlaceableSurface
     - containers:
         entity_storage: !type:Container
           showEnts: False
@@ -79267,7 +79294,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 10486
     components:
     - flags: InContainer
@@ -79276,7 +79302,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 11458
     components:
     - flags: InContainer
@@ -79285,7 +79310,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 11926
     components:
     - flags: InContainer
@@ -79294,7 +79318,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 11927
     components:
     - flags: InContainer
@@ -79303,7 +79326,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 13425
     components:
     - flags: InContainer
@@ -79352,7 +79374,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 13460
     components:
     - flags: InContainer
@@ -79361,7 +79382,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 13461
     components:
     - flags: InContainer
@@ -79370,7 +79390,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 13462
     components:
     - flags: InContainer
@@ -79379,7 +79398,6 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
   - uid: 13463
     components:
     - flags: InContainer
@@ -79388,7 +79406,56 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
-    - type: InsideEntityStorage
+  - uid: 13579
+    components:
+    - pos: -187.51817,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13580
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13581
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13582
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13583
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13584
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13585
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13586
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13587
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
+  - uid: 13588
+    components:
+    - pos: -187.5338,0.4768505
+      parent: 1
+      type: Transform
 - proto: MarineCASFlareBomb
   entities:
   - uid: 13431
@@ -80715,6 +80782,13 @@ entities:
   - uid: 6679
     components:
     - pos: -149.30222,11.659177
+      parent: 1
+      type: Transform
+- proto: PinpointerUniversal
+  entities:
+  - uid: 13589
+    components:
+    - pos: -106.615005,11.396416
       parent: 1
       type: Transform
 - proto: PlasmaTankFilled

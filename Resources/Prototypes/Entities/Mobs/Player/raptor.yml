@@ -121,7 +121,5 @@
       - Common
       - Command
   - type: CanMoveInAir
-  - type: Ghost
-    canInteract: true
   - type: Visibility
     layer: 1

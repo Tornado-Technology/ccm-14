@@ -26,6 +26,11 @@ public sealed class RaptorObserverSystem : EntitySystem
     private void OnRemove(EntityUid uid, RaptorObserverComponent component, ComponentRemove args)
     {
         Remove(uid, component);
+
+        if (!TryComp<RaptorControlComponent>(component.Control, out var raprot))
+            return;
+
+        raprot.Observer = null;
     }
 
     private void OnEject(EntityUid uid, RaptorObserverComponent component, RaptorEjectPilotEvent args)
@@ -58,6 +63,5 @@ public sealed class RaptorObserverSystem : EntitySystem
         _mind.TransferTo(mindId, control.Pilot, mind: mind);
 
         control.Pilot = null;
-        control.Observer = null;
     }
 }

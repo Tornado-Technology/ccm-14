@@ -1,0 +1,51 @@
+- type: constructionGraph
+  id: MetalBarricade
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: metalbarricade
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 10
+
+    - node: metalbarricade
+      entity: MetalBarricade
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Anchoring
+              doAfter: 4
+            - tool: Prying
+              doAfter: 4
+        
+        - to: barbedbarricade
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+
+    - node: barbedbarricade
+      entity: BarbedBarricade
+      edges:
+        - to: metalbarricade
+          completed:
+            - !type:GivePrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 2
+

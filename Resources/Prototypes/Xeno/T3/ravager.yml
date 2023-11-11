@@ -25,7 +25,6 @@
       damageContainer: Biological
       damageModifierSet: XenoRavager
 
-
 - type: damageModifierSet
   id: XenoRavager
   coefficients:
@@ -34,7 +33,6 @@
     Piercing: 0.8
     Heat: 0.8
 
-
 - type: damageModifierSet
   id: XenoRavagerCrest
   coefficients:
@@ -42,7 +40,6 @@
     Slash: 0.2
     Piercing: 0.2
     Heat: 0.2
-
 
 - type: damageModifierSet
   id: XenoRavagerRage
