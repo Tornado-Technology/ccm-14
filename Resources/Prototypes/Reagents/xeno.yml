@@ -9,13 +9,6 @@
   boilingPoint: 4200.0
   meltingPoint: 3550.0
   viscosity: 0.25
-  metabolisms:
-    Poison:
-      effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 20.0 # Do you want to die?
   reactiveEffects:
     Acidic:
       methods: [ Touch ]
@@ -25,4 +18,4 @@
         ignoreResistances: false
         damage:
           types:
-            Caustic: 0.5
+            Caustic: 0.1
