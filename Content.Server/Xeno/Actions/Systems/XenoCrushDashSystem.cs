@@ -54,10 +54,10 @@ public sealed class XenoCrushDashSystem : EntitySystem
 
         if (HasComp<DisposalUnitComponent>(args.Target))
         {
-            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
+            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 2000));
             return;
         }
 
-        _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 100));
+        _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 300));
     }
 }
