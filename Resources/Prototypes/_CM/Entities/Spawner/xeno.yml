@@ -6,13 +6,13 @@
   suffix: SpawnXenoTGCM
   components:
     - type: XenoSpawn
+    - type: SpawnPoint
+      job_id: Kseno
     - type: Sprite
       layers:
         - state: green
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
-    - type: SpawnPoint
-      job_id: Kseno
 
 - type: entity
   name: Marine Xeno Praetorian
@@ -21,13 +21,13 @@
   suffix: SpawnXenoTGCM
   components:
     - type: XenoSpawn
+    - type: SpawnPoint
+      job_id: Pretor
     - type: Sprite
       layers:
         - state: green
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
-    - type: SpawnPoint
-      job_id: Pretor
 
 - type: entity
   name: Marine Xeno Queen
@@ -36,14 +36,13 @@
   suffix: SpawnXenoTGCM
   components:
     - type: XenoSpawn
+    - type: SpawnPoint
+      job_id: Quinn
     - type: Sprite
       layers:
         - state: green
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
-    - type: SpawnPoint
-      job_id: Quinn
-
 - type: entity
   name: Marine Xeno Runner
   id: SpawnMobMarineXenoRunner
@@ -51,10 +50,10 @@
   suffix: SpawnXenoTGCM
   components:
     - type: XenoSpawn
+    - type: SpawnPoint
+      job_id: Runi
     - type: Sprite
       layers:
         - state: green
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
-    - type: SpawnPoint
-      job_id: Runi

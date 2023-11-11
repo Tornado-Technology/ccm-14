@@ -17,7 +17,7 @@
     gloves: ClothingHandsGlovesMarine
     jumpsuit: ClothingUniformJumpsuitStaffOfficer
     eyes: ClothingEyesGlassesRPG
-    id: FieldCommanderIDCard
+    id: StaffOfficerIDCard
     ears: ClothingHeadsetMarineCommands
     belt: ClothingBeltAssault
     shoes: ClothingShoesCentcomBlack

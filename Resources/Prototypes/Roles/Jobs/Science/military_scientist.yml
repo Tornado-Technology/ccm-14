@@ -23,6 +23,7 @@
   access:
     - Research
     - Maintenance
+    - Medical
 
 - type: startingGear
   id: MilitaryScientistGear
