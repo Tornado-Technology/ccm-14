@@ -10,6 +10,17 @@
     - type: Transform
 
 - type: entity
+  id: StandardTGMSXeno
+  parent:
+    - BaseStation
+    - BaseStationJobsSpawning
+    - BaseStationAlertLevels
+  noSpawn: true
+  components:
+    - type: Transform
+
+
+- type: entity
   id: BaseStationArrivalsTGCM
   abstract: true
   components:

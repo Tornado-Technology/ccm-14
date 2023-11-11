@@ -89947,6 +89947,28 @@ entities:
     - pos: -211.5,3.5
       parent: 1
       type: Transform
+- proto: SpawnPointMarineLate
+  entities:
+  - uid: 13590
+    components:
+    - pos: -166.5,7.5
+      parent: 1
+      type: Transform
+  - uid: 13591
+    components:
+    - pos: -154.5,7.5
+      parent: 1
+      type: Transform
+  - uid: 13592
+    components:
+    - pos: -154.5,6.5
+      parent: 1
+      type: Transform
+  - uid: 13593
+    components:
+    - pos: -166.5,6.5
+      parent: 1
+      type: Transform
 - proto: SpawnPointMilitaryMainMedic
   entities:
   - uid: 15219

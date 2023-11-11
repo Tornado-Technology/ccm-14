@@ -48,8 +48,6 @@
       - Dead
     - type: Stamina
       critThreshold: 200
-    - type: Bloodstream
-      bloodReagent: FluorosulfuricAcid
     - type: DamageStateVisuals
       rotate: true
       states:
@@ -146,6 +144,14 @@
       speedModifier: 2.75
       pryPowered: true
       force: true
+    - type: Bloodstream
+      bloodlossDamage:
+        types:
+          Bloodloss: 0
+      bloodlossHealDamage:
+        types:
+          Bloodloss: -20
+      bloodReagent: FluorosulfuricAcid 
 
 - type: entity
   abstract: true

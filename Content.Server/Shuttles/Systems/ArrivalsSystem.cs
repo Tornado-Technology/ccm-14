@@ -161,63 +161,60 @@ public sealed class ArrivalsSystem : EntitySystem
     private void OnPlayerSpawn(PlayerSpawningEvent ev)
     {
         // Only works on latejoin even if enabled.
-        if (!Enabled || _ticker.RunLevel != GameRunLevel.InRound)
-            return;
-
-        if (ev?.Job?.PrototypeId != null) {
-            var job = _prototypeManager.Index<JobPrototype>(ev.Job.PrototypeId);
-
-            if (job.JobEntity != null)
+        if (_ticker.RunLevel == GameRunLevel.InRound)
+        {
+            if (ev?.Job?.PrototypeId != null)
             {
-                var entity = _prototypeManager.Index<EntityPrototype>(job.JobEntity);
-                if (entity != null)
+                var job = _prototypeManager.Index<JobPrototype>(ev.Job.PrototypeId);
+                if (job.JobEntity != null)
                 {
-                    if (entity.Components.ContainsKey(nameof(XenoComponent)))
+                    var entity = _prototypeManager.Index<EntityPrototype>(job.JobEntity);
+                    if (entity != null)
                     {
-                        var points = EntityQueryEnumerator<XenoSpawnComponent, SpawnPointComponent, TransformComponent>();
-                        var possiblePositions = new List<EntityCoordinates>();
-
-                        while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
+                        if (entity.Components.ContainsKey(nameof(XenoComponent)))
                         {
-                            if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
-                                continue;
+                            var points = EntityQueryEnumerator<XenoSpawnComponent, SpawnPointComponent, TransformComponent>();
+                            var possiblePositions = new List<EntityCoordinates>();
 
-                            possiblePositions.Add(xform.Coordinates);
-                        }
+                            while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
+                            {
+                                if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
+                                    continue;
 
-                        if (possiblePositions.Count > 0)
-                        {
-                            var spawnLoc = _random.Pick(possiblePositions);
-                            ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                                spawnLoc,
-                                ev.Job,
-                                ev.HumanoidCharacterProfile,
-                                ev.Station);
+                                possiblePositions.Add(xform.Coordinates);
+                            }
+
+                            if (possiblePositions.Count > 0)
+                            {
+                                var spawnLoc = _random.Pick(possiblePositions);
+                                ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                                    spawnLoc,
+                                    ev.Job,
+                                    ev.HumanoidCharacterProfile,
+                                    ev.Station);
+                            }
                         }
                     }
                 }
-            }
-            else
-            {
-                var points = EntityQueryEnumerator<MarineSpawnComponent, SpawnPointComponent, TransformComponent>();
-                var possiblePositions = new List<EntityCoordinates>();
-
-                while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
+                else
                 {
-                    //if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
-                    //    continue;
+                    var points = EntityQueryEnumerator<MarineSpawnComponent, TransformComponent>();
+                    var possiblePositions = new List<EntityCoordinates>();
 
-                    possiblePositions.Add(xform.Coordinates);
-                }
+                    while (points.MoveNext(out var uid, out _, out var xform))
+                    {
+                        possiblePositions.Add(xform.Coordinates);
+                    }
 
-                if (possiblePositions.Count > 0)
-                {
-                    var spawnLoc = _random.Pick(possiblePositions);
-                    ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                        spawnLoc,
-                        ev.Job,
-                        ev.HumanoidCharacterProfile,
-                        ev.Station);
+                    if (possiblePositions.Count > 0)
+                    {
+                        var spawnLoc = _random.Pick(possiblePositions);
+                        ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                            spawnLoc,
+                            ev.Job,
+                            ev.HumanoidCharacterProfile,
+                            ev.Station);
+                    }
                 }
             }
         }
