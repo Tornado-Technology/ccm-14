@@ -135,21 +135,14 @@ namespace Content.Server.GameTicking
             if (DummyTicker)
                 return;
 
-            //if (station == EntityUid.Invalid)
-            //{
+            if (station == EntityUid.Invalid)
+            {
                 var stations = GetSpawnableStations();
                 if (stations.Count == 0)
                     station = EntityUid.Invalid;
                 else
                     station = stations[0];
-
-                if (jobId != null)
-                {
-                    station = stations[0];
-                    if (jobId == "Kseno" || jobId == "Pretor" || jobId == "Quinn" || jobId == "Runi")
-                        station = stations[1];
-                }
-            //}
+            }
 
             if (lateJoin && DisallowLateJoin)
             {

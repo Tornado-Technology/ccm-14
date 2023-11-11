@@ -160,61 +160,46 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void OnPlayerSpawn(PlayerSpawningEvent ev)
     {
-        // Only works on latejoin even if enabled.
-        if (_ticker.RunLevel == GameRunLevel.InRound)
+        if (ev?.Job?.PrototypeId != null)
         {
-            if (ev?.Job?.PrototypeId != null)
+            if (ev.Job.PrototypeId == "Quinn" || ev.Job.PrototypeId == "Pretor" || ev.Job.PrototypeId == "Kseno" || ev.Job.PrototypeId == "Runi")
             {
-                var job = _prototypeManager.Index<JobPrototype>(ev.Job.PrototypeId);
-                if (job.JobEntity != null)
+                var points = EntityQueryEnumerator<XenoSpawnComponent, TransformComponent>();
+                var possiblePositions = new List<EntityCoordinates>();
+
+                while (points.MoveNext(out var uid, out _, out var xform))
                 {
-                    var entity = _prototypeManager.Index<EntityPrototype>(job.JobEntity);
-                    if (entity != null)
-                    {
-                        if (entity.Components.ContainsKey(nameof(XenoComponent)))
-                        {
-                            var points = EntityQueryEnumerator<XenoSpawnComponent, SpawnPointComponent, TransformComponent>();
-                            var possiblePositions = new List<EntityCoordinates>();
-
-                            while (points.MoveNext(out var uid, out _, out var spawnPoint, out var xform))
-                            {
-                                if (spawnPoint.SpawnType != SpawnPointType.LateJoin)
-                                    continue;
-
-                                possiblePositions.Add(xform.Coordinates);
-                            }
-
-                            if (possiblePositions.Count > 0)
-                            {
-                                var spawnLoc = _random.Pick(possiblePositions);
-                                ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                                    spawnLoc,
-                                    ev.Job,
-                                    ev.HumanoidCharacterProfile,
-                                    ev.Station);
-                            }
-                        }
-                    }
+                    possiblePositions.Add(xform.Coordinates);
                 }
-                else
+
+                if (possiblePositions.Count > 0)
                 {
-                    var points = EntityQueryEnumerator<MarineSpawnComponent, TransformComponent>();
-                    var possiblePositions = new List<EntityCoordinates>();
+                    var spawnLoc = _random.Pick(possiblePositions);
+                    ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                        spawnLoc,
+                        ev.Job,
+                        ev.HumanoidCharacterProfile,
+                        ev.Station);
+                }
+            }
+            else
+            {
+                var points = EntityQueryEnumerator<MarineSpawnComponent, TransformComponent>();
+                var possiblePositions = new List<EntityCoordinates>();
 
-                    while (points.MoveNext(out var uid, out _, out var xform))
-                    {
-                        possiblePositions.Add(xform.Coordinates);
-                    }
+                while (points.MoveNext(out var uid, out _, out var xform))
+                {
+                    possiblePositions.Add(xform.Coordinates);
+                }
 
-                    if (possiblePositions.Count > 0)
-                    {
-                        var spawnLoc = _random.Pick(possiblePositions);
-                        ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                            spawnLoc,
-                            ev.Job,
-                            ev.HumanoidCharacterProfile,
-                            ev.Station);
-                    }
+                if (possiblePositions.Count > 0)
+                {
+                    var spawnLoc = _random.Pick(possiblePositions);
+                    ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
+                        spawnLoc,
+                        ev.Job,
+                        ev.HumanoidCharacterProfile,
+                        ev.Station);
                 }
             }
         }
