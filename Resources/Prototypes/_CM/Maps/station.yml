@@ -5,6 +5,7 @@
     - BaseStationJobsSpawning
     - BaseStationAlertLevels
     - BaseStationArrivalsTGCM
+    - BaseStationCargo
   noSpawn: true
   components:
     - type: Transform
