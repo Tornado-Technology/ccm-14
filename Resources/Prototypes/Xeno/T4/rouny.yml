@@ -27,7 +27,7 @@
       baseSprintSpeed: 12
     - type: StealthOnMove
       passiveVisibilityRate: -0.6
-      movementVisibilityRate: 0.1
+      movementVisibilityRate: 0.2
     - type: Stealth
     - type: Fixtures
       fixtures:

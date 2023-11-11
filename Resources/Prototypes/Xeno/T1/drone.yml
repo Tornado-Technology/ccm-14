@@ -12,6 +12,7 @@
     - type: XenoVines
     - type: XenoBuildWall
     - type: XenoPsychicCure
+      healAmount: 200
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/drone.rsi

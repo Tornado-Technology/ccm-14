@@ -3,6 +3,8 @@ using Content.Server.Research.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Kitchen;
 using Content.Shared.Mind;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Research.Components;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
@@ -76,9 +78,12 @@ public sealed partial class XenoSystem : EntitySystem
 
         _tiers.Clear();
 
-        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, XenoTierComponent>();
-        while (query.MoveNext(out var uid, out var xeno, out var evol, out var tiers))
+        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, MobStateComponent, XenoTierComponent>();
+        while (query.MoveNext(out var uid, out var xeno, out var evol, out var state,  out var tiers))
         {
+            if (state.CurrentState != MobState.Alive)
+                continue;
+
             if (_tiers.TryGetValue(tiers.Tier, out var tier))
             {
                 _tiers.Remove(tiers.Tier);

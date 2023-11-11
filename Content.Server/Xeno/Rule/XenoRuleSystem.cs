@@ -21,7 +21,7 @@ namespace Content.Server.Xeno.Systems;
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
     public const float AnnouncmentTime = 300f;
-    public const float FOBTime = 1200f;
+    public const float FOBTime = 1600f;
 
     public int Eggs { get; private set; }
     public int Marines { get; private set; }

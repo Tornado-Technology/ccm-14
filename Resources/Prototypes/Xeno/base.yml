@@ -150,7 +150,7 @@
           Bloodloss: 0
       bloodlossHealDamage:
         types:
-          Bloodloss: -20
+          Bloodloss: -200
       bloodReagent: FluorosulfuricAcid 
 
 - type: entity

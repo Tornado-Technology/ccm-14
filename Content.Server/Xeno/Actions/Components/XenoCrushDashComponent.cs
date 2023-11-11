@@ -10,11 +10,11 @@ public sealed partial class XenoCrushDashComponent : Component
     public string Action = "ActionXenoCrushDash";
 
     [DataField("dashForce")]
-    public float DashForce = 5f;
+    public float DashForce = 35f;
 
     /// <summary>
     ///     Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
-    public float StunTime = 7f;
+    public float StunTime = 10f;
 }

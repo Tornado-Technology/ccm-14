@@ -32,3 +32,4 @@
     outerClothing: ClothingOuterCoatLab
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
+    id: MilitaryMedicIDCard

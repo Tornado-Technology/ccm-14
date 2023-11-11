@@ -13,7 +13,7 @@
     - type: XenoBuildWall
       wallPrototype: XenoWall
     - type: XenoPsychicCure
-      healAmount: 150
+      healAmount: 300
     - type: MobThresholds
       thresholds:
         0: Alive
