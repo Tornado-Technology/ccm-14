@@ -8,8 +8,6 @@
       stationProto: StandardTGMSStation
       components:
         - type: StationJobs
-          overflowJobs:
-            - Kseno
           availableJobs:
             AlfaMarine: [ 6, 6 ]
             AlfaMedic: [ 1, 1 ]
