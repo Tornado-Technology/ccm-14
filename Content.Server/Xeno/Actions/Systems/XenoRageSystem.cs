@@ -56,7 +56,7 @@ public sealed class XenoRageSystem : EntitySystem
 
         component.Enabled = true;
         Dirty(uid, component);
-        component.TimeUsed = _timing.CurTime + TimeSpan.FromSeconds(30f);
+        component.TimeUsed = _timing.CurTime + TimeSpan.FromSeconds(10f);
         damageable.DamageModifierSetId = component.ModifierSet;
     }
 }

@@ -1,0 +1,31 @@
+- type: job
+  id: BravoMedic
+  name: job-name-bravo-medic
+  description: job-description-bravomedic
+  playTimeTracker: JobBravoMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
+  startingGear: BravoMedicGear
+  icon: "JobIconBravoMedic"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+    - SquadBravoMedic
+
+- type: startingGear
+  id: BravoMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitbravo_med
+    id: BMedicIDCard
+    ears: ClothingHeadsetMarineBravo

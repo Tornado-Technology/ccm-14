@@ -29,3 +29,24 @@ id-card-access-level-maintenance = Техобслуживание
 id-card-access-level-external = Внешний
 id-card-access-level-nuclear-operative = Ядерный оперативник
 id-card-access-level-syndicate-agent = Агент синдиката
+
+id-card-access-level-squad-alpha = Альфа
+id-card-access-level-squad-bravo = Браво
+id-card-access-level-squad-charlie = Чарли
+id-card-access-level-squad-delta = Дельта
+
+id-card-access-level-squad-specialist = Специалист Отряда
+id-card-access-level-squad-specialist-alpha = Специалист Альфа
+id-card-access-level-squad-specialist-bravo = Специалист Браво
+id-card-access-level-squad-specialist-charlie = Специалист Чарли
+id-card-access-level-squad-specialist-delta = Специалист Дельта
+
+id-card-access-level-squad-leader = Лидер отряда
+id-card-access-level-squad-leader-alpha = Лидер Альфа
+id-card-access-level-squad-leader-bravo = Лидер Браво
+id-card-access-level-squad-leader-charlie = Лидер Чарли
+id-card-access-level-squad-leader-delta = Лидер Дельта
+
+id-card-access-level-pilot = Пилот
+id-card-access-level-pilot-raptor = Пилот Раптора
+id-card-access-level-pilot-normandy = Пилот Нормандии

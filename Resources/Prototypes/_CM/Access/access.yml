@@ -1,6 +1,6 @@
 #Chapters of the Operation.-------------------------------
 - type: accessGroup
-  id: Capital_Operation
+  id: HeadOperations
   tags:
   - EmergencyShuttleRepealAll
   - Captain
@@ -31,204 +31,140 @@
   - Chapel
   - Hydroponics
   - Atmospherics
-  - TGMSS
-  - TGMSA
-  - TGMSB
-  - TGMSC
-  - TGMSD
-#Field Commander------------------------------------------
+  - SquadSpecialist
+  - SquadLeader
+  - SquadAlpha
+  - SquadBravo
+  - SquadCharlie
+  - SquadDelta
+  - Pilot
+  - PilotRaptor
+  - PilotNormandy
+
+# Field Commander------------------------------------------
 - type: accessGroup
-  id: TGMSFC
+  id: FieldCommander
   tags:
-  - TGMSS
-  - TGMSA
-  - TGMSB
-  - TGMSC
-  - TGMSD
+  - SquadSpecialist
+  - SquadLeader
+  - SquadAlpha
+  - SquadBravo
+  - SquadCharlie
+  - SquadDelta
   - Command
   - Engineering
   - Medical
   - Chemistry
   - Detective
-#Marine_SL------------------------------------------------
+
+# Squads
+- type: accessLevel
+  id: SquadAlpha 
+  name: id-card-access-level-squad-alpha
+
+- type: accessLevel
+  id: SquadBravo
+  name: id-card-access-level-squad-bravo
+
+- type: accessLevel
+  id: SquadCharlie
+  name: id-card-access-level-squad-charlie
+
+- type: accessLevel
+  id: SquadDelta
+  name: id-card-access-level-squad-delta
+
+# Squad specialist
+- type: accessLevel
+  id: SquadSpecialist
+  name: id-card-access-level-squad-specialist
+
+# Squad leaders
+- type: accessLevel
+  id: SquadLeader
+  name: id-card-access-level-squad-leader
+
+# Pilots
+- type: accessLevel
+  id: Pilot
+  name: id-card-access-level-pilot
+
+- type: accessLevel
+  id: PilotRaptor
+  name: id-card-access-level-pilot-raptor
+
+- type: accessLevel
+  id: PilotNormandy
+  name: id-card-access-level-pilot-normandy
+
+# Groups Squad FULL
 - type: accessGroup
-  id: TGMSASL
+  id: SquadAlpha
   tags:
-  - TGMSS
-  - TGMSA
-  - Command
-  - Engineering
+  - SquadAlpha
+
+- type: accessGroup
+  id: SquadBravo
+  tags:
+  - SquadBravo
+
+- type: accessGroup
+  id: SquadCharlie
+  tags:
+  - SquadCharlie
+
+- type: accessGroup
+  id: SquadDelta
+  tags:
+  - SquadDelta
+
+# Groups Squad medic
+- type: accessGroup
+  id: SquadAlphaMedic
+  tags:
+  - SquadAlpha
   - Medical
   - Chemistry
-  - Detective
+
 - type: accessGroup
-  id: TGMSBSL
+  id: SquadBravoMedic
   tags:
-  - TGMSS
-  - TGMSB
-  - Command
-  - Engineering
+  - SquadBravo
   - Medical
   - Chemistry
-  - Detective
+
 - type: accessGroup
-  id: TGMSCSL
+  id: SquadCharlieMedic
   tags:
-  - TGMSS
-  - TGMSC
-  - Command
-  - Engineering
+  - SquadCharlie
   - Medical
   - Chemistry
-  - Detective
+
 - type: accessGroup
-  id: TGMSDSL
+  id: SquadDeltaMedic
   tags:
-  - TGMSD
-  - Command
-  - Engineering
+  - SquadDelta
   - Medical
   - Chemistry
-  - Detective
-#marine_eng-----------------------------------------------
+
+# Groups Medical
 - type: accessGroup
-  id: TGMSAE
+  id: MedicalOfficer
   tags:
-  - TGMSS
-  - TGMSA
-  - Engineering
-- type: accessGroup
-  id: TGMSBE
-  tags:
-  - TGMSB
-  - Engineering
-- type: accessGroup
-  id: TGMSCE
-  tags:
-  - TGMSC
-  - Engineering
-- type: accessGroup
-  id: TGMSDE
-  tags:
-  - TGMSD
-  - Engineering
-#marine_med-----------------------------------------------
-- type: accessGroup
-  id: TGMSAM
-  tags:
-  - TGMSA
   - Medical
   - Chemistry
-- type: accessGroup
-  id: TGMSBM
-  tags:
-  - TGMSB
-  - Medical
-  - Chemistry
-- type: accessGroup
-  id: TGMSCM
-  tags:
-  - TGMSC
-  - Medical
-  - Chemistry
-- type: accessGroup
-  id: TGMSDM
-  tags:
-  - TGMSD
-  - Medical
-  - Chemistry
-#marine_spec----------------------------------------------
-- type: accessGroup
-  id: TGMSAS
-  tags:
-  - TGMSA
-  - Detective
-- type: accessGroup
-  id: TGMSBS
-  tags:
-  - TGMSB
-  - Detective
-- type: accessGroup
-  id: TGMSCS
-  tags:
-  - TGMSC
-  - Detective
-- type: accessGroup
-  id: TGMSDS
-  tags:
-  - TGMSD
-  - Detective
-#Staff Officers and pilots--------------------------------
-- type: accessGroup
-  id: TGMSSOP
-  tags:
-  - Command
-#Logistics support----------------------------------------
-- type: accessGroup
-  id: TGMSLS
-  tags:
-  - Cargo
-- type: accessGroup
-  id: TGMSLS_
-  tags:
-  - Cargo
-#  - Salvag
-  - Quartermaster
-  - Command
-#RND------------------------------------------------------
-- type: accessGroup
-  id: TGMSR
-  tags:
-  - Research
-#stroybata------------------------------------------------
-- type: accessGroup
-  id: TGMSSE
-  tags:
-  - Engineering
-  - Atmospherics
-- type: accessGroup
-  id: TGMSSE_
-  tags:
-  - Engineering
-  - Atmospherics
-  - ChiefEngineer 
-  - Command
-#Polyce---------------------------------------------------
-- type: accessGroup
-  id: TGMSP
-  tags:
-  - EmergencyShuttleRepealAll
-  - HeadOfPersonnel
-  - ChiefEngineer
   - ChiefMedicalOfficer
-  - ResearchDirector
-  - Security
-  - Detective
-  - Brig
-  - Engineering
-  - Medical
-  - Quartermaster
-  - Salvage
-  - Cargo
-  - Research
-  - Service
-  - Maintenance
-  - External
-  - Janitor
-  - Theatre
-  - Bar
-  - Chemistry
-  - Kitchen
-  - Chapel
-  - Hydroponics
-  - Atmospherics
-  - TGMSS
-  - TGMSA
-  - TGMSB
-  - TGMSC
-  - TGMSD
+  - Command
+
 - type: accessGroup
-  id: TGMSP_
+  id: Medical
+  tags:
+  - Medical
+  - Chemistry
+
+# Groups Military police
+- type: accessGroup
+  id: MilitaryPoliceOfficer
   tags:
   - EmergencyShuttleRepealAll
   - HeadOfPersonnel
@@ -256,41 +192,40 @@
   - Chapel
   - Hydroponics
   - Atmospherics
-  - TGMSS
-  - TGMSA
-  - TGMSB
-  - TGMSC
-  - TGMSD 
-#med------------------------------------------------------
+  - SquadAlpha
+  - SquadBravo
+  - SquadCharlie
+  - SquadDelta
+
 - type: accessGroup
-  id: TGMSM
+  id: MilitaryPoliceman
   tags:
-  - Medical
-  - Chemistry
-- type: accessGroup
-  id: TGMSM_
-  tags:
-  - Medical
-  - Chemistry
+  - EmergencyShuttleRepealAll
+  - HeadOfPersonnel
+  - ChiefEngineer
   - ChiefMedicalOfficer
-  - Command
-#New acces------------------------------------------------
-- type: accessLevel
-  id: TGMSA
-  name: id-card-access-level-alfa
-
-- type: accessLevel
-  id: TGMSB
-  name: id-card-access-level-brabo
-
-- type: accessLevel
-  id: TGMSC
-  name: id-card-access-level-charle
-
-- type: accessLevel
-  id: TGMSD
-  name: id-card-access-level-delta
-
-- type: accessLevel
-  id: TGMSS
-  name: id-card-access-level-sl
+  - ResearchDirector
+  - Security
+  - Detective
+  - Brig
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - SquadAlpha
+  - SquadBravo
+  - SquadCharlie
+  - SquadDelta

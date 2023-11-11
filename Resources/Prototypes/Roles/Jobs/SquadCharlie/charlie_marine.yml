@@ -1,0 +1,18 @@
+- type: job
+  id: CharlieMarine
+  name: job-name-charlie-marine
+  description: job-description-charlieamarine
+  playTimeTracker: JobCharlieMarine
+  startingGear: CharlieMarineGear
+  icon: "JobIconCharlieMarine"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+    - SquadCharlie
+
+- type: startingGear
+  id: CharlieMarineGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitcharlie_mar
+    id: CRiflemanIDCard
+    ears: ClothingHeadsetMarineCharlie

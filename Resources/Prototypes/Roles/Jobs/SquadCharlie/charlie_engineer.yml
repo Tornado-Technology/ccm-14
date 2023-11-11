@@ -1,0 +1,32 @@
+- type: job
+  id: CharlieEngineer
+  name: job-name-charlie-engineer
+  description: job-description-charlieengineer
+  playTimeTracker: JobCharlieEngineer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
+  startingGear: CharlieEngineerGear
+  icon: "JobIconCharlieEngineer"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+    - SquadCharlie
+    - Engineering
+
+- type: startingGear
+  id: CharlieEngineerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitcharlie_eng
+    id: CEngineerIDCard
+    ears: ClothingHeadsetMarineCharlie

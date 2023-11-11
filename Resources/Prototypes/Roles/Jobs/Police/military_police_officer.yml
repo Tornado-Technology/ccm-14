@@ -1,0 +1,37 @@
+- type: job
+  id: MilitaryPoliceOfficer
+  name: job-name-militarypoliceofficer
+  description: job-description-militarypoliceofficer
+  playTimeTracker: JobMilitaryPoliceOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
+  startingGear: MilitaryPoliceOfficerGear
+  icon: "JobIconMilitaryPoliceOfficer"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+    - MilitaryPoliceOfficer
+
+- type: startingGear
+  id: MilitaryPoliceOfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+    back: ClothingBackpackHOSFilled
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite
+    outerClothing: ClothingOuterCoatHoSTrench
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadHatBeretHoS
+    gloves: ClothingHandsGlovesCombat
+    id: PoliceOfficerIDCard
+    ears: ClothingHeadsetSecurity

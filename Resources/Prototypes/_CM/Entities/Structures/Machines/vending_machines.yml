@@ -97,30 +97,6 @@
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachineMarineBranchLeader
-  name: ColMarTech Automated BranchLeader Rack
-  description: An automated BranchLeader rack hooked up to a big storage of standard-issue weapons.
-  components:
-  - type: VendingMachine
-    pack: BranchLeaderVendorInventory
-    offState: off
-    brokenState: broken
-    normalState: normal
-    ejectDelay: 1
-  - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
-
-- type: entity
-  parent: VendingMachine
   id: VendingMachineMarineMunition
   name: ColMarTech Automated Munition Squad Vendor
   description: An automated supply rack hooked up to a small storage of various ammunition types. Can be accessed by any Marine Rifleman.
@@ -166,52 +142,3 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 #  - type: AccessReader
 #    access: [["Chemistry"]]
-
-- type: entity
-  parent: VendingMachine
-  id: VendingMachineSpecialistEquipment
-  name: ColMarTech Automated Specialist Equipment Rack
-  description: Automated shelving connected to a colossal storage of standard equipment for specialists.
-  components:
-  - type: VendingMachine
-    pack: EquipSpecialistVendInventory
-    offState: off
-    brokenState: broken
-    normalState: normal
-    ejectDelay: 1
-  - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
-
-- type: entity
-  parent: VendingMachine
-  id: VendingMachineSquadLeaderEquipment
-  name: ColMarTech Automated Squad Leader Equipment Rack
-  description: Automated shelving connected to a colossal storage of standard equipment for Squad Leaders.
-  components:
-  - type: VendingMachine
-    pack: EquipSquadLeaderVendInventory
-    offState: off
-    brokenState: broken
-    normalState: normal
-    ejectDelay: 1
-  - type: Sprite
-    sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
-

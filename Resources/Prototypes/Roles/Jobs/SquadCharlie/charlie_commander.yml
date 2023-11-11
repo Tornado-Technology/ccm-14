@@ -1,0 +1,33 @@
+- type: job
+  id: CharlieCommander
+  name: job-name-charlie-commander
+  description: job-description-charliecommander
+  playTimeTracker: JobCharlieCommander
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
+      time: 0
+  startingGear: CharlieCommanderGear
+  icon: "JobIconCharlieCommander"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+    - SquadCharlie
+    - SquadLeader
+    - Command
+
+- type: startingGear
+  id: CharlieCommanderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitcharlie_leader
+    id: CCommanderIDCard
+    ears: ClothingHeadsetMarineCharlieLeader

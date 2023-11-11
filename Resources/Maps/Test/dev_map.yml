@@ -4141,13 +4141,6 @@ entities:
     - pos: 2.691504,-0.4687831
       parent: 179
       type: Transform
-- proto: MarineTurretUndeployed
-  entities:
-  - uid: 489
-    components:
-    - pos: 5.5688934,4.643818
-      parent: 179
-      type: Transform
 - proto: MedicalScanner
   entities:
   - uid: 592

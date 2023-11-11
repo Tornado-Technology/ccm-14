@@ -8,7 +8,7 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
-    - Command
+    - FieldCommander
 
 - type: startingGear
   id: StaffOfficerGear

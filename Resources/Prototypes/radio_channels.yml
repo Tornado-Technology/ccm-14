@@ -4,6 +4,7 @@
   keycode: ";"
   frequency: 1459
   color: "#32cd32"
+  longRange: true
 
 - type: radioChannel
   id: CentCom
@@ -19,6 +20,7 @@
   keycode: 'к' # Corvax-Localization
   frequency: 1353
   color: "#fcdf03"
+  longRange: true
 
 - type: radioChannel
   id: Engineering
@@ -26,6 +28,7 @@
   keycode: 'и' # Corvax-Localization
   frequency: 1357
   color: "#f37746"
+  longRange: true
 
 - type: radioChannel
   id: Medical
@@ -33,6 +36,7 @@
   keycode: 'м' # Corvax-Localization
   frequency: 1355
   color: "#57b8f0"
+  longRange: true
 
 - type: radioChannel
   id: Science
@@ -40,6 +44,7 @@
   keycode: 'н' # Corvax-Localization
   frequency: 1351
   color: "#c68cfa"
+  longRange: true
 
 - type: radioChannel
   id: Security
@@ -47,6 +52,7 @@
   keycode: 'о' # Corvax-Localization
   frequency: 1359
   color: "#dd3535"
+  longRange: true
 
 - type: radioChannel
   id: Service
@@ -54,6 +60,7 @@
   keycode: 'с' # Corvax-Localization
   frequency: 1349
   color: "#6ca729"
+  longRange: true
 
 - type: radioChannel
   id: Supply
@@ -61,6 +68,7 @@
   keycode: 'п' # Corvax-Localization
   frequency: 1347
   color: "#b88646"
+  longRange: true
 
 - type: radioChannel
   id: Syndicate

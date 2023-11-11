@@ -64,10 +64,12 @@ job-name-alfa-commander = Командир отряда "Альфа"
 job-name-delta-commander = Командир отряда "Дельта"
 job-name-bravo-commander = Командир отряда "Браво"
 job-name-charlie-commander = Командир отряда "Чарли"
+
 job-name-alfa-specialist = Специалист отряда "Альфа"
 job-name-delta-specialist = Специалист отряда "Дельта"
 job-name-bravo-specialist = Специалист отряда "Браво"
 job-name-charlie-specialist = Специалист отряда "Чарли"
+
 job-name-militarypoliceman = Военный полицейский
 job-name-militarypoliceofficer = Офицер военной полиции
 job-name-militaryscientist = Военный учёный

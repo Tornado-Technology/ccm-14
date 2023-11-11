@@ -4,6 +4,9 @@ ent-ActionXenoEvolution = Эволюционировать
 ent-ActionXenoVines = Посадить лианы
     .desc = Вырастите вокруг себя лианы, которые замедляют всех, кроме ксеноморфов.
 
+ent-ActionXenoGorgerVines = { ent-ActionXenoVines }
+    .desc = { ent-ActionXenoGorgerVines.desc }
+
 ent-ActionXenoBuildWall = Постройка стены
     .desc = Возведение различных стен и сооружений для защиты улиц. У разных ксеноморфов могут быть разные виды стен.
 
@@ -31,6 +34,9 @@ ent-ActionXenoStealth = Скрытность
 ent-ActionXenoStun = Оглушение
     .desc = Оглушает своим сокрушительным ударом врага на 7 секунд. Бонк!
 
+ent-ActionXenoBullStun = { ent-ActionXenoStun }
+    .desc = { ent-ActionXenoStun.desc }
+
 ent-ActionXenoEndure = Защитный гребень
     .desc = Поднятие гребня дарует вам защиту в размере 80% от любого урона. Но забирает возможность передвижения.
 
@@ -47,4 +53,7 @@ ent-ActionDefilerDefaultSpit = Завеса нейротоксина
     .desc = Создавайте облака из нейротоксина, способные толпами валить ваших врагов! Ну или дышать интересным , если вы ксеноморф...
 
 ent-ActionXenoLayEgg = Отложить яйцо
-.desc = Откладывай яйца с твоими детьми! Смотри какие милашки!
+    .desc = Откладывай яйца с твоими детьми! Смотри какие милашки!
+
+ent-ActionXenoNightVision = Ночное зрение
+    .desc = Вы видите все, и даже больше!

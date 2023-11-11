@@ -21,7 +21,7 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-    - TGMSFC
+    - FieldCommander
 
 - type: startingGear
   id: FieldCommanderGear

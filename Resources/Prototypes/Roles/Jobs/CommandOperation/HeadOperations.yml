@@ -28,7 +28,7 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-    - Capital_Operation
+    - HeadOperations
 
 - type: startingGear
   id: HeadOperationsGear

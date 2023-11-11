@@ -5,9 +5,10 @@
   noSpawn: true
   components:
     - type: InstantAction
-      useDelay: 10
+      useDelay: 5
       icon:
         sprite: Actions/xeno.rsi
         state: night_vision
-      event: !type:XenoNightVisionEvent
+      clientExclusive: true
       checkCanInteract: false
+      event: !type:XenoNightVisionEvent

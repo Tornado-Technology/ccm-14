@@ -1,0 +1,31 @@
+- type: entity
+  parent: AirlockGlass
+  id: AirlockSquadAlphaGlass
+  suffix: Alpha, Glass
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/squad_alpha.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockSquadBarvoGlass
+  suffix: Barvo, Glass
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/squad_bravo.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockSquadCharlieGlass
+  suffix: Charlie, Glass
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/squad_charlie.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockSquadDeltaGlass
+  suffix: Delta, Glass
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/squad_delta.rsi

@@ -20,8 +20,10 @@
   icon: "JobIconSupplyOfficer"
   supervisors: job-supervisors-supplyofficer
   canBeAntag: false
-  accessGroups:
-    - TGMSLS_
+  access:
+    - Cargo
+    - Quartermaster
+    - Command
 
 - type: startingGear
   id: SupplyOfficerGear

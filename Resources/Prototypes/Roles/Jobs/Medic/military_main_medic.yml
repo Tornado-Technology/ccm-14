@@ -1,0 +1,34 @@
+- type: job
+  id: MilitaryMainMedic
+  name: job-name-militarymainmedic
+  description: job-description-militarymainmedic
+  playTimeTracker: JobMilitaryMainMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
+  startingGear: MilitaryMainMedicGear
+  icon: "JobIconMilitaryMainMedic"
+  supervisors: job-supervisors-cmofficer
+  canBeAntag: false
+  accessGroups:
+    - MedicalOfficer
+
+- type: startingGear
+  id: MilitaryMainMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCMO
+    back: ClothingBackpackCMOFilled
+    shoes: ClothingShoesColorBrown
+    outerClothing: ClothingOuterCoatLabCmo
+    ears: ClothingHeadsetCMO
+    belt: ClothingBeltMedicalFilled

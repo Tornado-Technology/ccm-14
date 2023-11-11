@@ -1,0 +1,33 @@
+- type: job
+  id: DeltaCommander
+  name: job-name-delta-commander
+  description: job-description-deltacommander
+  playTimeTracker: JobDeltaCommander
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 0
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
+      time: 0
+  startingGear: DeltaCommanderGear
+  icon: "JobIconDeltaCommander"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+    - SquadDelta
+    - SquadLeader
+    - Command
+
+- type: startingGear
+  id: DeltaCommanderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitdelta_leader
+    id: DCommanderIDCard
+    ears: ClothingHeadsetMarineDeltaLeader

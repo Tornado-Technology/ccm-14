@@ -1,0 +1,31 @@
+- type: job
+  id: DeltaMedic
+  name: job-name-delta-medic
+  description: job-description-deltamedic
+  playTimeTracker: JobDeltaMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
+  startingGear: DeltaMedicGear
+  icon: "JobIconDeltaMedic"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+    - SquadDeltaMedic
+
+- type: startingGear
+  id: DeltaMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitdelta_med
+    id: DMedicIDCard
+    ears: ClothingHeadsetMarineDelta

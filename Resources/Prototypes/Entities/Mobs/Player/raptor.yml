@@ -95,7 +95,7 @@
   - type: Examiner
     skipChecks: true
   - type: MovementSpeedModifier
-    baseSprintSpeed: 12
+    baseSprintSpeed: 16
     baseWalkSpeed: 8
   - type: MovementIgnoreGravity
   - type: ActiveRadio
@@ -123,3 +123,5 @@
   - type: CanMoveInAir
   - type: Ghost
     canInteract: true
+  - type: Visibility
+    layer: 1
