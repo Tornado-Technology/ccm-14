@@ -23,7 +23,7 @@ namespace Content.Server.Xeno.Systems;
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
     public const float AnnouncmentTime = 300f;
-    public const float FOBTime = 1600f;
+    public const float FOBTime = 1000f;
 
     public int Eggs { get; private set; }
     public int Marines { get; private set; }
@@ -35,9 +35,8 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly GameTicker _ticker = default!;
 
     private float _announcmentTime = 0f;
-    private float _fobTime = 0f;
-
-    private bool _fob = false;
+    public float FobTime = 0f;
+    public bool Fob = false;
 
     private EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent> Query => EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent>();
 
@@ -64,11 +63,11 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         if (_ticker.RunLevel != GameRunLevel.InRound)
             return;
 
-        _fobTime += frameTime;
-        if (_fobTime >= FOBTime && !_fob)
+        FobTime += frameTime;
+        if (FobTime >= FOBTime && !Fob)
         {
-            _fobTime -= FOBTime;
-            _fob = true;
+            FobTime -= FOBTime;
+            Fob = true;
 
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"), Loc.GetString("ai-announcement-sender"));
 
