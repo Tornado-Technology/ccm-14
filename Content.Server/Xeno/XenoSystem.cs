@@ -45,7 +45,6 @@ public sealed partial class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoEvolutionsComponent, XenoEvolutionActionEvent>(OnEvolutionMenu);
         SubscribeLocalEvent<XenoEvolutionsComponent, EvolveMessage>(OnEvolve);
 
-        SubscribeLocalEvent<XenoComponent, SharpAfterEvent>(OnSharpAfter);
         SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
 
