@@ -17,7 +17,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        400: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/bull.rsi
@@ -30,8 +30,8 @@
         groups:
           Brute: 30
     - type: MovementSpeedModifier
-      baseWalkSpeed: 3.75
-      baseSprintSpeed: 6.75
+      baseWalkSpeed: 3
+      baseSprintSpeed: 6
     - type: Fixtures
       fixtures:
         fix1:

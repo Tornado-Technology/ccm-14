@@ -13,7 +13,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        360: Dead
+        200: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/hunter.rsi
