@@ -118,12 +118,10 @@
         amount: 6
 
 - type: entity
-  id: CrateEvaKit
-  parent: CrateCommandSecure
+  id: CrateTurretMarine
+  parent: CrateEngineering
   components:
   - type: StorageFill
     contents:
-      - id: ClothingHeadHelmetEVA
-        amount: 2
-      - id: ClothingOuterHardsuitEVA
-        amount: 2
+      - id: ToolboxElectricalTurretMarine
+        amount: 4

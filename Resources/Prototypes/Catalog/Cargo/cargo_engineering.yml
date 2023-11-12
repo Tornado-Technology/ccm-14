@@ -87,3 +87,13 @@
   cost: 5000
   category: Engineering
   group: market
+
+- type: cargoProduct
+  id: TurretMarineKit
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  product: CrateTurretMarine
+  cost: 5000
+  category: Engineering
+  group: market

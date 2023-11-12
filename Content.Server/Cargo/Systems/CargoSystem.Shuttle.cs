@@ -330,8 +330,13 @@ public sealed partial class CargoSystem
         }
 
         SellPallets(gridUid, null, out var price);
-        var stackPrototype = _protoMan.Index<StackPrototype>(component.CashType);
-        _stack.Spawn((int) price, stackPrototype, uid.ToCoordinates());
+
+        // TODO: FIX
+        foreach (var bank in EntityQuery<StationBankAccountComponent>())
+        {
+            bank.Balance += (int) price;
+        }
+
         UpdatePalletConsoleInterface(uid);
     }
 

@@ -147,13 +147,10 @@
       pryPowered: true
       force: true
     - type: Bloodstream
-      bloodlossDamage:
-        types:
-          Bloodloss: 0
-      bloodlossHealDamage:
-        types:
-          Bloodloss: -200
+      bloodlossThreshold: 0
+      bloodRefreshAmount: 150
       bloodReagent: FluorosulfuricAcid 
+    - type: LizardAccent
 
 - type: entity
   abstract: true
