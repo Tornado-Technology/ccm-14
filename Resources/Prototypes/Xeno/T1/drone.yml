@@ -16,7 +16,6 @@
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/drone.rsi
-      offset: 0,0.4
       layers:
         - map: ["enum.DamageStateVisualLayers.Base"]
           state: running

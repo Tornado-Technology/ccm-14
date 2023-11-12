@@ -8,6 +8,14 @@
   suffix: "Marines Gear"
   description: The engineer's best friend. It does not understand back.
   components:
+  - type: Gun
+    fireRate: 5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    maxAngle: 15
+    minAngle: 5
   - type: Construction
     graph: MarineTurretGraph
     node: MarineTurret
