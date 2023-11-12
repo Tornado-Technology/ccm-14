@@ -17,7 +17,7 @@
   - Telecrystal
 
 - type: storePreset
-  id: StorePresetSquadLead
+  id: StorePresetSpecialist
   storeName: SquadLeadStore
   categories:
   - StoreWeapon

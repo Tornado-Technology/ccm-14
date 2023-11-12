@@ -8,7 +8,7 @@
     sprite: Objects/Devices/distant_store.rsi
     state: icon
   - type: Store
-    preset: StorePresetSquadLead
+    preset: StorePresetSpecialist
     balance:
       Telecrystal: 2
   - type: Item

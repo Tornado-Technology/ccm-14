@@ -18,7 +18,7 @@
       time: 0
   startingGear: MilitaryScientistGear
   icon: "JobIconMilitaryScientist"
-  supervisors: job-supervisors-cmofficer
+  supervisors: job-supervisors-head-operations
   canBeAntag: false
   access:
     - Research
