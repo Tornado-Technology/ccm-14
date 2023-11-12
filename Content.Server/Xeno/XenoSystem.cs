@@ -124,15 +124,6 @@ public sealed partial class XenoSystem : EntitySystem
         }
     }
 
-    private void OnSharpAfter(EntityUid uid, XenoComponent component, SharpAfterEvent args)
-    {
-        var query = EntityQueryEnumerator<ResearchServerComponent>();
-        while (query.MoveNext(out var serverUid, out var server))
-        {
-            _research.ModifyServerPoints(serverUid, component.ResearchPoints, server);
-        }
-    }
-
     private EntityUid? PolymorphEntity(EntityUid uid, string proto)
     {
         if (_uiSystem.IsUiOpen(uid, XenoEvolutionUiKey.Key) && TryComp<ActorComponent>(uid, out var actor))
