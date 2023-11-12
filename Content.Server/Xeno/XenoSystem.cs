@@ -46,7 +46,7 @@ public sealed partial class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoEvolutionsComponent, EvolveMessage>(OnEvolve);
 
         SubscribeLocalEvent<XenoComponent, SharpAfterEvent>(OnSharpAfter);
-        //SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
 
     private void OnEvolve(EntityUid uid, XenoEvolutionsComponent component, EvolveMessage args)
@@ -59,10 +59,10 @@ public sealed partial class XenoSystem : EntitySystem
         _actionsSystem.AddAction(uid, component.Action);
     }
 
-    //private void OnStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
-    //{
-    //    _actionsSystem.AddAction(uid, component.ActionNightVision);
-    //}
+    private void OnStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
+    {
+        _actionsSystem.AddAction(uid, component.ActionNightVision);
+    }
 
     private void OnEvolutionMenu(EntityUid uid, XenoEvolutionsComponent component, XenoEvolutionActionEvent args)
     {

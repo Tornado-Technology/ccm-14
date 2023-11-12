@@ -99,6 +99,11 @@
         - MidImpassable
         - HighImpassable
         - LowImpassable
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 75
+        Structural: 45
 
 # acidspit projective
 - type: entity
@@ -116,7 +121,7 @@
     damage:
       types:
         Caustic: 50
-        Structure: 10
+        Structural: 20
   - type: Fixtures
     fixtures:
       projectile:
