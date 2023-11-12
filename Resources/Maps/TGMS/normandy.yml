@@ -16,6 +16,7 @@ entities:
       type: MetaData
     - rot: 0.017453292519943295 rad
       pos: -0.81177497,-10.085352
+      parent: invalid
       type: Transform
     - chunks:
         0,0:
@@ -306,24 +307,32 @@ entities:
       pos: -2.5,11.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 4
     components:
     - rot: 1.5707963267948966 rad
       pos: 5.5,11.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 5
     components:
     - rot: 1.5707963267948966 rad
       pos: 5.5,10.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 6
     components:
     - rot: -1.5707963267948966 rad
       pos: -2.5,10.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
 - proto: APCHyperCapacity
   entities:
   - uid: 7
@@ -1131,226 +1140,316 @@ entities:
     - pos: 0.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 131
     components:
     - pos: 2.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 132
     components:
     - pos: -1.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 133
     components:
     - pos: -2.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 134
     components:
     - pos: -1.5,17.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 135
     components:
     - pos: -1.5,18.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 136
     components:
     - pos: -0.5,18.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 137
     components:
     - pos: -0.5,19.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 138
     components:
     - pos: -0.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 139
     components:
     - pos: 3.5,19.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 140
     components:
     - pos: 3.5,18.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 141
     components:
     - pos: 4.5,17.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 142
     components:
     - pos: -2.5,15.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 143
     components:
     - pos: -2.5,2.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 144
     components:
     - pos: -2.5,13.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 145
     components:
     - pos: -2.5,14.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 146
     components:
     - pos: -2.5,12.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 147
     components:
     - pos: -2.5,9.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 148
     components:
     - pos: -2.5,7.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 149
     components:
     - pos: -2.5,8.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 150
     components:
     - pos: -2.5,4.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 151
     components:
     - pos: -2.5,6.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 152
     components:
     - pos: -2.5,5.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 153
     components:
     - pos: -2.5,3.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 154
     components:
     - pos: -0.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 155
     components:
     - pos: -1.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 156
     components:
     - pos: -2.5,1.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 157
     components:
     - pos: -0.5,-0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 158
     components:
     - pos: -2.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 159
     components:
     - pos: 3.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 160
     components:
     - pos: 4.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 161
     components:
     - pos: 3.5,-0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 162
     components:
     - pos: 5.5,1.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 163
     components:
     - pos: 5.5,0.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 164
     components:
     - pos: 5.5,3.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 165
     components:
     - pos: 5.5,2.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 166
     components:
     - pos: 5.5,5.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 167
     components:
     - pos: 5.5,4.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 168
     components:
     - pos: 5.5,7.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 169
     components:
     - pos: 5.5,6.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 170
     components:
     - pos: 5.5,9.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 171
     components:
     - pos: 5.5,8.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 172
     components:
     - pos: 5.5,12.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 173
     components:
     - pos: 5.5,14.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 174
     components:
     - pos: 5.5,13.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 175
     components:
     - pos: 5.5,15.5
@@ -1361,21 +1460,29 @@ entities:
     - pos: 5.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 177
     components:
     - pos: 3.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 178
     components:
     - pos: 4.5,18.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 179
     components:
     - pos: 4.5,16.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 180
     components:
     - rot: 1.5707963267948966 rad
@@ -1865,16 +1972,22 @@ entities:
     - pos: 1.5,19.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 211
     components:
     - pos: 2.5,19.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 212
     components:
     - pos: 0.5,19.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 213
     components:
     - rot: 1.5707963267948966 rad
