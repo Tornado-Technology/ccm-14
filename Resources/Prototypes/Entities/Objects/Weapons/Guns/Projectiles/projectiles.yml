@@ -218,6 +218,12 @@
         mask:
         - Impassable
         - BulletImpassable
+        - Opaque
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
       fly-by: *flybyfixture
   - type: Ammo
   - type: StaminaDamageOnCollide
@@ -258,6 +264,12 @@
         mask:
         - Impassable
         - BulletImpassable
+        - Opaque
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
       fly-by: *flybyfixture
   - type: Ammo
   - type: StaminaDamageOnCollide
