@@ -35,11 +35,13 @@ public sealed class XenoPsychicCureSystem : EntitySystem
 
     private void OnPsychicCureDoAfter(EntityUid uid, XenoPsychicCureComponent component, XenoPsychicCureDoAfterEvent args)
     {
-        args.Repeat = false;
-        if (args.Handled || args.Cancelled || args.Target == null)
-            return;
-
-        Heal((EntityUid)(args.Target), component.HealAmount);
+        if (!args.Cancelled)
+        {
+            if (args.Target != null)
+            {
+                Heal((EntityUid)args.Target, component.HealAmount);
+            }
+        }
     }
 
     private void OnPsychicCure(EntityUid uid, XenoPsychicCureComponent component, XenoPsychicCureEvent args)
@@ -48,7 +50,7 @@ public sealed class XenoPsychicCureSystem : EntitySystem
             return;
 
         var doAfterEventArgs =
-          new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(10f), new XenoPsychicCureDoAfterEvent(), args.Target, target: args.Target, used: uid)
+          new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(6.5f), new XenoPsychicCureDoAfterEvent(), uid, target: args.Target, used: uid)
           {
               BreakOnUserMove = true,
               BreakOnTargetMove = true,

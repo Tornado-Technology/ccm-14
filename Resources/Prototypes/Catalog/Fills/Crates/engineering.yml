@@ -124,4 +124,4 @@
   - type: StorageFill
     contents:
       - id: ToolboxElectricalTurretMarine
-        amount: 4
+        amount: 1
