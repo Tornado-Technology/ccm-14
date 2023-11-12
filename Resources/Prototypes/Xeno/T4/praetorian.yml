@@ -5,7 +5,7 @@
   components:
     - type: XenoPraetorian
     - type: XenoPsychicCure
-      healAmount: 250
+      healAmount: 500
     - type: XenoSpitRejuvenate
     - type: XenoSpit2
       action: ActionDefilerAcidSpit

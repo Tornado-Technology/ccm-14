@@ -18,7 +18,7 @@
       time: 0
   startingGear: MilitaryPoliceOfficerGear
   icon: "JobIconMilitaryPoliceOfficer"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-staff-officer
   canBeAntag: false
   accessGroups:
     - MilitaryPoliceOfficer

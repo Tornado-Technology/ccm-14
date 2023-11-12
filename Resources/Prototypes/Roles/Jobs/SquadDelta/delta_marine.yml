@@ -5,7 +5,7 @@
   playTimeTracker: JobDeltaMarine
   startingGear: DeltaMarineGear
   icon: "JobIconDeltaMarine"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadDelta

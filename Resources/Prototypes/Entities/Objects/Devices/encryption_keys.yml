@@ -316,12 +316,20 @@
   components:
   - type: EncryptionKey
     channels:
-    - Security
-    - Science
-    - Medical
-    - Engineering
-    - Supply
+    - Binary
+    - Common
     - Command
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Alpha
+    - Bravo
+    - Charlie
+    - Delta
     defaultChannel: Delta
   - type: Sprite
     layers:

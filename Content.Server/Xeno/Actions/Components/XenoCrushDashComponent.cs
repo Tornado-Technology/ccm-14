@@ -13,7 +13,7 @@ public sealed partial class XenoCrushDashComponent : Component
     public float DashForce = 35f;
 
     /// <summary>
-    ///     Effect duration in seconds;
+    /// Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
     public float StunTime = 10f;

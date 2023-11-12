@@ -4,11 +4,10 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: TimedDespawn
-    lifetime: 1200
   - type: Tag
     tags:
       - Wall
+      - FOBProtection
   - type: Physics
     bodyType: Static
   - type: Fixtures

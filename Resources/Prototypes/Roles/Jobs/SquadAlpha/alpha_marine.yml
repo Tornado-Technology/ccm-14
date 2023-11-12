@@ -5,7 +5,7 @@
   playTimeTracker: JobAlfaMarine
   startingGear: AlfaMarineGear
   icon: "JobIconAlfaMarine"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadAlpha

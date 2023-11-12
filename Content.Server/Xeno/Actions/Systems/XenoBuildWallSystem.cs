@@ -27,7 +27,7 @@ public sealed class XenoBuildWallSystem : EntitySystem
     private void OnBuild(EntityUid uid, XenoBuildWallComponent component, XenoBuildWallEvent args)
     {
         var doAfterEventArgs =
-           new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(10f), new XenoBuildWallDoAfterEvent(args.Target.ToMap(EntityManager)), uid, target: uid, used: uid)
+           new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(component.TimeUsage), new XenoBuildWallDoAfterEvent(args.Target.ToMap(EntityManager)), uid, target: uid, used: uid)
            {
                BreakOnUserMove = true,
                BreakOnTargetMove = false,

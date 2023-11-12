@@ -25,3 +25,10 @@ alert-level-delta-instructions = Членам экипажа необходим�
 alert-level-epsilon = Эпсилон
 alert-level-epsilon-announcement = Центральное командование объявило на станции уровень угрозы "Эпсилон". Все контракты расторгнуты. Спасибо, что выбрали Nanotrasen.
 alert-level-epsilon-instructions = Все контракты расторгнуты.
+
+alert-level-crimson-sword-announcement = Багровый меч
+alert-level-eye-hope-announcement = Глаз надежды
+alert-level-shield-announcement = Щит
+alert-level-citadel-announcement = Цитадель
+alert-level-mayday-announcement = MayDay
+alert-level-nuclear-threat-announcement = Ядерная угроза

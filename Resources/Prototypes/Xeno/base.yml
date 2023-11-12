@@ -59,6 +59,8 @@
           Base: dead
     - type: Puller
       needsHands: false
+      walkModifier: 0.4
+      sprintModifier: 0.4
     - type: TypingIndicator
       proto: alien
     - type: Temperature

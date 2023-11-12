@@ -1045,6 +1045,9 @@
   id: Wall
 
 - type: Tag
+  id: FOBProtection
+
+- type: Tag
   id: WetFloorSign
 
 - type: Tag

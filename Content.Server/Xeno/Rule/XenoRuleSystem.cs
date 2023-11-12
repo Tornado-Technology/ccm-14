@@ -15,6 +15,8 @@ using Content.Server.Chat.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Audio;
 using Content.Shared.Xeno;
+using Content.Shared.Tag;
+using Robust.Shared.Spawners;
 
 namespace Content.Server.Xeno.Systems;
 
@@ -30,6 +32,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
+    [Dependency] private readonly GameTicker _ticker = default!;
 
     private float _announcmentTime = 0f;
     private float _fobTime = 0f;
@@ -58,6 +61,9 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     {
         base.Update(frameTime);
 
+        if (_ticker.RunLevel != GameRunLevel.InRound)
+            return;
+
         _fobTime += frameTime;
         if (_fobTime >= FOBTime && !_fob)
         {
@@ -65,6 +71,14 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             _fob = true;
 
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"), Loc.GetString("ai-announcement-sender"));
+
+            foreach (var tag in EntityQuery<TagComponent>())
+            {
+                if (!tag.Tags.Contains("FOBProtection"))
+                    continue;
+
+                AddComp<TimedDespawnComponent>(tag.Owner);
+            }
         }
 
         _announcmentTime += frameTime;

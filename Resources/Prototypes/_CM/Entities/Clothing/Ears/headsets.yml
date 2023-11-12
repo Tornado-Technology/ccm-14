@@ -40,6 +40,7 @@
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
+
 - type: entity
   parent: ClothingHeadsetMarineBase
   id: ClothingHeadsetMarineHeadOperation
@@ -50,7 +51,6 @@
     containers:
       key_slots:
       - EncryptionKeyHeadOperation
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/command.rsi
   - type: Clothing

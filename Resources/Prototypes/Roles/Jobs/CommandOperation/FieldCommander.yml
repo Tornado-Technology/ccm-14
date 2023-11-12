@@ -1,7 +1,7 @@
 - type: job
   id: FieldCommander
   name: job-name-fieldcommander
-  description: job-description-fieldcommander
+  description: job-supervisors-staff-officer
   playTimeTracker: JobFieldCommander
   requirements:
     - !type:RoleTimeRequirement
@@ -18,7 +18,7 @@
       time: 0
   startingGear: FieldCommanderGear
   icon: "JobIconFieldCommander"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-head-operations
   canBeAntag: false
   accessGroups:
     - FieldCommander

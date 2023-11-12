@@ -117,6 +117,7 @@
     damage:
       types:
         Caustic: 50
+        Structure: 10
   - type: Fixtures
     fixtures:
       projectile:

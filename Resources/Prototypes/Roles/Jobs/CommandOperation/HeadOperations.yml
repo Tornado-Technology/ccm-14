@@ -25,7 +25,7 @@
       # time: 7500
   startingGear: HeadOperationsGear
   icon: "JobIconHeadComm"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-uge
   canBeAntag: false
   accessGroups:
     - HeadOperations

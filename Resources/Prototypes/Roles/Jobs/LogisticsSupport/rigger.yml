@@ -18,7 +18,7 @@
       time: 0
   startingGear: RiggerGear
   icon: "JobIconRigger"
-  supervisors: job-supervisors-supplyofficer
+  supervisors: job-supervisors-supply-officer
   canBeAntag: false
   access:
     - Cargo

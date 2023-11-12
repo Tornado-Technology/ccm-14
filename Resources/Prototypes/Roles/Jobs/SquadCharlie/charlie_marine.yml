@@ -5,7 +5,7 @@
   playTimeTracker: JobCharlieMarine
   startingGear: CharlieMarineGear
   icon: "JobIconCharlieMarine"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadCharlie

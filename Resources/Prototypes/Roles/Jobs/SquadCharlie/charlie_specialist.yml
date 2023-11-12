@@ -18,7 +18,7 @@
       time: 0
   startingGear: CharlieSpecialistGear
   icon: "JobIconCharlieSpecialist"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadCharlie

@@ -18,7 +18,7 @@
       time: 0
   startingGear: AlfaCommanderGear
   icon: "JobIconAlfaCommander"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
     - SquadAlpha

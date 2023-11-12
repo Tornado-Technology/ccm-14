@@ -5,7 +5,7 @@
   playTimeTracker: JobBravoMarine
   startingGear: BravoMarineGear
   icon: "JobIconBravoMarine"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadBravo

@@ -13,7 +13,7 @@
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
     - type: XenoPsychicCure
-      healAmount: 250
+      healAmount: 500
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
       projectile: ProjectileDefilerAcidSpit

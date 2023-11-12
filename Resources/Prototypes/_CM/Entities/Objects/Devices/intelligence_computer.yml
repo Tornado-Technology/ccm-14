@@ -1,0 +1,46 @@
+
+
+- type: entity
+  parent: BaseStructure
+  id: IntelligenceComputer
+  name: intelligence computer
+  description: Allows you to obtain long-forgotten technologies.
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Objects/Devices/intelligence_computer.rsi
+    state: work
+    noRot: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 80 #It has wheels and bluespace tech to make it lighter.
+        mask:
+        - MachineMask
+        layer:
+        - HalfWallLayer
+  - type: PointLight
+    enabled: false
+    radius: 4
+    energy: 2.0
+    color: "#FF4020"
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight
+    speed: 120
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: Intelligence computer
+    enabled: true
+  - type: InteractionOutline
+  - type: CargoSellBlacklist
+  - type: ArrivalsBlacklist
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      Card: !type:ContainerSlot

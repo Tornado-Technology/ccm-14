@@ -1,7 +1,7 @@
 - type: job
   id: ChiefShipsEngineer
   name: job-name-chiefshipsengineer
-  description: job-description-chiefshipsengineer
+  description: job-supervisors-staff-officer
   playTimeTracker: JobChiefShipsEngineer
   requirements:
     - !type:RoleTimeRequirement

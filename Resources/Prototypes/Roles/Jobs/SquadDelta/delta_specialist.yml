@@ -18,7 +18,7 @@
       time: 0
   startingGear: DeltaSpecialistGear
   icon: "JobIconDeltaSpecialist"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-commander
   canBeAntag: false
   access:
     - SquadDelta

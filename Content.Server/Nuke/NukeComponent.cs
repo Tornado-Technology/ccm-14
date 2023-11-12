@@ -52,8 +52,8 @@ namespace Content.Server.Nuke
         [DataField("disarmDoafterLength")]
         public float DisarmDoafterLength = 30.0f;
 
-        [DataField("alertLevelOnActivate")] public string AlertLevelOnActivate = default!;
-        [DataField("alertLevelOnDeactivate")] public string AlertLevelOnDeactivate = default!;
+        [DataField("alertLevelOnActivate")] public string AlertLevelOnActivate = "nuclearThreat";
+        [DataField("alertLevelOnDeactivate")] public string AlertLevelOnDeactivate = "crimsonSword";
 
         /// <summary>
         ///     This is stored so we can do a funny by making 0 shift the last played note up by 12 semitones (octave)

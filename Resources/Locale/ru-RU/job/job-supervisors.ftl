@@ -14,6 +14,14 @@ job-supervisors-science = учёным, ведущему учёному, нау�
 job-supervisors-hire = своим нанимателям
 job-supervisors-everyone = вообще всем
 job-supervisors-cmofficer = офицеру штаба
-job-supervisors-supplyofficer = офицеру снабжения
-job-supervisors-mainmilmedic = главному врачу
+
 job-supervisors-quinn = королеве
+
+job-supervisors-commander = лидеру отряда
+job-supervisors-field-commander = полевому командиру
+job-supervisors-staff-officer = штаб офицеру
+job-supervisors-main-medic = главному врачу
+job-supervisors-supply-officer = офицеру снабжения
+job-supervisors-police-officer = офицеру военной полиции
+job-supervisors-head-operations = главе операции
+job-supervisors-uge = должостному лицу Объединенного Правительства Земли
