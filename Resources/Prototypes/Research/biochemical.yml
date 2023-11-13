@@ -8,7 +8,7 @@
     state: beakerlarge
   discipline: Biochemical
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - LargeBeaker
   - Dropper
@@ -16,6 +16,8 @@
   - ChemicalPayload
   - ClothingEyesGlassesChemical
   - Jug
+  - CryostasisBeaker
+  - StasisBedMachineCircuitboard
 
 - type: technology
   id: SurgicalTools
@@ -25,7 +27,7 @@
     state: saw
   discipline: Biochemical
   tier: 1
-  cost: 2000 #this is useless so heavy decrease
+  cost: 1000 #this is useless so heavy decrease
   recipeUnlocks:
   - Scalpel
   - Retractor
@@ -35,19 +37,6 @@
   - Hemostat
 
 - type: technology
-  id: BiochemicalStasis
-  name: research-technology-biochemical-stasis
-  icon:
-    sprite: Structures/Machines/stasis_bed.rsi
-    state: icon
-  discipline: Biochemical
-  tier: 1
-  cost: 2000
-  recipeUnlocks:
-  - CryostasisBeaker
-  - StasisBedMachineCircuitboard
-
-- type: technology
   id: MechanizedTreatment
   name: research-technology-mechanized-treatment
   icon:
@@ -55,7 +44,7 @@
     state: medical
   discipline: Biochemical
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - BorgModuleDiagnosis
   - BorgModuleTreatment
@@ -69,7 +58,7 @@
     state: icon
   discipline: Biochemical
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - VaccinatorMachineCircuitboard
   - DiagnoserMachineCircuitboard
@@ -101,20 +90,9 @@
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
   - BorgModuleAdvancedTreatment
+  - HandheldCrewMonitor
   technologyPrerequisites:
   - Chemistry
-
-- type: technology
-  id: CrewMonitoring
-  name: research-technology-crew-monitoring
-  icon:
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
-  discipline: Biochemical
-  tier: 2
-  cost: 4000
-  recipeUnlocks:
-  - HandheldCrewMonitor
 
 # Tier 3
 
@@ -126,10 +104,11 @@
     state: beakerbluespace
   discipline: Biochemical
   tier: 3
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
+  - Hypospray
 
 # look into revisiting this later once medical isn't a hellhole
 #- type: technology

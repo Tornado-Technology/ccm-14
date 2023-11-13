@@ -238,7 +238,9 @@
       - WelderExperimental
       - JawsOfLife
       - ClothingEyesGlassesChemical
-
+      - HandTeleporter
+      - Hypospray
+    
 - type: entity
   id: CircuitImprinter
   parent: BaseLathe
@@ -267,6 +269,9 @@
       - ReagentGrinderMachineCircuitboard
       - BoozeDispenserMachineCircuitboard
       - SodaDispenserMachineCircuitboard
+      - MedicalTechFabCircuitboard
+      - AmmoTechFabCircuitboard
+      - SecurityTechFabCircuitboard
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
       - PortableScrubberMachineCircuitBoard
@@ -490,6 +495,35 @@
       - RiotShield
       - TelescopicShield
       - TargetHuman
+    dynamicRecipes:
+      - MagazineRifleM41A
+      - MagazineRifleM4RA
+      - MagazinePistolAramatM5Y3
+      - MagazinePistol88M4
+      - MagazineRifleM39
+      - Magazine10x24mm
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumVP-60x2
+      - SpeedLoaderLightRifle
+      - SpeedLoaderMosin
+      - SpeedLoader9mm
+      - SpeedLoaderMagnum357
+      - Magazine9mm
+      - MagazinePP
+      - Box10x24mm
+      - Magazine10x26mm
+      - MagazineBoxMagnum
+      - Box9mm
+      - MagazineBox357
+      - ExGrenade
+      - C4
+      - MarineCASFlareBomb
+      - MarineCASClusterBomb
+      - MagazineShotgunAFG-12
+      - FuelTankFlamethrower
+      - MagazineRifleXM43E
+      - MagazineLightRifleBox
+      - WeaponAntiqueLaser
   - type: MaterialStorage
     whitelist:
       tags:

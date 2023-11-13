@@ -533,6 +533,8 @@
   - type: SliceableFood
     count: 3
     slice: FoodMeatXenoCutlet
+  - type: StaticPrice
+    price: 750
 
 - type: entity
   name: raw rouny meat

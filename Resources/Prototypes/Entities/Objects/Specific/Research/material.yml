@@ -11,7 +11,9 @@
   - type: GuideHelp
     guides:
     - Science
-
+  - type: StaticPrice
+    price: 5000
+  
 - type: entity
   parent: ResearchMaterial
   id: ResearchMaterial3000
@@ -19,7 +21,9 @@
   components:
   - type: ResearchDisk
     points: 3000
-
+  - type: StaticPrice
+    price: 10000
+  
 - type: entity
   parent: ResearchMaterial
   id: ResearchMaterial5000
@@ -27,6 +31,8 @@
   components:
   - type: ResearchDisk
     points: 5000
+  - type: StaticPrice
+    price: 15000
 
 - type: entity
   parent: ResearchMaterial
@@ -35,3 +41,5 @@
   components:
   - type: ResearchDisk
     points: 10000
+  - type: StaticPrice
+    price: 20000

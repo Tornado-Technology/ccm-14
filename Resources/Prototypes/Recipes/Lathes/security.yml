@@ -137,3 +137,272 @@
     Steel: 500
     Glass: 100
     Plastic: 200
+
+- type: latheRecipe
+  id: WeaponDisablerPractice
+  result: WeaponDisablerPractice
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 100
+    Plastic: 200
+
+- type: latheRecipe
+  id: WeaponDisablerPractice
+  result: WeaponDisablerPractice
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 100
+    Plastic: 200
+
+- type: latheRecipe
+  id: WeaponDisablerPractice
+  result: WeaponDisablerPractice
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 100
+    Plastic: 200
+
+- type: latheRecipe
+  id: MagazineRifleM41A
+  result: MagazineRifleM41A
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazineRifleM4RA
+  result: MagazineRifleM4RA
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazinePistolAramatM5Y3
+  result: MagazinePistolAramatM5Y3
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazinePistol88M4
+  result: MagazinePistol88M4
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazineRifleM39
+  result: MagazineRifleM39
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: Magazine10x24mm
+  result: Magazine10x24mm
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoaderMagnum
+  result: SpeedLoaderMagnum
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoaderMagnumVP-60x2
+  result: SpeedLoaderMagnumVP-60x2
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoaderLightRifle
+  result: SpeedLoaderLightRifle
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoaderMosin
+  result: SpeedLoaderMosin
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoader9mm
+  result: SpeedLoader9mm
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: SpeedLoaderMagnum357
+  result: SpeedLoaderMagnum357
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: Magazine9mm
+  result: Magazine9mm
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazinePP
+  result: MagazinePP
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: Box10x24mm
+  result: Box10x24mm
+  completetime: 5
+  materials:
+    Plastic: 1200
+    Steel: 100
+
+- type: latheRecipe
+  id: Magazine10x26mm
+  result: Magazine10x26mm
+  completetime: 5
+  materials:
+    Plastic: 1200
+    Steel: 100
+
+- type: latheRecipe
+  id: MagazineBoxMagnum
+  result: MagazineBoxMagnum
+  completetime: 5
+  materials:
+    Plastic: 1200
+    Steel: 100
+
+- type: latheRecipe
+  id: Box9mm
+  result: Box9mm
+  completetime: 5
+  materials:
+    Plastic: 1200
+    Steel: 100
+
+- type: latheRecipe
+  id: MagazineBox357
+  result: MagazineBox357
+  completetime: 5
+  materials:
+    Plastic: 1200
+    Steel: 100
+
+- type: latheRecipe
+  id: ExGrenade
+  result: ExGrenade
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 50
+    Plasma: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: C4
+  result: C4
+  completetime: 4
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 50
+    Plasma: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: MarineCASFlareBomb
+  result: MarineCASFlareBomb
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 50
+
+- type: latheRecipe
+  id: MarineCASClusterBomb
+  result: MarineCASClusterBomb
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 50
+    Plasma: 50
+
+- type: latheRecipe
+  id: MagazineShotgunAFG-12
+  result: MagazineShotgunAFG-12
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 500
+
+- type: latheRecipe
+  id: FuelTankFlamethrower
+  result: FuelTankFlamethrower
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 500
+
+- type: latheRecipe
+  id: MagazineRifleXM43E
+  result: MagazineRifleXM43E
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 500
+
+- type: latheRecipe
+  id: MagazineLightRifleBox
+  result: MagazineLightRifleBox
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 500
+
+- type: latheRecipe
+  id: WeaponAntiqueLaser
+  result: WeaponAntiqueLaser
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 1000
+    Plasma: 100
+    Gold: 100
