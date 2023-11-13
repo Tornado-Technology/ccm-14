@@ -11,12 +11,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
-        Heat: 0.8
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
+        Caustic: 0.75
   - type: ExplosionResistance
-    damageCoefficient: 0.8
+    damageCoefficient: 0.75
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -34,12 +35,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.7
-        Heat: 0.7
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Caustic: 0.65
   - type: ExplosionResistance
-    damageCoefficient: 0.7
+    damageCoefficient: 0.65
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -57,12 +59,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.6
-        Piercing: 0.6
-        Heat: 0.6
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.55
+        Heat: 0.55
+        Caustic: 0.55
   - type: ExplosionResistance
-    damageCoefficient: 0.6
+    damageCoefficient: 0.55
   - type: ClothingSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.7
@@ -80,9 +83,10 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Caustic: 0.65
   - type: ExplosionResistance
-    damageCoefficient: 0.90
+    damageCoefficient: 0.65

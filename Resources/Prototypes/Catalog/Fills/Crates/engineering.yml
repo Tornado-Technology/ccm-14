@@ -123,5 +123,5 @@
   components:
   - type: StorageFill
     contents:
-      - id: ToolboxElectricalTurretMarine
+      - id: ToolboxTurretMarine
         amount: 1

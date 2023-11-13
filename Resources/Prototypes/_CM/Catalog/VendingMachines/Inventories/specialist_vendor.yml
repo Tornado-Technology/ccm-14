@@ -1,7 +1,7 @@
 - type: vendingMachineInventory
   id: EquipSpecialistVendInventory
   startingInventory:
-    StoreSquadLead: 1
+    StoreSpecialist: 1
     ClothingUniformJumpsuitMarine: 1
     ClothingHandsGlovesMarine: 1
     ClothingShoesBootsMarine: 1
@@ -24,6 +24,7 @@
     ClothingHeadBeretGreen: 1
     ClothingBackpackMarine: 1
     ClothingBackpackSatchelMarine: 1
+    ClothingBeltMilitaryWebbing: 1
     ClothingMaskGasMarine: 1
     ClothingMaskGasRebreather: 1
     ClothingMaskCoif: 1

@@ -83,7 +83,7 @@
   name: chat-radio-hive
   keycode: 'у'
   frequency: 8888
-  color: "#800080"
+  color: "#ca00ca"
   longRange: true
 
 - type: radioChannel

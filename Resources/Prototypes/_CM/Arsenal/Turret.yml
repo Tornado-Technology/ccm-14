@@ -39,6 +39,9 @@
         - MachineMask
         layer:
         - Opaque
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifle
+    capacity: 350
 
 - type: constructionGraph
   id: MarineTurretGraph
@@ -81,7 +84,7 @@
 - type: entity
   name: turret toolbox
   suffix: Marine, Turret
-  id: ToolboxElectricalTurretMarine
+  id: ToolboxTurretMarine
   description: A toolbox with turret.
   parent: ToolboxElectrical
   components:

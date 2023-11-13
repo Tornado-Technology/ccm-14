@@ -33,6 +33,8 @@ public sealed class XenoBuildWallSystem : EntitySystem
                BreakOnTargetMove = false,
                NeedHand = false,
                BreakOnDamage = true,
+               BlockDuplicate = false,
+               CancelDuplicate = false,
            };
 
         _doAfter.TryStartDoAfter(doAfterEventArgs);

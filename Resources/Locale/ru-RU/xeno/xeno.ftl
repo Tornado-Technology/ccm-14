@@ -1,2 +1,2 @@
-ent-StorePresetSpecialist = набор С.П.Е.Ц.
+ent-StoreSpecialist = набор С.П.Е.Ц.
     .desc = Содержит наборы для уничтожения всего сущего, используйте с умом.

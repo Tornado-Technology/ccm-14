@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: MedicalVendorInventory
   startingInventory:
+    ClothingBeltMilitaryWebbingMedFilled: 1
     HandheldHealthAnalyzer: 20
     Defibrillator: 5
     PowerCellMedium: 10

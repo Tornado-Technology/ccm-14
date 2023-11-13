@@ -12,5 +12,5 @@ public sealed partial class XenoBuildWallComponent : Component
     public EntProtoId WallPrototype = "XenoWallFragile";
 
     [DataField]
-    public float TimeUsage = 10f;
+    public float TimeUsage = 6.5f;
 }
