@@ -4,8 +4,6 @@
   id: WeaponPistol88M4
   description: Standard issue USCM firearm. Also found in the hands of Weyland-Yutani PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst.
   components:
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Pistols/88m4.rsi
     layers:
