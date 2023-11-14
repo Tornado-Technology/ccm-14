@@ -1,17 +1,21 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken/modified from cev-eris at https://github.com/discordia-space/CEV-Eris/raw/56cbafd6ad8c013ccd5472d6c4a0db790f7f872a/icons/obj/guns/projectile/drozd.dmi, sprite modification by Jañkal 298/TaralGit",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
+      "name": "base"
+    },
+    {
       "name": "bolt-open"
     },
     {
-      "name": "base"
+      "name": "equipped-BACKPACK",
+      "directions": 4
     },
     {
       "name": "icon"
@@ -21,15 +25,10 @@
       "directions": 4
     },
     {
-      "name": "inhand-right",
-      "directions": 4
+      "name": "inhand-right"
     },
     {
-      "name": "mag-0",
-      "directions": 4
-    },
-    {
-      "name": "equipped-BACKPACK"
+      "name": "mag-0"
     },
     {
       "name": "suppressor"
