@@ -14,14 +14,14 @@
       "name": "base"
     },
     {
-      "name": "icon (3)"
+      "name": "icon"
     },
     {
-      "name": "inhand-left (6)",
+      "name": "inhand-left",
       "directions": 4
     },
     {
-      "name": "inhand-right (5)",
+      "name": "inhand-right",
       "directions": 4
     },
     {
@@ -29,7 +29,7 @@
       "directions": 4
     },
     {
-      "name": "equipped-BACKPACK (1)"
+      "name": "equipped-BACKPACK"
     },
     {
       "name": "suppressor"
