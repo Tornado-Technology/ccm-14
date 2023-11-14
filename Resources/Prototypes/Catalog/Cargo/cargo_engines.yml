@@ -28,26 +28,6 @@
   category: Engineering
   group: market
 
-- type: cargoProduct
-  id: EngineSingularityGenerator
-  icon:
-    sprite: Structures/Power/Generation/Singularity/generator.rsi
-    state: icon
-  product: CrateEngineeringSingularityGenerator
-  cost: 4000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
-  id: EngineSingularityContainment
-  icon:
-    sprite: Structures/Power/Generation/Singularity/containment.rsi
-    state: icon
-  product: CrateEngineeringSingularityContainment
-  cost: 1000
-  category: Engineering
-  group: market
-
 #- type: cargoProduct
 #  name: "emitter crate"
 #  id: EngineSingularityEmitter
@@ -59,33 +39,3 @@
 #  cost: 3000
 #  category: Engineering
 #  group: market
-
-- type: cargoProduct
-  id: EngineSingularityCollector
-  icon:
-    sprite: Structures/Power/Generation/Singularity/collector.rsi
-    state: ca_on
-  product: CrateEngineeringSingularityCollector
-  cost: 1000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
-  id: EngineParticleAccelerator
-  icon:
-    sprite: Structures/Power/Generation/PA/control_box.rsi
-    state: completed
-  product: CrateEngineeringParticleAccelerator
-  cost: 2000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
-  id: EngineSolar
-  icon:
-    sprite: Objects/Power/solar_parts.rsi
-    state: solar_assembly_parts
-  product: CrateEngineeringSolar
-  cost: 500
-  category: Engineering
-  group: market
