@@ -133,7 +133,6 @@
         mask:
         - Impassable
         - BulletImpassable
-        - Opaque
         layer:
         - Impassable
         - MidImpassable

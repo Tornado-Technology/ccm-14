@@ -9,7 +9,7 @@
     - type: XenoSpitRejuvenate
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
-      projectile: ProjectileDefilerDefaultSpit
+      projectile: ProjectileToxinSpit
       speed: 25
     - type: Sprite
       drawdepth: Mobs
@@ -20,7 +20,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        1200: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

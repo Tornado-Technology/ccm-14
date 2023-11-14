@@ -49,18 +49,18 @@
   graph:
     - node: start
       edges:
-        - to: MarineTurret
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
+        - to: weaponTurretMarine
           steps:
             - tag: Turret
               name: folding turret
               icon:
                 sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-                state: syndie_broken
+                state: syndie_lethal
               doAfter: 10
-    - node: MarineTurret
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponTurretMarine
       entity: WeaponTurretMarine
 
 - type: construction
@@ -68,12 +68,12 @@
   id: MarineTurretConstruction
   graph: MarineTurretGraph
   startNode: start
-  targetNode: MarineTurret
+  targetNode: weaponTurretMarine
   category: construction-category-structures
   description: The engineer's best friend.
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: syndie_broken
+    state: syndie_lethal
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -90,22 +90,6 @@
   components:
   - type: Damageable
     damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 100
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-      - trigger:
-          !type:DamageTrigger
-          damage: 1
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-          - !type:SpawnEntitiesBehavior
-            spawn:
-              WeaponTurretMarine:
-                min: 1
-                max: 1
+  - type: Tag
+    tags:
+    - Turret

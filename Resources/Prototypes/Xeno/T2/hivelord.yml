@@ -9,6 +9,7 @@
           prototype: MobGorgerXeno
           evolution: 1200
     - type: XenoHivelord
+      timeUsage: 8
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
@@ -17,7 +18,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Dead
+        400: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/hivelord.rsi

@@ -23,7 +23,10 @@
   access:
     - SquadCharlie
     - SquadLeader
+    - SquadSpecialist
+    - Engineering
     - Command
+    - Medical
 
 - type: startingGear
   id: CharlieCommanderGear

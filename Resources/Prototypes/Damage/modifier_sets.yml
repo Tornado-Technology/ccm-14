@@ -198,3 +198,11 @@
     Cellular: 0.0
     Radiation: 0.2
     Caustic: 0.0
+
+- type: damageModifierSet
+  id: Resin
+  coefficients:
+    Blunt: 0.2
+    Slash: 2
+    Piercing: 0.2
+    Shock: 1

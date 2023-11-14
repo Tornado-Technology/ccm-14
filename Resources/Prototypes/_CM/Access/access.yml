@@ -41,21 +41,6 @@
   - PilotRaptor
   - PilotNormandy
 
-# Field Commander------------------------------------------
-- type: accessGroup
-  id: FieldCommander
-  tags:
-  - SquadSpecialist
-  - SquadLeader
-  - SquadAlpha
-  - SquadBravo
-  - SquadCharlie
-  - SquadDelta
-  - Command
-  - Engineering
-  - Medical
-  - Chemistry
-
 # Squads
 - type: accessLevel
   id: SquadAlpha 

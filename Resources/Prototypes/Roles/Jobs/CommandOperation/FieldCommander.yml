@@ -21,7 +21,7 @@
   supervisors: job-supervisors-head-operations
   canBeAntag: false
   accessGroups:
-    - FieldCommander
+    - HeadOperations
 
 - type: startingGear
   id: FieldCommanderGear

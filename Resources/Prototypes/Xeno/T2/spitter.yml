@@ -3,6 +3,7 @@
   parent: MobXenoBaseT2
   id: MobSpitterXeno
   components:
+    - type: XenoExplosive
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
@@ -11,11 +12,11 @@
     - type: XenoSpitter
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
-      projectile: ProjectileDefilerAcidSpit
+      projectile: ProjectileNeurotoxinVeil
       speed: 20
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
-      projectile: ProjectileDefilerDefaultSpit
+      projectile: ProjectileToxinSpit
       speed: 20
     - type: Sprite
       drawdepth: Mobs
@@ -26,7 +27,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Dead
+        400: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

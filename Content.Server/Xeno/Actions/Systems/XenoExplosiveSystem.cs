@@ -36,7 +36,7 @@ public sealed partial class XenoExplosiveSystem : EntitySystem
             return;
 
         // TODO: Move magick numbers to XenoExplosiveComponent
-        _explosionSystem.QueueExplosion(uid, "Radioactive", 300, 2, 200, 0, 0, false, uid, true);
+        _explosionSystem.QueueExplosion(uid, "Radioactive", 350f, 4f, 5f, canCreateVacuum: false, user: uid, addLog: true);
         _damageableSystem.TryChangeDamage(uid, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
     }
 }
