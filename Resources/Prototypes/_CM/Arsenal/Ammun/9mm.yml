@@ -24,6 +24,7 @@
       - CartridgePistol
   - type: CartridgeAmmo
     proto: Bullet9mm
+    deleteOnSpawn: true
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige9mm.rsi
     layers:
@@ -42,6 +43,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet9mm
+    deleteOnSpawn: true
 
 - type: entity
   abstract: true

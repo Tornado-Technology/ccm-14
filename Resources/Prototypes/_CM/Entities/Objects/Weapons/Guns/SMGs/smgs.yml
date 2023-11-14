@@ -30,6 +30,7 @@
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: ChamberMagazineAmmoProvider
     autoEject: true
+    boltClosed: null
   - type: ItemSlots
     slots:
       gun_magazine:

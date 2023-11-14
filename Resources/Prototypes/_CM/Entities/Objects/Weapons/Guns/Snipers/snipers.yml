@@ -3,6 +3,8 @@
   parent: BaseWeaponRifle
   id: WeaponSniperXM43E
   components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
     layers:

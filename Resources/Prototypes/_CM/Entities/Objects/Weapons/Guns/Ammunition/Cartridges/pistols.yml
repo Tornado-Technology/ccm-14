@@ -5,6 +5,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletPistol45GAP
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
@@ -25,6 +26,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletPistol4440
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice

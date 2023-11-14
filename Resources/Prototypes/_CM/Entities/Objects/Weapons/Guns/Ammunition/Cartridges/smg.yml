@@ -5,6 +5,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletSmg458Socom
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
@@ -25,6 +26,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletSmg450Brushmaster
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice

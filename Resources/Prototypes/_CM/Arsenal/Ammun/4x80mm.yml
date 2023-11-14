@@ -78,6 +78,7 @@
   - type: CartridgeAmmo
     count: 4
     spread: 20
+    deleteOnSpawn: true
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -100,6 +101,7 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     proto: FenixBullet
+    deleteOnSpawn: true
   
 - type: entity
   abstract: true

@@ -1,6 +1,5 @@
 #R-284
 #
-
 - type: entity
   name: R-284
   parent: BaseItem
@@ -46,7 +45,7 @@
         ents: []
   - type: StaticPrice
     price: 5000
-
+    
 - type: entity
   name: R-284 "Fenix"
   parent: BaseFenix

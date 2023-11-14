@@ -5,6 +5,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletRifle416Barratti
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
