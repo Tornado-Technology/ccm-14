@@ -96,3 +96,31 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+      
+- type: entity
+  parent: BaseBox9mm
+  id: Box45GAP
+  name: Box (45GAP)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol45GAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+      
+- type: entity
+  parent: BaseBox9mm
+  id: Box44_40
+  name: Box (44.40)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol4440
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
