@@ -33,14 +33,3 @@
       damage:
         groups:
           Brute: 20
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.45
-          density: 550
-          mask:
-          - MobMask
-          layer:
-          - MobLayer

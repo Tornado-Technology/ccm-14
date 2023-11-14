@@ -28,14 +28,3 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
     - type: Stealth
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.45
-          density: 550
-          mask:
-          - MobMask
-          layer:
-          - MobLayer
