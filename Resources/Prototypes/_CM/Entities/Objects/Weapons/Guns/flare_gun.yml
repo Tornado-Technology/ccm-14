@@ -36,3 +36,5 @@
     quickEquip: false
     slots:
     - Belt
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null

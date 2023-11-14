@@ -30,8 +30,6 @@
     selectedMode: FullAuto
     availableModes:
       - FullAuto
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
   - type: AmmoCounter
   - type: ItemSlots
     slots:

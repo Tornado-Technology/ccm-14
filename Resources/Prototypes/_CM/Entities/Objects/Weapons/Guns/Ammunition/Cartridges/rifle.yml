@@ -5,6 +5,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletRifle1024
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
@@ -33,6 +34,7 @@
   components:
   - type: CartridgeAmmo
     proto: BulletRifle125x60R
+    deleteOnSpawn: true
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice

@@ -27,8 +27,6 @@
       - FullAuto
     soundGunshot:
       path: /Audio/_CM/TGMSArsenal/Audio/M41AShot.ogg
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
   - type: ItemSlots
     slots:
       gun_magazine:
