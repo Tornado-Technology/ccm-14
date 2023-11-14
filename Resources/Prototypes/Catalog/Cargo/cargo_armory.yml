@@ -1,59 +1,50 @@
 - type: cargoProduct
-  id: ArmorySmg
+  id: CrateM4A1Console #Любое айди, такое, что нет в игре
   icon:
-    sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
+    sprite: Objects/Weapons/Grenades/grenade.rsi #Спрайт
     state: icon
-  product: CrateArmorySMG
-  cost: 9000
-  category: Armory
-  group: market
-
-- type: cargoProduct
-  id: ArmoryShotgun
-  icon:
-    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
-    state: icon
-  product: CrateArmoryShotgun
-  cost: 7000
-  category: Armory
-  group: market
-
-- type: cargoProduct
-  id: TrackingImplant
-  icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  product: CrateTrackingImplants
-  cost: 1000
-  category: Armory
-  group: market
-
-- type: cargoProduct
-  id: TrainingBombs
-  icon:
-    sprite: Structures/Machines/bomb.rsi
-    state: training-bomb
-  product: CrateTrainingBombs
-  cost: 3000
-  category: Armory
-  group: market
-
-- type: cargoProduct
-  id: ArmoryLaser
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
-    state: icon
-  product: CrateArmoryLaser
-  cost: 4800
-  category: Armory
-  group: market
-
-- type: cargoProduct
-  id: ArmoryPistol
-  icon:
-    sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
-    state: icon
-  product: CrateArmoryPistols
+  product: CrateArmoryGrenadess #Айди ящика с пушкой
   cost: 5200
-  category: Armory
+  category: Security
   group: market
+
+- type: cargoProduct
+  id: CrateM4RAconsole #Любое айди, такое, что нет в игре
+  icon:
+    sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi #Спрайт
+    state: icon
+  product: CrateArmoryRiffles #Айди ящика с пушкой
+  cost: 6200
+  category: Security
+  group: market  
+  
+- type: cargoProduct
+  id: CrateMagazinesConsole #Любое айди, такое, что нет в игре
+  icon:
+    sprite: _CM/Objects/Weapons/Guns/Pistols/m4a3.rsi #Спрайт
+    state: icon
+  product: CrateArmoryMagazines #Айди ящика с оружием
+  cost: 4000
+  category: Security
+  group: market
+
+- type: cargoProduct
+  id: CrateFlaerss #Любое айди, такое, что нет в игре
+  icon:
+    sprite: Objects/Misc/flare.rsi #Спрайт
+    state: icon
+  product: CrateArmoryFlaeras #Айди ящика с оружием
+  cost: 3000
+  category: Security
+  group: market
+  
+- type: cargoProduct
+  id: CrateGoldUranSilver #Любое айди, такое, что нет в игре
+  icon:
+    sprite:  Structures/Storage/Crates/chemcrate_secure.rsi #Спрайт
+    state: icon
+  product: CrateGoldSilverUranium #Айди ящика с оружием
+  cost: 5600
+  category: Materials
+  group: market
+

@@ -49,26 +49,6 @@
   group: market
 
 - type: cargoProduct
-  id: EngineeringJetpack
-  icon:
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
-    state: icon
-  product: CrateEngineeringJetpack
-  cost: 1000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
-  id: EngineeringMiniJetpack
-  icon:
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-    state: icon
-  product: CrateEngineeringMiniJetpack
-  cost: 750
-  category: Engineering
-  group: market
-
-- type: cargoProduct
   id: AirlockKit
   icon:
     sprite: Objects/Tools/Toolboxes/toolbox_yellow.rsi
@@ -79,16 +59,7 @@
   group: market
 
 - type: cargoProduct
-  id: EvaKit
-  icon:
-    sprite: Clothing/Head/Helmets/eva.rsi
-    state: icon
-  product: CrateEvaKit
-  cost: 5000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
+  name: Ящик с турелью
   id: TurretMarineKit
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
