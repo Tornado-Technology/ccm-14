@@ -1,35 +1,38 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Taken/modified from tgstation at https://github.com/tgstation/tgstation/pull/41804/commits/1baf679a544505960cebd071425f1df60669cdf3, backpack sprite by Peptide",
-    "size": {
-        "x": 32,
-        "y": 32
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bolt-open"
     },
-    "states": [
-        {
-            "name": "icon"
-        },
-        {
-            "name": "base"
-        },
-        {
-            "name": "bolt-open"
-        },
-        {
-            "name": "mag-0"
-        },
-        {
-            "name": "inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "equipped-BACKPACK",
-            "directions": 4
-        }
-    ]
+    {
+      "name": "base"
+    },
+    {
+      "name": "icon (3)"
+    },
+    {
+      "name": "inhand-left (6)",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right (5)",
+      "directions": 4
+    },
+    {
+      "name": "mag-0",
+      "directions": 4
+    },
+    {
+      "name": "equipped-BACKPACK (1)"
+    },
+    {
+      "name": "suppressor"
+    }
+  ]
 }

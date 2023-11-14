@@ -15,7 +15,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        800: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

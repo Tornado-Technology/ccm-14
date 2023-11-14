@@ -4,11 +4,9 @@
   group: Toxins
   desc: reagent-desc-xeno-acid
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: slimy
   color: "#341d5d" # maybe change?
   boilingPoint: 4200.0
   meltingPoint: 3550.0
-  viscosity: 0.25
   reactiveEffects:
     Acidic:
       methods: [ Touch ]
@@ -18,4 +16,4 @@
         ignoreResistances: false
         damage:
           types:
-            Caustic: 0.1
+            Caustic: 1.5

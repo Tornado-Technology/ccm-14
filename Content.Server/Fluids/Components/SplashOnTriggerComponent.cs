@@ -1,12 +1,11 @@
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Reagent;
+namespace Content.Server.Fluids.EntitySystems;
 
-
-namespace Content.Server.Fluids.EntitySystems
+[RegisterComponent]
+public sealed partial class SplashOnTriggerComponent : Component
 {
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Quantity = 100f;
 
-    [RegisterComponent]
-    internal sealed partial class SplashOnTriggerComponent : Component
-    {
-    }
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public int SpreadAmount = 9;
 }

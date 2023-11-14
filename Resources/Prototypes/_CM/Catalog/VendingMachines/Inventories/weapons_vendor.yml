@@ -2,17 +2,17 @@
   id: WeaponsVendInventory
   startingInventory:
     WeaponRifleM4RA: 4
-    MagazineRifleM4RA: 20
+    MagazineRifleM4RA: 10
     WeaponRifleM41A: 4
-    MagazineRifleM41A: 30
+    MagazineRifleM41A: 15
     WeaponSubMachineGunM39: 3
-    MagazineRifleM39: 15
+    MagazineRifleM39: 8
     WeaponPistol88M4: 10
-    MagazinePistol88M4: 20
+    MagazinePistol88M4: 10
     WeaponPistolArmatM5Y3: 5
-    MagazinePistolAramatM5Y3: 5
+    MagazinePistolAramatM5Y3: 3
     WeaponShotgunUA571C: 2
     WeaponShotgunK221: 4
-    BoxLethalshot: 15
+    BoxLethalshot: 8
     MacheteMarine: 5
     ExGrenade: 10

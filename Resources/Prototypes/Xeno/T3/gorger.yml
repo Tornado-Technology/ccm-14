@@ -7,13 +7,14 @@
       action: ActionXenoGorgerVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
+      timeUsage: 10
     - type: XenoPsychicCure
       healAmount: 500
     - type: XenoSpitRejuvenate
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        500: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/gorger.rsi

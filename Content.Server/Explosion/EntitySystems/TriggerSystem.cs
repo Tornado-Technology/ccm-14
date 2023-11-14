@@ -113,7 +113,7 @@ namespace Content.Server.Explosion.EntitySystems
                 return;
 
             var transferSolution = new Solution();
-            transferSolution.AddReagent("XenoAcid", 1000f); // TODO: Fix this shit
+            transferSolution.AddReagent("XenoAcid", comp.Quantity); // TODO: Fix this shit
 
             if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
             {
@@ -122,7 +122,7 @@ namespace Content.Server.Explosion.EntitySystems
 
             var foamEnt = Spawn("Foam", coords);
 
-            _smoke.StartSmoke(foamEnt, transferSolution, 10f, 20);
+            _smoke.StartSmoke(foamEnt, transferSolution, 10f, comp.SpreadAmount);
 
             _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out var puddleUID);
         }

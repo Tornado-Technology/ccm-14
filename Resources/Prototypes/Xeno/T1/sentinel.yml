@@ -11,7 +11,7 @@
     - type: XenoSentinel
     - type: XenoSpit
       action: ActionSentinelDefaultSpit
-      projectile: ProjectileSentinelDefaultSpit
+      projectile: ProjectileToxinSpitWeak
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Xenos/sentinel.rsi
@@ -22,7 +22,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Dead
+        300: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -47,38 +47,3 @@
       itemIconStyle: NoItem
       priority: 5
       event: !type:XenoSpitEvent
-
-
-# spit projective
-- type: entity
-  id: ProjectileSentinelDefaultSpit
-  name: SentinelDefaultSpit proj name
-  description: SentinelDefaultSpit proj desc
-  parent: BaseBulletTrigger
-  noSpawn: true
-  components:
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.3,0.15,0.3"
-        hard: false
-        mask:
-        - Impassable
-        - BulletImpassable
-        - Opaque
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-  - type: Sprite
-    sprite: Objects/Xeno/spit.rsi
-    layers:
-      - state: grenade
-  - type: Projectile
-    damage:
-      types:
-        Caustic: 30 # Lower damage
-        Structural: 15

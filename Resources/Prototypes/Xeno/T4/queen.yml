@@ -12,15 +12,16 @@
       action: ActionXenoQueenVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
+      timeUsage: 10
     - type: XenoPsychicCure
       healAmount: 500
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
-      projectile: ProjectileDefilerAcidSpit
+      projectile: ProjectileNeurotoxinVeilRoyal
       speed: 25
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
-      projectile: ProjectileDefilerDefaultSpit
+      projectile: ProjectileToxinSpit
       speed: 25
     - type: XenoSpitRejuvenate
     - type: Sprite
@@ -32,7 +33,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        800: Dead
+        1200: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

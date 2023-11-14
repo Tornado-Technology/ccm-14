@@ -23,7 +23,10 @@
   access:
     - SquadAlpha
     - SquadLeader
+    - SquadSpecialist
+    - Engineering
     - Command
+    - Medical
 
 - type: startingGear
   id: AlfaCommanderGear

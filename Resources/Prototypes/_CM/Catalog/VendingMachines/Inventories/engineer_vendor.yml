@@ -34,7 +34,7 @@
     WeaponRifleM4RA: 1
     MagazineRifleM4RA: 5
     WeaponRifleM41A: 1
-    MagazineRifleM41A: 10
+    MagazineRifleM41A: 5
     WeaponSubMachineGunM39: 1
     MagazineRifleM39: 5
     WeaponMagnumVP-60x2: 1
@@ -43,3 +43,5 @@
     BoxLethalshot: 2
     MacheteMarine: 1
     ExGrenade: 2
+    BoxLighttube: 10
+    BoxLightbulb: 10

@@ -105,7 +105,7 @@
     access: [["SquadDelta"]]
 
 - type: entity
-  parent: AirlockSquadAlphaGlass
+  parent: AirlockSquadAlphaSpecialistGlass
   id: AirlockSquadSpecialistAlphaGlassLocked
   suffix: Specialist Alpha, Glass, Locked
   components:
@@ -113,7 +113,7 @@
     access: [["SquadAlpha", "SquadSpecialist"]]
 
 - type: entity
-  parent: AirlockSquadBarvoGlass
+  parent: AirlockSquadBarvoSpecialistGlass
   id: AirlockSquadSpecialistBravoGlassLocked
   suffix: Specialist Bravo, Glass, Locked
   components:
@@ -121,7 +121,7 @@
     access: [["SquadBravo", "SquadSpecialist"]]
 
 - type: entity
-  parent: AirlockSquadCharlieGlass
+  parent: AirlockSquadCharlieSpecialistGlass
   id: AirlockSquadSpecialistCharlieGlassLocked
   suffix: Specialist Charlie, Glass, Locked
   components:
@@ -129,7 +129,7 @@
     access: [["SquadCharlie", "SquadSpecialist"]]
 
 - type: entity
-  parent: AirlockSquadDeltaGlass
+  parent: AirlockSquadDeltaSpecialistGlass
   id: AirlockSquadSpecialistDeltaGlassLocked
   suffix: Specialist Delta, Glass, Locked
   components:

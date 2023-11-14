@@ -7,11 +7,11 @@
     - type: XenoExplosive
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
-      projectile: ProjectileDefilerAcidSpit
+      projectile: ProjectileNeurotoxinVeil
       speed: 25
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
-      projectile: ProjectileDefilerDefaultSpit
+      projectile: ProjectileToxinSpit
       speed: 25
     - type: Sprite
       drawdepth: Mobs
@@ -22,7 +22,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        500: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -68,73 +68,3 @@
       itemIconStyle: NoItem
       priority: 6
       event: !type:XenoSpit2Event
-
-
-# acidspit projective
-- type: entity
-  id: ProjectileDefilerAcidSpit
-  name: DefilerAcidSpit proj name
-  description: DefilerAcidSpit proj desc
-  parent: BaseBulletTrigger
-  noSpawn: true
-  components:
-  - type: Sprite
-    sprite: Objects/Xeno/spit.rsi
-    layers:
-      - state: grenade
-  - type: SplashOnTrigger
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.3,0.15,0.3"
-        hard: false
-        mask:
-        - Impassable
-        - BulletImpassable
-        - Opaque
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-  - type: Projectile
-    damage:
-      types:
-        Caustic: 75
-        Structural: 45
-
-# acidspit projective
-- type: entity
-  id: ProjectileDefilerDefaultSpit
-  name: DefilerDefaultSpit proj name
-  description: DefilerDefaultSpit proj desc
-  parent: BaseBulletTrigger
-  noSpawn: true
-  components:
-  - type: Sprite
-    sprite: Objects/Xeno/spit.rsi
-    layers:
-      - state: grenade
-  - type: Projectile
-    damage:
-      types:
-        Caustic: 50
-        Structural: 20
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.3,0.15,0.3"
-        hard: false
-        mask:
-        - Impassable
-        - BulletImpassable
-        - Opaque
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable

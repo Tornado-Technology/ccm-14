@@ -5,7 +5,7 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands;
 
-[AdminCommand(AdminFlags.Permissions)]
+[AdminCommand(AdminFlags.Round)]
 public sealed partial class FOBTimer : IConsoleCommand
 {
     public const string CommandName = "fobtime";

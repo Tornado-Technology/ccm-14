@@ -39,7 +39,7 @@
       tags:
       - Cartridge
       - CartridgeShotGun24Gauge
-    capacity: 8
+    capacity: 11
     proto: CartridgeShotGun24Gauge
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
@@ -91,7 +91,7 @@
       tags:
       - Cartridge
       - CartridgeShotGun8Gauge
-    capacity: 8
+    capacity: 11
     proto: CartridgeShotGun8Gauge
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
