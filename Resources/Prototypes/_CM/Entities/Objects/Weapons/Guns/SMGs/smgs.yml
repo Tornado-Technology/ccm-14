@@ -13,6 +13,11 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/SMGs/m39.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5

@@ -16,6 +16,7 @@
     slots:
     - Back
     - suitStorage
+    - belt
   - type: AmmoCounter
   - type: Wieldable
   - type: GunWieldBonus

@@ -13,6 +13,11 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Pistols/88m4.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: Gun
     fireRate: 2.5
     availableModes:

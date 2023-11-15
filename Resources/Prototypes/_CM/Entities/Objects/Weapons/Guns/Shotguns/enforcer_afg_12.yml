@@ -17,6 +17,7 @@
     slots:
     - Back
     - suitStorage
+    - belt
   - type: AmmoCounter
   - type: Gun
     fireRate: 3

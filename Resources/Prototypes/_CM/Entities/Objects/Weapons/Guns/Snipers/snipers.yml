@@ -14,6 +14,11 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: 0
