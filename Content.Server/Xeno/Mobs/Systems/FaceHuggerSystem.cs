@@ -83,15 +83,9 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         if (TryComp(args.Target, out MobStateComponent? mobState))
         {
-            if (mobState.CurrentState is not MobState.Alive)
-            {
+            if (mobState.CurrentState != MobState.Alive || mobState.CurrentState != MobState.Critical)
                 return;
-            }
         }
-
-        _inventory.TryGetSlotEntity(args.Target, "head", out var headItem);
-        if (HasComp<IngestionBlockerComponent>(headItem))
-            return;
 
         var equipped = _inventory.TryEquip(args.Target, uid, "mask", true);
         if (!equipped)
@@ -103,12 +97,10 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         RemComp<CombatModeComponent>(uid);
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
-        //_damageableSystem.TryChangeDamage(args.Target, component.Damage);
 
         defcomp.EquipedOn = args.Target;
 
-        _popup.PopupEntity(Loc.GetString("Something jumped on you!"),
-            args.Target, args.Target, PopupType.LargeCaution);
+        _popup.PopupEntity(Loc.GetString("Something jumped on you!"), args.Target, args.Target, PopupType.LargeCaution);
     }
 
 

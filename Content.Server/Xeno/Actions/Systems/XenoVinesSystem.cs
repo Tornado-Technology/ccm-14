@@ -66,7 +66,7 @@ public sealed class XenoVinesSystem : EntitySystem
     {
         foreach (var entity in _lookupSystem.GetEntitiesInRange(coords, 0.001f))
         {
-            if (HasComp<XenoVinesObjectComponent>(entity))
+            if (HasComp<XenoWeedsComponent>(entity))
                 return true;
         }
 

@@ -1,79 +1,109 @@
 - type: entity
-  id: XenoVines
-  name: xeno vines
-  description: It's stringy and sticky.
+  id: XenoWeedsSource
+  name: alien weeds
   placement:
     mode: SnapgridCenter
     snap:
-      - Wall
+    - Wall
   components:
-    - type: XenoVinesObject
-    - type: MeleeSound
-      soundGroups:
-        Brute:
-          path:
-            "/Audio/Weapons/slash.ogg"
-    - type: Sprite
-      sprite: Objects/Misc/kudzu.rsi
-      state: kudzu_11
-      drawdepth: Overdoors
-      color: "#2c2537"
-    - type: Appearance
-    - type: Clickable
-    - type: Transform
-      anchored: true
-    - type: Physics
-    - type: Fixtures
-      fixtures:
-        fix1:
-          hard: false
-          density: 7
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.5,-0.5,0.5,0.5"
-          layer:
-          - MidImpassable
-    - type: Damageable
-      damageContainer: Inorganic
-      damageModifierSet: XenoVinesModifier
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 10
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-    - type: Temperature
-      heatDamage:
-        types:
-          Heat: 5
-      coldDamage: {}
-      ColdDamageThreshold: 0
-    - type: Flammable
-      fireSpread: true
-      cold:
-        types: {}
-      damage:
-        types:
-          Heat: 1
-    - type: Reactive
-      groups:
-        Flammable: [ Touch ]
-        Extinguish: [ Touch ]
-    - type: SpiderWebObject
-    - type: SlowContacts
-      walkSpeedModifier: 0.25
-      sprintSpeedModifier: 0.25
-      ignoreWhitelist:
-        components:
-          - Xeno
+  - type: Physics
+  - type: Fixtures
+  - type: Transform
+    anchored: true
+  - type: XenoWeeds
+  - type: Clickable
+  - type: EdgeSpreader
+    id: XenoWeeds
+  - type: ActiveEdgeSpreader
+  - type: Sprite
+    sprite: _CM/Structures/Misc/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+    - state: constructionnode
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+  - type: IconSmoothRandom
+    overrides:
+    - weed_dir0
+    - weed_dir15
+  - type: SlowContacts
+    walkSpeedModifier: 0.75
+    sprintSpeedModifier: 0.75
+    ignoreWhitelist:
+      components:
+        - Xeno
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: XenoVinesModifier
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
+- type: entity
+  id: XenoWeeds
+  name: alien weeds
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Transform
+    anchored: true
+  - type: XenoWeeds
+  - type: Clickable
+  - type: EdgeSpreader
+    id: XenoWeeds
+  - type: ActiveEdgeSpreader
+  - type: Sprite
+    sprite: _CM/Structures/Misc/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+  - type: IconSmoothRandom
+    overrides:
+    - weed_dir0
+    - weed_dir15
+  - type: SlowContacts
+    walkSpeedModifier: 0.75
+    sprintSpeedModifier: 0.75
+    ignoreWhitelist:
+      components:
+        - Xeno
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: XenoVinesModifier
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
-- type: damageModifierSet
-  id: XenoVinesModifier
-  coefficients:
-    Blunt: 0.2
-    Slash: 2
-    Piercing: 0.2
-    Shock: 1
+- type: edgeSpreader
+  id: XenoWeeds
+  updatesPerSecond: 2
