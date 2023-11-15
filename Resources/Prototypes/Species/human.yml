@@ -7,10 +7,6 @@
   markingLimits: MarineMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
-  femaleFirstNames: "names_first_male"
-  femaleLastNames: "names_last_male"
-  sexes:
-  - Male
 
 # The lack of a layer means that
 # this person cannot have round-start anything

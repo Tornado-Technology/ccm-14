@@ -4,7 +4,7 @@
   id: WeaponSniperXM43E
   components:
   - type: ChamberMagazineAmmoProvider
-    boltClosed: null
+    boltClosed: true
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/XM43E.rsi
     layers:
@@ -47,11 +47,11 @@
             - MagazineRifleXM43E
       gun_chamber:
         name: Chamber
-        startingItem: BulletRifle416Barratti
+        startingItem: CartridgeRifle416Barratti
         priority: 1
         whitelist:
           tags:
-            - BulletRifle416Barratti
+            - CartridgeRifle416Barratti
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
