@@ -25,7 +25,8 @@
         - Impassable
         - BulletImpassable
       fly-by: &flybyfixture
-        shape: !type:PhysShapeCircle
+        shape: 
+          !type:PhysShapeCircle
           radius: 1.5
         layer:
         - Impassable
@@ -54,8 +55,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 14
-        Blunt: 14
+        Piercing: 20
+        Blunt: 20
   - type: PointLight
     enabled: true
     color: "#f24e2c"
@@ -76,7 +77,7 @@
     - Cartridge
     - CartridgeCap
   - type: CartridgeAmmo
-    count: 4
+    count: 3
     spread: 20
     deleteOnSpawn: true
     soundEject:

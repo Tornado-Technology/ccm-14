@@ -68,6 +68,7 @@
   - FuelTankFlamethrower
   - MagazineRifleXM43E
   - MagazineLightRifleBox
+  - BoxShotgunLMG
 
 - type: technology
   id: AdvancedLasers

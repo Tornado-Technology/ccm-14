@@ -352,10 +352,6 @@
   markingLimits: MarineMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
-  femaleFirstNames: "names_first_male"
-  femaleLastNames: "names_last_male"
-  sexes:
-  - Male
   
 - type: markingPoints
   id: MarineMarkingLimits
