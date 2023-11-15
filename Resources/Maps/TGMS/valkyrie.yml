@@ -84696,14 +84696,6 @@ entities:
       pos: -5.7679424,18.413404
       parent: 2
       type: Transform
-- proto: NuclearBomb
-  entities:
-  - uid: 12933
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -213.5,2.5
-      parent: 2
-      type: Transform
 - proto: NuclearBombKeg
   entities:
   - uid: 12934

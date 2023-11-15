@@ -58348,6 +58348,38 @@ entities:
       pos: 191.4797,-16.475887
       parent: 2
       type: Transform
+- proto: MinerMachineBroken
+  entities:
+  - uid: 8123
+    components:
+    - pos: 64.5,40.5
+      parent: 2
+      type: Transform
+  - uid: 8151
+    components:
+    - pos: 111.5,32.5
+      parent: 2
+      type: Transform
+  - uid: 8152
+    components:
+    - pos: 87.5,9.5
+      parent: 2
+      type: Transform
+  - uid: 8153
+    components:
+    - pos: 106.5,-35.5
+      parent: 2
+      type: Transform
+  - uid: 8154
+    components:
+    - pos: 168.5,39.5
+      parent: 2
+      type: Transform
+  - uid: 8155
+    components:
+    - pos: 98.5,-57.5
+      parent: 2
+      type: Transform
 - proto: Mirror
   entities:
   - uid: 4894
@@ -58665,6 +58697,13 @@ entities:
       parent: 2
       type: Transform
     - type: Godmode
+- proto: NukeCodePaper
+  entities:
+  - uid: 8043
+    components:
+    - pos: 102.5427,32.944912
+      parent: 2
+      type: Transform
 - proto: NukeDisk
   entities:
   - uid: 6508

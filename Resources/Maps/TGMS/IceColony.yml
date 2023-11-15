@@ -32717,6 +32717,43 @@ entities:
     - pos: 114.41928,5.380339
       parent: 2
       type: Transform
+- proto: MinerMachineBroken
+  entities:
+  - uid: 20541
+    components:
+    - pos: -17.5,27.5
+      parent: 2
+      type: Transform
+  - uid: 20598
+    components:
+    - pos: 10.5,34.5
+      parent: 2
+      type: Transform
+  - uid: 24127
+    components:
+    - pos: 33.5,26.5
+      parent: 2
+      type: Transform
+  - uid: 24128
+    components:
+    - pos: 23.5,-62.5
+      parent: 2
+      type: Transform
+  - uid: 24129
+    components:
+    - pos: -38.5,-90.5
+      parent: 2
+      type: Transform
+  - uid: 24133
+    components:
+    - pos: -43.5,-163.5
+      parent: 2
+      type: Transform
+  - uid: 24140
+    components:
+    - pos: -39.5,-163.5
+      parent: 2
+      type: Transform
 - proto: MinimoogInstrument
   entities:
   - uid: 3649
@@ -33016,6 +33053,13 @@ entities:
   - uid: 3698
     components:
     - pos: 23.5,-144.5
+      parent: 2
+      type: Transform
+- proto: NukeCodePaper
+  entities:
+  - uid: 20540
+    components:
+    - pos: -38.884727,16.49831
       parent: 2
       type: Transform
 - proto: NukeDisk
