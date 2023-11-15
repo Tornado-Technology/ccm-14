@@ -10,7 +10,6 @@
   - type: Item
     size: 5
   - type: BallisticAmmoProvider
-    mayTransfer: true
     whitelist:
       tags:
         - CartridgeRifle416Barratti
@@ -28,7 +27,6 @@
   - type: MagazineVisuals
     magState: mag
     steps: 2
-    zeroVisible: false
   - type: Appearance
   
   
@@ -38,7 +36,7 @@
   parent: BaseMagazineRifleXM43E
   components:
   - type: BallisticAmmoProvider
-    proto: BulletRifle416Barratti
+    proto: CartridgeRifle416Barratti
   - type: Sprite
     layers:
     - state: base

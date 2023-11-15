@@ -1,12 +1,21 @@
 - type: entity
   id: BaseCartridgeRifle1024
   name: cartridge (10x24 rifle)22
+  parent: BaseCartridge
   abstract: true
   components:
+  - type: Tag
+    tags:
+      - CartridgeRifle1024
   - type: CartridgeAmmo
     proto: BulletRifle1024
     deleteOnSpawn: true
   - type: Appearance
+  - type: Sprite
+    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 10
@@ -29,12 +38,21 @@
 
 - type: entity
   id: BaseCartridgeRifle125x60R
+  parent: BaseCartridge
   name: cartridge (12.5x60R rifle)22
   abstract: true
   components:
+  - type: Tag
+    tags:
+      - CartridgeRifle125x60R
   - type: CartridgeAmmo
     proto: BulletRifle125x60R
     deleteOnSpawn: true
+  - type: Sprite
+    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
