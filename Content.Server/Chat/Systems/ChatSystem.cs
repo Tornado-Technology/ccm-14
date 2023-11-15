@@ -31,6 +31,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Content.Shared.Xeno;
 
 namespace Content.Server.Chat.Systems;
 
@@ -232,6 +233,9 @@ public sealed partial class ChatSystem : SharedChatSystem
                 return;
             }
         }
+
+        if (HasComp<XenoComponent>(source))
+            return;
 
         // Otherwise, send whatever type.
         switch (desiredType)

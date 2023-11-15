@@ -25,13 +25,9 @@
     key: cm_xeno_weeds
     base: weed_dir
     mode: CardinalFlags
-  - type: IconSmoothRandom
-    overrides:
-    - weed_dir0
-    - weed_dir15
   - type: SlowContacts
-    walkSpeedModifier: 0.75
-    sprintSpeedModifier: 0.75
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
     ignoreWhitelist:
       components:
         - Xeno
@@ -82,10 +78,6 @@
     key: cm_xeno_weeds
     base: weed_dir
     mode: CardinalFlags
-  - type: IconSmoothRandom
-    overrides:
-    - weed_dir0
-    - weed_dir15
   - type: SlowContacts
     walkSpeedModifier: 0.75
     sprintSpeedModifier: 0.75

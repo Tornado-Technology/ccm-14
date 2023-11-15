@@ -39,3 +39,6 @@
           - MobMask
           layer:
           - MobLayer
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.6
