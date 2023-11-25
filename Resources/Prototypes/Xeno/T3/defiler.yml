@@ -15,9 +15,9 @@
       speed: 25
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/defiler.rsi
+      sprite: _CM/Mobs/Xenos/defiler.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:

@@ -7,7 +7,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/queen.rsi
+    sprite: _CM/Mobs/Xenos/queen.rsi
     state: running
     color: "#FFFF00"
     shader: StencilClear
@@ -48,7 +48,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    sprite: _CM/Mobs/Xenos/ravager.rsi
     state: running
     color: "#FFFF00"
     shader: StencilClear
@@ -61,7 +61,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/burrower.rsi
+    sprite: _CM/Mobs/Xenos/burrower.rsi
     state: running
     color: "#FFFF00"
     shader: StencilClear

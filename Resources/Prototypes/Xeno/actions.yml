@@ -1,0 +1,12 @@
+- type: entity
+  id: ActionXenoRest
+  name: Rest
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 15
+    icon:
+      sprite: Actions/xeno.rsi
+      state: resting
+    event: !type:XenoRestEvent
+    priority: -99

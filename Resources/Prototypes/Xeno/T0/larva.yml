@@ -19,7 +19,7 @@
           evolution: 0
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/larva.rsi
+      sprite: _CM/Mobs/Xenos/larva.rsi
       layers:
         - map: ["enum.DamageStateVisualLayers.Base"]
           state: running

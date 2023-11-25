@@ -14,11 +14,11 @@
       projectile: ProjectileToxinSpitWeak
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/sentinel.rsi
+      sprite: _CM/Mobs/Xenos/sentinel.rsi
       offset: 0,0.4
       layers:
-        - map: ["enum.DamageStateVisualLayers.Base"]
-          state: running
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
     - type: MobThresholds
       thresholds:
         0: Alive

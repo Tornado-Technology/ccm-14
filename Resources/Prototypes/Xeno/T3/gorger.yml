@@ -17,9 +17,9 @@
         500: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/gorger.rsi
+      sprite: _CM/Mobs/Xenos/gorger.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MeleeWeapon
       hidden: true

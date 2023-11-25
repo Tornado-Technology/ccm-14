@@ -13,9 +13,9 @@
       speed: 25
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/praetorian.rsi
+      sprite: _CM/Mobs/Xenos/praetorian.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:

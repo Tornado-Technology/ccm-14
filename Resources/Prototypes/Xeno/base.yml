@@ -12,6 +12,7 @@
     - type: Xeno
     - type: XenoEvolutions
     - type: XenoTier
+    - type: XenoRest
     - type: Actions
     - type: UserInterface
       interfaces:
@@ -48,15 +49,6 @@
       - Dead
     - type: Stamina
       critThreshold: 200
-    - type: DamageStateVisuals
-      rotate: true
-      states:
-        Alive:
-          Base: running
-        Critical:
-          Base: crit
-        Dead:
-          Base: dead
     - type: Puller
       needsHands: false
     - type: TypingIndicator
@@ -69,9 +61,9 @@
       drawFov: false
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/queen.rsi
+      sprite: _CM/Mobs/Xenos/queen.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:
