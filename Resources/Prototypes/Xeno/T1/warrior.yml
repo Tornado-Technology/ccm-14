@@ -16,10 +16,10 @@
         500: Dead
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/warrior.rsi
+      sprite: _CM/Mobs/Xenos/warrior.rsi
       layers:
-        - map: ["enum.DamageStateVisualLayers.Base"]
-          state: running
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
     - type: MeleeWeapon
       hidden: true
       damage:

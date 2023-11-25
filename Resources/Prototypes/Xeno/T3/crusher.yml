@@ -8,9 +8,9 @@
     - type: XenoStun
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/crusher.rsi
+      sprite: _CM/Mobs/Xenos/crusher.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:

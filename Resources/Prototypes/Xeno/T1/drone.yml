@@ -15,10 +15,10 @@
       healAmount: 200
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/drone.rsi
+      sprite: _CM/Mobs/Xenos/drone.rsi
       layers:
-        - map: ["enum.DamageStateVisualLayers.Base"]
-          state: running
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
     - type: MobThresholds
       thresholds:
         0: Alive

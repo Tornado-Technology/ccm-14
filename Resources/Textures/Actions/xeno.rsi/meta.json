@@ -66,6 +66,9 @@
     },
     {
       "name": "night_vision"
+    },
+    {
+      "name": "resting"
     }
   ]
 }
