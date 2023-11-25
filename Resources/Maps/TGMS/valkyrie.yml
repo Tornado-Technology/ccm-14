@@ -47631,23 +47631,6 @@ entities:
     - pos: -191.34224,15.561075
       parent: 2
       type: Transform
-- proto: ClothingOuterArmorMarineB12
-  entities:
-  - uid: 7278
-    components:
-    - pos: -61.066036,32.88624
-      parent: 2
-      type: Transform
-  - uid: 7279
-    components:
-    - pos: -39.786137,32.49633
-      parent: 2
-      type: Transform
-  - uid: 7280
-    components:
-    - pos: -59.679058,-15.470184
-      parent: 2
-      type: Transform
 - proto: ClothingOuterArmorMarineLight
   entities:
   - uid: 7281
