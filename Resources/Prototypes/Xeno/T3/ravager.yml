@@ -7,9 +7,9 @@
     - type: XenoRage
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/ravager.rsi
+      sprite: _CM/Mobs/Xenos/ravager.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:
