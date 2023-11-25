@@ -26,7 +26,7 @@
 - type: startingGear
   id: MilitaryPolicemanGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSec
+    jumpsuit: ClothingUniformJumpsuitMilitaryPolice
     back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
     eyes: ClothingEyesGlassesSecurity
