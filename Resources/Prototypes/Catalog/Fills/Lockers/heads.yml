@@ -276,30 +276,19 @@
       - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
       - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
-      - id: ClothingUniformJumpskirtHoSAlt
-      - id: ClothingUniformJumpsuitHoSAlt
-      - id: ClothingOuterHardsuitSecurityRed
-      - id: ClothingMaskGasSwat
 #      - id: ClothingShoeSlippersDuck # Corvax-Resprite: Need more space for style
 #        prob: 0.2
       - id: DrinkVacuumFlask
         prob: 0.8
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSecurity
-      - id: ClothingShoesBootsJack
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity
-      - id: ClothingUniformJumpskirtHosFormal
-      - id: ClothingUniformJumpsuitHosFormal
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
-      - id: JetpackSecurityFilled
       - id: BoxEncryptionKeySecurity
       - id: HoloprojectorSecurity
-      - id: BookSecretDocuments
-      - id: BookBusido # Corvax-Books
 
 - type: entity
   id: LockerHeadOfSecurityFilled
@@ -317,31 +306,16 @@
       - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
       - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
-      - id: ClothingUniformJumpskirtHoSAlt
-      - id: ClothingUniformJumpsuitHoSAlt
-      - id: ClothingUniformJumpsuitHoSBlue
-        prob: 0.5
-      - id: ClothingUniformJumpsuitHoSGrey
-        prob: 0.5
-      - id: ClothingUniformJumpsuitHoSParadeMale
-        prob: 0.1
-      - id: ClothingUniformJumpskirtHoSParadeMale
-        prob: 0.1
 #      - id: ClothingShoeSlippersDuck # Corvax-Resprite: Need more space for style
 #        prob: 0.2
       - id: DrinkVacuumFlask
         prob: 0.8
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSecurity
-      - id: ClothingShoesBootsJack
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity
-      - id: ClothingUniformJumpskirtHosFormal
-      - id: ClothingUniformJumpsuitHosFormal
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
       - id: BoxEncryptionKeySecurity
       - id: HoloprojectorSecurity
-      - id: BookSecretDocuments
