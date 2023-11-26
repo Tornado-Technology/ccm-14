@@ -4,82 +4,29 @@
   name: CAS
   noSpawn: true
   components:
+  - type: Tag
+    tags:
+      - InteractionCAS
+  - type: TagInteraction
+    whitelistTag: InteractionCAS
   - type: Sprite
     sprite: Mobs/Silicon/cas.rsi
     color: "#7ec9f7"
     state: marker
     noRot: true
     shader: unshaded
+    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    drawdepth: Ghosts
   - type: ContentEye
     maxZoom: 8.916104, 8.916104
-  - type: Tag
-    tags:
-    - InstantDoAfters
-    - CanPilot
-    - BypassInteractionRangeChecks
   - type: Input
     context: "aghost"
-  - type: GhostHearing
   - type: Hands
   - type: Physics
-    ignorePaused: true
     bodyType: KinematicController
-    bodyStatus: InAir
   - type: Body
     prototype: Aghost
-  - type: Access
-    groups:
-    - AllAccess
-  - type: UserInterface
-    interfaces:
-      - key: enum.SolarControlConsoleUiKey.Key
-        type: SolarControlConsoleBoundUserInterface
-      - key: enum.CommunicationsConsoleUiKey.Key
-        type: CommunicationsConsoleBoundUserInterface
-      - key: enum.RadarConsoleUiKey.Key
-        type: RadarConsoleBoundUserInterface
-      - key: enum.CargoConsoleUiKey.Orders
-        type: CargoOrderConsoleBoundUserInterface
-      - key: enum.CrewMonitoringUIKey.Key
-        type: CrewMonitoringBoundUserInterface
-      - key: enum.GeneralStationRecordConsoleKey.Key
-        type: GeneralStationRecordConsoleBoundUserInterface
-  - type: IntrinsicUI
-    uis:
-      - key: enum.SolarControlConsoleUiKey.Key
-        toggleAction: ActionAGhostShowSolar
-      - key: enum.CommunicationsConsoleUiKey.Key
-        toggleAction: ActionAGhostShowCommunications
-      - key: enum.RadarConsoleUiKey.Key
-        toggleAction: ActionAGhostShowRadar
-      - key: enum.CargoConsoleUiKey.Orders
-        toggleAction: ActionAGhostShowCargo
-      - key: enum.CrewMonitoringUIKey.Key
-        toggleAction: ActionAGhostShowCrewMonitoring
-      - key: enum.GeneralStationRecordConsoleKey.Key
-        toggleAction: ActionAGhostShowStationRecords
-  - type: SolarControlConsole # look ma i AM the computer!
-  - type: CommunicationsConsole
-    title: raptor-announcement-sender
-    color: "#006498"
-  - type: RadarConsole
-  - type: CargoOrderConsole
-  - type: CrewMonitoringConsole
-    snap: false
-    precision: 3
-  - type: GeneralStationRecordConsole
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: CrewMonitor
-  - type: WirelessNetworkConnection
-    range: 500
-  - type: StationLimitedNetwork
-  - type: Thieving
-    stripTimeReduction: 9999
-    stealthy: true
   - type: Stripping
-  - type: SolutionScanner
-  - type: IgnoreUIRange
   - type: CargoSellBlacklist
   - type: Fixtures
     fixtures:
@@ -92,8 +39,6 @@
         - GhostImpassable
   - type: Eye
     drawFov: false
-  - type: Examiner
-    skipChecks: true
   - type: MovementSpeedModifier
     baseSprintSpeed: 16
     baseWalkSpeed: 8

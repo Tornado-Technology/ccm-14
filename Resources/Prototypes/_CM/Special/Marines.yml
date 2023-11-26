@@ -342,7 +342,9 @@
   - type: SurveillanceCamera
     setupAvailableNetworks:
       - SurveillanceCameraEntertainment
-
+  - type: TagInteraction
+    blacklistTag: InteractionCAS
+  
 - type: species
   id: Marine
   name: species-name-human
