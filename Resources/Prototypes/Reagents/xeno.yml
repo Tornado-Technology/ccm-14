@@ -7,6 +7,7 @@
   color: "#341d5d" # maybe change?
   boilingPoint: 4200.0
   meltingPoint: 3550.0
+  slippery: false
   reactiveEffects:
     Acidic:
       methods: [ Touch ]
