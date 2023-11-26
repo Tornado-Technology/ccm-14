@@ -1,6 +1,6 @@
-ent-BaseCartridgeRifle1024 = cartridge (10x24 rifle)
+ent-BaseCartridgeRifle1024 = cartridge (10x24 винтовочный)
     .desc = { ent-BaseCartridge.desc }
-ent-CartridgeRifle1024 = cartridge (10x24 rifle)
+ent-CartridgeRifle1024 = cartridge (10x24 винтовочный)
     .desc = { ent-BaseCartridgeRifle1024.desc }
-ent-CartridgeRifle1024AP = cartridge (10x24 rifle armor-piercing)
+ent-CartridgeRifle1024AP = cartridge (10x24 винтовочный бронебойный)
     .desc = { ent-BaseCartridgeRifle1024.desc }
