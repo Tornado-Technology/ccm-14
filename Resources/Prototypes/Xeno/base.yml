@@ -8,7 +8,7 @@
     - MobBloodstream
     - MobFlammable
   id: MobXenoBase
-  components:
+  components:`
     - type: Xeno
     - type: XenoEvolutions
     - type: XenoTier
@@ -63,6 +63,9 @@
       thresholds:
         0: Alive
         300: Dead
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: Xeno
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 9

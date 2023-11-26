@@ -33,7 +33,7 @@
         - Xeno
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: XenoVinesModifier
+    damageModifierSet: Resin
   - type: Destructible
     thresholds:
     - trigger:
@@ -86,7 +86,7 @@
         - Xeno
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: XenoVinesModifier
+    damageModifierSet: Resin
   - type: Destructible
     thresholds:
     - trigger:

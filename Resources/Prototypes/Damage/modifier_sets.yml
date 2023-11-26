@@ -202,7 +202,12 @@
 - type: damageModifierSet
   id: Resin
   coefficients:
-    Blunt: 0.2
-    Slash: 2
-    Piercing: 0.2
-    Shock: 1
+    Blunt: 0.1
+    Slash: 1.35
+    Piercing: 0.1
+    Heat: 2
+
+- type: damageModifierSet
+  id: Xeno
+  coefficients:
+    Heat: 1.75
