@@ -9493,21 +9493,10 @@ entities:
       pos: -59.5,18.5
       parent: 2
       type: Transform
-  - uid: 110
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: -59.5,1.5
-      parent: 2
-      type: Transform
   - uid: 111
     components:
     - rot: -1.5707963267948966 rad
       pos: -61.5,9.5
-      parent: 2
-      type: Transform
-  - uid: 112
-    components:
-    - pos: -202.5,-0.5
       parent: 2
       type: Transform
   - uid: 113
@@ -9657,6 +9646,13 @@ entities:
     components:
     - rot: 1.5707963267948966 rad
       pos: -31.5,-7.5
+      parent: 2
+      type: Transform
+- proto: AirlockMaintCommandLocked
+  entities:
+  - uid: 112
+    components:
+    - pos: -202.5,-0.5
       parent: 2
       type: Transform
 - proto: AirlockMaintEngiLocked
@@ -46247,18 +46243,6 @@ entities:
     - pos: -27.5,11.5
       parent: 2
       type: Transform
-- proto: ChemistryHotplate
-  entities:
-  - uid: 7039
-    components:
-    - pos: -146.5,13.5
-      parent: 2
-      type: Transform
-  - uid: 7040
-    components:
-    - pos: -148.5,3.5
-      parent: 2
-      type: Transform
 - proto: CigarGold
   entities:
   - uid: 7041
@@ -47704,6 +47688,11 @@ entities:
       type: Transform
 - proto: CMWallHull
   entities:
+  - uid: 110
+    components:
+    - pos: -59.5,1.5
+      parent: 2
+      type: Transform
   - uid: 7291
     components:
     - pos: -22.5,-5.5
@@ -59877,6 +59866,116 @@ entities:
     components:
     - rot: 3.141592653589793 rad
       pos: -48.5,-8.5
+      parent: 2
+      type: Transform
+  - uid: 15432
+    components:
+    - pos: -46.5,10.5
+      parent: 2
+      type: Transform
+  - uid: 15433
+    components:
+    - pos: -46.5,9.5
+      parent: 2
+      type: Transform
+  - uid: 15434
+    components:
+    - pos: -46.5,1.5
+      parent: 2
+      type: Transform
+  - uid: 15435
+    components:
+    - pos: -46.5,2.5
+      parent: 2
+      type: Transform
+  - uid: 15436
+    components:
+    - pos: -46.5,3.5
+      parent: 2
+      type: Transform
+  - uid: 15437
+    components:
+    - pos: -46.5,4.5
+      parent: 2
+      type: Transform
+  - uid: 15438
+    components:
+    - pos: -46.5,5.5
+      parent: 2
+      type: Transform
+  - uid: 15439
+    components:
+    - pos: -46.5,6.5
+      parent: 2
+      type: Transform
+  - uid: 15440
+    components:
+    - pos: -46.5,8.5
+      parent: 2
+      type: Transform
+  - uid: 15441
+    components:
+    - pos: -46.5,7.5
+      parent: 2
+      type: Transform
+  - uid: 15442
+    components:
+    - pos: -46.5,11.5
+      parent: 2
+      type: Transform
+  - uid: 15443
+    components:
+    - pos: -46.5,12.5
+      parent: 2
+      type: Transform
+  - uid: 15444
+    components:
+    - pos: -46.5,13.5
+      parent: 2
+      type: Transform
+  - uid: 15445
+    components:
+    - pos: -46.5,14.5
+      parent: 2
+      type: Transform
+  - uid: 15446
+    components:
+    - pos: -46.5,16.5
+      parent: 2
+      type: Transform
+  - uid: 15447
+    components:
+    - pos: -46.5,15.5
+      parent: 2
+      type: Transform
+  - uid: 15448
+    components:
+    - pos: -46.5,17.5
+      parent: 2
+      type: Transform
+  - uid: 15449
+    components:
+    - pos: -46.5,18.5
+      parent: 2
+      type: Transform
+  - uid: 15451
+    components:
+    - pos: -91.5,27.5
+      parent: 2
+      type: Transform
+  - uid: 15452
+    components:
+    - pos: -92.5,27.5
+      parent: 2
+      type: Transform
+  - uid: 15453
+    components:
+    - pos: -87.5,27.5
+      parent: 2
+      type: Transform
+  - uid: 15454
+    components:
+    - pos: -88.5,27.5
       parent: 2
       type: Transform
 - proto: Cobweb1
@@ -83353,6 +83452,16 @@ entities:
       type: Transform
 - proto: KitchenMicrowave
   entities:
+  - uid: 7039
+    components:
+    - pos: -146.5,13.5
+      parent: 2
+      type: Transform
+  - uid: 7040
+    components:
+    - pos: -148.5,3.5
+      parent: 2
+      type: Transform
   - uid: 12738
     components:
     - pos: -117.5,-6.5
@@ -85387,6 +85496,18 @@ entities:
   - uid: 13040
     components:
     - pos: -72.5,0.5
+      parent: 2
+      type: Transform
+- proto: Plunger
+  entities:
+  - uid: 15709
+    components:
+    - pos: -147.5311,12.698074
+      parent: 2
+      type: Transform
+  - uid: 15710
+    components:
+    - pos: -148.51619,2.796514
       parent: 2
       type: Transform
 - proto: PlushieAtmosian
@@ -99111,119 +99232,9 @@ entities:
     - pos: -141.5,5.5
       parent: 2
       type: Transform
-  - uid: 15432
-    components:
-    - pos: -46.5,10.5
-      parent: 2
-      type: Transform
-  - uid: 15433
-    components:
-    - pos: -46.5,9.5
-      parent: 2
-      type: Transform
-  - uid: 15434
-    components:
-    - pos: -46.5,1.5
-      parent: 2
-      type: Transform
-  - uid: 15435
-    components:
-    - pos: -46.5,2.5
-      parent: 2
-      type: Transform
-  - uid: 15436
-    components:
-    - pos: -46.5,3.5
-      parent: 2
-      type: Transform
-  - uid: 15437
-    components:
-    - pos: -46.5,4.5
-      parent: 2
-      type: Transform
-  - uid: 15438
-    components:
-    - pos: -46.5,5.5
-      parent: 2
-      type: Transform
-  - uid: 15439
-    components:
-    - pos: -46.5,6.5
-      parent: 2
-      type: Transform
-  - uid: 15440
-    components:
-    - pos: -46.5,7.5
-      parent: 2
-      type: Transform
-  - uid: 15441
-    components:
-    - pos: -46.5,8.5
-      parent: 2
-      type: Transform
-  - uid: 15442
-    components:
-    - pos: -46.5,11.5
-      parent: 2
-      type: Transform
-  - uid: 15443
-    components:
-    - pos: -46.5,12.5
-      parent: 2
-      type: Transform
-  - uid: 15444
-    components:
-    - pos: -46.5,13.5
-      parent: 2
-      type: Transform
-  - uid: 15445
-    components:
-    - pos: -46.5,14.5
-      parent: 2
-      type: Transform
-  - uid: 15446
-    components:
-    - pos: -46.5,15.5
-      parent: 2
-      type: Transform
-  - uid: 15447
-    components:
-    - pos: -46.5,16.5
-      parent: 2
-      type: Transform
-  - uid: 15448
-    components:
-    - pos: -46.5,17.5
-      parent: 2
-      type: Transform
-  - uid: 15449
-    components:
-    - pos: -46.5,18.5
-      parent: 2
-      type: Transform
   - uid: 15450
     components:
     - pos: -141.5,8.5
-      parent: 2
-      type: Transform
-  - uid: 15451
-    components:
-    - pos: -92.5,27.5
-      parent: 2
-      type: Transform
-  - uid: 15452
-    components:
-    - pos: -91.5,27.5
-      parent: 2
-      type: Transform
-  - uid: 15453
-    components:
-    - pos: -88.5,27.5
-      parent: 2
-      type: Transform
-  - uid: 15454
-    components:
-    - pos: -87.5,27.5
       parent: 2
       type: Transform
   - uid: 15455
@@ -99526,6 +99537,11 @@ entities:
     - pos: -150.5,22.5
       parent: 2
       type: Transform
+  - uid: 15711
+    components:
+    - pos: -141.5,13.5
+      parent: 2
+      type: Transform
 - proto: WaterTankHighCapacity
   entities:
   - uid: 15492
@@ -99667,6 +99683,16 @@ entities:
   - uid: 15515
     components:
     - pos: -115.5,25.5
+      parent: 2
+      type: Transform
+  - uid: 15712
+    components:
+    - pos: -142.5,13.5
+      parent: 2
+      type: Transform
+  - uid: 15713
+    components:
+    - pos: -141.5,0.5
       parent: 2
       type: Transform
 - proto: WeldingFuelTankHighCapacity

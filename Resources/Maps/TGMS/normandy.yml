@@ -1455,6 +1455,8 @@ entities:
     - pos: 5.5,15.5
       parent: 1
       type: Transform
+    - oldDamage: {}
+      type: Godmode
   - uid: 176
     components:
     - pos: 5.5,16.5
@@ -1845,6 +1847,15 @@ entities:
       type: Transform
     - layer: 7
       type: Visibility
+  - uid: 219
+    components:
+    - pos: -0.5,17.5
+      parent: 1
+      type: Transform
+    - needsPower: False
+      type: ApcPowerReceiver
+    - oldDamage: {}
+      type: Godmode
 - proto: Grille
   entities:
   - uid: 191
@@ -2045,12 +2056,6 @@ entities:
       type: Transform
 - proto: TableReinforced
   entities:
-  - uid: 219
-    components:
-    - rot: 3.141592653589793 rad
-      pos: -0.5,17.5
-      parent: 1
-      type: Transform
   - uid: 220
     components:
     - rot: 3.141592653589793 rad
@@ -2077,14 +2082,6 @@ entities:
   - uid: 228
     components:
     - pos: -1.5,3.5
-      parent: 1
-      type: Transform
-- proto: WeaponMagnumVP-60x2
-  entities:
-  - uid: 248
-    components:
-    - rot: -1.5707963267948966 rad
-      pos: -0.56095225,17.56985
       parent: 1
       type: Transform
 ...
