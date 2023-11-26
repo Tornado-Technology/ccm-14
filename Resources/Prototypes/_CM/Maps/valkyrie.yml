@@ -31,7 +31,7 @@
             CharlieSpecialist: [ 1, 1 ]
             MilitaryPoliceman: [ 3, 3 ]
             MilitaryPoliceOfficer: [ 1, 1 ]
-            MilitaryScientist: [ 2, 2 ]
+            MilitaryScientist: [ 4, 4 ]
             SupplyOfficer: [ 1, 1 ]
             Rigger: [ 1, 1 ]
             MilitaryMedic: [ 2, 2 ]
