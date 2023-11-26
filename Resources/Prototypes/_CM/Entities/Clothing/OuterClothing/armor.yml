@@ -90,3 +90,27 @@
         Caustic: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.65
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterPrototypeC
+  name: Exoskeleton Prototype-C
+  description: Allows you to move unusually quickly, self-charging due to built-in mini-generators!
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/light_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/light_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Caustic: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 1.3
+    sprintModifier: 1.3
