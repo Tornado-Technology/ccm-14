@@ -56,7 +56,7 @@
     - type: Appearance
     - type: AnimationPlayer
     - type: PointLight
-      radius: 3
+      radius: 5
       energy: 1.6
       color: "#ffcc00"
     - type: AmbientSound
@@ -64,6 +64,9 @@
       range: 8
       sound:
         path: /Audio/Ambience/Objects/gravity_gen_hum.ogg
+    - type: NavMapBeacon
+      color: "#b8a82c"
+      text: Майнер
 
 - type: entity
   id: MinerMachineBroken
@@ -88,4 +91,6 @@
           - GlassLayer
     - type: Physics
       bodyType: Static
-      canCollide: false
+    - type: NavMapBeacon
+      color: "#ff0000"
+      text: Сломаный майнер

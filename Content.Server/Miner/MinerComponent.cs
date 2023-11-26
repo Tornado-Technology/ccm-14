@@ -4,5 +4,5 @@ namespace Content.Server.Miner;
 public sealed partial class MinerComponent : Component
 {
     [DataField]
-    public int BalanceGeneration = 10;
+    public int BalanceGeneration = 40;
 }
