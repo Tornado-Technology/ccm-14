@@ -89,3 +89,27 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
     access: [["SquadLeader"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineResearcherEquipment
+  name: ColMarTech Automated Researcher Equipment Rack
+  description: Automated shelving connected to a colossal storage of standard equipment for Researchers.
+  components:
+  - type: VendingMachine
+    pack: ResearcherVendorInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 0.5
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/science_gear.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Research"]]
