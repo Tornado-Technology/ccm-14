@@ -16,5 +16,5 @@ public sealed partial class XenoStunComponent : Component
     ///     Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
-    public float StunTime = 3f;
+    public float StunTime = 4f;
 }

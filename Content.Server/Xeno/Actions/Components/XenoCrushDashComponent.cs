@@ -16,5 +16,5 @@ public sealed partial class XenoCrushDashComponent : Component
     /// Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
-    public float StunTime = 10f;
+    public float StunTime = 4f;
 }
