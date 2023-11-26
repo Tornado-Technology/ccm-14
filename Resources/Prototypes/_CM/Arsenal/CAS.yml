@@ -115,9 +115,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 10
-    intensitySlope: 3
-    totalIntensity: 120 # about a ~4 tile radius
+    maxIntensity: 15
+    intensitySlope: 2
+    totalIntensity: 200 # about a ~6 tile radius
     canCreateVacuum: false
   - type: PointLight
     color: Red

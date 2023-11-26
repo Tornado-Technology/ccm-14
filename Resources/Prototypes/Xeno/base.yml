@@ -110,7 +110,6 @@
       - Electrocution
       - ForcedSleep
       - TemporaryBlindness
-      - Pacified
     - type: Buckle
     - type: StandingState
     - type: Butcherable
@@ -125,23 +124,12 @@
     - type: ActiveRadio
       channels:
       - Hivemind
-    - type: UnpoweredFlashlight
-      toggleAction: ActionToggleLightXeno
-    - type: PointLight
-      enabled: false
-      radius: 6
-      softness: 5
-      color: "#FF33FF"
-      autoRot: true
-    - type: Prying
-      speedModifier: 2.75
-      pryPowered: true
-      force: true
     - type: Bloodstream
       bloodlossThreshold: 0
       bloodRefreshAmount: 150
       bloodReagent: FluorosulfuricAcid 
     - type: LizardAccent
+    - type: FlashImmunity
 
 - type: entity
   abstract: true
