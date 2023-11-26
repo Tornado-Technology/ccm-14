@@ -24,12 +24,6 @@
       combatToggleAction: ActionXenoCombatModeToggle
     - type: InputMover
     - type: MobMover
-    - type: Tool
-      speed: 1.5
-      qualities:
-        - Prying
-      useSound:
-        path: /Audio/Items/crowbar.ogg
     - type: Reactive
       groups:
         Flammable: [ Touch ]
@@ -109,7 +103,6 @@
       - Stutter
       - Electrocution
       - ForcedSleep
-      - TemporaryBlindness
     - type: Buckle
     - type: StandingState
     - type: Butcherable
@@ -124,6 +117,10 @@
     - type: ActiveRadio
       channels:
       - Hivemind
+    - type: Prying
+      speedModifier: 2.75
+      pryPowered: true
+      force: true
     - type: Bloodstream
       bloodlossThreshold: 0
       bloodRefreshAmount: 150
