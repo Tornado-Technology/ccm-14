@@ -1,2 +1,2 @@
 ent-BoxMRP = USCM MRE
-    .desc = A Meal, Ready-to-Eat. A single-meal combat ration designed to provide a soldier with enough nutrients for a day of strenuous work. Its expiration date is at least 20 years ahead of your combat life expectancy.
+    .desc = Сухпаек, готовый к употреблению. Одноразовый боевой рацион, предназначенный для обеспечения военнослужащего питательными веществами в течение дня напряженной работы. Срок его годности опережает продолжительность боевой жизни как минимум на 20 лет.
