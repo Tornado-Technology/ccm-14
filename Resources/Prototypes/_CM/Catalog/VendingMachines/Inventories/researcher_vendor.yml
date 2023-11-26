@@ -1,0 +1,31 @@
+- type: vendingMachineInventory
+  id: ResearcherVendorInventory
+  startingInventory:
+    ResearchAnalyser: 1
+    ClothingEyesGlassesMeson: 1
+    ClothingBeltUtilityEngineering: 1
+    WelderIndustrialAdvanced: 1
+    PowerDrill: 1
+    trayScanner: 1
+    GasAnalyzer: 1
+    HandheldStationMap: 1
+    PowerCellHyper: 2
+    SheetSteel: 3
+    SheetGlass: 3
+    SheetPlastic: 3
+    SheetPlasteel: 1
+    SheetRGlass: 1
+    CableApcStack: 15
+    CableMVStack: 15
+    CableHVStack: 15
+    FlashlightLantern: 2
+    FireExtinguisherMarine: 1
+    ClothingHandsGlovesCombat: 1
+    ClothingShoesBootsMagBlinding: 1
+    ClothingOuterCoatRobo: 1
+    ClothingOuterCoatRnd: 1
+    ClothingNeckCloakRd: 1
+    ClothingHeadHatBeretRND: 1
+    ClothingMaskGas : 1
+    WeaponAdvancedLaser: 1
+    C4: 5
