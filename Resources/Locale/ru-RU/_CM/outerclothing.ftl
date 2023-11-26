@@ -1,4 +1,4 @@
-ent-ClothingOuterArmorCMSpecialist = броня M3-SPEC
+ent-ClothingOuterArmorSPEC = броня M3-SPEC
     .desc = Специальная броня с бронеплитами IV класса. Не замедляет носителя, несмотря на серьёзную защиту.  
 
 ent-ClothingOuterHardsuitCMSLBase = MJOLNIR Mark III полевого командира

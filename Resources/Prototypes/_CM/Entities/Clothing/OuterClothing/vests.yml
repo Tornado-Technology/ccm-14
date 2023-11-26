@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: ClothingOuterArmorCMSpecialist
+  id: ClothingOuterArmorSPEC
   name: M3-SPEC type armor # idk about name, let it be m3 spec
   description: Plate carrier with type IV armor plates inside. Does not slow the operator down, despite the heavy armour it provides. 
   components:
