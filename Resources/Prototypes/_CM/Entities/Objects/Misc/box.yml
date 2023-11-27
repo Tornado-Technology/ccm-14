@@ -26,3 +26,23 @@
       Cardboard: 100
   - type: StaticPrice
     price: 10
+
+
+- type: entity
+  name: survival box
+  parent: BoxCardboard
+  id: BoxEmergencyMarine
+  description: It's a box with basic internals inside.
+  components:
+  - type: StorageFill
+    contents:
+      - id: BruteAutoInjector
+      - id: BurnAutoInjector
+      - id: CausticAutoInjector
+      - id: Gauze
+      - id: PillCanisterDermaline
+      - id: PillCanisterBicaridine
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: emergencytank

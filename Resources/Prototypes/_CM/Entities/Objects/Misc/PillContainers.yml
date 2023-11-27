@@ -1,0 +1,21 @@
+- type: entity
+  name: pill canister
+  id: PillCanisterBicaridine
+  parent: PillCanister
+  description: Holds up to 9 pills.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillBicaridine
+        amount: 9
+
+- type: entity
+  name: pill canister
+  id: PillCanisterDermaline
+  parent: PillCanister
+  description: Holds up to 9 pills.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDermaline
+        amount: 9
