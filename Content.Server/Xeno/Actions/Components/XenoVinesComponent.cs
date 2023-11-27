@@ -10,5 +10,5 @@ public sealed partial class XenoVinesComponent : Component
     public string Action = "ActionXenoVines";
 
     [DataField("vinesPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string VinesPrototype = "XenoVines";
+    public string VinesPrototype = "XenoWeeds";
 }

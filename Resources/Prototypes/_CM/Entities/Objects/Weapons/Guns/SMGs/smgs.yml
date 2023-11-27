@@ -13,6 +13,11 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/SMGs/m39.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5
@@ -30,6 +35,7 @@
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: ChamberMagazineAmmoProvider
     autoEject: true
+    boltClosed: false
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -41,17 +47,12 @@
         whitelist:
           tags:
             - MagazineRifleM39
-      gun_chamber:
-        name: Chamber
-        startingItem: BulletSmg450Brushmaster
-        priority: 1
-        whitelist:
-          tags:
             - BulletSmg450Brushmaster
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -93,6 +94,7 @@
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: ChamberMagazineAmmoProvider
     autoEject: true
+    boltClosed: false
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -104,17 +106,12 @@
         whitelist:
           tags:
             - MagazineSmgMSG23W-Y
-      gun_chamber:
-        name: Chamber
-        startingItem: BulletSmg458Socom
-        priority: 1
-        whitelist:
-          tags:
             - BulletSmg458Socom
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
     steps: 1

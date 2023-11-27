@@ -37,3 +37,13 @@
     Telecrystal: 1
   categories:
   - StoreWeapon
+
+- type: listing
+  id: StoreWeaponR-284_Fenix
+  name: Набор R-284 Феникс
+  description:  "..."
+  productEntity: ClothingBackpackWeaponR-284_Fenix
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon

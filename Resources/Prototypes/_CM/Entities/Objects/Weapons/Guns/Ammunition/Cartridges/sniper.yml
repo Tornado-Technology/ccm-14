@@ -1,10 +1,20 @@
 - type: entity
   id: BaseCartridgeRifle416Barratti
+  parent: BaseCartridge
   name: cartridge (416 Barratti)22
   abstract: true
   components:
+  - type: Tag
+    tags:
+      - CartridgeRifle416Barratti
   - type: CartridgeAmmo
     proto: BulletRifle416Barratti
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice

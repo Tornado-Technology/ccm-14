@@ -12,6 +12,7 @@
     - type: Xeno
     - type: XenoEvolutions
     - type: XenoTier
+    - type: XenoRest
     - type: Actions
     - type: UserInterface
       interfaces:
@@ -23,12 +24,6 @@
       combatToggleAction: ActionXenoCombatModeToggle
     - type: InputMover
     - type: MobMover
-    - type: Tool
-      speed: 1.5
-      qualities:
-        - Prying
-      useSound:
-        path: /Audio/Items/crowbar.ogg
     - type: Reactive
       groups:
         Flammable: [ Touch ]
@@ -48,15 +43,6 @@
       - Dead
     - type: Stamina
       critThreshold: 200
-    - type: DamageStateVisuals
-      rotate: true
-      states:
-        Alive:
-          Base: running
-        Critical:
-          Base: crit
-        Dead:
-          Base: dead
     - type: Puller
       needsHands: false
     - type: TypingIndicator
@@ -69,14 +55,17 @@
       drawFov: false
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/queen.rsi
+      sprite: _CM/Mobs/Xenos/queen.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:
         0: Alive
         300: Dead
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: Xeno
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 9
@@ -117,8 +106,6 @@
       - Stutter
       - Electrocution
       - ForcedSleep
-      - TemporaryBlindness
-      - Pacified
     - type: Buckle
     - type: StandingState
     - type: Butcherable
@@ -133,14 +120,6 @@
     - type: ActiveRadio
       channels:
       - Hivemind
-    - type: UnpoweredFlashlight
-      toggleAction: ActionToggleLightXeno
-    - type: PointLight
-      enabled: false
-      radius: 6
-      softness: 5
-      color: "#FF33FF"
-      autoRot: true
     - type: Prying
       speedModifier: 2.75
       pryPowered: true
@@ -150,6 +129,7 @@
       bloodRefreshAmount: 150
       bloodReagent: FluorosulfuricAcid 
     - type: LizardAccent
+    - type: FlashImmunity
 
 - type: entity
   abstract: true

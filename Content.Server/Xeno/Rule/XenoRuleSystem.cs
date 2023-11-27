@@ -23,7 +23,7 @@ namespace Content.Server.Xeno.Systems;
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
     public const float AnnouncmentTime = 300f;
-    public const float FOBTime = 1320f;
+    public const float FOBTime = 1800f;
 
     public int Eggs { get; private set; }
     public int Marines { get; private set; }
@@ -100,6 +100,9 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 
     private void OnStartAttempt(RoundStartAttemptEvent ev)
     {
+        FobTime = 0;
+        Fob = false;
+
         var query = Query;
         while (query.MoveNext(out var uid, out var xeno, out var gameRule))
         {

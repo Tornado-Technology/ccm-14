@@ -19,5 +19,5 @@ public sealed partial class XenoScreechComponent : Component
     ///     Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
-    public float StunTime = 7f;
+    public float StunTime = 2f;
 }

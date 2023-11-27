@@ -141,9 +141,12 @@
       - id: FoodSnackMREBrownie
       - id: FoodCondimentPacketKetchup
   - type: Sprite
-    layers:
-      - state: box_olive
-      - state: writing
+    sprite: _CM/Objects/Storage/mre.rsi
+  - type: Item
+    sprite: _CM/Objects/Storage/mre.rsi
+    size: 10
+  - type: Storage
+    capacity: 30
 
 - type: entity
   name: box of hugs

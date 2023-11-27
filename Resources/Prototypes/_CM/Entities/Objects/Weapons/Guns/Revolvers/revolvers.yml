@@ -8,6 +8,11 @@
     sprite: _CM/Objects/Weapons/Guns/Revolvers/m44.rsi
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Revolvers/m44.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: ContainerContainer
     containers:
       revolver-ammo: !type:Container

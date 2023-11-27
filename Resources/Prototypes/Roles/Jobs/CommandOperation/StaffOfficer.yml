@@ -7,7 +7,7 @@
   icon: "JobIconStaffOfficer"
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  access:
+  accessGroups:
     - HeadOperations
 
 - type: startingGear

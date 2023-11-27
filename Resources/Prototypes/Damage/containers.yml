@@ -15,8 +15,8 @@
     - Heat
     - Shock
     - Structural # this probably should be in separate container
-    - Toxin
-  
+    - Caustic
+
 - type: damageContainer
   id: Shield
   supportedGroups:

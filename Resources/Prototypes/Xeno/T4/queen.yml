@@ -26,9 +26,9 @@
     - type: XenoSpitRejuvenate
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/queen.rsi
+      sprite: _CM/Mobs/Xenos/queen.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:

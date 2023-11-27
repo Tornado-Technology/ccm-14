@@ -4,6 +4,8 @@
   id: WeaponRifleM41A
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: true
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m41a.rsi
     layers:
@@ -13,6 +15,11 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Rifles/m41a.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    - belt
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5
@@ -65,6 +72,8 @@
   id: WeaponRifleM42
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m42.rsi
     layers:
@@ -99,18 +108,13 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineRifleM41A
-      gun_chamber:
-        name: Chamber
-        startingItem: BulletRifle1024
-        priority: 1
-        whitelist:
-          tags:
             - BulletRifle1024
+            - MagazineRifleM41A
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -123,6 +127,8 @@
   id: WeaponRifleM4RA
   description: The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
   components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
     layers:
@@ -158,17 +164,12 @@
         whitelist:
           tags:
             - MagazineRifleM4RA
-      gun_chamber:
-        name: Chamber
-        startingItem: BulletRifle125x60R
-        priority: 1
-        whitelist:
-          tags:
             - BulletRifle125x60R
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
     steps: 1

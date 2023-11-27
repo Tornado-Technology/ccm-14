@@ -25,6 +25,7 @@
       - CartridgeRifle
   - type: CartridgeAmmo
     proto: Bullet10x24mm
+    deleteOnSpawn: true
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
     layers:
@@ -43,6 +44,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet10x24mm
+    deleteOnSpawn: true
     
 - type: entity
   id: BaseMagazine10x24mm

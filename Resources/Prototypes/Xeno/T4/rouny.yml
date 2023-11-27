@@ -8,9 +8,9 @@
     - type: XenoStun
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/rouny.rsi
+      sprite: _CM/Mobs/Xenos/rouny.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:
@@ -39,3 +39,6 @@
           - MobMask
           layer:
           - MobLayer
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.6

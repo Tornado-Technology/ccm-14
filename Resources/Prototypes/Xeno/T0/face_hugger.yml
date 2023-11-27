@@ -22,7 +22,7 @@
       chansePounce: 100
     - type: FaceHugging
     - type: Sprite
-      sprite: Mobs/Aliens/Xenos/face_hugger.rsi
+      sprite: _CM/Mobs/Xenos/face_hugger.rsi
       drawdepth: SmallMobs
       noRot: true
       layers:

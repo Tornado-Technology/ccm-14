@@ -23,6 +23,7 @@
     - CartridgeAntiMateriel
   - type: CartridgeAmmo
     proto: BulletMosin
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:

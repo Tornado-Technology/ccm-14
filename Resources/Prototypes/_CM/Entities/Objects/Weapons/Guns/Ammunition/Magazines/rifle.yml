@@ -98,3 +98,69 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseBox10x24mmCM
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeRifle
+    proto: Cartridge10x24mm
+    capacity: 60
+  - type: Item
+    size: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseBox10x24mmCM
+  id: Box10x24mmCM
+  name: Box (10x24мм)
+  suffix: "Marines Gear"
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 200
+    proto: CartridgeRifle1024
+  - type: Sprite
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseBox10x24mmCM
+  id: Box125x60RmmCM
+  name: Box (125x60R)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 200
+    proto: CartridgeRifle125x60R
+  - type: Sprite
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+

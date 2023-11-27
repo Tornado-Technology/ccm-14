@@ -20,8 +20,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine
@@ -44,8 +42,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine
@@ -68,8 +64,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine
@@ -92,8 +86,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine
@@ -116,8 +108,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine
@@ -140,5 +130,25 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Chemistry"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineScientists
+  name: ColMarTech Automated Field Scientist Utilities
+  description: An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Field Scientist.
+  components:
+  - type: VendingMachine
+    pack: FScientistsVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 1
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]

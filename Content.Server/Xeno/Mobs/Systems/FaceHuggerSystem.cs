@@ -81,19 +81,17 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (!HasComp<HumanoidAppearanceComponent>(args.Target))
             return;
 
-        if (TryComp(args.Target, out MobStateComponent? mobState))
-        {
-            if (mobState.CurrentState is not MobState.Alive)
-            {
-                return;
-            }
-        }
-
-        _inventory.TryGetSlotEntity(args.Target, "head", out var headItem);
-        if (HasComp<IngestionBlockerComponent>(headItem))
+        if (!TryComp(args.Target, out MobStateComponent? mobState))
             return;
 
-        var equipped = _inventory.TryEquip(args.Target, uid, "mask", true);
+        if (mobState.CurrentState != MobState.Alive && mobState.CurrentState != MobState.Critical)
+            return;
+
+        if (!TryComp(args.Target, out InventoryComponent? inventory))
+            return;
+
+        _inventory.TryUnequip(args.Target, "mask", true, true, false, inventory);
+        var equipped = _inventory.TryEquip(args.Target, uid, "mask", true, true, false, inventory);
         if (!equipped)
             return;
 
@@ -103,15 +101,11 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         RemComp<CombatModeComponent>(uid);
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
-        //_damageableSystem.TryChangeDamage(args.Target, component.Damage);
 
         defcomp.EquipedOn = args.Target;
 
-        _popup.PopupEntity(Loc.GetString("Something jumped on you!"),
-            args.Target, args.Target, PopupType.LargeCaution);
+        _popup.PopupEntity(Loc.GetString("Something jumped on you!"), args.Target, args.Target, PopupType.LargeCaution);
     }
-
-
 
     private void OnJumpFaceHugger(EntityUid uid, FaceHuggingComponent component, FaceHuggerJumpActionEvent args)
     {

@@ -1139,3 +1139,7 @@
 
 - type: Tag
   id: CartridgeRifle416Barratti
+
+- type: Tag
+  id: InteractionCAS
+

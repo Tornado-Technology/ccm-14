@@ -1,6 +1,9 @@
 - type: Tag
   id: Turret
 
+- type: Tag
+  id: FlameTurret
+
 - type: entity
   parent: WeaponTurretNanoTrasen
   name: turret
@@ -43,6 +46,23 @@
     proto: CartridgeCaselessRifle
     capacity: 350
 
+- type: entity
+  parent: WeaponTurretMarine
+  name: flame turret
+  id: WeaponFlameTurretMarine
+  components:
+    - type: Gun
+      fireRate: 2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+      maxAngle: 50
+      minAngle: 5
+    - type: BallisticAmmoProvider
+      proto: FlamethrowerProjectile
+      capacity: 500
+
 - type: constructionGraph
   id: MarineTurretGraph
   start: start
@@ -63,10 +83,48 @@
     - node: weaponTurretMarine
       entity: WeaponTurretMarine
 
+- type: constructionGraph
+  id: MarineFlameTurretGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponTurretMarine
+          steps:
+            - tag: FlameTurret
+              name: folding flame turret
+              icon:
+                sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+                state: syndie_lethal
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponTurretMarine
+      entity: WeaponFlameTurretMarine
+
 - type: construction
   name: "- folding turret"
   id: MarineTurretConstruction
   graph: MarineTurretGraph
+  startNode: start
+  targetNode: weaponTurretMarine
+  category: construction-category-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: "- folding flame turret"
+  id: MarineFlameTurretConstruction
+  graph: MarineFlameTurretGraph
   startNode: start
   targetNode: weaponTurretMarine
   category: construction-category-structures
@@ -93,3 +151,16 @@
   - type: Tag
     tags:
     - Turret
+
+- type: entity
+  name: flame turret toolbox
+  suffix: Marine, Turret
+  id: ToolboxFlameTurretMarine
+  description: A toolbox with turret.
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - FlameTurret

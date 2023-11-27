@@ -20,9 +20,7 @@
         - BulletImpassable
         layer:
         - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
+        - BulletImpassable
 
 - type: entity
   id: ProjectileNeurotoxinVeilRoyal

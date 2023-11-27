@@ -97,3 +97,45 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+
+# Boxes
+- type: entity
+  parent: BaseBox10x24mmCM
+  id: Box450_BrushmasterCM
+  name: Box (450 Brushmaster)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 150
+    proto: CartridgeSmg450Brushmaster
+  - type: Sprite
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseBox10x24mmCM
+  id: Box458_SocomCM
+  name: Box (458 Socom)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 150
+    proto: CartridgeSmg458Socom
+  - type: Sprite
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+  - type: Appearance

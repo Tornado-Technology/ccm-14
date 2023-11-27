@@ -107,7 +107,7 @@
     whitelist:
       tags:
         - ShellShotgun
-    capacity: 5
+    capacity: 8
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
   - type: Sprite

@@ -24,6 +24,7 @@
       - CartridgeMagnum
   - type: CartridgeAmmo
     proto: Bullet357
+    deleteOnSpawn: true
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige357.rsi
     layers:
@@ -42,6 +43,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet357
+    deleteOnSpawn: true
         
 - type: entity
   id: BaseSpeedLoader357

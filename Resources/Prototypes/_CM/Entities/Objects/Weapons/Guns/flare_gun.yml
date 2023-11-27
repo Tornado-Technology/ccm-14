@@ -35,4 +35,8 @@
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m82f.rsi
     quickEquip: false
     slots:
-    - Belt
+    - Back
+    - suitStorage
+    - belt
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null

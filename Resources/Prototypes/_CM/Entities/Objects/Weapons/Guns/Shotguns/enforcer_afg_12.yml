@@ -17,6 +17,7 @@
     slots:
     - Back
     - suitStorage
+    - belt
   - type: AmmoCounter
   - type: Gun
     fireRate: 3
@@ -37,6 +38,7 @@
         whitelist:
           tags:
           - ShellShotgunAFG-12
+          - MagazineShotgunAFG-12
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
   - type: ContainerContainer

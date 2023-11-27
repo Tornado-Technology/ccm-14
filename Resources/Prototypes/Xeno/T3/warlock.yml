@@ -8,9 +8,9 @@
     - type: XenoPsychicJump
     - type: Sprite
       drawdepth: Mobs
-      sprite: Mobs/Aliens/Xenos/warlock.rsi
+      sprite: _CM/Mobs/Xenos/warlock.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base"]
+      - map: [ "enum.XenoVisualLayers.Base" ]
         state: running
     - type: MobThresholds
       thresholds:
@@ -28,3 +28,6 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
     - type: Stealth
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.6

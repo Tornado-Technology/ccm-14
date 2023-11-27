@@ -342,7 +342,9 @@
   - type: SurveillanceCamera
     setupAvailableNetworks:
       - SurveillanceCameraEntertainment
-
+  - type: TagInteraction
+    blacklistTag: InteractionCAS
+  
 - type: species
   id: Marine
   name: species-name-human
@@ -352,10 +354,6 @@
   markingLimits: MarineMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
-  femaleFirstNames: "names_first_male"
-  femaleLastNames: "names_last_male"
-  sexes:
-  - Male
   
 - type: markingPoints
   id: MarineMarkingLimits

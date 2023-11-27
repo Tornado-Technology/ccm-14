@@ -139,33 +139,6 @@
     Plastic: 200
 
 - type: latheRecipe
-  id: WeaponDisablerPractice
-  result: WeaponDisablerPractice
-  completetime: 4
-  materials:
-    Steel: 500
-    Glass: 100
-    Plastic: 200
-
-- type: latheRecipe
-  id: WeaponDisablerPractice
-  result: WeaponDisablerPractice
-  completetime: 4
-  materials:
-    Steel: 500
-    Glass: 100
-    Plastic: 200
-
-- type: latheRecipe
-  id: WeaponDisablerPractice
-  result: WeaponDisablerPractice
-  completetime: 4
-  materials:
-    Steel: 500
-    Glass: 100
-    Plastic: 200
-
-- type: latheRecipe
   id: MagazineRifleM41A
   result: MagazineRifleM41A
   completetime: 2
@@ -365,7 +338,7 @@
     Steel: 100
     Plastic: 100
     Glass: 100
-    Plasma: 500
+    Plasma: 100
 
 - type: latheRecipe
   id: FuelTankFlamethrower
@@ -375,7 +348,7 @@
     Steel: 100
     Plastic: 100
     Glass: 100
-    Plasma: 500
+    Plasma: 1000
 
 - type: latheRecipe
   id: MagazineRifleXM43E
@@ -385,7 +358,7 @@
     Steel: 100
     Plastic: 100
     Glass: 100
-    Plasma: 500
+    Plasma: 100
 
 - type: latheRecipe
   id: MagazineLightRifleBox
@@ -395,7 +368,17 @@
     Steel: 100
     Plastic: 100
     Glass: 100
-    Plasma: 500
+    Plasma: 100
+
+- type: latheRecipe
+  id: BoxShotgunLMG
+  result: BoxShotgunLMG
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
 
 - type: latheRecipe
   id: WeaponAntiqueLaser

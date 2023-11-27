@@ -10,8 +10,8 @@
               southRotation: false
           steps:
             - material: Steel
-              amount: 3
-              doAfter: 10
+              amount: 7
+              doAfter: 15
 
     - node: metalbarricade
       entity: MetalBarricade
