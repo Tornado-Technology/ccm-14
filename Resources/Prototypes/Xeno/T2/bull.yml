@@ -17,7 +17,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        500: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/bull.rsi
@@ -28,7 +28,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 30
+          Brute: 20
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6

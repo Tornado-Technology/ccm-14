@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: UniformVendInventory
   startingInventory:
+    BoxEmergencyMarine: 6
     ClothingUniformJumpsuitMarine: 10
     ClothingHandsGlovesMarine: 10
     ClothingShoesBootsMarine: 10

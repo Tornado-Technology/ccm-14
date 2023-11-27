@@ -8,8 +8,4 @@
     sprite: _CM/Clothing/Shoes/Boots/comfortable_boots.rsi
   - type: Clothing
     sprite: _CM/Clothing/Shoes/Boots/comfortable_boots.rsi
-  - type: Storage
-    whitelist:
-      tags:
-        - Knife
   - type: NoSlip

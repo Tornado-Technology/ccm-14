@@ -48,7 +48,8 @@
       itemIconStyle: NoItem
       priority: 5
       event: !type:XenoSpitEvent
-
+      interactOnMiss: false
+      checkCanInteract: false
 
 # acidspit
 - type: entity
@@ -68,3 +69,5 @@
       itemIconStyle: NoItem
       priority: 6
       event: !type:XenoSpit2Event
+      interactOnMiss: false
+      checkCanInteract: false

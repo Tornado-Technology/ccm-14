@@ -14,7 +14,8 @@
         state: rejuvenate
       itemIconStyle: NoItem
       event: !type:XenoSpitRejuvenateEvent
-
+      interactOnMiss: false
+      checkCanInteract: false
 
 - type: entity
   id: ProjectileXenoRejuvenate

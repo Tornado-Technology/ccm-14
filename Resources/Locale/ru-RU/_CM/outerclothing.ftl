@@ -26,3 +26,6 @@ ent-ClothingOuterHardsuitCMSLCharlie = MJOLNIR Mark III командира ча�
     .desc = Специальный бронескафандр для командира отряда Чарли.
 ent-ClothingHeadHelmetHardsuitCMSLCharlie = { ent-ClothingHeadHelmetHardsuitCMSLBase }
     .desc = { ent-ClothingHeadHelmetHardsuitCMSLBase.desc }
+
+ent-ClothingOuterCoatScientist = бронированная куртка исследователя
+    .desc = Прочная практичная куртка, призванная защитить исследователя от любых опасностей связаных с ксеноморфами и попыткой альфы взорвать всех.

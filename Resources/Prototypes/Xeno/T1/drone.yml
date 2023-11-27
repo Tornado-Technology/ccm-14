@@ -27,4 +27,5 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 5
+          Structural: 10

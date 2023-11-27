@@ -19,7 +19,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 50
+          Brute: 25
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: XenoRavager

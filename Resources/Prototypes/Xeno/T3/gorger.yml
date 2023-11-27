@@ -4,7 +4,6 @@
   id: MobGorgerXeno
   components:
     - type: XenoVines
-      action: ActionXenoGorgerVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
       timeUsage: 10
@@ -25,22 +24,5 @@
       hidden: true
       damage:
         groups:
-          Brute: 20
-
-
-# -------------------------------------
-- type: entity
-  id: ActionXenoGorgerVines
-  parent: ActionXenoVines
-  noSpawn: true
-  components:
-    - type: InstantAction
-      useDelay: 5
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
-      icon:
-        sprite: Actions/xeno.rsi
-        state: vines
-      event: !type:XenoVinesEvent
-      checkCanInteract: false
-# -------------------------------------
+          Brute: 15
+          Structural: 20

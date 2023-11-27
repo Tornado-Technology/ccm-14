@@ -13,7 +13,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        400: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/warrior.rsi
@@ -24,4 +24,4 @@
       hidden: true
       damage:
         groups:
-          Brute: 25
+          Brute: 15

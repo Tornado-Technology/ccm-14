@@ -8,6 +8,7 @@
     PowerCellHigh: 1
     HandheldCrewMonitor: 1
     MarineRollerBed: 10
+    BoxEmergencyMarine: 3
     MedkitFilled: 10
     MedkitCombatFilled: 5
     MedkitRadiationFilled: 5

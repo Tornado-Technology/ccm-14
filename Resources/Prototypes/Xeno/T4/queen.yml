@@ -6,10 +6,8 @@
     - type: XenoQueen
     - type: XenoLayEgg
     - type: XenoStun
-      action: ActionXenoQueenStun
     - type: XenoScreech
     - type: XenoVines
-      action: ActionXenoQueenVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
       timeUsage: 10
@@ -38,47 +36,5 @@
       hidden: true
       damage:
         groups:
-          Brute: 40
-
-
-# -------------------------------------
-- type: entity
-  id: ActionXenoQueenVines
-  parent: ActionXenoVines
-  noSpawn: true
-  components:
-    - type: InstantAction
-      useDelay: 5
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
-      icon:
-        sprite: Actions/xeno.rsi
-        state: vines
-      event: !type:XenoVinesEvent
-      checkCanInteract: false
-# -------------------------------------
-
-
-# -------------------------------------
-- type: entity
-  id: ActionXenoQueenStun
-  name: stun
-  description: stun desc
-  noSpawn: true
-  components:
-    - type: EntityTargetAction
-      range: 6
-      useDelay: 15
-      itemIconStyle: BigAction
-      whitelist:
-        components:
-          - Body
-      canTargetSelf: false
-      interactOnMiss: false
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
-      icon:
-        sprite: Actions/xeno.rsi
-        state: stun
-      event: !type:XenoStunEvent
-# -------------------------------------
+          Brute: 15
+          Structural: 15

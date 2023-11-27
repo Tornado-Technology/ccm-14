@@ -12,4 +12,7 @@
     whitelist:
       tags:
         - Knife
+  - type: StorageFill
+    contents:
+      - id: MarineCombatKnife
   - type: NoSlip
