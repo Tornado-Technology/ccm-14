@@ -47,4 +47,15 @@
   cost: 5600
   category: Materials
   group: market
+  
+- type: cargoProduct
+  id: CrateC4Console #Любое айди, такое, что нет в игре
+  icon:
+    sprite: Objects/Weapons/Bombs/c4.rsi #Спрайт
+    state: icon
+  product: CrateArmoryC4 #Айди ящика с оружием
+  cost: 4000
+  category: Security
+  group: market
+
 
