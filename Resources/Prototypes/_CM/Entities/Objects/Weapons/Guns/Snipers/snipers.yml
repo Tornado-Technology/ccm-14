@@ -61,6 +61,4 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-- type: Tag
-  id: BulletRifle416Barratti
-
+ 

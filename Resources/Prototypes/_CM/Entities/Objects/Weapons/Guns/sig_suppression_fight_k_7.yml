@@ -16,5 +16,4 @@
     steps: 4
     zeroVisible: true
   - type: Appearance
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
+  - type: MagazineAmmoProvider

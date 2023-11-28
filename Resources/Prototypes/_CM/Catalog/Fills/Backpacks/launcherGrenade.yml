@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingBackpackMarine
+  id: ClothingBackpackWeaponLauncherGrenades
+  name: Сумка с гранатамётом
+  description: BOOOOM's
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponLauncherGrenades
+      - id: GrenadeFragMarine
+        amount: 3
+      - id: GrenadeBlastMarine
+        amount: 6

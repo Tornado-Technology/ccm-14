@@ -47,7 +47,7 @@
         whitelist:
           tags:
             - MagazineRifleM39
-            - BulletSmg450Brushmaster
+            - CartridgeSmg450Brushmaster
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -59,9 +59,6 @@
     zeroVisible: true
   - type: Appearance
   
-  
-- type: Tag
-  id: BulletSmg450Brushmaster
   
 - type: entity
   name: MSG 23 W-Y
@@ -106,7 +103,7 @@
         whitelist:
           tags:
             - MagazineSmgMSG23W-Y
-            - BulletSmg458Socom
+            - CartridgeSmg458Socom
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -117,6 +114,3 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  
-- type: Tag
-  id: BulletSmg458Socom

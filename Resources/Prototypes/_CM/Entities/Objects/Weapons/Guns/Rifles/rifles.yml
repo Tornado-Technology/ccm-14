@@ -42,29 +42,22 @@
         startingItem: MagazineRifleM41A
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineRifleM41A
-      gun_chamber:
-        name: Chamber
-        startingItem: BulletRifle1024
         priority: 1
         whitelist:
           tags:
-            - BulletRifle1024
+            - MagazineRifleM41A
+            - CartridgeRifle1024
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
   - type: MagazineVisuals
     magState: mag
     steps: 1
     zeroVisible: true
   - type: Appearance
   
-- type: Tag
-  id: BulletRifle1024
 
 - type: entity
   name: M42 pulse rifle
@@ -72,8 +65,6 @@
   id: WeaponRifleM42
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: false
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m42.rsi
     layers:
@@ -127,8 +118,6 @@
   id: WeaponRifleM4RA
   description: The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
   components:
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: false
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
     layers:
@@ -164,7 +153,7 @@
         whitelist:
           tags:
             - MagazineRifleM4RA
-            - BulletRifle125x60R
+            - CartridgeRifle125x60R
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -175,6 +164,4 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  
-- type: Tag
-  id: BulletRifle125x60R
+
