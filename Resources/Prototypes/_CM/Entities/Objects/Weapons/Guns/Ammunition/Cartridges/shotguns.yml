@@ -4,6 +4,9 @@
   parent: BaseCartridge
   abstract: true
   components:
+  - type: Tag
+    tags:
+      - CartridgeShotGun24Gauge
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     layers:
@@ -33,6 +36,9 @@
   parent: BaseCartridge
   abstract: true
   components:
+  - type: Tag
+    tags:
+      - CartridgeShotGun8Gauge
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     layers:

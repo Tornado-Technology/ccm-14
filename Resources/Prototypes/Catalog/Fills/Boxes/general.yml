@@ -134,6 +134,10 @@
   id: BoxMRE
   description: A box of decades old military surplus rations. It is surprisingly not rotten.
   components:
+  - type: Tag
+    tags:
+    - CigPack
+    - Trash
   - type: StorageFill
     contents:
       - id: DrinkMREFlask
@@ -142,11 +146,18 @@
       - id: FoodCondimentPacketKetchup
   - type: Sprite
     sprite: _CM/Objects/Storage/mre.rsi
+    layers:
+      - state: icon
+      - state: mealpackopened
+        map: ["openLayer"]
+        visible: false
   - type: Item
     sprite: _CM/Objects/Storage/mre.rsi
     size: 10
   - type: Storage
     capacity: 30
+  - type: Appearance
+  - type: SpaceGarbage
 
 - type: entity
   name: box of hugs

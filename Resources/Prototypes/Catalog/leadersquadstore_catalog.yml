@@ -47,3 +47,13 @@
     Telecrystal: 1
   categories:
   - StoreWeapon
+  
+- type: listing
+  id: StoreLauncherGrenades
+  name: Набор гранатамётчика
+  description:  "..."
+  productEntity: ClothingBackpackWeaponLauncherGrenades
+  cost:
+    Telecrystal: 1
+  categories:
+  - StoreWeapon

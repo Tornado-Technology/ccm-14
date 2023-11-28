@@ -92,7 +92,7 @@
         minValue: 0.1
         maxValue: 1
         isLooped: true
-        property: Radius
+        property: Energy
         enabled: true
   - type: EmitSoundOnUse
     sound: /Audio/Announcements/bloblarm.ogg

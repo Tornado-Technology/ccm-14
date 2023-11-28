@@ -51,6 +51,7 @@
   - type: StaticPrice
     price: 500
 
+
 - type: entity
   name: K221 shotgun
   parent: BaseItem
