@@ -3,6 +3,7 @@ using Content.Shared.Actions;
 using Content.Shared.Xeno;
 using Content.Shared.Stunnable;
 using Content.Shared.Mobs.Components;
+using XenoScreechComponent = Content.Server.Xeno.Actions.Components.XenoScreechComponent;
 
 namespace Content.Server.Xeno.Systems;
 

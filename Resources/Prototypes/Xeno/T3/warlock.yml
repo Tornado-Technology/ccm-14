@@ -22,12 +22,9 @@
         groups:
           Brute: 25
     - type: MovementSpeedModifier
-      baseWalkSpeed: 4
-      baseSprintSpeed: 8
+      baseWalkSpeed: 6
+      baseSprintSpeed: 10
     - type: StealthOnMove
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
     - type: Stealth
-    - type: Puller
-      needsHands: false
-      sprintModifier: 0.6

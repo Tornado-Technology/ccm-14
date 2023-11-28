@@ -38,7 +38,7 @@
     Blunt: 0.2
     Slash: 0.2
     Piercing: 0.2
-    Heat: 1.75
+    Heat: 1.25
 
 - type: damageModifierSet
   id: XenoRavagerRage

@@ -1,0 +1,17 @@
+﻿using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared.Xeno.Components;
+
+[RegisterComponent, NetworkedComponent]
+public sealed partial class XenoEvasionComponent : Component
+{
+    [DataField]
+    public EntProtoId Action = "ActionXenoEvasion";
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Duration = 3.5f;
+
+    [DataField]
+    public float DurationTime;
+}

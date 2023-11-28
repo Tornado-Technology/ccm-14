@@ -1,7 +1,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.Xeno.Components;
+namespace Content.Server.Xeno.Actions.Components;
 
 [RegisterComponent]
 public sealed partial class XenoScreechComponent : Component
@@ -16,7 +16,7 @@ public sealed partial class XenoScreechComponent : Component
     public bool Refresh = true;
 
     /// <summary>
-    ///     Effect duration in seconds;
+    /// Effect duration in seconds;
     /// </summary>
     [DataField("stunTime")]
     public float StunTime = 2f;

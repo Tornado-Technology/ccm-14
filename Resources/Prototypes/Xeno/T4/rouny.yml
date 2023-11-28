@@ -22,23 +22,9 @@
         groups:
           Brute: 30
     - type: MovementSpeedModifier
-      baseWalkSpeed: 4
-      baseSprintSpeed: 8
+      baseWalkSpeed: 6
+      baseSprintSpeed: 10
     - type: StealthOnMove
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.2
     - type: Stealth
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.45
-          density: 550
-          mask:
-          - MobMask
-          layer:
-          - MobLayer
-    - type: Puller
-      needsHands: false
-      sprintModifier: 0.6

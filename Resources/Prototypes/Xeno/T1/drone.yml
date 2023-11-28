@@ -28,4 +28,5 @@
       damage:
         groups:
           Brute: 5
+        types:
           Structural: 10

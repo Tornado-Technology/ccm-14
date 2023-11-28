@@ -5,6 +5,7 @@ using Content.Shared.Camera;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Projectiles;
+using Content.Shared.Xeno.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
@@ -41,6 +42,9 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             SetShooter(uid, component, target);
             return;
         }
+
+        if (HasComp<XenoEvadesComponent>(target))
+            return;
 
         var ev = new ProjectileHitEvent(component.Damage, target, component.Shooter);
         RaiseLocalEvent(uid, ref ev);

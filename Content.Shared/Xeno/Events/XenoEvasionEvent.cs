@@ -2,7 +2,7 @@
 
 namespace Content.Shared.Xeno.Events;
 
-public sealed partial class XenoRestEvent : InstantActionEvent
+public sealed partial class XenoEvasionEvent : InstantActionEvent
 {
 
 }
