@@ -8,6 +8,9 @@
         - !type:XenoEvolution
           prototype: MobHunterXeno
           evolution: 600
+        - !type:XenoEvolution
+          prototype: MobBullXeno
+          evolution: 750
     - type: XenoRunner
     - type: XenoEvasion
     - type: MobThresholds
