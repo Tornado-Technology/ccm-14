@@ -1,4 +1,4 @@
-namespace Content.Server.Xeno.Actions.Components;
+namespace Content.Server.Xeno;
 
 [RegisterComponent]
 public sealed partial class XenoWeedsComponent : Component

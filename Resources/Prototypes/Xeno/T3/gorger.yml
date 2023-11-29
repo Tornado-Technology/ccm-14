@@ -7,8 +7,6 @@
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
       timeUsage: 10
-    - type: XenoPsychicCure
-      healAmount: 500
     - type: XenoSpitRejuvenate
     - type: MobThresholds
       thresholds:

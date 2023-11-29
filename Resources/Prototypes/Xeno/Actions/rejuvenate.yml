@@ -5,7 +5,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
-      useDelay: 25
+      useDelay: 180
       range: 0
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar2.ogg

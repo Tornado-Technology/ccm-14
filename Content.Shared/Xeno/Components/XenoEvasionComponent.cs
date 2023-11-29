@@ -10,7 +10,7 @@ public sealed partial class XenoEvasionComponent : Component
     public EntProtoId Action = "ActionXenoEvasion";
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float Duration = 3.5f;
+    public float Duration = 5f;
 
     [DataField]
     public float DurationTime;

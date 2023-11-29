@@ -11,8 +11,6 @@
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
       timeUsage: 10
-    - type: XenoPsychicCure
-      healAmount: 500
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
       projectile: ProjectileNeurotoxinVeilRoyal
