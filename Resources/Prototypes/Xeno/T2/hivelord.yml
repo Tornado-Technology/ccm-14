@@ -8,13 +8,9 @@
         - !type:XenoEvolution
           prototype: MobGorgerXeno
           evolution: 1200
-    - type: XenoHivelord
-      timeUsage: 8
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
-    - type: XenoPsychicCure
-      healAmount: 300
     - type: MobThresholds
       thresholds:
         0: Alive

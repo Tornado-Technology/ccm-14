@@ -1,150 +1,87 @@
-using Content.Server.Mind.Commands;
-using Content.Server.Research.Systems;
+using Content.Server.Xeno.Actions.Components;
 using Content.Shared.Actions;
-using Content.Shared.Kitchen;
-using Content.Shared.Mind;
-using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Research.Components;
+using Content.Shared.Damage;
+using Content.Shared.FixedPoint;
 using Content.Shared.Xeno;
-using Robust.Server.GameObjects;
-using Robust.Shared.Containers;
-using System.Linq;
+using Content.Shared.Xeno.Components;
+using Robust.Shared.Physics.Systems;
 
-namespace Content.Server.Xeno.Components;
+namespace Content.Server.Xeno;
 
-public sealed partial class XenoSystem : EntitySystem
+public sealed class XenoSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
-    [Dependency] private readonly ResearchSystem _research = default!;
-    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-
-    private readonly Dictionary<int, int> _tierLimit = new()
-    {
-        { 0, -1 },
-        { 1, -1 },
-        { 2, 10 },
-        { 3,  5 },
-        { 4, -1 },
-    };
-
-    private readonly Dictionary<int, int> _tiers = new();
-
-    /// <summary>
-    ///     Timer used to avoid updating the UI state every frame (which would be overkill)
-    /// </summary>
-    private float _updateTimer;
+    [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoEvolutionsComponent, ComponentStartup>(OnStartupEvolve);
-        SubscribeLocalEvent<XenoEvolutionsComponent, XenoEvolutionActionEvent>(OnEvolutionMenu);
-        SubscribeLocalEvent<XenoEvolutionsComponent, EvolveMessage>(OnEvolve);
-
         SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
-    }
-
-    private void OnEvolve(EntityUid uid, XenoEvolutionsComponent component, EvolveMessage args)
-    {
-        PolymorphEntity(uid, args.Evolution.Prototype);
-    }
-
-    private void OnStartupEvolve(EntityUid uid, XenoEvolutionsComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
     {
-        _actionsSystem.AddAction(uid, component.ActionNightVision);
-    }
-
-    private void OnEvolutionMenu(EntityUid uid, XenoEvolutionsComponent component, XenoEvolutionActionEvent args)
-    {
-        if (!TryComp<ActorComponent>(uid, out var actor))
-            return;
-
-        _uiSystem.TryToggleUi(uid, XenoEvolutionUiKey.Key, actor.PlayerSession);
+        _actions.AddAction(uid, component.ActionNightVision);
     }
 
     public override void Update(float frameTime)
     {
-        base.Update(frameTime);
-
-        _tiers.Clear();
-
-        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, MobStateComponent, XenoTierComponent>();
-        while (query.MoveNext(out var uid, out var xeno, out var evol, out var state,  out var tiers))
+        var query = EntityQueryEnumerator<XenoComponent>();
+        while (query.MoveNext(out var uid, out var xeno))
         {
-            if (state.CurrentState != MobState.Alive)
-                continue;
+            // Update resting
+            xeno.OnResting = HasComp<XenoRestingComponent>(uid);
 
-            if (_tiers.TryGetValue(tiers.Tier, out var tier))
+            // Update weeds
+            xeno.OnWeeds = false;
+            foreach (var contact in _physics.GetContactingEntities(uid))
             {
-                _tiers.Remove(tiers.Tier);
-                _tiers.Add(tiers.Tier, tier + 1);
+                if (HasComp<XenoWeedsComponent>(contact))
+                {
+                    xeno.OnWeeds = true;
+                    break;
+                }
             }
-            else
+
+            // Update regen
+            var healthRegen = xeno.HealthRegen;
+            if (xeno.OnResting)
             {
-                _tiers.Add(tiers.Tier, 1);
+                healthRegen = xeno.OnWeeds ? xeno.HealthRegenOnWeeds : xeno.HealthRegenOnRest;
             }
 
-            if (evol.Evolutions == null || evol.Evolutions.Count == 0)
-                continue;
+            if (TryComp<DamageableComponent>(uid, out var damageable))
+                HealDamage((uid, damageable), healthRegen * frameTime);
 
-            var evolComp = evol.Evolutions.MaxBy((el) => el.Evolution);
-            var maxEvolution = evolComp == null ? 0f : evolComp.Evolution;
-            var evolution = frameTime * evol.EvolutionModifer;
-
-            evol.Evolution = Math.Min(evol.Evolution + evolution, maxEvolution);
+            Dirty(uid, xeno);
         }
-
-        UpdateEvolutionUI(frameTime);
     }
 
-    private void UpdateEvolutionUI(float frameTime)
+    public void HealDamage(Entity<DamageableComponent?> ent, float amount)
     {
-        _updateTimer += frameTime;
-
-        if (_updateTimer < 1)
+        if (!Resolve(ent, ref ent.Comp))
             return;
 
-        _updateTimer -= 1;
-
-        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, UserInterfaceComponent>();
-        while (query.MoveNext(out var uid, out var _, out var evolution, out var uiComp))
+        var heal = new DamageSpecifier();
+        foreach (var (type, typeAmount) in ent.Comp.Damage.DamageDict)
         {
-            var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer, evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);
-            _uiSystem.TrySetUiState(uid, XenoEvolutionUiKey.Key, state, ui: uiComp);
+            var total = heal.GetTotal();
+            if (typeAmount + total >= amount)
+            {
+                var change = -FixedPoint2.Min(typeAmount, amount - total);
+                if (!heal.DamageDict.TryAdd(type, change))
+                    heal.DamageDict[type] += change;
+
+                break;
+            }
+
+            if (!heal.DamageDict.TryAdd(type, -typeAmount))
+                heal.DamageDict[type] += -typeAmount;
         }
-    }
 
-    private EntityUid? PolymorphEntity(EntityUid uid, string proto)
-    {
-        if (_uiSystem.IsUiOpen(uid, XenoEvolutionUiKey.Key) && TryComp<ActorComponent>(uid, out var actor))
-        {
-            _uiSystem.TryClose(uid, XenoEvolutionUiKey.Key, actor.PlayerSession);
-        }
-
-        var targetTransformComp = Transform(uid);
-        var child = Spawn(proto, targetTransformComp.Coordinates);
-
-        MakeSentientCommand.MakeSentient(child, EntityManager);
-
-        var childXform = Transform(child);
-        childXform.LocalRotation = targetTransformComp.LocalRotation;
-
-        if (_containerSystem.TryGetContainingContainer(uid, out var cont))
-            cont.Insert(child);
-
-        if (_mindSystem.TryGetMind(uid, out var mindId, out var mind))
-            _mindSystem.TransferTo(mindId, child, mind: mind);
-
-        EntityManager.DeleteEntity(uid);
-        return child;
+        if (heal.GetTotal() < FixedPoint2.Zero)
+            _damageable.TryChangeDamage(ent, heal);
     }
 }
