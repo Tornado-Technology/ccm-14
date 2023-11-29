@@ -68,7 +68,7 @@
       - Command
   - type: CanMoveInAir
   - type: Visibility
-    layer: 5
+    layer: 2
   - type: Speech
     speechVerb: Ghost
   - type: Alerts

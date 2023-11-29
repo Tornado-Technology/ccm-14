@@ -160,8 +160,8 @@
   id: ArtyFlare
   name: осветительная кассета
   description: "Никогда не выгорает, но довольно хрупкая"
-  suffix: MarinesGear
   parent: BaseItem
+  suffix: MarinesGear
   components:
   - type: Sprite
     sprite: Objects/Weapons/Grenades/nukenade.rsi
@@ -176,6 +176,17 @@
     castShadows: true
     radius: 10
     energy: 5
+  - type: LightBehaviour
+    behaviours:
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Cubic
+        maxDuration: 2.0
+        minValue: 0.1
+        maxValue: 2
+        isLooped: true
+        property: Energy
+        enabled: true
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
