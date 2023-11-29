@@ -41,7 +41,7 @@
         - GhostImpassable
   - type: Eye
     drawFov: false
-    visMask: 5
+    visMask: 1
   - type: MovementSpeedModifier
     baseSprintSpeed: 16
     baseWalkSpeed: 8
@@ -68,7 +68,7 @@
       - Command
   - type: CanMoveInAir
   - type: Visibility
-    layer: 2
+    layer: 1
   - type: Speech
     speechVerb: Ghost
   - type: Alerts
