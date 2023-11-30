@@ -4,7 +4,7 @@
   noSpawn: true
   components:
   - type: InstantAction
-    useDelay: 15
+    useDelay: 1
     itemIconStyle: NoItem
     checkCanInteract: false
     icon:
