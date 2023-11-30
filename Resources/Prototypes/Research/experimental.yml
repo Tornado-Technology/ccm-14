@@ -67,6 +67,7 @@
   - TraversalDistorterMachineCircuitboard
   - WeaponPistolCHIMP
   - HandTeleporter
+  - AnomalySynchronizerCircuitboard
   technologyPrerequisites:
   - BasicResearch
 
@@ -85,7 +86,7 @@
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
-  
+
 - type: technology
   id: GravityManipulation
   name: research-technology-gravity-manipulation
@@ -96,5 +97,5 @@
   tier: 3
   cost: 5000
   recipeUnlocks:
-  - WeaponForceGun
-  - WeaponTetherGun
+    - WeaponForceGun
+    - WeaponTetherGun

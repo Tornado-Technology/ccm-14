@@ -8,7 +8,7 @@
     tags:
       - MagazineRifleM41A
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -58,7 +58,7 @@
     tags:
       - MagazineRifleM4RA
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -111,7 +111,7 @@
     proto: Cartridge10x24mm
     capacity: 60
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

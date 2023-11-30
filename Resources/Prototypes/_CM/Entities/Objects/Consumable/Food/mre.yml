@@ -178,7 +178,7 @@
     state: entree
   - type: Item
     heldPrefix: entree
-    size: 3
+    size: Small
   - type: Tag
     tags:
       - FoodSnack
@@ -223,7 +223,7 @@
     state: side
   - type: Item
     heldPrefix: side
-    size: 3
+    size: Small
   - type: Tag
     tags:
       - FoodSnack
@@ -268,7 +268,7 @@
     state: snack
   - type: Item
     heldPrefix: snack
-    size: 3
+    size: Small
   - type: Tag
     tags:
       - FoodSnack
@@ -313,7 +313,7 @@
     state: dessert
   - type: Item
     heldPrefix: dessert
-    size: 3
+    size: Small
   - type: Tag
     tags:
       - FoodSnack

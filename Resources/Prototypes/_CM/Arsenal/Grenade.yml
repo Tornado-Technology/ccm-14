@@ -4,6 +4,10 @@
   suffix: "Marines Gear"
   components:
   - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 120 # about a ~4 tile radius
     canCreateVacuum: false
 
 - type: entity
@@ -21,6 +25,10 @@
   parent: BulletGrenadeFrag
   components:
   - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 120 # about a ~4 tile radius
     canCreateVacuum: false
 
 - type: entity

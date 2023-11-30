@@ -109,7 +109,7 @@
     - state: icon
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Item
-    size: 5
+    size: Normal
   - type: OnUseTimerTrigger
     delay: 0.1
   - type: ExplodeOnTrigger

@@ -10,7 +10,7 @@
     brokenState: broken
     normalState: normal
     denyState: deny
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/marine_food.rsi
     layers:
@@ -32,7 +32,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/mar_rack.rsi
     layers:
@@ -54,7 +54,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/clothing.rsi
     layers:
@@ -76,7 +76,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
     layers:
@@ -98,7 +98,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/req_ammo.rsi
     layers:
@@ -120,7 +120,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
     layers:
@@ -142,7 +142,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
     layers:
