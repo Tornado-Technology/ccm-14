@@ -1,4 +1,5 @@
 ﻿using Content.Shared.Actions;
+using Content.Shared.Popups;
 using Content.Shared.Projectiles;
 using Content.Shared.Xeno.Components;
 using Content.Shared.Xeno.Events;
@@ -8,6 +9,7 @@ namespace Content.Shared.Xeno.Systems;
 public sealed class XenoEvasionSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {
@@ -15,6 +17,8 @@ public sealed class XenoEvasionSystem : EntitySystem
 
         SubscribeLocalEvent<XenoEvasionComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoEvasionComponent, XenoEvasionEvent>(OnEvasion);
+
+        SubscribeLocalEvent<XenoEvadesComponent, ProjectileHitAttemptEvent>(OnHitAttempt);
     }
 
     public override void Update(float frameTime)
@@ -49,5 +53,11 @@ public sealed class XenoEvasionSystem : EntitySystem
 
         args.Handled = true;
         AddComp<XenoEvadesComponent>(ent);
+    }
+
+    private void OnHitAttempt(Entity<XenoEvadesComponent> ent, ref ProjectileHitAttemptEvent args)
+    {
+        _popup.PopupEntity("Уворот", ent);
+        args.Cancel();
     }
 }

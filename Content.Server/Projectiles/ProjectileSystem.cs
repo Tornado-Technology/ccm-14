@@ -43,7 +43,9 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             return;
         }
 
-        if (HasComp<XenoEvadesComponent>(target))
+        var hitAttempt = new ProjectileHitAttemptEvent(component.Damage, target, component.Shooter);
+        RaiseLocalEvent(target, hitAttempt);
+        if (hitAttempt.Cancelled)
             return;
 
         var ev = new ProjectileHitEvent(component.Damage, target, component.Shooter);

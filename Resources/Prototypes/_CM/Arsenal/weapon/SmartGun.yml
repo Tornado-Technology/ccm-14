@@ -9,6 +9,7 @@
   abstract: true
   suffix: "Marines Gear"
   components:
+  - type: PrecisionShooting
   - type: Sprite
   - type: Item
     size: 60

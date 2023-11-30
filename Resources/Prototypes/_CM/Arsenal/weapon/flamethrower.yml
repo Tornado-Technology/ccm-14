@@ -5,6 +5,7 @@
   description: "Make It Burn Dem"
   suffix: MarinesGear
   components:
+  - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/TGMSArsenal/Textures/flamethrower.rsi
     layers:
@@ -128,16 +129,20 @@
       projectile:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.15,-0.3,0.15,0.3"
+          bounds: "-0.1,-0.1,0.1,0.1"
         hard: false
         mask:
         - Impassable
         - BulletImpassable
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 1.5
         layer:
         - Impassable
         - MidImpassable
         - HighImpassable
         - LowImpassable
+        hard: False
   - type: PointLight
     enabled: true
     color: "#FF8080"

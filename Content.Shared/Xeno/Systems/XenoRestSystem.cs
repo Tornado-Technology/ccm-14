@@ -30,6 +30,9 @@ public sealed class XenoRestSystem : EntitySystem
 
     private void OnRest(Entity<XenoRestComponent> rest, ref XenoRestEvent args)
     {
+        if (args.Handled)
+            return;
+
         if (HasComp<XenoRestingComponent>(rest))
         {
             RemComp<XenoRestingComponent>(rest);
@@ -41,6 +44,7 @@ public sealed class XenoRestSystem : EntitySystem
             _appearance.SetData(rest, XenoVisualLayers.Base, XenoRestState.Resting);
         }
 
+        args.Handled = true;
         _actionBlocker.UpdateCanMove(rest);
     }
 

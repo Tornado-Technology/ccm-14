@@ -175,3 +175,17 @@ public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, Projectile
 /// </summary>
 [ByRefEvent]
 public record struct ProjectileHitEvent(DamageSpecifier Damage, EntityUid Target, EntityUid? Shooter = null);
+
+public sealed class ProjectileHitAttemptEvent : CancellableEntityEventArgs
+{
+    public DamageSpecifier Damage { get; }
+    public EntityUid Target { get; }
+    public EntityUid? Shooter { get; }
+
+    public ProjectileHitAttemptEvent(DamageSpecifier damage, EntityUid target, EntityUid? shooter = null)
+    {
+        Damage = damage;
+        Target = target;
+        Shooter = shooter;
+    }
+}

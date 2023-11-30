@@ -3,6 +3,7 @@
   parent: BaseItem
   id: WeaponShotgunUA571C
   components:
+  - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
     layers:
@@ -51,12 +52,12 @@
   - type: StaticPrice
     price: 500
 
-
 - type: entity
   name: K221 shotgun
   parent: BaseItem
   id: WeaponShotgunK221
   components:
+  - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
     layers:

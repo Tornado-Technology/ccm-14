@@ -189,21 +189,20 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 
                 xeno.WinConditions.Add(WinCondition.EggsWinningCount);
                 SetWinType(uid, WinType.XenoMinor, xeno);
-                break;
+                continue;
             }
 
             if (Xenos == 0)
             {
                 xeno.WinConditions.Add(WinCondition.AllXenoDied);
-                SetWinType(uid, WinType.MarineMajor, xeno);
-                break;
+                SetWinType(uid, WinType.MarineMinor, xeno);
+                continue;
             }
 
             if (Marines == 0)
             {
                 xeno.WinConditions.Add(WinCondition.AllMarineDied);
                 SetWinType(uid, WinType.XenoMajor, xeno);
-                break;
             }
         }
     }

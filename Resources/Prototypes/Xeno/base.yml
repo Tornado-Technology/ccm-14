@@ -9,6 +9,7 @@
     - MobFlammable
   id: MobXenoBase
   components:
+    - type: FriendlyFire
     - type: Xeno
     - type: XenoEvolutions
     - type: XenoTier

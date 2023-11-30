@@ -4,6 +4,8 @@
   id: BaseMarine
   noSpawn: false
   components:
+  - type: FriendlyFire
+    enabled: true
   - type: StatusIcon
   - type: SleepEmitSound
   - type: SSDIndicator
@@ -163,7 +165,7 @@
         mask:
           - MobMask
         layer:
-          - Opaque
+          - MobLayer
   - type: AtmosExposed
   - type: Flammable
     fireSpread: true

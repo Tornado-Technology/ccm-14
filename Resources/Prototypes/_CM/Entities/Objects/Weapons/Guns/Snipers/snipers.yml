@@ -3,6 +3,7 @@
   parent: BaseWeaponRifle
   id: WeaponSniperXM43E
   components:
+  - type: PrecisionShooting
   - type: ChamberMagazineAmmoProvider
     boltClosed: true
   - type: Sprite

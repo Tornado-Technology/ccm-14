@@ -11,6 +11,7 @@
   suffix: "Marines Gear"
   description: The engineer's best friend. It does not understand back.
   components:
+  - type: FriendlyFire
   - type: Gun
     fireRate: 5
     selectedMode: FullAuto
