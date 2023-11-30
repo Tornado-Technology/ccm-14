@@ -10,7 +10,6 @@
       icon:
         sprite: Structures/Furniture/chairs.rsi
         state: shuttle
-    - type: EscapeShuttleCondition
 
 - type: entity
   noSpawn: true
@@ -22,5 +21,3 @@
     - type: Objective
       difficulty: 1.75
       unique: false
-    - type: TargetObjective
-      title: objective-condition-kill-person-title
