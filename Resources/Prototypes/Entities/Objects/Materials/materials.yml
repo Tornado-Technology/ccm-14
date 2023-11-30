@@ -237,6 +237,7 @@
   - type: Appearance
   - type: Item
     heldPrefix: wood
+  - type: TimedDespawn
 
 - type: entity
   parent: MaterialWoodPlank

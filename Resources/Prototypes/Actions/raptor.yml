@@ -11,3 +11,5 @@
       state: mech_eject
     event: !type:RaptorEjectPilotEvent
     priority: -99999
+  - type: Visibility
+    layer: 1

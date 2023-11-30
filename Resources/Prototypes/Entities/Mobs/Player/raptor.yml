@@ -4,6 +4,7 @@
   name: CAS
   noSpawn: true
   components:
+  - type: InteractionOutline
   - type: Tag
     tags:
       - InteractionCAS
@@ -25,9 +26,10 @@
   - type: Physics
     bodyType: KinematicController
   - type: Body
-    prototype: Aghost
+    prototype: Raptor
   - type: Stripping
   - type: CargoSellBlacklist
+  - type: DoAfter
   - type: Fixtures
     fixtures:
       fix1:
@@ -39,6 +41,7 @@
         - GhostImpassable
   - type: Eye
     drawFov: false
+    visMask: 1
   - type: MovementSpeedModifier
     baseSprintSpeed: 16
     baseWalkSpeed: 8
@@ -62,9 +65,47 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-      - Binary
-      - Common
       - Command
   - type: CanMoveInAir
   - type: Visibility
     layer: 1
+  - type: Speech
+    speechVerb: Ghost
+  - type: Alerts
+
+- type: body
+  id: Raptor
+  name: "Raptor"
+  root: torso
+  slots:
+    torso:
+      part: TorsoHuman
+      connections:
+      - left_arm
+      - right_arm
+      - left_arm1
+      - right_arm1
+    right_arm:
+      part: RightArmHuman
+      connections:
+      - right_hand
+    left_arm:
+      part: LeftArmHuman
+      connections:
+      - left_hand
+    right_arm1:
+      part: RightArmHuman
+      connections:
+      - right_hand1
+    left_arm1:
+      part: LeftArmHuman
+      connections:
+      - left_hand1
+    right_hand:
+      part: RightHandHuman
+    left_hand:
+      part: LeftHandHuman
+    right_hand1:
+      part: RightHandHuman
+    left_hand1:
+      part: LeftHandHuman
