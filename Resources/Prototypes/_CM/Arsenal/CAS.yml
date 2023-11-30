@@ -172,21 +172,13 @@
   - type: Item
     sprite: Objects/Misc/flare.rsi
   - type: PointLight
-    color: Orange
-    castShadows: true
     radius: 10
     energy: 5
-  - type: LightBehaviour
-    behaviours:
-      - !type:PulseBehaviour
-        id: blinking
-        interpolate: Cubic
-        maxDuration: 2.0
-        minValue: 0.1
-        maxValue: 2
-        isLooped: true
-        property: Energy
-        enabled: true
+    color: Orange
+    castShadows: true
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight
+    speed: 90
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
