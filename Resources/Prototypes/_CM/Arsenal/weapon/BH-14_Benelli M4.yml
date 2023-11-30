@@ -15,7 +15,7 @@
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/bh14.rsi
     quickEquip: false
@@ -68,7 +68,7 @@
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/Beneli M4.rsi
     quickEquip: false

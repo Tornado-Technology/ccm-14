@@ -10,7 +10,7 @@
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
     quickEquip: false
@@ -64,7 +64,7 @@
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m37.rsi
     quickEquip: false

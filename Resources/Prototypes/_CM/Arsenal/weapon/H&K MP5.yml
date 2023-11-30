@@ -13,7 +13,7 @@
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/mp5.rsi
   - type: Item
-    size: 20
+    size: Normal
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/mp5.rsi
     quickEquip: false
