@@ -1,13 +1,14 @@
 ﻿using Content.Shared.Actions;
 using Content.Shared.FriendlyFire;
+using Content.Shared.Hands;
+using Content.Shared.Popups;
 
 namespace Content.Server.FriendlyFire;
 
 public sealed class PrecisionShootingSystem : EntitySystem
 {
     [Dependency] private readonly FriendlyFireSystem _friendlyFire = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {
@@ -15,6 +16,7 @@ public sealed class PrecisionShootingSystem : EntitySystem
 
         SubscribeLocalEvent<PrecisionShootingComponent, PrecisionShootingEvent>(OnToggle);
         SubscribeLocalEvent<PrecisionShootingComponent, GetItemActionsEvent>(OnGetActions);
+        SubscribeLocalEvent<PrecisionShootingComponent, GotUnequippedHandEvent>(OnGotUnequippedHand);
     }
 
     private void OnToggle(Entity<PrecisionShootingComponent> ent, ref PrecisionShootingEvent args)
@@ -23,13 +25,28 @@ public sealed class PrecisionShootingSystem : EntitySystem
             return;
 
         var parent = Transform(ent).ParentUid;
-        _friendlyFire.SetEnabled(parent, !_friendlyFire.GetEnabled(parent));
-        ent.Comp.Enabled = _friendlyFire.GetEnabled(parent);
+        SetEnabled(ent, parent, !_friendlyFire.GetEnabled(parent));
         args.Handled = true;
     }
 
     private void OnGetActions(Entity<PrecisionShootingComponent> ent, ref GetItemActionsEvent args)
     {
         args.AddAction(ref ent.Comp.ActionEntity, ent.Comp.Action);
+    }
+
+    private void OnGotUnequippedHand(Entity<PrecisionShootingComponent> ent, ref GotUnequippedHandEvent args)
+    {
+        var parent = args.User;
+        SetEnabled(ent, parent, true);
+    }
+
+    private void SetEnabled(Entity<PrecisionShootingComponent> ent, EntityUid parent, bool state)
+    {
+        if (ent.Comp.Enabled == state)
+            return;
+
+        _friendlyFire.SetEnabled(parent, state);
+        ent.Comp.Enabled = state;
+        _popup.PopupEntity(state ? "Вы перестаете целится." : "Вы прицеливаетесь.", parent);
     }
 }

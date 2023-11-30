@@ -3,6 +3,10 @@
   parent: MobXenoBaseT5
   id: MobRoyalQueenXeno
   components:
+    - type: Xeno
+      healthRegen: 10
+      healthRegenOnRest: 35
+      healthRegenOnWeeds: 100
     - type: XenoStealth
     - type: XenoLayEgg
       action: ActionXenoLayEggRoyal
@@ -33,7 +37,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        2000: Dead
+        5000: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

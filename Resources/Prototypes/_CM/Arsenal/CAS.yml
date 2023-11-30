@@ -178,7 +178,7 @@
     castShadows: true
     mask: /Textures/Effects/LightMasks/double_cone.png
   - type: RotatingLight
-    speed: 90
+    speed: 10
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
