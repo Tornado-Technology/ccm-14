@@ -6,9 +6,6 @@ namespace Content.Server.FriendlyFire;
 public sealed partial class PrecisionShootingComponent : Component
 {
     [DataField]
-    public bool Enabled;
-
-    [DataField]
     public EntProtoId Action = "ActionPrecisionShooting";
 
     [DataField]

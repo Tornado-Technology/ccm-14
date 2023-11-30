@@ -244,7 +244,11 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (gun.NextFire > curTime)
             return;
 
-        var fireRate = TimeSpan.FromSeconds(1f / gun.FireRate);
+        var fireRateEvent = new GetFireRateEvent(gun.FireRate);
+        RaiseLocalEvent(gunUid, ref fireRateEvent);
+
+        RaiseLocalEvent(user, ref prevention);
+        var fireRate = TimeSpan.FromSeconds(1f / fireRateEvent.FireRate);
 
         // First shot
         // Previously we checked shotcounter but in some cases all the bullets got dumped at once

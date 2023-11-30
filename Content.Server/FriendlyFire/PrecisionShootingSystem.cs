@@ -2,6 +2,7 @@
 using Content.Shared.FriendlyFire;
 using Content.Shared.Hands;
 using Content.Shared.Popups;
+using Content.Shared.Weapons.Ranged.Events;
 
 namespace Content.Server.FriendlyFire;
 
@@ -17,6 +18,7 @@ public sealed class PrecisionShootingSystem : EntitySystem
         SubscribeLocalEvent<PrecisionShootingComponent, PrecisionShootingEvent>(OnToggle);
         SubscribeLocalEvent<PrecisionShootingComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<PrecisionShootingComponent, GotUnequippedHandEvent>(OnGotUnequippedHand);
+        SubscribeLocalEvent<PrecisionShootingComponent, GetFireRateEvent>(OnGetFireRate);
     }
 
     private void OnToggle(Entity<PrecisionShootingComponent> ent, ref PrecisionShootingEvent args)
@@ -42,11 +44,16 @@ public sealed class PrecisionShootingSystem : EntitySystem
 
     private void SetEnabled(Entity<PrecisionShootingComponent> ent, EntityUid parent, bool state)
     {
-        if (ent.Comp.Enabled == state)
+        _friendlyFire.SetEnabled(parent, state);
+        _popup.PopupEntity(state ? "Вы перестаете целится." : "Вы прицеливаетесь.", parent);
+    }
+
+    private void OnGetFireRate(Entity<PrecisionShootingComponent> ent, ref GetFireRateEvent args)
+    {
+        var parent = Transform(ent).ParentUid;
+        if (_friendlyFire.GetEnabled(parent))
             return;
 
-        _friendlyFire.SetEnabled(parent, state);
-        ent.Comp.Enabled = state;
-        _popup.PopupEntity(state ? "Вы перестаете целится." : "Вы прицеливаетесь.", parent);
+        args.FireRate /= 2.5f;
     }
 }
