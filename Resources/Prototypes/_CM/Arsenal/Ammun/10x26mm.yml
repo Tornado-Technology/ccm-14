@@ -56,7 +56,7 @@
     tags:
       - MagazineHeavyRifle
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:

@@ -5,7 +5,6 @@
   noSpawn: false
   components:
   - type: FriendlyFire
-    enabled: true
   - type: StatusIcon
   - type: SleepEmitSound
   - type: SSDIndicator

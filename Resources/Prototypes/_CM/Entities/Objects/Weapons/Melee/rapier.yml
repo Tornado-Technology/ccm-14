@@ -36,7 +36,7 @@
   - type: SolutionTransfer
     maxTransferAmount: 5    
   - type: Item
-    size: 10
+    size: Large
     sprite: _CM/Objects/Weapons/Melee/rapier_cvasoc.rsi
   - type: Tag
     tags:

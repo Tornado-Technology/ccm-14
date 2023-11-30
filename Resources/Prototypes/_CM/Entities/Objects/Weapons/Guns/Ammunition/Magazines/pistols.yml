@@ -8,7 +8,7 @@
     tags:
       - MagazinePistol88M4
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -57,7 +57,7 @@
     tags:
       - MagazinePistolAramatM5Y3
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:

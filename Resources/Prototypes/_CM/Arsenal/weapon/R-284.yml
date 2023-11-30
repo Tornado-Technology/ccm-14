@@ -8,13 +8,13 @@
   abstract: true
   suffix: "Marines Gear"
   components:
-  - type: PrecisionShooting
+  # - type: PrecisionShooting
   - type: Sprite
     layers:
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/lmgshotgun.rsi
     quickEquip: false

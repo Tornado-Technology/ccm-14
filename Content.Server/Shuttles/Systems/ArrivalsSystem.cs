@@ -160,9 +160,9 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void OnPlayerSpawn(PlayerSpawningEvent ev)
     {
-        if (ev?.Job?.PrototypeId != null)
+        if (ev?.Job?.Prototype != null)
         {
-            if (ev.Job.PrototypeId == "Quinn" || ev.Job.PrototypeId == "Pretor" || ev.Job.PrototypeId == "Kseno" || ev.Job.PrototypeId == "Runi")
+            if (ev.Job.Prototype == "Quinn" || ev.Job.Prototype == "Pretor" || ev.Job.Prototype == "Kseno" || ev.Job.Prototype == "Runi")
             {
                 var points = EntityQueryEnumerator<XenoSpawnComponent, TransformComponent>();
                 var possiblePositions = new List<EntityCoordinates>();

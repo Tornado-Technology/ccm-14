@@ -9,7 +9,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/eng_gear.rsi
     layers:
@@ -31,7 +31,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/med_gear.rsi
     layers:
@@ -53,7 +53,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/spec_gear.rsi
     layers:
@@ -77,7 +77,7 @@
     offState: off
     brokenState: broken
     normalState: normal
-    ejectDelay: 1
+    ejectDelay: 0.5
   - type: Sprite
     sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
     layers:

@@ -37,7 +37,7 @@
   - type: Storage
     capacity: 4
   - type: Item
-    size: 5
+    size: Normal
   - type: StorageFill
     contents:
     - id: Cigarette

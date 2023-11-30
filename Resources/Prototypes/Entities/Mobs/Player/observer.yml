@@ -55,7 +55,8 @@
     - Bravo
     - Charlie
     - Delta
-    - Hivemind  
+    - Hivemind
+    - Freelance
     globalReceive: true
   - type: Physics
     bodyType: KinematicController

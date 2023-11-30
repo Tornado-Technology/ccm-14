@@ -7,6 +7,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Xeno;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
+using Robust.Shared.Player;
 
 namespace Content.Server.Xeno;
 

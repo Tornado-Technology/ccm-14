@@ -3,7 +3,7 @@
 # You can also use the salvageruler command to get these, once you're sure the transform's been reset.
 # Ultimately, you should still be keeping the maps centred.
 
-# "Small"-class maps - Max size square: 7x7, indicated size: 3.5
+# "Small"-class maps - Max size square: 7x7, indicated 3: small.5
 
 - type: salvageMap
   id: Small1
@@ -121,3 +121,7 @@
   name: "Ruined Cargo Storage"
   mapPath: /Maps/Salvage/ruin-cargo-salvage.yml
 
+- type: salvageMap
+  id: SecurityChunk
+  name: "Security Department Chunk"
+  mapPath: /Maps/Salvage/security-chunk.yml

@@ -162,6 +162,17 @@
 
 - type: entity
   parent: ClothingNeckBase
+  id: ClothingNeckCloakVoid
+  name: void cloak
+  description: A cloak of darkness. For those who have gone to the dark side of the force.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/void.rsi
+  - type: TypingIndicatorClothing
+    proto: alien
+
+- type: entity
+  parent: ClothingNeckBase
   id: ClothingNeckCloakDeveloper
   name: developer's cloak
   description: Comfortable blue raincoat with beautiful gold trim, full of bug-proof patches.

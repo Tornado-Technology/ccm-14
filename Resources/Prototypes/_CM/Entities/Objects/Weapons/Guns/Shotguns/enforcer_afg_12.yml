@@ -4,14 +4,14 @@
   id: WeaponShotgunEnforcerAFG-12
   description: Военные дробовики разрабатываются с учетом максимальной надежности и долговечности.
   components:
-  - type: PrecisionShooting
+  # - type: PrecisionShooting
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
     layers:
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
     quickEquip: false

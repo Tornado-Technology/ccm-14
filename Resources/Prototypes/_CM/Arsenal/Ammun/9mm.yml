@@ -60,7 +60,7 @@
     proto: Cartrige9mm
     capacity: 60
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -149,7 +149,7 @@
         - CartridgePistol
     capacity: 18
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -192,7 +192,7 @@
     tags:
       - MagazineShotgun
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
