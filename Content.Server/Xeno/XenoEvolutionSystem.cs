@@ -25,6 +25,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
         { 2, 10 },
         { 3,  5 },
         { 4, -1 },
+        { 5, -1 },
     };
 
     private float _updateTimer;

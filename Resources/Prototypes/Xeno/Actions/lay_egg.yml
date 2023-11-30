@@ -1,11 +1,26 @@
 - type: entity
   id: ActionXenoLayEgg
   name: LayEgg name
-  description: LayEgg desc
   noSpawn: true
   components:
     - type: InstantAction
       useDelay: 180
+      priority: 7
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: lay_egg
+      event: !type:XenoLayEggEvent
+      checkCanInteract: false
+
+- type: entity
+  id: ActionXenoLayEggRoyal
+  name: LayEgg
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 20
       priority: 7
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar1.ogg

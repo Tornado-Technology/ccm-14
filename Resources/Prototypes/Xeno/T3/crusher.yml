@@ -3,7 +3,6 @@
   parent: MobXenoBaseT3
   id: MobCrusherXeno
   components:
-    - type: XenoCrusher
     - type: XenoCrushDash
     - type: XenoStun
     - type: Sprite
