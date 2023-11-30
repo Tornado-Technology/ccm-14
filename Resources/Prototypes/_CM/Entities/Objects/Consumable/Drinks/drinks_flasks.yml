@@ -12,8 +12,6 @@
         reagents:
         - ReagentId: Water
           Quantity: 30
-  - type: TrashOnEmpty
-    solution: drink
 
 - type: entity
   parent: DrinkFlaskDefault

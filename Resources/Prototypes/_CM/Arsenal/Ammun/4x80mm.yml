@@ -118,7 +118,7 @@
     proto: ShellLMG
     capacity: 4
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

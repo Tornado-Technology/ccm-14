@@ -28,7 +28,7 @@ public sealed partial class XenoScreechSystem : EntitySystem
 
     private void OnStun(EntityUid uid, XenoScreechComponent comp, XenoScreechEvent args)
     {
-        foreach (var mob in _lookup.GetComponentsInRange<MobStateComponent>(Transform(uid).Coordinates, comp.Radius))
+        foreach (var mob in _lookup.GetComponentsInRange<MobStateComponent>(Transform(uid).MapPosition, comp.Radius))
         {
             if (mob == null || HasComp<XenoComponent>(mob.Owner))
                 continue;

@@ -12,11 +12,11 @@
     whitelist:
       tags:
         - CartridgeShotGun24Gauge
-    capacity: 8
+    capacity: 16
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -58,11 +58,11 @@
     whitelist:
       tags:
         - CartridgeShotGun8Gauge
-    capacity: 8
+    capacity: 16
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
   - type: Item
-    size: 5
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -107,7 +107,7 @@
     whitelist:
       tags:
         - ShellShotgun
-    capacity: 8
+    capacity: 14
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
   - type: Sprite

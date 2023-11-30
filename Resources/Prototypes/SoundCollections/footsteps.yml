@@ -65,12 +65,17 @@
   files:
   - /Audio/Effects/Footsteps/clownstep1.ogg
   - /Audio/Effects/Footsteps/clownstep2.ogg
-  
+
 - type: soundCollection
   id: FootstepJester
   files:
   - /Audio/Effects/Footsteps/jesterstep1.ogg
   - /Audio/Effects/Footsteps/jesterstep2.ogg
+
+- type: soundCollection
+  id: FootstepSkates
+  files:
+  - /Audio/Items/Toys/skates.ogg
 
 - type: soundCollection
   id: FootstepDuck
@@ -153,6 +158,15 @@
   files:
   - /Audio/Effects/Footsteps/clownspiderstep1.ogg
   - /Audio/Effects/Footsteps/clownspiderstep2.ogg
+
+- type: soundCollection
+  id: FootstepBells
+  files:
+  - /Audio/Effects/Footsteps/bells1.ogg
+  - /Audio/Effects/Footsteps/bells2.ogg
+  - /Audio/Effects/Footsteps/bells3.ogg
+  - /Audio/Effects/Footsteps/bells4.ogg
+  - /Audio/Effects/Footsteps/bells5.ogg
 
 - type: soundCollection
   id: FootstepAlienCharge

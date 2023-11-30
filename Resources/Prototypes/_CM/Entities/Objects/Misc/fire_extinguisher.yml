@@ -11,7 +11,7 @@
           map: [ "enabled" ]
   - type: Item
     sprite: _CM/Objects/Misc/fire_extinguisher.rsi
-    size: 10
+    size: Large
   - type: SolutionContainerManager
     solutions:
       spray:
@@ -61,7 +61,7 @@
           map: [ "enabled" ]
   - type: Item
     sprite: _CM/Objects/Misc/mini_fire_extinguisher.rsi
-    size: 5
+    size: Normal
   - type: SolutionContainerManager
     solutions:
       spray:

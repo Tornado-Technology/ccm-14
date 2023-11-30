@@ -6,7 +6,7 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
-  - type: PrecisionShooting
+  # - type: PrecisionShooting
   - type: Sprite
     layers:
       - state: base
@@ -14,7 +14,7 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    size: 10
+    size: Large
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/TGMSArsenal/vp70.rsi
     quickEquip: false
@@ -64,7 +64,7 @@
   id: TGMSVP70
   description: 9 mm 18-charge pistol with double-acting USM and with a polymer frame, produced by the German company Heckler & Koch. It is needed as a spare weapon and a flashlight.
   components:
-  - type: PrecisionShooting
+  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/vp70.rsi
     layers:

@@ -401,7 +401,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 1.9
+    ejectDelay: 0.5
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: Speech
@@ -544,7 +544,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 1.9
+    ejectDelay: 0.5
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: Speech
@@ -578,7 +578,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 1.9
+    ejectDelay: 0.5
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: Speech
@@ -612,7 +612,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 1.9
+    ejectDelay: 0.5
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: Speech
@@ -1248,7 +1248,7 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
-    ejectDelay: 1.8
+    ejectDelay: 0.5.8
   - type: Advertise
     pack: GoodCleanFunAds
   - type: Sprite
@@ -1456,7 +1456,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
-    access: [["Command"]] # Corvax-IAA
+    access: [["Lawyer"]]
 
 - type: entity
   parent: VendingMachine
@@ -1942,7 +1942,7 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
-    ejectDelay: 1.9
+    ejectDelay: 0.5
     soundVend: /Audio/Items/bikehorn.ogg
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/happyhonk.rsi
@@ -2005,7 +2005,7 @@
     brokenState: broken
     normalState: normal
     denyState: deny
-    ejectDelay: 3
+    ejectDelay: 2
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/chemvend.rsi
     layers:
@@ -2020,3 +2020,20 @@
   - type: GuideHelp
     guides:
     - Chemicals
+
+- type: entity
+  parent: VendingMachineChemicals
+  id: VendingMachineChemicalsSyndicate
+  name: SyndieJuice
+  description: Not made with freshly squeezed syndies I hope.
+  components:
+  - type: VendingMachine
+    pack: ChemVendInventorySyndicate
+    offState: off
+    brokenState: broken
+    normalState: normal
+    denyState: deny
+    ejectDelay: 2
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+

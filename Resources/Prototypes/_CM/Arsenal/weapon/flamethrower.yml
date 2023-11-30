@@ -5,7 +5,7 @@
   description: "Make It Burn Dem"
   suffix: MarinesGear
   components:
-  - type: PrecisionShooting
+  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/TGMSArsenal/Textures/flamethrower.rsi
     layers:
@@ -15,6 +15,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
     sprite: _CM/TGMSArsenal/Textures/flamethrower.rsi
+    size: Large
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: -20
@@ -52,6 +53,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+
+
 - type: Tag
   id: CartridgeFlamethrower
   
@@ -71,7 +74,7 @@
     tags:
       - TankFlamethrower
   - type: Item
-    size: 5
+    size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
     capacity: 1000
