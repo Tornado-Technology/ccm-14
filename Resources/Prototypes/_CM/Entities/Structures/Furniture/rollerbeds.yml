@@ -1,7 +1,8 @@
 - type: entity
-  id: MarineRollerBed
-  name: roller bed
   parent: RollerBed
+  id: MarineRollerBed
+  suffix: CM
+  name: roller bed
   description: A robust looking rollerbed used for emergencies.
   components:
   - type: Sprite

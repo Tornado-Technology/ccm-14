@@ -11,7 +11,7 @@
           steps:
             - material: Steel
               amount: 5
-              doAfter: 15
+              doAfter: 10
 
     - node: metalbarricade
       entity: MetalBarricade

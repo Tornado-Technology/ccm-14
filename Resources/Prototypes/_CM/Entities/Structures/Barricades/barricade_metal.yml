@@ -1,5 +1,6 @@
 - type: entity
   id: MetalBarricade
+  suffix: CM
   parent: BaseStructure
   name: Стальная баррикада
   description: Держит морпехов внутри, ксено снаружи.

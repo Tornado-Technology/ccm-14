@@ -1,5 +1,6 @@
 - type: entity
   id: XenoWeedsSource
+  suffix: CM
   name: alien weeds
   placement:
     mode: SnapgridCenter
@@ -45,6 +46,7 @@
 
 - type: entity
   id: XenoWeeds
+  suffix: CM
   name: alien weeds
   placement:
     mode: SnapgridCenter

@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
-  name: Store for specialist
   id: StoreSpecialist
-  suffix: Full
+  suffix: CM, Full
+  name: Store for specialist
   components:
   - type: Sprite
     sprite: Objects/Devices/distant_store.rsi

@@ -1,7 +1,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadAlphaGlass
-  suffix: Alpha, Glass
+  suffix: CM, Alpha, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_alpha.rsi
@@ -9,7 +9,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadBarvoGlass
-  suffix: Barvo, Glass
+  suffix: CM, Barvo, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_bravo.rsi
@@ -17,7 +17,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadCharlieGlass
-  suffix: Charlie, Glass
+  suffix: CM, Charlie, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_charlie.rsi
@@ -25,7 +25,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadDeltaGlass
-  suffix: Delta, Glass
+  suffix: CM, Delta, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_delta.rsi
@@ -33,7 +33,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadAlphaSpecialistGlass
-  suffix: Alpha specialist, Glass
+  suffix: CM, Alpha specialist, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_alpha_spec.rsi
@@ -41,7 +41,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadBarvoSpecialistGlass
-  suffix: Barvo specialist, Glass
+  suffix: CM, Barvo specialist, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_bravo_spec.rsi
@@ -49,7 +49,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadCharlieSpecialistGlass
-  suffix: Charlie specialist, Glass
+  suffix: CM, Charlie specialist, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_charlie_spec.rsi
@@ -57,7 +57,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSquadDeltaSpecialistGlass
-  suffix: Delta specialist, Glass
+  suffix: CM, Delta specialist, Glass
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/squad_delta_spec.rsi

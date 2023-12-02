@@ -1,6 +1,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineMarineEngineer
+  suffix: CM
   name: ColMarTech Automated Engineer Rack
   description: An automated Engineer rack hooked up to a big storage of standard-issue weapons.
   components:
@@ -23,6 +24,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineMarineMedical
+  suffix: CM
   name: ColMarTech Automated Medical Rack
   description: An automated Medical rack hooked up to a big storage of standard-issue weapons.
   components:
@@ -45,6 +47,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineMarineSpecialist
+  suffix: CM
   name: ColMarTech Automated Specialist Rack
   description: An automated Specialist rack hooked up to a big storage of standard-issue weapons.
   components:
@@ -69,6 +72,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineSquadLeaderEquipment
+  suffix: CM
   name: ColMarTech Automated Squad Leader Equipment Rack
   description: Automated shelving connected to a colossal storage of standard equipment for Squad Leaders.
   components:
@@ -93,6 +97,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineResearcherEquipment
+  suffix: CM
   name: ColMarTech Automated Researcher Equipment Rack
   description: Automated shelving connected to a colossal storage of standard equipment for Researchers.
   components:

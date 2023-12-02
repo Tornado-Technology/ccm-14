@@ -1,13 +1,14 @@
 - type: entity
-  name: Десантное кресло
-  id: ChairDropshipSeat
   parent: SeatBase
+  id: ChairDropshipSeat
+  suffix: CM
+  name: Десантное кресло
   description: ""
   components:
   - type: Physics
     bodyType: Static
   - type: Sprite
-    sprite: /Textures/_CM/Objects/Chair/chair.rsi # Вставить путь до текстурки кресла тут
+    sprite: /Textures/_CM/Objects/Chair/chair.rsi
     noRot: true
     layers:
       - state: chair

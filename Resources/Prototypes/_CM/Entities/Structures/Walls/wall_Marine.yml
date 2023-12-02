@@ -1,6 +1,7 @@
 - type: entity
   parent: BaseWall
   id: CMWallHull
+  suffix: CM
   name: hull wall
   components:
     - type: Tag
@@ -42,6 +43,7 @@
 - type: entity
   parent: BaseWall
   id: CMWallHullEvac
+  suffix: CM
   name: hull wall
   components:
     - type: Tag
@@ -83,6 +85,7 @@
 - type: entity
   parent: BaseWall
   id: CMWallHullLab
+  suffix: CM
   name: hull wall
   components:
     - type: Tag

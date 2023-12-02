@@ -1,7 +1,8 @@
 - type: entity
-  abstract: true
   parent: BaseWall
   id: BaseWallXeno
+  suffix: CM
+  abstract: true
   components:
     - type: Sprite
       sprite: _CM/Structures/Walls/xeno_resin_wall.rsi

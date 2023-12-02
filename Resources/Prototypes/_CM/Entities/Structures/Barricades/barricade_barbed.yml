@@ -1,5 +1,6 @@
 - type: entity
   id: BarbedBarricade
+  suffix: CM
   parent: BaseStructure
   name: Стальная баррикада с колючей проволокой
   description: Баррикада и колючая проволока, не перелезть.
