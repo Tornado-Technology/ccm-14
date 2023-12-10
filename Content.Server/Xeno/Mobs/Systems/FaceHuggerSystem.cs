@@ -19,6 +19,7 @@ using Content.Server.NPC.Components;
 using Content.Server.Alien;
 using Content.Shared.Mind;
 using Content.Shared.Xeno;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Server.Xeno.Systems;
 

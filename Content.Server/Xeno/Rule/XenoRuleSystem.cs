@@ -16,6 +16,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Audio;
 using Content.Shared.Xeno;
 using Content.Shared.Tag;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Spawners;
 
 namespace Content.Server.Xeno.Systems;
@@ -33,6 +34,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
 
     private float _announcmentTime = 0f;
     public float FobTime = 0f;
@@ -173,19 +175,19 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             if (Eggs == 20)
             {
                 _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"), sender, false, colorOverride: Color.Yellow);
-                SoundSystem.Play("/Audio/Misc/redalert.ogg", Filter.Broadcast());
+                _audio.PlayGlobal("/Audio/Misc/redalert.ogg", Filter.Broadcast(), recordReplay: true);
             }
 
             if (Eggs == 40)
             {
                 _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"), sender, false, colorOverride: Color.Orange);
-                SoundSystem.Play("/Audio/Misc/siren.ogg", Filter.Broadcast());
+                _audio.PlayGlobal("/Audio/Misc/siren.ogg", Filter.Broadcast(), recordReplay: true);
             }
 
             if (Eggs >= xeno.WinningXenoEggCount)
             {
                 _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"), sender, false, colorOverride: Color.Red);
-                SoundSystem.Play("/Audio/Misc/delta.ogg", Filter.Broadcast());
+                _audio.PlayGlobal("/Audio/Misc/delta.ogg", Filter.Broadcast(), recordReplay: true);
 
                 xeno.WinConditions.Add(WinCondition.EggsWinningCount);
                 SetWinType(uid, WinType.XenoMinor, xeno);
