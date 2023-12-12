@@ -1,0 +1,15 @@
+research-technology-basic-research = Основы исследования
+research-technology-advanced-research = Продвинутые исследования
+
+research-technology-local-explosion = Локальные взрывы
+research-technology-regular-munitions = Винтовочные магазины
+research-technology-speed-loading = Спидлоадеры
+research-technology-small-munitions = Малые магазины
+research-technology-box-munitions = Простые боеприпасы
+research-technology-explosive-devices = Взрывчатые устройства
+research-technology-total-destruction = Полное разрушение
+research-technology-special-munitions = Специальные магазины
+research-technology-simple-lasers = Простые лазеры
+research-technology-advanced-lasers = Продвинутые лазеры
+research-technology-improved-lasers = Улучшеные лазеры
+research-technology-teleportation-technologies = Компактная телепортация

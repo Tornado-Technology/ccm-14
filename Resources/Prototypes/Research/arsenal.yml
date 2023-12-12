@@ -1,37 +1,76 @@
 - type: technology
-  id: RegularMunitions
-  name: research-technology-draconic-munitions
+  id: LocalExplosion
+  name: research-technology-local-explosion
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Objects/Misc/landmine.rsi
+    state: landmine-inactive
   discipline: Arsenal
   tier: 1
-  cost: 10000
+  cost: 2500
+  recipeUnlocks:
+  - VoiceTrigger
+  - SignalTrigger
+  - TimerTrigger
+  - ExplosivePayload
+  - FlashPayload
+  - ChemicalPayload
+
+- type: technology
+  id: RegularMunitions
+  name: research-technology-regular-munitions
+  icon:
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 3500
   recipeUnlocks:
   - MagazineRifleM41A
   - MagazineRifleM4RA
-  - MagazinePistolAramatM5Y3
-  - MagazinePistol88M4
   - MagazineRifleM39
   - Magazine10x24mm
+  - Magazine9mm
+  - MagazinePP
+
+- type: technology
+  id: SmallMunitions
+  name: research-technology-small-munitions
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - MagazinePistolAramatM5Y3
+  - MagazinePistol88M4
+
+- type: technology
+  id: SpeedLoading
+  name: research-technology-speed-loading
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
   - SpeedLoaderMagnum
   - SpeedLoaderMagnumVP-60x2
   - SpeedLoaderLightRifle
   - SpeedLoaderMosin
   - SpeedLoader9mm
   - SpeedLoaderMagnum357
-  - Magazine9mm
-  - MagazinePP
 
 - type: technology
   id: BoxMunitions
-  name: research-technology-draconic-munitions
+  name: research-technology-box-munitions
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+    state: base-b
   discipline: Arsenal
-  tier: 2
-  cost: 5000
+  tier: 1
+  cost: 3500
   recipeUnlocks:
   - Box10x24mm
   - Magazine10x26mm
@@ -40,26 +79,50 @@
   - MagazineBox357
 
 - type: technology
-  id: TotalDestruction
-  name: research-technology-draconic-munitions
+  id: ExplosiveDevices
+  name: research-technology-explosive-devices
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Objects/Weapons/Bombs/c4.rsi
+    state: icon
   discipline: Arsenal
   tier: 2
-  cost: 5000
+  cost: 4500
   recipeUnlocks:
   - ExGrenade
   - C4
+
+- type: technology
+  id: SimpleLasers
+  name: research-technology-simple-lasers
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - WeaponLaserCarbine
+  - WeaponLaserCannon
+
+- type: technology
+  id: TotalDestruction
+  name: research-technology-total-destruction
+  icon:
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 4500
+  recipeUnlocks:
   - MarineCASFlareBomb
   - MarineCASClusterBomb
 
 - type: technology
   id: SpecialMunitions
-  name: research-technology-draconic-munitions
+  name: research-technology-special-munitions
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
+    state: base
   discipline: Arsenal
   tier: 3
   cost: 10000
@@ -71,13 +134,25 @@
   - BoxShotgunLMG
 
 - type: technology
-  id: AdvancedLasers
-  name: research-technology-draconic-munitions
+  id: ImprovedLasers
+  name: research-technology-improved-lasers
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+    state: icon
   discipline: Arsenal
   tier: 3
   cost: 10000
+  recipeUnlocks:
+  - WeaponAdvancedLaser
+
+- type: technology
+  id: AdvancedLasers
+  name: research-technology-advanced-lasers
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 4
+  cost: 15000
   recipeUnlocks:
   - WeaponAntiqueLaser

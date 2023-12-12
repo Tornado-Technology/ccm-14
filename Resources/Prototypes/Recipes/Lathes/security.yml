@@ -121,6 +121,24 @@
     Plastic: 900
 
 - type: latheRecipe
+  id: WeaponLaserCarbine
+  result: WeaponLaserCarbine
+  completetime: 12
+  materials:
+    Steel: 2000
+    Glass: 400
+    Plastic: 500
+
+- type: latheRecipe
+  id: WeaponLaserCannon
+  result: WeaponLaserCannon
+  completetime: 10
+  materials:
+    Steel: 1900
+    Glass: 500
+    Plastic: 400
+
+- type: latheRecipe
   id: WeaponLaserCarbinePractice
   result: WeaponLaserCarbinePractice
   completetime: 6
@@ -379,6 +397,15 @@
     Plastic: 100
     Glass: 100
     Plasma: 100
+
+- type: latheRecipe
+  id: WeaponAdvancedLaser
+  result: WeaponAdvancedLaser
+  completetime: 8
+  materials:
+    Steel: 900
+    Glass: 900
+    Plasma: 300
 
 - type: latheRecipe
   id: WeaponAntiqueLaser

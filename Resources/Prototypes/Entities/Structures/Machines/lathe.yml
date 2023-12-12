@@ -211,6 +211,7 @@
       - MegaSprayBottle
       - TimerTrigger
       - ChemicalPayload
+      - ExplosivePayload
       - FlashPayload
       - Signaller
       - SignalTrigger
@@ -526,6 +527,9 @@
       - FuelTankFlamethrower
       - MagazineRifleXM43E
       - MagazineLightRifleBox
+      - WeaponLaserCarbine
+      - WeaponLaserCannon
+      - WeaponAdvancedLaser
       - WeaponAntiqueLaser
   - type: MaterialStorage
     whitelist:
@@ -558,6 +562,33 @@
     - type: Lathe
       idleState: icon
       runningState: icon
+      dynamicRecipes:
+        - MagazineRifleM41A
+        - MagazineRifleM4RA
+        - MagazinePistolAramatM5Y3
+        - MagazinePistol88M4
+        - MagazineRifleM39
+        - Magazine10x24mm
+        - SpeedLoaderMagnum
+        - SpeedLoaderMagnumVP-60x2
+        - SpeedLoaderLightRifle
+        - SpeedLoaderMosin
+        - SpeedLoader9mm
+        - SpeedLoaderMagnum357
+        - Magazine9mm
+        - MagazinePP
+        - Box10x24mm
+        - Magazine10x26mm
+        - MagazineBoxMagnum
+        - Box9mm
+        - MagazineBox357
+        - ExGrenade
+        - C4
+        - MagazineShotgunAFG-12
+        - FuelTankFlamethrower
+        - MagazineRifleXM43E
+        - MagazineLightRifleBox
+        - WeaponLaserCarbine
     - type: MaterialStorage
       whitelist:
         tags:

@@ -66,7 +66,6 @@
   recipeUnlocks:
   - TraversalDistorterMachineCircuitboard
   - WeaponPistolCHIMP
-  - HandTeleporter
   - AnomalySynchronizerCircuitboard
   technologyPrerequisites:
   - BasicResearch
@@ -99,3 +98,15 @@
   recipeUnlocks:
     - WeaponForceGun
     - WeaponTetherGun
+
+- type: technology
+  id: TeleportationTechnologies
+  name: research-technology-teleportation-technologies
+  icon:
+    sprite: Objects/Devices/hand_teleporter.rsi
+    state: icon
+  discipline: Experimental
+  tier: 4
+  cost: 20000
+  recipeUnlocks:
+    - HandTeleporter
