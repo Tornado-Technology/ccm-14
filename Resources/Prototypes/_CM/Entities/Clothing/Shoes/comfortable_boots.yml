@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingShoesStorageBase
+  parent: ClothingShoesBase
   id: ClothingShoesComfortableBootsMarine
   name: comfortable marine boots
   description: Special boots designed for comfortable wearing and intimidation of the enemy. Looks awesome.

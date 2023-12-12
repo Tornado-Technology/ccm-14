@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingShoesStorageBase
+  parent: ClothingShoesBase
   id: ClothingShoesBootsMarine
   name: marine combat boots
   description: Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.
@@ -9,9 +9,22 @@
   - type: Clothing
     sprite: _CM/Clothing/Shoes/Boots/marine.rsi
   - type: Storage
+    grid:
+    - 0,0,0,0 # TODO: Change this
+    maxItemSize: Tiny
     whitelist:
       tags:
         - Knife
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
   - type: StorageFill
     contents:
       - id: MarineCombatKnife

@@ -48,7 +48,8 @@
       - state: internals
       - state: emergencytank
   - type: Storage
-    maxTotalWeight: 30
+    grid:
+    - 0,0,3,3 # TODO: Change this
     maxItemSize: Small
   - type: Item
     size: Small

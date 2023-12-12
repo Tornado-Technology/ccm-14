@@ -14,7 +14,8 @@
     slots:
     - back
   - type: Storage
-    maxTotalWeight: 54
+    grid:
+    - 0,0,9,4 # TODO: Change this
     maxItemSize: Huge
   - type: ContainerContainer
     containers:

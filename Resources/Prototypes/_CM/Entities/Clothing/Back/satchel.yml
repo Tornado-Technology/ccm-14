@@ -14,7 +14,8 @@
     slots:
     - back
   - type: Storage
-    maxTotalWeight: 64
+    grid:
+    - 0,0,2,8 # TODO: Change this
     maxItemSize: Normal
   - type: ContainerContainer
     containers:
