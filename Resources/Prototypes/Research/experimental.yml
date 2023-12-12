@@ -67,6 +67,7 @@
   - TraversalDistorterMachineCircuitboard
   - WeaponPistolCHIMP
   - AnomalySynchronizerCircuitboard
+  - AnomalyVesselExperimentalCircuitboard
   technologyPrerequisites:
   - BasicResearch
 

@@ -16,8 +16,8 @@
   product: CrateArmoryRiffles #Айди ящика с пушкой
   cost: 6200
   category: Security
-  group: market  
-  
+  group: market
+
 - type: cargoProduct
   id: CrateMagazinesConsole #Любое айди, такое, что нет в игре
   icon:
@@ -37,7 +37,7 @@
   cost: 3000
   category: Security
   group: market
-  
+
 - type: cargoProduct
   id: CrateGoldUranSilver #Любое айди, такое, что нет в игре
   icon:
@@ -47,7 +47,7 @@
   cost: 5600
   category: Materials
   group: market
-  
+
 - type: cargoProduct
   id: CrateC4Console #Любое айди, такое, что нет в игре
   icon:

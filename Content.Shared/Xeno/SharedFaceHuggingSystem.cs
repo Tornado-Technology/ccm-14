@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared.Alien;
 
