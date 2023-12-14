@@ -1,0 +1,25 @@
+﻿- type: reagent
+  id: Kerosene
+  name: reagent-name-kerosene
+  parent: BasePyrotechnic
+  desc: reagent-desc-kerosene
+  physicalDesc: reagent-physical-desc-oily
+  flavor: bitter
+  color: "#fffdde44"
+  recognizable: true
+  boilingPoint: 347
+  meltingPoint: -45.5
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 6.7
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 2
+            Poison: 2
+            Caustic: 1
+      - !type:FlammableReaction
+        multiplier: 1.7
