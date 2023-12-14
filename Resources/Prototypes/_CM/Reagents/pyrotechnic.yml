@@ -1,5 +1,5 @@
 ﻿- type: reagent
-  id: Kerosene
+  id: Ы 
   name: reagent-name-kerosene
   parent: BasePyrotechnic
   desc: reagent-desc-kerosene
@@ -12,6 +12,12 @@
   tileReactions:
   - !type:FlammableTileReaction
     temperatureMultiplier: 6.7
+  reactiveEffects:
+  Flammable:
+    methods: [ Touch ]
+    effects:
+    - !type:FlammableReaction
+      multiplier: 2.4
   metabolisms:
     Poison:
       effects:
