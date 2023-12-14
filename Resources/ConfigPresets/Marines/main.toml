@@ -12,6 +12,9 @@ lobbyenabled = true
 role_timers = true
 artifact_round_end_timer = 0.0
 
+[whitelist]
+enabled = true
+
 [vote]
 restart_required_ratio = 0.85
 same_type_timeout = 300.0
