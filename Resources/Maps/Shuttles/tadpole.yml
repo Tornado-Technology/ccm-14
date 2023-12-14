@@ -1,0 +1,12 @@
+meta:
+  format: 6
+  postmapinit: true
+tilemap: {}
+entities:
+- proto: CableApcExtension
+  entities:
+  - uid: 1
+    components:
+    - pos: -79.5,45.5
+      type: Transform
+...

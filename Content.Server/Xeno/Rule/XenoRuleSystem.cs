@@ -104,7 +104,8 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     {
         FobTime = 0;
         Fob = false;
-
+        return;
+        
         var query = Query;
         while (query.MoveNext(out var uid, out var xeno, out var gameRule))
         {

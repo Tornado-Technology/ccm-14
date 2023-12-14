@@ -1,0 +1,8 @@
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: TadpoleConsoleCircuitboard
+  name: tadpole shuttle console board
+  description: A computer printed circuit board for a tadpole console.
+  components:
+    - type: ComputerBoard
+      prototype: ComputerTadpole
