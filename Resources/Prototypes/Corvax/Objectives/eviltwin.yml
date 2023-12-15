@@ -4,6 +4,13 @@
   id: EscapeShuttleTwinObjective
   name: Escape to centcom alive and unrestrained.
   description: Continue your covert implementation already on Centcom.
+  components:
+    - type: Objective
+      difficulty: 1.3
+      icon:
+        sprite: Structures/Furniture/chairs.rsi
+        state: shuttle
+      issuer: syndicate
 
 - type: entity
   noSpawn: true
@@ -11,3 +18,8 @@
   id: KillTwinObjective
   name: Kill original persona.
   description: Kill your original persona and take his place.
+  components:
+    - type: Objective
+      difficulty: 1.75
+      unique: false
+      issuer: syndicate
