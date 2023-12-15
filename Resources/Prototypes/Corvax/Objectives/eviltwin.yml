@@ -1,6 +1,6 @@
 ﻿- type: entity
   noSpawn: true
-  parent: [BaseTraitorObjective, BaseLivingObjective]
+  parent: [BaseTraitorObjective]
   id: EscapeShuttleTwinObjective
   name: Escape to centcom alive and unrestrained.
   description: Continue your covert implementation already on Centcom.
@@ -14,7 +14,7 @@
 
 - type: entity
   noSpawn: true
-  parent: [BaseTraitorObjective, BaseKillObjective]
+  parent: [BaseTraitorObjective]
   id: KillTwinObjective
   name: Kill original persona.
   description: Kill your original persona and take his place.
