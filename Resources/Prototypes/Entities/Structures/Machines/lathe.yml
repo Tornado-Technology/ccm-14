@@ -584,8 +584,6 @@
       - WeaponAdvancedLaser
       - WeaponAntiqueLaser
       - WeaponDisablerPractice
-      - WeaponLaserCannon
-      - WeaponLaserCarbine
       - WeaponLaserCarbinePractice
       - WeaponXrayCannon
   - type: MaterialStorage
