@@ -21,7 +21,7 @@
 # ShipsEngineer --------------------------
 - type: playTimeTracker
   id: JobChiefShipsEngineer
-  
+
 - type: playTimeTracker
   id: JobShipsEngineer
 # Marine tracker -------------------------
@@ -117,7 +117,7 @@
 # Pilots --------------------------------------
 - type: playTimeTracker
   id: JobPilotRaptor
-  
+
 - type: playTimeTracker
   id: JobPilotNormandy
 # Xeno ----------------------------------------

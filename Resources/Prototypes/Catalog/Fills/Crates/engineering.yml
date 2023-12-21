@@ -125,3 +125,20 @@
     contents:
       - id: ToolboxTurretMarine
         amount: 1
+
+- type: entity
+  id: CrateRCDAmmo
+  parent: CrateEngineering
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCDAmmo
+      amount: 3
+
+- type: entity
+  id: CrateRCD
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCD

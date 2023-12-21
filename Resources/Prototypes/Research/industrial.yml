@@ -13,6 +13,7 @@
   - MiningDrill
   - BorgModuleMining
   - OreProcessorMachineCircuitboard
+  - OreBagOfHolding
 
 - type: technology
   id: CompactPower
@@ -168,8 +169,6 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
-    - RCD
-    - RCDAmmo
     - BorgModuleRCD
 
 # Tier 3

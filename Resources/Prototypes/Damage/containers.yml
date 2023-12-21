@@ -18,6 +18,15 @@
     - Caustic
 
 - type: damageContainer
+  id: StructuralInorganic
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Structural
+
+- type: damageContainer
   id: Silicon
   supportedGroups:
     - Brute
