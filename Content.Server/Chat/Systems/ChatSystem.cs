@@ -249,9 +249,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
         }
 
-        if (HasComp<XenoComponent>(source))
-            return;
-
         // Otherwise, send whatever type.
         switch (desiredType)
         {
