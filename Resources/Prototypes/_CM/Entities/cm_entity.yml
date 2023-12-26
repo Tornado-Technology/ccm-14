@@ -1,0 +1,13 @@
+﻿- type: entity
+  id: CMEntityBase
+  suffix: CM
+  abstract: true
+  categories:
+  - CMEntity
+
+- type: entity
+  id: CMCorrodable
+  suffix: CM
+  abstract: true
+  components:
+  - type: Corrodable
