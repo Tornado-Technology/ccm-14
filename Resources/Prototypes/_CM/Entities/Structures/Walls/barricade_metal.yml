@@ -8,7 +8,7 @@
     sprite: _CM/Structures/Walls/Barricades/barricade.rsi
     layers:
     - state: metal
-    drawdepth: WallTops
+    drawdepth: BlastDoors
   - type: Physics
     bodyType: Static
   - type: Transform
@@ -43,7 +43,7 @@
     sprite: _CM/Structures/Walls/Barricades/barricade.rsi
     layers:
     - state: metal
-    drawdepth: WallTops
+    drawdepth: BlastDoors
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: CMBarricade
@@ -170,7 +170,7 @@
     sprite: _CM/Structures/Walls/Barricades/barricade.rsi
     layers:
     - state: sandbag
-    drawdepth: WallTops
+    drawdepth: BlastDoors
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: CMSandbag
@@ -282,7 +282,7 @@
     layers:
     - state: folding_metal
       map: ["enum.DoorVisualLayers.Base"]
-    drawdepth: WallTops
+    drawdepth: BlastDoors
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
@@ -340,7 +340,7 @@
     layers:
     - state: plasteel
       map: ["enum.DoorVisualLayers.Base"]
-    drawdepth: WallTops
+    drawdepth: BlastDoors
   - type: Repairable
   - type: Destructible
     thresholds:
