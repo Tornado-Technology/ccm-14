@@ -1,8 +1,8 @@
 - type: listing
-  id: StoreWeaponSniperXM43E
-  name: Набор Sniper XM43E
+  id: StoreWeaponSniperXM43E1
+  name: Набор Sniper XM43E1
   description: "..."
-  productEntity: ClothingBackpackWeaponSniperXM43E
+  productEntity: ClothingBackpackWeaponSniperXM43E1
   cost:
     Telecrystal: 1
   categories:

@@ -404,8 +404,8 @@
     Plasma: 1000
 
 - type: latheRecipe
-  id: MagazineRifleXM43E
-  result: MagazineRifleXM43E
+  id: MagazineAntiMaterialXM42B
+  result: MagazineAntiMaterialXM42B
   completetime: 10
   materials:
     Steel: 100

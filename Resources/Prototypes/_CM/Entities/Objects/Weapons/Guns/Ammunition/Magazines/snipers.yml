@@ -1,24 +1,25 @@
 - type: entity
-  id: BaseMagazineRifleXM43E 
-  name: "XM43E magazine (416 Barratti)"
+  id: BaseMagazineAntiMaterialXM42B
   parent: BaseItem
+  name: magazine XM42B (10x99 anti-materiel)
+  suffix: CM
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazineRifleXM43E
+      - MagazineAntiMaterialXM42B
   - type: Item
-    size: Normal
+    size: Small
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - CartridgeRifle416Barratti
-    capacity: 30
+        - CartridgeSniper10x99
+    capacity: 5
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/xm42b.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -29,17 +30,44 @@
     steps: 2
   - type: Appearance
   
-  
 - type: entity
-  id: MagazineRifleXM43E
-  name: "XM43E magazine (416 Barratti)"
-  parent: BaseMagazineRifleXM43E
+  id: MagazineAntiMaterialXM42B
+  parent: BaseMagazineAntiMaterialXM42B
+  name: magazine XM42B (10x99 anti-materiel)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle416Barratti
+    proto: CartridgeSniper10x99
   - type: Sprite
     layers:
     - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineAntiMaterialXM42BAP
+  parent: BaseMagazineAntiMaterialXM42B
+  name: magazine XM42B (10x99 anti-materiel armor-piercing)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniper10x99AP
+  - type: Sprite
+    layers:
+    - state: ap
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineAntiMaterialXM42BUranium
+  parent: BaseMagazineAntiMaterialXM42B
+  name: magazine XM42B (10x99 anti-materiel uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniper10x99Uranium
+  - type: Sprite
+    layers:
+    - state: uranium
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

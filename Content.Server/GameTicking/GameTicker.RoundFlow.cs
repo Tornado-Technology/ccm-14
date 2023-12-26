@@ -93,31 +93,11 @@ namespace Content.Server.GameTicking
             _mapManager.AddUninitializedMap(DefaultMap);
 
             var maps = new List<GameMapPrototype>();
-
-            var mainStationMap = _prototypeManager.Index<GameMapPrototype>("valkyrie");
-            if (mainStationMap != null)
-            {
-                maps.Add(mainStationMap);
-            }
-            else
-            {
-                throw new Exception("invalid config; couldn't select a valid station map!");
-            }
-
-            var xenoStationMap = _gameMapManager.GetSelectedMap();
-            if (mainStationMap == null)
-            {
-                mainStationMap = _prototypeManager.Index<GameMapPrototype>("TGCM_Desert");
-            }
-
-            if (xenoStationMap != null)
-            {
-                maps.Add(xenoStationMap);
-            }
-            else
-            {
-                throw new Exception("invalid config; couldn't select a valid xeno world map!");
-            }
+#if !DEBUG
+            maps.Add(_prototypeManager.Index<GameMapPrototype>("valkyrie"));
+#endif
+            var mainStationMap = _gameMapManager.GetSelectedMap() ?? _prototypeManager.Index<GameMapPrototype>("TGCM_Desert");
+            maps.Add(mainStationMap);
 
             if (CurrentPreset?.MapPool != null &&
                 _prototypeManager.TryIndex<GameMapPoolPrototype>(CurrentPreset.MapPool, out var pool) &&

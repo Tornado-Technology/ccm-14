@@ -1168,7 +1168,7 @@
   id: MagazineRifleM4RA
 
 - type: Tag
-  id: MagazineRifleXM43E
+  id: MagazineAntiMaterialXM42B
 
 - type: Tag
   id: MagazineSmgMSG23W-Y
@@ -1195,7 +1195,7 @@
   id: MagazineShotgunAFG-12
 
 - type: Tag
-  id: CartridgeRifle416Barratti
+  id: CartridgeSniper10x99
 
 - type: Tag
   id: InteractionCAS

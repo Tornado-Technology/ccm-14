@@ -1,9 +1,11 @@
 - type: entity
   parent: ClothingBackpackMarine
-  id: ClothingBackpackWeaponSniperXM43E
-  name: SniperXM43E bundle
+  id: ClothingBackpackWeaponSniperXM43E1
+  name: SniperXM43E1 bundle
   description: I need more bullets!
   components:
   - type: StorageFill
     contents:
-      - id: WeaponSniperXM43E
+      - id: WeaponSniperXM43E1
+      - id: MagazineAntiMaterialXM42B
+        amount: 5
