@@ -1,0 +1,2 @@
+ent-ActionPrecisionShooting = PrecisionShooting
+    .desc = { "" }
