@@ -1,2 +1,2 @@
 ent-ClothingBackpackWeaponFlamethrower = комплект с огнемётом
-    .desc = FIRE!
+    .desc = ОГОООНЬ!
