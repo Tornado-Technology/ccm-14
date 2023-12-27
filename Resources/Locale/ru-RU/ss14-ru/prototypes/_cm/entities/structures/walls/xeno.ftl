@@ -1,0 +1,9 @@
+ent-BaseWallXeno = { ent-BaseWall }
+    .suffix = CM
+    .desc = { ent-BaseWall.desc }
+ent-XenoWallFragile = хрупкая стена сеноморфа
+    .desc = { ent-BaseWallXeno.desc }
+ent-XenoWall = стена ксеноморфа
+    .desc = { ent-BaseWallXeno.desc }
+ent-XenoWallFortified = укреплённая стена ксеноморфа
+    .desc = { ent-BaseWallXeno.desc }

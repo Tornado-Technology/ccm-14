@@ -1,8 +1,11 @@
 ent-BaseStationNanotrasen = { "" }
     .desc = { "" }
-ent-StandardNanotrasenStation = { ent-BaseStation }
-  .desc = { ent-BaseStation.desc }
-ent-NanotrasenCentralCommand = { ent-BaseStation }
-  .desc = { ent-BaseStation.desc }
-ent-StandardStationArena = { ent-BaseStation }
-  .desc = { ent-BaseStation.desc }
+ent-StandardNanotrasenStation = { ent-['BaseStation', 'BaseStationCargo', 'BaseStationJobsSpawning', 'BaseStationArrivals', 'BaseStationGateway', 'BaseStationShuttles', 'BaseStationCentcomm', 'BaseStationEvacuation', 'BaseStationAlertLevels', 'BaseStationExpeditions', 'BaseStationSiliconLawCrewsimov', 'BaseStationAllEventsEligible', 'BaseStationNanotrasen'] }
+
+  .desc = { ent-['BaseStation', 'BaseStationCargo', 'BaseStationJobsSpawning', 'BaseStationArrivals', 'BaseStationGateway', 'BaseStationShuttles', 'BaseStationCentcomm', 'BaseStationEvacuation', 'BaseStationAlertLevels', 'BaseStationExpeditions', 'BaseStationSiliconLawCrewsimov', 'BaseStationAllEventsEligible', 'BaseStationNanotrasen'].desc }
+ent-NanotrasenCentralCommand = { ent-['BaseStation', 'BaseStationAlertLevels', 'BaseStationNanotrasen'] }
+
+  .desc = { ent-['BaseStation', 'BaseStationAlertLevels', 'BaseStationNanotrasen'].desc }
+ent-StandardStationArena = { ent-['BaseStation', 'BaseStationJobsSpawning', 'BaseStationNanotrasen'] }
+
+  .desc = { ent-['BaseStation', 'BaseStationJobsSpawning', 'BaseStationNanotrasen'].desc }

@@ -1,0 +1,11 @@
+ent-BulletMosin = Пуля (7.62x54мм)
+    .desc = { ent-BaseBullet.desc }
+ent-CartridgeMosin = Патрон (7.62x54мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseCartridge.desc }
+ent-SpeedLoaderMosin = Спидлоудер (7.62x54мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseItem.desc }
+ent-MagazineBoxMosin = Коробка (7.62x54мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseItem.desc }

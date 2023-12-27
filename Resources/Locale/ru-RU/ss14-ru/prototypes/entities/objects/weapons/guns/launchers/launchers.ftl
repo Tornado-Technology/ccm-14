@@ -1,5 +1,7 @@
 ent-BaseWeaponLauncher = BaseWeaponLauncher
     .desc = Дерзай — налетай, целься и стреляй.
+ent-WeaponLauncherRPGM5 = RPG M5
+    .desc = БЛУП
 ent-WeaponLauncherChinaLake = China Lake
     .desc = БЛУП
 ent-WeaponLauncherRocket = РПГ-7

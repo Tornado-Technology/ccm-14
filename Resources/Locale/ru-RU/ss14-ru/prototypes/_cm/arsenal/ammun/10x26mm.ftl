@@ -1,0 +1,14 @@
+ent-Bullet10x26mm = Пуля (10x26мм)
+    .desc = { ent-BaseBullet.desc }
+ent-BaseCartridge10x26mm = Патрон (10x26мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseCartridge.desc }
+ent-Cartridge10x26mm = Патрон (10x26мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseCartridge10x26mm.desc }
+ent-BaseMagazine10x26mm = Магазин (10x26мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseItem.desc }
+ent-Magazine10x26mm = Магазин (10x26мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseMagazine10x26mm.desc }

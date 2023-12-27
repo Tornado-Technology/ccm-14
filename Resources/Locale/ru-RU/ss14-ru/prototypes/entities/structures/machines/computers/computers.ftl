@@ -64,3 +64,5 @@ ent-ComputerMassMedia = консоль СМИ
 ent-ComputerSensorMonitoring = консоль мониторинга датчиков
     .desc = Гибкая консоль для мониторинга всех видов датчиков.
     .suffix = ТЕСТ, НЕ МАППИТЬ
+ent-ComputerRaptorControl = консоль управления раптором
+    .desc = Напиши своё сообщение миру!

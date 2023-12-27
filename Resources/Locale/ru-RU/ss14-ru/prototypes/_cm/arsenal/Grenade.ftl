@@ -1,0 +1,11 @@
+ent-BulletGrenadeBlastMarine = { ent-BulletGrenadeBlast }
+    .suffix = Морпехи
+    .desc = { ent-BulletGrenadeBlast.desc }
+ent-GrenadeBlastMarine = разрывная граната
+    .suffix = Морпехи
+    .desc = { ent-GrenadeBlast.desc }
+ent-BulletGrenadeFragMarine = { ent-BulletGrenadeFrag }
+    .desc = { ent-BulletGrenadeFrag.desc }
+ent-GrenadeFragMarine = осколочная граната
+    .suffix = Морпехи
+    .desc = { ent-GrenadeFrag.desc }

@@ -1,0 +1,12 @@
+ent-BaseMagazineRifleM39 = магазин M39 (450 Brushmaster)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifleM39 = магазин M39 (450 Brushmaster)
+    .desc = { ent-BaseMagazineRifleM39.desc }
+ent-BaseMagazineSmgMSG23W-Y = магазин MSG 23 W-Y (458 Socom)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineSmgMSG23W-Y = магазин MSG 23 W-Y (458 Socom)
+    .desc = { ent-BaseMagazineSmgMSG23W-Y.desc }
+ent-Box450_BrushmasterCM = коробка (450 Brushmaster)
+    .desc = { ent-BaseBox10x24mmCM.desc }
+ent-Box458_SocomCM = коробка (458 Socom)
+    .desc = { ent-BaseBox10x24mmCM.desc }

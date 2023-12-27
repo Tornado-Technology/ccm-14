@@ -22,7 +22,11 @@ ent-ActionToggleSuitPiece = Toggle Suit Piece
     .desc = Remember to equip the important pieces of your suit before going into action.
 ent-ActionCombatModeToggle = [color=red]Combat Mode[/color]
     .desc = Enter combat mode
+ent-ActionXenoCombatModeToggle = [color=red]Combat Mode[/color]
+    .desc = Enter combat mode
 ent-ActionCombatModeToggleOff = [color=red]Combat Mode[/color]
+    .desc = Enter combat mode
+ent-ActionXenoCombatModeToggleOff = [color=red]Combat Mode[/color]
     .desc = Enter combat mode
 ent-ActionChangeVoiceMask = Set name
     .desc = Change the name others hear to something else.
