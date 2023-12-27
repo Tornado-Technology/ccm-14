@@ -1,5 +1,5 @@
-ent-MarineRollerBed = roller bed
-    .desc = A robust looking rollerbed used for emergencies.
+ent-MarineRollerBed = роликовая кровать
+    .desc = Прочная роликовая платформа, используемая в чрезвычайных ситуациях.
     .suffix = CM
 ent-MarineRollerBedSpawnFolded = { ent-MarineRollerBed }
     .suffix = folded
