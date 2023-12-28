@@ -1,3 +1,3 @@
-ent-StoreSpecialist = Магазин для специалистов
+ent-StoreSpecialist = Магазин
     .suffix = CM, Full
     .desc = { ent-BaseItem.desc }

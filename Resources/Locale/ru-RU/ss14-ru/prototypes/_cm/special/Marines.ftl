@@ -1,2 +1,2 @@
-ent-BaseMarine = Морпех(БАЗА)
+ent-BaseMarine = Урист МакМарин
     .desc = { "" }

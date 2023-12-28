@@ -1,9 +1,9 @@
-ent-KeroseneTank = { ent-StorageTank }
+ent-KeroseneTank = керосиновый резервуар
     .suffix = CM, Empty
-    .desc = { ent-StorageTank.desc }
-ent-KeroseneTankFull = { ent-WeldingFuelTank }
+    .desc = Керосиновый резервуар. Используется для хранения большого количества керосина.
+ent-KeroseneTankFull = керосиновый резервуар
     .suffix = CM, Full
-    .desc = { ent-WeldingFuelTank.desc }
-ent-KeroseneTankHighCapacity = { ent-KeroseneTank }
+    .desc = Керосиновый резервуар. Используется для хранения большого количества керосина.
+ent-KeroseneTankHighCapacity = керосиновый резервуар большой ёмкости
     .suffix = CM, Full
-    .desc = { ent-KeroseneTank.desc }
+    .desc = Резервуар для жидкости под высоким давлением, предназначенный для хранения гигантских объемов керосина.

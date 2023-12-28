@@ -1,4 +1,4 @@
-ent-CMGirder = балка
+ent-CMGirder = каркас
 
   .desc = { ent-['Girder', 'CMEntityBase'].desc }
 ent-CMGirderReinforced = укреплённая балка

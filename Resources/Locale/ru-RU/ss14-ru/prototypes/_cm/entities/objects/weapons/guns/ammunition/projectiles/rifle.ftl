@@ -1,6 +1,6 @@
 ent-BulletRifle1024 = пуля (10x24 винтовочная)
     .desc = { ent-BaseBullet.desc }
-ent-BulletRifleAP1024 = bullet (10x24 винтовочная бронебойная)
+ent-BulletRifleAP1024 = пуля (10x24 винтовочная бронебойная)
     .desc = { ent-BaseBulletAP.desc }
-ent-BulletRifle125x60R = bullet (12.5x60R rifle)
+ent-BulletRifle125x60R = пуля (12.5x60R винтовочная)
     .desc = { ent-BaseBullet.desc }

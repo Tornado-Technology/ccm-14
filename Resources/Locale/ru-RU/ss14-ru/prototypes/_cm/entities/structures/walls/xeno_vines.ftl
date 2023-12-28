@@ -1,6 +1,6 @@
-ent-XenoWeedsSource = инопланетные сорняки
+ent-XenoWeedsSource = инопланетная трава
     .suffix = CM
     .desc = { "" }
-ent-XenoWeeds = инопланетные сорняки
+ent-XenoWeeds = инопланетная трава
     .suffix = CM
     .desc = { "" }
