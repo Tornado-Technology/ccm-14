@@ -1,0 +1,15 @@
+ent-VendingMachineMarineEngineer = ColMarTech "Инженерный"
+    .desc = Автоматизированный инженерный стеллаж, подключенный к большому хранилищу стандартного оружия.
+    .suffix = CM
+ent-VendingMachineMarineMedical = ColMarTech "Медицинский"
+    .desc = Автоматическая медицинская стойка, подключенная к большому хранилищу стандартного оружия.
+    .suffix = CM
+ent-VendingMachineMarineSpecialist = ColMarTech "Специалист"
+    .desc = Автоматизированный стеллаж "Специалист", подключенный к большому хранилищу стандартного оружия.
+    .suffix = CM
+ent-VendingMachineSquadLeaderEquipment = ColMarTech "Лидер"
+    .desc = Автоматизированные стеллажи, соединенные в колоссальное хранилище стандартного снаряжения для командиров отрядов.
+    .suffix = CM
+ent-VendingMachineResearcherEquipment = ColMarTech "Научный мод.2"
+    .desc = Автоматизированные стеллажи, соединенные с колоссальным хранилищем стандартного оборудования для Исследователей.
+    .suffix = CM

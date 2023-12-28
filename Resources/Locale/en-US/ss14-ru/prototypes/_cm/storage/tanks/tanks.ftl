@@ -1,0 +1,9 @@
+ent-KeroseneTank = { ent-StorageTank }
+    .suffix = CM, Empty
+    .desc = { ent-StorageTank.desc }
+ent-KeroseneTankFull = { ent-WeldingFuelTank }
+    .suffix = CM, Full
+    .desc = { ent-WeldingFuelTank.desc }
+ent-KeroseneTankHighCapacity = { ent-KeroseneTank }
+    .suffix = CM, Full
+    .desc = { ent-KeroseneTank.desc }

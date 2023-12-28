@@ -1,0 +1,17 @@
+ent-Bullet357 = Пуоя (9x33мм)
+    .desc = { ent-BaseBullet.desc }
+ent-BaseCartridge357 = Патрон (9x33мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseCartridge.desc }
+ent-Cartridge357 = Патрон (9x33мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseCartridge357.desc }
+ent-BaseSpeedLoader357 = Спидлоудер (9x33мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseItem.desc }
+ent-SpeedLoaderMagnum357 = Спидлоудер (9x33мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseSpeedLoader357.desc }
+ent-MagazineBox357 = Коробка (9x33мм)
+    .suffix = Морпехи
+    .desc = { ent-BaseMagazineBoxMagnum.desc }

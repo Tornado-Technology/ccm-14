@@ -1,0 +1,126 @@
+- type: entity
+  name: drone
+  parent: MobXenoBaseT1
+  id: MobDroneXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHivelordXeno
+          evolution: 600
+    - type: XenoDrone
+    - type: XenoVines
+    - type: XenoBuildWall
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/drone.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        300: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 5
+        types:
+          Structural: 10
+
+- type: entity
+  name: runner
+  parent: MobXenoBaseT1
+  id: MobRunnerXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobHunterXeno
+          evolution: 600
+        - !type:XenoEvolution
+          prototype: MobBullXeno
+          evolution: 750
+    - type: XenoRunner
+    - type: XenoEvasion
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        200: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/runner.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 10
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.6
+
+- type: entity
+  name: sentinel
+  parent: MobXenoBaseT1
+  id: MobSentinelXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobSpitterXeno
+          evolution: 600
+    - type: XenoSentinel
+    - type: XenoSpit
+      action: ActionSentinelDefaultSpit
+      projectile: ProjectileToxinSpitWeak
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/sentinel.rsi
+      offset: 0,0.4
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        300: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15
+
+- type: entity
+  name: warrior
+  parent: MobXenoBaseT1
+  id: MobWarriorXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobBullXeno
+          evolution: 600
+    - type: XenoStun
+    - type: XenoWarrior
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        400: Dead
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/warrior.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15

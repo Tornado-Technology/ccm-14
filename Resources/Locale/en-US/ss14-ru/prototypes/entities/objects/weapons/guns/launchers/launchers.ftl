@@ -1,6 +1,6 @@
 ent-BaseWeaponLauncher = BaseWeaponLauncher
     .desc = A rooty tooty point and shooty.
-ent-WeaponLauncherChinaLake = china lake
+ent-WeaponLauncherRPGM5 = RPG M5 Launcher
     .desc = PLOOP
 ent-WeaponLauncherRocket = RPG-7
     .desc = A modified ancient rocket-propelled grenade launcher.

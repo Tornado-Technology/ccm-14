@@ -1,0 +1,21 @@
+ent-CMBaseWall = { ent-['BaseStructure', 'CMEntityBase'] }
+
+  .desc = A huge chunk of metal used to separate rooms.
+ent-CMWallMetal = wall
+    .desc = A huge chunk of metal used to separate rooms.
+ent-CMWallMetalAlmayer = wall
+    .desc = A huge chunk of metal used to separate rooms.
+ent-CMWallMetalAlmayerWhite = wall
+    .desc = A huge chunk of metal used to separate rooms.
+ent-CMWallReinforced = reinforced wall
+    .desc = A huge chunk of reinforced metal used to separate rooms.
+ent-CMWallReinforcedAlmayer = { ent-CMWallReinforced }
+    .desc = { ent-CMWallReinforced.desc }
+ent-CMWallReinforcedAlmayerWhite = { ent-CMWallReinforced }
+    .desc = { ent-CMWallReinforced.desc }
+ent-CMWallReinforcedHeavy = heavy reinforced wall
+    .desc = A huge chunk of ultra-reinforced metal used to separate rooms. Looks virtually indestructible.
+ent-CMWallReinforcedHeavyAlmayer = { ent-CMWallReinforcedHeavy }
+    .desc = { ent-CMWallReinforcedHeavy.desc }
+ent-CMWallReinforcedHeavyAlmayerWhite = { ent-CMWallReinforcedHeavy }
+    .desc = { ent-CMWallReinforcedHeavy.desc }

@@ -1,0 +1,21 @@
+ent-CMBaseWall = { ent-['BaseStructure', 'CMEntityBase'] }
+
+  .desc = Огромный кусок металла, используемый для разделения комнат.
+ent-CMWallMetal = стена
+    .desc = Огромный кусок металла, используемый для разделения комнат.
+ent-CMWallMetalAlmayer = стена
+    .desc = Огромный кусок металла, используемый для разделения комнат.
+ent-CMWallMetalAlmayerWhite = стена
+    .desc = Огромный кусок металла, используемый для разделения комнат.
+ent-CMWallReinforced = укреплённая стена
+    .desc = Огромный укреплённый кусок металла, используемый для разделения комнат.
+ent-CMWallReinforcedAlmayer = { ent-CMWallReinforced }
+    .desc = { ent-CMWallReinforced.desc }
+ent-CMWallReinforcedAlmayerWhite = { ent-CMWallReinforced }
+    .desc = { ent-CMWallReinforced.desc }
+ent-CMWallReinforcedHeavy = тяжело-бронированная стена
+    .desc = Огромный кусок сверхпрочного металла, используемый для разделения комнат. Выглядит практически неразрушимым.
+ent-CMWallReinforcedHeavyAlmayer = { ent-CMWallReinforcedHeavy }
+    .desc = { ent-CMWallReinforcedHeavy.desc }
+ent-CMWallReinforcedHeavyAlmayerWhite = { ent-CMWallReinforcedHeavy }
+    .desc = { ent-CMWallReinforcedHeavy.desc }

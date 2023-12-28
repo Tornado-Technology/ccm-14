@@ -1,6 +1,5 @@
 research-technology-basic-research = Основы исследования
 research-technology-advanced-research = Продвинутые исследования
-
 research-technology-local-explosion = Локальные взрывы
 research-technology-regular-munitions = Винтовочные магазины
 research-technology-speed-loading = Спидлоадеры

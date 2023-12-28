@@ -1,0 +1,10 @@
+ent-BaseCartridgeRifle1024 = патрон (10x24 винтовочный)22
+    .desc = { ent-BaseCartridge.desc }
+ent-CartridgeRifle1024 = патрон (10x24 винтовочный)
+    .desc = { ent-BaseCartridgeRifle1024.desc }
+ent-CartridgeRifle1024AP = патрон (10x24 винтовочный бронебойный)
+    .desc = { ent-BaseCartridgeRifle1024.desc }
+ent-BaseCartridgeRifle125x60R = патрон (12.5x60R rifle)22
+    .desc = { ent-BaseCartridge.desc }
+ent-CartridgeRifle125x60R = cartridge (12.5x60R rifle)
+    .desc = { ent-BaseCartridgeRifle125x60R.desc }

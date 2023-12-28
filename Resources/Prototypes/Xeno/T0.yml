@@ -1,0 +1,140 @@
+- type: entity
+  parent: MobXenoBaseT0
+  id: MobFaceHuggerXeno
+  name: face-hugger
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRunnerXeno
+          evolution: 120
+        - !type:XenoEvolution
+          prototype: MobDroneXeno
+          evolution: 120
+        - !type:XenoEvolution
+          prototype: MobSentinelXeno
+          evolution: 120
+        - !type:XenoEvolution
+          prototype: MobWarriorXeno
+          evolution: 120
+    - type: FaceHugger
+      paralyzeTime: 3
+      chansePounce: 100
+    - type: FaceHugging
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/face_hugger.rsi
+      drawdepth: SmallMobs
+      noRot: true
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: alive
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Dead:
+          Base: dead
+    - type: Item
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.2
+          density: 100
+          mask:
+            - SmallMobMask
+          layer:
+            - SmallMobLayer
+    - type: Speech
+    - type: Bloodstream
+      bloodMaxVolume: 10
+      bloodReagent: Blood
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: FaceHugger
+      description: FaceHugger
+      rules: FaceHugger
+    - type: GhostTakeoverAvailable
+    - type: MeleeWeapon
+      hidden: true
+      soundHit:
+        path: /Audio/Effects/bite.ogg
+      angle: 0
+      animation: WeaponArcBite
+      damage:
+        types:
+          Piercing: 2
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        50: Dead
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 9
+    - type: Tag
+      tags:
+        - CannotSuicide
+    - type: Clothing
+      quickEquip: false
+      sprite: Objects/Xeno/face_hugger.rsi
+      slots:
+        - MASK
+    - type: Blindfold
+
+
+- type: entity
+  id: ActionFaceHuggerJump
+  name: Jump
+  description: Jump right at the face!
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 10
+      icon:
+        sprite: Actions/xeno.rsi
+        state: charge
+      itemIconStyle: NoItem
+      priority: -12
+      event: !type:FaceHuggerJumpActionEvent
+      checkCanAccess: false
+      range: 0
+
+- type: entity
+  name: larva
+  parent: MobXenoBaseT0
+  id: MobLarvaXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRunnerXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobDroneXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobSentinelXeno
+          evolution: 0
+        - !type:XenoEvolution
+          prototype: MobWarriorXeno
+          evolution: 0
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/larva.rsi
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 10

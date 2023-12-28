@@ -64,3 +64,5 @@ ent-ComputerMassMedia = mass-media console
 ent-ComputerSensorMonitoring = sensor monitoring computer
     .desc = A flexible console for monitoring all kinds of sensors.
     .suffix = TESTING, DO NOT MAP
+ent-ComputerRaptorControl = raptor control console
+    .desc = Write your message to the world!

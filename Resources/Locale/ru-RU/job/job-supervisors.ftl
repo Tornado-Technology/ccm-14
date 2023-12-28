@@ -14,9 +14,7 @@ job-supervisors-science = учёным, ведущему учёному, нау�
 job-supervisors-hire = своим нанимателям
 job-supervisors-everyone = вообще всем
 job-supervisors-cmofficer = офицеру штаба
-
 job-supervisors-quinn = королеве
-
 job-supervisors-commander = лидеру отряда
 job-supervisors-field-commander = полевому командиру
 job-supervisors-staff-officer = штаб офицеру

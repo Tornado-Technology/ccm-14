@@ -1,0 +1,9 @@
+ent-CMWallHull = hull wall
+    .suffix = CM
+    .desc = { ent-BaseWall.desc }
+ent-CMWallHullEvac = hull wall
+    .suffix = CM
+    .desc = { ent-BaseWall.desc }
+ent-CMWallHullLab = hull wall
+    .suffix = CM
+    .desc = { ent-BaseWall.desc }

@@ -1,0 +1,11 @@
+ent-BulletGrenadeBlastMarine = { ent-BulletGrenadeBlast }
+    .suffix = Marines Gear
+    .desc = { ent-BulletGrenadeBlast.desc }
+ent-GrenadeBlastMarine = Grenade Blast
+    .suffix = MarinesGear
+    .desc = { ent-GrenadeBlast.desc }
+ent-BulletGrenadeFragMarine = { ent-BulletGrenadeFrag }
+    .desc = { ent-BulletGrenadeFrag.desc }
+ent-GrenadeFragMarine = Grenade Frag
+    .suffix = MarinesGear
+    .desc = { ent-GrenadeFrag.desc }

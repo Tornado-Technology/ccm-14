@@ -1,0 +1,10 @@
+ent-BaseMagazineShotgunUA571C = барабан (24 калибр)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineShotgunUA571C = барабан (24 калибр)
+    .desc = { ent-BaseMagazineShotgunUA571C.desc }
+ent-BaseMagazineShotgunK221 = барабан (8 калибр)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineShotgunK221 = барабан (8 калибр)
+    .desc = { ent-BaseMagazineShotgunK221.desc }
+ent-MagazineShotgunAFG-12 = барабан AFG-12 (пуля .50)
+    .desc = { ent-BaseMagazineShotgun.desc }

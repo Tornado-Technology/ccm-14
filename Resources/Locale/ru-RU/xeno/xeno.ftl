@@ -1,8 +1,23 @@
+ent-MobCrusherXeno = Crusher
+ent-MobDefilerXeno = Defiler
+# actions-start
+ent-ActionCrusherJump = Jump
+    .desc = Make a jump.
+ent-ActionCrusherStun = Stun
+    .desc = Stun object.
+ent-ActionDefilerDefaultSpit = Плевок
+    .desc = Плюйте в этих морпехов!
+ent-ActionDefilerAcidSpit = Кислотный плевок
+    .desc = Плюйте кислотой в этих морпехов!Распространяется по дистанции
+ent-ActionDefilerExplosive = Само-уничтожение
+    .desc = Взорвите себя и всё вокруг в маленьком радиусе.
+ent-ProjectileDefilerAcidSpit = Кислотная проэкция
+    .desc = Сделайте проекцию плевка кислоты.
+ent-ProjectileDefilerDefaultSpit = Плевок(?)
+    .desc = Make a spit projective.
 ent-StoreSpecialist = набор С.П.Е.Ц.
     .desc = Содержит наборы для уничтожения всего сущего, используйте с умом.
-
 ent-ToolboxTurretMarine = Ящик с турелью
     .desc = Содержит набор для РАТАТАТАТАТ!
-
 ent-WeaponTurretMarine = Турель
     .desc = Уничтожает ксеносов, выглядит по гейски.

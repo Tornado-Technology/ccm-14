@@ -1,0 +1,9 @@
+ent-BaseCartridgeSniper10x99 = патрон (10x99)
+    .suffix = CM
+    .desc = { ent-BaseCartridge.desc }
+ent-CartridgeSniper10x99 = патрон (10x99)
+    .desc = { ent-BaseCartridgeSniper10x99.desc }
+ent-CartridgeSniper10x99AP = патрон (10x99 бронебойный)
+    .desc = { ent-BaseCartridgeSniper10x99.desc }
+ent-CartridgeSniper10x99Uranium = патрон (10x99 уран)
+    .desc = { ent-BaseCartridgeSniper10x99.desc }

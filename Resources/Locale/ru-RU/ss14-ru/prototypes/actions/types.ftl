@@ -22,7 +22,11 @@ ent-ActionToggleSuitPiece = Переключить элементы костюм
     .desc = Не забудьте экипировать важные части костюма, прежде чем приступать к действиям.
 ent-ActionCombatModeToggle = [color=red]Боевой режим[/color]
     .desc = Войти в боевой режим
+ent-ActionXenoCombatModeToggle = [color=red]Боевой режим[/color]
+    .desc = Войти в боевой режим
 ent-ActionCombatModeToggleOff = [color=red]Боевой режим[/color]
+    .desc = Войти в боевой режим
+ent-ActionXenoCombatModeToggleOff = [color=red]Боевой режим[/color]
     .desc = Войти в боевой режим
 ent-ActionChangeVoiceMask = Изменить имя
     .desc = Измените имя, которое все слышат, на другое.

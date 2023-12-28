@@ -1,0 +1,17 @@
+ent-ArmCAS = подвес оружия
+    .desc = { ent-PartSilicon.desc }
+ent-MarineArty = артудар
+    .desc = Зачем ты это читаешь? БЕГИ!
+    .suffix = CM
+ent-ArtyGrenade = разрывная Кассета
+    .suffix = CM
+    .desc = { ent-BaseItem.desc }
+ent-MarineCASClusterBomb = кластерная бомба
+    .desc = Разрывной подарок ксеноморфам.
+    .suffix = CM
+ent-ArtyFlare = осветительная кассета
+    .desc = Никогда не выгорает, но довольно хрупкая
+    .suffix = CM
+ent-MarineCASFlareBomb = осветительная бомба
+    .desc = Да осветит путь их.
+    .suffix = CM
