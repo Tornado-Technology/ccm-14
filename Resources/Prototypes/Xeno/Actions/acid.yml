@@ -1,33 +1,3 @@
-- type: entity
-  name: Defiler
-  parent: MobXenoBaseT3
-  id: MobDefilerXeno
-  components:
-    - type: XenoDefiler
-    - type: XenoExplosive
-    - type: XenoSpit
-      action: ActionDefilerDefaultSpit
-      projectile: ProjectileNeurotoxinVeil
-      speed: 25
-    - type: XenoSpit2
-      action: ActionDefilerAcidSpit
-      projectile: ProjectileToxinSpit
-      speed: 25
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _CM/Mobs/Xenos/defiler.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        500: Dead
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 25
 
 
 # acidspit
@@ -71,3 +41,23 @@
       event: !type:XenoSpit2Event
       interactOnMiss: false
       checkCanInteract: false
+
+
+# spit
+- type: entity
+  id: ActionSentinelDefaultSpit
+  name: Default Spit name
+  description: Default Spit desc
+  noSpawn: true
+  components:
+    - type: WorldTargetAction
+      useDelay: 5
+      range: 0
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: default_spit
+      itemIconStyle: NoItem
+      priority: 5
+      event: !type:XenoSpitEvent

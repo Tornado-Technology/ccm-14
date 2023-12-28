@@ -1,0 +1,101 @@
+- type: entity
+  name: praetorian
+  parent: MobXenoBaseT4
+  id: MobPraetorianXeno
+  components:
+    - type: XenoPraetorian
+    - type: XenoSpitRejuvenate
+    - type: XenoSpit2
+      action: ActionDefilerAcidSpit
+      projectile: ProjectileToxinSpit
+      speed: 25
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/praetorian.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        900: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 30
+
+- type: entity
+  name: queen
+  parent: MobXenoBaseT4
+  id: MobQueenXeno
+  components:
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRoyalQueenXeno
+          evolution: 7200
+    - type: XenoLayEgg
+    - type: XenoStun
+    - type: XenoScreech
+    - type: XenoVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWallFortified
+      timeUsage: 10
+    - type: XenoSpit
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileNeurotoxinVeilRoyal
+      speed: 25
+    - type: XenoSpit2
+      action: ActionDefilerAcidSpit
+      projectile: ProjectileToxinSpit
+      speed: 25
+    - type: XenoSpitRejuvenate
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/queen.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        1000: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 15
+        types:
+          Structural: 15
+
+- type: entity
+  name: rouny
+  parent: MobXenoBaseT4
+  id: MobRounyXeno
+  components:
+    - type: XenoStealth
+    - type: XenoPsychicJump
+    - type: XenoStun
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _CM/Mobs/Xenos/rouny.rsi
+      layers:
+      - map: [ "enum.XenoVisualLayers.Base" ]
+        state: running
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: MeleeWeapon
+      hidden: true
+      damage:
+        groups:
+          Brute: 30
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 10
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.2
+    - type: Stealth
