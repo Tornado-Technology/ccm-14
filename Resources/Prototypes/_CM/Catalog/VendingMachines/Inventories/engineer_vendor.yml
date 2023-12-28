@@ -44,5 +44,5 @@
     ExGrenade: 2
     BoxLighttube: 10
     BoxLightbulb: 10
-    CMPouchTools: 3
-    CMPouchToolsSoc: 1
+    CMPouchToolsSocFill: 2
+    CMPouchExplosive: 2
