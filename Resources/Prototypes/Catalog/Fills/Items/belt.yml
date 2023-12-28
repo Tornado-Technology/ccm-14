@@ -5,12 +5,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Crowbar
-      - id: Wrench
-      - id: Screwdriver
-      - id: Wirecutter
-      - id: Welder
-      - id: NetworkConfigurator
+      - id: CMCrowbar
+      - id: CMWrench
+      - id: CMScrewdriver
+      - id: CMWirecutter
+      - id: CMWelder
+      - id: CMMultitool
 
 - type: entity
   id: ClothingBeltUtilityEngineering
@@ -19,12 +19,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Crowbar
-      - id: Wrench
-      - id: Screwdriver
-      - id: Wirecutter
-      - id: Welder
-      - id: Multitool
+      - id: CMCrowbar
+      - id: CMWrench
+      - id: CMScrewdriver
+      - id: CMWirecutter
+      - id: CMWelder
+      - id: CMMultitool
 
 - type: entity
   id: ClothingBeltChiefEngineerFilled
