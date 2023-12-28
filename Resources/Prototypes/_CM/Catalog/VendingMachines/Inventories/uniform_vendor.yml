@@ -7,7 +7,7 @@
     ClothingShoesBootsMarine: 10
     BoxMRPFilled: 10
     FlashlightLantern: 30
-    FireExtinguisherMarine: 10
+    FireExtinguisherMarine: 5
     ClothingOuterArmorMarineLight: 4
     ClothingOuterArmorMarineMedium: 4
     ClothingOuterArmorMarineHeavy: 4
@@ -28,7 +28,4 @@
     CMPouchMagazine: 2
     CMPouchMedical: 1
     CMPouchFlare: 3
-    GlowstickAlpha: 30
-    GlowstickBravo: 30
-    GlowstickCharlie: 30
-    GlowstickDelta: 30
+    FlareMarine: 20
