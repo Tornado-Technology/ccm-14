@@ -17,8 +17,7 @@
     CableApcStack: 15
     CableMVStack: 15
     CableHVStack: 15
-    WelderIndustrial: 2
-    WelderIndustrialAdvanced: 1
+    CMWelder: 2
     ClothingUniformJumpsuitMarine: 1
     ClothingHandsGlovesMarine: 1
     ClothingShoesBootsMarine: 1
@@ -45,3 +44,5 @@
     ExGrenade: 2
     BoxLighttube: 10
     BoxLightbulb: 10
+    CMPouchTools: 3
+    CMPouchToolsSoc: 1
