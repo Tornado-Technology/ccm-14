@@ -1,6 +1,6 @@
 ent-TargetXeno = мишень Ксеноморфа
     .desc = Прямо как живой, но нет.
-    .suffix = Морпехи
+    .suffix = CM
 ent-TargetXenoRavager = мишень Опустошителя
     .desc = { ent-TargetXeno.desc }
 ent-TargetXenoBurrower = мишень странного ксеноморфа
