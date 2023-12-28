@@ -1,2 +1,2 @@
-ent-ActionXenoRage = Explosive name
-    .desc = Explosive desc
+ent-ActionXenoRage = Самоуничтожение
+    .desc = Взорвитесь и унесите с собой несколько морпехов в небольшом радиусе.

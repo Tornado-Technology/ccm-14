@@ -1,2 +1,2 @@
-ent-ActionXenoPsychicJump = Psychic Jump
-    .desc = PsychicJump desc
+ent-ActionXenoPsychicJump = пси-прыжок
+    .desc = Позволяет перемещаться в любую видимую точку. Но так же временно сбрасывает невидимость!

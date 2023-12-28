@@ -1,4 +1,4 @@
-ent-ActionXenoLayEgg = LayEgg name
+ent-ActionXenoLayEgg = Отложить яйцо
     .desc = { "" }
-ent-ActionXenoLayEggRoyal = LayEgg
+ent-ActionXenoLayEggRoyal = Отложить королевское яйцо
     .desc = { "" }

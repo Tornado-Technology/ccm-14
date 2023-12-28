@@ -1,2 +1,2 @@
-ent-ActionXenoStealth = Explosive name
-    .desc = Explosive desc
+ent-ActionXenoStealth = Скрытность
+    .desc = Активирует маскировку ксеноморфа, делающая его невидимым, но преподающая во время передвижение. Используйте скрытую атаку!

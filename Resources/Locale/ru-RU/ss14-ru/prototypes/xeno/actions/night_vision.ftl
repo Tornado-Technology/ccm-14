@@ -1,2 +1,2 @@
-ent-ActionXenoNightVision = action-xeno-night-vision
-    .desc = desc-action-night-vision
+ent-ActionXenoNightVision = включить ночное зрение
+    .desc = Вы видите всё и даже больше!

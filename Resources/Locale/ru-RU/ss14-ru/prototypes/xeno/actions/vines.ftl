@@ -1,2 +1,2 @@
-ent-ActionXenoVines = action-xeno-vines
-    .desc = desc-action-vines
+ent-ActionXenoVines = посадить лианы
+    .desc = Вырастите вокруг себя лианы, которые замедляют всех, кроме ксеноморфов.

@@ -1,2 +1,2 @@
-ent-ActionXenoExplosive = Explosive name
-    .desc = Explosive desc
+ent-ActionXenoExplosive = Бум
+    .desc = Бам

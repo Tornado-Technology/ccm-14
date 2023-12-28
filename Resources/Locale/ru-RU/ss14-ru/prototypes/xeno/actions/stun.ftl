@@ -1,2 +1,2 @@
-ent-ActionXenoStun = stun
-    .desc = stun desc
+ent-ActionXenoStun = Оглушение
+    .desc = Оглушает своим сокрушительным ударом врага на 7 секунд. Бонк!

@@ -1,2 +1,2 @@
-ent-ActionXenoEndure = endure name
-    .desc = endure desc
+ent-ActionXenoEndure = защитный гребень
+    .desc = Поднятие гребня дарует вам защиту в размере 80% от любого урона. Но забирает возможность передвижения.

@@ -1,2 +1,2 @@
-ent-ActionXenoPsychicCure = action-xeno-psychic-cure
+ent-ActionXenoPsychicCure = лечение
     .desc = desc-action-xeno-psychic-cure

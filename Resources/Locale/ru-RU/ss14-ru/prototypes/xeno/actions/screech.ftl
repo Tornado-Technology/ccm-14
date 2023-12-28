@@ -1,2 +1,2 @@
-ent-ActionXenoScreech = Screech name
-    .desc = Screech desc
+ent-ActionXenoScreech = Крик
+    .desc = Не держите в себе злость! Оглушает врага на 7 секунд. Бонк!
