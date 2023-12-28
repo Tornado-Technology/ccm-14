@@ -1,2 +1,2 @@
-ent-ClothingBeltMarineComfortable =  комфортный пояс
+ent-ClothingBeltMarineComfortable = комфортный пояс
     .desc = Комфортный пояс для морпехов.
