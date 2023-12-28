@@ -23,6 +23,11 @@
     ClothingMaskGasRebreather: 4
     ClothingMaskCoif: 6
     MarineRollerBed: 5
+    CMPouchSurvival: 3
+    CMPouchFirstAid: 1
+    CMPouchMagazine: 2
+    CMPouchMedical: 1
+    CMPouchFlare: 3
     GlowstickAlpha: 30
     GlowstickBravo: 30
     GlowstickCharlie: 30
