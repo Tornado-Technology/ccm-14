@@ -19,7 +19,7 @@
 - type: entity
   parent: [Screwdriver, CMEntityBase]
   id: CMScrewdriver
-  name: *Screwdriver
+  name: Screwdriver
   description: Industrial grade torque in a small screwdriving package.
   components:
   - type: RandomSprite
