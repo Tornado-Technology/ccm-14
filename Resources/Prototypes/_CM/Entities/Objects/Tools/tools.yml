@@ -38,8 +38,6 @@
 - type: entity
   parent: [Wirecutter, CMEntityBase]
   id: CMWirecutter
-  name: Wirecutter
-  description: This kills the wire.
   components:
   - type: Sprite
     sprite: _CM/Objects/Tools/wirecutters.rsi
@@ -57,8 +55,6 @@
 - type: entity
   parent: [Wrench, CMEntityBase]
   id: CMWrench
-  name: Wrench
-  description: A common tool for assembly and disassembly. Remember: righty tighty, lefty loosey.
   components:
   - type: Sprite
     sprite: _CM/Objects/Tools/wrench.rsi
