@@ -255,7 +255,7 @@
     sprite: _CM/Clothing/Pouches/large_ammo_mag.rsi
   - type: Storage
     grid:
-    - 0,0,4,1 #4 slots
+    - 0,0,6,1 #6 slots
 
 - type: entity
   parent: CMPouchMagazine
@@ -344,9 +344,9 @@
       - PillCanister
       - Pill
       - Bottle
-      - Syringe
       - Flashlight
       # Surgical line
+      - Gauze
       components:
       - Hypospray
 
@@ -481,9 +481,7 @@
       - Ointment
       - PillCanister
       - Pill
-      - Bottle
-      - Syringe
-      # Surgical Line
+      - Bottle      # Surgical Line
       # Roller
       - BodyBag
       - Bloodpack
@@ -613,6 +611,7 @@
       - Multitool
       - Flashlight
       - LightReplacer
+      - trayScanner
       components:
       - Welder
       - ComputerBoard
