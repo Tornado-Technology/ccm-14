@@ -12,7 +12,8 @@
     sprite: _CM/Objects/Storage/mre.rsi
     size: Normal
   - type: Storage
-    maxTotalWeight: 30
+    grid:
+    - 0,0,4,4
     maxItemSize: Small
   - type: ContainerContainer
     containers:

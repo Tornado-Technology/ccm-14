@@ -3,6 +3,16 @@
   name: job-name-staffofficer
   description: job-description-staffofficer
   playTimeTracker: JobStaffOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryPoliceOfficer
+      time: 18000 # 5 hrs
+    - !type:RoleTimeRequirement
+      role: JobSupplyOfficer
+      time: 18000 # 5 hrs
+    - !type:RoleTimeRequirement
+      role: JobFieldCommander
+      time: 18000 # 5 hrs
   startingGear: StaffOfficerGear
   icon: "JobIconStaffOfficer"
   supervisors: job-supervisors-centcom

@@ -5,17 +5,10 @@
   playTimeTracker: JobPilotRaptor
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      role: JobPilotNormandy
+      time: 36000 # 10 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 180000 # 50 hours
   startingGear: PilotOfficerGear
   icon: "JobIconPilotRaptor"
   supervisors: job-supervisors-staff-officer

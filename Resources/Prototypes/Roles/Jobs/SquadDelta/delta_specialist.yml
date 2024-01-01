@@ -5,17 +5,14 @@
   playTimeTracker: JobDeltaSpecialist
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
+      role: JobShipsEngineer
+      time: 36000 # 10 hrs
     - !type:RoleTimeRequirement
       role: JobDeltaMarine
-      time: 0
+      time: 36000 # 10 hrs
     - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
   startingGear: DeltaSpecialistGear
   icon: "JobIconDeltaSpecialist"
   supervisors: job-supervisors-commander

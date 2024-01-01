@@ -5,17 +5,8 @@
   playTimeTracker: JobMilitaryMainMedic
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      role: JobMilitaryMedic
+      time: 72000 # 10 hrs
   startingGear: MilitaryMainMedicGear
   icon: "JobIconMilitaryMainMedic"
   supervisors: job-supervisors-staff-officer

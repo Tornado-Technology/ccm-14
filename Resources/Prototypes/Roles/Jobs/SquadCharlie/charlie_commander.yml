@@ -4,18 +4,15 @@
   description: job-description-charliecommander
   playTimeTracker: JobCharlieCommander
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: SpecialistsGarrison
-      time: 0
-    - !type:DepartmentTimeRequirement
-      department: MedicsGarrison
-      time: 0
-    - !type:DepartmentTimeRequirement
-      department: EngineersGarrison
-      time: 0
-    - !type:DepartmentTimeRequirement
-      department: MarinesGarrison
-      time: 0
+    - !type:RoleTimeRequirement
+      role: JobShipsEngineer
+      time: 36000 # 10 hrs
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 108000 # 30 hrs
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
   startingGear: CharlieCommanderGear
   icon: "JobIconCharlieCommander"
   supervisors: job-supervisors-field-commander
