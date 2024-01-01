@@ -4,18 +4,9 @@
   description: job-supervisors-staff-officer
   playTimeTracker: JobFieldCommander
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+  - !type:DepartmentTimeRequirement
+    department: CommandersGarrisons
+    time: 90000 # 1 hours
   startingGear: FieldCommanderGear
   icon: "JobIconFieldCommander"
   supervisors: job-supervisors-head-operations

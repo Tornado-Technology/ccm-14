@@ -5,17 +5,8 @@
   playTimeTracker: JobSupplyOfficer
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      role: JobRigger
+      time: 36000 # 10 hrs
   startingGear: SupplyOfficerGear
   icon: "JobIconSupplyOfficer"
   supervisors: job-supervisors-staff-officer
