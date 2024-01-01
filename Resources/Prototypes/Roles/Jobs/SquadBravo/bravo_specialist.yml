@@ -5,14 +5,17 @@
   playTimeTracker: JobBravoSpecialist
   requirements:
     - !type:RoleTimeRequirement
-      role: JobShipsEngineer
-      time: 36000 # 10 hrs
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
     - !type:RoleTimeRequirement
       role: JobBravoMarine
-      time: 36000 # 10 hrs
+      time: 0
     - !type:RoleTimeRequirement
-      role: JobMilitaryMedic
-      time: 36000 # 10 hrs
+      role: JobCharlieMarine
+      time: 0
   startingGear: BravoSpecialistGear
   icon: "JobIconBravoSpecialist"
   supervisors: job-supervisors-commander

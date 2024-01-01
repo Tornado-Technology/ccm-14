@@ -5,8 +5,17 @@
   playTimeTracker: JobCharlieMedic
   requirements:
     - !type:RoleTimeRequirement
-      role: JobMilitaryMedic
-      time: 36000 # 10 hrs
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: CharlieMedicGear
   icon: "JobIconCharlieMedic"
   supervisors: job-supervisors-commander
