@@ -63,3 +63,4 @@
     sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/ls4packet.rsi
   - type: Item
     sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/ls4packet.rsi
+    size: Tiny

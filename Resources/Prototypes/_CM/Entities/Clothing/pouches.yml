@@ -240,9 +240,8 @@
     - 0,0,3,1 #3 slots
     whitelist:
       tags: #this gonna be hell
-      - MagazineCaselessM39
-      - MagazineRifleM41
-      - MagazineRifleM41AE2
+      - MagazineRifleM41A
+      - MagazineRifleM39
       - MagazineRifleM4RA
 
 - type: entity
@@ -322,7 +321,9 @@
     maxItemSize: Normal
     grid:
     - 0,0,6,1 #6 slots
-    #whitelist: #todo cm14 make explosives
+    whitelist:
+      tags: #this gonna be hell
+      - C4
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -529,7 +530,7 @@
     - 0,0,8,1 #8 slots
     whitelist:
       tags:
-      - Flare
+      - FlareMarine
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -601,10 +602,12 @@
     - 0,0,4,1 #4 slots
     whitelist:
       tags:
-      - Crowbar
-      - Screwdriver
-      - Wrench
-      - Wirecutter
+      - CMCrowbar
+      - CMScrewdriver
+      - CMWrench
+      - CMWirecutter
+      - CMWelder
+      - CMMultitool
       # etool
       - CableCoil
       - PowerCell
@@ -666,4 +669,4 @@
     maxItemSize: Large
     whitelist:
       tags:
-      - Machete
+      - MacheteMarine
