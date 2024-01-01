@@ -237,7 +237,7 @@
   - type: Storage
     maxItemSize: Normal
     grid:
-    - 0,0,3,1 #3 slots
+    - 0,0,4,1 #4 slots
     whitelist:
       tags: #this gonna be hell
       - MagazineRifleM41A
@@ -254,7 +254,7 @@
     sprite: _CM/Clothing/Pouches/large_ammo_mag.rsi
   - type: Storage
     grid:
-    - 0,0,6,1 #6 slots
+    - 0,0,8,1 #8 slots
 
 - type: entity
   parent: CMPouchMagazine
