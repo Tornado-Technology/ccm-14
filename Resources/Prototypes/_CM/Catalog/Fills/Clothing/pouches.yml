@@ -12,7 +12,7 @@
     - id: RadioHandheld
       # bayonet
       # splint
-      
+
 - type: entity
   parent: CMPouchSurvivalSynth
   id: CMPouchSurvivalSynthFill
@@ -115,7 +115,7 @@
     - id: Ointment
       amount: 2
     # todo cm14 autoinjectors oxycodone x2, emergency
-  
+
 - type: entity
   parent: CMPouchFirstResponder
   id: CMPouchFirstResponderFill
@@ -176,7 +176,7 @@
     - id: Ointment
     # splint
     # autoinjectors
-  
+
 - type: entity
   parent: CMPouchFlare
   id: CMPouchFlareFill
@@ -184,7 +184,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: Flare
+    - id: FlareMarine
       amount: 8
 
 - type: entity
@@ -212,3 +212,17 @@
     - id: CableApcStack
     - id: CMMultitool
     - id: CMWrench
+
+- type: entity
+  parent: CMPouchExplosive
+  id: CMPouchExplosiveFill
+  name: Pouch with Explosives
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: HandheldHealthAnalyzer
+      # splint
+    - id: Brutepack
+    - id: Ointment
+    # todo cm14 autoinjectors bicard, kelotane, oxycodone, emergency x2
