@@ -4,9 +4,8 @@
   description: job-description-quinn
   playTimeTracker: JobQuinn
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobKseno
-      time: 72000 # 20 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 0
   canBeAntag: false
   icon: "JobIconQuinn"
   supervisors: job-supervisors-quinn

@@ -5,8 +5,17 @@
   playTimeTracker: JobChiefShipsEngineer
   requirements:
     - !type:RoleTimeRequirement
-      role: JobShipsEngineer
-      time: 72000 # 20 hrs
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: ChiefShipsEngineerGear
   icon: "JobIconChiefShipsEngineer"
   supervisors: job-supervisors-centcom

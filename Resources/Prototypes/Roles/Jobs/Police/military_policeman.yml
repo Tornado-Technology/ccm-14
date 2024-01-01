@@ -4,8 +4,18 @@
   description: job-description-militarypoliceman
   playTimeTracker: JobMilitaryPoliceman
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: MilitaryPolicemanGear
   icon: "JobIconMilitaryPoliceman"
   supervisors: job-supervisors-police-officer

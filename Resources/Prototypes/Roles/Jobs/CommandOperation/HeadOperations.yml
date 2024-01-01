@@ -5,13 +5,22 @@
   playTimeTracker: JobHeadOperations
   requirements:
     - !type:RoleTimeRequirement
-      role: JobStaffOfficer
-      time: 36000 # 5 hrs
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   # ranks:
     # - prefix: Командор
       # time: 0
     # - prefix: Вице-адмирал
-      # time: 3 #1500
+      # time: 3 #1500 
     # - prefix: Контр-адмирал
       # time: 7500
   startingGear: HeadOperationsGear

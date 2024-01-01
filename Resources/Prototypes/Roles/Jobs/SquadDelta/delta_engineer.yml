@@ -5,8 +5,17 @@
   playTimeTracker: JobDeltaEngineer
   requirements:
     - !type:RoleTimeRequirement
-      role: JobShipsEngineer
-      time: 36000 # 10 hrs
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: DeltaEngineerGear
   icon: "JobIconDeltaEngineer"
   supervisors: job-supervisors-commander

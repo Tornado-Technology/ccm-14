@@ -3,6 +3,19 @@
   name: job-name-pilotnormandy
   description: job-description-pilotnormandy
   playTimeTracker: JobPilotNormandy
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: PilotNOfficerGear
   icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-staff-officer

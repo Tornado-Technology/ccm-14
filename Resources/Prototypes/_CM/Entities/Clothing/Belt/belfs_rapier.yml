@@ -14,13 +14,13 @@
     capacity: 10
     whitelist:
       tags:
-        - Rapier
+        - CaptainSabre
   - type: ItemMapper
     mapLayers:
       sheath-sabre:
         whitelist:
           tags:
-          - Rapier
+          - CaptainSabre
   - type: Appearance
 
 - type: entity
@@ -38,15 +38,15 @@
       capacity: 10
       whitelist:
         tags:
-          - Rapier
+          - CaptainSabre
     - type: ItemMapper
       mapLayers:
         sheath-sabre:
           whitelist:
             tags:
-              - Rapier
+              - CaptainSabre
     - type: Appearance
-
+  
 - type: entity
   id: ClothingBeltRapierFilled
   parent: ClothingBeltMythistophelRapier

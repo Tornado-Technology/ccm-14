@@ -4,8 +4,18 @@
   description: job-description-militaryscientist
   playTimeTracker: JobMilitaryScientist
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours
+    - !type:RoleTimeRequirement
+      role: JobAlfaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobDeltaMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 0
+    - !type:RoleTimeRequirement
+      role: JobCharlieMarine
+      time: 0
   startingGear: MilitaryScientistGear
   icon: "JobIconMilitaryScientist"
   supervisors: job-supervisors-head-operations
