@@ -240,9 +240,9 @@
     - 0,0,4,1 #4 slots
     whitelist:
       tags: #this gonna be hell
-      - MagazineRifleM41A
-      - MagazineRifleM39
       - MagazineRifleM4RA
+      - MagazineRifleM39
+      - MagazineRifle
 
 - type: entity
   parent: CMPouchMagazine
