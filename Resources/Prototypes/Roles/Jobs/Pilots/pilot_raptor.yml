@@ -7,7 +7,7 @@
     - !type:RoleTimeRequirement
       role: JobPilotNormandy
       time: 36000 # 10 hrs
-  - !type:OverallPlaytimeRequirement
+    - !type:OverallPlaytimeRequirement
     time: 180000 # 50 hours
   startingGear: PilotOfficerGear
   icon: "JobIconPilotRaptor"

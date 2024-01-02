@@ -1,8 +1,7 @@
 ent-PhysicistCrowbar = physicist crowbar
     .desc = { ent-Crowbar.desc }
-ent-CMScrewdriver = { ent-['Screwdriver', 'CMEntityBase'] }
-
-  .desc = { ent-['Screwdriver', 'CMEntityBase'].desc }
+ent-CMScrewdriver = Screwdriver
+    .desc = Industrial grade torque in a small screwdriving package.
 ent-CMWirecutter = { ent-['Wirecutter', 'CMEntityBase'] }
 
   .desc = { ent-['Wirecutter', 'CMEntityBase'].desc }
