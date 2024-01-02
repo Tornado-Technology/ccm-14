@@ -4,14 +4,16 @@
   description: desc-action-drone-build-wall
   noSpawn: true
   components:
-    - type: WorldTargetAction
-      range: 2
-      useDelay: 0
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
-      icon:
-        sprite: Actions/xeno.rsi
-        state: build_wall
-      itemIconStyle: NoItem
-      event: !type:XenoBuildWallEvent
-      checkCanAccess: false
+  - type: WorldTargetAction
+    range: 1.4
+    useDelay: 0
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/alien_roar1.ogg
+      params:
+        volume: 0.5
+    icon:
+      sprite: Actions/xeno.rsi
+      state: build_wall
+    itemIconStyle: NoItem
+    event: !type:XenoBuildWallEvent
+    checkCanAccess: false
