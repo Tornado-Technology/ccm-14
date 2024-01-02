@@ -108,8 +108,8 @@
     - state: idcaptain
   - type: Item
     heldPrefix: gold
-  - type: PresetIdCard
-    job: Captain
+#  - type: PresetIdCard
+#    job: Captain
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -247,8 +247,8 @@
     layers:
     - state: default
     - state: idclown
-  - type: PresetIdCard
-    job: Clown
+#  - type: PresetIdCard
+#    job: Clown
 
 - type: entity
   parent: IDCardStandard
