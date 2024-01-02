@@ -10,6 +10,9 @@
     {
       "name": "normal-unshaded"
     },
+	{
+      "name": "normal"
+    },
     {
       "name": "deny-unshaded",
       "delays": [
