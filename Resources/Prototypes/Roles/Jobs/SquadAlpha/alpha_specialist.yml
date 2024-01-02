@@ -4,8 +4,15 @@
   description: job-description-alfaspecialist
   playTimeTracker: JobAlfaSpecialist
   requirements:
-
-
+    - !type:RoleTimeRequirement
+      role: JobShipsEngineer
+      time: 36000 # 10 hrs
+    - !type:RoleTimeRequirement
+      role: JobBravoMarine
+      time: 36000 # 10 hrs
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
   startingGear: AlfaSpecialistGear
   icon: "JobIconAlfaSpecialist"
   supervisors: job-supervisors-commander
