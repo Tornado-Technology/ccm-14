@@ -1,11 +1,11 @@
-ent-WeaponFlamethrower = Огнемёт
-    .desc = Сожги этих ублюдков!
+ent-WeaponFlamethrower = огнемёт
+    .desc = И под тяжёлым огнемётом гудит спина моя...
     .suffix = CM
-ent-FuelTankFlamethrower = Топливный бак огнетушителя.
+ent-FuelTankFlamethrower = топливный бак огнемёта
     .suffix = CM
     .desc = { ent-BaseItem.desc }
 ent-CartridgeFlamethrower = напалм
     .suffix = CM
     .desc = { ent-BaseCartridge.desc }
-ent-FlamethrowerProjectile = Огонь
-    .desc = Горячий!
+ent-FlamethrowerProjectile = Огненная струя
+    .desc = Вау!Горячая!

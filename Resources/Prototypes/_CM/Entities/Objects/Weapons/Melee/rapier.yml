@@ -34,11 +34,13 @@
     transferAmount: 5
     blockSlots: NONE
   - type: SolutionTransfer
-    maxTransferAmount: 5    
+    maxTransferAmount: 5
   - type: Item
     size: Large
+    shape:
+    - 0,0,3,1
     sprite: _CM/Objects/Weapons/Melee/rapier_cvasoc.rsi
   - type: Tag
     tags:
     - CaptainSabre
-  - type: DisarmMalus  
+  - type: DisarmMalus
