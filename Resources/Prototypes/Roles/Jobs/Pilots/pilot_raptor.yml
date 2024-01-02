@@ -1,7 +1,7 @@
 - type: job
   id: PilotRaptor
   name: job-name-pilotraptor
-  description: job-description-pilotnormandy
+  description: job-description-pilotraptor
   playTimeTracker: JobPilotNormandy
   startingGear: PilotOfficerGear
   icon: "JobIconPilotOfficer"
@@ -10,7 +10,7 @@
   access:
     - Command
     - Pilot
-    - PilotRaptor
+    - PilotNormandy
     - Maintenance
 
 - type: startingGear
