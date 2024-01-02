@@ -4,18 +4,8 @@
   description: job-description-alfaspecialist
   playTimeTracker: JobAlfaSpecialist
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+
+
   startingGear: AlfaSpecialistGear
   icon: "JobIconAlfaSpecialist"
   supervisors: job-supervisors-commander

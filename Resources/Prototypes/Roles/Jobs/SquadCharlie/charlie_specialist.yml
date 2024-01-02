@@ -5,17 +5,14 @@
   playTimeTracker: JobCharlieSpecialist
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
+      role: JobShipsEngineer
+      time: 36000 # 10 hrs
     - !type:RoleTimeRequirement
       role: JobCharlieMarine
-      time: 0
+      time: 36000 # 10 hrs
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
   startingGear: CharlieSpecialistGear
   icon: "JobIconCharlieSpecialist"
   supervisors: job-supervisors-commander
