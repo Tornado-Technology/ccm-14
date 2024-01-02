@@ -1,0 +1,19 @@
+ent-CMWindowDirectional = window
+    .desc = A glass window. It looks thin and flimsy. A few knocks with anything should shatter it.
+ent-CMWindowReinforcedDirectional = reinforced window
+    .desc = A glass window reinforced with bracing rods. It looks rather strong. Might take a few good hits to shatter it.
+ent-CMWindowTintedDirectional = tinted window
+    .desc = A tinted glass window. It looks rather strong and opaque. Might take a few good hits to shatter it.
+ent-CMWindowUltraDirectional = ultra-reinforced window
+    .desc = An ultra-reinforced window designed to keep the briefing podium a secure area.
+ent-CMBaseWindow = { ent-['BaseStructure', 'CMEntityBase'] }
+
+  .desc = { ent-['BaseStructure', 'CMEntityBase'].desc }
+ent-CMWindowReinforcedAlmayerHull = hull window
+    .desc = A glass window with a special rod matrix inside a wall frame. This one was made out of exotic materials to prevent hull breaches. No way to get through here.
+ent-CMWindowReinforcedAlmayer = reinforced window
+    .desc = A glass window with a special rod matrix inside a wall frame. It looks rather strong. Might take a few good hits to shatter it.
+ent-CMWindowReinforcedWhiteHull = reinforced window
+    .desc = An ultra-reinforced window designed to keep research a secure area. This one was made out of exotic materials to prevent hull breaches. No way to get through here.
+ent-CMWindowReinforcedWhite = hull window
+    .desc = A glass window with a special rod matrix inside a wall frame. It looks rather strong. Might take a few good hits to shatter it.

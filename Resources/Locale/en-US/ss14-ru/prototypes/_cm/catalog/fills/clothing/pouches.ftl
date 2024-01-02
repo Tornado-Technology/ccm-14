@@ -55,3 +55,6 @@ ent-CMPouchToolsFill = { ent-CMPouchTools }
 ent-CMPouchToolsSocFill = { ent-CMPouchToolsSoc }
     .suffix = Filled
     .desc = { ent-CMPouchToolsSoc.desc }
+ent-CMPouchExplosiveFill = Pouch with Explosives
+    .suffix = Filled
+    .desc = { ent-CMPouchExplosive.desc }
