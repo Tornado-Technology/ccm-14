@@ -2,7 +2,7 @@
   id: PilotRaptor
   name: job-name-pilotraptor
   description: job-description-pilotraptor
-  playTimeTracker: JobPilotNormandy
+  playTimeTracker: JobPilotRaptor
   startingGear: PilotOfficerGear
   icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-staff-officer
