@@ -1,16 +1,10 @@
 - type: job
   id: PilotRaptor
   name: job-name-pilotraptor
-  description: job-description-pilotraptor
-  playTimeTracker: JobPilotRaptor
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobPilotNormandy
-      time: 36000 # 10 hrs
-    - !type:OverallPlaytimeRequirement
-    time: 180000 # 50 hours
+  description: job-description-pilotnormandy
+  playTimeTracker: JobPilotNormandy
   startingGear: PilotOfficerGear
-  icon: "JobIconPilotRaptor"
+  icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
   access:
