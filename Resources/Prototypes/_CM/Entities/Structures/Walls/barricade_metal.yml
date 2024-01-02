@@ -2,6 +2,7 @@
   parent: BaseStructureDynamic
   id: CMBarricadeBase
   name: Generic Barricade
+  abstract: true
   description: The most basic, generic barricade you have ever seen. This probably shouldn't even be here.
   components:
   - type: Sprite
@@ -13,13 +14,14 @@
     bodyType: Static
   - type: Transform
     anchored: true
+  - type: Climbable
   - type: Appearance
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,-0.45"
+          bounds: "-0.49,-0.49,0.49,-0.3"
         density: 500
         mask:
         - FullTileMask
@@ -27,7 +29,6 @@
         - TableLayer
 
 # Metal Barricade Tree
-
 - type: entity
   parent: CMBarricadeBase
   id: CMBarricadeMetal
@@ -174,17 +175,6 @@
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: CMSandbag
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.49,-0.40,0.49,-0.28"
-        density: 2000
-        mask:
-        - FullTileMask
-        layer:
-        - TableLayer
   - type: Repairable
   - type: Destructible
     thresholds:
