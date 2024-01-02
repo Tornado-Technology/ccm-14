@@ -114,7 +114,14 @@ public abstract class SharedChatSystem : EntitySystem
 
         if (input.Length == 0)
             return false;
-        
+
+        if (HasComp<XenoComponent>(source) && !input.StartsWith(EmotesPrefix) && !input.StartsWith(ConsolePrefix) && !input.StartsWith(EmotesPrefix) && !input.StartsWith(LOOCPrefix) && !input.StartsWith(OOCPrefix))
+        {
+            output = SanitizeMessageCapital(input[1..].TrimStart());
+            channel = _prototypeManager.Index<RadioChannelPrototype>("Hivemind");
+            return true;
+        }
+
         if (input.StartsWith(RadioCommonPrefix))
         {
             output = SanitizeMessageCapital(input[1..].TrimStart());
