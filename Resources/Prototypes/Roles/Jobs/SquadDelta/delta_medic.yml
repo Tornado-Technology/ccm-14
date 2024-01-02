@@ -5,17 +5,8 @@
   playTimeTracker: JobDeltaMedic
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
   startingGear: DeltaMedicGear
   icon: "JobIconDeltaMedic"
   supervisors: job-supervisors-commander
