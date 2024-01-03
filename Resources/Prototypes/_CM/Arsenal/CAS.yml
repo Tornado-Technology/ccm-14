@@ -125,7 +125,7 @@
     radius: 4
 
 - type: entity
-  parent: BaseItem
+  parent: GrenadeBase
   id: MarineCASClusterBomb
   name: кластерная бомба
   suffix: MarinesGear
@@ -137,24 +137,23 @@
     - state: icon
       map: ["enum.AmmoVisualLayers.Base"]
     scale: 2, 2
-  - type: Appearance
   - type: ClusterGrenade
     fillPrototype: ArtyGrenade
+    baseTriggerDelay: 4
     maxGrenadesCount: 3
     delay: 6
     distance: 5
   - type: ContainerContainer
     containers:
-      cluster-flash: !type:Container
-  - type: EmitSoundOnUse
+      cluster-payload: !type:Container
+  - type: OnUseTimerTrigger
+    delay: 0.2
+  - type: EmitSoundOnTrigger
     sound:
       path: /Audio/Effects/Weather/snowstorm.ogg
-      params:
-        volume: 10
-        maxdistance: 20
   - type: Tag
     tags:
-      - InteractionCAS
+    - InteractionCAS
 
 - type: entity
   id: ArtyFlare
@@ -194,7 +193,7 @@
             sound: /Audio/Effects/metalbreak.ogg
 
 - type: entity
-  parent: BaseItem
+  parent: GrenadeBase
   id: MarineCASFlareBomb
   name: осветительная бомба
   suffix: MarinesGear
@@ -209,14 +208,15 @@
   - type: Appearance
   - type: ClusterGrenade
     fillPrototype: ArtyFlare
+    baseTriggerDelay: 4
     maxGrenadesCount: 8
     delay: 6
     distance: 10
-  - type: ContainerContainer
-    containers:
-      cluster-flash: !type:Container
-  - type: EmitSoundOnUse
-    sound: /Audio/Effects/Weather/snowstorm.ogg
+  - type: OnUseTimerTrigger
+    delay: 0.2
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/Weather/snowstorm.ogg
   - type: Tag
     tags:
-      - InteractionCAS
+    - InteractionCAS
