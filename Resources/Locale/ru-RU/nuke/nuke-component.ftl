@@ -33,6 +33,6 @@ nuke-label-syndicate = ОПЗ-{ $serial }
 
 # Codes
 
-nuke-codes-message = [color=red]СОВЕРШЕННО СЕКРЕТНО![/color]
+nuke-codes-message = [color=red]ДЛЯ МОРСКОЙ ПЕХОТЫ ОПЗ![/color]
 nuke-codes-list = Код { $name }: { $code }
 nuke-codes-fax-paper-name = коды ядерной аутентификации
