@@ -154,7 +154,7 @@
         maxdistance: 20
   - type: Tag
     tags:
-      - InteractionCAS
+    - InteractionCAS
 
 - type: entity
   id: ArtyFlare
@@ -219,4 +219,4 @@
     sound: /Audio/Effects/Weather/snowstorm.ogg
   - type: Tag
     tags:
-      - InteractionCAS
+    - InteractionCAS
