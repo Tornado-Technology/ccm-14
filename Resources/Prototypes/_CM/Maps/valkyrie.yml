@@ -9,12 +9,12 @@
       components:
         - type: StationJobs
           availableJobs:
-            AlfaMarine: [ 6, 6 ]
+            AlfaMarine: [ 8, 8 ]
             AlfaMedic: [ 1, 1 ]
             AlfaEngineer: [ 1, 1 ]
             AlfaCommander: [ 1, 1 ]
             AlfaSpecialist: [ 1, 1 ]
-            DeltaMarine: [ 6, 6 ]
+            DeltaMarine: [ 8, 8 ]
             DeltaMedic: [ 1, 1 ]
             DeltaEngineer: [ 1, 1 ]
             DeltaCommander: [ 1, 1 ]
@@ -24,7 +24,7 @@
             BravoEngineer: [ 1, 1 ]
             BravoCommander: [ 1, 1 ]
             BravoSpecialist: [ 1, 1 ]
-            CharlieMarine: [ 6, 6 ]
+            CharlieMarine: [ 8, 8 ]
             CharlieMedic: [ 1, 1 ]
             CharlieEngineer: [ 1, 1 ]
             CharlieCommander: [ 1, 1 ]
@@ -34,7 +34,7 @@
             MilitaryScientist: [ 4, 4 ]
             SupplyOfficer: [ 1, 1 ]
             Rigger: [ 1, 1 ]
-            MilitaryMedic: [ 2, 2 ]
+            MilitaryMedic: [ 4, 4 ]
             MilitaryMainMedic: [ 2, 1 ]
             ChiefShipsEngineer: [ 2, 1 ]
             ShipsEngineer: [ 2, 2 ]
