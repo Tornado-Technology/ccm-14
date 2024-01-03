@@ -10,6 +10,7 @@ namespace Content.Shared.Humanoid
     {
         Male,
         Female,
+        Unsexed,
     }
 
     /// <summary>
