@@ -5,7 +5,7 @@
   playTimeTracker: JobMilitaryPoliceman
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours
+      time: 36000 # 10 hrs
   startingGear: MilitaryPolicemanGear
   icon: "JobIconMilitaryPoliceman"
   supervisors: job-supervisors-police-officer

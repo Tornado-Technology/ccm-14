@@ -4,8 +4,9 @@
   description: job-description-runi
   playTimeTracker: JobRuni
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 0
+    - !type:RoleTimeRequirement
+      role: JobKseno
+      time: 36000 # 10 hrs
   canBeAntag: false
   icon: "JobIconRuni"
   supervisors: job-supervisors-quinn

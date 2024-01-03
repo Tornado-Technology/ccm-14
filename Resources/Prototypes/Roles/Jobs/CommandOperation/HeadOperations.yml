@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobStaffOfficer
-      time: 36000 # 5 hrs
+      time: 18000 # 10 hrs
   # ranks:
     # - prefix: Командор
       # time: 0

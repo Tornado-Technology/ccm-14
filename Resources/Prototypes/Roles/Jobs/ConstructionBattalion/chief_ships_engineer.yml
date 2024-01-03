@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobShipsEngineer
-      time: 72000 # 20 hrs
+      time: 36000 # 10 hrs
   startingGear: ChiefShipsEngineerGear
   icon: "JobIconChiefShipsEngineer"
   supervisors: job-supervisors-centcom

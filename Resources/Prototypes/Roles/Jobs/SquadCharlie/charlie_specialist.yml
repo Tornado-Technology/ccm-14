@@ -5,13 +5,7 @@
   playTimeTracker: JobCharlieSpecialist
   requirements:
     - !type:RoleTimeRequirement
-      role: JobShipsEngineer
-      time: 36000 # 10 hrs
-    - !type:RoleTimeRequirement
       role: JobCharlieMarine
-      time: 36000 # 10 hrs
-    - !type:RoleTimeRequirement
-      role: JobMilitaryMedic
       time: 36000 # 10 hrs
   startingGear: CharlieSpecialistGear
   icon: "JobIconCharlieSpecialist"
