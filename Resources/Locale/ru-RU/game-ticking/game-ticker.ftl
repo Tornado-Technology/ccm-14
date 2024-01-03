@@ -16,7 +16,7 @@ game-ticker-get-info-text =
     Текущий режим игры: [color=white]{ $gmTitle }[/color]
     >[color=yellow]{ $desc }[/color]
 game-ticker-get-info-preround-text =
-    Привет и добро пожаловать в [color=white]Space Station 14![/color]
+    Привет и добро пожаловать в [color=white]Colonial Marines 14![/color]
     Текущий раунд: [color=white]#{ $roundId }[/color]
     Текущее количество игроков: [color=white]{ $playerCount }[/color] ([color=white]{ $readyCount }[/color] { $readyCount ->
         [one] готов
