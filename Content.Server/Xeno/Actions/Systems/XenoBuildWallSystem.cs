@@ -1,5 +1,7 @@
 using Content.Server.Xeno.Actions.Components;
 using Content.Shared.Actions;
+using Content.Shared.Administration.Logs;
+using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Maps;
 using Content.Shared.Physics;
@@ -17,6 +19,7 @@ public sealed class XenoBuildWallSystem : EntitySystem
     [Dependency] private readonly IMapManager _map = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] protected readonly ISharedAdminLogManager Logs = default!;
 
     public override void Initialize()
     {
@@ -57,7 +60,10 @@ public sealed class XenoBuildWallSystem : EntitySystem
         if (args.Handled || args.Cancelled || !CanBuildOnTilePopup(ent, new EntityCoordinates(_map.GetMapEntityId(args.Coordinates.MapId), args.Coordinates.Position)))
             return;
 
-        Spawn(ent.Comp.WallPrototype, args.Coordinates);
+        var wallUid = Spawn(ent.Comp.WallPrototype, args.Coordinates);
+
+        Logs.Add(LogType.Construction,
+            $"{ToPrettyString(ent):user} was build xeno wall {ToPrettyString(wallUid)}");
     }
 
     private bool TileSolidAndNotBlocked(EntityCoordinates target)
