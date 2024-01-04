@@ -125,7 +125,7 @@
     radius: 4
 
 - type: entity
-  parent: GrenadeBase
+  parent: BaseItem
   id: MarineCASClusterBomb
   name: кластерная бомба
   suffix: MarinesGear
@@ -193,7 +193,7 @@
             sound: /Audio/Effects/metalbreak.ogg
 
 - type: entity
-  parent: GrenadeBase
+  parent: BaseItem
   id: MarineCASFlareBomb
   name: осветительная бомба
   suffix: MarinesGear
