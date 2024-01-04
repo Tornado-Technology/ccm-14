@@ -77,7 +77,6 @@
     - type: XenoStealth
     - type: XenoEvasion
     - type: XenoPsychicJump
-    - type: XenoStun
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/rouny.rsi
