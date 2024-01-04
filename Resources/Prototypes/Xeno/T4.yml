@@ -75,6 +75,7 @@
   id: MobRounyXeno
   components:
     - type: XenoStealth
+    - type: XenoEvasion
     - type: XenoPsychicJump
     - type: XenoStun
     - type: Sprite
