@@ -241,7 +241,7 @@
     whitelist:
       tags: #this gonna be hell
       - MagazineRifleM4RA
-      - MagazineRifleM39
+      - MagazineRifleM41A
       - MagazineRifle
 
 - type: entity
@@ -530,7 +530,8 @@
     - 0,0,8,1 #8 slots
     whitelist:
       tags:
-      - FlareMarine
+      - Flare
+
 
 - type: entity
   parent: CMPouchOpenClosed

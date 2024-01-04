@@ -452,7 +452,7 @@
           layer:
             - TableLayer
     - type: StaticPrice
-      price: 70
+      price: 10 # вай нот
 
 - type: entity
   parent: VehicleWheelchair
