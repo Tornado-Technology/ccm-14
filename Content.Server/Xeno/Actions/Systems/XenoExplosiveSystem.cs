@@ -35,7 +35,7 @@ public sealed partial class XenoExplosiveSystem : EntitySystem
         if (!TryComp<MobStateComponent>(uid, out var mobState) || mobState.CurrentState == MobState.Dead)
             return;
 
-        // TODO: Move magick numbers to XenoExplosiveComponent
+        // TODO: Move magic numbers to XenoExplosiveComponent
         _explosionSystem.QueueExplosion(uid, "Radioactive", 350f, 4f, 5f, canCreateVacuum: false, user: uid, addLog: true);
         _damageableSystem.TryChangeDamage(uid, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
     }
