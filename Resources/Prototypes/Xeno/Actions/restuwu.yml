@@ -5,6 +5,7 @@
   components:
   - type: InstantAction
     useDelay: 10
+    checkCanInteract: false
     icon:
       sprite: Actions/xeno.rsi
       state: resting

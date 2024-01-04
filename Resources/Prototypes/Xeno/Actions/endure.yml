@@ -12,4 +12,4 @@
         sprite: Actions/xeno.rsi
         state: endure
       event: !type:XenoEndureEvent
-      checkCanInteract: false
+      checkCanAccess: false

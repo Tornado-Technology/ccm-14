@@ -12,7 +12,7 @@
         sprite: Actions/xeno.rsi
         state: lay_egg
       event: !type:XenoLayEggEvent
-      checkCanInteract: false
+      checkCanAccess: false
 
 - type: entity
   id: ActionXenoLayEggRoyal
@@ -28,4 +28,4 @@
         sprite: Actions/xeno.rsi
         state: lay_egg
       event: !type:XenoLayEggEvent
-      checkCanInteract: false
+      checkCanAccess: false
