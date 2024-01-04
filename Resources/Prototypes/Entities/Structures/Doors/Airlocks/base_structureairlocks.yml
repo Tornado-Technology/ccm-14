@@ -140,4 +140,5 @@
   - type: PryUnpowered
   placement:
     mode: SnapgridCenter
+  - type: Godmode
 
