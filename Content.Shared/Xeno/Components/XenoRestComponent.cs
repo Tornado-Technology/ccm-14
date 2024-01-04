@@ -1,4 +1,4 @@
-﻿using Robust.Shared.GameStates;
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Xeno.Components;
@@ -11,4 +11,6 @@ public sealed partial class XenoRestComponent : Component
 
     [DataField]
     public int? OriginalDrawDepth;
+
+    public bool IsInRest = false;
 }

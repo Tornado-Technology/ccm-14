@@ -11,6 +11,7 @@
         components:
           - Body
       canTargetSelf: false
+      checkCanAccess: false
       interactOnMiss: false
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar2.ogg

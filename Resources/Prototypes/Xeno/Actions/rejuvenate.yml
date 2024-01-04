@@ -15,7 +15,7 @@
       itemIconStyle: NoItem
       event: !type:XenoSpitRejuvenateEvent
       interactOnMiss: false
-      checkCanInteract: false
+      checkCanAccess: false
 
 - type: entity
   id: ProjectileXenoRejuvenate

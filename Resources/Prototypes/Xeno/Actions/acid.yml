@@ -1,5 +1,3 @@
-
-
 # acidspit
 - type: entity
   id: ActionDefilerDefaultSpit
@@ -8,6 +6,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
+      checkCanAccess: false
       useDelay: 30
       range: 0
       sound: !type:SoundPathSpecifier
@@ -18,8 +17,6 @@
       itemIconStyle: NoItem
       priority: 5
       event: !type:XenoSpitEvent
-      interactOnMiss: false
-      checkCanInteract: false
 
 # acidspit
 - type: entity
@@ -29,6 +26,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
+      checkCanAccess: false
       useDelay: 5
       range: 0
       sound: !type:SoundPathSpecifier
@@ -39,9 +37,6 @@
       itemIconStyle: NoItem
       priority: 6
       event: !type:XenoSpit2Event
-      interactOnMiss: false
-      checkCanInteract: false
-
 
 # spit
 - type: entity
@@ -51,6 +46,7 @@
   noSpawn: true
   components:
     - type: WorldTargetAction
+      checkCanAccess: false
       useDelay: 5
       range: 0
       sound: !type:SoundPathSpecifier

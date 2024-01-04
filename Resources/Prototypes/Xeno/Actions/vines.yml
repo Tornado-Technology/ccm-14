@@ -12,4 +12,4 @@
         sprite: Actions/xeno.rsi
         state: vines
       event: !type:XenoVinesEvent
-      checkCanInteract: false
+      checkCanAccess: false

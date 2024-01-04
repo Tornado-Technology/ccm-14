@@ -12,4 +12,5 @@
         sprite: Actions/xeno.rsi
         state: rage
       event: !type:XenoRageEvent
-      checkCanInteract: false
+      checkCanAccess: false
+      

@@ -13,4 +13,3 @@
         state: psychic_jump
       event: !type:XenoPsychicJumpEvent
       checkCanAccess: false
-     

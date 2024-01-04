@@ -1,5 +1,6 @@
-﻿using Content.Shared.ActionBlocker;
+using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
+using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Events;
 using Content.Shared.Xeno.Components;
 using Content.Shared.Xeno.Events;
@@ -19,13 +20,19 @@ public sealed class XenoRestSystem : EntitySystem
 
         SubscribeLocalEvent<XenoRestComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoRestComponent, XenoRestEvent>(OnRest);
-
+        SubscribeLocalEvent<XenoRestComponent, InteractionAttemptEvent>(OnInteract);
         SubscribeLocalEvent<XenoRestingComponent, UpdateCanMoveEvent>(OnCanMove);
     }
 
     private void OnStartup(Entity<XenoRestComponent> rest, ref ComponentStartup args)
     {
         _actions.AddAction(rest, rest.Comp.Action);
+    }
+
+    private void OnInteract(Entity<XenoRestComponent> rest, ref InteractionAttemptEvent args)
+    {
+        if (rest.Comp.IsInRest)
+            args.Cancel();
     }
 
     private void OnRest(Entity<XenoRestComponent> rest, ref XenoRestEvent args)
@@ -37,11 +44,13 @@ public sealed class XenoRestSystem : EntitySystem
         {
             RemComp<XenoRestingComponent>(rest);
             _appearance.SetData(rest, XenoVisualLayers.Base, XenoRestState.NotResting);
+            rest.Comp.IsInRest = false;
         }
         else
         {
             AddComp<XenoRestingComponent>(rest);
             _appearance.SetData(rest, XenoVisualLayers.Base, XenoRestState.Resting);
+            rest.Comp.IsInRest = true;
         }
 
         args.Handled = true;
