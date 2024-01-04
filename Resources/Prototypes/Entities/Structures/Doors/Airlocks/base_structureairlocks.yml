@@ -133,6 +133,7 @@
   - type: AccessReader
   - type: StaticPrice
     price: 150
+  - type: Godmode
   - type: Tag
     tags:
       - Airlock
@@ -140,5 +141,4 @@
   - type: PryUnpowered
   placement:
     mode: SnapgridCenter
-  - type: Godmode
 
