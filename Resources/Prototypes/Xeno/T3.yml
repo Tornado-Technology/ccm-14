@@ -137,6 +137,7 @@
   components:
     - type: XenoWarlock
     - type: XenoStealth
+    - type: XenoEvasion
     - type: XenoPsychicJump
     - type: Sprite
       drawdepth: Mobs
