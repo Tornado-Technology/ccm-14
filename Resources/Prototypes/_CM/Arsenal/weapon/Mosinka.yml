@@ -15,7 +15,7 @@
     - state: base
       map: ["enum.GunVisualLayers.Base"]
   - type: Item
-    size: 50
+    size: Large
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/mosinka.rsi
     quickEquip: false

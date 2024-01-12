@@ -18,15 +18,6 @@
     delay: 3.5
   - type: Damageable
     damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:TriggerBehavior
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
   - type: Appearance
   - type: AnimationPlayer
   - type: GenericVisualizer

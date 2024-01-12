@@ -1,61 +1,6 @@
 - type: entity
-  id: CigPackBase4
-  parent: [ BaseStorageItem, BaseBagOpenClose ]
-  name: cigarette pack
-  abstract: true
-  components:
-  - type: Sprite
-    layers:
-    - state: closed
-    - state: open
-      map: ["openLayer"]
-      visible: false
-    - state: cig1
-      map: ["cig1"]
-      sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer4.rsi
-      visible: false
-    - state: cig2
-      map: ["cig2"]
-      sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer4.rsi
-      visible: false
-    - state: cig3
-      map: ["cig3"]
-      sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer4.rsi
-      visible: false
-    - state: cig4
-      map: ["cig4"]
-      sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer4.rsi
-      visible: false
-  - type: Tag
-    tags:
-    - CigPack
-    - Trash
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 50
-  - type: SpaceGarbage
-  - type: Storage
-    capacity: 4
-  - type: Item
-    size: Normal
-  - type: StorageFill
-    contents:
-    - id: Cigarette
-      amount: 4
-  - type: ItemCounter
-    count:
-      tags: [Cigarette]
-    composite: true
-    layerStates:
-    - cig1
-    - cig2
-    - cig3
-    - cig4
-  - type: Appearance
-
-- type: entity
   id: CigPackLSMini
-  parent: CigPackBase4
+  parent: CigPackBase
   name: Lucky Strikes Mini Packet
   description: These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free.
   components:
@@ -64,3 +9,10 @@
   - type: Item
     sprite: _CM/Objects/Consumable/Smokeables/Cigarettes/Packs/ls4packet.rsi
     size: Tiny
+  - type: Storage
+    grid:
+    - 0,0,3,0
+  - type: StorageFill
+    contents:
+    - id: Cigarette
+      amount: 4
