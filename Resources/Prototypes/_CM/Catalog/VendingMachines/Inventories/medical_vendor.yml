@@ -2,22 +2,25 @@
   id: MedicalVendorInventory
   startingInventory:
     ClothingBeltMilitaryWebbingMedFilled: 1
-    HandheldHealthAnalyzer: 20
-    Defibrillator: 5
+    CMHealthAnalyzer: 20
+    CMDefibrillator: 5
     PowerCellMedium: 10
     PowerCellHigh: 1
     HandheldCrewMonitor: 1
     MarineRollerBed: 10
     BoxEmergencyMarine: 3
-    MedkitFilled: 10
-    MedkitCombatFilled: 5
-    MedkitRadiationFilled: 5
+    CMOintment10: 5
+    CMGauze10: 5
+    CMBurnKit10: 5
+    CMTraumaKit10: 5
+    CMFirstAidKitFilled: 10
+    CMAdvFirstAidKitFilled: 5
     MedkitToxinFilled: 5
     MedkitBruteFilled: 5
-    MedkitBurnFilled: 5
-    MedkitOxygenFilled: 5
+    CMBurnAidKitFilled: 5
+    CMFirstAidO2KitFilled: 5
     BoxBeaker: 3
-    BoxSyringe: 3
+    CMSyringe: 30
     BoxBodyBag: 3
     ClothingUniformJumpsuitMarine: 1
     ClothingHandsGlovesMarine: 1
