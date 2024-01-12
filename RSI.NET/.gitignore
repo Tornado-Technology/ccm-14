@@ -1,0 +1,26 @@
+# Build folders
+bin/
+obj/
+/packages/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Release upload folder
+Publish/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+/_ReSharper.Caches/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Whatever this is 
+*.dtbcache.v2

@@ -1,3 +1,490 @@
+# - type: entity
+#   parent: ColMarTechBase
+#   id: ColMarTechScience
+#   name: ColMarTech food vendor
+#   description: USCM Food Vendor, containing standard military Prepared Meals.
+#   components:
+#   - type: Sprite
+#      sprite: _CM/Structures/Machines/VendingMachines/science_gear.rsi
+#   - type: AccessReader
+#     access: [["Research"]]
+#   - type: CMAutomatedVendor
+#     sections:
+#     - name: Инструменты
+#       entries:
+#       - id: ResearchAnalyser
+#         amount: 1
+#       - id: WelderIndustrialAdvanced
+#         amount: 1
+#       - id: PowerDrill
+#         amount: 1
+#       - id: trayScanner
+#         amount: 1
+#       - id: GasAnalyzer
+#         amount: 1
+#       - id: HandheldStationMap
+#         amount: 1
+#       - id: WeaponAdvancedLaser
+#         amount: 1
+#     - name: Материалы
+#       entries:
+#       - id: SheetSteel
+#         amount: 3
+#       - id: SheetGlass
+#         amount: 3
+#       - id: SheetPlastic
+#         amount: 3
+#       - id: SheetPlasteel
+#         amount: 1
+#       - id: SheetRGlass
+#         amount: 1
+#       - id: CableApcStack
+#         amount: 15
+#       - id: CableMVStack
+#         amount: 15
+#       - id: CableHVStack
+#         amount: 15
+#     - name: Одежда
+#       entries:
+#       - id: ClothingEyesGlassesMeson
+#         amount: 1
+#       - id: ClothingBeltUtilityEngineering
+#         amount: 1
+#       - id: ClothingOuterCoatScientist
+#         amount: 1
+#       - id: ClothingOuterPrototypeC
+#         amount: 1
+#       - id: ClothingHandsGlovesCombat
+#         amount: 1
+#       - id: ClothingShoesBootsMagBlinding
+#         amount: 1
+#       - id: ClothingOuterCoatRobo
+#         amount: 1
+#       - id: ClothingOuterCoatRnd
+#         amount: 1
+#       - id: ClothingNeckCloakRd
+#         amount: 1
+#       - id: ClothingHeadHatBeretRND
+#         amount: 1
+#       - id: ClothingMaskGas
+#         amount: 1
+#     - name: Утилиты
+#       entries:
+#       - id: PowerCellHyper
+#         amount: 2
+#       - id: FlashlightLantern
+#         amount: 2
+#       - id: FireExtinguisherMarine
+#         amount: 1
+#       - id: BoxEmergencyMarine
+#         amount: 1
+#       - id: C4
+#         amount: 5
+
+# - type: entity
+#   parent: ColMarTechBase
+#   id: ColMarTechSpec
+#   name: ColMarTech food vendor
+#   description: USCM Food Vendor, containing standard military Prepared Meals.
+#   components:
+#   - type: Sprite
+#      sprite: _CM/Structures/Machines/VendingMachines/spec_gear.rsi спец
+#   - type: AccessReader
+#     access: [["SquadSpecialist"]]
+#   - type: CMAutomatedVendor
+#     sections:
+#     - name: Оружие
+#       entries:
+#       - id: StoreSpecialist
+#         amount: 1
+#       - id: WeaponRifleM4RA
+#         amount: 1
+#       - id: WeaponRifleM41A
+#         amount: 1
+#       - id: WeaponSubMachineGunM39
+#         amount: 1
+#       - id: WeaponMagnumVP-60x2
+#         amount: 1
+#       - id: WeaponShotgunUA571C
+#         amount: 1
+#     - name: Боеприпасы
+#       entries:
+#       - id: MagazineRifleM4RA
+#         amount: 5
+#       - id: MagazineRifleM41A
+#         amount: 10
+#       - id: MagazineRifleM39
+#         amount: 5
+#       - id: SpeedLoaderMagnumVP-60x2
+#         amount: 3
+#       - id: BoxLethalshot-60x2
+#         amount: 2
+#     - name: Одежда
+#       entries:
+#       - id: ClothingUniformJumpsuitMarine
+#         amount: 1
+#       - id: ClothingHandsGlovesMarine
+#         amount: 1
+#       - id: ClothingShoesBootsMarine
+#         amount: 1
+#     - name: Рюкзаки
+#       entries:
+#       - id: ClothingBackpackMarine
+#         amount: 1
+#       - id: ClothingBackpackSatchelMarine
+#         amount: 1
+#       - id: ClothingBeltMilitaryWebbing
+#         amount: 1
+#     - name: Броня
+#       entries:
+#       - id: ClothingOuterPrototypeC
+#         amount: 1
+#       - id: ClothingOuterArmorSPEC
+#         amount: 1
+#       - id: ClothingHeadHelmetMarine
+#         amount: 1
+#     - name: Маски
+#       entries:
+#       - id: ClothingMaskGasMarine
+#         amount: 1
+#       - id: ClothingMaskGasRebreather
+#         amount: 1
+#       - id: ClothingMaskCoif
+#         amount: 1
+#     - name: Береты
+#       entries:
+#       - id: ClothingHeadBeretRed
+#         amount: 1
+#       - id: ClothingHeadBeretPurple
+#         amount: 1
+#       - id: ClothingHeadBeretYellow
+#         amount: 1
+#       - id: ClothingHeadBeretBlue
+#         amount: 1
+#     - name: Утилиты
+#       entries:
+#       - id: BoxMRPFilled
+#         amount: 1
+#       - id: FlashlightLantern
+#         amount: 2
+#       - id: FireExtinguisherMarine
+#         amount: 1
+#       - id: MacheteMarine
+#         amount: 1
+#       - id: CMPouchMagazineLarge
+#         amount: 1
+
+# - type: entity
+#   parent: ColMarTechBase
+#   id: ColMarTechLeader
+#   name: ColMarTech food vendor
+#   description: USCM Food Vendor, containing standard military Prepared Meals.
+#   components:
+#   - type: Sprite
+#     sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi сл
+#   - type: AccessReader
+#     access: [["SquadLeader"]]
+#   - type: CMAutomatedVendor
+#     sections:
+#     - name: Оружие
+#       entries:
+#       - id: WeaponRifleM4RA
+#         amount: 1
+#       - id: WeaponRifleM41A
+#         amount: 1
+#       - id: WeaponSubMachineGunM39
+#         amount: 1
+#       - id: WeaponMagnumVP-60x2
+#         amount: 1
+#       - id: WeaponShotgunUA571C
+#         amount: 1
+#     - name: Боеприпасы
+#       entries:
+#       - id: MagazineRifleM4RA
+#         amount: 5
+#       - id: MagazineRifleM41A
+#         amount: 10
+#       - id: MagazineRifleM39
+#         amount: 5
+#       - id: SpeedLoaderMagnumVP-60x2
+#         amount: 3
+#       - id: BoxLethalshot-60x2
+#         amount: 2
+#     - name: Одежда
+#       entries:
+#       - id: ClothingUniformJumpsuitMarine
+#         amount: 1
+#       - id: ClothingHandsGlovesMarine
+#         amount: 1
+#       - id: ClothingShoesBootsMarine
+#         amount: 1
+#     - name: Рюкзаки
+#       entries:
+#       - id: ClothingBackpackMarine
+#         amount: 1
+#       - id: ClothingBackpackSatchelMarine
+#         amount: 1
+#       - id: ClothingBeltMilitaryWebbing
+#         amount: 1
+#     - name: Броня
+#       entries:
+#       - id: ClothingOuterPrototypeC
+#         amount: 1
+#       - id: ClothingOuterArmorSPEC
+#         amount: 1
+#       - id: ClothingHeadHelmetMarine
+#         amount: 1
+#     - name: Маски
+#       entries:
+#       - id: ClothingMaskGasMarine
+#         amount: 1
+#       - id: ClothingMaskGasRebreather
+#         amount: 1
+#       - id: ClothingMaskCoif
+#         amount: 1
+#     - name: Береты
+#       entries:
+#       - id: ClothingHeadBeretRed
+#         amount: 1
+#       - id: ClothingHeadBeretPurple
+#         amount: 1
+#       - id: ClothingHeadBeretYellow
+#         amount: 1
+#       - id: ClothingHeadBeretBlue
+#         amount: 1
+#     - name: Утилиты
+#       entries:
+#       - id: BoxMRPFilled
+#         amount: 1
+#       - id: FlashlightLantern
+#         amount: 2
+#       - id: FireExtinguisherMarine
+#         amount: 1
+#       - id: MacheteMarine
+#         amount: 1
+#       - id: CMPouchMagazineLarge
+#         amount: 1
+#       - id: PinpointerNuclear
+#         amount: 1
+#       - id: ExGrenade
+#         amount: 1
+#       - id: CMPouchCommand
+#         amount: 1
+
+# - type: entity
+#   parent: ColMarTechBase
+#   id: ColMarTechMedical
+#   name: ColMarTech food vendor
+#   description: USCM Food Vendor, containing standard military Prepared Meals.
+#   components:
+#   - type: Sprite
+#     sprite: _CM/Structures/Machines/VendingMachines/req_guns.rsi
+#   - type: CMAutomatedVendor
+#     sections:
+#     - name: Медицина
+#       entries:
+#       - id: CMHealthAnalyzer
+#         amount: 20
+#       - id: CMDefibrillator
+#         amount: 5
+#       - id: CMFirstAidKitFilled
+#         amount: 10
+#       - id: CMAdvFirstAidKitFilled
+#         amount: 10
+#       - id: MedkitToxinFilled
+#         amount: 5
+#       - id: CMPillCanisterKelotane
+#         amount: 10
+#       - id: CMBurnAidKitFilled
+#         amount: 5
+#       - id: CMFirstAidO2KitFilled
+#         amount: 5
+#       - id: CMSyringe
+#         amount: 15
+#       - id: BoxBeaker
+#         amount: 3
+#       - id: BoxBodyBag
+#         amount: 3
+#       - id: ClothingBeltMilitaryWebbingMedFilled
+#         amount: 1
+#     - name: Оружие
+#       entries:
+#       - id: WeaponRifleM4RA
+#         amount: 1
+#       - id: WeaponRifleM41A
+#         amount: 1
+#       - id: WeaponSubMachineGunM39
+#         amount: 1
+#       - id: WeaponMagnumVP-60x2
+#         amount: 1
+#       - id: WeaponShotgunUA571C
+#         amount: 1
+#     - name: Боеприпасы
+#       entries:
+#       - id: MagazineRifleM4RA
+#         amount: 5
+#       - id: MagazineRifleM41A
+#         amount: 10
+#       - id: MagazineRifleM39
+#         amount: 5
+#       - id: SpeedLoaderMagnumVP-60x2
+#         amount: 3
+#       - id: BoxLethalshot-60x2
+#         amount: 2
+#     - name: Одежда
+#       entries:
+#       - id: ClothingUniformJumpsuitMarine
+#         amount: 1
+#       - id: ClothingHandsGlovesMarine
+#         amount: 1
+#       - id: ClothingShoesBootsMarine
+#         amount: 1
+#     - name: Рюкзаки
+#       entries:
+#       - id: ClothingBackpackMarine
+#         amount: 1
+#       - id: ClothingBackpackSatchelMarine
+#         amount: 1
+#       - id: ClothingBeltMilitaryWebbing
+#         amount: 1
+#     - name: Броня
+#       entries:
+#       - id: ClothingOuterPrototypeC
+#         amount: 1
+#       - id: ClothingOuterArmorSPEC
+#         amount: 1
+#       - id: ClothingHeadHelmetMarine
+#         amount: 1
+#     - name: Маски
+#       entries:
+#       - id: ClothingMaskGasMarine
+#         amount: 1
+#       - id: ClothingMaskGasRebreather
+#         amount: 1
+#       - id: ClothingMaskCoif
+#         amount: 1
+#     - name: Утилиты
+#       entries:
+#       - id: PowerCellMedium
+#         amount: 10
+#       - id: PowerCellHigh
+#         amount: 1
+#       - id: HandheldCrewMonitor
+#         amount: 1
+#       - id: MarineRollerBed
+#         amount: 10
+#       - id: BoxEmergencyMarine
+#         amount: 3
+#       - id: BoxMRPFilled
+#         amount: 1
+#       - id: FlashlightLantern
+#         amount: 2
+#       - id: FireExtinguisherMarine
+#         amount: 1
+#       - id: MacheteMarine
+#         amount: 1
+
+# - type: entity
+#   parent: ColMarTechBase
+#   id: ColMarTechEngi
+#   name: ColMarTech food vendor
+#   description: USCM Food Vendor, containing standard military Prepared Meals.
+#   components:
+#   - type: Sprite
+#    sprite: _CM/Structures/Machines/VendingMachines/science_gear.rsi
+#   - type: CMAutomatedVendor
+#     sections:
+#     - name: Инструменты
+#       entries:
+#       - id: trayScanner
+#         amount: 1
+#       - id: GasAnalyzer
+#         amount: 1
+#       - id: PowerDrill
+#         amount: 1
+#       - id: CMWelder
+#         amount: 2
+#       - id: ToolboxTurretMarine
+#         amount: 5
+#       - id: HandheldStationMap
+#         amount: 1
+#       - id: C4
+#         amount: 10
+#     - name: Материалы
+#       entries:
+#       - id: SheetSteel
+#         amount: 10
+#       - id: SheetGlass
+#         amount: 10
+#       - id: SheetPlastic
+#         amount: 10
+#       - id: SheetPlasteel
+#         amount: 3
+#       - id: SheetRGlass
+#         amount: 3
+#       - id: CableApcStack
+#         amount: 15
+#       - id: CableMVStack
+#         amount: 15
+#       - id: CableHVStack
+#         amount: 15
+#     - name: Оружие
+#       entries:
+#       - id: WeaponRifleM4RA
+#         amount: 1
+#       - id: WeaponRifleM41A
+#         amount: 1
+#       - id: WeaponSubMachineGunM39
+#         amount: 1
+#       - id: WeaponMagnumVP-60x2
+#         amount: 1
+#       - id: WeaponShotgunUA571C
+#         amount: 1
+#     - name: Боеприпасы
+#       entries:
+#       - id: MagazineRifleM4RA
+#         amount: 5
+#       - id: MagazineRifleM41A
+#         amount: 10
+#       - id: MagazineRifleM39
+#         amount: 5
+#       - id: SpeedLoaderMagnumVP-60x2
+#         amount: 3
+#       - id: BoxLethalshot-60x2
+#         amount: 2
+#     - name: Одежда
+#       entries:
+#       - id: ClothingEyesGlassesMeson
+#         amount: 5
+#       - id: ClothingEyesGlassesWelding
+#         amount: 5
+#       - id: ClothingHandsGlovesColorYellow
+#         amount: 5
+#       - id: ClothingBeltUtilityEngineering
+#         amount: 5
+#       - id: ClothingHandsGlovesCombat
+#         amount: 1
+#       - id: ClothingOuterArmorMarineLight
+#         amount: 1
+#       - id: ClothingOuterArmorMarineMedium
+#         amount: 1
+#       - id: ClothingOuterArmorMarineHeavy
+#         amount: 1
+#       - id: ClothingHeadHelmetMarine
+#         amount: 1
+#       - id: ClothingHeadHatBeretEngineering
+#         amount: 1
+#       - id: ClothingMaskCoif
+#         amount: 1
+#     - name: Утилиты
+#       entries:
+#       - id: FlashlightLantern
+#         amount: 2
+#       - id: FireExtinguisherMarine
+#         amount: 1
+#       - id: BoxEmergencyMarine
+#         amount: 1
+
 - type: entity
   parent: VendingMachine
   id: VendingMachineMarineEngineer

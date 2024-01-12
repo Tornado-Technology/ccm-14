@@ -57,7 +57,7 @@
 
 - type: Tag
   id: CartridgeFlamethrower
-  
+
 - type: Tag
   id: TankFlamethrower
 
@@ -77,7 +77,7 @@
     size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
-    capacity: 1000
+    capacity: 300
     proto: CartridgeFlamethrower
     whitelist:
       tags:
@@ -155,7 +155,7 @@
     impactEffect: BulletImpactEffect
     damage:
       types:
-        Heat: 15
+        Heat: 5
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
   - type: TimedDespawn

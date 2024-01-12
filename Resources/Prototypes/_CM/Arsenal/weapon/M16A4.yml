@@ -13,7 +13,7 @@
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/m16a4.rsi
   - type: Item
-    size: 50
+    size: Large
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/m16a4.rsi
     quickEquip: false
@@ -50,7 +50,7 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
- 
+
 - type: entity
   name: M16A4
   parent: BaseM16A4
