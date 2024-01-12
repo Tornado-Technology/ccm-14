@@ -4,7 +4,7 @@
     sprite: Objects/Weapons/Grenades/grenade.rsi #Спрайт
     state: icon
   product: CrateArmoryGrenadess #Айди ящика с пушкой
-  cost: 5200
+  cost: 52000
   category: Security
   group: market
 
