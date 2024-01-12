@@ -12,7 +12,7 @@ lobbyenabled = true
 role_timers = true
 
 [whitelist]
-enabled = false
+enabled = true
 
 [vote]
 restart_required_ratio = 0.85
