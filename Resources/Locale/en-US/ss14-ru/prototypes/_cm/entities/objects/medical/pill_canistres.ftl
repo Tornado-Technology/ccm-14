@@ -1,0 +1,17 @@
+ent-CMPillCanister = pill bottle
+    .desc = It's an airtight container for storing medication.
+ent-CMPillCanisterBicaridine = Bicaridine pill bottle
+    .suffix = Bicaridine, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDexalin = Dexalin pill bottle
+    .suffix = Dexalin, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDylovene = Dylovene pill bottle
+    .suffix = Dylovene, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterInaprovaline = Inaprovaline pill bottle
+    .suffix = Inaprovaline, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterKelotane = Kelotane pill bottle
+    .suffix = Kelotane, 16
+    .desc = { ent-CMPillCanister.desc }

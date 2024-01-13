@@ -1,0 +1,17 @@
+ent-CMPillCanister = баночка таблеток
+    .desc = Это герметичный контейнер для хранения лекарств.
+ent-CMPillCanisterBicaridine = баночка с таблетками Бикаридина
+    .suffix = Бикаридин, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDexalin = баночка с таблетками Дексалина
+    .suffix = Дексалин, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterDylovene = баночка с таблетками Диловена
+    .suffix = Диловен, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterInaprovaline = баночка с таблетками Инапровалина
+    .suffix = Инапровалин, 16
+    .desc = { ent-CMPillCanister.desc }
+ent-CMPillCanisterKelotane = баночка с таблетками Келотана
+    .suffix = Келотан, 16
+    .desc = { ent-CMPillCanister.desc }
