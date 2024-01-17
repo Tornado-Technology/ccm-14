@@ -237,7 +237,6 @@
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
       - WeaponTetherGun
-      - WeaponGrapplingGun
       - ClothingBackpackHolding
       - ClothingBackpackSatchelHolding
       - ClothingBackpackDuffelHolding
@@ -443,7 +442,6 @@
     - BorgModuleLightReplacer
     - BorgModuleAdvancedCleaning
     - BorgModuleMining
-    - BorgModuleGrapplingGun
     - BorgModuleGasAnalyzer
     - BorgModuleAdvancedTool
     - BorgModuleRCD

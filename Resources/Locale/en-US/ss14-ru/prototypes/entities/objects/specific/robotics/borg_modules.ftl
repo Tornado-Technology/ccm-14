@@ -35,9 +35,6 @@ ent-BorgModuleAppraisal = appraisal cyborg module
 ent-BorgModuleMining = mining cyborg module
 
   .desc = { ent-['BaseBorgModuleCargo', 'BaseProviderBorgModule'].desc }
-ent-BorgModuleGrapplingGun = grappling gun cyborg module
-
-  .desc = { ent-['BaseBorgModuleCargo', 'BaseProviderBorgModule'].desc }
 ent-BorgModuleAdvancedTool = advanced tool cyborg module
 
   .desc = { ent-['BaseBorgModuleEngineering', 'BaseProviderBorgModule'].desc }

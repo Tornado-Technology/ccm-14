@@ -382,16 +382,6 @@
     Plastic: 250
 
 - type: latheRecipe
-  id: BorgModuleGrapplingGun
-  result: BorgModuleGrapplingGun
-  completetime: 3
-  materials:
-    Steel: 500
-    Glass: 500
-    Plastic: 250
-    Gold: 50
-
-- type: latheRecipe
   id: BorgModuleAdvancedTool
   result: BorgModuleAdvancedTool
   completetime: 3
