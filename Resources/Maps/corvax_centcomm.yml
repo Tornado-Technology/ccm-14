@@ -7504,7 +7504,7 @@ entities:
       pos: -20.455715,-16.523304
       parent: 2
       type: Transform
-- proto: BorgModuleGrapplingGun
+- proto: BorgModuleConstruction
   entities:
   - uid: 2405
     components:

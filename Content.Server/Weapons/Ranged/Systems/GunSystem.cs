@@ -10,8 +10,8 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Effects;
-using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Components;
+using Content.Server.Mech.Equipment.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged;
@@ -133,27 +133,6 @@ public sealed partial class GunSystem : SharedGunSystem
                 case CartridgeAmmoComponent cartridge:
                     if (!cartridge.Spent)
                     {
-                        if (gun.CompatibleAmmo != null &&
-                            !gun.CompatibleAmmo.Exists(ammoAllowed => ammoAllowed.Equals(cartridge.Prototype))
-                            && user != null)
-                        {
-                            if (gun.DamageOnWrongAmmo != null)
-                                Damageable.TryChangeDamage(user, gun.DamageOnWrongAmmo, origin: user);
-                            _stun.TryParalyze(user.Value, TimeSpan.FromSeconds(3f), true);
-
-                            Audio.PlayPvs(new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/bang.ogg"), gunUid);
-
-                            PopupSystem.PopupEntity(Loc.GetString("gun-component-wrong-ammo"), user.Value);
-                            _adminLogger.Add(LogType.EntityDelete, LogImpact.Medium, $"Shot wrong ammo by {ToPrettyString(user.Value)} deleted {ToPrettyString(gunUid)}");
-                            userImpulse = false;
-
-                            SetCartridgeSpent(ent!.Value, cartridge, true);
-                            MuzzleFlash(gunUid, cartridge, user);
-                            Del(gunUid);
-                            if (cartridge.DeleteOnSpawn)
-                                Del(ent.Value);
-                            return;
-                        }
                         if (cartridge.Count > 1)
                         {
                             var angles = LinearSpread(mapAngle - cartridge.Spread / 2,
@@ -193,9 +172,12 @@ public sealed partial class GunSystem : SharedGunSystem
 
                     // Something like ballistic might want to leave it in the container still
                     if (!cartridge.DeleteOnSpawn && !Containers.IsEntityInContainer(ent!.Value))
+                    {
                         EjectCartridge(ent.Value, angle);
+                    }
 
                     Dirty(ent!.Value, cartridge);
+
                     break;
                 // Ammo shoots itself
                 case AmmoComponent newAmmo:

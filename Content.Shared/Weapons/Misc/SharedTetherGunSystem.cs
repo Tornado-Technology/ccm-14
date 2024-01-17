@@ -7,8 +7,6 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Events;
 using Content.Shared.Throwing;
 using Content.Shared.Toggleable;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
@@ -16,6 +14,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared.Weapons.Misc;
 
@@ -232,12 +231,8 @@ public abstract partial class SharedTetherGunSystem : EntitySystem
         joint.Damping = damping;
         joint.MaxForce = component.MaxForce;
 
-        // Sad...
-        if (_netManager.IsServer && component.Stream == null)
-            component.Stream = _audio.PlayPredicted(component.Sound, gunUid, null)?.Entity;
-
-        Dirty(target, tethered);
-        Dirty(gunUid, component);
+        Dirty(tethered);
+        Dirty(component);
     }
 
     protected virtual void StopTether(EntityUid gunUid, BaseForceGunComponent component, bool land = true, bool transfer = false)
@@ -271,7 +266,6 @@ public abstract partial class SharedTetherGunSystem : EntitySystem
 
         if (!transfer)
         {
-            _audio.Stop(component.Stream);
             component.Stream = null;
         }
 

@@ -188,20 +188,6 @@
     - OreBag
     - Crowbar
 
-- type: entity
-  id: BorgModuleGrapplingGun
-  parent: [ BaseBorgModuleCargo, BaseProviderBorgModule ]
-  name: grappling gun cyborg module
-  components:
-  - type: Sprite
-    layers:
-    - state: cargo
-    - state: icon-grappling-gun
-  - type: ItemBorgModule
-    items:
-    - WeaponGrapplingGun
-    - WeaponCrusherDagger
-
 # engineering modules
 - type: entity
   id: BorgModuleAdvancedTool

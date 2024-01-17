@@ -33,7 +33,7 @@ public sealed partial class XenoEvolutionMenu : DefaultWindow
 
     public void UpdateState(XenoEvolutionBoundInterfaceState state)
     {
-        EvolutionPoints.Text = $"Эволюция: {(int)state.Evolution} e.p.";
+        EvolutionPoints.Text = $"Плазма {(int)state.Evolution}";
         EvolutionModifer.Text = $"Модификатор: x{state.EvolutionModifer}";
         EvolutionsContainer.RemoveAllChildren();
 

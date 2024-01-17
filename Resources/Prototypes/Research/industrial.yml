@@ -100,19 +100,6 @@
 # Tier 2
 
 - type: technology
-  id: Grappling
-  name: research-technology-grappling
-  icon:
-    sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
-    state: base
-  discipline: Industrial
-  tier: 2
-  cost: 1000
-  recipeUnlocks:
-  - WeaponGrapplingGun
-  - BorgModuleGrapplingGun
-
-- type: technology
   id: Shuttlecraft
   name: research-technology-shuttlecraft
   icon:
