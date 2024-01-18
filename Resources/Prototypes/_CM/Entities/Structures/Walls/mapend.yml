@@ -1,0 +1,204 @@
+- type: entity
+  id: MapEndRock
+  parent: BaseStructure
+  name: asteroid durable rock
+  suffix: CM
+  description: A rocky asteroid.
+  components:
+  - type: PlacementReplacement
+    key: walls
+  - type: SoundOnGather
+  - type: Gatherable
+    whitelist:
+      tags:
+        - Pickaxe
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: SmoothEdge
+  - type: Sprite
+    sprite: _CM/Structures/Walls/unbreakablerock.rsi
+    layers:
+      - state: rock_asteroid
+      - map: [ "enum.EdgeLayer.South" ]
+        state: rock_asteroid_south
+      - map: [ "enum.EdgeLayer.East" ]
+        state: rock_asteroid_east
+      - map: [ "enum.EdgeLayer.North" ]
+        state: rock_asteroid_north
+      - map: [ "enum.EdgeLayer.West" ]
+        state: rock_asteroid_west
+  - type: Occluder
+  - type: Airtight
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+- type: entity
+  id: MapEndIronRock
+  parent: MapEndRock
+  name: durable iron rock
+  suffix: CM
+  description: Reeed.
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Walls/unbreakablerock.rsi
+    layers:
+      - state: ironrock
+      - map: [ "enum.EdgeLayer.South" ]
+        state: ironrock_south
+      - map: [ "enum.EdgeLayer.East" ]
+        state: ironrock_east
+      - map: [ "enum.EdgeLayer.North" ]
+        state: ironrock_north
+      - map: [ "enum.EdgeLayer.West" ]
+        state: ironrock_west
+
+- type: entity
+  id: MapEndWallRock
+  parent: MapEndRock
+  name: durable stone
+  description: He seems bad.
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_west
+
+- type: entity
+  id: MapEndWallRockBasalt
+  name: basalt
+  parent: MapEndRock
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock_wall
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_wall_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_wall_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_wall_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_wall_west
+
+- type: entity
+  id: MapEndWallRockSnow
+  name: snowdrift
+  parent: MapEndRock
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock_snow
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_snow_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_snow_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_snow_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_snow_west
+
+- type: entity
+  id: MapEndWallRockSand
+  name: sandstone
+  parent: MapEndRock
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock_sand
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_sand_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_sand_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_sand_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_sand_west
+
+- type: entity
+  id: MapEndWallRockChromite
+  name: chromite
+  parent: MapEndRock
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock_chromite
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_chromite_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_chromite_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_chromite_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_chromite_west
+
+- type: entity
+  id: MapEndWallRockAndesite
+  name: andesite
+  parent: MapEndRock
+  suffix: CM
+  components:
+    - type: Sprite
+      sprite: _CM/Structures/Walls/unbreakablerock.rsi
+      layers:
+        - state: rock_andesite
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_andesite_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_andesite_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_andesite_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_andesite_west
+
+- type: entity
+  id: FloorWaterEntityMapPreEnd
+  parent: FloorWaterEntity
+  suffix: CM
+  name: deepy water
+  description: A real thirst quencher.
+  components:
+  - type: SlowContacts
+    walkSpeedModifier: 0.2
+    sprintSpeedModifier: 0.1
+
+- type: entity
+  id: FloorWaterEntityMapEnd
+  parent: FloorWaterEntity
+  suffix: CM
+  name: deep water
+  description: DON'T GO THERE
+  components:
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.4
+    blacklist:
+      tags:
+      - Catwalk
+  - type: Chasm
