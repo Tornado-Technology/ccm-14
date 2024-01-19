@@ -7,7 +7,7 @@
   icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
-  reqyurements:
+  requirements:
   - !type:OverallPlaytimeRequirement
       time: 108000 # 30 hrs
   - !type:RoleTimeRequirement
