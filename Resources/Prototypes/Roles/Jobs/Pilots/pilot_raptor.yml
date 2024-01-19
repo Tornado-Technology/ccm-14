@@ -7,6 +7,12 @@
   icon: "JobIconPilotOfficer"
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
+  reqyurements:
+  - !type:OverallPlaytimeRequirement
+      time: 108000 # 30 hrs
+  - !type:RoleTimeRequirement
+      role: JobPilotNormandy
+      time: 3600 # 1 hrs
   access:
     - Command
     - Pilot
