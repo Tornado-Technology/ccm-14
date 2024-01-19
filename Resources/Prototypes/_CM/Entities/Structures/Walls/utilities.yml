@@ -1,6 +1,7 @@
 - type: entity
   id: WallFOBProtection
   suffix: CM
+  parent: BaseStructure
   name: Bluespace barrier
   placement:
     mode: SnapgridCenter
@@ -20,8 +21,10 @@
         mask:
         - FullTileMask
         layer:
-        - GlassLayer
+        - WallLayer
+        density: 1000
   - type: Airtight
+  - type: Occluder
   - type: Sprite
     sprite: Objects/Misc/nope.rsi
     state: icon
