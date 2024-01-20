@@ -5,7 +5,6 @@
   parent: BaseStructure
   components:
   - type: InteractionOutline
-  - type: Anchorable
   - type: CollideOnAnchor
   - type: Physics
     canCollide: false
