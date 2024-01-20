@@ -26,6 +26,8 @@
   - type: Tag
     tags:
       - Meat
+  - type: TimedDespawn
+    lifetime: 300
 
 - type: entity
   id: OrganHumanBrain

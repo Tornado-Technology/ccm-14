@@ -30,6 +30,9 @@
         Quantity: 3
       - ReagentId: Blood
         Quantity: 10
+  - type: TimedDespawn
+    lifetime: 300
+   
 
 - type: entity
   id: HandsAnimal
