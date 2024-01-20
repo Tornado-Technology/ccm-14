@@ -58,7 +58,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 22
+          Brute: 18
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10
