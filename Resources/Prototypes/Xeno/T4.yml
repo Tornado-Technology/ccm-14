@@ -23,7 +23,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 30
+          Brute: 36
 
 - type: entity
   name: queen
@@ -65,7 +65,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 18
         types:
           Structural: 15
 
@@ -91,7 +91,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 30
+          Brute: 36
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10

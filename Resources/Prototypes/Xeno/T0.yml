@@ -68,7 +68,7 @@
       animation: WeaponArcBite
       damage:
         types:
-          Piercing: 2
+          Piercing: 3
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -137,4 +137,4 @@
       hidden: true
       damage:
         groups:
-          Brute: 10
+          Brute: 15

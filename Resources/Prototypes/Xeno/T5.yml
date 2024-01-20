@@ -42,7 +42,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 30
+          Brute: 36
         types:
           Structural: 30
     - type: StealthOnMove

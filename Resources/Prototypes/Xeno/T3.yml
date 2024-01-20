@@ -19,7 +19,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 25
+          Brute: 30
 
 - type: entity
   name: Defiler
@@ -50,7 +50,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 25
+          Brute: 30
 
 - type: entity
   name: gorger
@@ -76,7 +76,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 18
         types:
           Structural: 20
 
@@ -101,7 +101,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 25
+          Brute: 30
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: XenoRavager
@@ -153,7 +153,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 25
+          Brute: 30
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10

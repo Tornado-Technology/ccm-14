@@ -25,7 +25,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 5
+          Brute: 8
         types:
           Structural: 10
 
@@ -58,7 +58,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 22
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10
@@ -95,7 +95,7 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 18
 
 - type: entity
   name: warrior
@@ -123,4 +123,4 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 18
