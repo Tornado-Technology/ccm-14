@@ -35,6 +35,7 @@
         Dead:
           Base: dead
     - type: Item
+      size: Large
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
