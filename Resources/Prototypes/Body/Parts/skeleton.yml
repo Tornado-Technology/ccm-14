@@ -17,8 +17,6 @@
   - type: Tag
     tags:
       - Trash
-  - type: TimedDespawn
-    lifetime: 300
 
 - type: entity
   id: TorsoSkeleton
