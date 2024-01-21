@@ -72,6 +72,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             Fob = true;
 
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"), Loc.GetString("ai-announcement-sender"));
+            _audio.PlayGlobal("/Audio/_CM/Misc/fob_protection_sound.ogg", Filter.Broadcast(), recordReplay: true);
 
             foreach (var tag in EntityQuery<TagComponent>())
             {
