@@ -6,13 +6,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobShipsEngineer
-      time: 18000 # 5 hrs
+      time: 36000 # 10 hrs
     - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 18000 # 5 hrs
+      role: JobBravoMarine
+      time: 108000 # 30 hrs
     - !type:RoleTimeRequirement
       role: JobMilitaryMedic
-      time: 18000 # 5 hrs
+      time: 36000 # 10 hrs
   startingGear: AlfaCommanderGear
   icon: "JobIconAlfaCommander"
   supervisors: job-supervisors-field-commander
