@@ -8,7 +8,7 @@
       role: JobShipsEngineer
       time: 36000 # 10 hrs
     - !type:RoleTimeRequirement
-      role: JobBravoMarine
+      role: JobAlfaMarine
       time: 108000 # 30 hrs
     - !type:RoleTimeRequirement
       role: JobMilitaryMedic
