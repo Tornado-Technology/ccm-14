@@ -4,15 +4,15 @@
   description: job-description-alfacommander
   playTimeTracker: JobAlfaCommander
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobShipsEngineer
-      time: 36000 # 10 hrs
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 108000 # 30 hrs
-    - !type:RoleTimeRequirement
-      role: JobMilitaryMedic
-      time: 36000 # 10 hrs
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 32400 # 3 hrs
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 32400 # 3 hrs
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 32400 # 3 hrs
   startingGear: AlfaCommanderGear
   icon: "JobIconAlfaCommander"
   supervisors: job-supervisors-field-commander
