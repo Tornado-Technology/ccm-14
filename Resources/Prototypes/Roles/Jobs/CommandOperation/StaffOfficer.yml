@@ -6,13 +6,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobMilitaryPoliceOfficer
-      time: 18000 # 5 hrs
+      time: 3600 # 1 hrs
     - !type:RoleTimeRequirement
       role: JobSupplyOfficer
-      time: 18000 # 5 hrs
+      time: 3600 # 1 hrs
     - !type:RoleTimeRequirement
       role: JobFieldCommander
-      time: 18000 # 5 hrs
+      time: 3600 # 1 hrs
   startingGear: StaffOfficerGear
   icon: "JobIconStaffOfficer"
   supervisors: job-supervisors-centcom

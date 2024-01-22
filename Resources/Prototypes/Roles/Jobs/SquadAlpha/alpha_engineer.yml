@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobShipsEngineer
-      time: 18000 # 5 hrs
+      time: 108000 # 5 hrs
   startingGear: AlfaEngineerGear
   icon: "JobIconAlfaEngineer"
   supervisors: job-supervisors-commander
