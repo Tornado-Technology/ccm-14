@@ -27,7 +27,7 @@
     - DeltaMedic
     - BravoMedic
     - CharlieMedic
-    
+
 - type: department
   id: EngineersGarrison
   description: department-EngineersGarrison-description
@@ -37,7 +37,7 @@
     - DeltaEngineer
     - BravoEngineer
     - CharlieEngineer
-    
+
 - type: department
   id: MarinesGarrison
   description: department-MarinesGarrison-description

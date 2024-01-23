@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobCharlieMarine
-      time: 36000 # 10 hrs
+      time: 18000 # 5 hrs
   startingGear: CharlieSpecialistGear
   icon: "JobIconCharlieSpecialist"
   supervisors: job-supervisors-commander
