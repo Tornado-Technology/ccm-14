@@ -1,6 +1,5 @@
-using Content.Server.Xeno.Systems;
+using Content.Server._CM14.Barrier;
 using Content.Shared.Administration;
-using Content.Shared.Prayer;
 using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands;
@@ -22,11 +21,11 @@ public sealed partial class FOBTimer : IConsoleCommand
         }
 
         var entityManager = IoCManager.Resolve<IEntityManager>();
-        var sys = entityManager.System<XenoRuleSystem>();
+        var sys = entityManager.System<CMBarrierSystem>();
 
         if (args[0] == "get")
         {
-            shell.WriteLine($"Current: {sys.FobTime}, Max: {XenoRuleSystem.FOBTime}");
+            shell.WriteLine($"Current: {sys.BarrierTimer}");
         }
         else if (args[0] == "set")
         {
@@ -34,8 +33,8 @@ public sealed partial class FOBTimer : IConsoleCommand
             {
                 if (float.TryParse(args[1], out var res))
                 {
-                    sys.FobTime = res;
-                    sys.Fob = false;
+                    sys.BarrierTimer = res;
+                    sys.BarrierCountdown = true;
                 }
                 else
                 {
