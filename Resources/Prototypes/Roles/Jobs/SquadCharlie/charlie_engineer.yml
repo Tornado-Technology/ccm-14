@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobShipsEngineer
-      time: 108000 # 5 hrs
+      time: 18000 # 5 hrs
   startingGear: CharlieEngineerGear
   icon: "JobIconCharlieEngineer"
   supervisors: job-supervisors-commander
