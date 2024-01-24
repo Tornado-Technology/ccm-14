@@ -25,22 +25,27 @@ public sealed class CMBarrierSystem : EntitySystem
             return;
         if (BarrierTimer - frameTime < 0 && BarrierCountdown)
         {
-            _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"),
-                Loc.GetString("ai-announcement-sender"));
-            var first = true;
-            var query = EntityQueryEnumerator<CMBarrierComponent>();
-            while (query.MoveNext(out var uid, out var barrier))
-            {
-                EnsureComp<TimedDespawnComponent>(uid);
-                if (!first)
-                    continue;
-                _sound.PlayGlobalOnStation(uid, "/Audio/_CM/Misc/fob_protection_sound.ogg");
-                first = false;
-            }
+            BarrierDisable();
             BarrierCountdown = false;
             return;
         }
 
         BarrierTimer -= frameTime;
+    }
+
+    public void BarrierDisable()
+    {
+        _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"),
+            Loc.GetString("ai-announcement-sender"));
+        var first = true;
+        var query = EntityQueryEnumerator<CMBarrierComponent>();
+        while (query.MoveNext(out var uid, out var barrier))
+        {
+            EnsureComp<TimedDespawnComponent>(uid);
+            if (!first)
+                continue;
+            _sound.PlayGlobalOnStation(uid, "/Audio/_CM/Misc/fob_protection_sound.ogg");
+            first = false;
+        }
     }
 }

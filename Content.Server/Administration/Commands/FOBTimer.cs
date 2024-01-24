@@ -10,7 +10,7 @@ public sealed partial class FOBTimer : IConsoleCommand
     public const string CommandName = "fobtime";
     public string Command => CommandName;
     public string Description => "Work with fob time.";
-    public string Help => $"fobtime <get/set> <time>";
+    public string Help => $"fobtime <get/set> <time> or fobtime off";
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
@@ -41,6 +41,10 @@ public sealed partial class FOBTimer : IConsoleCommand
                     shell.WriteError($"wrong number");
                 }
             }
+        }
+        else if (args[0] == "off")
+        {
+            sys.BarrierDisable();
         }
         else
         {
