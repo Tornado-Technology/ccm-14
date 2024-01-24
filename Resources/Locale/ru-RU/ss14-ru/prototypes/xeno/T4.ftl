@@ -3,4 +3,4 @@ ent-MobPraetorianXeno = Преторианец
 ent-MobQueenXeno = Королева
     .desc = Сердце роя, рождает новых ксеноморфов.
 ent-MobRounyXeno = Руни
-    .desc = Очень быстрый, умеет плеваться и станить.
+    .desc = Очень быстрый.
