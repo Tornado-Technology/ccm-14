@@ -25,7 +25,6 @@ public sealed class CMBarrierSystem : EntitySystem
             return;
         if (BarrierTimer - frameTime < 0 && BarrierCountdown)
         {
-            BarrierCountdown = false;
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"),
                 Loc.GetString("ai-announcement-sender"));
             var first = true;
@@ -38,6 +37,8 @@ public sealed class CMBarrierSystem : EntitySystem
                 _sound.PlayGlobalOnStation(uid, "/Audio/_CM/Misc/fob_protection_sound.ogg");
                 first = false;
             }
+            BarrierCountdown = false;
+            return;
         }
 
         BarrierTimer -= frameTime;
