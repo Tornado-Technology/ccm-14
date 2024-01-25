@@ -8,10 +8,6 @@
   - type: PlacementReplacement
     key: walls
   - type: SoundOnGather
-  - type: Gatherable
-    whitelist:
-      tags:
-        - Pickaxe
   - type: IconSmooth
     key: walls
     mode: NoSprite
