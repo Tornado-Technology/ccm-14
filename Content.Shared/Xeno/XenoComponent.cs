@@ -1,8 +1,9 @@
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Xeno;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class XenoComponent : Component
 {
     [DataField]
