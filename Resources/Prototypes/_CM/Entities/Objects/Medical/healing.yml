@@ -49,7 +49,7 @@
 - type: stack
   id: CMOintment
   name: ointment
-  icon: { sprite: "/Textures/_CM/Objects//Medical/medical.rsi", state: ointment }
+  icon: { sprite: "/Textures/_CM/Objects/Medical/medical.rsi", state: ointment }
   spawn: CMOintment
   maxCount: 10
   itemSize: 1
@@ -107,7 +107,7 @@
 - type: stack
   id: CMGauze
   name: gauze
-  icon: { sprite: "/Textures/_CM/Objects//Medical/medical.rsi", state: gauze }
+  icon: { sprite: "/Textures/_CM/Objects/Medical/medical.rsi", state: gauze }
   spawn: CMGauze
   maxCount: 10
   itemSize: 1
