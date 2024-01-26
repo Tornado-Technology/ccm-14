@@ -1,6 +1,6 @@
-ent-DrinkFlaskDefault = Фляга
+ent-DrinkFlaskDefault = фляга
     .desc = Вы делаете глоток из своей надежной фляжки USCM...
-ent-DrinkFlaskMetal = Металлическая фляга
+ent-DrinkFlaskMetal = металлическая фляга
     .desc = Металлическая фляга с приличной емкостью для жидкости.
 ent-DrinkFlaskMetalUSCM = USCM фляга
     .desc = Металлическая фляга с тиснением логотипа USCM, вероятно, наполненная смесью воды, моторного масла и медицинского спирта.
