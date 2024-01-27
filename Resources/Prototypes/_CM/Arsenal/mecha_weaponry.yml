@@ -1,0 +1,378 @@
+# parents
+
+- type: entity
+  parent: BaseMechEquipment
+  id: BaseMechWeapon
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Gun
+    fireRate: 2
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    cameraRecoilScalar: 100
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - Syringecartridge
+  - type: Appearance
+  - type: MechEquipment
+    canbeused: True
+  - type: MechGun
+  - type: Tag
+    tags:
+    - WeaponMech
+
+- type: entity
+  id: BaseMechWeaponBattery
+  parent: BaseMechEquipment
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+  - type: Gun
+    fireRate: 2
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: Battery
+    maxCharge: 30
+    startingCharge: 30
+  - type: Appearance
+  - type: MechEquipment
+    canbeused: True
+  - type: MechGun
+  - type: Tag
+    tags:
+    - WeaponMech
+# ammo & magazines
+
+- type: entity
+  id: CartridgeAC
+  name: cartridge "GGX"
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeAC
+  - type: CartridgeAmmo
+    proto: BulletAC
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: CartridgeHades
+  name: cartridge "HellBoy"
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeHades
+  - type: CartridgeAmmo
+    proto: BulletHades
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: MagazineScattershot
+  name: scattershot's drum
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+    - MagazineShotgunMech
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun
+    capacity: 40
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/scatter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Large
+
+- type: entity
+  id: MagazineAC
+  name: magazine "GGX"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineAC
+  - type: Item
+    size: Large
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeAC
+    capacity: 300
+    proto: CartridgeAC
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ultra.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: entity
+  id: MagazineHades
+  name: magazine "HellBoy"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineAC
+  - type: Item
+    size: Large
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeHades
+    capacity: 26
+    proto: CartridgeHades
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/hades.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+# other guns
+
+- type: entity
+  name: Ultra AC 2
+  parent: BaseMechWeapon
+  id: MechWeaponUltra
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    state: mecha_uac2
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 3
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAC
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineAC
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAC
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAC
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: FNX-99 "Hades" Carbine
+  parent: BaseMechWeapon
+  id: MechWeaponHades
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    state: mecha_carbine
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHades
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHades
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHades
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHades
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: BaseWeaponShotgun
+  parent: BaseMechWeapon
+  id: MechWeaponScattershot
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    state: mecha_scatter
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineScattershot
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineShotgunMech
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+
+#lasers
+
+- type: entity
+  name: CH-PS "Immolator" Laser
+  parent: BaseMechWeaponBattery
+  id: MechWeaponImmolator
+  description: Fires a Laser bolt, identical to laser rifles.
+  components:
+  - type: Sprite
+    state: mecha_laser
+  - type: Gun
+    fireRate: 1.2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 30
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name:  CH-LC "Solaris" Laser Cannon
+  parent: BaseMechWeaponBattery
+  id: MechWeaponSolaris
+  description: Fires a Heavy Laser bolt, identical to the laser cannon.
+  components:
+  - type: Sprite
+    state: mecha_laser
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: Battery
+    maxCharge: 40
+    startingCharge: 40
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 40
+
+#projectiles
+
+
+- type: entity
+  id: BulletAC
+  name: bullet (0.36 rifle)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+
+- type: entity
+  id: BulletHades
+  name: bullet (0.36 rifle)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Heat: 5
+  - type: IgniteOnCollide
+    fireStacks: 4
