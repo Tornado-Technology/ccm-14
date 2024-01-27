@@ -1229,3 +1229,21 @@
 
 - type: Tag
   id: Pouch
+
+- type: Tag
+  id: CartridgeAC
+
+- type: Tag
+  id: CartridgeHades
+
+- type: Tag
+  id: MagazineAC
+
+- type: Tag
+  id: MagazineShotgunMech
+
+- type: Tag
+  id: MagazineHades
+
+- type: Tag
+  id: WeaponMech
