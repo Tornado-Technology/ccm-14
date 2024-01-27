@@ -3,7 +3,7 @@ ent-CMBaseDefibrillator = дефибриллятор
 ent-CMDefibrillator = { ent-CMBaseDefibrillator }
 
   .suffix = CM14
-  .desc = { ent-'CMBaseDefibrillator.desc }
+  .desc = { ent-CMBaseDefibrillator.desc }
 ent-CMDefibrillatorEmpty = { ent-CMDefibrillator }
     .suffix = CM14, Пустой
     .desc = { ent-CMDefibrillator.desc }
