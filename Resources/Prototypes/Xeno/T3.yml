@@ -20,6 +20,9 @@
       damage:
         groups:
           Brute: 30
+    - type: XenoDegradation
+      prototype: MobXenoBull
+      timeUsage: 60
 
 - type: entity
   name: Defiler
@@ -51,6 +54,9 @@
       damage:
         groups:
           Brute: 30
+    - type: XenoDegradation
+      prototype: MobSpitterXeno
+      timeUsage: 60
 
 - type: entity
   name: gorger
@@ -79,6 +85,9 @@
           Brute: 18
         types:
           Structural: 20
+    - type: XenoDegradation
+      prototype: MobHivelordXeno
+      timeUsage: 60
 
 - type: entity
   name: ravager
@@ -105,6 +114,9 @@
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: XenoRavager
+    - type: XenoDegradation
+      prototype: MobBullXeno
+      timeUsage: 60
 
 - type: damageModifierSet
   id: XenoRavager
@@ -161,3 +173,6 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
     - type: Stealth
+    - type: XenoDegradation
+      prototype: MobHunterXeno
+      timeUsage: 60

@@ -1,0 +1,11 @@
+- type: entity
+  id: ActionXenoDegradation
+  name: Degradation
+  description: action-cm-xeno-degradation
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Actions/xeno.rsi
+      state: degradation
+    event: !type:XenoDegradationEvent

@@ -115,7 +115,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
         childXform.LocalRotation = targetTransformComp.LocalRotation;
 
         if (_container.TryGetContainingContainer(uid, out var cont))
-            cont.Insert(child);
+            _container.Insert(child, cont);
 
         if (_mind.TryGetMind(uid, out var mindId, out var mind))
             _mind.TransferTo(mindId, child, mind: mind);
