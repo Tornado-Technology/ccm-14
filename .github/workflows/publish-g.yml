@@ -66,7 +66,7 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.BUILDS_SSH_KEY }}" > ~/.ssh/id_rsa
-       chmod 600 ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         echo "HOST *" > ~/.ssh/config
         echo "StrictHostKeyChecking no" >> ~/.ssh/config
         rsync -avzr --ignore-existing -e ssh release/${{ github.sha }} ${{ secrets.BUILDS_USERNAME }}@${{ secrets.BUILDS_HOST }}:${{ secrets.BUILDS_PATH }}
