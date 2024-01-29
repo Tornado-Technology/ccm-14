@@ -15,10 +15,10 @@ ent-WeaponForceGun = force gun
 
 ent-WeaponTetherGunAdmin = tether gun
     .desc = Manipulates gravity around objects to fling them at high velocities.
-    .suffix = admin
+    .suffix = Admeme
 ent-WeaponForceGunAdmin = force gun
     .desc = Manipulates gravity around objects to fling them at high velocities.
-    .suffix = Admin
+    .suffix = Admeme
 ent-WeaponLauncherAdmemeMeteorLarge = meteor launcher
     .desc = It fires large meteors
     .suffix = Admeme

@@ -182,10 +182,10 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         if (!InventorySystem.TryGetSlotEntity(entity, "id", out var idUid))
             return;
 
-        if (!TryComp<IdCardComponent>(idUid, out var card))
+        if (!TryComp<IdCardComponent>(idUid, out var card)) // Corvax-CM14-Changes
             return;
 
-        var cardId = idUid.Value;
+        var cardId = idUid.Value; // Corvax-CM14-Changes
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
 
@@ -202,6 +202,10 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         }
 
         _accessSystem.SetAccessToJob(cardId, jobPrototype, extendedAccess);
+
+        // Corvax-CM14-Changes
+        // if (pdaComponent != null)
+        //    _pdaSystem.SetOwner(idUid.Value, pdaComponent, characterName);
     }
 
 

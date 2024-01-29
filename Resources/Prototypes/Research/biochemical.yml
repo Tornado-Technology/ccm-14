@@ -1,5 +1,4 @@
-﻿# Tier 1 (10000)
-
+﻿# Tier 1
 - type: technology
   id: Chemistry
   name: research-technology-chemistry
@@ -16,8 +15,6 @@
   - ChemicalPayload
   - ClothingEyesGlassesChemical
   - Jug
-  - CryostasisBeaker
-  - StasisBedMachineCircuitboard
 
 - type: technology
   id: SurgicalTools
@@ -35,6 +32,20 @@
   - Drill
   - Saw
   - Hemostat
+
+- type: technology
+  id: BiochemicalStasis
+  name: research-technology-biochemical-stasis
+  icon:
+    sprite: Structures/Machines/stasis_bed.rsi
+    state: icon
+  discipline: Biochemical
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - CryostasisBeaker
+  - StasisBedMachineCircuitboard
+  - SyringeCryostasis
 
 - type: technology
   id: MechanizedTreatment
@@ -62,7 +73,7 @@
   - VaccinatorMachineCircuitboard
   - DiagnoserMachineCircuitboard
 
-# Tier 2 (10000)
+# Tier 2
 
 - type: technology
   id: Cryopod
@@ -77,6 +88,19 @@
   - CryoPodMachineCircuitboard
 
 - type: technology
+  id: Biofabrication
+  name: research-technology-biofabrication
+  icon:
+    sprite: Structures/Machines/biofabricator.rsi
+    state: icon
+  discipline: Biochemical
+  tier: 2
+  cost: 1000
+  recipeUnlocks:
+  - BiofabricatorMachineCircuitboard
+  - BiomassReclaimerMachineCircuitboard
+
+- type: technology
   id: ChemicalDispensary
   name: research-technology-chemical-dispensary
   icon:
@@ -89,9 +113,20 @@
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
   - BorgModuleAdvancedTreatment
-  - HandheldCrewMonitor
   technologyPrerequisites:
   - Chemistry
+
+- type: technology
+  id: CrewMonitoring
+  name: research-technology-crew-monitoring
+  icon:
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  discipline: Biochemical
+  tier: 2
+  cost: 1000
+  recipeUnlocks:
+  - HandheldCrewMonitor
 
 # Tier 3
 
@@ -109,18 +144,17 @@
   - SyringeBluespace
   - Hypospray
 
-# look into revisiting this later once medical isn't a hellhole
-#- type: technology
-#  id: Cloning
-#  name: research-technology-cloning
-#  icon:
-#    sprite: Structures/Machines/cloning.rsi
-#    state: pod_0
-#  discipline: Biochemical
-#  tier: 3
-#  cost: 15000
-#  recipeUnlocks:
-#  - CloningPodMachineCircuitboard
-#  - MedicalScannerMachineCircuitboard
-#  - CloningConsoleComputerCircuitboard
-#  - BiomassReclaimerMachineCircuitboard
+- type: technology
+  id: Cloning
+  name: research-technology-cloning
+  icon:
+    sprite: Structures/Machines/cloning.rsi
+    state: pod_0
+  discipline: Biochemical
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - CloningPodMachineCircuitboard
+  - MedicalScannerMachineCircuitboard
+  - CloningConsoleComputerCircuitboard
+  - BiomassReclaimerMachineCircuitboard
