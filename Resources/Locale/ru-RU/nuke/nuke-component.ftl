@@ -36,3 +36,5 @@ nuke-label-syndicate = ОПЗ-{ $serial }
 nuke-codes-message = [color=red]ДЛЯ МОРСКОЙ ПЕХОТЫ ОПЗ![/color]
 nuke-codes-list = Код { $name }: { $code }
 nuke-codes-fax-paper-name = коды ядерной аутентификации
+# Nuke disk slot
+nuke-slot-component-slot-name-disk = Диск

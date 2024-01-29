@@ -65,6 +65,7 @@
     time: 3
   - type: Airlock
     openUnlitVisible: true # Corvax-Resprite-Airlocks
+  - type: NavMapDoor
   - type: DoorBolt
   - type: Appearance
   - type: WiresVisuals
@@ -118,6 +119,10 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
   - type: Construction
     graph: Airlock
     node: airlock
@@ -133,7 +138,9 @@
   - type: AccessReader
   - type: StaticPrice
     price: 150
-  - type: Godmode
+  - type: LightningTarget
+    priority: 1
+  - type: Godmode # Corvax-CM14-Changes
   - type: Tag
     tags:
       - Airlock
@@ -141,4 +148,5 @@
   - type: PryUnpowered
   placement:
     mode: SnapgridCenter
+
 

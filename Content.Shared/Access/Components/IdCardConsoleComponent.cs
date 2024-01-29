@@ -51,6 +51,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "HeadOfSecurity",
         "ResearchDirector",
         "Command",
+        "Cryogenics",
         "Engineering",
         "External",
         "HeadOfPersonnel",

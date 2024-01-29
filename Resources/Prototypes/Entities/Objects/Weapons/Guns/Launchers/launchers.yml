@@ -21,9 +21,9 @@
         ents: []
 
 - type: entity
-  name: RPG M5 Launcher
+  name: china lake
   parent: BaseWeaponLauncher
-  id: WeaponLauncherRPGM5
+  id: WeaponLauncherChinaLake
   description: PLOOP
   components:
   - type: Sprite
@@ -45,7 +45,7 @@
     whitelist:
       tags:
         - Grenade
-    capacity: 1
+    capacity: 3
     proto: GrenadeFrag
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
@@ -144,7 +144,7 @@
     - type: BallisticAmmoProvider
       whitelist:
         tags:
-          - Grenade
+          - CannonBall
       capacity: 1
       proto: CannonBall
       soundInsert:
@@ -230,13 +230,43 @@
                 True: { visible: true }
                 False: { visible: false }
 
+- type: entity
+  name: grappling gun
+  parent: BaseItem
+  id: WeaponGrapplingGun
+  components:
+    - type: AmmoCounter
+    - type: GrapplingGun
+    - type: Gun
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/harpoon.ogg
+      fireRate: 0.5
+    - type: BasicEntityAmmoProvider
+      proto: GrapplingHook
+      capacity: 1
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
+      layers:
+        - state: base
+        - state: base-unshaded
+          map: [ "unshaded" ]
+          shader: unshaded
+          visible: true
+    - type: UseDelay
+      delay: 1.5
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.TetherVisualsStatus.Key:
+          unshaded:
+            True: { state: base-unshaded }
+            False: { state: base-unshaded-off }
 
 # Admeme
 - type: entity
   name: tether gun
   parent: BaseItem
   id: WeaponTetherGunAdmin
-  suffix: admin
+  suffix: Admeme
   description: Manipulates gravity around objects to fling them at high velocities.
   components:
     - type: TetherGun
@@ -275,7 +305,7 @@
   name: force gun
   parent: BaseItem
   id: WeaponForceGunAdmin
-  suffix: Admin
+  suffix: Admeme
   description: Manipulates gravity around objects to fling them at high velocities.
   components:
     - type: ForceGun

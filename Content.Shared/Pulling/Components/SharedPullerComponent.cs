@@ -1,6 +1,8 @@
+using Robust.Shared.GameStates;
+
 namespace Content.Shared.Pulling.Components
 {
-    [RegisterComponent]
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
     [Access(typeof(SharedPullingStateManagementSystem))]
     public sealed partial class SharedPullerComponent : Component
     {
@@ -15,7 +17,7 @@ namespace Content.Shared.Pulling.Components
 
         public float SprintSpeedModifier => Pulling == default ? 1.0f : SprintModifier;
 
-        [ViewVariables]
+        [DataField, AutoNetworkedField]
         public EntityUid? Pulling { get; set; }
 
         /// <summary>

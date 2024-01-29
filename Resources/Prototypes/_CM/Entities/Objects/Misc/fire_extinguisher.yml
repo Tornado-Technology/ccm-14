@@ -24,7 +24,6 @@
   - type: DrainableSolution
     solution: spray
   - type: SolutionTransfer
-  - type: ItemCooldown
   - type: Spray
     transferAmount: 5
     spraySound:

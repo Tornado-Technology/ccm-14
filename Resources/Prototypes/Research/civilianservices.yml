@@ -1,34 +1,6 @@
 # Tier 1
 
 - type: technology
-  id: JanitorialEquipment
-  name: research-technology-janitorial-equipment
-  icon:
-    sprite: Objects/Specific/Janitorial/mop.rsi
-    state: mop
-  discipline: CivilianServices
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - MopItem
-  - Holoprojector
-  - Mousetrap
-  - LightReplacer
-  - TrashBag
-
-- type: technology
-  id: LaundryTech
-  name: research-technology-laundry-tech
-  icon:
-    sprite: Structures/Machines/uniform_printer.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - UniformPrinterMachineCircuitboard
-
-- type: technology
   id: Hydroponics
   name: research-technology-basic-hydroponics
   icon:
@@ -80,15 +52,25 @@
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
-  - ComputerTelevisionCircuitboard
-  - SynthesizerInstrument
-  - BorgModuleMusique
-  - BorgModuleClowning
-  - DawInstrumentMachineCircuitboard
-  - MassMediaCircuitboard
 
-# Tier 2 (5000)
+- type: technology
+  id: AdvancedEntertainment
+  name: research-technology-advanced-entertainment
+  icon:
+    sprite: Structures/Machines/computers.rsi
+    state: television
+  discipline: CivilianServices
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+    - ComputerTelevisionCircuitboard
+    - SynthesizerInstrument
+    - BorgModuleMusique
+    - BorgModuleClowning
+    - DawInstrumentMachineCircuitboard
+    - MassMediaCircuitboard
 
+# Tier 2
 - type: technology
   id: FauxAstroTiles
   name: research-technology-faux-astro-tiles
@@ -175,7 +157,7 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-# Tier 3 (10000)
+# Tier 3
 
 - type: technology
   id: BluespaceCargoTransport

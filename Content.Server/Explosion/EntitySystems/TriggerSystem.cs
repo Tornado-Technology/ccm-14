@@ -1,23 +1,26 @@
-using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
+using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Explosion.Components;
 using Content.Server.Flash;
 using Content.Server.Flash.Components;
 using Content.Server.Radio.EntitySystems;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
-using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Database;
 using Content.Shared.Implants.Components;
 using Content.Shared.Interaction;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Payload.Components;
-using Robust.Shared.Prototypes;
 using Content.Shared.Radio;
 using Content.Shared.Slippery;
 using Content.Shared.StepTrigger.Systems;
 using Content.Shared.Trigger;
+using Content.Shared.Weapons.Ranged.Events;
 using JetBrains.Annotations;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
@@ -29,6 +32,7 @@ using Content.Server.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Components;
 using Content.Server.Chemistry.Components;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
 namespace Content.Server.Explosion.EntitySystems
@@ -69,6 +73,7 @@ namespace Content.Server.Explosion.EntitySystems
         [Dependency] private readonly RadioSystem _radioSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
         [Dependency] private readonly PuddleSystem _puddleSystem = default!;
         [Dependency] private readonly SolutionContainerSystem _solutionSystem = default!;
         [Dependency] private readonly IEntityManager _entManager = default!;
@@ -86,6 +91,7 @@ namespace Content.Server.Explosion.EntitySystems
             InitializeVoice();
             InitializeMobstate();
 
+            SubscribeLocalEvent<TriggerOnSpawnComponent, MapInitEvent>(OnSpawnTriggered);
             SubscribeLocalEvent<TriggerOnCollideComponent, StartCollideEvent>(OnTriggerCollide);
             SubscribeLocalEvent<TriggerOnActivateComponent, ActivateInWorldEvent>(OnActivate);
             SubscribeLocalEvent<TriggerImplantActionComponent, ActivateImplantEvent>(OnImplantTrigger);
@@ -108,7 +114,6 @@ namespace Content.Server.Explosion.EntitySystems
         private void OnSplashTrigger(EntityUid uid, SplashOnTriggerComponent comp, TriggerEvent args)
         {
             var xform = Transform(uid);
-
             var coords = xform.Coordinates;
 
             if (!coords.IsValid(EntityManager))
@@ -117,16 +122,13 @@ namespace Content.Server.Explosion.EntitySystems
             var transferSolution = new Solution();
             transferSolution.AddReagent("XenoAcid", comp.Quantity); // TODO: Fix this shit
 
-            if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
-            {
-                _solutionSystem.TryAddSolution(uid, injectableSolution, transferSolution);
-            }
+            if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution, out _))
+                _solutionSystem.TryAddSolution((uid, injectableSolution), transferSolution);
 
             var foamEnt = Spawn("Foam", coords);
 
             _smoke.StartSmoke(foamEnt, transferSolution, 10f, comp.SpreadAmount);
-
-            _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out var puddleUID);
+            _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out _);
         }
 
         private void OnSoundTrigger(EntityUid uid, SoundOnTriggerComponent component, TriggerEvent args)
@@ -226,6 +228,11 @@ namespace Content.Server.Explosion.EntitySystems
                 Trigger(uid);
         }
 
+        private void OnSpawnTriggered(EntityUid uid, TriggerOnSpawnComponent component, MapInitEvent args)
+        {
+            Trigger(uid);
+        }
+
         private void OnActivate(EntityUid uid, TriggerOnActivateComponent component, ActivateInWorldEvent args)
         {
             Trigger(uid, args.User);
@@ -267,7 +274,7 @@ namespace Content.Server.Explosion.EntitySystems
             comp.TimeRemaining += amount;
         }
 
-        public void HandleTimerTrigger(EntityUid uid, EntityUid? user, float delay , float beepInterval, float? initialBeepDelay, SoundSpecifier? beepSound)
+        public void HandleTimerTrigger(EntityUid uid, EntityUid? user, float delay, float beepInterval, float? initialBeepDelay, SoundSpecifier? beepSound)
         {
             if (delay <= 0)
             {
@@ -287,12 +294,18 @@ namespace Content.Server.Explosion.EntitySystems
                     TryComp(container.ContainedEntities[0], out ChemicalPayloadComponent? chemicalPayloadComponent))
                 {
                     // If a beaker is missing, the entity won't explode, so no reason to log it
-                    if (!TryComp(chemicalPayloadComponent?.BeakerSlotA.Item, out SolutionContainerManagerComponent? beakerA) ||
-                        !TryComp(chemicalPayloadComponent?.BeakerSlotB.Item, out SolutionContainerManagerComponent? beakerB))
+                    if (chemicalPayloadComponent?.BeakerSlotA.Item is not { } beakerA ||
+                        chemicalPayloadComponent?.BeakerSlotB.Item is not { } beakerB ||
+                        !TryComp(beakerA, out SolutionContainerManagerComponent? containerA) ||
+                        !TryComp(beakerB, out SolutionContainerManagerComponent? containerB) ||
+                        !TryComp(beakerA, out FitsInDispenserComponent? fitsA) ||
+                        !TryComp(beakerB, out FitsInDispenserComponent? fitsB) ||
+                        !_solutionContainerSystem.TryGetSolution((beakerA, containerA), fitsA.Solution, out _, out var solutionA) ||
+                        !_solutionContainerSystem.TryGetSolution((beakerB, containerB), fitsB.Solution, out _, out var solutionB))
                         return;
 
                     _adminLogger.Add(LogType.Trigger,
-                        $"{ToPrettyString(user.Value):user} started a {delay} second timer trigger on entity {ToPrettyString(uid):timer}, which contains [{string.Join(", ", beakerA.Solutions.Values.First())}] in one beaker and [{string.Join(", ", beakerB.Solutions.Values.First())}] in the other.");
+                        $"{ToPrettyString(user.Value):user} started a {delay} second timer trigger on entity {ToPrettyString(uid):timer}, which contains {SolutionContainerSystem.ToPrettyString(solutionA)} in one beaker and {SolutionContainerSystem.ToPrettyString(solutionB)} in the other.");
                 }
                 else
                 {
