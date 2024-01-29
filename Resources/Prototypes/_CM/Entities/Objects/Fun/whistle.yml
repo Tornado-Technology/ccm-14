@@ -9,7 +9,6 @@
     state: icon
   - type: Item
     sprite: _CM/Objects/Fun/whistle.rsi
-  - type: ItemCooldown
   - type: EmitSoundOnUse
     sound:
       collection: Whistle

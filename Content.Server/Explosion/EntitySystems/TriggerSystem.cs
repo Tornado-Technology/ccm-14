@@ -114,7 +114,6 @@ namespace Content.Server.Explosion.EntitySystems
         private void OnSplashTrigger(EntityUid uid, SplashOnTriggerComponent comp, TriggerEvent args)
         {
             var xform = Transform(uid);
-
             var coords = xform.Coordinates;
 
             if (!coords.IsValid(EntityManager))
@@ -123,16 +122,13 @@ namespace Content.Server.Explosion.EntitySystems
             var transferSolution = new Solution();
             transferSolution.AddReagent("XenoAcid", comp.Quantity); // TODO: Fix this shit
 
-            if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution))
-            {
-                _solutionSystem.TryAddSolution(uid, injectableSolution, transferSolution);
-            }
+            if (_solutionSystem.TryGetInjectableSolution(uid, out var injectableSolution, out _))
+                _solutionSystem.TryAddSolution((uid, injectableSolution), transferSolution);
 
             var foamEnt = Spawn("Foam", coords);
 
             _smoke.StartSmoke(foamEnt, transferSolution, 10f, comp.SpreadAmount);
-
-            _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out var puddleUID);
+            _puddleSystem.TrySplashSpillAt(uid, coords, transferSolution, out _);
         }
 
         private void OnSoundTrigger(EntityUid uid, SoundOnTriggerComponent component, TriggerEvent args)

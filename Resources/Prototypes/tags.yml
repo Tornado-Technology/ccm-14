@@ -1194,9 +1194,6 @@
   id: FOBProtection
 
 - type: Tag
-  id: WetFloorSign
-
-- type: Tag
   id: WallmountGeneratorAPUElectronics
 
 - type: Tag
