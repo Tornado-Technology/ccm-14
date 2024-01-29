@@ -4,7 +4,7 @@
   name: Майнер 
   description: Добывает ископаемые и приносит деньги. 
   components:
-    - type: Miner
+    - type: CMMiner
     - type: MeleeSound
       soundGroups:
         Brute:
@@ -41,7 +41,7 @@
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 500
+            damage: 150
           behaviors:
             - !type:PlaySoundBehavior
               sound:

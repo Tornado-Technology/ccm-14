@@ -2,7 +2,6 @@ using Content.Server.GameTicking;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Spawners;
 using Content.Server.Audio;
-using Robust.Shared.Log;
 
 
 namespace Content.Server._CM14.Barrier;
