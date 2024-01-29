@@ -1,0 +1,23 @@
+- type: entity
+  id: Roadblock
+  parent: HolosignWetFloor
+  name: roadblock
+  description: No.
+  components:
+    - type: Physics
+      bodyType: Static
+      canCollide: true
+    - type: Sprite
+      sprite: _CM/Structures/Misc/roadblock.rsi
+      state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          mask:
+            - TableMask
+          layer:
+            - TableLayer
+    - type: Clickable

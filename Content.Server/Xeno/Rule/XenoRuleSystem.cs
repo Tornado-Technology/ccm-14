@@ -8,24 +8,17 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Destructible;
 using Content.Server.Xeno.Components;
-
 using WinType = Content.Server.Xeno.Components.WinType;
 using WinCondition = Content.Server.Xeno.Components.WinCondition;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Player;
-using Robust.Shared.Audio;
 using Content.Shared.Xeno;
-using Content.Shared.Tag;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Spawners;
 
 namespace Content.Server.Xeno.Systems;
 
 public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 {
-    public const float AnnouncmentTime = 300f; // 5 min;
-    public const float FOBTime = 1200f;  // 1800 = 30 min;   1200 = 20 min;  600 = 10 min
-
     public int Eggs { get; private set; }
     public int Marines { get; private set; }
     public int Xenos { get; private set; }
@@ -36,11 +29,12 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly GameTicker _ticker = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
-    private float _announcmentTime = 0f;
-    public float FobTime = 0f;
-    public bool Fob = false;
 
-    private EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent> Query => EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent>();
+    private float _announcmentTime = 0f;
+    public const float AnnouncmentTime = 300f; // 5 min;
+
+    private EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent> Query =>
+        EntityQueryEnumerator<XenoRuleComponent, GameRuleComponent>();
 
     public override void Initialize()
     {
@@ -65,23 +59,6 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         if (_ticker.RunLevel != GameRunLevel.InRound)
             return;
 
-        FobTime += frameTime;
-        if (FobTime >= FOBTime && !Fob)
-        {
-            FobTime -= FOBTime;
-            Fob = true;
-
-            _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"), Loc.GetString("ai-announcement-sender"));
-
-            foreach (var tag in EntityQuery<TagComponent>())
-            {
-                if (!tag.Tags.Contains("FOBProtection"))
-                    continue;
-
-                AddComp<TimedDespawnComponent>(tag.Owner);
-            }
-        }
-
         _announcmentTime += frameTime;
 
         if (_announcmentTime < AnnouncmentTime)
@@ -96,14 +73,14 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
                 continue;
 
             CheckRoundShouldEnd();
-            _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-warning", ("xenos", Xenos), ("marines", Marines)), Loc.GetString("ai-announcement-sender"));
+            _chatSystem.DispatchGlobalAnnouncement(
+                Loc.GetString("ai-announcement-warning", ("xenos", Xenos), ("marines", Marines)),
+                Loc.GetString("ai-announcement-sender"));
         }
     }
 
     private void OnStartAttempt(RoundStartAttemptEvent ev)
     {
-        FobTime = 0;
-        Fob = false;
         return;
 
         var query = Query;
@@ -115,7 +92,8 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             var minPlayers = xeno.MinPlayers;
             if (!ev.Forced && ev.Players.Length < minPlayers)
             {
-                _chatManager.SendAdminAnnouncement(Loc.GetString("xeno-not-enough-ready-players", ("readyPlayersCount", ev.Players.Length), ("minimumPlayers", minPlayers)));
+                _chatManager.SendAdminAnnouncement(Loc.GetString("xeno-not-enough-ready-players",
+                    ("readyPlayersCount", ev.Players.Length), ("minimumPlayers", minPlayers)));
                 ev.Cancel();
                 continue;
             }
@@ -175,19 +153,22 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 
             if (Eggs == 20)
             {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"), sender, false, colorOverride: Color.Yellow);
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"),
+                    sender, false, colorOverride: Color.Yellow);
                 _audio.PlayGlobal("/Audio/Misc/redalert.ogg", Filter.Broadcast(), recordReplay: true);
             }
 
             if (Eggs == 40)
             {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"), sender, false, colorOverride: Color.Orange);
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"),
+                    sender, false, colorOverride: Color.Orange);
                 _audio.PlayGlobal("/Audio/Misc/siren.ogg", Filter.Broadcast(), recordReplay: true);
             }
 
             if (Eggs >= xeno.WinningXenoEggCount)
             {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"), sender, false, colorOverride: Color.Red);
+                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"),
+                    sender, false, colorOverride: Color.Red);
                 _audio.PlayGlobal("/Audio/Misc/delta.ogg", Filter.Broadcast(), recordReplay: true);
 
                 xeno.WinConditions.Add(WinCondition.EggsWinningCount);

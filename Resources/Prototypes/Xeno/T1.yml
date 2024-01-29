@@ -28,6 +28,7 @@
           Brute: 8
         types:
           Structural: 10
+    - type: XenoDegradation
 
 - type: entity
   name: runner
@@ -39,9 +40,6 @@
         - !type:XenoEvolution
           prototype: MobHunterXeno
           evolution: 600
-        - !type:XenoEvolution
-          prototype: MobBullXeno
-          evolution: 750
     - type: XenoRunner
     - type: XenoEvasion
     - type: MobThresholds
@@ -65,6 +63,7 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.6
+    - type: XenoDegradation
 
 - type: entity
   name: sentinel
@@ -96,6 +95,7 @@
       damage:
         groups:
           Brute: 18
+    - type: XenoDegradation
 
 - type: entity
   name: warrior
@@ -124,3 +124,4 @@
       damage:
         groups:
           Brute: 18
+    - type: XenoDegradation

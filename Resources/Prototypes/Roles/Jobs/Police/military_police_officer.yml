@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: MilitaryPolice
-      time: 36000 # 10 hrs
+      time: 18000 # 5 hrs
   startingGear: MilitaryPoliceOfficerGear
   icon: "JobIconMilitaryPoliceOfficer"
   supervisors: job-supervisors-staff-officer

@@ -24,8 +24,6 @@
   - type: FlavorProfile
     flavors:
       - people
-  - type: TimedDespawn
-    lifetime: 300
 
 - type: entity
   id: OrganDionaBrain

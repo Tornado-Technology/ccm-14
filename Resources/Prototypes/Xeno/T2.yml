@@ -30,6 +30,9 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
+    - type: XenoDegradation
+      prototype: MobWarriorXeno
+      timeUsage: 30
 
 - type: entity
   name: hivelord
@@ -61,6 +64,9 @@
           Brute: 18
         types:
           Structural: 10
+    - type: XenoDegradation
+      prototype: MobDroneXeno
+      timeUsage: 30
 
 - type: entity
   name: hunter
@@ -97,6 +103,9 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.4
     - type: Stealth
+    - type: XenoDegradation
+      prototype: MobRunnerXeno
+      timeUsage: 30
 
 - type: entity
   name: spitter
@@ -133,3 +142,6 @@
       damage:
         groups:
           Brute: 24
+    - type: XenoDegradation
+      prototype: MobSentinelXeno
+      timeUsage: 30

@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobAlfaMarine
-      time: 36000 # 10 hrs
+      time: 18000 # 5 hrs
   startingGear: AlfaSpecialistGear
   icon: "JobIconAlfaSpecialist"
   supervisors: job-supervisors-commander
