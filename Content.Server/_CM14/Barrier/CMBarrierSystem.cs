@@ -14,9 +14,17 @@ public sealed class CMBarrierSystem : EntitySystem
     [Dependency] private readonly ChatSystem _chatSystem = default!;
 
     [Dependency] private readonly ServerGlobalSoundSystem _sound = default!;
+
     public float BarrierTimer = 1200f;
+    private const float BarrierTimerConst = 1200f;
 
     public bool BarrierCountdown = true;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        BarrierTimer = BarrierTimerConst;
+    }
 
     public override void Update(float frameTime)
     {
