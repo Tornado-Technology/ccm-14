@@ -447,6 +447,20 @@
         - state: ertsecurity
 
 - type: entity
+  id: SpawnPointPilotMech
+  parent: SpawnPointMarine
+  name: pilot mech
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: PilotRaptor
+      spawn_type: Job
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
   id: SpawnPointStaffOfficer
   parent: SpawnPointMarine
   name: staff officer

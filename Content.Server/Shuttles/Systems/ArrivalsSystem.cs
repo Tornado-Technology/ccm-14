@@ -63,7 +63,6 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private EntityQuery<PendingClockInComponent> _pendingQuery;
     private EntityQuery<ArrivalsBlacklistComponent> _blacklistQuery;
-    private EntityQuery<MobStateComponent> _mobQuery;
 
     /// <summary>
     /// If enabled then spawns players on an alternate map so they can take a shuttle to the station.
@@ -99,7 +98,6 @@ public sealed class ArrivalsSystem : EntitySystem
 
         _pendingQuery = GetEntityQuery<PendingClockInComponent>();
         _blacklistQuery = GetEntityQuery<ArrivalsBlacklistComponent>();
-        _mobQuery = GetEntityQuery<MobStateComponent>();
 
         // Don't invoke immediately as it will get set in the natural course of things.
         Enabled = _cfgManager.GetCVar(CCVars.ArrivalsShuttles);
@@ -304,12 +302,6 @@ public sealed class ArrivalsSystem : EntitySystem
             return;
 
         var xform = Transform(uid);
-
-        if (_mobQuery.HasComponent(uid) || _blacklistQuery.HasComponent(uid))
-        {
-            toDump.Add((uid, xform));
-            return;
-        }
 
         var children = xform.ChildEnumerator;
         while (children.MoveNext(out var child))

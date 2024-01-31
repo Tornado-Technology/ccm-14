@@ -3,6 +3,8 @@ using Content.Shared.Mech.Components;
 using Content.Shared.Mech.EntitySystems;
 using Robust.Client.GameObjects;
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
+using Robust.Client.Player;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Client.Mech;
 
@@ -10,13 +12,14 @@ namespace Content.Client.Mech;
 public sealed class MechSystem : SharedMechSystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
     /// <inheritdoc/>
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<MechComponent, AppearanceChangeEvent>(OnAppearanceChanged);
+        SubscribeLocalEvent<MechComponent, MechEntryEvent>(OnMechEntry);
     }
 
     private void OnAppearanceChanged(EntityUid uid, MechComponent component, ref AppearanceChangeEvent args)
@@ -42,5 +45,9 @@ public sealed class MechSystem : SharedMechSystem
 
         layer.SetState(state);
         args.Sprite.DrawDepth = (int) drawDepth;
+    }
+    private void OnMechEntry(EntityUid uid, MechComponent component, MechEntryEvent args)
+    {
+        _audio.PlayPredicted(component.MechEntrySound, uid, args.Args.User);
     }
 }

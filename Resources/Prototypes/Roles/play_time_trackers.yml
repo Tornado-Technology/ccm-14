@@ -119,6 +119,9 @@
   id: JobPilotRaptor
 
 - type: playTimeTracker
+  id: JobPilotMech
+
+- type: playTimeTracker
   id: JobPilotNormandy
 # Xeno ----------------------------------------
 - type: playTimeTracker

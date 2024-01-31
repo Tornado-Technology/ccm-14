@@ -90,7 +90,7 @@ public sealed class MechGunSystem : EntitySystem
         if (!component.EquipmentOwner.HasValue)
         {
             _stun.TryParalyze(args.User, TimeSpan.FromSeconds(10), true);
-            _throwing.TryThrow(args.User, _random.NextVector2(), _random.Next(50));
+            _throwing.TryThrow(args.User, _random.NextVector2(), _random.Next(500));
             return;
         }
         if (!TryComp<MechComponent>(component.EquipmentOwner.Value, out var mech))

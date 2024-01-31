@@ -256,6 +256,16 @@
     sprite: _CM/Clothing/Uniforms/marine/com_pilot_raptor_normandy.rsi
   - type: Clothing
     sprite: _CM/Clothing/Uniforms/marine/com_pilot_raptor_normandy.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitMechPilot
+  name: mech pilot's Jumpsuit
+  description: All systems nominal. 
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/marine/mech_pilot.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/marine/mech_pilot.rsi
 ##------------------------------------------------------------------------------------------------------Polyce
 - type: entity
   parent: ClothingUniformBaseMarine

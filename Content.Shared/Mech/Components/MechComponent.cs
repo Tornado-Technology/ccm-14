@@ -3,6 +3,7 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Audio;
 
 namespace Content.Shared.Mech.Components;
 
@@ -22,9 +23,14 @@ public sealed partial class MechComponent : Component
     /// <summary>
     /// The maximum amount of damage the mech can take.
     /// </summary>
-    [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField("maxintegrity"), AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
     public FixedPoint2 MaxIntegrity = 250;
 
+    /// <summary>
+    /// Sound on mech entry.
+    /// </summary>
+    [DataField("mechentrysound")]
+    public SoundSpecifier MechEntrySound = new SoundPathSpecifier("/Audio/Mecha/mechact.ogg");
     /// <summary>
     /// How much energy the mech has.
     /// Derived from the currently inserted battery.
