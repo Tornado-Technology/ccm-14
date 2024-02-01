@@ -750,8 +750,8 @@
   - type: ConditionalSpawner
     prototypes:
     - MobPenguin
-    
-    
+
+
 - type: entity
   name: Hellspawn Spawner
   id: SpawnMobHellspawn
@@ -765,7 +765,7 @@
   - type: ConditionalSpawner
     prototypes:
       - MobHellspawn
-      
+
 - type: entity
   name: ore crab spawner
   id: SpawnMobOreCrab
@@ -824,3 +824,17 @@
   - type: ConditionalSpawner
     prototypes:
     - MobLuminousEntity
+
+- type: entity
+  name: Rudi Spawner
+  id: SpawnMobRudi
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: rudi
+        sprite: _CM/Mobs/rudi.rsi
+  - type: ConditionalSpawner
+    prototypes:
+      - MobRudi

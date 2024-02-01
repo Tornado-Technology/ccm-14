@@ -94338,7 +94338,7 @@ entities:
     - pos: -106.5,17.5
       parent: 2
       type: Transform
-- proto: SpawnMobShiva
+- proto: SpawnMobRudi
   entities:
   - uid: 14585
     components:
