@@ -382,3 +382,25 @@
         Heat: 20
   - type: IgniteOnCollide
     fireStacks: 1
+
+- type: entity
+  name: CH-PS "Immolator" Laser
+  parent: MechWeaponImmolator
+  id: MechWeaponFireDart
+  description: Fires a Laser bolt, identical to laser rifles.
+  components:
+  - type: Gun
+    fireRate: 1
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 30
+    zeroVisible: true
+  - type: Appearance
+  - type: Battery
+    maxCharge: 30
+    startingCharge: 30

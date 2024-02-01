@@ -58,6 +58,11 @@
     maxIntensity: 100
     intensitySlope: 4
     totalIntensity: 200
+  - type: AmbientSound
+    range: 0.1
+    volume: 4
+    sound:
+      path: /Audio/Mecha/mechambience.ogg
 
 - type: entity
   id: MechSidewinderBattery

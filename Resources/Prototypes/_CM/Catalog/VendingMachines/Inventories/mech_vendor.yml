@@ -1,11 +1,4 @@
 - type: vendingMachineInventory
   id: WeaponsMechVendInventory
   startingInventory:
-    MagazineScattershot: 10
-    MagazineAC: 10
-    MagazineHades: 10
-    MechWeaponUltra: 2
-    MechWeaponHades: 2
-    MechWeaponScattershot: 2
-    MechWeaponImmolator: 1
-    MechWeaponSolaris: 1
+    MechWeaponFireDart: 1

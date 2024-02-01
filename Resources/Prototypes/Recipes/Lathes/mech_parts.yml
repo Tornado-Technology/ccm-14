@@ -177,3 +177,86 @@
   materials:
     Steel: 500
     Glass: 200
+
+#Weapons
+
+- type: latheRecipe
+  id: MechWeaponUltra
+  result: MechWeaponUltra
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 5000
+    Glass: 200
+
+- type: latheRecipe
+  id: MagazineAC
+  result: MagazineAC
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 2000
+    Glass: 200
+
+- type: latheRecipe
+  id: MechWeaponHades
+  result: MechWeaponHades
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 5000
+    Glass: 200
+    Plastic: 200
+
+- type: latheRecipe
+  id: MagazineHades
+  result: MagazineHades
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 2000
+    Glass: 200
+    Plastic: 200
+    Plasma: 200
+
+- type: latheRecipe
+  id: MechWeaponScattershot
+  result: MechWeaponScattershot
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 5000
+    Glass: 200
+    Plastic: 200
+
+- type: latheRecipe
+  id: MagazineScattershot
+  result: MagazineScattershot
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 2000
+    Glass: 200
+    Plastic: 200
+
+- type: latheRecipe
+  id: MechWeaponImmolator
+  result: MechWeaponImmolator
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 5000
+    Glass: 2000
+    Plastic: 200
+    Plasma: 2000
+
+- type: latheRecipe
+  id: MechWeaponSolaris
+  result: MechWeaponSolaris
+  category: Mech
+  completetime: 5
+  materials:
+    Steel: 6000
+    Glass: 3000
+    Plastic: 500
+    Plasma: 3000

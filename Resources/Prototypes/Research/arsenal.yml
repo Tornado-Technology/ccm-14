@@ -30,6 +30,19 @@
   - ChemicalPayload
 
 - type: technology
+  id: MechWeaponUltra
+  name: research-technology-ultra
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - MechWeaponUltra
+  - MagazineAC
+
+- type: technology
   id: RegularMunitions
   name: research-technology-regular-munitions
   icon:
@@ -124,6 +137,44 @@
   - MagazineBoxMagnumUranium
   - MagazineBoxLightRifleUranium
   - MagazineBoxRifleUranium
+
+- type: technology
+  id: MechWeaponHades
+  name: research-technology-hades
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechWeaponHades
+  - MagazineHades
+
+- type: technology
+  id: MechWeaponScattershot
+  name: research-technology-scatter
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_scatter
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechWeaponScattershot
+  - MagazineScattershot
+
+- type: technology
+  id: MechWeaponImmolator
+  name: research-technology-immolator
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_laser
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MechWeaponImmolator
 
 - type: technology
   id: ConcentratedLaserWeaponry
@@ -235,3 +286,15 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+- type: technology
+  id: MechWeaponSolaris
+  name: research-technology-solaris
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_laser
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - MechWeaponSolaris
