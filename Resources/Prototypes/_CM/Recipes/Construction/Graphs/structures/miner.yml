@@ -2,7 +2,7 @@
   id: Miner
   start: start
   graph:
-    - node: broken
+    - node: start
       entity: MinerMachineBroken
       edges:
         - to: miner
@@ -30,7 +30,7 @@
     - node: miner
       entity: MinerMachine
       edges:
-        - to: broken
+        - to: start
           steps:
             - tool: Welding
               doAfter: 15

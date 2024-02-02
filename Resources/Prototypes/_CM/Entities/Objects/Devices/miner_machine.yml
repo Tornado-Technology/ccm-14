@@ -18,7 +18,6 @@
     - type: Construction
       graph: Miner
       node: miner
-      deconstructionTarget: broken
     - type: Damageable
       damageContainer: Inorganic
       damageModifierSet: Metallic
@@ -46,7 +45,7 @@
           behaviors:
             - !type:PlaySoundBehavior
               sound:
-                path: /Audio/Effects/metalbreak.ogg
+                path: /Audio/Effects/metal_slam1.ogg
             - !type:SpawnEntitiesBehavior
               spawn:
                 MinerMachineBroken:
@@ -81,8 +80,8 @@
       state: Broke
     - type: Construction
       graph: Miner
-      node: broken
-      deconstructionTarget:
+      node: start
+      defaultTarget: miner
     - type: Fixtures
       fixtures:
         fix1:
