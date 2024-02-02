@@ -1,0 +1,89 @@
+- type: entity
+  id: MechSidewinder
+  parent: BaseMech
+  name: MCU "Sidewinder"
+  description: A mechanized combat unit "Sidewinder". DO NOT SHOOT HIM.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _CM/Objects/Mechs/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: sidewinder
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/mechmove02.ogg
+  - type: Mech
+    baseState: sidewinder
+    openState: sidewinder-open
+    brokenState: sidewinder-broken
+    mechToPilotDamageMultiplier: 0.1
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    maxEquipmentAmount: 2
+    maxintegrity: 1001
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2.25
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 40
+        Structural: 50
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.8,-0.8,0.8,0.8"
+        density: 100
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+        - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 200
+  - type: AmbientSound
+    range: 0.1
+    volume: 4
+    sound:
+      path: /Audio/Mecha/mechambience.ogg
+
+- type: entity
+  id: MechSidewinderBattery
+  parent: MechSidewinder
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  name: sidewinder spawner
+  id: SpawnMechSidewinder
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _CM/Objects/Mechs/mecha.rsi
+        state: sidewinder
+  - type: ConditionalSpawner
+    prototypes:
+      - MechSidewinderBattery

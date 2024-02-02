@@ -46,6 +46,7 @@ namespace Content.IntegrationTests.Tests
             "TGCM_Erida",
             "TGCM_Desert",
             "TGCM_IceColony",
+            "TGCM_Astropolis",
             "valkyrie",
             "Dev",
             "MeteorArena",

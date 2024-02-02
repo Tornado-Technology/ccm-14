@@ -83257,7 +83257,7 @@ entities:
   entities:
   - uid: 12711
     components:
-    - pos: -182.79402,8.349133
+    - pos: -181.79404,7.349131
       parent: 2
       type: Transform
 - proto: Handcuffs
@@ -94338,7 +94338,7 @@ entities:
     - pos: -106.5,17.5
       parent: 2
       type: Transform
-- proto: SpawnMobShiva
+- proto: SpawnMobRudi
   entities:
   - uid: 14585
     components:
@@ -100516,4 +100516,25 @@ entities:
       pos: -189.24252,8.486899
       parent: 2
       type: Transform
+- proto: SpawnMechSidewinder
+  entities:
+  - uid: 156556
+    components:
+    - type: Transform
+      pos: -182.5,8.5
+      parent: 2
+- proto: SpawnPointPilotMech
+  entities:
+  - uid: 156566
+    components:
+    - type: Transform
+      pos: -183.5,7.5
+      parent: 2
+- proto: VendingMachineMarineMechWeapons
+  entities:
+  - uid: 156577
+    components:
+    - type: Transform
+      pos: -182.5,10.5
+      parent: 2
 ...

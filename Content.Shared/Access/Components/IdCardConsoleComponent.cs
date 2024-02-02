@@ -87,6 +87,7 @@ public sealed partial class IdCardConsoleComponent : Component
 
         "Pilot",
         "PilotRaptor",
+        "PilotMech",
         "PilotNormandy",
         "SquadLeader",
 

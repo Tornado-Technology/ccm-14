@@ -234,6 +234,13 @@
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: PilotOfficerRaptor
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconPilotMech
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: PilotMech
 # Xeno ----------------------------------------
 
 - type: statusIcon

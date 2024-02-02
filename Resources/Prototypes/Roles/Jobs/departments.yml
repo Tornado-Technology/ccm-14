@@ -103,6 +103,7 @@
   roles:
     - PilotNormandy
     - PilotRaptor
+    - PilotMech
 
 - type: department
   id: Xeno

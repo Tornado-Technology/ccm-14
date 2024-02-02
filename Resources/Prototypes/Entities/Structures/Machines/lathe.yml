@@ -575,6 +575,14 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - MechWeaponUltra
+    - MagazineAC
+    - MechWeaponHades
+    - MagazineHades
+    - MechWeaponScattershot
+    - MagazineScattershot
+    - MechWeaponImmolator
+    - MechWeaponSolaris
   - type: MaterialStorage
     whitelist:
       tags:

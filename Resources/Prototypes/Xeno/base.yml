@@ -2,7 +2,6 @@
   abstract: true
   parent:
     - BaseMob
-    - MobDamageable
     - MobAtmosExposed
     - MobCombat
     - MobBloodstream
@@ -42,8 +41,6 @@
       allowedStates:
       - Alive
       - Dead
-    - type: Stamina
-      critThreshold: 200
     - type: Puller
       needsHands: false
     - type: TypingIndicator
@@ -128,9 +125,68 @@
     - type: Bloodstream
       bloodlossThreshold: 0
       bloodRefreshAmount: 150
-      bloodReagent: FluorosulfuricAcid 
+      bloodReagent: FluorosulfuricAcid
     - type: LizardAccent
     - type: FlashImmunity
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 400
+        behaviors:
+        - !type:GibBehavior { }
+    - type: RadiationReceiver
+    - type: MobStateActions
+      actions:
+        Critical:
+        - ActionCritSuccumb
+        - ActionCritFakeDeath
+        - ActionCritLastWords
+    - type: Deathgasp
+    - type: HealthExaminable
+      examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    - type: DamageOnHighSpeedImpact
+      damage:
+        types:
+          Blunt: 5
+      soundHit:
+        path: /Audio/Effects/hit_kick.ogg
+    - type: Pullable
+    - type: LightningTarget
+      priority: 2
+      lightningExplode: false
+    - type: XenoAcid
+
+- type: entity
+  id: ActionXenoAcid
+  name: Corrosive Acid
+  components:
+  - type: EntityTargetAction
+    useDelay: 60
+    itemIconStyle: NoItem
+    icon:
+      sprite: Actions/xeno.rsi
+      state: acid_spit
+    event: !type:XenoCorrosiveAcidEvent
+
+- type: entity
+  id: XenoAcid
+  name: corrosive acid
+  parent: CMEntityBase
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    layers:
+    - sprite: _CM/Effects/xeno_acid.rsi
+      state: acid_normal
+    drawdepth: Effects
 
 - type: entity
   abstract: true

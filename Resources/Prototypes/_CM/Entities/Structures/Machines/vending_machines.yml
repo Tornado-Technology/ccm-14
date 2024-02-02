@@ -366,3 +366,26 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineMechWeapons
+  suffix: CM
+  name: ColMarTech Automated Mech Weapons Rack
+  description: An automated weapon rack hooked up to a big storage of mech weapons.
+  components:
+  - type: VendingMachine
+    pack: WeaponsMechVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 0.5
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/guns.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]

@@ -169,3 +169,4 @@ JobKseno = Низший ксеноморф
 JobPretor = Преторианец
 JobQuinn = Королева
 JobRuni = Руни
+job-name-pilotmech = Пилот меха

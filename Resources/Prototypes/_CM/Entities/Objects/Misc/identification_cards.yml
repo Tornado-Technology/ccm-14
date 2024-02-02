@@ -464,3 +464,16 @@
     jobIcon: JobIconPilotRaptor
   - type: PresetIdCard
     job: PilotRaptor
+
+- type: entity
+  parent: IDCardMarine
+  id: PilotMechIDCard
+  name: Pilot Mech dog tag
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: IdCard
+    jobIcon: JobIconPilotMech
+  - type: PresetIdCard
+    job: PilotMech

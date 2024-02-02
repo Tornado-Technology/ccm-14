@@ -175,7 +175,7 @@
     whitelist:
       tags:
         - CartridgeHades
-    capacity: 26
+    capacity: 30
     proto: CartridgeHades
   - type: ContainerContainer
     containers:
@@ -276,7 +276,7 @@
       gun_chamber: !type:ContainerSlot
 
 - type: entity
-  name: BaseWeaponShotgun
+  name: mech shotgun "Scatter"
   parent: BaseMechWeapon
   id: MechWeaponScattershot
   description: A rooty tooty point and shooty.
@@ -321,14 +321,20 @@
   - type: Sprite
     state: mecha_laser
   - type: Gun
-    fireRate: 1.2
+    fireRate: 3
+    selectedMode: Burst
+    availableModes:
+      - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: RedMediumLaser
-    fireCost: 30
+    fireCost: 10
     zeroVisible: true
   - type: Appearance
+  - type: Battery
+    maxCharge: 10
+    startingCharge: 10
 
 - type: entity
   name:  CH-LC "Solaris" Laser Cannon
@@ -339,15 +345,15 @@
   - type: Sprite
     state: mecha_laser
   - type: Gun
-    fireRate: 0.8
+    fireRate: 1
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: Battery
-    maxCharge: 40
-    startingCharge: 40
+    maxCharge: 20
+    startingCharge: 20
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
-    fireCost: 40
+    fireCost: 20
 
 #projectiles
 
@@ -361,7 +367,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
+        Piercing: 30
 
 - type: entity
   id: BulletHades
@@ -373,6 +379,28 @@
     damage:
       types:
         Piercing: 30
-        Heat: 5
+        Heat: 20
   - type: IgniteOnCollide
-    fireStacks: 4
+    fireStacks: 1
+
+- type: entity
+  name: CH-PS "Immolator" Laser
+  parent: MechWeaponImmolator
+  id: MechWeaponFireDart
+  description: Fires a Laser bolt, identical to laser rifles.
+  components:
+  - type: Gun
+    fireRate: 1
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 30
+    zeroVisible: true
+  - type: Appearance
+  - type: Battery
+    maxCharge: 30
+    startingCharge: 30
