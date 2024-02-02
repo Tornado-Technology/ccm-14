@@ -7,10 +7,10 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobCrusherXeno
-          evolution: 1200
+          evolution: 900
         - !type:XenoEvolution
           prototype: MobRavagerXeno
-          evolution: 1800
+          evolution: 1500
     - type: XenoStun
     - type: MobThresholds
       thresholds:
@@ -43,7 +43,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobGorgerXeno
-          evolution: 1200
+          evolution: 900
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
@@ -77,7 +77,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobWarlockXeno
-          evolution: 1200
+          evolution: 900
     - type: XenoHunter
     - type: XenoEvasion
     - type: XenoStealth
@@ -117,7 +117,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobDefilerXeno
-          evolution: 1200
+          evolution: 900
     - type: XenoSpitter
     - type: XenoSpit
       action: ActionDefilerDefaultSpit
