@@ -34,7 +34,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobRoyalQueenXeno
-          evolution: 7200
+          evolution: 6900
     - type: XenoLayEgg
     - type: XenoStun
     - type: XenoScreech
