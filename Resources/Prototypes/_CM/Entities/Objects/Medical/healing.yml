@@ -7,7 +7,7 @@
     sprite: _CM/Objects/Medical/medical.rsi
   - type: Item
     size: Small
-    sprite: _CM/Objects//Medical/medical.rsi
+    sprite: _CM/Objects/Medical/medical.rsi
     heldPrefix: ointment
   # Inherited
   - type: StaticPrice

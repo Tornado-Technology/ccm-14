@@ -37,6 +37,7 @@
         layer:
         - WallLayer
         density: 1000
+  - type: Corrodable
 
 # Standart
 - type: entity

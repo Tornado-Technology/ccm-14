@@ -19,6 +19,7 @@
     - type: IconSmooth
       key: walls
       base: resin
+    - type: Corrodable
 
 - type: entity
   parent: BaseWallXeno
