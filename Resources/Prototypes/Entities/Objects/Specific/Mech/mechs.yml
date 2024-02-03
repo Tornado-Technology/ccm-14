@@ -93,6 +93,7 @@
   - type: GuideHelp
     guides:
     - Robotics
+  - type: FriendlyFire
 
 - type: entity
   id: MechRipley
