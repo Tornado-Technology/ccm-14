@@ -18,12 +18,12 @@
     baseState: sidewinder
     openState: sidewinder-open
     brokenState: sidewinder-broken
-    mechToPilotDamageMultiplier: 0.1
+    mechToPilotDamageMultiplier: 0
     pilotWhitelist:
       components:
         - HumanoidAppearance
     maxEquipmentAmount: 2
-    maxintegrity: 1001
+    maxintegrity: 1500
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 2.25
@@ -50,7 +50,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200
+        damage: 1800
       behaviors:
         - !type:ExplodeBehavior
   - type: Explosive
@@ -63,6 +63,8 @@
     volume: 4
     sound:
       path: /Audio/Mecha/mechambience.ogg
+  - type: AccessReader
+    access: [["PilotMech"]]
 
 - type: entity
   id: MechSidewinderBattery

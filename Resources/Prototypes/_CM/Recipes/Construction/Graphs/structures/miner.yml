@@ -1,0 +1,38 @@
+﻿- type: constructionGraph
+  id: Miner
+  start: start
+  graph:
+    - node: start
+      entity: MinerMachineBroken
+      edges:
+        - to: miner
+          steps:
+            - tool: Welding
+              doAfter: 4
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Plasteel
+              amount: 30
+              doAfter: 4
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 3
+            - tool: Welding
+              doAfter: 4
+    - node: miner
+      entity: MinerMachine
+      edges:
+        - to: start
+          steps:
+            - tool: Welding
+              doAfter: 15
+            - tool: Cutting
+              doAfter: 8

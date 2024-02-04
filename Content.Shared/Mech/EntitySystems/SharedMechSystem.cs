@@ -19,6 +19,8 @@ using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
+using Robust.Shared.Audio.Systems;
+using Content.Shared.Access.Systems;
 
 namespace Content.Shared.Mech.EntitySystems;
 
@@ -27,6 +29,8 @@ namespace Content.Shared.Mech.EntitySystems;
 /// </summary>
 public abstract class SharedMechSystem : EntitySystem
 {
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
@@ -427,6 +431,12 @@ public abstract class SharedMechSystem : EntitySystem
 
     private void OnDragDrop(EntityUid uid, MechComponent component, ref DragDropTargetEvent args)
     {
+        if (TryComp<AccessReaderComponent>(uid, out var reader) && !_accessReader.IsAllowed(args.User, uid, reader))
+        {
+            _popup.PopupEntity(Loc.GetString("gateway-access-denied"), uid);
+            _audio.PlayPvs(component.AccessDeniedSound, uid);
+            return;
+        }
         if (args.Handled)
             return;
 
