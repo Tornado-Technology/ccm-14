@@ -48,6 +48,8 @@ public sealed class MechSystem : SharedMechSystem
     }
     private void OnMechEntry(EntityUid uid, MechComponent component, MechEntryEvent args)
     {
+        if (args.Cancelled || args.Handled)
+            return;
         _audio.PlayPredicted(component.MechEntrySound, uid, args.Args.User);
     }
 }
