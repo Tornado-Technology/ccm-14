@@ -1,5 +1,5 @@
 - type: vendingMachineInventory
-  id: SecTechInventory
+  id: CMMilitaryPoliceTechInventory
   startingInventory:
     HoloprojectorSecurity: 3
     Handcuffs: 8
@@ -11,14 +11,13 @@
     FlashlightSeclite: 5
     ClothingEyesGlassesSunglasses: 4
     ClothingEyesGlassesBallistic: 2
+    WeaponRifleM41A: 4
+    MagazineRifleM41A: 15
     ClothingEyesHudSecurity: 2
     ClothingEyesEyepatchHudSecurity: 1
     ClothingBeltSecurityWebbing: 5
     Zipties: 12
     RiotShield: 2
     RiotBulletShield: 2
-  # security officers need to follow a diet regimen!
-  contrabandInventory:
-    FoodDonutHomer: 12
-    FoodBoxDonut: 2
-    #box evidence
+    BoxMRPFilled: 10
+    CMWeaponDisablerRife: 5
