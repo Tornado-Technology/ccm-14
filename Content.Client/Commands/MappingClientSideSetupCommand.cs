@@ -2,6 +2,8 @@ using Content.Client.Markers;
 using JetBrains.Annotations;
 using Robust.Client.Graphics;
 using Robust.Shared.Console;
+using Content.Client._CM14.Mapping;
+using Robust.Client.State;
 
 namespace Content.Client.Commands;
 
@@ -22,7 +24,7 @@ internal sealed class MappingClientSideSetupCommand : LocalizedCommands
             _entitySystemManager.GetEntitySystem<MarkerSystem>().MarkersVisible = true;
             _lightManager.Enabled = false;
             shell.ExecuteCommand(ShowSubFloorForever.CommandName);
-            shell.ExecuteCommand(LoadMappingActionsCommand.CommandName);
+            IoCManager.Resolve<IStateManager>().RequestStateChange<MappingState>();
         }
     }
 }

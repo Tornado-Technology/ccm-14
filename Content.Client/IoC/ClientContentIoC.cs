@@ -22,6 +22,7 @@ using Content.Shared.Module;
 using Content.Client.Guidebook;
 using Content.Client.Replay;
 using Content.Shared.Administration.Managers;
+using Content.Client._CM14.Mapping;
 
 
 namespace Content.Client.IoC
@@ -50,6 +51,7 @@ namespace Content.Client.IoC
             IoCManager.Register<JobRequirementsManager>();
             IoCManager.Register<DocumentParsingManager>();
             IoCManager.Register<ContentReplayPlaybackManager, ContentReplayPlaybackManager>();
+            IoCManager.Register<MappingManager>();
         }
     }
 }
