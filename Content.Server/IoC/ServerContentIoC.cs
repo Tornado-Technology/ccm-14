@@ -23,6 +23,7 @@ using Content.Server.Worldgen.Tools;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Kitchen;
+using Content.Server._CM14.Mapping;
 
 namespace Content.Server.IoC
 {
@@ -60,6 +61,9 @@ namespace Content.Server.IoC
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();
             IoCManager.Register<ServerDbEntryManager>();
+
+            // CM14
+            IoCManager.Register<MappingManager>();
         }
     }
 }
