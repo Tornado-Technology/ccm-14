@@ -1,0 +1,19 @@
+- type: statusIcon
+  id: JobRankIcon
+  abstract: true
+  priority: 3
+  locationPreference: Left
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankDotctor
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: doctor
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankProffesor
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: proffesor

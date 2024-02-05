@@ -15,7 +15,12 @@
     - Maintenance
     - Medical
     - Chemistry
-
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: MilitaryScientist
+  
 - type: startingGear
   id: MilitaryScientistGear
   equipment:
