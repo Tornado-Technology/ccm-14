@@ -22,8 +22,7 @@ public sealed class CMBarrierSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        BarrierTimer = BarrierTimerConst;
-        BarrierCountdown = true;
+        SubscribeLocalEvent<RoundStartAttemptEvent>(OnStartAttempt);
     }
 
     public override void Update(float frameTime)
@@ -56,4 +55,11 @@ public sealed class CMBarrierSystem : EntitySystem
             first = false;
         }
     }
+
+    private void OnStartAttempt(RoundStartAttemptEvent ev)
+    {
+        BarrierTimer = BarrierTimerConst;
+        BarrierCountdown = true;
+    }
+
 }
