@@ -23,6 +23,7 @@ public sealed class CMBarrierSystem : EntitySystem
     {
         base.Initialize();
         BarrierTimer = BarrierTimerConst;
+        BarrierCountdown = true;
     }
 
     public override void Update(float frameTime)
