@@ -4,8 +4,8 @@
   description: job-description-bravospecialist
   playTimeTracker: JobBravoSpecialist
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
       time: 18000 # 5 hrs
   startingGear: BravoSpecialistGear
   icon: "JobIconBravoSpecialist"

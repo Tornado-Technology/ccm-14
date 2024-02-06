@@ -4,8 +4,8 @@
   description: job-description-alfaspecialist
   playTimeTracker: JobAlfaSpecialist
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
+    - !type:DepartmentTimeRequirement
+      department: MarinesGarrison
       time: 18000 # 5 hrs
   startingGear: AlfaSpecialistGear
   icon: "JobIconAlfaSpecialist"
