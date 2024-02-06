@@ -38592,7 +38592,7 @@ entities:
     - pos: -71.5,18.5
       parent: 2
       type: Transform
-  - uid: 5670
+  - uid: 56709
     components:
     - pos: -70.5,19.5
       parent: 2
@@ -38627,7 +38627,7 @@ entities:
     - pos: -74.5,19.5
       parent: 2
       type: Transform
-- proto: CargoTelepad
+- proto: AtmosFixOxygenMarker
   entities:
   - uid: 5677
     components:
@@ -60059,7 +60059,7 @@ entities:
     - pos: -136.5,17.5
       parent: 2
       type: Transform
-- proto: ComputerCargoOrders
+- proto: CMASRSConsole
   entities:
   - uid: 9610
     components:
@@ -99051,7 +99051,7 @@ entities:
       type: Transform
 - proto: VendingMachineSec
   entities:
-  - uid: 15405
+  - uid: 154056
     components:
     - flags: SessionSpecific
       type: MetaData
@@ -100536,5 +100536,24 @@ entities:
     components:
     - type: Transform
       pos: -182.5,10.5
+      parent: 2
+- proto: CMCargoElevator
+  entities:
+  - uid: 56713
+    components:
+    - type: Transform
+      pos: -72.5,10.5
+      parent: 2
+- proto: CMVendingMachineMilitaryPolice
+  entities:
+  - uid: 15405
+    components:
+    - type: Transform
+      pos: -116.5,8.5
+      parent: 2
+  - uid: 154065
+    components:
+    - type: Transform
+      pos: -209.5,14.5
       parent: 2
 ...

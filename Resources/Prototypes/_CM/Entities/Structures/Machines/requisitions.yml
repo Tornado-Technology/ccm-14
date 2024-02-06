@@ -1,0 +1,448 @@
+﻿- type: entity
+  parent: ComputerCargoOrders
+  id: CMASRSConsole
+  name: ASRS console
+  description: A console for the Automated Storage Retrieval System.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: request
+    - map: ["computerLayerKeys"]
+      state: tech_key
+  - type: CargoOrderConsole
+  - type: ActivatableUI
+    key: enum.RequisitionsUIKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.RequisitionsUIKey.Key
+      type: RequisitionsBui
+  - type: Computer
+    board: CargoRequestComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: AccessReader
+    access: [["Cargo"]]
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSource
+    range: 200
+    ports:
+    - OrderSender
+  - type: GuideHelp
+    guides:
+    - Cargo
+  - type: RequisitionsComputer
+    categories:
+    - name: Engineering
+      entries:
+      - name: turret Crate(2x turret)
+        cost: 20000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxTurretMarine
+        - ToolboxTurretMarine
+      - name:  flame turret Crate(2x flame turret)
+        cost: 20000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxFlameTurretMarine
+        - ToolboxFlameTurretMarine
+      - name: Cables crate(LV x30, MV x40, HV x40)
+        cost: 1000
+        crate: CrateEngineering
+        entities:
+        - CableHVStack
+        - CableMVStack
+        - CableApcStack
+      - name: AME crate(AME controller x1, AME part x9, AmeJar x40)
+        cost: 8000
+        crate: CrateEngineering
+        entities:
+        - AmeController
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmePart
+        - AmeShielding
+      - name: Tools crate(tool betl x1)
+        cost: 1000
+        crate: CrateEngineering
+        entities:
+        - ClothingBeltUtility
+      - name: RCDAmmo(RCDAmmo x5)
+        cost: 2000
+        crate: CrateEngineering
+        entities:
+        - RCDAmmo
+        - RCDAmmo
+        - RCDAmmo
+        - RCDAmmo
+        - RCDAmmo
+    - name: Explosives
+      entries:
+      - name: Grenade Crate(6x granade)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+        - GrenadeFragMarine
+        - GrenadeFragMarine
+        - GrenadeFragMarine
+        - GrenadeFragMarine
+        - GrenadeFragMarine
+        - GrenadeFragMarine
+      - name: C4 Crate(6x C4)
+        cost: 5000
+        crate: CrateEngineeringSecure
+        entities:
+        - C4
+        - C4
+        - C4
+        - C4
+        - C4
+        - C4
+    - name: Food
+      entries:
+      - name: MRE Crate(6x MRE Boxes)
+        cost: 4000
+        crate: CrateGenericSteel
+        entities:
+        - BoxMRE
+        - BoxMRE
+        - BoxMRE
+        - BoxMRE
+        - BoxMRE
+        - BoxMRE
+    - name: Gear
+      entries:
+      - name: Light Armor Crate(M3-L pattern light armor x2, M10 pattern marine helmet x2)
+        cost: 5000
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineLight
+        - ClothingOuterArmorMarineLight
+        - ClothingHeadHelmetMarine
+        - ClothingHeadHelmetMarine
+      - name: Medium Armor Crate(M3 pattern marine armor x2, M10 pattern marine helmet x2)
+        cost: 8000
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineMedium
+        - ClothingOuterArmorMarineMedium
+        - ClothingHeadHelmetMarine
+        - ClothingHeadHelmetMarine
+      - name: Heavy Armor Crate(M3-EOD pattern armor x2, M10 pattern marine helmet x2)
+        cost: 10000
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineHeavy
+        - ClothingOuterArmorMarineHeavy
+        - ClothingHeadHelmetMarine
+        - ClothingHeadHelmetMarine
+    - name: Medical
+      entries:
+      - name: Medkit crate(Medkit x1, MedkitBurn x1, MedkitToxin x1, MedkitO2 x1, MedkitBrute x1, MedkitAdvanced x1, MedkitRadiation x1, MedkitCombat x1)
+        cost: 4000
+        crate: CrateMedical
+        entities:
+        - Medkit
+        - MedkitBurn
+        - MedkitToxin
+        - MedkitO2
+        - MedkitBrute
+        - MedkitAdvanced
+        - MedkitRadiation
+        - MedkitCombat
+      - name: MaterialBiomass crate(Biomass x100)
+        cost: 2000
+        crate: CrateMedical
+        entities:
+        - MaterialBiomass
+        - MaterialBiomass
+    - name: Restricted Equipment
+      entries:
+      - name: Flare kit(10x flare)
+        cost: 5000
+        crate: CrateGenericSteel
+        entities:
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+    - name: Supplies
+      entries:
+      - name: Steel Crate (x30 steel)
+        cost: 1000
+        crate: CrateGenericSteel
+        entities:
+        - SheetSteel30
+      - name: Glass Crate (x30 Glass)
+        cost: 1000
+        crate: CrateGenericSteel
+        entities:
+        - SheetGlass30
+      - name: Plastic Crate (x30 Plastic)
+        cost: 1000
+        crate: CrateGenericSteel
+        entities:
+        - SheetPlastic30
+      - name: Plasma Crate (x30 Plasma)
+        cost: 1000
+        crate: CrateGenericSteel
+        entities:
+        - SheetPlasma30
+      - name: Uranium Crate (x30 Uranium)
+        cost: 3000
+        crate: CrateGenericSteel
+        entities:
+        - SheetUranium30
+      - name: Gold Crate (x30 Gold)
+        cost: 3000
+        crate: CrateGenericSteel
+        entities:
+        - IngotGold30
+      - name: Silver Crate (x30 Silver)
+        cost: 3000
+        crate: CrateGenericSteel
+        entities:
+        - IngotSilver30
+    - name: Weapons
+      entries:
+      - name: M41A MK1 Rifle Crate (x2 MK1)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponRifleM41A
+        - WeaponRifleM41A
+        - WeaponRifleM41A
+      - name: M42 pulse rifle Crate (x2 M42)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponRifleM42
+        - WeaponRifleM42
+        - WeaponRifleM42
+      - name: M4RA battle rifle Crate (x2 M4RA)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponRifleM4RA
+        - WeaponRifleM4RA
+        - WeaponRifleM4RA
+      - name: 88 Mod 4 combat pistol Crate (x2 88M4)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponPistol88M4
+        - WeaponPistol88M4
+        - WeaponPistol88M4
+      - name: Armat M5Y3 pistol Crate (x2 M5Y3)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponPistolArmatM5Y3
+        - WeaponPistolArmatM5Y3
+        - WeaponPistolArmatM5Y3
+      - name: UA 571-C shotgun Crate (x2 571-C)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponShotgunUA571C
+        - WeaponShotgunUA571C
+        - WeaponShotgunUA571C
+      - name: K221 shotgun Crate (x2 571-C)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponShotgunK221
+        - WeaponShotgunK221
+        - WeaponShotgunK221
+      - name: M39 submachinegun Crate (x2 571-C)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - WeaponSubMachineGunM39
+        - WeaponSubMachineGunM39
+        - WeaponSubMachineGunM39
+    - name: Ammo
+      entries:
+      - name: M41A magazine Crate(M41A magazine 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+        - MagazineRifleM41A
+      - name: M4RA magazine Crate(M4RA magazine 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+        - MagazineRifleM4RA
+      - name: l88M4 magazine Crate(l88M4 magazine 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+        - MagazinePistol88M4
+      - name: M5Y3 magazine Crate(M5Y3 magazine 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+        - MagazinePistolAramatM5Y3
+      - name: M39 magazine Crate(M39 magazine 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+        - MagazineRifleM39
+      - name: Box Shotgun(Box Slug 10x)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+        - BoxShotgunSlug
+  - type: CargoSellBlacklist
+
+- type: entity
+  id: CMCargoElevator
+  name: cargo elevator
+  suffix: Lowered
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _CM/Effects/elevator.rsi
+    drawdepth: LowFloors
+    layers:
+    - state: supply_elevator_lowered
+      map: [ "enum.RequisitionsElevatorLayers.Base" ]
+  - type: Physics
+    bodyType: static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-2.3,-2.3,2.3,2.3"
+        layer:
+        - WallLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: Chasm
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 1
+    blacklist:
+      tags:
+      - Catwalk
+  - type: RequisitionsElevator
+  - type: CargoSellBlacklist
+
+- type: entity
+  parent: BaseStructure
+  id: CMRailing
+  name: retractable railing
+  description: That looks like it doesn't open easily.
+  suffix: Raised
+  components:
+  - type: Transform
+    anchored: false
+    noRot: false
+  - type: Sprite
+    sprite: _CM/Structures/railing.rsi
+    offset: 0,0.5
+    layers:
+    - state: raised
+      map: [ "enum.RequisitionsRailingLayers.Base" ]
+    noRot: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.3"
+        layer:
+        - TableLayer
+        mask:
+        - TableMask
+        density: 1000
+  - type: Climbable
+  - type: RequisitionsRailing
+    mode: Raised
+  - type: CargoSellBlacklist
