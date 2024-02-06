@@ -4,5 +4,5 @@ namespace Content.Server._CM14.Miner;
 public sealed partial class CMMinerComponent : Component
 {
     [DataField]
-    public int BalanceGeneration = 100;
+    public int BalanceGeneration = 80;
 }

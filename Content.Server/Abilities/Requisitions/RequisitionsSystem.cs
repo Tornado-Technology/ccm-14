@@ -11,6 +11,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Timing;
 using Content.Server.Cargo.Systems;
 using static Content.Shared._CM14.Requisitions.Components.RequisitionsElevatorMode;
+using Content.Server.Xeno.Components;
 
 namespace Content.Server._CM14.Requisitions;
 
@@ -134,7 +135,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
         Dirty(elevator);
     }
 
-    private Entity<RequisitionsAccountComponent> GetAccount()
+    public Entity<RequisitionsAccountComponent> GetAccount()
     {
         var query = EntityQueryEnumerator<RequisitionsAccountComponent>();
         while (query.MoveNext(out var uid, out var account))
@@ -368,6 +369,8 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
                 continue;
 
             account.Started = true;
+            var marines = Count<MarineComponent>();
+            account.Balance = marines * account.StartingDollarsPerMarine;
             Dirty(uid, account);
 
             updateUI = true;

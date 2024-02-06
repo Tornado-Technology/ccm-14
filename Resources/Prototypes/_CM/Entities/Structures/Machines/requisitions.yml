@@ -52,7 +52,7 @@
         - ToolboxTurretMarine
         - ToolboxTurretMarine
       - name:  flame turret Crate(2x flame turret)
-        cost: 20000
+        cost: 30000
         crate: CrateEngineeringSecure
         entities:
         - ToolboxFlameTurretMarine
@@ -173,6 +173,38 @@
         entities:
         - MaterialBiomass
         - MaterialBiomass
+      - name: chemicals crate (P)
+        cost: 1000
+        crate: CrateMedical
+        entities:
+        - JugAluminium
+        - JugCarbon
+        - JugChlorine
+        - JugFluorine
+        - JugIodine
+        - JugPhosphorus
+        - JugSulfur
+        - JugSilicon
+        - JugOxygen
+        - JugNitrogen
+      - name: chemicals crate (S)
+        cost: 1000
+        crate: CrateMedical
+        entities:
+        - JugHydrogen
+        - JugLithium
+        - JugSodium
+        - JugPotassium
+        - JugRadium
+      - name: chemicals crate (D)
+        cost: 1000
+        crate: CrateMedical
+        entities:
+        - JugIron
+        - JugCopper
+        - JugGold
+        - JugMercury
+        - JugSilver
     - name: Restricted Equipment
       entries:
       - name: Flare kit(10x flare)
@@ -195,37 +227,37 @@
         cost: 1000
         crate: CrateGenericSteel
         entities:
-        - SheetSteel30
+        - SheetSteel
       - name: Glass Crate (x30 Glass)
         cost: 1000
         crate: CrateGenericSteel
         entities:
-        - SheetGlass30
+        - SheetGlass
       - name: Plastic Crate (x30 Plastic)
         cost: 1000
         crate: CrateGenericSteel
         entities:
-        - SheetPlastic30
+        - SheetPlastic
       - name: Plasma Crate (x30 Plasma)
         cost: 1000
         crate: CrateGenericSteel
         entities:
-        - SheetPlasma30
+        - SheetPlasma
       - name: Uranium Crate (x30 Uranium)
         cost: 3000
         crate: CrateGenericSteel
         entities:
-        - SheetUranium30
+        - SheetUranium
       - name: Gold Crate (x30 Gold)
         cost: 3000
         crate: CrateGenericSteel
         entities:
-        - IngotGold30
+        - IngotGold
       - name: Silver Crate (x30 Silver)
         cost: 3000
         crate: CrateGenericSteel
         entities:
-        - IngotSilver30
+        - IngotSilver
     - name: Weapons
       entries:
       - name: M41A MK1 Rifle Crate (x2 MK1)

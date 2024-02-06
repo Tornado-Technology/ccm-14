@@ -3,7 +3,6 @@
 namespace Content.Shared._CM14.Requisitions.Components;
 
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(SharedRequisitionsSystem))]
 public sealed partial class RequisitionsAccountComponent : Component
 {
     [DataField]
