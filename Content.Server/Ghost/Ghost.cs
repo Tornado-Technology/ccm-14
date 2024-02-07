@@ -1,3 +1,4 @@
+using Content.Server.Administration;
 using Content.Server.GameTicking;
 using Content.Shared.Administration;
 using Content.Shared.Mind;
@@ -5,7 +6,7 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Ghost
 {
-    [AnyCommand]
+    [AdminCommand(AdminFlags.Admin)]
     public sealed class Ghost : IConsoleCommand
     {
         [Dependency] private readonly IEntityManager _entities = default!;
