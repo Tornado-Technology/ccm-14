@@ -1,3 +1,4 @@
+using Content.Server.Administration;
 using Content.Server.GameTicking;
 using Content.Shared.Administration;
 using Content.Shared.Mind;
@@ -6,7 +7,7 @@ using Robust.Shared.Enums;
 
 namespace Content.Server.Chat.Commands
 {
-    [AnyCommand]
+    [AdminCommand(AdminFlags.Admin)]
     internal sealed class SuicideCommand : IConsoleCommand
     {
         public string Command => "suicide";
