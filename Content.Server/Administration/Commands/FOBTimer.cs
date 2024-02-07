@@ -1,4 +1,4 @@
-using Content.Server._CM14.Rules.Barrier;
+using Content.Server._CM14.Barrier;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
@@ -7,10 +7,10 @@ namespace Content.Server.Administration.Commands;
 [AdminCommand(AdminFlags.Admin)]
 public sealed partial class FOBTimer : IConsoleCommand
 {
-    public const string CommandName = "fob";
+    public const string CommandName = "fobtime";
     public string Command => CommandName;
     public string Description => "Work with fob time.";
-    public string Help => $"fob <get/set> <time> or fob off";
+    public string Help => $"fobtime <get/set> <time> or fobtime off";
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
@@ -21,7 +21,7 @@ public sealed partial class FOBTimer : IConsoleCommand
         }
 
         var entityManager = IoCManager.Resolve<IEntityManager>();
-        var sys = entityManager.System<CMBarrierRule>();
+        var sys = entityManager.System<CMBarrierSystem>();
 
         if (args[0] == "get")
         {

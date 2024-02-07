@@ -1,14 +1,12 @@
-using Content.Server._CM14.Rules.Barrier.Components;
 using Content.Server.GameTicking;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Spawners;
 using Content.Server.Audio;
-using Content.Server.GameTicking.Rules;
 
 
-namespace Content.Server._CM14.Rules.Barrier;
+namespace Content.Server._CM14.Barrier;
 
-public sealed class CMBarrierRule : GameRuleSystem<CMBarrierRuleComponent>
+public sealed class CMBarrierSystem : EntitySystem
 {
     [Dependency] private readonly GameTicker _ticker = default!;
 
@@ -63,4 +61,5 @@ public sealed class CMBarrierRule : GameRuleSystem<CMBarrierRuleComponent>
         BarrierTimer = BarrierTimerConst;
         BarrierCountdown = true;
     }
+
 }
