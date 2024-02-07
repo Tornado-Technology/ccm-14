@@ -4,45 +4,30 @@ using Content.Server.Chat.Systems;
 using Robust.Shared.Spawners;
 using Content.Server.Audio;
 using Content.Server.GameTicking.Rules;
+using Content.Server.GameTicking.Rules.Components;
 
 
 namespace Content.Server._CM14.Rules.Barrier;
 
 public sealed class CMBarrierRule : GameRuleSystem<CMBarrierRuleComponent>
 {
-    [Dependency] private readonly GameTicker _ticker = default!;
-
     [Dependency] private readonly ChatSystem _chatSystem = default!;
 
     [Dependency] private readonly ServerGlobalSoundSystem _sound = default!;
 
-    public float BarrierTimer = 1200f;
-    private const float BarrierTimerConst = 1200f;
-
-    public bool BarrierCountdown = true;
-
-    public override void Initialize()
+    protected override void ActiveTick(EntityUid uid, CMBarrierRuleComponent component, GameRuleComponent gameRule,
+        float frameTime)
     {
-        base.Initialize();
-        SubscribeLocalEvent<RoundStartAttemptEvent>(OnStartAttempt);
-    }
-
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-        if (_ticker.RunLevel != GameRunLevel.InRound || !BarrierCountdown)
-            return;
-        if (BarrierTimer - frameTime < 0 && BarrierCountdown)
+        if (component.BarrierTimer - frameTime < 0 )
         {
-            BarrierDisable();
-            BarrierCountdown = false;
+            GameTicker.EndGameRule(uid, gameRule);
             return;
         }
 
-        BarrierTimer -= frameTime;
+        component.BarrierTimer -= frameTime;
     }
 
-    public void BarrierDisable()
+    private void BarrierDisable()
     {
         _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-fob"),
             Loc.GetString("ai-announcement-sender"));
@@ -58,9 +43,9 @@ public sealed class CMBarrierRule : GameRuleSystem<CMBarrierRuleComponent>
         }
     }
 
-    private void OnStartAttempt(RoundStartAttemptEvent ev)
+    protected override void Ended(EntityUid uid, CMBarrierRuleComponent cmBarrierRuleComponent, GameRuleComponent gameRule, GameRuleEndedEvent args)
     {
-        BarrierTimer = BarrierTimerConst;
-        BarrierCountdown = true;
+        base.Ended(uid, cmBarrierRuleComponent, gameRule, args);
+        BarrierDisable();
     }
 }

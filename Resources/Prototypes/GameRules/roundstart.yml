@@ -119,6 +119,13 @@
   noSpawn: true
   components:
   - type: XenoRule
+  
+- type: entity
+  id: Barrier
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: CMBarrierRule
 
 # event schedulers
 - type: entity
