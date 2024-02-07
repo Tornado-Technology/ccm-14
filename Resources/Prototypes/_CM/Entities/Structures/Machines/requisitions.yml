@@ -57,7 +57,7 @@
         entities:
         - ToolboxFlameTurretMarine
         - ToolboxFlameTurretMarine
-      - name: Cables crate(LV x30, MV x40, HV x40)
+      - name: Ящик проводов(LV x30, MV x40, HV x40)
         cost: 1000
         crate: CrateEngineering
         entities:
@@ -102,12 +102,12 @@
         cost: 5000
         crate: CrateWeaponSecure
         entities:
-        - GrenadeFragMarine
-        - GrenadeFragMarine
-        - GrenadeFragMarine
-        - GrenadeFragMarine
-        - GrenadeFragMarine
-        - GrenadeFragMarine
+        - ExGrenade
+        - ExGrenade
+        - ExGrenade
+        - ExGrenade
+        - ExGrenade
+        - ExGrenade
       - name: Ящик C4(6x C4)
         cost: 5000
         crate: CrateEngineeringSecure
@@ -208,6 +208,28 @@
         - JugGold
         - JugMercury
         - JugSilver
+      - name: Ящик спелых плодов(Галакточереполох х3, Амброзия деус х3, алоэ х3, мак х3, линчжи х3, кои бобы х3)
+        cost: 1000
+        crate: CrateMedical
+        entities:
+        - FoodGalaxythistle
+        - FoodGalaxythistle
+        - FoodGalaxythistle
+        - FoodAmbrosiaDeus
+        - FoodAmbrosiaDeus
+        - FoodAmbrosiaDeus
+        - FoodAloe
+        - FoodAloe
+        - FoodAloe
+        - FoodPoppy
+        - FoodPoppy
+        - FoodPoppy
+        - FoodLingzhi
+        - FoodLingzhi
+        - FoodLingzhi
+        - FoodKoibean
+        - FoodKoibean
+        - FoodKoibean
     - name: Разное
       entries:
       - name: Набор флаеров(10x флаер)
@@ -448,3 +470,36 @@
   - type: RequisitionsElevator
   - type: CargoSellBlacklist
 
+- type: entity
+  parent: BaseStructure
+  id: CMRailing
+  name: retractable railing
+  description: That looks like it doesn't open easily.
+  suffix: Raised
+  components:
+  - type: Transform
+    anchored: false
+    noRot: false
+  - type: Sprite
+    sprite: _CM/Structures/railing.rsi
+    offset: 0,0.5
+    layers:
+    - state: raised
+      map: [ "enum.RequisitionsRailingLayers.Base" ]
+    noRot: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.3"
+        layer:
+        - TableLayer
+        mask:
+        - TableMask
+        density: 1000
+  - type: Climbable
+  - type: RequisitionsRailing
+    mode: Raised
+  - type: CargoSellBlacklist
