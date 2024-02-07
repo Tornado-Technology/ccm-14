@@ -9,9 +9,9 @@
     size: Large
   - type: Gun
     fireRate: 2
-    selectedMode: Burst
+    selectedMode: SemiAuto
     availableModes:
-    - Burst
+    - SemiAuto
     cameraRecoilScalar: 100
   - type: ItemSlots
     slots:
@@ -45,9 +45,9 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
   - type: Gun
     fireRate: 2
-    selectedMode: Burst
+    selectedMode: SemiAuto
     availableModes:
-    - Burst
+    - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: Battery
@@ -202,9 +202,9 @@
   - type: AmmoCounter
   - type: Gun
     fireRate: 3
-    selectedMode: Burst
+    selectedMode: FullAuto
     availableModes:
-      - Burst
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
   - type: ChamberMagazineAmmoProvider
@@ -322,9 +322,9 @@
     state: mecha_laser
   - type: Gun
     fireRate: 3
-    selectedMode: Burst
+    selectedMode: FullAuto
     availableModes:
-      - Burst
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
@@ -333,8 +333,8 @@
     zeroVisible: true
   - type: Appearance
   - type: Battery
-    maxCharge: 10
-    startingCharge: 10
+    maxCharge: 20
+    startingCharge: 20
 
 - type: entity
   name:  CH-LC "Solaris" Laser Cannon
@@ -349,8 +349,8 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: Battery
-    maxCharge: 20
-    startingCharge: 20
+    maxCharge: 30
+    startingCharge: 30
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
     fireCost: 20
@@ -384,16 +384,16 @@
     fireStacks: 1
 
 - type: entity
-  name: CH-PS "Immolator" Laser
+  name: CH "Fire Dart" Laser
   parent: MechWeaponImmolator
   id: MechWeaponFireDart
   description: Fires a Laser bolt, identical to laser rifles.
   components:
   - type: Gun
     fireRate: 1
-    selectedMode: Burst
+    selectedMode: SemiAuto
     availableModes:
-      - Burst
+      - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
@@ -402,5 +402,5 @@
     zeroVisible: true
   - type: Appearance
   - type: Battery
-    maxCharge: 30
-    startingCharge: 30
+    maxCharge: 40
+    startingCharge: 40

@@ -94,6 +94,9 @@
     guides:
     - Robotics
   - type: FriendlyFire
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
 
 - type: entity
   id: MechRipley
