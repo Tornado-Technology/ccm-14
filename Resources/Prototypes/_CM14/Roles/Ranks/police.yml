@@ -1,0 +1,33 @@
+- type: jobRank
+  id: MilitaryPoliceOfficer
+  job: MilitaryPoliceOfficer
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceOfficer
+    time: 0
+    icon: JobRankWaltuh
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceOfficer
+    time: 180000 # 50 hours
+    icon: JobRankEnisgn
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceOfficer
+    time: 450000 # 125 hours
+    icon: JobRankSecondLieuntenant
+
+- type: jobRank
+  id: MilitaryPoliceman
+  job: MilitaryPoliceman
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceman
+    time: 0
+    icon: JobRankWaltuh
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceman
+    time: 180000 # 50 hours
+    icon: JobRankMasterSergant
+  - !type:JobRankTimeRequirement
+    role: JobMilitaryPoliceman
+    time: 450000 # 125 hours
+    icon: JobRankSergeantMajor

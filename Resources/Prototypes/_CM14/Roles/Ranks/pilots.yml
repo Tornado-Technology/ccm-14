@@ -1,0 +1,50 @@
+- type: jobRank
+  id: PilotNormandy
+  job: PilotNormandy
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobPilotNormandy
+    time: 0
+    icon: JobRankEnisgn
+  - !type:JobRankTimeRequirement
+    role: JobPilotNormandy
+    time: 180000 # 50 hours
+    icon: JobRankSecondLieuntenant
+  - !type:JobRankTimeRequirement
+    role: JobPilotNormandy
+    time: 450000 # 125 hours
+    icon: JobRankOfficer
+
+- type: jobRank
+  id: PilotRaptor
+  job: PilotRaptor
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobPilotRaptor
+    time: 0
+    icon: JobRankEnisgn
+  - !type:JobRankTimeRequirement
+    role: JobPilotRaptor
+    time: 180000 # 50 hours
+    icon: JobRankSecondLieuntenant
+  - !type:JobRankTimeRequirement
+    role: JobPilotRaptor
+    time: 450000 # 125 hours
+    icon: JobRankOfficer
+
+- type: jobRank 
+  id: PilotMech
+  job: PilotMech
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobPilotMech
+    time: 0
+    icon: JobRankEnisgn
+  - !type:JobRankTimeRequirement
+    role: JobPilotMech
+    time: 180000 # 50 hours
+    icon: JobRankSecondLieuntenant
+  - !type:JobRankTimeRequirement
+    role: JobPilotMech
+    time: 450000 # 125 hours
+    icon: JobRankOfficer
