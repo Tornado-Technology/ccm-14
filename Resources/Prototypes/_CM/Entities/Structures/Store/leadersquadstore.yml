@@ -10,7 +10,7 @@
   - type: Store
     preset: StorePresetSpecialist
     balance:
-      Telecrystal: 2
+      Telecrystal: 1
   - type: Item
     sprite: Objects/Devices/distant_store.rsi
   - type: UserInterface
