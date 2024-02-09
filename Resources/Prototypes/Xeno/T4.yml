@@ -9,6 +9,12 @@
       action: ActionDefilerAcidSpit
       projectile: ProjectileToxinSpit
       speed: 25
+    - type: XenoCrushDash
+    - type: XenoSpitter
+    - type: XenoSpit
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileNeurotoxinVeil
+      speed: 20
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/praetorian.rsi
