@@ -9,6 +9,11 @@
   canBeAntag: false
   access:
     - SquadAlpha
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: AlfaMarine
 
 - type: startingGear
   id: AlfaMarineGear

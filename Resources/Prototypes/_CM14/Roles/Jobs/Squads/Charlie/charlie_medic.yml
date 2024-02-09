@@ -13,6 +13,11 @@
   canBeAntag: false
   accessGroups:
     - SquadCharlieMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: CharlieMedic
 
 - type: startingGear
   id: CharlieMedicGear

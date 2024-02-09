@@ -24,7 +24,12 @@
     - Engineering
     - Command
     - Medical
-
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: AlfaCommander
+  
 - type: startingGear
   id: AlfaCommanderGear
   equipment:

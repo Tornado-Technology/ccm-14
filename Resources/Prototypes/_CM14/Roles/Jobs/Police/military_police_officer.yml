@@ -13,6 +13,11 @@
   canBeAntag: false
   accessGroups:
     - MilitaryPoliceOfficer
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: MilitaryPoliceOfficer
 
 - type: startingGear
   id: MilitaryPoliceOfficerGear

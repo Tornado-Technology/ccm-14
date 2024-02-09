@@ -13,6 +13,11 @@
   canBeAntag: false
   accessGroups:
     - SquadAlphaMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: AlfaMedic
 
 - type: startingGear
   id: AlfaMedicGear

@@ -14,6 +14,11 @@
   access:
     - SquadDelta
     - SquadSpecialist
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: DeltaSpecialist
 
 - type: startingGear
   id: DeltaSpecialistGear

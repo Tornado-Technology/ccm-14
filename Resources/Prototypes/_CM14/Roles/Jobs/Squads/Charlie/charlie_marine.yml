@@ -9,6 +9,11 @@
   canBeAntag: false
   access:
     - SquadCharlie
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: CharlieMarine
 
 - type: startingGear
   id: CharlieMarineGear

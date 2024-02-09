@@ -18,6 +18,11 @@
     - Pilot
     - PilotNormandy
     - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: PilotRaptor
 
 - type: startingGear
   id: PilotOfficerGear

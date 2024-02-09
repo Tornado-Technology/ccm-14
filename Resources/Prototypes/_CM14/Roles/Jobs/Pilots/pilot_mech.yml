@@ -12,6 +12,11 @@
     - Pilot
     - PilotMech
     - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: PilotMech
 
 - type: startingGear
   id: MechPilotGear

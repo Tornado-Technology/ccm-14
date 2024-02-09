@@ -24,6 +24,11 @@
     - Engineering
     - Command
     - Medical
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: BravoCommander
 
 - type: startingGear
   id: BravoCommanderGear

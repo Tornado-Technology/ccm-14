@@ -9,6 +9,11 @@
   canBeAntag: false
   access:
     - SquadDelta
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: DeltaMarine
 
 - type: startingGear
   id: DeltaMarineGear

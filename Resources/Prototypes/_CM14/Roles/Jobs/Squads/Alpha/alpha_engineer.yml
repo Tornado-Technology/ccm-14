@@ -14,6 +14,11 @@
   access:
     - SquadAlpha
     - Engineering
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: AlfaEngineer
 
 - type: startingGear
   id: AlfaEngineerGear

@@ -24,6 +24,11 @@
     - Maintenance
     - Atmospherics
     - Engineering
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: ShipsEngineer
 
 - type: startingGear
   id: ShipsEngineerGear

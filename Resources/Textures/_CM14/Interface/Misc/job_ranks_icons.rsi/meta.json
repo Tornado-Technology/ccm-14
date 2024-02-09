@@ -25,6 +25,9 @@
             "name": "first_sergaent"
         },
         {
+            "name": "lance_corporal"
+        },
+        {
             "name": "major"
         },
         {
@@ -46,6 +49,12 @@
             "name": "petty_officer_third_class"
         },
         {
+            "name": "private"
+        },
+        {
+            "name": "private_first_class"
+        },
+        {
             "name": "proffesor"
         },
         {
@@ -55,7 +64,16 @@
             "name": "commander"
         },
         {
+            "name": "commander_sergeant"
+        },
+        {
+            "name": "coporal"
+        },
+        {
             "name": "second_lieuntenant"
+        },
+        {
+            "name": "sergeant"
         },
         {
             "name": "sergeant_major"

@@ -19,6 +19,11 @@
   canBeAntag: false
   accessGroups:
     - HeadOperations
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: StaffOfficer
 
 - type: startingGear
   id: StaffOfficerGear

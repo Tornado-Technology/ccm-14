@@ -13,6 +13,11 @@
   canBeAntag: false
   accessGroups:
     - MedicalOfficer
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: MilitaryMainMedic
 
 - type: startingGear
   id: MilitaryMainMedicGear

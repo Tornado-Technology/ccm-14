@@ -14,6 +14,11 @@
   access:
     - SquadAlpha
     - SquadSpecialist
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: AlfaSpecialist
 
 - type: startingGear
   id: AlfaSpecialistGear

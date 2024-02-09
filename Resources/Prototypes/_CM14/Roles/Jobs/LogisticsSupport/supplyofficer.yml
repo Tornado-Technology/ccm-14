@@ -15,6 +15,11 @@
     - Cargo
     - Quartermaster
     - Command
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: SupplyOfficer
 
 - type: startingGear
   id: SupplyOfficerGear

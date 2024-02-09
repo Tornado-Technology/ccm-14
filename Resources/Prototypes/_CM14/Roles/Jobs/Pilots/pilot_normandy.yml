@@ -12,6 +12,11 @@
     - Pilot
     - PilotNormandy
     - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: PilotNormandy
 
 - type: startingGear
   id: PilotNOfficerGear

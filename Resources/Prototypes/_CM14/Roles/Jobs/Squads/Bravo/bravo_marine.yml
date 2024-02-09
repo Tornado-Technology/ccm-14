@@ -9,6 +9,11 @@
   canBeAntag: false
   access:
     - SquadBravo
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: BravoMarine
 
 - type: startingGear
   id: BravoMarineGear

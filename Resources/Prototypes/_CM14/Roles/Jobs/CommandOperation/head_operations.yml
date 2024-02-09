@@ -20,6 +20,11 @@
   canBeAntag: false
   accessGroups:
     - HeadOperations
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: HeadOperations
 
 - type: startingGear
   id: HeadOperationsGear

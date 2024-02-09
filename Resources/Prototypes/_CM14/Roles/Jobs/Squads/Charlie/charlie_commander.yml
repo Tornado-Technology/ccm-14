@@ -1,8 +1,8 @@
 - type: job
-  id: DeltaCommander
-  name: job-name-delta-commander
-  description: job-description-deltacommander
-  playTimeTracker: JobDeltaCommander
+  id: CharlieCommander
+  name: job-name-charlie-commander
+  description: job-description-charliecommander
+  playTimeTracker: JobCharlieCommander
   requirements:
     - !type:DepartmentTimeRequirement
       department: EngineersGarrison
@@ -13,21 +13,26 @@
     - !type:DepartmentTimeRequirement
       department: MedicsGarrison
       time: 32400 # 3 hrs
-  startingGear: DeltaCommanderGear
-  icon: "JobIconDeltaCommander"
+  startingGear: CharlieCommanderGear
+  icon: "JobIconCharlieCommander"
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
-    - SquadDelta
+    - SquadCharlie
     - SquadLeader
     - SquadSpecialist
     - Engineering
     - Command
     - Medical
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: CharlieCommander
 
 - type: startingGear
-  id: DeltaCommanderGear
+  id: CharlieCommanderGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitdelta_leader
-    id: DCommanderIDCard
-    ears: ClothingHeadsetMarineDeltaLeader
+    jumpsuit: ClothingUniformJumpsuitcharlie_leader
+    id: CCommanderIDCard
+    ears: ClothingHeadsetMarineCharlieLeader

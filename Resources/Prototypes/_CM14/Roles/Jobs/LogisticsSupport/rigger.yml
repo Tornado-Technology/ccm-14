@@ -9,6 +9,11 @@
   canBeAntag: false
   access:
     - Cargo
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: Rigger
 
 - type: startingGear
   id: RiggerGear

@@ -14,6 +14,11 @@
   access:
     - SquadCharlie
     - SquadSpecialist
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: CharlieSpecialist
 
 - type: startingGear
   id: CharlieSpecialistGear

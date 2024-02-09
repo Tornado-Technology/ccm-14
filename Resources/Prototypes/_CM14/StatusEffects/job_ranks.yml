@@ -169,3 +169,54 @@
   icon:
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: first_sergaent
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankCommanderSergeant
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: commander_sergeant
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankStaffSergeant
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: staff_sergeant
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankSergeant
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: sergeant
+
+# Corporals
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankCoporal
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: coporal
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankLanceCorporal
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: lance_corporal
+
+# Private
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankPrivateFirstClass
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: private_first_class
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankPrivate
+  icon:
+    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    state: private
