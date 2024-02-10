@@ -158,18 +158,14 @@
         - ClothingHeadHelmetMarine
     - name: Медицина
       entries:
-      - name: Ящик аптечек(Medkit x1, MedkitBurn x1, MedkitToxin x1, MedkitO2 x1, MedkitBrute x1, MedkitAdvanced x1, MedkitRadiation x1, MedkitCombat x1)
+      - name: Ящик аптечек(AdvMedkit x1, MedkitBurn x1, MedkitO2 x1, MedkitAdvanced x1)
         cost: 4000
         crate: CrateMedical
         entities:
-        - Medkit
-        - MedkitBurn
-        - MedkitToxin
-        - MedkitO2
-        - MedkitBrute
-        - MedkitAdvanced
-        - MedkitRadiation
-        - MedkitCombat
+        - CMAdvFirstAidKitFilled
+        - CMFirstAidO2KitFilled
+        - CMBurnAidKitFilled
+        - CMFirstAidKitFilled
       - name: Ящик биомассы(Biomass x100)
         cost: 2000
         crate: CrateMedical

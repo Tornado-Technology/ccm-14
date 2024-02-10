@@ -7,7 +7,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - WeaponProtoKineticAccelerator
   - ShuttleGunKineticCircuitboard
@@ -20,7 +20,7 @@
     state: landmine-inactive
   discipline: Arsenal
   tier: 1
-  cost: 2500
+  cost: 1750
   recipeUnlocks:
   - VoiceTrigger
   - SignalTrigger
@@ -37,7 +37,7 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 1
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MechWeaponUltra
   - MagazineAC
@@ -50,7 +50,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 3500
+  cost: 1750
   recipeUnlocks:
   - MagazineRifleM41A
   - MagazineRifleM4RA
@@ -67,7 +67,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 2500
+  cost: 1750
   recipeUnlocks:
   - MagazinePistolAramatM5Y3
   - MagazinePistol88M4
@@ -80,7 +80,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - SpeedLoaderMagnum
   - SpeedLoaderMagnumVP-60x2
@@ -97,7 +97,7 @@
     state: base-b
   discipline: Arsenal
   tier: 1
-  cost: 3500
+  cost: 1725
   recipeUnlocks:
   - Box10x24mm
   - Magazine10x26mm
@@ -113,7 +113,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 4500
+  cost: 2225
   recipeUnlocks:
   - ExGrenade
   - C4
@@ -126,7 +126,7 @@
     state: uranium
   discipline: Arsenal
   tier: 1
-  cost: 4500
+  cost: 2225
   recipeUnlocks:
   - ShellShotgunUranium
   - CartridgePistolUranium
@@ -146,7 +146,7 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MechWeaponHades
   - MagazineHades
@@ -159,7 +159,7 @@
     state: mecha_scatter
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MechWeaponScattershot
   - MagazineScattershot
@@ -172,7 +172,7 @@
     state: mecha_laser
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MechWeaponImmolator
 
@@ -184,7 +184,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - WeaponLaserCarbine
   - WeaponLaserCannon
@@ -197,7 +197,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 4500
+  cost: 225
   recipeUnlocks:
   - MarineCASFlareBomb
   - MarineCASClusterBomb
@@ -210,7 +210,7 @@
     state: base
   discipline: Arsenal
   tier: 3
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MagazineShotgunAFG-12
   - FuelTankFlamethrower
@@ -231,7 +231,7 @@
     state: full
   discipline: Arsenal
   tier: 2
-  cost: 10500
+  cost: 5250
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
@@ -254,7 +254,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - WeaponAdvancedLaser
 
@@ -266,7 +266,7 @@
     state: icon
   discipline: Arsenal
   tier: 4
-  cost: 15000
+  cost: 7500
   recipeUnlocks:
   - WeaponAntiqueLaser
   - WeaponLaserSvalinn
@@ -279,7 +279,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 7500
   recipeUnlocks:
   - GrenadeEMP
   - PowerCageHigh
@@ -295,6 +295,6 @@
     state: mecha_laser
   discipline: Arsenal
   tier: 3
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - MechWeaponSolaris
