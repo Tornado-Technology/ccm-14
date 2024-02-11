@@ -37,6 +37,8 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Xeno;
 using Content.Server.Xeno;
+using MarineSpawnComponent = Content.Server._CM14.Xeno.MarineSpawnComponent;
+using XenoSpawnComponent = Content.Server._CM14.Xeno.XenoSpawnComponent;
 
 namespace Content.Server.Shuttles.Systems;
 
