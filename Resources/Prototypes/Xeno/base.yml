@@ -161,7 +161,6 @@
     - type: LightningTarget
       priority: 2
       lightningExplode: false
-    - type: XenoAcid
 
 - type: entity
   id: ActionXenoAcid
