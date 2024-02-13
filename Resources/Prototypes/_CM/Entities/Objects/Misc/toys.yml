@@ -1,0 +1,22 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieGustaf
+  name: Густаф Нойманн 
+  description: Выполнено некой компанией "Descente", качественная игрушка воплощающая облик Легендарного Бойца, который вёл легендарный дивизион великих бойцов.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/toys.rsi
+    state: gustaf
+  - type: EmitSoundOnUse
+    sound:
+      collection: Warcry
+  - type: EmitSoundOnLand
+    sound:
+      collection: Warcry
+  - type: EmitSoundOnActivate
+    sound:
+      collection: Warcry
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: Warcry
