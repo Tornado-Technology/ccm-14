@@ -24,6 +24,7 @@
       damage:
         groups:
           Brute: 36
+    - type: XenoAcid
 
 - type: entity
   name: queen
