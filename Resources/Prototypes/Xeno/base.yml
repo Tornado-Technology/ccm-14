@@ -19,6 +19,7 @@
         - key: enum.XenoEvolutionUiKey.Key
           type: XenoEvolutionBoundUserInterface
     - type: ShowXenoAgeIcons
+      jobId: JobKseno
     - type: Insulated
     - type: CombatMode
       combatToggleAction: ActionXenoCombatModeToggle
@@ -89,10 +90,10 @@
           - MobLayer
     - type: Tag
       tags:
-        - CannotSuicide
-        - DoorBumpOpener
-        - FootstepSound
-        - DoorBumpOpener
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - Xeno
     - type: NoSlip
     - type: Perishable # Ummmm the acid kills a lot of the bacteria or something
       molsPerSecondPerUnitMass: 0.0005
@@ -258,7 +259,6 @@
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
 
-
 - type: entity
   abstract: true
   parent: MobXenoBase
@@ -276,7 +276,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-
 
 - type: entity
   abstract: true

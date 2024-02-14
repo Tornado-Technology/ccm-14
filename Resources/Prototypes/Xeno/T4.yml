@@ -3,6 +3,8 @@
   parent: MobXenoBaseT4
   id: MobPraetorianXeno
   components:
+    - type: ShowXenoAgeIcons
+      jobId: JobPretor
     - type: XenoPraetorian
     - type: XenoSpitRejuvenate
     - type: XenoSpit2
@@ -35,6 +37,8 @@
         - !type:XenoEvolution
           prototype: MobRoyalQueenXeno
           evolution: 6900
+    - type: ShowXenoAgeIcons
+      jobId: JobQuinn
     - type: XenoLayEgg
     - type: XenoStun
     - type: XenoScreech
@@ -74,6 +78,8 @@
   parent: MobXenoBaseT4
   id: MobRounyXeno
   components:
+    - type: ShowXenoAgeIcons
+      jobId: JobRuni
     - type: XenoStealth
     - type: XenoEvasion
     - type: XenoPsychicJump
