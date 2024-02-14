@@ -46,6 +46,8 @@
         amount: 5
       - id: ClothingEyesGlassesMeson
         amount: 5
+      - id: ClothingBeltUtilityEngineering
+        amount: 5
     - name: Вооружение
       entries:
       - id: WeaponRifleM4RA
@@ -198,6 +200,14 @@
         amount: 5
       - id: FireExtinguisherMarine
         amount: 1
+      - id: BoxBodyBag
+        amount: 3
+      - id: ClothingBeltMilitaryWebbingMed
+        amount: 1
+      - id: MarineRollerBed
+        amount: 10
+      - id: CMPouchMedicalSoc
+        amount: 2
 
 
 - type: entity
@@ -249,6 +259,8 @@
       - id: ClothingHeadBeretMilitary
         amount: 1
       - id: ClothingHeadBeretGreen
+        amount: 1
+      - id: ClothingOuterArmorSPEC
         amount: 1
     - name: Хранилища
       entries:
@@ -313,12 +325,14 @@
       entries:
       - id: BoxMRPFilled
         amount: 1
-      - id: StoreSpecialist
-        amount: 1
       - id: PinpointerNuclear
+        amount: 1
+      - id: Whistle
         amount: 1
     - name: Одежда
       entries:
+      - id: ClothingOuterArmorSPEC
+        amount: 1
       - id: ClothingUniformJumpsuitMarine
         amount: 1
       - id: ClothingHandsGlovesMarine
@@ -432,7 +446,7 @@
         amount: 1
       - id: ClothingMaskGas
         amount: 1
-    - name: РюкзакиBoxMRPFilled
+    - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
         amount: 4
@@ -508,17 +522,7 @@
         amount: 4
       - id: BoxMRPFilled
         amount: 10
-    - name: Утилиты
-      entries:
-      - id: HandheldStationMap
-        amount: 1
-      - id: PowerCellHyper
-        amount: 1
-      - id: FlashlightLantern
-        amount: 2
-      - id: FireExtinguisherMarine
-        amount: 1
-      - id: C4
+      - id: ClothingBeltSecurityWebbing
         amount: 5
     - name: Очки
       entries:
@@ -530,8 +534,18 @@
         amount: 4
       - id: ClothingEyesGlassesBallistic
         amount: 2
+    - name: Вооружение
+      entries:
+      - id: WeaponDisablerSMG
+        amount: 5
+      - id: WeaponRifleM41A
+        amount: 4
+      - id: MagazineRifleM41A
+        amount: 16
     - name: Утилиты
       entries:
+      - id: Handcuffs
+        amount: 13
       - id: Zipties
         amount: 12
       - id: RiotShield
@@ -548,3 +562,11 @@
         amount: 5
       - id: FlashlightSeclite
         amount: 5
+      - id: HandheldStationMap
+        amount: 1
+      - id: PowerCellHigh
+        amount: 1
+      - id: FlashlightLantern
+        amount: 2
+      - id: FireExtinguisherMarine
+        amount: 1

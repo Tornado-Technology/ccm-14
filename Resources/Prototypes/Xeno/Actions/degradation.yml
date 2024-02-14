@@ -9,3 +9,4 @@
       sprite: Actions/xeno.rsi
       state: degradation
     event: !type:XenoDegradationEvent
+    useDelay: 10

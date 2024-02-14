@@ -145,3 +145,4 @@
     - type: XenoDegradation
       prototype: MobSentinelXeno
       timeUsage: 30
+    - type: XenoAcid

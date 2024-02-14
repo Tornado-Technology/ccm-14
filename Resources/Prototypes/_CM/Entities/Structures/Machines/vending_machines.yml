@@ -110,6 +110,12 @@
         amount: 16
       - id: MagazineRifleM39
         amount: 16
+      - id: Box10x24mm
+        amount: 3
+      - id: Box125x60RmmCM
+        amount: 4
+      - id: Box450_BrushmasterCM
+        amount: 3
     - name: Пистолеты
       entries:
       - id: WeaponPistol88M4
@@ -125,9 +131,8 @@
     - name: Утилиты
       entries:
       - id: MacheteMarine
-        amount: 25
-      - id: FlareMarine
-        amount: 25
+        amount: 4
+
 
 - type: entity
   parent: ColMarTechBase
@@ -178,7 +183,7 @@
         amount: 5
       - id: ClothingEyesGlassesRPG
         amount: 2
-    - name: РюкзакиBoxMRPFilled
+    - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
         amount: 2
@@ -186,6 +191,8 @@
         amount: 4
       - id: ClothingBeltMilitaryWebbing
         amount: 2
+      - id: BoxEmergencyMarine
+        amount: 10
     - name: Маски
       entries:
       - id: ClothingMaskGasMarine
@@ -206,6 +213,16 @@
         amount: 20
       - id: CMPouchMagazine
         amount: 2
+    - name: Подсумки
+      entries:
+      - id: CMPouchFlare
+        amount: 4
+      - id: CMPouchMedical
+        amount: 4
+      - id: CMPouchSurvival
+        amount: 4
+      - id: CMPouchFirstAid
+        amount: 4
 
 - type: entity
   parent: ColMarTechBase
@@ -245,7 +262,7 @@
         amount: 4
       - id: ClothingHeadsetMarineAlfa
         amount: 4
-    - name: РюкзакиBoxMRPFilled
+    - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
         amount: 4
@@ -302,7 +319,7 @@
         amount: 4
       - id: ClothingHeadsetMarineAlfa
         amount: 4
-    - name: РюкзакиBoxMRPFilled
+    - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
         amount: 4
@@ -363,7 +380,7 @@
         amount: 1
       - id: ClothingMaskGas
         amount: 1
-    - name: РюкзакиBoxMRPFilled
+    - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
         amount: 4

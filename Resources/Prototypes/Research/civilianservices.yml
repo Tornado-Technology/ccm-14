@@ -23,7 +23,7 @@
     state: hamtr
   discipline: CivilianServices
   tier: 1
-  cost: 1000
+  cost: 2000
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -61,7 +61,7 @@
     state: television
   discipline: CivilianServices
   tier: 1
-  cost: 1000
+  cost: 500
   recipeUnlocks:
     - ComputerTelevisionCircuitboard
     - SynthesizerInstrument
@@ -79,7 +79,7 @@
     state: astroice
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - FauxTileAstroGrass
   - FauxTileAstroIce
@@ -92,7 +92,7 @@
     state: janitor
   discipline: CivilianServices
   tier: 2
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - BorgModuleLightReplacer
   - BorgModuleAdvancedCleaning
@@ -120,7 +120,7 @@
     state: display
   discipline: CivilianServices
   tier: 2
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
 
@@ -132,7 +132,7 @@
     state: honker
   discipline: CivilianServices
   tier: 2
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - HonkerHarness
   - HonkerLArm
@@ -152,7 +152,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
@@ -167,7 +167,7 @@
     state: display
   discipline: CivilianServices
   tier: 3
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard
 
@@ -179,6 +179,6 @@
     state: icon
   discipline: CivilianServices
   tier: 3
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - ClothingShoesBootsSpeed
