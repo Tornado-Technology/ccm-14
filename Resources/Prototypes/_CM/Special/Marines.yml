@@ -26,6 +26,7 @@
     - CanPilot
     - FootstepSound
     - DoorBumpOpener
+    - Marine
   - type: Reactive
     groups:
       Flammable: [ Touch ]

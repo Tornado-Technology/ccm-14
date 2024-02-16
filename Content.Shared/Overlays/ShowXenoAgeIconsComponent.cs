@@ -1,9 +1,16 @@
+using Content.Shared.Players.PlayTimeTracking;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Overlays;
 
-/// <summary>
-///     This component allows you to see the age of xenos.
-/// </summary>
-[RegisterComponent, NetworkedComponent]
-public sealed partial class ShowXenoAgeIconsComponent : Component { }
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class ShowXenoAgeIconsComponent : Component
+{
+    [DataField, AutoNetworkedField]
+    public long OverallRoleTime = 0;
+
+    [DataField(required: true)]
+    public ProtoId<PlayTimeTrackerPrototype> JobId;
+
+}

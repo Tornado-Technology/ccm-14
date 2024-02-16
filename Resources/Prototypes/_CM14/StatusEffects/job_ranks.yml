@@ -74,13 +74,6 @@
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: waltuh
 
-- type: statusIcon
-  parent: JobRankIcon
-  id: JobRankRearAdmiral
-  icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
-    state: rear_admiral
-
 # Command operations
 - type: statusIcon
   parent: JobRankIcon
@@ -158,14 +151,14 @@
 
 - type: statusIcon
   parent: JobRankIcon
-  id: JobRankMasterSergant
+  id: JobRankMasterSergeant
   icon:
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: master_sergant
 
 - type: statusIcon
   parent: JobRankIcon
-  id: JobRankFirstSergaent
+  id: JobRankFirstSergeant
   icon:
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: first_sergaent
@@ -220,3 +213,32 @@
   icon:
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: private
+
+# Xeno
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankXenoAncient
+  icon:
+    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    state: ancient
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankXenoElder
+  icon:
+    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    state: elder
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankXenoMature
+  icon:
+    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    state: mature
+
+- type: statusIcon
+  parent: JobRankIcon
+  id: JobRankXenoYoung
+  icon:
+    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    state: young
