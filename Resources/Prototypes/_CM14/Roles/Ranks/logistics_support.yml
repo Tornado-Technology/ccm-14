@@ -22,11 +22,11 @@
   - !type:JobRankTimeRequirement
     role: JobRigger
     time: 0
-    icon: JobRankFirstSergeant
+    icon: JobRankWaltuh
   - !type:JobRankTimeRequirement
     role: JobRigger
     time: 180000 # 50 hours
-    icon: JobRankMasterSergeant
+    icon: JobRankMasterSergant
   - !type:JobRankTimeRequirement
     role: JobRigger
     time: 450000 # 125 hours
