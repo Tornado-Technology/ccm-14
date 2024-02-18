@@ -1,6 +1,6 @@
 - type: entity
   id: BaseMagazineRifleM41A
-  name: "M41A magazine (10x24mm)"
+  name: "M41A magazine (12.5x60R)"
   parent: BaseItem
   abstract: true
   components:
@@ -36,7 +36,7 @@
 
 - type: entity
   id: MagazineRifleM41A
-  name: "M41A magazine (10x24mm)"
+  name: "M41A magazine (12.5x60R)"
   parent: BaseMagazineRifleM41A
   components:
   - type: BallisticAmmoProvider
