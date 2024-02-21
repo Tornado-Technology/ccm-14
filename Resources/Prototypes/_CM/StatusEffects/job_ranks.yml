@@ -74,13 +74,6 @@
     sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
     state: waltuh
 
-- type: statusIcon
-  parent: JobRankIcon
-  id: JobRankRearAdmiral
-  icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
-    state: rear_admiral
-
 # Command operations
 - type: statusIcon
   parent: JobRankIcon

@@ -1,5 +1,4 @@
-using Content.Shared.Kitchen;
-using Content.Shared.Xeno;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Client.Xeno.UI;
 
@@ -10,7 +9,6 @@ public sealed partial class XenoEvolutionBoundUserInterface : BoundUserInterface
 
     public XenoEvolutionBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
-
     }
 
     protected override void Open()

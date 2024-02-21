@@ -35,10 +35,7 @@ using Robust.Shared.Timing;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
-using Content.Shared.Xeno;
-using Content.Server.Xeno;
-using MarineSpawnComponent = Content.Server._CM14.Xeno.MarineSpawnComponent;
-using XenoSpawnComponent = Content.Server._CM14.Xeno.XenoSpawnComponent;
+using Content.Server._CM14.Xeno;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -87,7 +84,8 @@ public sealed class ArrivalsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PlayerSpawningEvent>(OnPlayerSpawn, before: new[] { typeof(SpawnPointSystem), typeof(ContainerSpawnPointSystem) });
+        SubscribeLocalEvent<PlayerSpawningEvent>(OnPlayerSpawn,
+            before: new[] { typeof(SpawnPointSystem), typeof(ContainerSpawnPointSystem) });
         SubscribeLocalEvent<StationArrivalsComponent, ComponentStartup>(OnArrivalsStartup);
 
         SubscribeLocalEvent<ArrivalsShuttleComponent, ComponentStartup>(OnShuttleStartup);
@@ -131,7 +129,7 @@ public sealed class ArrivalsSystem : EntitySystem
             new("enable", Loc.GetString("cmd-arrivals-enable-hint")),
             new("disable", Loc.GetString("cmd-arrivals-disable-hint")),
             new("returns", Loc.GetString("cmd-arrivals-returns-hint")),
-            new ("force", Loc.GetString("cmd-arrivals-force-hint"))
+            new("force", Loc.GetString("cmd-arrivals-force-hint"))
         }, "Option");
     }
 
@@ -180,6 +178,7 @@ public sealed class ArrivalsSystem : EntitySystem
                     RemCompDeferred<PendingClockInComponent>(uid);
                     shell.WriteLine(Loc.GetString("cmd-arrivals-forced", ("uid", ToPrettyString(uid))));
                 }
+
                 break;
             default:
                 shell.WriteError(Loc.GetString($"cmd-arrivals-invalid"));
@@ -270,7 +269,8 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void OnArrivalsDocked(EntityUid uid, ArrivalsShuttleComponent component, ref FTLCompletedEvent args)
     {
-        TimeSpan dockTime = component.NextTransfer - _timing.CurTime + TimeSpan.FromSeconds(ShuttleSystem.DefaultStartupTime);
+        TimeSpan dockTime = component.NextTransfer - _timing.CurTime +
+                            TimeSpan.FromSeconds(ShuttleSystem.DefaultStartupTime);
 
         if (TryComp<DeviceNetworkComponent>(uid, out var netComp))
         {
@@ -293,7 +293,8 @@ public sealed class ArrivalsSystem : EntitySystem
         foreach (var (ent, xform) in toDump)
         {
             var rotation = xform.LocalRotation;
-            _transform.SetCoordinates(ent, new EntityCoordinates(args.FromMapUid!.Value, args.FTLFrom.Transform(xform.LocalPosition)));
+            _transform.SetCoordinates(ent,
+                new EntityCoordinates(args.FromMapUid!.Value, args.FTLFrom.Transform(xform.LocalPosition)));
             _transform.SetWorldRotation(ent, args.FromRotation + rotation);
         }
     }
@@ -316,7 +317,8 @@ public sealed class ArrivalsSystem : EntitySystem
     {
         if (ev?.Job?.Prototype != null)
         {
-            if (ev.Job.Prototype == "Quinn" || ev.Job.Prototype == "Pretor" || ev.Job.Prototype == "Kseno" || ev.Job.Prototype == "Runi")
+            if (ev.Job.Prototype == "Quinn" || ev.Job.Prototype == "Pretor" || ev.Job.Prototype == "Kseno" ||
+                ev.Job.Prototype == "Runi")
             {
                 var points = EntityQueryEnumerator<XenoSpawnComponent, TransformComponent>();
                 var possiblePositions = new List<EntityCoordinates>();
@@ -554,8 +556,10 @@ public sealed class ArrivalsSystem : EntitySystem
             var arrivalsComp = EnsureComp<ArrivalsShuttleComponent>(component.Shuttle);
             arrivalsComp.Station = uid;
             EnsureComp<ProtectedGridComponent>(uid);
-            _shuttles.FTLTravel(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration, dock: true);
-            arrivalsComp.NextTransfer = _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
+            _shuttles.FTLTravel(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration,
+                dock: true);
+            arrivalsComp.NextTransfer =
+                _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
         }
 
         // Don't start the arrivals shuttle immediately docked so power has a time to stabilise?

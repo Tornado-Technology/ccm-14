@@ -1,6 +1,6 @@
-using Content.Server.Xeno.Actions.Components;
 using Robust.Client.GameObjects;
 using System.Numerics;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Client.Xeno;
 

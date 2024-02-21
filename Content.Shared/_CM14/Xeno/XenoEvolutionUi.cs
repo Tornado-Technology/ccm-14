@@ -1,19 +1,19 @@
 using Content.Shared.Actions;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Xeno;
+namespace Content.Shared._CM14.Xeno;
 
 [Serializable, NetSerializable]
 public sealed class XenoEvolutionBoundInterfaceState : BoundUserInterfaceState
 {
     public readonly float Evolution;
     public readonly float EvolutionModifer;
-    public readonly HashSet<XenoEvolution> Evolutions;
+    public readonly HashSet<_CM14.Xeno.XenoEvolution> Evolutions;
     public readonly bool Enabled;
     public readonly Dictionary<int, int> Limit;
     public readonly Dictionary<int, int> Tiers;
 
-    public XenoEvolutionBoundInterfaceState(float evolution, float modifer, HashSet<XenoEvolution> evolutions, bool enabled, Dictionary<int, int> limit, Dictionary<int, int> tiers)
+    public XenoEvolutionBoundInterfaceState(float evolution, float modifer, HashSet<_CM14.Xeno.XenoEvolution> evolutions, bool enabled, Dictionary<int, int> limit, Dictionary<int, int> tiers)
     {
         Evolution = evolution;
         EvolutionModifer = modifer;
@@ -27,9 +27,9 @@ public sealed class XenoEvolutionBoundInterfaceState : BoundUserInterfaceState
 [Serializable, NetSerializable]
 public sealed class EvolveMessage : BoundUserInterfaceMessage
 {
-    public readonly XenoEvolution Evolution;
+    public readonly _CM14.Xeno.XenoEvolution Evolution;
 
-    public EvolveMessage(XenoEvolution evolution)
+    public EvolveMessage(_CM14.Xeno.XenoEvolution evolution)
     {
         Evolution = evolution;
     }

@@ -3,9 +3,8 @@ using Content.Shared.DoAfter;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
-using System.Numerics;
 
-namespace Content.Shared.Xeno;
+namespace Content.Shared._CM14.Xeno;
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class SharedXenoStunAbilitiesComponent : Component

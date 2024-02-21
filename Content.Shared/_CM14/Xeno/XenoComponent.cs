@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.Xeno;
+namespace Content.Shared._CM14.Xeno;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class XenoComponent : Component

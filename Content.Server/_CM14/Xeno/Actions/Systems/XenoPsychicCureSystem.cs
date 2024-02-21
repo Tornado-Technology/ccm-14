@@ -3,11 +3,11 @@ using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.DoAfter;
-using Content.Shared.Xeno;
+using Content.Shared._CM14.Xeno;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
-using XenoPsychicCureComponent = Content.Server._CM14.Xeno.Actions.Components.XenoPsychicCureComponent;
-using XenoRejuvenateProjComponent = Content.Server._CM14.Xeno.Actions.Components.XenoRejuvenateProjComponent;
+using Content.Server._CM14.Xeno.Actions.Components;
+
 
 namespace Content.Server._CM14.Xeno.Actions.Systems;
 
@@ -28,18 +28,20 @@ public sealed class XenoPsychicCureSystem : EntitySystem
         SubscribeLocalEvent<XenoPsychicCureComponent, XenoPsychicCureDoAfterEvent>(OnPsychicCureDoAfter);
         SubscribeLocalEvent<XenoRejuvenateProjComponent, StartCollideEvent>(OnCollide);
     }
+
     private void OnStartup(EntityUid uid, XenoPsychicCureComponent component, ComponentStartup args)
     {
         _actionsSystem.AddAction(uid, component.Action);
     }
 
-    private void OnPsychicCureDoAfter(EntityUid uid, XenoPsychicCureComponent component, XenoPsychicCureDoAfterEvent args)
+    private void OnPsychicCureDoAfter(EntityUid uid, XenoPsychicCureComponent component,
+        XenoPsychicCureDoAfterEvent args)
     {
         if (!args.Cancelled)
         {
             if (args.Target != null)
             {
-                Heal((EntityUid)args.Target, component.HealAmount);
+                Heal((EntityUid) args.Target, component.HealAmount);
             }
         }
     }
@@ -50,13 +52,14 @@ public sealed class XenoPsychicCureSystem : EntitySystem
             return;
 
         var doAfterEventArgs =
-          new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(6.5f), new XenoPsychicCureDoAfterEvent(), uid, target: args.Target, used: uid)
-          {
-              BreakOnUserMove = true,
-              BreakOnTargetMove = true,
-              NeedHand = false,
-              BreakOnDamage = true,
-          };
+            new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(6.5f), new XenoPsychicCureDoAfterEvent(), uid,
+                target: args.Target, used: uid)
+            {
+                BreakOnUserMove = true,
+                BreakOnTargetMove = true,
+                NeedHand = false,
+                BreakOnDamage = true,
+            };
 
         _doAfter.TryStartDoAfter(doAfterEventArgs);
     }
@@ -74,7 +77,8 @@ public sealed class XenoPsychicCureSystem : EntitySystem
             if (damageInType == 0)
                 continue;
 
-            _damageableSystem.TryChangeDamage(target, new DamageSpecifier(_proto.Index<DamageTypePrototype>(type), -healAmount), true);
+            _damageableSystem.TryChangeDamage(target,
+                new DamageSpecifier(_proto.Index<DamageTypePrototype>(type), -healAmount), true);
         }
     }
 
