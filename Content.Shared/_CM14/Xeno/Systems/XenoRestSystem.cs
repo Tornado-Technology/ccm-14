@@ -2,11 +2,12 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Events;
-using Content.Shared.Xeno.Components;
-using Content.Shared.Xeno.Events;
 using Robust.Shared.Serialization;
+using XenoRestComponent = Content.Shared._CM14.Xeno.Components.XenoRestComponent;
+using XenoRestEvent = Content.Shared._CM14.Xeno.Events.XenoRestEvent;
+using XenoRestingComponent = Content.Shared._CM14.Xeno.Components.XenoRestingComponent;
 
-namespace Content.Shared.Xeno.Systems;
+namespace Content.Shared._CM14.Xeno.Systems;
 
 public sealed class XenoRestSystem : EntitySystem
 {

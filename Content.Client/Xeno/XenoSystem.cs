@@ -1,11 +1,11 @@
-using Content.Shared.Xeno;
 using Robust.Client.Graphics;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Client.Xeno;
 
 public sealed partial class XenoSystem : EntitySystem
 {
-    [Dependency] ILightManager _lightManager = default!;
+    [Dependency] readonly ILightManager _lightManager = default!;
 
     public override void Initialize()
     {

@@ -1,8 +1,6 @@
-using Content.Server.Alien;
 using Content.Server.NPC.Components;
 using Content.Server.Popups;
 using Content.Shared.Actions;
-using Content.Shared.Alien;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
@@ -15,10 +13,11 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
-using Content.Shared.Xeno;
 using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Mobs.Components;
+using Content.Shared._CM14.Xeno;
 using Robust.Server.GameObjects;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Server._CM14.Xeno.Mobs.Systems;
 
@@ -131,6 +130,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (TryComp<XenoEvolutionsComponent>(uid, out var evolution))
             evolution.Enabled = false;
     }
+
     private void OnUnequipAttempt(EntityUid uid, FaceHuggerComponent component, BeingUnequippedAttemptEvent args)
     {
         if (args.Slot != "mask")
@@ -142,7 +142,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (HasComp<FaceHuggerComponent>(args.Unequipee))
             return;
 
-        _damageableSystem.TryChangeDamage(args.Unequipee, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10));
+        _damageableSystem.TryChangeDamage(args.Unequipee,
+            new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10));
         args.Cancel();
     }
 
@@ -151,7 +152,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (component.IsDeath)
             return;
 
-        _damageableSystem.TryChangeDamage(args.User, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 5));
+        _damageableSystem.TryChangeDamage(args.User,
+            new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 5));
     }
 
     private void OnGotUnequipped(EntityUid uid, FaceHuggerComponent component, GotUnequippedEvent args)
@@ -175,6 +177,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         RemComp<HuggerOnFaceComponent>(args.Equipee);
         EnsureComp<NPCMeleeCombatComponent>(uid);
     }
+
     private static void OnMobStateChanged(EntityUid uid, FaceHuggerComponent component, MobStateChangedEvent args)
     {
         if (args.NewMobState == MobState.Dead)
@@ -203,7 +206,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
                 if (mobState.CurrentState is MobState.Dead)
                 {
                     _inventory.TryUnequip(targetId, "mask", true, true);
-                    _damageableSystem.TryChangeDamage(comp.OwnerId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 30));
+                    _damageableSystem.TryChangeDamage(comp.OwnerId,
+                        new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 30));
                     EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
                     comp.EquipedOn = new EntityUid();
                     comp.InfectionAccumulator = 0;
@@ -215,7 +219,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
                 continue;
             comp.Accumulator = 0;
 
-            _damageableSystem.TryChangeDamage(targetId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 3));
+            _damageableSystem.TryChangeDamage(targetId,
+                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 3));
 
             if (comp.InfectionAccumulator <= comp.InfectionFrequency)
                 continue;
@@ -231,7 +236,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
             _inventory.TryUnequip(targetId, "mask", true, true);
 
             Spawn(comp.InfectionEgg, Transform(comp.OwnerId).Coordinates);
-            _damageableSystem.TryChangeDamage(targetId, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
+            _damageableSystem.TryChangeDamage(targetId,
+                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
 
             RemComp<HuggerOnFaceComponent>(targetId);
             comp.EquipedOn = new EntityUid();

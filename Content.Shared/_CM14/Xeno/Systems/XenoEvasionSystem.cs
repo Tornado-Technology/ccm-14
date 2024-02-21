@@ -1,10 +1,11 @@
 ﻿using Content.Shared.Actions;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
-using Content.Shared.Xeno.Components;
-using Content.Shared.Xeno.Events;
+using XenoEvadesComponent = Content.Shared._CM14.Xeno.Components.XenoEvadesComponent;
+using XenoEvasionComponent = Content.Shared._CM14.Xeno.Components.XenoEvasionComponent;
+using XenoEvasionEvent = Content.Shared._CM14.Xeno.Events.XenoEvasionEvent;
 
-namespace Content.Shared.Xeno.Systems;
+namespace Content.Shared._CM14.Xeno.Systems;
 
 public sealed class XenoEvasionSystem : EntitySystem
 {

@@ -3,7 +3,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.Xeno.Actions.Components;
+namespace Content.Shared._CM14.Xeno;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class XenoRageComponent : Component
