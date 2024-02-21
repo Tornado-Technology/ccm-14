@@ -3,7 +3,7 @@ using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client.Xeno.UI;
+namespace Content.Client._CM14.Xeno.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class XenoEvolutionControl : Control

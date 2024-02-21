@@ -1,11 +1,11 @@
-﻿using Content.Shared._CM14.Xeno.Systems;
+﻿using Content.Shared._CM14.Xeno.Components;
+using Content.Shared._CM14.Xeno.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Robust.Client.GameObjects;
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
-using  Content.Shared._CM14.Xeno.Components;
 
-namespace Content.Client.Xeno;
+namespace Content.Client._CM14.Xeno;
 
 public sealed class XenoVisualizerSystem : VisualizerSystem<XenoRestComponent>
 {
