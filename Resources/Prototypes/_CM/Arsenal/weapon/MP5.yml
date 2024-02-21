@@ -9,7 +9,6 @@
   abstract: true
   suffix: "Marines Gear"
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/mp5.rsi
   - type: Item

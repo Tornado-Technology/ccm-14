@@ -1,14 +1,17 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "",
+  "copyright": "Made by Tornado-Technology (Github) for CM14",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "precision_shooting"
+      "name": "off"
+    },
+    {
+      "name": "on"
     }
   ]
 }

@@ -5,7 +5,6 @@
   suffix: "Marines Gear"
   description: A Russian - made revolver for cartridges .357 (9×33 mm). It was intended for export (REX – Revolver for Export), but it never went into mass production at the time.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/mp412.rsi
   - type: Clothing

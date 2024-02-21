@@ -5,7 +5,6 @@
   suffix: "Marines Gear"
   description: The newest model, replacing an ordinary signal pistol. The best friend of any Marine in the dark tunnels! Uses Flyers as a cartridge.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/svetlachok.rsi
   - type: Clothing

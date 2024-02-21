@@ -9,7 +9,6 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     layers:
     - state: base

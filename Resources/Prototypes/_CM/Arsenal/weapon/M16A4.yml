@@ -9,7 +9,6 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/m16a4.rsi
   - type: Item

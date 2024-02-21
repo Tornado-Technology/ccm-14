@@ -8,7 +8,6 @@
   abstract: true
   suffix: "Marines Gear"
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     layers:
       - state: icon

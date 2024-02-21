@@ -8,7 +8,6 @@
   suffix: "Marines Gear"
   description: A Russian revolver developed in 1991-1992 by the designers of the TSKIB SOO I. Ya. Stechkin and B. V. Avraamov. Officers' revolver. Uses 9x18 mm cartridges.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/kobalt.rsi
   - type: Clothing
