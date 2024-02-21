@@ -5,7 +5,6 @@
   description: "Make It Burn Dem"
   suffix: MarinesGear
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/TGMSArsenal/Textures/flamethrower.rsi
     layers:

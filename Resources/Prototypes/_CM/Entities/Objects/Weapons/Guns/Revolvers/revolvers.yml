@@ -4,7 +4,6 @@
   id: WeaponMagnumVP-60x2
   description: A bulky revolver, occasionally carried by assault troops and officers in the Colonial Marines, as well as civilian law enforcement. Fires .44 Magnum rounds.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Revolvers/m44.rsi
   - type: Clothing

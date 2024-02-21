@@ -4,7 +4,6 @@
   parent: BaseWeaponLightMachineGun
   description: A rather traditionally made SIG with a pleasantly lacquered wooden pistol grip. Uses .30 rifle ammo.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
     layers:

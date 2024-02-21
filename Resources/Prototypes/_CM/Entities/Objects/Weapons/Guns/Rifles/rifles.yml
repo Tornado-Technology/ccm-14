@@ -4,7 +4,6 @@
   id: WeaponRifleM41A
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
-  # - type: PrecisionShooting
   - type: ChamberMagazineAmmoProvider
     boltClosed: true
   - type: Sprite
@@ -66,7 +65,6 @@
   id: WeaponRifleM42
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m42.rsi
     layers:
@@ -120,7 +118,6 @@
   id: WeaponRifleM4RA
   description: The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
     layers:

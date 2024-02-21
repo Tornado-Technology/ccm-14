@@ -1,0 +1,12 @@
+- type: entity
+  id: ActionPrecisionShooting
+  name: PrecisionShooting
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _CM14/Interface/Actions/precision_shooting.rsi
+      state: off
+    event: !type:ToggleActionEvent
+    useDelay: 1
+  - type: FriendlyFireToggleableAction

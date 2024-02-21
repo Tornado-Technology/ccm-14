@@ -4,7 +4,6 @@
   id: WeaponLauncherGrenades
   description: PLOOP
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:

@@ -35,6 +35,7 @@
       action: ActionDefilerDefaultSpit
       projectile: ProjectileNeurotoxinVeil
       speed: 25
+    - type: XenoAcid
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
       projectile: ProjectileToxinSpit

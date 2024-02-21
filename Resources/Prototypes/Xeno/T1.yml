@@ -64,6 +64,17 @@
       needsHands: false
       sprintModifier: 0.6
     - type: XenoDegradation
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 550
+          mask:
+          - SmallMobMask
+          layer:
+          - SmallMobLayer
 
 - type: entity
   name: sentinel
@@ -96,6 +107,7 @@
         groups:
           Brute: 18
     - type: XenoDegradation
+    - type: XenoAcid
 
 - type: entity
   name: warrior

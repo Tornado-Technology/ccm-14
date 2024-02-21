@@ -4,7 +4,6 @@
   id: WeaponM82F
   description: A flare gun issued to JTAC operators to use with flares. Comes with a miniscope. One shot, one... life saved?
   components:
-  # - type: PrecisionShooting
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Shotguns/m82f.rsi
     layers:

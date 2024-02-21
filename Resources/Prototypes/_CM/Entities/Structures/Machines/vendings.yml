@@ -244,6 +244,8 @@
         amount: 1
       - id: ClothingHeadHelmetMarine
         amount: 1
+      - id: ClothingHeadAltyn
+        amount: 1
       - id: ClothingHeadBeretWhite
         amount: 1
       - id: ClothingHeadBeretDark
@@ -331,6 +333,8 @@
         amount: 1
     - name: Одежда
       entries:
+      - id: ClothingOuterArmorSPEC
+        amount: 1
       - id: ClothingUniformJumpsuitMarine
         amount: 1
       - id: ClothingHandsGlovesMarine
