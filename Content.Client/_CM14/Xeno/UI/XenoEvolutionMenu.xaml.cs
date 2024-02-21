@@ -6,14 +6,14 @@ using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.Xeno.UI;
+namespace Content.Client._CM14.Xeno.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class XenoEvolutionMenu : DefaultWindow
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-    private readonly SpriteSystem _spriteSystem = default!;
+    private readonly SpriteSystem _spriteSystem;
     private readonly XenoEvolutionBoundUserInterface _owner;
 
     public event Action<BaseButton.ButtonEventArgs, XenoEvolution>? OnEvolveButtonPressed;
@@ -35,13 +35,12 @@ public sealed partial class XenoEvolutionMenu : DefaultWindow
 
         foreach (var evolution in state.Evolutions)
         {
-            var prototype = evolution.Prototype ?? string.Empty;
+            var prototype = evolution.Prototype;
             var entityPrototype = _prototypeManager.Index<EntityPrototype>(prototype);
 
             var tier = 0;
-            if (entityPrototype.Components.TryGetComponent("XenoTier", out var comp) && comp is XenoTierComponent)
+            if (entityPrototype.Components.TryGetComponent("XenoTier", out var comp) && comp is XenoTierComponent component)
             {
-                var component = (XenoTierComponent) comp;
                 tier = component.Tier;
             }
 
@@ -65,7 +64,7 @@ public sealed partial class XenoEvolutionMenu : DefaultWindow
             var texture = _spriteSystem.GetPrototypeIcon(prototype).Default;
             var newEvolution = new XenoEvolutionControl(entityPrototype.Name, entityPrototype.Description,
                 $"{evolution.Evolution} e.p.", enabled, texture);
-            newEvolution.BuyButton.OnButtonDown += args => _owner.Evolve(evolution);
+            newEvolution.BuyButton.OnButtonDown += _ => _owner.Evolve(evolution);
 
             EvolutionsContainer.AddChild(newEvolution);
         }

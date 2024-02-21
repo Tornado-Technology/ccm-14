@@ -1,6 +1,6 @@
 using Content.Shared._CM14.Xeno;
 
-namespace Content.Client.Xeno.UI;
+namespace Content.Client._CM14.Xeno.UI;
 
 public sealed partial class XenoEvolutionBoundUserInterface : BoundUserInterface
 {

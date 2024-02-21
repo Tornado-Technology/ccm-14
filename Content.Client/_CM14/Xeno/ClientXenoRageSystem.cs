@@ -1,8 +1,8 @@
-using Robust.Client.GameObjects;
 using System.Numerics;
 using Content.Shared._CM14.Xeno;
+using Robust.Client.GameObjects;
 
-namespace Content.Client.Xeno;
+namespace Content.Client._CM14.Xeno;
 
 public sealed class ClientXenoRageSystem : EntitySystem
 {
@@ -11,12 +11,9 @@ public sealed class ClientXenoRageSystem : EntitySystem
         base.Update(frameTime);
 
         var query = EntityQueryEnumerator<XenoRageComponent, SpriteComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var sprite))
+        while (query.MoveNext(out _, out var comp, out var sprite))
         {
-            if (comp.Enabled)
-                sprite.Scale = new Vector2(2, 2);
-            else
-                sprite.Scale = new Vector2(1, 1);
+            sprite.Scale = comp.Enabled ? new Vector2(2, 2) : new Vector2(1, 1);
         }
     }
 }
