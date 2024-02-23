@@ -2,7 +2,6 @@ using System.Collections.Frozen;
 using Content.Shared.Popups;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
-using Content.Shared.Xeno;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -22,7 +21,7 @@ public abstract class SharedChatSystem : EntitySystem
     public const char EmotesAltPrefix = '*';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
-    public const char DefaultChannelKey = 'р'; // Corvax-Localization
+    public const char DefaultChannelKey = 'r'; // Corvax-Localization
 
     [ValidatePrototypeId<RadioChannelPrototype>]
     public const string CommonChannel = "Common";

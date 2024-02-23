@@ -1,10 +1,9 @@
-using Content.Server.Xeno;
+using Content.Shared._CM14.Xeno;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
-using Content.Shared.Xeno;
-using Content.Shared.Xeno.Components;
 using Robust.Shared.Physics.Systems;
+using Content.Shared._CM14.Xeno.Components;
 
 namespace Content.Server._CM14.Xeno;
 

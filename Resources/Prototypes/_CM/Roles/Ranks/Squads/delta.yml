@@ -1,0 +1,84 @@
+- type: jobRank
+  id: DeltaCommander
+  job: DeltaCommander
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobDeltaCommander
+    time: 0
+    icon: JobRankSergeant
+  - !type:JobRankTimeRequirement
+    role: JobDeltaCommander
+    time: 90000 # 25 hours
+    icon: JobRankStaffSergeant
+  - !type:JobRankTimeRequirement
+    role: JobDeltaCommander
+    time: 360000 # 100 hours
+    icon: JobRankCommanderSergeant
+
+- type: jobRank
+  id: DeltaMarine
+  job: DeltaMarine
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMarine
+    time: 0
+    icon: JobRankPrivate
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMarine
+    time: 36000 # 10 hours
+    icon: JobRankPrivateFirstClass
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMarine
+    time: 360000 # 100 hours
+    icon: JobRankLanceCorporal
+
+- type: jobRank
+  id: DeltaMedic
+  job: DeltaMedic
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMedic
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMedic
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaMedic
+    time: 360000 # 100 hours
+    icon: JobRankSergeant
+
+- type: jobRank
+  id: DeltaEngineer
+  job: DeltaEngineer
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobDeltaEngineer
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaEngineer
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaEngineer
+    time: 360000 # 100 hours
+    icon: JobRankSergeant
+
+- type: jobRank
+  id: DeltaSpecialist
+  job: DeltaSpecialist
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobDeltaSpecialist
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaSpecialist
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobDeltaSpecialist
+    time: 360000 # 100 hours
+    icon: JobRankSergeant

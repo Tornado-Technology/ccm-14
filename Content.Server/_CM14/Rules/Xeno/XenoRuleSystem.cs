@@ -7,10 +7,10 @@ using Content.Server.RoundEnd;
 using Content.Shared.Destructible;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
-using Content.Shared.Xeno;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Content.Server._CM14.Xeno;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Server._CM14.Rules.Xeno;
 

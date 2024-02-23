@@ -1,5 +1,4 @@
 using Content.Server._CM14.Rules.Barrier.Components;
-using Content.Server.GameTicking;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Spawners;
 using Content.Server.Audio;

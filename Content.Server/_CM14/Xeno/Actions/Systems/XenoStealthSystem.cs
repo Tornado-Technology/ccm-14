@@ -1,7 +1,6 @@
 using Content.Shared.Actions;
-using Content.Shared.Stealth;
 using Content.Shared.Stealth.Components;
-using Content.Shared.Xeno;
+using Content.Shared._CM14.Xeno;
 using Content.Server._CM14.Xeno.Actions.Components;
 
 namespace Content.Server._CM14.Xeno.Actions.Systems;

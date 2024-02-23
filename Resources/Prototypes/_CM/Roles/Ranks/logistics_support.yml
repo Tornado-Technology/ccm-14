@@ -1,0 +1,33 @@
+- type: jobRank
+  id: SupplyOfficer
+  job: SupplyOfficer
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobSupplyOfficer
+    time: 0
+    icon: JobRankWaltuh
+  - !type:JobRankTimeRequirement
+    role: JobSupplyOfficer
+    time: 180000 # 50 hours
+    icon: JobRankEnisgn
+  - !type:JobRankTimeRequirement
+    role: JobSupplyOfficer
+    time: 450000 # 125 hours
+    icon: JobRankSecondLieuntenant
+
+- type: jobRank
+  id: Rigger
+  job: Rigger
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobRigger
+    time: 0
+    icon: JobRankWaltuh
+  - !type:JobRankTimeRequirement
+    role: JobRigger
+    time: 180000 # 50 hours
+    icon: JobRankMasterSergant
+  - !type:JobRankTimeRequirement
+    role: JobRigger
+    time: 450000 # 125 hours
+    icon: JobRankSergeantMajor

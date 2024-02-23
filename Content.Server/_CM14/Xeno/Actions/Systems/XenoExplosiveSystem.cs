@@ -4,7 +4,7 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
-using Content.Shared.Xeno;
+using Content.Shared._CM14.Xeno;
 using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Actions.Components;
 
@@ -36,7 +36,8 @@ public sealed class XenoExplosiveSystem : EntitySystem
             return;
 
         // TODO: Move magic numbers to XenoExplosiveComponent
-        _explosionSystem.QueueExplosion(uid, "Radioactive", 350f, 4f, 5f, canCreateVacuum: false, user: uid, addLog: true);
+        _explosionSystem.QueueExplosion(uid, "Radioactive", 350f, 4f, 5f, canCreateVacuum: false, user: uid,
+            addLog: true);
         _damageableSystem.TryChangeDamage(uid, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 1000));
     }
 }

@@ -1,7 +1,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Physics;
-using Content.Shared.Xeno;
+using Content.Shared._CM14.Xeno;
 using Content.Server._CM14.Xeno.Actions.Components;
 
 namespace Content.Server._CM14.Xeno.Actions.Systems;
@@ -34,7 +34,8 @@ public sealed class XenoPsychicJumpSystem : EntitySystem
         var target = args.Target.ToMap(EntityManager, _transform);
 
         // prevent collision with the user duh
-        if (!_interaction.InRangeUnobstructed(origin, target, 0f, CollisionGroup.Opaque, entityUid => entityUid == user))
+        if (!_interaction.InRangeUnobstructed(origin, target, 0f, CollisionGroup.Opaque,
+                entityUid => entityUid == user))
             return;
 
         _transform.SetCoordinates(user, args.Target);

@@ -5,9 +5,9 @@ using Content.Shared.Damage.Prototypes;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
-using Content.Shared.Xeno;
 using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Actions.Components;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Server._CM14.Xeno.Actions.Systems;
 
@@ -47,16 +47,19 @@ public sealed class XenoCrushDashSystem : EntitySystem
         if (HasComp<MobStateComponent>(args.Target))
         {
             _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.StunTime), true);
-            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 35));
+            _damageableSystem.TryChangeDamage(args.Target,
+                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 35));
             return;
         }
 
         if (HasComp<DisposalUnitComponent>(args.Target))
         {
-            _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 2000));
+            _damageableSystem.TryChangeDamage(args.Target,
+                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 2000));
             return;
         }
 
-        _damageableSystem.TryChangeDamage(args.Target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 300));
+        _damageableSystem.TryChangeDamage(args.Target,
+            new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 300));
     }
 }

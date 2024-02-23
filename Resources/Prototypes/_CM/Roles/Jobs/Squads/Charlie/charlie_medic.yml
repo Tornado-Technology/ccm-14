@@ -1,0 +1,27 @@
+- type: job
+  id: CharlieMedic
+  name: job-name-charlie-medic
+  description: job-description-charliemedic
+  playTimeTracker: JobCharlieMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 3600 # 1 hrs
+  startingGear: CharlieMedicGear
+  icon: "JobIconCharlieMedic"
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+    - SquadCharlieMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: CharlieMedic
+
+- type: startingGear
+  id: CharlieMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitcharlie_med
+    id: CMedicIDCard
+    ears: ClothingHeadsetMarineCharlie

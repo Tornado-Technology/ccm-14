@@ -1,0 +1,30 @@
+- type: job
+  id: PilotNormandy
+  name: job-name-pilotnormandy
+  description: job-description-pilotnormandy
+  playTimeTracker: JobPilotNormandy
+  startingGear: PilotNOfficerGear
+  icon: "JobIconPilotOfficer"
+  supervisors: job-supervisors-staff-officer
+  canBeAntag: false
+  access:
+    - Command
+    - Pilot
+    - PilotNormandy
+    - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: JobRank
+        job: PilotNormandy
+
+- type: startingGear
+  id: PilotNOfficerGear
+  equipment:
+    head: ClothingHeadHelmetMarine
+    jumpsuit: ClothingUniformJumpsuitMarine
+    back: ClothingBackpackMarine
+    shoes: ClothingShoesBootsCombat
+    eyes: ClothingEyesGlassesRPG
+    id: PilotNormandyIDCard
+    ears: ClothingHeadsetPilotShattle

@@ -5,9 +5,9 @@ using Content.Shared.DoAfter;
 using Content.Shared.Maps;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
-using Content.Shared.Xeno;
 using Robust.Shared.Map;
 using Content.Server._CM14.Xeno.Actions.Components;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Server._CM14.Xeno.Actions.Systems;
 

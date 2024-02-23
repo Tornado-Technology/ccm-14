@@ -1,0 +1,84 @@
+- type: jobRank
+  id: AlfaCommander
+  job: AlfaCommander
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobAlfaCommander
+    time: 0
+    icon: JobRankSergeant
+  - !type:JobRankTimeRequirement
+    role: JobAlfaCommander
+    time: 90000 # 25 hours
+    icon: JobRankStaffSergeant
+  - !type:JobRankTimeRequirement
+    role: JobAlfaCommander
+    time: 360000 # 100 hours
+    icon: JobRankCommanderSergeant
+
+- type: jobRank
+  id: AlfaMarine
+  job: AlfaMarine
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMarine
+    time: 0
+    icon: JobRankPrivate
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMarine
+    time: 36000 # 10 hours
+    icon: JobRankPrivateFirstClass
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMarine
+    time: 360000 # 100 hours
+    icon: JobRankLanceCorporal
+
+- type: jobRank
+  id: AlfaMedic
+  job: AlfaMedic
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMedic
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMedic
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaMedic
+    time: 360000 # 100 hours
+    icon: JobRankSergeant
+
+- type: jobRank
+  id: AlfaEngineer
+  job: AlfaEngineer
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobAlfaEngineer
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaEngineer
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaEngineer
+    time: 360000 # 100 hours
+    icon: JobRankSergeant
+
+- type: jobRank
+  id: AlfaSpecialist
+  job: AlfaSpecialist
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobAlfaSpecialist
+    time: 0
+    icon: JobRankLanceCorporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaSpecialist
+    time: 90000 # 25 hours
+    icon: JobRankCoporal
+  - !type:JobRankTimeRequirement
+    role: JobAlfaSpecialist
+    time: 360000 # 100 hours
+    icon: JobRankSergeant
