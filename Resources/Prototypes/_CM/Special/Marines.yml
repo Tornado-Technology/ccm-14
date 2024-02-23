@@ -6,6 +6,7 @@
   components:
   - type: FriendlyFire
   - type: FriendlyFireToggleable
+    fireRateModifier: 0.6
   - type: StatusIcon
   - type: SleepEmitSound
   - type: SSDIndicator
