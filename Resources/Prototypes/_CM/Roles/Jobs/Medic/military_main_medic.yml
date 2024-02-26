@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobMilitaryMedic
-      time: 18000 # 10 hrs
+      time: 36000 # 10 hrs
   startingGear: MilitaryMainMedicGear
   icon: "JobIconMilitaryMainMedic"
   supervisors: job-supervisors-staff-officer

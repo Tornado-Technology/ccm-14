@@ -12,7 +12,7 @@
       time: 72000 # 20 hrs
   - !type:RoleTimeRequirement
       role: JobPilotNormandy
-      time: 3600 # 1 hrs
+      time: 18000 # 5 hrs
   access:
     - Command
     - Pilot

@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: MarinesGarrison
-      time: 18000 # 5 hrs
+      time: 54000 # 15 hrs
   startingGear: CharlieSpecialistGear
   icon: "JobIconCharlieSpecialist"
   supervisors: job-supervisors-commander

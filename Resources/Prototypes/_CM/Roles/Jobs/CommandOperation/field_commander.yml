@@ -6,7 +6,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: CommandersGarrisons
-    time: 18000 # 5 hours
+    time: 36000 # 10 hours
   startingGear: FieldCommanderGear
   icon: "JobIconFieldCommander"
   supervisors: job-supervisors-head-operations

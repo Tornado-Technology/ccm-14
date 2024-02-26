@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobMilitaryMedic
-      time: 3600 # 1 hrs
+      time: 10800 # 3 hrs
   startingGear: CharlieMedicGear
   icon: "JobIconCharlieMedic"
   supervisors: job-supervisors-commander

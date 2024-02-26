@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobRigger
-      time: 18000 # 5 hrs
+      time: 36000 # 10 hrs
   startingGear: SupplyOfficerGear
   icon: "JobIconSupplyOfficer"
   supervisors: job-supervisors-staff-officer
