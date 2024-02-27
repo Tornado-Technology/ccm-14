@@ -9,7 +9,7 @@
       time: 18000 # 5 hrs
     - !type:DepartmentTimeRequirement
       department: SpecialistsGarrison
-      time: 18000# 5 hrs
+      time: 18000 # 5 hrs
     - !type:DepartmentTimeRequirement
       department: MedicsGarrison
       time: 18000 # 5 hrs
