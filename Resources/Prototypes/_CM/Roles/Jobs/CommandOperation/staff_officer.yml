@@ -13,7 +13,7 @@
     - !type:RoleTimeRequirement
       role: JobFieldCommander
       time: 3600 # 1 hrs
-    - !type:RoleTimeRequirement
+    - !type:DeparatmentTimeRequirement
       department: CommandersGarrisons
       time: 3600 # 1 hrs
   startingGear: StaffOfficerGear
