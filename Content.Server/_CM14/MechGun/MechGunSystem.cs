@@ -3,81 +3,21 @@ using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Mech.Components;
 using Content.Shared.Mech.Equipment.Components;
+using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Ranged.Systems;
+using Robust.Server.Containers;
 using Robust.Shared.Random;
-using System.Diagnostics.CodeAnalysis;
-using Content.Shared.ActionBlocker;
-using Content.Shared.Actions;
-using Content.Shared.Administration.Logs;
-using Content.Shared.Audio;
-using Content.Shared.CombatMode;
-using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Damage;
-using Content.Shared.Examine;
-using Content.Shared.Gravity;
-using Content.Shared.Hands;
-using Content.Shared.Hands.Components;
-using Content.Shared.Popups;
-using Content.Shared.Projectiles;
-using Content.Shared.Tag;
-using Content.Shared.Throwing;
-using Content.Shared.Verbs;
-using Content.Shared.Weapons.Melee;
-using Content.Shared.Weapons.Melee.Events;
-using Content.Shared.Weapons.Ranged.Components;
-using Content.Shared.Weapons.Ranged.Events;
-using Robust.Shared.Audio;
-using Robust.Shared.Containers;
-using Robust.Shared.Map;
-using Robust.Shared.Network;
-using Robust.Shared.Physics.Components;
-using Robust.Shared.Physics.Systems;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Random;
-using Robust.Shared.Serialization;
-using Robust.Shared.Timing;
-using Robust.Shared.Utility;
-using Content.Shared.Mech.Components;
-using Content.Shared.Mech.Equipment.Components;
-using Content.Shared.Timing;
-using System.Linq;
-using Robust.Shared.Map;
-using Content.Shared.Stunnable;
-using Robust.Shared.Physics.Components;
-using System.Linq;
-using Content.Shared.DoAfter;
-using Content.Shared.Interaction;
-using Content.Shared.Mech;
-using Content.Shared.Mech.Components;
-using Content.Shared.Mech.Equipment.Components;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Wall;
-using Robust.Shared.Containers;
-using Robust.Shared.Map;
-using Robust.Shared.Physics;
-using Robust.Shared.Physics.Components;
-using Content.Server.Medical.Components;
-using Content.Shared.Chemistry;
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Components.SolutionManager;
-using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Chemistry.Reagent;
-using Content.Shared.Climbing.Systems;
-using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Medical.Cryogenics;
-using Robust.Shared.Timing;
-using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;
 
-namespace Content.Server.Mech.Equipment.EntitySystems;
+namespace Content.Server._CM14.MechGun;
 public sealed class MechGunSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly MechSystem _mech = default!;
     [Dependency] private readonly BatterySystem _battery = default!;
-    [Dependency] private readonly SharedGunSystem _guns = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] private readonly ContainerSystem _container = default!;
 
     public override void Initialize()
     {
@@ -114,7 +54,7 @@ public sealed class MechGunSystem : EntitySystem
         {
             if (ent.HasValue && mech.EquipmentContainer.Contains(ent.Value))
             {
-                mech.EquipmentContainer.Remove(ent.Value);
+                _container.Remove(ent.Value, mech.EquipmentContainer);
                 _throwing.TryThrow(ent.Value, _random.NextVector2(), _random.Next(5));
             }
         }
