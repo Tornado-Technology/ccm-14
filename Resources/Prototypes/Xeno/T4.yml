@@ -6,7 +6,12 @@
     - type: ShowXenoAgeIcons
       jobId: JobPretor
     - type: XenoPraetorian
+    - type: XenoSpawnEntities
     - type: XenoSpitRejuvenate
+    - type: XenoSpit
+      action: ActionDefilerDefaultSpit
+      projectile: ProjectileNeurotoxinVeil
+      speed: 25
     - type: XenoSpit2
       action: ActionDefilerAcidSpit
       projectile: ProjectileToxinSpit
