@@ -153,4 +153,4 @@
       hidden: true
       damage:
         groups:
-          Brute: 15
+          Brute: 10
