@@ -5,7 +5,7 @@
   noSpawn: true
   components:
     - type: InstantAction
-      useDelay: 120
+      useDelay: 90
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar2.ogg
       icon:
