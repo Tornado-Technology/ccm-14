@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Tornado-Technology (Github) for Colonial Marines 14",
+    "size": {
+        "x": 10,
+        "y": 10
+    },
+    "states": [
+        {
+            "name": "ancient"
+        },
+        {
+            "name": "elder"
+        },
+        {
+            "name": "mature"
+        },
+        {
+            "name": "young"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+- type: jobRank
+  id: Rouny
+  job: Runi
+  requirements:
+  - !type:JobRankTimeRequirement
+    role: JobKseno
+    time: 0 
+    icon: JobRankXenoYoung
+  - !type:JobRankTimeRequirement
+    role: JobKseno
+    time: 72000 # 20 hours
+    icon: JobRankXenoMature
+  - !type:JobRankTimeRequirement
+    role: JobKseno
+    time: 180000 # 50 hours
+    icon: JobRankXenoElder
+  - !type:JobRankTimeRequirement
+    role: JobKseno
+    time: 360000 # 100 hours
+    icon: JobRankXenoAncient
