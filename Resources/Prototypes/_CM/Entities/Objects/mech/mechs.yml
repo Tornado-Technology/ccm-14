@@ -65,6 +65,11 @@
       path: /Audio/Mecha/mechambience.ogg
   - type: AccessReader
     access: [["PilotMech"]]
+  - type: PointLight
+    radius: 8
+    energy: 4
+    color: "#ff8c00"
+  - type: UnpoweredFlashlight
 
 - type: entity
   id: MechSidewinderBattery
