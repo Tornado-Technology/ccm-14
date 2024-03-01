@@ -1,0 +1,16 @@
+- type: entity
+  id: ActionXenoSpawn
+  name: Spawn xeno tick
+  description: spawn 3 xeno tick mob around you
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 120
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar2.ogg
+      icon:
+        sprite: Actions/xeno.rsi
+        state: spawn_tick
+      event: !type:ActionXenoSpawnEvent
+      checkCanAccess: false
+

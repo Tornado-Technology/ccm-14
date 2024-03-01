@@ -99,3 +99,7 @@ public sealed partial class XenoDegradationEvent : InstantActionEvent
 public sealed partial class XenoDegradationDoAfterEvent : SimpleDoAfterEvent
 {
 }
+
+public sealed partial class ActionXenoSpawnEvent : InstantActionEvent
+{
+}

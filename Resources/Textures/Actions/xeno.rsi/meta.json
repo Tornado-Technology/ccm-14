@@ -73,6 +73,9 @@
     {
       "name": "evasion"
     },
+	{
+      "name": "spawn_tick"
+    },
     {
       "name": "degradation"
     }
