@@ -139,9 +139,15 @@
 
 - type: entity
   name: Tick Xeno
-  parent: SimpleSpaceMobBase    # copy paste from MobTick but without poison dm
+  parent:
+    - BaseMob
+    - MobAtmosExposed
+    - MobCombat
+    - MobBloodstream
+    - MobFlammable
   id: MobTickXeno
   components:
+  - type: Xeno
   - type: FriendlyFire
   - type: InputMover
   - type: MobMover
