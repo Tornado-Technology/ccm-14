@@ -5,6 +5,7 @@ using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
 using System.Linq;
+using Content.Shared._CM14.Xeno;
 
 namespace Content.Client.Overlays;
 
@@ -49,6 +50,8 @@ public sealed class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealthIconsCo
     {
         if (!IsActive || args.InContainer)
             return;
+
+        if (TryComp<XenoComponent>(uid, out _)) return; // Corvax CM fix
 
         var healthIcons = DecideHealthIcons(damageableComponent);
 

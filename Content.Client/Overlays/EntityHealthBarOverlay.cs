@@ -7,6 +7,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using System.Numerics;
+using Content.Shared._CM14.Xeno;
 using Content.Shared.StatusIcon.Components;
 using static Robust.Shared.Maths.Color;
 
@@ -54,6 +55,8 @@ public sealed class EntityHealthBarOverlay : Overlay
             {
                 continue;
             }
+
+            if (_entManager.TryGetComponent<XenoComponent>(uid, out _)) continue;   // Corvax CM fix
 
             if (!xformQuery.TryGetComponent(uid, out var xform) ||
                 xform.MapID != args.MapId)
