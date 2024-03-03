@@ -1,4 +1,4 @@
-﻿using Content.Server.Players.PlayTimeTracking;
+using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.Mind.Components;
 using Content.Shared.Overlays;
 using Robust.Server.Player;
@@ -26,7 +26,7 @@ public sealed class ShowXenoAgeIconsSystem : EntitySystem
             if (!_playerManager.TryGetSessionByEntity(uid, out var sessionId))
                 continue;
 
-            showXenoAgeIcons.OverallRoleTime = _playTimeTracking.GetPlayTimeForTracker(sessionId, showXenoAgeIcons.JobId).Seconds;
+            showXenoAgeIcons.OverallRoleTime = _playTimeTracking.GetPlayTimeForTracker(sessionId, showXenoAgeIcons.JobId).Ticks / 600000000;    // ticks to minutes (.Seconds and etc) didn't work correctly
             Dirty(uid, showXenoAgeIcons);
         }
     }

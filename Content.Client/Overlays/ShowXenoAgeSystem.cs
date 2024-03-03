@@ -1,4 +1,4 @@
-﻿using Content.Shared.Overlays;
+using Content.Shared.Overlays;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Client.Player;
@@ -33,19 +33,19 @@ public sealed class ShowXenoAgeSystem : EntitySystem
         if (!HasComp<ShowXenoAgeIconsComponent>(_player.LocalPlayer?.ControlledEntity))
             return;
 
-        if (component.OverallRoleTime < 72000)
+        if (component.OverallRoleTime < 300)        // 5 hours
         {
             args.StatusIcons.Add(_youngIcon);
             return;
         }
 
-        if (component.OverallRoleTime < 180000)
+        if (component.OverallRoleTime < 1200)       // 20 hours
         {
             args.StatusIcons.Add(_matureIcon);
             return;
         }
 
-        if (component.OverallRoleTime < 360000)
+        if (component.OverallRoleTime < 3000)       // 50 hours
         {
             args.StatusIcons.Add(_elderIcon);
             return;
