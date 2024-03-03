@@ -33,19 +33,19 @@ public sealed class ShowXenoAgeSystem : EntitySystem
         if (!HasComp<ShowXenoAgeIconsComponent>(_player.LocalPlayer?.ControlledEntity))
             return;
 
-        if (component.OverallRoleTime < 300)        // 5 hours
+        if (component.OverallRoleTime < 1200)        // 20 hours
         {
             args.StatusIcons.Add(_youngIcon);
             return;
         }
 
-        if (component.OverallRoleTime < 1200)       // 20 hours
+        if (component.OverallRoleTime < 3000)       // 50 hours
         {
             args.StatusIcons.Add(_matureIcon);
             return;
         }
 
-        if (component.OverallRoleTime < 3000)       // 50 hours
+        if (component.OverallRoleTime < 6000)       // 100 hours
         {
             args.StatusIcons.Add(_elderIcon);
             return;
