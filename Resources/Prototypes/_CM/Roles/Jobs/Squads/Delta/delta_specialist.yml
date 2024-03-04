@@ -12,6 +12,7 @@
   supervisors: job-supervisors-commander
   canBeAntag: false
   access:
+    - Maintenance
     - SquadDelta
     - SquadSpecialist
   special:

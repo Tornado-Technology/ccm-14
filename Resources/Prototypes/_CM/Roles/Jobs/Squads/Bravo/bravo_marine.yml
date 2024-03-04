@@ -9,6 +9,7 @@
   canBeAntag: false
   access:
     - SquadBravo
+    - Maintenance
   special:
   - !type:AddComponentSpecial
     components:

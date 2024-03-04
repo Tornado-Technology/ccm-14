@@ -315,6 +315,8 @@
       path: /Audio/Items/ratchet.ogg
     closeSound:
       path: /Audio/Items/ratchet.ogg
+  - type: AccessReader
+    access: [["Maintenance"]]
   - type: Construction
     graph: BarricadeMetalDoorGraph
     node: nodeBarricadeMetalDoor

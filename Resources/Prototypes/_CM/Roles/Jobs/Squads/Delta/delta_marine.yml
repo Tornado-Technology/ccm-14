@@ -8,6 +8,7 @@
   supervisors: job-supervisors-commander
   canBeAntag: false
   access:
+    - Maintenance
     - SquadDelta
   special:
   - !type:AddComponentSpecial
