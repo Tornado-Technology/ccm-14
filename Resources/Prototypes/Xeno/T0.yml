@@ -184,6 +184,9 @@
     thresholds:
       0: Alive
       50: Dead
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Xeno
   - type: Stamina
     critThreshold: 15
   - type: MovementAlwaysTouching
