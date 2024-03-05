@@ -1,3 +1,5 @@
+using Content.Server.Gravity;
+using Content.Shared.Gravity;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 
@@ -6,6 +8,7 @@ namespace Content.Server._CM14.Xeno;
 public sealed class GravityMovementSlowSystem : EntitySystem
 {
     [Dependency] private readonly MovementSpeedModifierSystem _speedModifierSystem = default!;
+    [Dependency] private readonly GravitySystem _gravitySystem = default!;
 
     private const float TimeDelay = 1f;
     private float _currentTimeDelay = TimeDelay;
@@ -24,7 +27,10 @@ public sealed class GravityMovementSlowSystem : EntitySystem
         var query = EntityQueryEnumerator<GravityMovementSlowComponent, TransformComponent, MovementSpeedModifierComponent, MovementIgnoreGravityComponent>();
         while (query.MoveNext(out var uid, out var movementSlow, out var xform, out var speedModifier, out _))
         {
-            if (xform.GridUid == null)
+            var hasGravity = (TryComp<GravityComponent>(xform.GridUid, out var gravity) && gravity.Enabled ||
+                             TryComp<GravityComponent>(xform.MapUid, out var mapGravity) && mapGravity.Enabled);
+
+            if (xform.GridUid == null || !hasGravity)
             {
                 if (!movementSlow.IsEnable)
                 {
