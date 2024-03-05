@@ -147,6 +147,11 @@
     - MobFlammable
   id: MobTickXeno
   components:
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+  - type: Body
   - type: Xeno
   - type: MovementIgnoreGravity
   - type: GravityMovementSlow
