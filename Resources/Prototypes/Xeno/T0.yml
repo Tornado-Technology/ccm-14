@@ -148,6 +148,8 @@
   id: MobTickXeno
   components:
   - type: Xeno
+  - type: MovementIgnoreGravity
+  - type: GravityMovementSlow
   - type: FriendlyFire
   - type: InputMover
   - type: MobMover

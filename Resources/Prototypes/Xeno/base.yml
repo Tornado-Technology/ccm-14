@@ -11,6 +11,9 @@
     - type: FriendlyFire
     - type: Xeno
     - type: XenoEvolutions
+    - type: MovementIgnoreGravity
+    - type: GravityMovementSlow
+      slowPercentage: 0.65
     - type: XenoTier
     - type: XenoRest
     - type: Actions
