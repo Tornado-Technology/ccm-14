@@ -322,8 +322,8 @@
     grid:
     - 0,0,6,1 #6 slots
     whitelist:
-      tags: #this gonna be hell
-      - C4
+      components:
+      -	ExplodeOnTrigger
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -339,6 +339,7 @@
     whitelist:
       tags:
       - DiscreteHealthAnalyzer
+      - CMOintment
       - Brutepack
       - Ointment
       - Bloodpack
@@ -346,10 +347,14 @@
       - Pill
       - Bottle
       - Flashlight
-      # Surgical line
+      - CMSurgicalLine
+      - CMSynthGraft
+      - CMBurnKit
+      - CMTraumaKit
       - Gauze
       components:
       - Hypospray
+      - HealthAnalyzer
 
 - type: entity
   parent: CMPouchMedical
@@ -397,8 +402,11 @@
       - Bottle
       - Syringe
       - Flashlight
-      # Surgical line
-      # Roller
+      - CMSurgicalLine
+      - CMSynthGraft
+      - CMBurnKit
+      - CMTraumaKit
+      - CMOintment
       - BodyBag
       components:
       - Hypospray
