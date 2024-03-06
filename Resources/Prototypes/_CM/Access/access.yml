@@ -44,7 +44,7 @@
 
 # Squads
 - type: accessLevel
-  id: SquadAlpha 
+  id: SquadAlpha
   name: id-card-access-level-squad-alpha
 
 - type: accessLevel
@@ -86,27 +86,32 @@
 - type: accessGroup
   id: SquadAlpha
   tags:
+  - Maintenance
   - SquadAlpha
 
 - type: accessGroup
   id: SquadBravo
   tags:
+  - Maintenance
   - SquadBravo
 
 - type: accessGroup
   id: SquadCharlie
   tags:
+  - Maintenance
   - SquadCharlie
 
 - type: accessGroup
   id: SquadDelta
   tags:
+  - Maintenance
   - SquadDelta
 
 # Groups Squad medic
 - type: accessGroup
   id: SquadAlphaMedic
   tags:
+  - Maintenance
   - SquadAlpha
   - Medical
   - Chemistry
@@ -114,6 +119,7 @@
 - type: accessGroup
   id: SquadBravoMedic
   tags:
+  - Maintenance
   - SquadBravo
   - Medical
   - Chemistry
@@ -121,6 +127,7 @@
 - type: accessGroup
   id: SquadCharlieMedic
   tags:
+  - Maintenance
   - SquadCharlie
   - Medical
   - Chemistry
@@ -128,6 +135,7 @@
 - type: accessGroup
   id: SquadDeltaMedic
   tags:
+  - Maintenance
   - SquadDelta
   - Medical
   - Chemistry
@@ -136,6 +144,7 @@
 - type: accessGroup
   id: MedicalOfficer
   tags:
+  - Maintenance
   - Medical
   - Chemistry
   - ChiefMedicalOfficer
@@ -144,6 +153,7 @@
 - type: accessGroup
   id: Medical
   tags:
+  - Maintenance
   - Medical
   - Chemistry
 

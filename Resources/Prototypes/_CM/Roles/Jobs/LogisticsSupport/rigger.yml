@@ -8,6 +8,7 @@
   supervisors: job-supervisors-supply-officer
   canBeAntag: false
   access:
+    - Maintenance
     - Cargo
   special:
   - !type:AddComponentSpecial

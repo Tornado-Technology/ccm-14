@@ -147,7 +147,14 @@
     - MobFlammable
   id: MobTickXeno
   components:
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+  - type: Body
   - type: Xeno
+  - type: MovementIgnoreGravity
+  - type: GravityMovementSlow
   - type: FriendlyFire
   - type: InputMover
   - type: MobMover
@@ -184,6 +191,9 @@
     thresholds:
       0: Alive
       50: Dead
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Xeno
   - type: Stamina
     critThreshold: 15
   - type: MovementAlwaysTouching

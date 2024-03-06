@@ -1,5 +1,5 @@
-ent-MobCrusherXeno = Crusher
-ent-MobDefilerXeno = Defiler
+ent-MobCrusherXeno = Крушитель
+ent-MobDefilerXeno = Осквернитель
 # actions-start
 ent-ActionCrusherJump = Jump
     .desc = Make a jump.

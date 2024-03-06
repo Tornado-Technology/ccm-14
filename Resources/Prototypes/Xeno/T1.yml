@@ -72,9 +72,9 @@
             radius: 0.45
           density: 550
           mask:
-          - SmallMobMask
+          - MobMask
           layer:
-          - SmallMobLayer
+          - MobLayer
 
 - type: entity
   name: sentinel

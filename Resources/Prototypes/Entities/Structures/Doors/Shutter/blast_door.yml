@@ -37,6 +37,17 @@
     - board
   - type: StaticPrice
     price: 280
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 55
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
 
 - type: entity
   id: BlastDoorOpen
@@ -53,6 +64,7 @@
     airBlocked: false
   - type: RadiationBlocker
     enabled: false
+
 
 - type: entity
   id: BlastDoorFrame

@@ -18,6 +18,7 @@
   supervisors: job-supervisors-field-commander
   canBeAntag: false
   access:
+    - Maintenance
     - SquadDelta
     - SquadLeader
     - SquadSpecialist

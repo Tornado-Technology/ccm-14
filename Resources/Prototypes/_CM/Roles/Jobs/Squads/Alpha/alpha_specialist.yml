@@ -13,6 +13,7 @@
   canBeAntag: false
   access:
     - SquadAlpha
+    - Maintenance
     - SquadSpecialist
   special:
   - !type:AddComponentSpecial

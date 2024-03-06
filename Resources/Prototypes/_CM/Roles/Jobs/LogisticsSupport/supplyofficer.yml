@@ -12,6 +12,7 @@
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
   access:
+    - Maintenance
     - Cargo
     - Quartermaster
     - Command
