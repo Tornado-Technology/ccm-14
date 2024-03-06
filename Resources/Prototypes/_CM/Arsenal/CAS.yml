@@ -114,7 +114,7 @@
     delay: 0.1
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: CASBombExplosion
     maxIntensity: 15
     intensitySlope: 2
     totalIntensity: 200 # about a ~6 tile radius
