@@ -12,6 +12,7 @@ using Content.Shared.Players;
 using Content.Shared.Preferences;
 using JetBrains.Annotations;
 using Prometheus;
+using Content.Server._CM14.Rules.Xeno;
 using Robust.Server.Maps;
 using Robust.Shared.Asynchronous;
 using Robust.Shared.Audio;
@@ -390,12 +391,20 @@ namespace Content.Server.GameTicking
                 if (_webhookIdentifier == null)
                     return;
 
+                string winText = "errored";
+                var query = EntityQueryEnumerator<XenoRuleComponent>();
+                while (query.MoveNext(out var uid, out var component))
+                {
+                    winText = Loc.GetString($"discord-xeno-{component.WinType.ToString().ToLower()}");
+                }
+
                 var duration = RoundDuration();
                 var content = Loc.GetString("discord-round-notifications-end",
                     ("id", RoundId),
                     ("hours", Math.Truncate(duration.TotalHours)),
                     ("minutes", duration.Minutes),
-                    ("seconds", duration.Seconds));
+                    ("seconds", duration.Seconds),
+                    ("wintype", winText));
                 var payload = new WebhookPayload { Content = content };
 
                 await _discord.CreateMessage(_webhookIdentifier.Value, payload);
