@@ -348,3 +348,6 @@
   id: Xeno
   coefficients:
     Heat: 1.75
+    Caustic: 0.0
+    Poison: 0.0
+    Cellular: 0.0
