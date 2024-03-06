@@ -391,7 +391,7 @@ namespace Content.Server.GameTicking
                 if (_webhookIdentifier == null)
                     return;
 
-                string winText = "errored";
+                string winText = "Unknown";
                 var query = EntityQueryEnumerator<XenoRuleComponent>();
                 while (query.MoveNext(out var uid, out var component))
                 {
