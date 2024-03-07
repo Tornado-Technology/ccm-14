@@ -177,3 +177,6 @@
     - type: XenoDegradation
       prototype: MobHunterXeno
       timeUsage: 60
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.95
