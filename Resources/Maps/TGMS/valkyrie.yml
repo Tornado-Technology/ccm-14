@@ -81,6 +81,7 @@ entities:
       parent: 1
     - type: BecomesStation
       id: TGMS_Valkyrie
+    - type: MarineMap
     - type: MapGrid
       chunks:
         -2,-1:

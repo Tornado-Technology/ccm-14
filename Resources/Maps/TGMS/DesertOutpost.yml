@@ -85,6 +85,7 @@ entities:
     - type: ArrivalsSource
     - type: BecomesStation
       id: TGCM_Desert
+    - type: XenoMap
     - type: MapGrid
       chunks:
         0,0:
