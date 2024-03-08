@@ -21,6 +21,8 @@ public sealed partial class XenoRuleComponent : Component
     [DataField("winConditions")]
     public List<WinCondition> WinConditions = new();
 
+    public bool DefaultRoundEnd = false;
+
     // TODO: use components, don't just cache entity UIDs
     // There have been (and probably still are) bugs where these refer to deleted entities from old rounds.
     public EntityUid? MarineOutpost;
@@ -60,8 +62,15 @@ public enum WinCondition : byte
     NukeExplodedOnXenoPlanet,
     NukeExplodedOnMarineOutpost,
     NukeExplodedOnIncorrectLocation,
+    
     AllXenoDied,
+    QueenDied,                  // not used cuz cant read all conditions in force end, used predicate logic now
     AllMarineDied,
+
     EggsWinningCount,
-    XenoAbandoned,
+
+    RoyalQueenExist,            // not used cuz cant read all conditions in force end, used predicate logic now
+
+    EmergencyShuttleCalled,     // not used cuz cant read all conditions in force end, used predicate logic now
+    XenoAbandoned,              // idk what is it
 }

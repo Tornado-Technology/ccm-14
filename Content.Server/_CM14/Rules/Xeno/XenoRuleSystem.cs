@@ -1,3 +1,4 @@
+using Content.Server._CM14.Mapping;
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
@@ -10,7 +11,10 @@ using Content.Shared.Mobs.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Content.Server._CM14.Xeno;
+using Content.Server.Communications;
 using Content.Shared._CM14.Xeno;
+using Content.Shared.Mobs.Systems;
+using Content.Shared.Overlays;
 
 namespace Content.Server._CM14.Rules.Xeno;
 
@@ -24,6 +28,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
 
 
     private float _announcmentTime = 0f;
@@ -38,6 +43,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
         SubscribeLocalEvent<NukeExplodedEvent>(OnNukeExploded);
+        SubscribeLocalEvent<NukeArmSuccessEvent>(OnNukeArmed);
 
         SubscribeLocalEvent<XenoComponent, MobStateChangedEvent>(OnXenoMobStateChanged);
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMarineMobStateChanged);
@@ -45,6 +51,8 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<XenoEggComponent, DestructionEventArgs>(OnDestruction);
         SubscribeLocalEvent<XenoEggComponent, ComponentStartup>(OnEggComponentInit);
         SubscribeLocalEvent<NukeDisarmSuccessEvent>(OnNukeDisarm);
+
+        SubscribeLocalEvent<CommunicationConsoleCallShuttleAttemptEvent>(OnShuttleCallAttempt);
     }
 
     public override void Update(float frameTime)
@@ -113,6 +121,13 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             if (!GameTicker.IsGameRuleAdded(uid, gameRule))
                 continue;
 
+            // We had tick update, we dont want to collect all condition states from last update
+            xeno.WinConditions.RemoveAll((WinCondition type) =>
+                type == WinCondition.AllMarineDied ||
+                type == WinCondition.EggsWinningCount ||
+                type == WinCondition.AllXenoDied ||
+                type == WinCondition.RoyalQueenExist);
+
             Eggs = Count(typeof(XenoEggComponent));
             Xenos = GetMobAliveCount<XenoComponent>();
             Marines = GetMobAliveCount<MarineComponent>();
@@ -156,6 +171,36 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
                 xeno.WinConditions.Add(WinCondition.AllMarineDied);
                 SetWinType(uid, WinType.XenoMajor, xeno);
             }
+
+            // if all checks false, trying to predict game end (for force end round behavior)
+            // check a queen exist
+            // @TODO add xenoRoleComponent or something else to get easy way get any type of xeno
+            var t5query = EntityQueryEnumerator<XenoTierComponent>();
+            while (t5query.MoveNext(out var tempQueenUid, out var xenoTier))
+            {
+                if (xenoTier.Tier == 4 && TryComp<MetaDataComponent>(tempQueenUid, out var queenMeta))
+                {
+                    if (queenMeta.EntityPrototype != null)
+                    {
+                        if (queenMeta.EntityPrototype.ID.Equals("MobQueenXeno") && _mobStateSystem.IsDead(tempQueenUid))
+                        {
+                            xeno.WinType = WinType.MarineMinor;
+                        }
+                    }
+                }
+                else if (xenoTier.Tier == 5)
+                {
+                    if (_mobStateSystem.IsDead(tempQueenUid))
+                    {
+                        xeno.WinType = WinType.MarineMinor;
+                        continue;
+                    }
+                    xeno.WinType = WinType.XenoMinor;
+                    break;
+                }
+            }
+            // end check queen hack
+
         }
     }
 
@@ -190,6 +235,43 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
 
             xeno.WinConditions.Add(WinCondition.NukeExplodedOnIncorrectLocation);
             SetWinType(uid, WinType.Neutral, xeno);
+        }
+    }
+
+    private void OnNukeArmed(NukeArmSuccessEvent ev)
+    {
+        var query = Query;
+        while (query.MoveNext(out var uid, out var xeno, out var gameRule))
+        {
+            if (!GameTicker.IsGameRuleAdded(uid, gameRule))
+                continue;
+
+            // Start temp HACK
+            // we need this vars only for nukes, hack is event oriented
+            if (xeno.MarineOutpost == null)
+            {
+                var tempQuery = EntityQueryEnumerator<MarineMapComponent>();
+                while (tempQuery.MoveNext(out var mapUid, out _))
+                {
+                    xeno.MarineOutpost = mapUid;
+                }
+            }
+
+            if (xeno.XenoPlanet == null)
+            {
+                var tempQuery = EntityQueryEnumerator<XenoMapComponent>();
+                while (tempQuery.MoveNext(out var mapUid, out _))
+                {
+                    xeno.XenoPlanet = mapUid;
+                }
+            }
+            // End temp HACK
+
+            // only predict logic, which didnt collide with other predicts
+            if (ev.OwningStation == xeno.XenoPlanet)
+            {
+                xeno.WinType = WinType.MarineMajor;
+            }
         }
     }
 
@@ -230,5 +312,20 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         }
 
         return count;
+    }
+
+    private void OnShuttleCallAttempt(ref CommunicationConsoleCallShuttleAttemptEvent args)
+    {
+        args.Cancelled = false;
+        var query = Query;
+        while (query.MoveNext(out var uid, out var xeno, out var gameRule))
+        {
+            if (!GameTicker.IsGameRuleAdded(uid, gameRule))
+                continue;
+
+            xeno.WinConditions.Add(WinCondition.EmergencyShuttleCalled);
+            // round end predict
+            xeno.WinType = WinType.XenoMinor;
+        }
     }
 }

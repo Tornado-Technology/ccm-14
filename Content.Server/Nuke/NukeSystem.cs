@@ -472,6 +472,11 @@ public sealed class NukeSystem : EntitySystem
         }
 
         component.Status = NukeStatus.ARMED;
+        // corvax CM START
+        RaiseLocalEvent(new NukeArmSuccessEvent(){
+            OwningStation = nukeXform.GridUid,
+        });
+        // corvax CM END
         UpdateUserInterface(uid, component);
     }
 
@@ -605,3 +610,7 @@ public sealed class NukeDisarmSuccessEvent : EntityEventArgs
 
 }
 
+public sealed class NukeArmSuccessEvent : EntityEventArgs   // corvax CM
+{
+    public EntityUid? OwningStation;
+}
