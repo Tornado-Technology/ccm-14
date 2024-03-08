@@ -23,10 +23,19 @@
       action: ActionDefilerDefaultSpit
       projectile: ProjectileNeurotoxinVeilRoyal
       speed: 25
-    - type: XenoSpit2
-      action: ActionDefilerAcidSpit
-      projectile: ProjectileToxinSpit
-      speed: 25
+    - type: Gun
+      fireRate: 0.25
+      selectedMode: FullAuto
+      useKey: false
+      availableModes:
+      - FullAuto
+      soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.25
+    - type: BasicEntityAmmoProvider
+      proto: ProjectileToxinSpit
+      capacity: 1
+      count: 1
     - type: XenoSpitRejuvenate
     - type: Sprite
       drawdepth: Mobs

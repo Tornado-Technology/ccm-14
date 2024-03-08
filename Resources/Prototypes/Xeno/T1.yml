@@ -87,9 +87,21 @@
           prototype: MobSpitterXeno
           evolution: 600
     - type: XenoSentinel
-    - type: XenoSpit
-      action: ActionSentinelDefaultSpit
-      projectile: ProjectileToxinSpitWeak
+    # XenoShoot
+    - type: Gun
+      fireRate: 0.25
+      selectedMode: FullAuto
+      useKey: false
+      availableModes:
+      - FullAuto
+      soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.25
+    - type: BasicEntityAmmoProvider
+      proto: ProjectileToxinSpitWeak
+      capacity: 1
+      count: 1
+      projectileSpeed: 15
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/sentinel.rsi
