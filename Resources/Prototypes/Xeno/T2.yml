@@ -15,7 +15,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        800: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/bull.rsi
@@ -50,7 +50,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        500: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/hivelord.rsi
@@ -84,7 +84,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        400: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/hunter.rsi
@@ -149,7 +149,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        500: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
