@@ -111,3 +111,6 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.2
     - type: Stealth
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.95

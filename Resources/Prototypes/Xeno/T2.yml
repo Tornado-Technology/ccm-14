@@ -106,6 +106,9 @@
     - type: XenoDegradation
       prototype: MobRunnerXeno
       timeUsage: 30
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.95
 
 - type: entity
   name: spitter
