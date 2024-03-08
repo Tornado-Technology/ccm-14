@@ -51,7 +51,7 @@ public sealed class XenoSpitSystem : EntitySystem
     {
         var transform = Transform(uid);
         var projectile = Spawn(proj, transform.Coordinates);
-        var direction = target.ToMap(EntityManager, _transform).Position - _transform.GetWorldPosition(transform);
+        var direction = target.ToMapPos(EntityManager, _transform) - _transform.GetWorldPosition(transform);
         var userVelocity = _physics.GetMapLinearVelocity(uid);
         _gunSystem.ShootProjectile(projectile, direction, userVelocity, uid, uid, speed);
     }
