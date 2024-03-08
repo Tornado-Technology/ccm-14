@@ -47,6 +47,8 @@
       - Dead
     - type: Puller
       needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
     - type: TypingIndicator
       proto: alien
     - type: Temperature
