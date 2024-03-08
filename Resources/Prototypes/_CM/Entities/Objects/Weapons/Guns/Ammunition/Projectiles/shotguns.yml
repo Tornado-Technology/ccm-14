@@ -10,7 +10,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 18
+        Piercing: 50
 
 - type: entity
   id: BulletShotGun8Gauge
@@ -24,4 +24,4 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 24
+        Piercing: 50

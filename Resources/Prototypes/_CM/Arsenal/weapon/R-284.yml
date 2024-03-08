@@ -22,7 +22,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
-    fireRate: 2
+    fireRate: 3
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -45,7 +45,7 @@
         ents: []
   - type: StaticPrice
     price: 5000
-    
+
 - type: entity
   name: R-284 "Fenix"
   parent: BaseFenix

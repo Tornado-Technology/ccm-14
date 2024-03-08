@@ -26,7 +26,7 @@
   parent: BaseCartridgeShotGun24Gauge
   components:
   - type: CartridgeAmmo
-    count: 8
+    count: 10
     spread: 30
     proto: BulletShotGun24Gauge
 
@@ -58,6 +58,6 @@
   parent: BaseCartridgeShotGun8Gauge
   components:
   - type: CartridgeAmmo
-    count: 6
+    count: 10
     spread: 25
     proto: BulletShotGun8Gauge

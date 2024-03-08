@@ -20,7 +20,7 @@
     - belt
   - type: AmmoCounter
   - type: Gun
-    fireRate: 3
+    fireRate: 6
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -51,6 +51,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  
+
 - type: Tag
   id: ShellShotgunAFG-12
