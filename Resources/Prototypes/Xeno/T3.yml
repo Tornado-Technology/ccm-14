@@ -14,7 +14,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        800: Dead
+        1200: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -58,7 +58,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        600: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -81,7 +81,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        600: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/gorger.rsi
@@ -115,7 +115,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        1000: Dead
+        2000: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -170,7 +170,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        500: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

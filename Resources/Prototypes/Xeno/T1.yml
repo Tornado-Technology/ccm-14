@@ -20,7 +20,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        400: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -45,7 +45,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Dead
+        300: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/runner.rsi
@@ -112,7 +112,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        400: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -136,7 +136,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        600: Dead
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/warrior.rsi
