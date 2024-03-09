@@ -148,3 +148,12 @@
     state: banner-green
 
 
+- type: entity
+  id: BannerUGE
+  parent: BannerBase
+  name: United Government Earth
+  description: Reminds you a home.
+  components:
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-opz
