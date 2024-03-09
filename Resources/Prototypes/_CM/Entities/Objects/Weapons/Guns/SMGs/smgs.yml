@@ -25,7 +25,7 @@
   - type: Gun
     minAngle: 10
     maxAngle: 20
-    fireRate: 8
+    fireRate: 6.5
     angleIncrease: 3
     angleDecay: 16
     selectedMode: FullAuto
@@ -58,8 +58,8 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  
-  
+
+
 - type: entity
   name: MSG 23 W-Y
   parent: BaseWeaponSubMachineGun

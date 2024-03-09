@@ -11,6 +11,8 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Pistols/88m4.rsi
     quickEquip: false
@@ -19,7 +21,7 @@
     - suitStorage
     - belt
   - type: Gun
-    fireRate: 2.5
+    fireRate: 4
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -46,7 +48,7 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-      
+
 - type: Tag
   id: BulletPistol45GAP
 
@@ -92,6 +94,6 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-      
+
 - type: Tag
   id: BulletPistol4440

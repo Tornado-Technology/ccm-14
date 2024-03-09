@@ -19,7 +19,6 @@
     slots:
     - Back
     - suitStorage
-    - belt
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5
@@ -27,7 +26,7 @@
   - type: Gun
     minAngle: 5
     maxAngle: 45
-    fireRate: 9
+    fireRate: 8
     angleIncrease: 3
     angleDecay: 16
     selectedMode: FullAuto
@@ -57,7 +56,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  
+
 
 - type: entity
   name: M42 pulse rifle
@@ -134,7 +133,7 @@
   - type: Gun
     minAngle: 5
     maxAngle: 20
-    fireRate: 6
+    fireRate: 4.5
     angleIncrease: 3
     angleDecay: 16
     selectedMode: FullAuto

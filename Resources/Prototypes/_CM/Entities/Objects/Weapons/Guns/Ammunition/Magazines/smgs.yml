@@ -14,7 +14,7 @@
     whitelist:
       tags:
         - CartridgeSmg450Brushmaster
-    capacity: 35
+    capacity: 40
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -64,7 +64,7 @@
     whitelist:
       tags:
         - CartridgeSmg458Socom
-    capacity: 50
+    capacity: 60
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -90,6 +90,7 @@
   parent: BaseMagazineSmgMSG23W-Y
   components:
   - type: BallisticAmmoProvider
+    capacity: 60
     proto: CartridgeSmg458Socom
   - type: Sprite
     layers:
