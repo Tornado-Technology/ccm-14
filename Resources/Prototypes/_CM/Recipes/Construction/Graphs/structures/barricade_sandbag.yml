@@ -11,23 +11,20 @@
       - !type:SnapToGrid
         southRotation: true
       steps:
-      - material: Steel
-        amount: 2
-        doAfter: 3
+      - material: MaterialWoodPlank1
+        amount: 5
+        doAfter: 10
 
   - node: nodeSandbag
     entity: CMBarricadeSandbag
     edges:
     - to: start
       completed:
-        - !type:SpawnPrototype
-          prototype: SheetSteel1
-          amount: 1
         - !type:DeleteEntity
       conditions:
         - !type:EntityAnchored
           anchored: false
       steps:
         - tool: Screwing
-          doAfter: 2
+          doAfter: 6
 

@@ -12,8 +12,8 @@
         southRotation: true
       steps:
       - material: Steel
-        amount: 3
-        doAfter: 6
+        amount: 10
+        doAfter: 10
 
   - node: nodeMetal
     entity: CMBarricadeMetal
@@ -29,28 +29,28 @@
           anchored: false
       steps:
         - tool: Screwing
-          doAfter: 6
+          doAfter: 7
     - to: nodeBurnUpgrade
       completed:
       - !type:SnapToGrid
       steps:
-      - material: MetalRod
-        amount: 6
-        doAfter: 6
+      - material: SheetRGlass
+        amount: 20
+        doAfter: 7
     - to: nodeBruteUpgrade
       completed:
       - !type:SnapToGrid
       steps:
       - material: Steel
-        amount: 3
-        doAfter: 6
+        amount: 20
+        doAfter: 7
     - to: nodeExplosiveUpgrade
       completed:
       - !type:SnapToGrid
       steps:
       - material: Plasteel
-        amount: 3
-        doAfter: 6
+        amount: 30
+        doAfter: 7
 
   - node: nodeBurnUpgrade
     entity: CMBarricadeBurn
