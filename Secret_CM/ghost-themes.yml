@@ -1,0 +1,34 @@
+- type: ghostTheme
+  id: DefaultGhost
+  name: Стандартный
+  icon:
+    sprite: Mobs/Ghosts/ghost_human.rsi
+    state: animated
+    
+- type: ghostTheme
+  id: FacehuggerGhost
+  name: Лицехват
+  icon:
+    sprite: _CM/GhostThemes/facehugger_theme.rsi
+    state: facehugger
+    
+- type: ghostTheme
+  id: PretorGhost
+  name: Преторианец
+  icon:
+    sprite: _CM/GhostThemes/xeno_theme.rsi
+    state: pretor
+    
+- type: ghostTheme
+  id: RuniGhost
+  name: Руни
+  icon:
+    sprite: _CM/GhostThemes/xeno_theme.rsi
+    state: runi
+    
+- type: ghostTheme
+  id: QueenGhost
+  name: Королева
+  icon:
+    sprite: _CM/GhostThemes/xeno_theme.rsi
+    state: queen
