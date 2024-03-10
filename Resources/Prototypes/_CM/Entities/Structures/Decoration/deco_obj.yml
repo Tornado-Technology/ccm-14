@@ -5,7 +5,7 @@
   description:  Пустая железная бочка. Нет, пива в нем нет.
   components:
   - type: Sprite
-    sprite: Structures/Decoration/steel_barrel.rsi
+    sprite: _CM/Structures/Decoration/steel_barrel.rsi
     noRot: true
     layers:
       - state: icon_W
@@ -56,7 +56,7 @@
   description:  Пустая железная бочка. Нет, пива в нем нет.
   components:
   - type: Sprite
-    sprite: Structures/Decoration/steel_barrel.rsi
+    sprite: _CM/Structures/Decoration/steel_barrel.rsi
     noRot: true
     layers:
       - state: icon_B
@@ -107,7 +107,7 @@
   description: (Не забыть добавить описание... Блять)
   components:
   - type: Sprite
-    sprite: Structures/Decoration/steel_box.rsi
+    sprite: _CM/Structures/Decoration/steel_box.rsi
     noRot: true
     layers:
       - state: icon_W
@@ -158,7 +158,7 @@
   description: (Не забыть добавить описание... Блять)
   components:
   - type: Sprite
-    sprite: Structures/Decoration/steel_box.rsi
+    sprite: _CM/Structures/Decoration/steel_box.rsi
     noRot: true
     layers:
       - state: icon_B
@@ -209,7 +209,7 @@
   description: (Не забыть добавить описание... Блять)
   components:
   - type: Sprite
-    sprite: Structures/Decoration/steel_box.rsi
+    sprite: _CM/Structures/Decoration/steel_box.rsi
     noRot: true
     layers:
       - state: icon_WG
