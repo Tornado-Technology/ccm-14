@@ -11,7 +11,7 @@
       - !type:SnapToGrid
         southRotation: true
       steps:
-      - material: MaterialWoodPlank1
+      - material: WoodPlank
         amount: 5
         doAfter: 10
 

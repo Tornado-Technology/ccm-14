@@ -34,7 +34,7 @@
       completed:
       - !type:SnapToGrid
       steps:
-      - material: SheetRGlass
+      - material: ReinforcedGlass
         amount: 20
         doAfter: 7
     - to: nodeBruteUpgrade
