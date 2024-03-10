@@ -12,7 +12,7 @@
         southRotation: true
       steps:
       - material: Steel
-        amount: 10
+        amount: 5
         doAfter: 10
 
   - node: nodeMetal
@@ -35,21 +35,21 @@
       - !type:SnapToGrid
       steps:
       - material: ReinforcedGlass
-        amount: 20
+        amount: 15
         doAfter: 7
     - to: nodeBruteUpgrade
       completed:
       - !type:SnapToGrid
       steps:
       - material: Steel
-        amount: 20
+        amount: 10
         doAfter: 7
     - to: nodeExplosiveUpgrade
       completed:
       - !type:SnapToGrid
       steps:
       - material: Plasteel
-        amount: 30
+        amount: 15
         doAfter: 7
 
   - node: nodeBurnUpgrade

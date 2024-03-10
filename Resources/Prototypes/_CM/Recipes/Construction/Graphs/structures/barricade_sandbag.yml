@@ -12,7 +12,7 @@
         southRotation: true
       steps:
       - material: WoodPlank
-        amount: 5
+        amount: 3
         doAfter: 10
 
   - node: nodeSandbag
