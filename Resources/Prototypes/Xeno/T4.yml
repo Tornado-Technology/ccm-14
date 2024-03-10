@@ -34,7 +34,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        900: Dead
+        1600: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -88,7 +88,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        1000: Dead
+        1800: Dead
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -116,7 +116,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        800: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

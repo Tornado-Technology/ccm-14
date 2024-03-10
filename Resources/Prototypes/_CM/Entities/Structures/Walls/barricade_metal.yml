@@ -58,13 +58,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 100
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 50
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -97,6 +97,23 @@
     - type: Damageable
       damageContainer: Inorganic
       damageModifierSet: CMBurnBarricade
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
     - type: DamageVisuals
       thresholds: [4, 8, 12]
       damageDivisor: 2
@@ -153,7 +170,23 @@
     - type: Construction
       graph: BarricadeMetalGraph
       node: nodeExplosiveUpgrade
-
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
 # Sandbag
 
 - type: entity
@@ -180,13 +213,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 50
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 20
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -338,7 +371,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 300
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
