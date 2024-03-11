@@ -6,3 +6,12 @@
   components:
     - type: ComputerBoard
       prototype: ComputerTadpole
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: CMEmergencyRetreatConsoleCircuitboard
+  name:  emergency retreat console board
+  description: A computer printed circuit board for a tadpole console.
+  components:
+    - type: ComputerBoard
+      prototype: CMComputerEmergencyRetreat

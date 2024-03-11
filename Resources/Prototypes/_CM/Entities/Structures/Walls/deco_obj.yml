@@ -1,0 +1,174 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: CMBarricadeBase
+  name: Generic Barricade
+  abstract: true
+  description: The most basic, generic barricade you have ever seen. This probably shouldn't even be here.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Climbable
+  - type: Appearance
+
+
+- type: entity
+  parent: CMBarricadeBase
+  id: CMBarricadeSandbagHalfHalfCircle
+  name: Мешки с песком 
+  description: Отлично укрытие от града пуль.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/Footsteps/snowstep1.ogg"
+  - type: Sprite
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbagHHcircle_barricade.rsi
+    layers:
+    - state: icon1
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: CMSandbag
+  - type: Repairable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: BarricadeSandbagGraph
+    node: nodeSandbag
+
+- type: entity
+  parent: CMBarricadeBase
+  id: CMBarricadeSandbagHalfCircle
+  name: Мешки с песком 
+  description: Отлично укрытие от града пуль.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/Footsteps/snowstep1.ogg"
+  - type: Sprite
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbagHcircle_barricade.rsi
+    layers:
+    - state: icon2
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: CMSandbag
+  - type: Repairable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: BarricadeSandbagGraph
+    node: nodeSandbag
+
+- type: entity
+  parent: CMBarricadeBase
+  id: CMBarricadeSandbagSimpleOne
+  name: Мешки с песком 
+  description: Отлично укрытие от града пуль.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/Footsteps/snowstep1.ogg"
+  - type: Sprite
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbag_simple_one_barricade.rsi
+    layers:
+    - state: icon2
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: CMSandbag
+  - type: Repairable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: BarricadeSandbagGraph
+    node: nodeSandbag
+
+- type: entity
+  parent: CMBarricadeBase
+  id: CMBarricadeSandbagSimple
+  name: Мешки с песком 
+  description: Отлично укрытие от града пуль.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/Footsteps/snowstep1.ogg"
+  - type: Sprite
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbag_simple_barricade.rsi
+    layers:
+    - state: icon2
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: CMSandbag
+  - type: Repairable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: BarricadeSandbagGraph
+    node: nodeSandbag
