@@ -24,6 +24,6 @@
       title: comms-console-announcement-title-uge
       global: true
       sound:
-        path: /Audio/Corvax/Announcements/centcomm.ogg
+        path: /Audio/Corvax/Announcements/OPS2.ogg
         params:
           volume: -4
