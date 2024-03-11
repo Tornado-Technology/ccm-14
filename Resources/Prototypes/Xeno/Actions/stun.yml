@@ -4,15 +4,11 @@
   description: stun desc
   noSpawn: true
   components:
-    - type: EntityTargetAction
+    - type: WorldTargetAction
       useDelay: 15
       itemIconStyle: BigAction
-      whitelist:
-        components:
-          - Body
-      canTargetSelf: false
       checkCanAccess: false
-      interactOnMiss: false
+      interactOnMiss: true
       sound: !type:SoundPathSpecifier
         path: /Audio/Effects/alien_roar2.ogg
       icon:
