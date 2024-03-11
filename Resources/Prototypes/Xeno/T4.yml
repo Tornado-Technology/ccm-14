@@ -34,7 +34,15 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        900: Dead
+        1600: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 1800
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -88,7 +96,15 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        1000: Dead
+        1800: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 2000
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -116,7 +132,15 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        800: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 1000
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:

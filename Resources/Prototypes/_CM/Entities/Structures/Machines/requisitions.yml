@@ -58,14 +58,14 @@
         - ToolboxFlameTurretMarine
         - ToolboxFlameTurretMarine
       - name: Ящик проводов(LV x30, MV x40, HV x40)
-        cost: 1000
+        cost: 3000
         crate: CrateEngineering
         entities:
         - CableHVStack
         - CableMVStack
         - CableApcStack
       - name: Ящик ДАМ(Контроллер ДАМа x1, Часть ДАМа x9, Топливо ДАМа x4)
-        cost: 8000
+        cost: 10000
         crate: CrateEngineering
         entities:
         - AmeController
@@ -87,18 +87,16 @@
         crate: CrateEngineering
         entities:
         - ClothingBeltUtility
-      - name: Набор картриджей РСУ(Картридж РСУ x5)
-        cost: 2000
+      - name: Набор картриджей РСУ(Картридж РСУ x3)
+        cost: 5000
         crate: CrateEngineering
         entities:
         - RCDAmmo
         - RCDAmmo
         - RCDAmmo
-        - RCDAmmo
-        - RCDAmmo
     - name: Взрывчатка
       entries:
-      - name: Ящик гранат(6x granade)
+      - name: Ящик гранат(5x granade)
         cost: 5000
         crate: CrateWeaponSecure
         entities:
@@ -107,8 +105,7 @@
         - ExGrenade
         - ExGrenade
         - ExGrenade
-        - ExGrenade
-      - name: Ящик C4(6x C4)
+      - name: Ящик C4(4x C4)
         cost: 5000
         crate: CrateEngineeringSecure
         entities:
@@ -116,12 +113,10 @@
         - C4
         - C4
         - C4
-        - C4
-        - C4
     - name: Еда
       entries:
-      - name: Ящик ИРП(6x MRE Boxes)
-        cost: 4000
+      - name: Ящик ИРП(8x MRE Boxes)
+        cost: 2000
         crate: CrateGenericSteel
         entities:
         - BoxMRE
@@ -130,36 +125,44 @@
         - BoxMRE
         - BoxMRE
         - BoxMRE
+        - BoxMRE
+        - BoxMRE
     - name: Броня
       entries:
-      - name: Ящик лёгкой брони(M3-L pattern light armor x2, M10 pattern marine helmet x2)
-        cost: 5000
+      - name: Ящик лёгкой брони(M3-L pattern light armor x3, M10 pattern marine helmet x3)
+        cost: 4000
         crate: CrateSecgear
         entities:
         - ClothingOuterArmorMarineLight
         - ClothingOuterArmorMarineLight
+        - ClothingOuterArmorMarineLight
         - ClothingHeadHelmetMarine
         - ClothingHeadHelmetMarine
-      - name: Ящик брони(M3 pattern marine armor x2, M10 pattern marine helmet x2)
+        - ClothingHeadHelmetMarine
+      - name: Ящик брони(M3 pattern marine armor x3, M10 pattern marine helmet x3)
+        cost: 6000
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineMedium
+        - ClothingOuterArmorMarineMedium
+        - ClothingOuterArmorMarineMedium
+        - ClothingHeadHelmetMarine
+        - ClothingHeadHelmetMarine
+        - ClothingHeadHelmetMarine
+      - name: Ящик тяжёлой броня(M3-EOD pattern armor x3, M10 pattern marine helmet x3)
         cost: 8000
         crate: CrateSecgear
         entities:
-        - ClothingOuterArmorMarineMedium
-        - ClothingOuterArmorMarineMedium
-        - ClothingHeadHelmetMarine
-        - ClothingHeadHelmetMarine
-      - name: Ящик тяжёлой броня(M3-EOD pattern armor x2, M10 pattern marine helmet x2)
-        cost: 10000
-        crate: CrateSecgear
-        entities:
         - ClothingOuterArmorMarineHeavy
         - ClothingOuterArmorMarineHeavy
+        - ClothingOuterArmorMarineHeavy
+        - ClothingHeadHelmetMarine
         - ClothingHeadHelmetMarine
         - ClothingHeadHelmetMarine
     - name: Медицина
       entries:
       - name: Ящик аптечек(AdvMedkit x1, MedkitBurn x1, MedkitO2 x1, MedkitAdvanced x1)
-        cost: 4000
+        cost: 6000
         crate: CrateMedical
         entities:
         - CMAdvFirstAidKitFilled
@@ -173,7 +176,7 @@
         - MaterialBiomass
         - MaterialBiomass
       - name:  Ящик химикатов (P)
-        cost: 1000
+        cost: 2000
         crate: CrateMedical
         entities:
         - JugAluminium
@@ -187,7 +190,7 @@
         - JugOxygen
         - JugNitrogen
       - name: Ящик химикатов (S)
-        cost: 1000
+        cost: 2000
         crate: CrateMedical
         entities:
         - JugHydrogen
@@ -196,7 +199,7 @@
         - JugPotassium
         - JugRadium
       - name: Ящик химикатов (D)
-        cost: 1000
+        cost: 2000
         crate: CrateMedical
         entities:
         - JugIron
@@ -228,7 +231,7 @@
         - FoodKoibean
     - name: Разное
       entries:
-      - name: Набор флаеров(10x флаер)
+      - name: Набор флаеров(20x флаер)
         cost: 5000
         crate: CrateGenericSteel
         entities:
@@ -242,96 +245,120 @@
         - FlareMarine
         - FlareMarine
         - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
+        - FlareMarine
     - name: Поставки
       entries:
-      - name: Ящик стали (x30 Сталь)
+      - name: Ящик пластали (x30 пласталь)
+        cost: 3000
+        crate: CrateGenericSteel
+        entities:
+        - SheetPlasteel
+      - name: Ящик древесины (x60 древесина)
+        cost: 500
+        crate: CrateGenericSteel
+        entities:
+        - MaterialWoodPlank
+        - MaterialWoodPlank
+      - name: Ящик стали (x60 Сталь)
         cost: 1000
         crate: CrateGenericSteel
         entities:
         - SheetSteel
-      - name: Ящик стекла (x30 Стекло)
+        - SheetSteel
+      - name: Ящик стекла (x60 Стекло)
         cost: 1000
         crate: CrateGenericSteel
         entities:
         - SheetGlass
-      - name: Ящик пластика (x30 Пластик)
+        - SheetGlass
+      - name: Ящик пластика (x60 Пластик)
         cost: 1000
         crate: CrateGenericSteel
         entities:
         - SheetPlastic
-      - name: Ящик плазмы (x30 Плазма)
+        - SheetPlastic
+      - name: Ящик плазмы (x60 Плазма)
         cost: 1000
         crate: CrateGenericSteel
         entities:
         - SheetPlasma
-      - name: Ящик урана (x30 Уран)
+        - SheetPlasma
+      - name: Ящик урана (x60 Уран)
         cost: 3000
         crate: CrateGenericSteel
         entities:
         - SheetUranium
-      - name: Ящик золота (x30 Золота)
+        - SheetUranium
+      - name: Ящик золота (x60 Золота)
         cost: 3000
         crate: CrateGenericSteel
         entities:
         - IngotGold
-      - name: Ящик серебра (x30 Серебро)
+        - IngotGold
+      - name: Ящик серебра (x60 Серебро)
         cost: 3000
         crate: CrateGenericSteel
         entities:
         - IngotSilver
+        - IngotSilver
     - name: Вооружение
       entries:
       - name: Набор M41A MK1 Rifle (x2 MK1)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponRifleM41A
         - WeaponRifleM41A
         - WeaponRifleM41A
-      - name: Набор M42 Импульсная винтовка (x2 M42)
-        cost: 6000
-        crate: CrateSecgear
-        entities:
-        - WeaponRifleM42
-        - WeaponRifleM42
-        - WeaponRifleM42
       - name: Набор M4RA боевая винтовка (x2 M4RA)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponRifleM4RA
         - WeaponRifleM4RA
         - WeaponRifleM4RA
       - name: Набор пистолетов 88 Mod 4 (x2 88M4)
-        cost: 6000
+        cost: 2000
         crate: CrateSecgear
         entities:
         - WeaponPistol88M4
         - WeaponPistol88M4
         - WeaponPistol88M4
+        - WeaponPistol88M4
+        - WeaponPistol88M4
+        - WeaponPistol88M4
       - name: Набор Armat M5Y3 (x2 M5Y3)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponPistolArmatM5Y3
         - WeaponPistolArmatM5Y3
         - WeaponPistolArmatM5Y3
       - name: Набор дробовиков UA 571-C (x2 571-C)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponShotgunUA571C
         - WeaponShotgunUA571C
         - WeaponShotgunUA571C
       - name: Набор дробовиков K221(x2 571-C)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponShotgunK221
         - WeaponShotgunK221
         - WeaponShotgunK221
       - name: Набор ПП M39 (x2 571-C)
-        cost: 6000
+        cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponSubMachineGunM39

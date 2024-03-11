@@ -12,6 +12,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Content.Server._CM14.Xeno;
 using Content.Server.Communications;
+using Content.Shared._CM14.EmergencyRetreat;
 using Content.Shared._CM14.Xeno;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Overlays;
@@ -44,6 +45,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
         SubscribeLocalEvent<NukeExplodedEvent>(OnNukeExploded);
         SubscribeLocalEvent<NukeArmSuccessEvent>(OnNukeArmed);
+        SubscribeLocalEvent<EmergencyRetreatDoneEvent>(OnEmergencyRetreatDone);
 
         SubscribeLocalEvent<XenoComponent, MobStateChangedEvent>(OnXenoMobStateChanged);
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMarineMobStateChanged);
@@ -272,6 +274,19 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             {
                 xeno.WinType = WinType.MarineMajor;
             }
+        }
+    }
+
+    private void OnEmergencyRetreatDone(EmergencyRetreatDoneEvent msg)
+    {
+        var query = Query;
+        while (query.MoveNext(out var uid, out var xeno, out var gameRule))
+        {
+            if (!GameTicker.IsGameRuleAdded(uid, gameRule))
+                continue;
+
+            xeno.WinConditions.Add(WinCondition.EmergencyRetreat);
+            SetWinType(uid, WinType.XenoMinor, xeno);
         }
     }
 

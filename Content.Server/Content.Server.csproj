@@ -29,6 +29,7 @@
   <ItemGroup>
     <Folder Include="Objectives\Interfaces\" />
     <Folder Include="Tools\Systems\" />
+    <Folder Include="_CM14\Commands\Admin\" />
     <Folder Include="_CM14\Rules\" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />

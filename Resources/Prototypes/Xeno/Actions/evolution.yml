@@ -5,6 +5,7 @@
   noSpawn: true
   components:
   - type: InstantAction
+    checkCanInteract: false
     icon:
       sprite: Actions/xeno.rsi
       state: evolve

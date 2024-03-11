@@ -5,6 +5,7 @@
   description: Добывает ископаемые и приносит деньги. 
   components:
     - type: CMMiner
+      balanceGeneration: 150
     - type: MeleeSound
       soundGroups:
         Brute:

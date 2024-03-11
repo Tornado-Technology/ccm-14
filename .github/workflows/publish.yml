@@ -21,21 +21,25 @@ jobs:
         submodules: 'recursive'
 
     # Corvax-Secrets-Start
-    #- name: Setup secrets
-    #  env:
-    #    SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
-    #  if: ${{ env.SSH_KEY != '' }}
-    #  run: |
-    #    mkdir -p ~/.ssh
-    #    echo "${{ secrets.SECRETS_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-    #    chmod 600 ~/.ssh/id_rsa
-    #    echo "HOST *" > ~/.ssh/config
-    #    echo "StrictHostKeyChecking no" >> ~/.ssh/config
-    #    git -c submodule.Secrets.update=checkout submodule update --init
-    #    cp -R Secrets/Resources/Prototypes Resources/Prototypes/CorvaxSecrets
-    #    cp -R Secrets/Resources/ServerPrototypes Resources/Prototypes/CorvaxSecretsServer
-    #    cp -R Secrets/Resources/Locale Resources/Locale/ru-RU/corvax-secrets
-    #    cp -R Secrets/Resources/Textures Resources/Textures/CorvaxSecrets
+    - name: Setup secrets
+      env:
+        SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
+      if: ${{ env.SSH_KEY != '' }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SECRETS_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        echo "HOST *" > ~/.ssh/config
+        echo "StrictHostKeyChecking no" >> ~/.ssh/config
+        git -c submodule.Secrets.update=checkout submodule update --init
+        cp -R Secrets/Resources/Prototypes Resources/Prototypes/CorvaxSecrets
+        cp -R Secrets/Resources/ServerPrototypes Resources/Prototypes/CorvaxSecretsServer
+        cp -R Secrets/Resources/Locale Resources/Locale/ru-RU/corvax-secrets
+        cp -R Secrets/Resources/Textures Resources/Textures/CorvaxSecrets
+        rm Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
+        rm Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
+        cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
+        cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
     # Corvax-Secrets-End
 
     - name: Setup .NET Core
