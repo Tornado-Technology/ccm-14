@@ -62,7 +62,7 @@ public enum WinCondition : byte
     NukeExplodedOnXenoPlanet,
     NukeExplodedOnMarineOutpost,
     NukeExplodedOnIncorrectLocation,
-    
+
     AllXenoDied,
     QueenDied,                  // not used cuz cant read all conditions in force end, used predicate logic now
     AllMarineDied,
@@ -72,5 +72,6 @@ public enum WinCondition : byte
     RoyalQueenExist,            // not used cuz cant read all conditions in force end, used predicate logic now
 
     EmergencyShuttleCalled,     // not used cuz cant read all conditions in force end, used predicate logic now
+    EmergencyRetreat,
     XenoAbandoned,              // idk what is it
 }
