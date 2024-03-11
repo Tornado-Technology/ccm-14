@@ -15,6 +15,14 @@
       thresholds:
         0: Alive
         1200: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 1400
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -59,6 +67,14 @@
       thresholds:
         0: Alive
         600: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 800
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -82,6 +98,14 @@
       thresholds:
         0: Alive
         600: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 800
+        behaviors:
+        - !type:GibBehavior { }
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/gorger.rsi
@@ -116,6 +140,14 @@
       thresholds:
         0: Alive
         2000: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 2200
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -171,6 +203,14 @@
       thresholds:
         0: Alive
         500: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 700
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
