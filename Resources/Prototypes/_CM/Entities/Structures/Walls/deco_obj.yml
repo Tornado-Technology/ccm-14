@@ -25,7 +25,7 @@
         path:
           "/Audio/Effects/Footsteps/snowstep1.ogg"
   - type: Sprite
-    sprite: Structures/Walls/Barricades/NB_small_sanbagHHcircle_barricade.rsi
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbagHHcircle_barricade.rsi
     layers:
     - state: icon1
   - type: Damageable
@@ -65,7 +65,7 @@
         path:
           "/Audio/Effects/Footsteps/snowstep1.ogg"
   - type: Sprite
-    sprite: Structures/Walls/Barricades/NB_small_sanbagHcircle_barricade.rsi
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbagHcircle_barricade.rsi
     layers:
     - state: icon2
   - type: Damageable
@@ -105,7 +105,7 @@
         path:
           "/Audio/Effects/Footsteps/snowstep1.ogg"
   - type: Sprite
-    sprite: Structures/Walls/Barricades/NB_small_sanbag_simple_one_barricade.rsi
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbag_simple_one_barricade.rsi
     layers:
     - state: icon2
   - type: Damageable
@@ -145,7 +145,7 @@
         path:
           "/Audio/Effects/Footsteps/snowstep1.ogg"
   - type: Sprite
-    sprite: Structures/Walls/Barricades/NB_small_sanbag_simple_barricade.rsi
+    sprite: _CM/Structures/Walls/Barricades/NB_small_sanbag_simple_barricade.rsi
     layers:
     - state: icon2
   - type: Damageable
