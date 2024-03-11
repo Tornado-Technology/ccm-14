@@ -845,14 +845,14 @@
     Plasma: 1000
 
 - type: latheRecipe
-  id: MagazineAntiMaterialXM42B
-  result: MagazineAntiMaterialXM42B
+  id: BoxAntimaterialCM
+  result: BoxAntimaterialCM
   completetime: 10
   materials:
-    Steel: 100
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 1000
+    Plastic: 1000
+    Glass: 1000
+    Plasma: 1000
 
 - type: latheRecipe
   id: MagazineLightRifleBox

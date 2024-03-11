@@ -1,2 +1,2 @@
-ent-WeaponSIGSuppressionFightK-7 = SIG Подавитель К-7
+ent-WeaponSIGSuppressionFightK-7 = SIG-7 "Подавитель" К-200
     .desc = Традиционный SIG с приятной лакированной деревянной рукояткой. Использует винтовочные патроны калибра .30.

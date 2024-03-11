@@ -7,5 +7,4 @@
   - type: StorageFill
     contents:
       - id: WeaponSniperXM43E1
-      - id: MagazineAntiMaterialXM42B
-        amount: 5
+      - id: BoxAntimaterialCM

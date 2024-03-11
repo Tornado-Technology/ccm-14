@@ -8,6 +8,6 @@
     contents:
       - id: WeaponLauncherGrenades
       - id: GrenadeFragMarine
-        amount: 3
+        amount: 10
       - id: GrenadeBlastMarine
-        amount: 6
+        amount: 20

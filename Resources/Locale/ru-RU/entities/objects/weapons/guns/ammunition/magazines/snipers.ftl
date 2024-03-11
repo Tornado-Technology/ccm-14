@@ -1,7 +1,3 @@
-ent-BaseMagazineRifleM4RA = магазин M4RA (10x24mm)
-    .desc = { ent-BaseItem.desc }
-ent-MagazineRifleM4RA = магазин M4RA (10x24mm)
-    .desc = { ent-BaseMagazineRifleM4RA.desc }
 ent-MagazineRifleM4RAAP = бронебойный магазин M4RA (10x24mm)
     .desc = { ent-BaseMagazineRifleM4RA.desc }
 ent-BaseMagazineRifleM4RAEx = расширенный магазин M4RA (10x24mm)
