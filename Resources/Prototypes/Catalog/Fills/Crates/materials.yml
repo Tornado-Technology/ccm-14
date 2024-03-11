@@ -21,17 +21,6 @@
         amount: 3
 
 - type: entity
-  id: CrateMaterialWood
-  parent: CrateGenericSteel
-  name: ящик древесины
-  description: 90 единиц древесины.
-  components:
-  - type: StorageFill
-    contents:
-    - id: MaterialWoodPlank
-      amount: 3
-
-- type: entity
   id: CrateMaterialTextiles
   parent: CrateGenericSteel
   name: textiles crate

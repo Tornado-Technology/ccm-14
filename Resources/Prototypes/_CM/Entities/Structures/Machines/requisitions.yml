@@ -244,6 +244,16 @@
         - FlareMarine
     - name: Поставки
       entries:
+      - name: Ящик пластали (x30 пласталь)
+        cost: 3000
+        crate: CrateGenericSteel
+        entities:
+        - SheetPlasteel
+      - name: Ящик древесины (x30 древесина)
+        cost: 500
+        crate: CrateGenericSteel
+        entities:
+        - MaterialWoodPlank
       - name: Ящик стали (x30 Сталь)
         cost: 1000
         crate: CrateGenericSteel
