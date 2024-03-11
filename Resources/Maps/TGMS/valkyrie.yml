@@ -8316,6 +8316,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
+    - type: EmergencyRetreat
 - proto: ActionToggleLight
   entities:
   - uid: 12959
@@ -47535,6 +47536,21 @@ entities:
     - type: Transform
       pos: -72.5,10.5
       parent: 2
+- proto: CMComputerEmergencyRetreat
+  entities:
+  - uid: 9882
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -222.5,8.5
+      parent: 2
+- proto: CMEmergencyRetreatConsoleCircuitboard
+  entities:
+  - uid: 9883
+    components:
+    - type: Transform
+      pos: -212.52682,3.969532
+      parent: 2
 - proto: CMFirstAidKitFilled
   entities:
   - uid: 9694
@@ -47724,24 +47740,6 @@ entities:
       rot: -5.494960886309741E-08 rad
       pos: -140.01562,5.4304667
       parent: 2
-- proto: CMPouchCommand
-  entities:
-  - uid: 9883
-    components:
-    - type: Transform
-      parent: 9882
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: CMPouchDocument
-  entities:
-  - uid: 9884
-    components:
-    - type: Transform
-      parent: 9882
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: CMPouchFirstAid
   entities:
   - uid: 16026
@@ -60323,12 +60321,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -221.5,3.5
-      parent: 2
-  - uid: 9624
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -222.5,8.5
       parent: 2
 - proto: ComputerRaptorControl
   entities:
@@ -86391,48 +86383,15 @@ entities:
     - type: Transform
       pos: 4.5,8.5
       parent: 2
-- proto: LockerCaptain
+- proto: LockerCaptainFilled
   entities:
-  - uid: 9882
+  - uid: 9624
     components:
     - type: MetaData
-      desc: Стандартное хранилище ОПЗ.
       name: шкаф главы операции
     - type: Transform
       pos: -215.5,2.5
       parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.1462
-        moles:
-        - 1.606311
-        - 6.042789
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 9886
-          - 9885
-          - 9884
-          - 9883
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: LockerChemistryFilled
   entities:
   - uid: 12754
@@ -96111,15 +96070,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -115.5,-8.5
       parent: 2
-- proto: SpaceCash2500
-  entities:
-  - uid: 9885
-    components:
-    - type: Transform
-      parent: 9882
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: SpaceVillainArcadeFilled
   entities:
   - uid: 14566
@@ -96452,15 +96402,6 @@ entities:
     - type: Transform
       pos: -186.5,2.5
       parent: 2
-- proto: SpeedLoaderMagnum357
-  entities:
-  - uid: 9886
-    components:
-    - type: Transform
-      parent: 9882
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: SpiderWeb
   entities:
   - uid: 14662
