@@ -36,3 +36,43 @@
               doAfter: 15
             - tool: Cutting
               doAfter: 8
+
+﻿- type: constructionGraph
+  id: UltraMiner
+  start: start1
+  graph:
+    - node: start1
+      entity: UltraMinerMachineBroken
+      edges:
+        - to: ultraminer
+          steps:
+            - tool: Welding
+              doAfter: 4
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Cable
+              amount: 30
+              doAfter: 2
+            - material: Plasteel
+              amount: 30
+              doAfter: 4
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 3
+            - tool: Welding
+              doAfter: 4
+              
+    - node: ultraminer
+      entity: UltraMinerMachine
+      edges:
+        - to: start1
+          steps:
+            - tool: Welding
+              doAfter: 15
+            - tool: Cutting
+              doAfter: 8
