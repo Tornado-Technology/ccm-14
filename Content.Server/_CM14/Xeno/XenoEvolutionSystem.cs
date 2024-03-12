@@ -98,7 +98,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
 
     private void OnEvolve(Entity<XenoEvolutionsComponent> ent, ref EvolveMessage args)
     {
-        if (ent.Comp.Evolutions.TryGetValue(args.Evolution, out _))
+        if (ent.Comp.Evolutions.TryGetValue(args.Evolution, out var value))
         {
             PolymorphEntity(ent, args.Evolution.Prototype);
         }
