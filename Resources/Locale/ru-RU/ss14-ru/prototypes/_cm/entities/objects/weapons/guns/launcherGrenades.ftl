@@ -1,2 +1,2 @@
-ent-WeaponLauncherGrenades = гранатомёт специалиста
+ent-WeaponLauncherGrenades = Ракетная установка M5 RPG
     .desc = ПЛУП

@@ -1,37 +1,19 @@
 - type: entity
-  id: BaseCartridgeSniper10x99
-  parent: BaseCartridge
+  id: CartridgeSniper10x99
+  parent: BaseCartridgeCM
   name: cartridge (10x99)
-  suffix: CM
-  abstract: true
   components:
   - type: Tag
     tags:
       - CartridgeSniper10x99
   - type: CartridgeAmmo
     proto: BulletSniper10x99
-    deleteOnSpawn: true
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
-
-- type: entity
-  id: CartridgeSniper10x99
-  parent: BaseCartridgeSniper10x99
-  name: cartridge (10x99)
-  components:
-  - type: CartridgeAmmo
-    proto: BulletSniper10x99
+    sprite: /Textures/Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
 
 - type: entity
   id: CartridgeSniper10x99AP
-  parent: BaseCartridgeSniper10x99
+  parent: CartridgeSniper10x99
   name: cartridge (10x99 armor-piercing)
   components:
   - type: CartridgeAmmo
@@ -39,7 +21,7 @@
 
 - type: entity
   id: CartridgeSniper10x99Uranium
-  parent: BaseCartridgeSniper10x99
+  parent: CartridgeSniper10x99
   name: cartridge (10x99 uranium)
   components:
   - type: CartridgeAmmo

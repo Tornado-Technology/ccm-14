@@ -1286,6 +1286,9 @@
   id: MagazineShotgunAFG-12
 
 - type: Tag
+  id: MagazineShotgunLiberator
+
+- type: Tag
   id: CartridgeSniper10x99
 
 - type: Tag

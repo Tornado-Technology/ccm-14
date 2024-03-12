@@ -1,10 +1,10 @@
-ent-BaseMagazinePistol88M4 = 88M4 магазин (45GAP)
+ent-BaseMagazinePistol88M4 = магазин P288 (45GAP)
     .desc = { ent-BaseItem.desc }
-ent-MagazinePistol88M4 = 88M4 магазин (45GAP)
+ent-MagazinePistol88M4 = магазин P288 (45GAP)
     .desc = { ent-BaseMagazinePistol88M4.desc }
-ent-BaseMagazinePistolAramatM5Y3 = магазин Арамат M5Y3 (44.40)
+ent-BaseMagazinePistolAramatM5Y3 = магазин AP-23P (44.40)
     .desc = { ent-BaseItem.desc }
-ent-MagazinePistolAramatM5Y3 = магазин Арамат M5Y3 (44.40)
+ent-MagazinePistolAramatM5Y3 = магазин AP-23P (44.40)
     .desc = { ent-BaseMagazinePistolAramatM5Y3.desc }
 ent-Box45GAP = Коробка (45GAP)
     .desc = { ent-BaseBox9mm.desc }

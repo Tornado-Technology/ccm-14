@@ -1,4 +1,4 @@
-ent-WeaponShotgunUA571C = Ружье UA 571-C
+ent-WeaponShotgunLiberator = UA-571 "Освободитель"
     .desc = { ent-BaseItem.desc }
-ent-WeaponShotgunK221 = Ружье K221
+ent-WeaponShotgunPunisher = SG-225SP "Каратель"
     .desc = { ent-BaseItem.desc }

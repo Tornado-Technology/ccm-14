@@ -1,60 +1,28 @@
 - type: entity
-  id: BaseMagazineShotgunUA571C
+  id: MagazineShotgunUA571C
   name: ammo drum (24 Gauge)
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
     - MagazineShotgunUA571C
   - type: BallisticAmmoProvider
-    mayTransfer: true
     whitelist:
       tags:
         - CartridgeShotGun24Gauge
     capacity: 16
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
-  - type: Item
-    size: Normal
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
+
 
 - type: entity
-  id: MagazineShotgunUA571C
-  name: ammo drum (24 Gauge)
-  parent: BaseMagazineShotgunUA571C
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeShotGun24Gauge
-  - type: Sprite
-    layers:
-    - state: pellets
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: BaseMagazineShotgunK221
+  id: MagazineShotgunK221
   name: ammo drum (8 Gauge)
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: BallisticAmmoProvider
-    mayTransfer: true
     whitelist:
       tags:
         - CartridgeShotGun8Gauge
@@ -63,56 +31,99 @@
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
   - type: Item
     size: Normal
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: MagazineShotgunK221
-  name: ammo drum (8 Gauge)
-  parent: BaseMagazineShotgunK221
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeShotGun8Gauge
-  - type: Sprite
-    layers:
-    - state: pellets
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineShotgunAFG-12
   name: ammo drum AFG-12 (.50 pellet)
-  parent: BaseMagazineShotgun
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
     - MagazineShotgunAFG-12
   - type: BallisticAmmoProvider
-    proto: ShellShotgun
-    mayTransfer: true
+    proto: ShellShotgunAFG-12
     whitelist:
       tags:
-        - ShellShotgun
-    capacity: 28
+        - ShellShotgunAFG-12
+    capacity: 16
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
   - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi
     layers:
     - state: pellets
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+
+
+- type: entity
+  id: MagazineShotgunLiberator
+  name: ammo drum AFG-12 (.50 pellet)
+  parent: BaseMagazineCM
+  components:
+  - type: Tag
+    tags:
+    - MagazineShotgunLiberator
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Shotguns/LiberatorMag.rsi
+  - type: BallisticAmmoProvider
+    proto: ShellLiberator
+    whitelist:
+      tags:
+        - ShellLiberator
+    capacity: 8
+  - type: MagazineVisuals
+    steps: 1
+    zeroVisible: true
+
+
+# Boxes
+- type: entity
+  parent: BaseBoxCM
+  id: BoxShellPunisher
+  name: Box (ShellPunisher)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellPunisher
+    capacity: 50
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+
+
+
+
+- type: entity
+  parent: BaseBoxCM
+  id: BoxShellLiberator
+  name: Box (ShellLiberator)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellLiberator
+    capacity: 50
+    whitelist:
+      tags:
+        - ShellLiberator
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false

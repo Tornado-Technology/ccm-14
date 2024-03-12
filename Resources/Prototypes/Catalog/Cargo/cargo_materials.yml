@@ -19,16 +19,6 @@
   group: market
 
 - type: cargoProduct
-  id: MaterialWood
-  icon:
-    sprite: Objects/Materials/materials.rsi
-    state: wood
-  product: CrateMaterialWood
-  cost: 2000
-  category: Materials
-  group: market
-
-- type: cargoProduct
   id: MaterialPlastic
   icon:
     sprite: Objects/Materials/Sheets/other.rsi

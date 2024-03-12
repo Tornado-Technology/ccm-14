@@ -1,0 +1,254 @@
+- type: entity
+  id: SteelWhiteBarrel
+  parent: BaseStructureDynamic
+  name: Железная белая бочка
+  description:  Пустая железная бочка. Нет, пива в нем нет.
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Decoration/steel_barrel.rsi
+    noRot: true
+    layers:
+      - state: icon_W
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Transform
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: ItemSlots
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.40"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: SteelBlueBarrel
+  parent: BaseStructureDynamic
+  name: Железная синия бочка
+  description:  Пустая железная бочка. Нет, пива в нем нет.
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Decoration/steel_barrel.rsi
+    noRot: true
+    layers:
+      - state: icon_B
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Transform
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: ItemSlots
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.40"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: SteelWhiteBox
+  parent: BaseStructureDynamic
+  name: Железная белая коробка
+  description: (Не забыть добавить описание... Блять)
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Decoration/steel_box.rsi
+    noRot: true
+    layers:
+      - state: icon_W
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Transform
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: ItemSlots
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.40"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: SteelBlackBox
+  parent: BaseStructureDynamic
+  name: Железная черная коробка
+  description: (Не забыть добавить описание... Блять)
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Decoration/steel_box.rsi
+    noRot: true
+    layers:
+      - state: icon_B
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Transform
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: ItemSlots
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.40"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: SteelMedBox
+  parent: BaseStructureDynamic
+  name: Железная медецинская коробка
+  description: (Не забыть добавить описание... Блять)
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Decoration/steel_box.rsi
+    noRot: true
+    layers:
+      - state: icon_WG
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Transform
+    noRot: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: ItemSlots
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.40"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer

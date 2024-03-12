@@ -11,7 +11,7 @@ public sealed partial class SharedXenoStunAbilitiesComponent : Component
 {
 }
 
-public sealed partial class XenoStunEvent : EntityTargetActionEvent
+public sealed partial class XenoStunEvent : WorldTargetActionEvent
 {
 }
 

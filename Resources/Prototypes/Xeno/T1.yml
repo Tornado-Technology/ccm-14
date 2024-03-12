@@ -21,6 +21,14 @@
       thresholds:
         0: Alive
         400: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 600
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -46,6 +54,14 @@
       thresholds:
         0: Alive
         300: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 500
+        behaviors:
+        - !type:GibBehavior { }
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/runner.rsi
@@ -113,6 +129,14 @@
       thresholds:
         0: Alive
         400: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 600
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:
@@ -137,6 +161,14 @@
       thresholds:
         0: Alive
         600: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 800
+        behaviors:
+        - !type:GibBehavior { }
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/warrior.rsi

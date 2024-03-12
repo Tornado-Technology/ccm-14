@@ -718,7 +718,7 @@
       - MarineCASClusterBomb
       - MagazineShotgunAFG-12
       - FuelTankFlamethrower
-      - MagazineAntiMaterialXM42B
+      - BoxAntimaterialCM
       - MagazineLightRifleBox
       - WeaponLaserCarbine
       - WeaponLaserCannon
@@ -840,7 +840,7 @@
         - C4
         - MagazineShotgunAFG-12
         - FuelTankFlamethrower
-        - MagazineAntiMaterialXM42B
+        - BoxAntimaterialCM
         - MagazineLightRifleBox
         - WeaponLaserCarbine
     - type: MaterialStorage

@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Shared.Actions;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Stunnable;
@@ -11,6 +12,8 @@ public sealed class XenoStunSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
+    [Dependency] private readonly IEntityManager _entManager = default!;
+    [Dependency] private readonly SharedTransformSystem _entTransformSystem = default!;
 
     public override void Initialize()
     {
@@ -27,9 +30,26 @@ public sealed class XenoStunSystem : EntitySystem
 
     private void OnStun(EntityUid uid, XenoStunComponent comp, XenoStunEvent args)
     {
-        if (!HasComp<MobStateComponent>(args.Target) || HasComp<XenoComponent>(args.Target))
+        // much more optimization lmao
+        var sqrDistance = comp.DistanceTolerance * comp.DistanceTolerance;
+        if (!TryComp<TransformComponent>(uid, out var xform))
+        {
             return;
+        }
 
-        _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(comp.StunTime), comp.Refresh);
+        var query = EntityQueryEnumerator<MobStateComponent>();
+        while (query.MoveNext(out var tempUid, out _))
+        {
+            if (args.Target.GetMapId(_entManager) != xform.MapID || HasComp<XenoComponent>(tempUid)) continue;
+
+            var tempDistance = Vector2.DistanceSquared(args.Target.ToMapPos(_entManager, _entTransformSystem),
+                                                                _entTransformSystem.GetWorldPosition(tempUid));
+
+            if (tempDistance < sqrDistance)
+            {
+                _stunSystem.TryParalyze(tempUid, TimeSpan.FromSeconds(comp.StunTime), comp.Refresh);
+                break;
+            }
+        }
     }
 }
