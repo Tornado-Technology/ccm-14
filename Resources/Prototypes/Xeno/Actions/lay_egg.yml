@@ -6,8 +6,8 @@
     - type: InstantAction
       useDelay: 120
       priority: 7
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: QuinnBreath
       icon:
         sprite: Actions/xeno.rsi
         state: lay_egg
@@ -22,10 +22,11 @@
     - type: InstantAction
       useDelay: 20
       priority: 7
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: QuinnBreath
       icon:
         sprite: Actions/xeno.rsi
         state: lay_egg
       event: !type:XenoLayEggEvent
       checkCanAccess: false
+

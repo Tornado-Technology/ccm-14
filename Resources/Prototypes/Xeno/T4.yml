@@ -97,6 +97,7 @@
         types:
           Structural: 15
 
+
 - type: entity
   name: rouny
   parent: MobXenoBaseT4

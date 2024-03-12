@@ -13,8 +13,8 @@
       canTargetSelf: false
       checkCanAccess: false
       interactOnMiss: false
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: XenoScream
       icon:
         sprite: Actions/xeno.rsi
         state: stun

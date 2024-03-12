@@ -76,6 +76,7 @@
           layer:
           - MobLayer
 
+
 - type: entity
   name: sentinel
   parent: MobXenoBaseT1
@@ -121,6 +122,7 @@
     - type: XenoDegradation
     - type: XenoAcid
 
+
 - type: entity
   name: warrior
   parent: MobXenoBaseT1
@@ -149,3 +151,4 @@
         groups:
           Brute: 18
     - type: XenoDegradation
+
