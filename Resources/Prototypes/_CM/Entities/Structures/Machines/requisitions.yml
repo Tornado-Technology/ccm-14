@@ -312,61 +312,65 @@
         - IngotSilver
     - name: Вооружение
       entries:
-      - name: Набор M41A MK1 Rifle (x2 MK1)
+      - name: Набор винтовок M41A2 "Constitution" Mode MK3 (x3)
         cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponRifleM41A
         - WeaponRifleM41A
         - WeaponRifleM41A
-      - name: Набор M4RA боевая винтовка (x2 M4RA)
+      - name: Набор винтовок M4R18 "Миротворец" (x3)
         cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponRifleM4RA
         - WeaponRifleM4RA
         - WeaponRifleM4RA
-      - name: Набор пистолетов 88 Mod 4 (x2 88M4)
+      - name: Набор пистолетов P288 Mode 4 (x3)
         cost: 2000
         crate: CrateSecgear
         entities:
         - WeaponPistol88M4
         - WeaponPistol88M4
         - WeaponPistol88M4
-        - WeaponPistol88M4
-        - WeaponPistol88M4
-        - WeaponPistol88M4
-      - name: Набор Armat M5Y3 (x2 M5Y3)
-        cost: 4000
+      - name: Набор пистолетов AR-23P "Armata" (x3)
+        cost: 2000
         crate: CrateSecgear
         entities:
         - WeaponPistolArmatM5Y3
         - WeaponPistolArmatM5Y3
         - WeaponPistolArmatM5Y3
-      - name: Набор дробовиков UA 571-C (x2 571-C)
+      - name: Набор дробовиков UA-571 "Освободитель" (x3)
         cost: 4000
         crate: CrateSecgear
         entities:
-        - WeaponShotgunUA571C
-        - WeaponShotgunUA571C
-        - WeaponShotgunUA571C
-      - name: Набор дробовиков K221(x2 571-C)
+        - WeaponShotgunLiberator
+        - WeaponShotgunLiberator
+        - WeaponShotgunLiberator
+      - name: Набор дробовиков SG-225SP "Каратель" (x3)
         cost: 4000
         crate: CrateSecgear
         entities:
-        - WeaponShotgunK221
-        - WeaponShotgunK221
-        - WeaponShotgunK221
-      - name: Набор ПП M39 (x2 571-C)
+        - WeaponShotgunPunisher
+        - WeaponShotgunPunisher
+        - WeaponShotgunPunisher
+      - name: Набор ПП M39CSS "Рыцарь" (x3)
         cost: 4000
         crate: CrateSecgear
         entities:
         - WeaponSubMachineGunM39
         - WeaponSubMachineGunM39
         - WeaponSubMachineGunM39
+      - name: Набор ПП SMP-98 "Сенатор" (х3)
+        cost: 4000
+        crate: CrateSecgear
+        entities:
+        - WeaponSubMachineGunMSG23W-Y
+        - WeaponSubMachineGunMSG23W-Y
+        - WeaponSubMachineGunMSG23W-Y
     - name: Боеприпасы
       entries:
-      - name: Ящик магазинов M41A(M41A магазин 10x)
+      - name: Ящик магазинов M4R18 (х10)
         cost: 3000
         crate: CrateSecgear
         entities:
@@ -380,7 +384,7 @@
         - MagazineRifleM41A
         - MagazineRifleM41A
         - MagazineRifleM41A
-      - name: Ящик магазинов M4RA magazine(M4RA магазин 10x)
+      - name: Ящик магазинов M4R18 (х10)
         cost: 3000
         crate: CrateSecgear
         entities:
@@ -394,7 +398,7 @@
         - MagazineRifleM4RA
         - MagazineRifleM4RA
         - MagazineRifleM4RA
-      - name: Ящик магазинов l88M4(l88M4 магазин 10x)
+      - name: Ящик магазинов P288 (х10)
         cost: 3000
         crate: CrateSecgear
         entities:
@@ -408,7 +412,7 @@
         - MagazinePistol88M4
         - MagazinePistol88M4
         - MagazinePistol88M4
-      - name: Ящик магазинов M5Y3(M5Y3 магазин 10x)
+      - name: Ящик магазинов AR-23P (x10)
         cost: 3000
         crate: CrateSecgear
         entities:
@@ -422,7 +426,7 @@
         - MagazinePistolAramatM5Y3
         - MagazinePistolAramatM5Y3
         - MagazinePistolAramatM5Y3
-      - name: Ящик магазинов M39(M39 магазин 10x)
+      - name: Ящик магазинов M39CSS (x10)
         cost: 3000
         crate: CrateSecgear
         entities:
@@ -436,20 +440,34 @@
         - MagazineRifleM39
         - MagazineRifleM39
         - MagazineRifleM39
-      - name: Ящик дроби(Коробка дроби 10x)
+      - name: Ящик магазинов SMP-98 (x10)
         cost: 3000
         crate: CrateSecgear
         entities:
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
-        - BoxShotgunSlug
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+        - MagazineSmgMSG23W-Y
+      - name: Ящик магазинов UA-571 (x10)
+        cost: 3000
+        crate: CrateSecgear
+        entities:
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
+        - MagazineShotgunLiberator
   - type: CargoSellBlacklist
 
 - type: entity

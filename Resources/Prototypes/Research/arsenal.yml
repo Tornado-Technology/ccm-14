@@ -55,39 +55,44 @@
   - MagazineRifleM41A
   - MagazineRifleM4RA
   - MagazineRifleM39
-  - Magazine10x24mm
-  - Magazine9mm
-  - MagazinePP
-
-- type: technology
-  id: SmallMunitions
-  name: research-technology-small-munitions
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi
-    state: base
-  discipline: Arsenal
-  tier: 1
-  cost: 1750
-  recipeUnlocks:
+  - MagazineSmgMSG23W-Y
+  - MagazineShotgunLiberator
   - MagazinePistolAramatM5Y3
   - MagazinePistol88M4
+  #- Magazine10x24mm
+  #- Magazine9mm
+  #- MagazinePP
 
-- type: technology
-  id: SpeedLoading
-  name: research-technology-speed-loading
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
-    state: base
-  discipline: Arsenal
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - SpeedLoaderMagnum
-  - SpeedLoaderMagnumVP-60x2
-  - SpeedLoaderLightRifle
-  - SpeedLoaderMosin
-  - SpeedLoader9mm
-  - SpeedLoaderMagnum357
+#- type: technology # Перенес исследования пистолетных патрон в регулярное вооружение.
+  #id: SmallMunitions
+  #name: research-technology-small-munitions
+  #icon:
+  #  sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi
+  #  state: base
+  #discipline: Arsenal
+  #tier: 1
+  #cost: 1750
+  #recipeUnlocks:
+  #- MagazinePistolAramatM5Y3
+  #- MagazinePistol88M4
+
+
+#- type: technology
+#  id: SpeedLoading
+#  name: research-technology-speed-loading
+#  icon:
+#    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+#    state: base
+#  discipline: Arsenal
+#  tier: 1
+#  cost: 1000
+#  recipeUnlocks:
+#  - SpeedLoaderMagnum
+#  - SpeedLoaderMagnumVP-60x2
+#  - SpeedLoaderLightRifle
+#  - SpeedLoaderMosin
+#  - SpeedLoader9mm
+#  - SpeedLoaderMagnum357
 
 - type: technology
   id: BoxMunitions
@@ -99,11 +104,16 @@
   tier: 1
   cost: 1725
   recipeUnlocks:
-  - Box10x24mm
-  - Magazine10x26mm
-  - MagazineBoxMagnum
-  - Box9mm
-  - MagazineBox357
+  - Box1024mmCM
+  - Box12560RmmCM
+  - Box450_BrushmasterCM
+  - Box458_SocomCM
+  - BoxShellPunisher
+  - BoxShellLiberator
+  #- Magazine10x26mm
+  #- MagazineBoxMagnum
+  #- Box9mm
+  #- MagazineBox357
 
 - type: technology
   id: ExplosiveDevices
@@ -118,25 +128,25 @@
   - ExGrenade
   - C4
 
-- type: technology
-  id: UraniumMunitions
-  name: research-technology-uranium-munitions
-  icon:
-    sprite: Objects/Materials/Sheets/other.rsi
-    state: uranium
-  discipline: Arsenal
-  tier: 1
-  cost: 2225
-  recipeUnlocks:
-  - ShellShotgunUranium
-  - CartridgePistolUranium
-  - CartridgeMagnumUranium
-  - CartridgeLightRifleUranium
-  - CartridgeRifleUranium
-  - MagazineBoxPistolUranium
-  - MagazineBoxMagnumUranium
-  - MagazineBoxLightRifleUranium
-  - MagazineBoxRifleUranium
+#- type: technology
+#  id: UraniumMunitions
+#  name: research-technology-uranium-munitions
+#  icon:
+#    sprite: Objects/Materials/Sheets/other.rsi
+#    state: uranium
+#  discipline: Arsenal
+#  tier: 1
+#  cost: 2225
+#  recipeUnlocks:
+#  - ShellShotgunUranium
+#  - CartridgePistolUranium
+#  - CartridgeMagnumUranium
+#  - CartridgeLightRifleUranium
+#  - CartridgeRifleUranium
+#  - MagazineBoxPistolUranium
+#  - MagazineBoxMagnumUranium
+#  - MagazineBoxLightRifleUranium
+#  - MagazineBoxRifleUranium
 
 - type: technology
   id: MechWeaponHades
@@ -217,6 +227,8 @@
   - BoxAntimaterialCM
   - MagazineLightRifleBox
   - BoxShotgunLMG
+  - GrenadeBlastMarine
+  - GrenadeFragMarine
 #  - ClothingEyesGlassesSecurity
 #  - Truncheon
 #  - TelescopicShield

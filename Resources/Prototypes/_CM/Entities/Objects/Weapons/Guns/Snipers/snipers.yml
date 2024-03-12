@@ -7,6 +7,10 @@
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/xm43e1.rsi
   - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
     sprite: _CM/Objects/Weapons/Guns/Snipers/xm43e1.rsi
   - type: Wieldable
   - type: GunWieldBonus
