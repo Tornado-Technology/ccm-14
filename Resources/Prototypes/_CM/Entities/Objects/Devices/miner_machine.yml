@@ -102,38 +102,16 @@
   parent: MinerMachine
   name: Ультра майнер
   description: Добывает редкие ископаемые и приносит много денег.
-    components:
-    - type: CMMiner
-      balanceGeneration: 500
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 2000
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 150
-          behaviors:
-            - !type:PlaySoundBehavior
-              sound:
-                path: /Audio/Effects/metal_slam1.ogg
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                UltraMinerMachineBroken:
-                  min: 1
-                  max: 1
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
+  components:
+  - type: CMMiner
+    balanceGeneration: 500
 
 - type: entity
   id: UltraMinerMachineBroken
   parent: MinerMachineBroken
   name: Сломанный ультра майнер
   components:
-    - type: NavMapBeacon
-      color: "#ff0000"
-      text: Сломаный ультра майнер
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: Сломаный ультра майнер
     
