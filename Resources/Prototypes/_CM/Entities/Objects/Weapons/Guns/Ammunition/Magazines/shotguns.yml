@@ -75,7 +75,7 @@
     whitelist:
       tags:
         - ShellLiberator
-    capacity: 8
+    capacity: 5
   - type: MagazineVisuals
     steps: 1
     zeroVisible: true
