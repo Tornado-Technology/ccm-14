@@ -7,3 +7,4 @@ ent-MagazineAntiMaterialXM42BAP = магазин XM42B (10x99 anti-materiel armo
     .desc = { ent-BaseMagazineAntiMaterialXM42B.desc }
 ent-MagazineAntiMaterialXM42BUranium = магазин XM42B (10x99 anti-materiel uranium)
     .desc = { ent-BaseMagazineAntiMaterialXM42B.desc }
+ent-BoxAntimaterialCM = коробка патрон 10x99 anti-material

@@ -1,0 +1,31 @@
+- type: entity
+  name: SG255SPPunisher
+  parent: BaseWeaponShotgunCM
+  id: WeaponShotgunPunisher
+  components:
+  - type: Sprite
+    sprite: _CM/TGMSArsenal/Textures/benellim4.rsi
+  - type: Clothing
+    sprite: _CM/TGMSArsenal/Textures/benellim4.rsi
+  - type: Item
+    sprite: _CM/TGMSArsenal/Textures/benellim4.rsi
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: Gun
+    minAngle: 10
+    maxAngle: 20
+    fireRate: 1
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ShellPunisher
+    capacity: 5
+    proto: ShellPunisher
+
+

@@ -1,0 +1,27 @@
+﻿- type: sponsorTier
+  id: Facehugger
+  name: Лицехват
+  ghostTheme: Facehugger
+
+- type: sponsorTier
+  id: Pretor
+  name: Преторианец
+  ghostTheme: Pretor
+  extraCharSlots: 5
+  oocColor: "#0074BA"
+
+- type: sponsorTier
+  id: Runi
+  name: Руни
+  priorityJoin: true
+  extraCharSlots: 5
+  oocColor: "#F8312F"
+  ghostTheme: Runi
+
+- type: sponsorTier
+  id: Queen
+  name: Королева
+  priorityJoin: true
+  extraCharSlots: 5
+  oocColor: "#561d86"
+  ghostTheme: Queen

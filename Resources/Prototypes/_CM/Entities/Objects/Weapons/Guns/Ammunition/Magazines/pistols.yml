@@ -1,57 +1,27 @@
 - type: entity
-  id: BaseMagazinePistol88M4
+  id: MagazinePistol88M4
   name: "88M4 magazine (45GAP)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
       - MagazinePistol88M4
-  - type: Item
-    size: Normal
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgePistol45GAP
     whitelist:
       tags:
         - CartridgePistol45GAP
-    capacity: 10
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+    capacity: 16
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
+
 - type: Tag
   id: CartridgePistol45GAP
-  
-- type: entity
-  id: MagazinePistol88M4
-  name: "88M4 magazine (45GAP)"
-  parent: BaseMagazinePistol88M4
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistol45GAP
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: BaseMagazinePistolAramatM5Y3
+  id: MagazinePistolAramatM5Y3
   name: "Aramat M5Y3 magazine (44.40)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
@@ -59,68 +29,42 @@
   - type: Item
     size: Normal
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgePistol4440
     whitelist:
       tags:
         - CartridgePistol4440
-    capacity: 7
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+    capacity: 8
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-  
+
 - type: Tag
   id: CartridgePistol4440
-  
+
 - type: entity
-  id: MagazinePistolAramatM5Y3
-  name: "Aramat M5Y3 magazine (44.40)"
-  parent: BaseMagazinePistolAramatM5Y3
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistol4440
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-      
-- type: entity
-  parent: BaseBox9mm
   id: Box45GAP
+  parent: BaseBoxCM
   name: Box (45GAP)
   components:
   - type: BallisticAmmoProvider
+    capacity: 50
+    whitelist:
+      tags:
+        - CartridgePistol45GAP
     proto: CartridgePistol45GAP
   - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-      
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+
 - type: entity
-  parent: BaseBox9mm
+  parent: BaseBoxCM
   id: Box44_40
   name: Box (44.40)
   components:
   - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgePistol4440
+    capacity: 50
     proto: CartridgePistol4440
   - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+

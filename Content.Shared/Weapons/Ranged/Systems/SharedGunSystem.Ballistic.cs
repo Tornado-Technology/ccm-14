@@ -9,6 +9,8 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
 
+using Content.Shared.Wieldable.Components;
+
 namespace Content.Shared.Weapons.Ranged.Systems;
 
 public abstract partial class SharedGunSystem
@@ -179,6 +181,9 @@ public abstract partial class SharedGunSystem
     private void ManualCycle(EntityUid uid, BallisticAmmoProviderComponent component, MapCoordinates coordinates, EntityUid? user = null, GunComponent? gunComp = null)
     {
         if (!component.Cycleable)
+            return;
+
+        if (HasComp<WieldableComponent>(uid))
             return;
 
         // Reset shotting for cycling

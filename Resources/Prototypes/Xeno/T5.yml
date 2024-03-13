@@ -47,6 +47,14 @@
       thresholds:
         0: Alive
         5000: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 5200
+        behaviors:
+        - !type:GibBehavior { }
     - type: MeleeWeapon
       hidden: true
       damage:

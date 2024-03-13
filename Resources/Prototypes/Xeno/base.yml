@@ -110,7 +110,6 @@
       - Stutter
       - Electrocution
       - ForcedSleep
-    - type: Buckle
     - type: StandingState
     - type: Butcherable
       butcheringType: Knife

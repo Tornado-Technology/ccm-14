@@ -8,6 +8,8 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Containers;
 
+using Content.Shared.Wieldable.Components;
+
 namespace Content.Shared.Weapons.Ranged.Systems;
 
 public abstract partial class SharedGunSystem
@@ -98,19 +100,19 @@ public abstract partial class SharedGunSystem
             ToggleBolt(uid, component, user);
             return;
         }
-
-        if (TryTakeChamberEntity(uid, out var chamberEnt))
-        {
-            if (_netManager.IsServer)
+        if(!HasComp<WieldableComponent>(uid))
+            if (TryTakeChamberEntity(uid, out var chamberEnt))
             {
-                EjectCartridge(chamberEnt.Value);
+                if (_netManager.IsServer)
+                {
+                    EjectCartridge(chamberEnt.Value);
+                }
+                else
+                {
+                    // Similar to below just due to prediction.
+                    TransformSystem.DetachParentToNull(chamberEnt.Value, Transform(chamberEnt.Value));
+                }
             }
-            else
-            {
-                // Similar to below just due to prediction.
-                TransformSystem.DetachParentToNull(chamberEnt.Value, Transform(chamberEnt.Value));
-            }
-        }
 
         CycleCartridge(uid, component, user);
 

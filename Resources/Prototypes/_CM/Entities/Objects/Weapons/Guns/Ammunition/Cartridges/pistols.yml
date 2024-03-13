@@ -1,59 +1,26 @@
 - type: entity
-  id: BaseCartridgePistol45GAP
+  id: CartridgePistol45GAP
   name: cartridge (45GAP)22
-  parent: BaseCartridge
-  abstract: true
+  parent: BaseCartridgeCM
   components:
   - type: Tag
     tags:
       - CartridgePistol45GAP
   - type: CartridgeAmmo
     proto: BulletPistol45GAP
-    deleteOnSpawn: true
-  - type: Appearance
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige357.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
 
 - type: entity
-  id: CartridgePistol45GAP
-  name: cartridge (45GAP)
-  parent: BaseCartridgePistol45GAP
-  components:
-  - type: CartridgeAmmo
-    proto: BulletPistol45GAP
-
-- type: entity
-  id: BaseCartridgePistol4440
+  id: CartridgePistol4440
   name: cartridge (44.40)22
-  parent: BaseCartridge
-  abstract: true
+  parent: BaseCartridgeCM
   components:
   - type: Tag
     tags:
       - CartridgePistol4440
   - type: CartridgeAmmo
     proto: BulletPistol4440
-    deleteOnSpawn: true
-  - type: Appearance
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige9mm.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
 
-- type: entity
-  id: CartridgePistol4440
-  name: cartridge (44.40)
-  parent: BaseCartridgePistol4440
-  components:
-  - type: CartridgeAmmo
-    proto: BulletPistol4440

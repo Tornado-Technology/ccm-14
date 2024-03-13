@@ -1,8 +1,7 @@
 - type: entity
-  id: BaseMagazineRifleM39
+  id: MagazineRifleM39
   name: "M39 magazine (450 Brushmaster)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
@@ -10,125 +9,76 @@
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgeSmg450Brushmaster
     whitelist:
       tags:
         - CartridgeSmg450Brushmaster
-    capacity: 35
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+    capacity: 40
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/m39.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
-    magState: mag
     steps: 2
-    zeroVisible: false
-  - type: Appearance
 
 - type: Tag
   id: CartridgeSmg450Brushmaster
 
 - type: entity
-  id: MagazineRifleM39
-  name: "M39 magazine (450 Brushmaster)"
-  parent: BaseMagazineRifleM39
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeSmg450Brushmaster
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: BaseMagazineSmgMSG23W-Y
+  id: MagazineSmgMSG23W-Y
   name: "MSG 23 W-Y magazine (458 Socom)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
       - MagazineSmgMSG23W-Y
-  - type: Item
-    size: Normal
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgeSmg458Socom
     whitelist:
       tags:
         - CartridgeSmg458Socom
-    capacity: 50
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+    capacity: 60
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/m39.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
-    magState: mag
     steps: 2
-    zeroVisible: false
-  - type: Appearance
 
 - type: Tag
   id: CartridgeSmg458Socom
 
-- type: entity
-  id: MagazineSmgMSG23W-Y
-  name: "MSG 23 W-Y magazine (458 Socom)"
-  parent: BaseMagazineSmgMSG23W-Y
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeSmg458Socom
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
 
 # Boxes
 - type: entity
-  parent: BaseBox10x24mmCM
+  parent: BaseBoxCM
   id: Box450_BrushmasterCM
   name: Box (450 Brushmaster)
   components:
   - type: BallisticAmmoProvider
-    capacity: 150
+    capacity: 200
     proto: CartridgeSmg450Brushmaster
   - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
+    - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: magb
     steps: 2
     zeroVisible: false
-  - type: Appearance
 
 - type: entity
-  parent: BaseBox10x24mmCM
+  parent: BaseBoxCM
   id: Box458_SocomCM
   name: Box (458 Socom)
   components:
   - type: BallisticAmmoProvider
-    capacity: 150
+    whitelist:
+      tags:
+        - CartridgeSmg458Socom
+    capacity: 200
     proto: CartridgeSmg458Socom
   - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
@@ -138,4 +88,3 @@
     magState: magb
     steps: 2
     zeroVisible: false
-  - type: Appearance

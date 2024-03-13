@@ -101,6 +101,7 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    count: 4
     proto: FenixBullet
     deleteOnSpawn: true
 
@@ -137,7 +138,7 @@
   suffix: "Marines Gear"
   components:
   - type: BallisticAmmoProvider
-    capacity: 6
+    capacity: 4
     proto: ShellLMG
   - type: Sprite
     layers:

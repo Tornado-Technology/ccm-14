@@ -19,12 +19,13 @@ public sealed class XenoEvolutionSystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
 
     private readonly Dictionary<int, int> _tiers = new();
+
     private readonly Dictionary<int, int> _tierLimit = new()
     {
         { 0, -1 },
         { 1, -1 },
         { 2, 10 },
-        { 3,  5 },
+        { 3, 5 },
         { 4, -1 },
         { 5, -1 },
     };
@@ -46,8 +47,9 @@ public sealed class XenoEvolutionSystem : EntitySystem
 
         _tiers.Clear();
 
-        var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, MobStateComponent, XenoTierComponent>();
-        while (query.MoveNext(out var uid, out var xeno, out var evol, out var state,  out var tiers))
+        var query =
+            EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, MobStateComponent, XenoTierComponent>();
+        while (query.MoveNext(out var uid, out var xeno, out var evol, out var state, out var tiers))
         {
             evol.EvolutionModifer = XenoEvolutionsComponent.BaseEvolutionModifer;
             if (xeno.OnResting)
@@ -96,7 +98,10 @@ public sealed class XenoEvolutionSystem : EntitySystem
 
     private void OnEvolve(Entity<XenoEvolutionsComponent> ent, ref EvolveMessage args)
     {
-        PolymorphEntity(ent, args.Evolution.Prototype);
+        if (ent.Comp.Evolutions.TryGetValue(args.Evolution, out var value))
+        {
+            PolymorphEntity(ent, args.Evolution.Prototype);
+        }
     }
 
     private EntityUid? PolymorphEntity(EntityUid uid, string proto)
@@ -136,7 +141,8 @@ public sealed class XenoEvolutionSystem : EntitySystem
         var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, UserInterfaceComponent>();
         while (query.MoveNext(out var uid, out var _, out var evolution, out var uiComp))
         {
-            var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer, evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);
+            var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer,
+                evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);
             _ui.TrySetUiState(uid, XenoEvolutionUiKey.Key, state, ui: uiComp);
         }
     }

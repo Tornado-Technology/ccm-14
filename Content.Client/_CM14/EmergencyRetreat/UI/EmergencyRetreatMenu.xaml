@@ -1,0 +1,17 @@
+﻿<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'emergency-retreat-window-title'}" MinSize="120 160">
+    <BoxContainer Orientation="Vertical">
+        <Label Name="WarningNoShuttle" Text="{Loc 'emergency-retreat-window-label-no-shuttle'}" Visible="False"/>
+        <GridContainer Margin="0 8 8" Columns="2">
+            <Label Text="{Loc 'emergency-retreat-window-label-state'}" StyleClasses="StatusFieldTitle"/>
+            <Label Name="State"/>
+        </GridContainer>
+        <ProgressBar Name="Progress"
+                     HorizontalExpand="True"
+                     MinValue="0"
+                     MaxValue="1"
+                     SetHeight="12"
+                     Margin="0 24 8"/>
+        <Button Name="Activate" Text="{Loc 'emergency-retreat-window-button-activate'}" StyleClasses="OpenRight" Access="Public"/>
+    </BoxContainer>
+</DefaultWindow>

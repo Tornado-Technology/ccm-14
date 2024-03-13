@@ -12,7 +12,7 @@
         southRotation: true
       steps:
       - material: Steel
-        amount: 30
+        amount: 15
         doAfter: 10
 
   - node: nodeBarricadeMetalDoor

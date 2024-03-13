@@ -1,63 +1,90 @@
 - type: entity
-  id: BaseCartridgeShotGun24Gauge
+  id: CartridgeShotGun24Gauge
   name: cartridge (24 Gauge)22
-  parent: BaseCartridge
-  abstract: true
+  parent: BaseCartridgeCM
   components:
   - type: Tag
     tags:
       - CartridgeShotGun24Gauge
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: CartridgeAmmo
-    proto: BulletShotGun24Gauge
-    deleteOnSpawn: true
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
-
-- type: entity
-  id: CartridgeShotGun24Gauge
-  name: cartridge (24 Gauge)
-  parent: BaseCartridgeShotGun24Gauge
-  components:
   - type: CartridgeAmmo
     count: 10
     spread: 30
     proto: BulletShotGun24Gauge
 
 - type: entity
-  id: BaseCartridgeShotGun8Gauge
+  id: CartridgeShotGun8Gauge
   name: cartridge (8 Gauge)22
-  parent: BaseCartridge
-  abstract: true
+  parent: BaseCartridgeCM
   components:
   - type: Tag
     tags:
       - CartridgeShotGun8Gauge
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+  - type: CartridgeAmmo
+    proto: BulletShotGun8Gauge
+    count: 10
+    spread: 25
+
+
+- type: entity
+  id: ShellLiberator
+  name: shell (.50)
+  parent: BaseShellShotgun
+  components:
+  - type: Tag
+    tags:
+      - ShellLiberator
+  - type: Sprite
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: BulletShotGun8Gauge
-    deleteOnSpawn: true
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
+    proto: BulletLiberator
+    count: 5
+    spread: 25
 
 - type: entity
-  id: CartridgeShotGun8Gauge
-  name: cartridge (8 Gauge)
-  parent: BaseCartridgeShotGun8Gauge
+  id: ShellPunisher
+  name: shell (.50)
+  parent: BaseShellShotgun
   components:
+  - type: Tag
+    tags:
+      - ShellPunisher
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    count: 10
-    spread: 25
-    proto: BulletShotGun8Gauge
+    proto: BulletPunisher
+    count: 8
+    spread: 40
+
+- type: entity
+  id: ShellShotgunAFG-12
+  name: shell (.50)
+  parent: BaseShellShotgun
+  components:
+  - type: Tag
+    tags:
+      - ShellPunisher
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BulletEnforcer
+    count: 5
+    spread: 20
+
+- type: Tag
+  id: ShellLiberator
+
+- type: Tag
+  id: ShellPunisher
+
+- type: Tag
+  id: ShellShotgunAFG-12

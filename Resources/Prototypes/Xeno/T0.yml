@@ -152,6 +152,7 @@
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
   - type: Body
+  - type: StandingState
   - type: Xeno
   - type: MovementIgnoreGravity
   - type: GravityMovementSlow

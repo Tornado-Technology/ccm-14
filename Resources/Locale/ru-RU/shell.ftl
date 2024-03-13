@@ -55,3 +55,4 @@ shell-argument-map-id-invalid = Аргумент { $index } должен быт�
 shell-argument-number-invalid = Аргумент { $index } должен быть валидным числом!
 # Hints
 shell-argument-username-hint = <username>
+shell-argument-count-must-be-between = Количество аргументов должно быть числом от { $lower } до { $upper }!

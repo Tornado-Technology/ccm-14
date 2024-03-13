@@ -1,11 +1,9 @@
 - type: entity
   name: M41A pulse rifle MK2
-  parent: BaseWeaponRifle
+  parent: BaseWeaponRifleCM
   id: WeaponRifleM41A
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: true
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m41a.rsi
     layers:
@@ -15,66 +13,43 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Rifles/m41a.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-    - belt
-  - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5
     maxAngle: -7
   - type: Gun
     minAngle: 5
     maxAngle: 45
-    fireRate: 9
+    fireRate: 8
     angleIncrease: 3
     angleDecay: 16
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
-        name: Magazine
         startingItem: MagazineRifleM41A
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 1
         whitelist:
           tags:
             - MagazineRifleM41A
+      gun_chamber:
+        whitelist:
+          tags:
             - CartridgeRifle1024
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineAmmoProvider
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-  
 
 - type: entity
   name: M42 pulse rifle
-  parent: BaseWeaponRifle
+  parent: BaseWeaponRifleCM
   id: WeaponRifleM42
   description: The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Rifles/m42.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Rifles/m42.rsi
-  - type: Wieldable
   - type: GunWieldBonus
     minAngle: -3
     maxAngle: -3
@@ -84,84 +59,58 @@
     fireRate: 4
     angleIncrease: 3
     angleDecay: 16
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
-        name: Magazine
         startingItem: MagazineRifleM41A
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleM41A
+      gun_chamber:
         whitelist:
           tags:
             - BulletRifle1024
-            - MagazineRifleM41A
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineAmmoProvider
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+
 
 - type: entity
   name: M4RA battle rifle
-  parent: BaseWeaponRifle
+  parent: BaseWeaponRifleCM
   id: WeaponRifleM4RA
   description: The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.
   components:
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi
-  - type: Wieldable
   - type: GunWieldBonus
     minAngle: -5
     maxAngle: -10
   - type: Gun
+    selectedMode: SemiAuto # Особенность - полуавтоматический
+    availableModes:
+      - SemiAuto
     minAngle: 5
     maxAngle: 20
-    fireRate: 6
+    fireRate: 5.5
     angleIncrease: 3
     angleDecay: 16
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+      path: /Audio/_CM/Weapons/M4R18shot.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
-        name: Magazine
         startingItem: MagazineRifleM4RA
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
         whitelist:
           tags:
             - MagazineRifleM4RA
+      gun_chamber:
+        whitelist:
+          tags:
             - CartridgeRifle125x60R
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineAmmoProvider
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
 
