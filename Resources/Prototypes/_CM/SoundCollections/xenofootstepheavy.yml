@@ -1,0 +1,6 @@
+- type: soundCollection
+  id: XenoFootstepHeavy
+  files:
+  - /Audio/_CM14/XenoSounds/XenoFootstepHeavy/alien_footstep_large1.ogg
+  - /Audio/_CM14/XenoSounds/XenoFootstepHeavy/alien_footstep_large2.ogg
+  - /Audio/_CM14/XenoSounds/XenoFootstepHeavy/alien_footstep_large3.ogg

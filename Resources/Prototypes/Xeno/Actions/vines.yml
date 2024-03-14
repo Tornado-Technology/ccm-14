@@ -6,8 +6,8 @@
   components:
     - type: InstantAction
       useDelay: 20
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: QuinnBreath
       icon:
         sprite: Actions/xeno.rsi
         state: vines

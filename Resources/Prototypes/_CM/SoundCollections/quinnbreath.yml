@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: QuinnBreath
+  files:
+  - /Audio/_CM14/XenoSounds/QuinnActions/alien_queen_breath1.ogg
+  - /Audio/_CM14/XenoSounds/QuinnActions/alien_queen_breath2.ogg
