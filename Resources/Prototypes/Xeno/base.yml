@@ -103,7 +103,7 @@
     - type: Perishable # Ummmm the acid kills a lot of the bacteria or something
       molsPerSecondPerUnitMass: 0.0005
     - type: Speech
-      speechSounds: XenoSpeech
+      speechVerb: LargeMob
     - type: StatusEffects
       allowed:
       - SlowedDown
@@ -167,8 +167,6 @@
       priority: 2
       lightningExplode: false
 
-
-
 - type: entity
   id: ActionXenoAcid
   name: Corrosive Acid
@@ -227,9 +225,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepMedium
 
 - type: entity
   abstract: true
@@ -248,9 +243,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepMedium
 
 - type: entity
   abstract: true
@@ -269,9 +261,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepMedium
 
 - type: entity
   abstract: true
@@ -290,9 +279,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepHeavy
 
 - type: entity
   abstract: true
@@ -311,6 +297,3 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepHeavy
