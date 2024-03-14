@@ -9,6 +9,9 @@
     sprite: _CM/TGMSArsenal/Textures/benellim4.rsi
   - type: Item
     sprite: _CM/TGMSArsenal/Textures/benellim4.rsi
+    size: Huge
+    shape:
+    - 0,0,5,1
   - type: GunWieldBonus
     minAngle: -5
     maxAngle: -5

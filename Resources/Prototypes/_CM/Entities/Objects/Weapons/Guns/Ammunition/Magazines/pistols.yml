@@ -28,8 +28,7 @@
   - type: Tag
     tags:
       - MagazinePistolAramatM5Y3
-  - type: Item
-    size: Normal
+
   - type: BallisticAmmoProvider
     proto: CartridgePistol4440
     whitelist:

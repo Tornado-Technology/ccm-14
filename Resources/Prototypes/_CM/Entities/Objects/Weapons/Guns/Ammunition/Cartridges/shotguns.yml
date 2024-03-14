@@ -70,7 +70,7 @@
   components:
   - type: Tag
     tags:
-      - ShellPunisher
+      - ShellShotgunAFG-12
   - type: Sprite
     layers:
       - state: base
