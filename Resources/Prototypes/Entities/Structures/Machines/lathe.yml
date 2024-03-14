@@ -661,101 +661,101 @@
     idleState: icon
     runningState: icon
     staticRecipes:
-      - ClothingEyesHudSecurity
+      #- ClothingEyesHudSecurity
       - Flash
       - Handcuffs
       - Zipties
       - Stunbaton
-      - ForensicPad
+      #- ForensicPad
       - RiotShield
-      - ShellShotgun
-      - ShellShotgunSlug
-      - ShellShotgunFlare
-      - ShellTranquilizer
-      - MagazinePistol
-      - MagazinePistolSubMachineGun
-      - MagazinePistolSubMachineGunTopMounted
-      - MagazineRifle
-      - MagazineLightRifle
-      - MagazineBoxPistol
-      - MagazineBoxMagnum
-      - MagazineBoxRifle
-      - MagazineBoxLightRifle
-      - SpeedLoaderMagnum
-      - TargetHuman
-      - TargetSyndicate
-      - TargetClown
-      - MagazineBoxLightRiflePractice
-      - MagazineBoxMagnumPractice
-      - MagazineBoxPistolPractice
-      - MagazineBoxRiflePractice
-      - ShellShotgunPractice
+      #- ShellShotgun
+      #- ShellShotgunSlug
+      #- ShellShotgunFlare
+      #- ShellTranquilizer
+      #- MagazinePistol
+      #- MagazinePistolSubMachineGun
+      #- MagazinePistolSubMachineGunTopMounted
+      #- MagazineRifle
+      #- MagazineLightRifle
+      #- MagazineBoxPistol
+      #- MagazineBoxMagnum
+      #- MagazineBoxRifle
+      #- MagazineBoxLightRifle
+      #- SpeedLoaderMagnum
+      #- TargetHuman
+      #- TargetSyndicate
+      #- TargetClown
+      #- MagazineBoxLightRiflePractice
+      #- MagazineBoxMagnumPractice
+      #- MagazineBoxPistolPractice
+      #- MagazineBoxRiflePractice
+      #- ShellShotgunPractice
       - WeaponLaserCarbinePractice
       - WeaponDisablerPractice
     dynamicRecipes:
-      - MagazineRifleM41A
-      - MagazineRifleM4RA
-      - MagazinePistolAramatM5Y3
-      - MagazinePistol88M4
-      - MagazineRifleM39
-      - Magazine10x24mm
-      - SpeedLoaderMagnum
-      - SpeedLoaderMagnumVP-60x2
-      - SpeedLoaderLightRifle
-      - SpeedLoaderMosin
-      - SpeedLoader9mm
-      - SpeedLoaderMagnum357
-      - Magazine9mm
-      - MagazinePP
-      - Box10x24mm
-      - Magazine10x26mm
-      - MagazineBoxMagnum
-      - Box9mm
-      - MagazineBox357
+      #- MagazineRifleM41A
+      #- MagazineRifleM4RA
+      #- MagazinePistolAramatM5Y3
+      #- MagazinePistol88M4
+      #- MagazineRifleM39
+      #- Magazine10x24mm
+      #- SpeedLoaderMagnum
+      #- SpeedLoaderMagnumVP-60x2
+      #- SpeedLoaderLightRifle
+      #- SpeedLoaderMosin
+      #- SpeedLoader9mm
+      #- SpeedLoaderMagnum357
+      #- Magazine9mm
+      #- MagazinePP
+      #- Box1024mmCM
+      #- Magazine10x26mm
+      #- MagazineBoxMagnum
+      #- Box9mm
+      #- MagazineBox357
       - ExGrenade
       - C4
       - MarineCASFlareBomb
       - MarineCASClusterBomb
-      - MagazineShotgunAFG-12
-      - FuelTankFlamethrower
-      - BoxAntimaterialCM
-      - MagazineLightRifleBox
+      #- MagazineShotgunAFG-12
+      #- FuelTankFlamethrower
+      #- BoxAntimaterialCM
+      #- MagazineLightRifleBox
       - WeaponLaserCarbine
       - WeaponLaserCannon
-      - CartridgeLightRifleIncendiary
-      - CartridgeMagnumIncendiary
-      - CartridgePistolIncendiary
-      - CartridgeRifleIncendiary
-      - CartridgeLightRifleUranium
-      - CartridgeMagnumUranium
-      - CartridgePistolUranium
-      - CartridgeRifleUranium
-      - CartridgeLightRifleRubber
-      - CartridgeMagnumRubber
-      - CartridgePistolRubber
-      - CartridgeRifleRubber
-      - ClothingEyesGlassesSecurity
+      #- CartridgeLightRifleIncendiary
+      #- CartridgeMagnumIncendiary
+      #- CartridgePistolIncendiary
+      #- CartridgeRifleIncendiary
+      #- CartridgeLightRifleUranium
+      #- CartridgeMagnumUranium
+      #- CartridgePistolUranium
+      #- CartridgeRifleUranium
+      #- CartridgeLightRifleRubber
+      #- CartridgeMagnumRubber
+      #- CartridgePistolRubber
+      #- CartridgeRifleRubber
+      #- ClothingEyesGlassesSecurity
       - ExplosivePayload
       - FlashPayload
       - HoloprojectorSecurity
-      - MagazineBoxLightRifleIncendiary
-      - MagazineBoxMagnumIncendiary
-      - MagazineBoxPistolIncendiary
-      - MagazineBoxRifleIncendiary
-      - MagazineBoxLightRifleUranium
-      - MagazineBoxMagnumUranium
-      - MagazineBoxPistolUranium
-      - MagazineBoxRifleUranium
-      - MagazineBoxLightRifleRubber
-      - MagazineBoxMagnumRubber
-      - MagazineBoxPistolRubber
-      - MagazineBoxRifleRubber
-      - MagazineGrenadeEmpty
+      #- MagazineBoxLightRifleIncendiary
+      #- MagazineBoxMagnumIncendiary
+      #- MagazineBoxPistolIncendiary
+      #- MagazineBoxRifleIncendiary
+      #- MagazineBoxLightRifleUranium
+      #- MagazineBoxMagnumUranium
+      #- MagazineBoxPistolUranium
+      #- MagazineBoxRifleUranium
+      #- MagazineBoxLightRifleRubber
+      #- MagazineBoxMagnumRubber
+      #- MagazineBoxPistolRubber
+      #- MagazineBoxRifleRubber
+      #- MagazineGrenadeEmpty
       - GrenadeEMP
       - GrenadeFlash
-      - ShellShotgunBeanbag
-      - ShellShotgunIncendiary
-      - ShellShotgunUranium
+      #- ShellShotgunBeanbag
+      #- ShellShotgunIncendiary
+      #- ShellShotgunUranium
       - Signaller
       - SignalTrigger
       - TelescopicShield
@@ -807,42 +807,39 @@
       idleState: icon
       runningState: icon
       dynamicRecipes:
-        - MagazineRifleM41A
-        - MagazineRifleM4RA
-        - MagazinePistolAramatM5Y3
-        - MagazinePistol88M4
-        - MagazineRifleM39
-        - Magazine10x24mm
         - SpeedLoaderMagnum
         - SpeedLoaderMagnumVP-60x2
         - SpeedLoaderLightRifle
         - SpeedLoaderMosin
         - SpeedLoader9mm
         - SpeedLoaderMagnum357
-        - Magazine9mm
-        - MagazinePP
-        - Box10x24mm
-        - Magazine10x26mm
-      staticRecipes:
-        - CartridgePistol
-        - CartridgeMagnum
-        - ShellShotgun
-        - ShellShotgunSlug
-        - ShellShotgunFlare
-        - ShellTranquilizer
-        - CartridgeLightRifle
-        - CartridgeRifle
-        - MagazineBoxPistol
-        - MagazineBoxMagnum
-        - Box9mm
-        - MagazineBox357
-        - ExGrenade
-        - C4
-        - MagazineShotgunAFG-12
-        - FuelTankFlamethrower
+        #- Magazine9mm #Магазин от VP-70. Оно есть но пока не используется
+        #- MagazinePP
+        #- Magazine10x26mm
+        # Штатная аммуниция морпехов
+        - MagazineShotgunLiberator
+        - MagazineRifleM41A
+        - MagazineRifleM4RA
+        - MagazinePistolAramatM5Y3
+        - MagazinePistol88M4
+        - MagazineRifleM39
+        - MagazineSmgMSG23W-Y
+        - Box1024mmCM
+        - Box12560RmmCM
+        - Box450_BrushmasterCM
+        - Box458_SocomCM
+        - BoxShellPunisher
+        - BoxShellLiberator
+        #- ExGrenade Теперь только в охранфабе
+        #- C4
+        # Аммуниция специалистов
+        - GrenadeFragMarine
+        - GrenadeBlastMarine
         - BoxAntimaterialCM
+        - MagazineShotgunAFG-12
+        - BoxShotgunLMG
+        - FuelTankFlamethrower
         - MagazineLightRifleBox
-        - WeaponLaserCarbine
     - type: MaterialStorage
       whitelist:
         tags:

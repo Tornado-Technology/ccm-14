@@ -9,8 +9,8 @@
       checkCanAccess: false
       useDelay: 30
       range: 0
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: AcidShoot
       icon:
         sprite: Actions/xeno.rsi
         state: neurotoxin_veil
@@ -29,8 +29,8 @@
       checkCanAccess: false
       useDelay: 5
       range: 0
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: AcidShoot
       icon:
         sprite: Actions/xeno.rsi
         state: toxin_spit
@@ -49,8 +49,8 @@
       checkCanAccess: false
       useDelay: 5
       range: 0
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: AcidShoot
       icon:
         sprite: Actions/xeno.rsi
         state: default_spit

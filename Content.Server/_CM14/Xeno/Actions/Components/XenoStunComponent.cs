@@ -19,5 +19,5 @@ public sealed partial class XenoStunComponent : Component
     public float StunTime = 4f;
 
     [DataField]
-    public float DistanceTolerance = 0.65f;
+    public float DistanceTolerance = 1f;
 }

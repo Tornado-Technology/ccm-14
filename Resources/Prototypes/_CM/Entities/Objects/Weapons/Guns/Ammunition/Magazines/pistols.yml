@@ -13,7 +13,9 @@
         - CartridgePistol45GAP
     capacity: 16
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi
+  - type: MagazineVisuals
+    steps: 5
 
 - type: Tag
   id: CartridgePistol45GAP
@@ -35,7 +37,9 @@
         - CartridgePistol4440
     capacity: 8
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
+  - type: MagazineVisuals
+    steps: 5
 
 - type: Tag
   id: CartridgePistol4440
@@ -67,4 +71,5 @@
     proto: CartridgePistol4440
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+
 

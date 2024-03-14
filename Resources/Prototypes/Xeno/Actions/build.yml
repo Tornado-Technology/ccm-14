@@ -7,8 +7,8 @@
   - type: WorldTargetAction
     range: 1.4
     useDelay: 0
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Effects/alien_roar1.ogg
+    sound: !type:SoundCollectionSpecifier
+      collection: QuinnBreath
       params:
         volume: 0.5
     icon:

@@ -11,7 +11,7 @@
     damage:
       types:
         Piercing: 20
-        
+
 - type: entity
   id: BaseCartridge10x24mm
   name: Cartridge (10x24мм)
@@ -45,7 +45,7 @@
   - type: CartridgeAmmo
     proto: Bullet10x24mm
     deleteOnSpawn: true
-    
+
 - type: entity
   id: BaseMagazine10x24mm
   name: "Magazine (10x24мм)"
@@ -94,51 +94,3 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-      
-- type: entity
-  abstract: true
-  parent: BaseItem
-  id: BaseBox10x24mm
-  suffix: "Marines Gear"
-  components:
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - CartridgeRifle
-    proto: Cartridge10x24mm
-    capacity: 60
-  - type: Item
-    size: Normal
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-# Boxes
-- type: entity
-  parent: BaseBox10x24mm
-  id: Box10x24mm
-  name: Box (10x24мм)
-  suffix: "Marines Gear"
-  components:
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: Cartridge10x24mm
-  - type: Sprite
-    layers:
-    - state: base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
