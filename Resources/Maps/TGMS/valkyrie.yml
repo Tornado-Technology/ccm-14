@@ -79,6 +79,8 @@ entities:
     - type: Transform
       pos: -0.734375,-0.7343749
       parent: 1
+    - type: BecomesStation
+      id: TGMS_Valkyrie
     - type: MarineMap
     - type: MapGrid
       chunks:
