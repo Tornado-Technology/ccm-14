@@ -86,6 +86,8 @@
         amount: 5
       - id: CMWelder
         amount: 1
+      - id: WeldingFuelCanisterFull
+        amount: 1
       - id: FlashlightLantern
         amount: 2
       - id: CMPouchToolsSocFill
