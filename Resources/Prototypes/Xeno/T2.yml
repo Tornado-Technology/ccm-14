@@ -42,7 +42,6 @@
       prototype: MobWarriorXeno
       timeUsage: 30
 
-
 - type: entity
   name: hivelord
   parent: MobXenoBaseT2
@@ -84,7 +83,6 @@
     - type: XenoDegradation
       prototype: MobDroneXeno
       timeUsage: 30
-
 
 - type: entity
   name: hunter
@@ -135,7 +133,6 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.95
-
 
 - type: entity
   name: spitter
