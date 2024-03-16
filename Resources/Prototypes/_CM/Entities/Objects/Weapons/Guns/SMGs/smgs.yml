@@ -14,6 +14,8 @@
     maxAngle: -5
   - type: Item
     size: Normal # Особенность - компактный
+    shape:
+    - 0,0,2,1
   - type: Gun
     minAngle: 10
     maxAngle: 20
@@ -37,6 +39,10 @@
   parent: BaseWeaponSMGCM
   id: WeaponSubMachineGunMSG23W-Y
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,3,2
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/SMGs/smg90.rsi
   - type: Clothing

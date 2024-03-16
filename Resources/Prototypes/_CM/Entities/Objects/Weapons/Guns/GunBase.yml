@@ -139,7 +139,7 @@
   description: It's a magazine-fed shotgun designed for close quarters combat. Uses .50 shotgun shells.
   components:
   - type: Item
-    size: Normal
+    size: Huge
   - type: Clothing
     quickEquip: false
     slots:
@@ -225,6 +225,9 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
     size: Small
   - type: Clothing
     quickEquip: false

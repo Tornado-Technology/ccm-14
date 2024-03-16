@@ -1,5 +1,5 @@
 - type: entity
-  parent: Clothing
+  parent: [Clothing, ContentsExplosionResistanceBase]
   id: ClothingBackpackSatchelMarine
   name: USCM satchel
   description: A heavy-duty satchel carried by some USCM soldiers and support personnel.
@@ -9,14 +9,21 @@
     state: icon
   - type: Item
     size: Large
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.92
+  - type: HeldSpeedModifier
   - type: Clothing
     quickEquip: false
     slots:
     - back
+  - type: ExplosionResistance
+    damageCoefficient: 0
   - type: Storage
+    quickInsert: true
     grid:
-    - 0,0,9,1 # TODO: Change this
-    maxItemSize: Normal
+    - 0,0,5,3
+    maxItemSize: Huge
     blacklist:
       tags:
       - Pouch

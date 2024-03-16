@@ -10,6 +10,9 @@
     sprite: _CM/Objects/Weapons/Guns/Shotguns/Liberator.rsi
   - type: Item
     sprite: _CM/Objects/Weapons/Guns/Shotguns/Liberator.rsi
+    size: Normal
+    shape:
+    - 0,0,3,2
   - type: Gun
     minAngle: 10
     maxAngle: 20

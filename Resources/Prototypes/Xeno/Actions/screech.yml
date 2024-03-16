@@ -6,8 +6,8 @@
   components:
     - type: InstantAction
       useDelay: 100
-      sound: !type:SoundCollectionSpecifier
-        collection: XenoScream
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: screech

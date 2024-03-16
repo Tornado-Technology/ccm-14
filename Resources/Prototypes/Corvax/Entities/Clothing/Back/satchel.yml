@@ -7,8 +7,11 @@
   - type: Sprite
     sprite: Corvax/Back/Satchels/military.rsi
   - type: Storage
+    quickInsert: true
     grid:
-    - 0,0,6,3 # TODO: Change this
+    - 0,2,1,5 # TODO: Change this
+    - 3,0,7,5 # TODO: Change this
+    - 9,2,10,5 # TODO: Change this
     maxItemSize: Huge
 
 - type: entity

@@ -16,6 +16,10 @@
   - type: GunWieldBonus
     minAngle: -5
     maxAngle: -7
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2
   - type: Gun
     minAngle: 5
     maxAngle: 45
@@ -89,6 +93,10 @@
   - type: GunWieldBonus
     minAngle: -5
     maxAngle: -10
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,5,1
   - type: Gun
     selectedMode: SemiAuto # Особенность - полуавтоматический
     availableModes:

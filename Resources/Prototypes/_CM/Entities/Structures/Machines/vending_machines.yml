@@ -208,12 +208,22 @@
       entries:
       - id: ClothingBackpackMarine
         amount: 2
+      - id: ClothingMilitaryBackpack
+        amount: 2
+      - id: ClothingBackpackMilitarySatchel
+        amount: 2
+      - id: ClothingBackpackMerc
+        amount: 2
       - id: ClothingBackpackSatchelMarine
-        amount: 4
+        amount: 2
+      - id: ClothingBackpackDuffelMilitary
+        amount: 2
+    - name: Ременно-плечевые системы
+      entries:
       - id: ClothingBeltMilitaryWebbing
         amount: 2
-      - id: BoxEmergencyMarine
-        amount: 10
+      - id: ClothingBeltMercWebbing
+        amount: 2
     - name: Маски
       entries:
       - id: ClothingMaskGasMarine
