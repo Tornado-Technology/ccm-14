@@ -137,6 +137,10 @@
   name: Box (Феникс)
   suffix: "Marines Gear"
   components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
   - type: BallisticAmmoProvider
     capacity: 4
     proto: ShellLMG
