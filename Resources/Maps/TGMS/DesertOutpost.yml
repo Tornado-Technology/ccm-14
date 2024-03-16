@@ -73,6 +73,9 @@ entities:
       rot: 0.01745329251994332 rad
       pos: -4.843811,0.23438263
       parent: 1
+    - type: ArrivalsSource
+    - type: BecomesStation
+      id: TGCM_Desert
     - type: XenoMap
     - type: MapGrid
       chunks:
