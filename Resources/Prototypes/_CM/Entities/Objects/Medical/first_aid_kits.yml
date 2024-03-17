@@ -196,7 +196,7 @@
       - id: CMDyloveneAutoInjector
       - id: PillCanisterDylovene
       - id: PillCanisterCharcoal
-      - id: SyringeEthylredoxrazines
+      - id: SyringeEthylredoxrazine
 #    - id: CMPainStopAutoInjector
 
 - type: entity
