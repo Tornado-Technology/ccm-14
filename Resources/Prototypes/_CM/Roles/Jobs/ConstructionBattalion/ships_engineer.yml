@@ -42,3 +42,4 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
     id: ShipsEngineerIDCard
+    pocket1: EmergencyMedipen

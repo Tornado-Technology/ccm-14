@@ -132,3 +132,5 @@ ent-SyringeRomerol = romerol syringe
     .desc = { ent-BaseSyringe.desc }
 ent-SyringeStimulants = stimulants syringe
     .desc = { ent-BaseSyringe.desc }
+ent-BoxBottleChem = коробка лекарств
+    .desc = коробка с базовыми лекарствами от всех типов урона.

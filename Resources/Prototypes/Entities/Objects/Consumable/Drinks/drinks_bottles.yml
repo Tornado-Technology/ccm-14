@@ -388,6 +388,8 @@
     currentLabel: vodka
   - type: Sprite
     sprite: Objects/Consumable/Drinks/vodkabottle.rsi
+  - type: Item
+    size: Small
 
 - type: entity
   parent: DrinkBottleGlassBaseFull

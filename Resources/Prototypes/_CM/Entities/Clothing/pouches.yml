@@ -352,7 +352,9 @@
       - CMBurnKit
       - CMTraumaKit
       - Gauze
+      - Syringe
       components:
+      - Healing
       - Hypospray
       - HealthAnalyzer
 
@@ -366,7 +368,7 @@
     sprite: _CM/Clothing/Pouches/socmed.rsi
   - type: Storage
     grid:
-    - 0,0,13,1 #13 slots
+    - 0,0,7,1 #13 slots
 
 - type: entity
   parent: CMPouchMedicalSoc

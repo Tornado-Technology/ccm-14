@@ -29,3 +29,4 @@
     outerClothing: ClothingOuterVestArmorSec # Corvax-Resprite
     id: PolicemanIDCard
     ears: ClothingHeadsetSecurity
+    pocket1: EmergencyMedipen

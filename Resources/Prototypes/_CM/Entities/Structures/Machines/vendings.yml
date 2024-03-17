@@ -134,6 +134,60 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
   - type: CMAutomatedVendor
     sections:
+    - name: Медицина
+      entries:
+      - id: CMOintment10
+        amount: 5
+      - id: CMGauze10
+        amount: 5
+      - id: CMBurnKit10
+        amount: 5
+      - id: CMTraumaKit10
+        amount: 5
+      - id: CMFirstAidKitFilled
+        amount: 5
+      - id: CMAdvFirstAidKitFilled
+        amount: 3
+      - id: CMToxinAidKitFilled
+        amount: 3
+      - id: CMBruteAidKitFilled
+        amount: 3
+      - id: CMBurnAidKitFilled
+        amount: 3
+      - id: CMFirstAidO2KitFilled
+        amount: 3
+      - id: CMRadAidKitFilled
+        amount: 3
+      - id: BoxBottleChem
+        amount: 1
+    - name: Утилиты
+      entries:
+      - id: BoxBodyBag
+        amount: 3
+      - id: BoxEmergencyMarine
+        amount: 3
+      - id: BoxBeaker
+        amount: 3
+      - id: BoxBottle
+        amount: 3
+      - id: CMSyringe
+        amount: 10
+      - id: MarineRollerBed
+        amount: 5
+      - id: PowerCellHigh
+        amount: 5
+      - id: CMHealthAnalyzer
+        amount: 5
+      - id: CMDefibrillator
+        amount: 2
+      - id: HandheldCrewMonitor
+        amount: 1
+      - id: CMHypospray
+        amount: 1
+      - id: ClothingBeltMilitaryWebbingMed
+        amount: 1
+      - id: CMPouchMedicalSoc
+        amount: 1
     - name: Вооружение
       entries:
       - id: WeaponRifleM4RA
@@ -164,60 +218,6 @@
         amount: 5
       - id: BoxShellPunisher
         amount: 1
-    - name: Медицина
-      entries:
-      - id: CMHealthAnalyzer
-        amount: 20
-      - id: CMDefibrillator
-        amount: 5
-      - id: CMOintment10
-        amount: 5
-      - id: CMGauze10
-        amount: 5
-      - id: CMBurnKit10
-        amount: 5
-      - id: CMTraumaKit10
-        amount: 5
-      - id: CMFirstAidKitFilled
-        amount: 10
-      - id: CMAdvFirstAidKitFilled
-        amount: 5
-      - id: MedkitToxinFilled
-        amount: 5
-      - id: MedkitBruteFilled
-        amount: 5
-      - id: CMBurnAidKitFilled
-        amount: 5
-      - id: CMFirstAidO2KitFilled
-        amount: 5
-    - name: Утилиты
-      entries:
-      - id: PowerCellMedium
-        amount: 10
-      - id: PowerCellHigh
-        amount: 1
-      - id: HandheldCrewMonitor
-        amount: 1
-      - id: CMarineRollerBed
-        amount: 10
-      - id: BoxEmergencyMarine
-        amount: 3
-      - id: BoxBeaker
-        amount: 3
-      - id: CMSyringe
-        amount: 5
-      - id: CMSyringe
-        amount: 5
-      - id: FireExtinguisherMarine
-        amount: 1
-      - id: BoxBodyBag
-        amount: 3
-      - id: ClothingBeltMilitaryWebbingMed
-        amount: 1
-      - id: MarineRollerBed
-        amount: 10
-      - id: CMPouchMedicalSoc
-        amount: 2
 
 
 - type: entity

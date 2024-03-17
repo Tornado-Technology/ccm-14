@@ -44,6 +44,9 @@
       "name": "ointment"
     },
     {
+      "name": "mech"
+    },
+    {
       "name": "advfirstaid-inhand-left",
       "directions": 4
     },
@@ -82,6 +85,22 @@
     {
       "name": "antitox-inhand-right",
       "directions": 4
+    },
+    {
+      "name": "mech-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "mech-inhand-right",
+      "directions": 4
+    },
+    {
+    "name": "rad-inhand-left",
+    "directions": 4
+    },
+    {
+    "name": "rad-inhand-right",
+    "directions": 4
     }
   ]
 }

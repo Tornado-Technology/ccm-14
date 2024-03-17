@@ -145,15 +145,21 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: medipen_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 35
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 15
+        maxVol: 35
         reagents:
-        - ReagentId: Epinephrine
-          Quantity: 12
         - ReagentId: TranexamicAcid
-          Quantity: 3
+          Quantity: 5
+        - ReagentId: Epinephrine
+          Quantity: 10
+        - ReagentId: Omnizine
+          Quantity: 20
+
   - type: Tag
     tags: []
 
@@ -380,15 +386,15 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 30
+        maxVol: 55
         reagents:
-        - ReagentId: Omnizine
-          Quantity: 25
         - ReagentId: TranexamicAcid
           Quantity: 5
+        - ReagentId: Omnizine
+          Quantity: 40
   - type: Hypospray
     solutionName: pen
-    transferAmount: 30
+    transferAmount: 55
   - type: StaticPrice
     price: 500
   - type: Tag
