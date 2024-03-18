@@ -66,3 +66,10 @@
       passiveVisibilityRate: -0.6
       movementVisibilityRate: 0.2
     - type: Stealth
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        2500: 0.9
+        3000: 0.85
+        3500: 0.80
+        4000: 0.75
+        4500: 0.70

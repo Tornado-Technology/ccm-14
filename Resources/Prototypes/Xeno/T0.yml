@@ -83,6 +83,13 @@
       slots:
         - MASK
     - type: Blindfold
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        50: 0.9
+        60: 0.85
+        70: 0.80
+        80: 0.75
+        90: 0.70
 
 
 - type: entity

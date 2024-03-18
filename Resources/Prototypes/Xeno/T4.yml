@@ -49,6 +49,13 @@
         groups:
           Brute: 36
     - type: XenoAcid
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        800: 0.9
+        960: 0.85
+        1120: 0.80
+        1280: 0.75
+        1440: 0.70
 
 - type: entity
   name: queen
@@ -112,6 +119,13 @@
           Brute: 18
         types:
           Structural: 15
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        900: 0.9
+        1080: 0.85
+        1260: 0.80
+        1440: 0.75
+        1620: 0.70
 
 - type: entity
   name: rouny
@@ -156,3 +170,10 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.95
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        400: 0.9
+        480: 0.85
+        560: 0.80
+        640: 0.75
+        720: 0.70
