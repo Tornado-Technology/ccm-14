@@ -156,6 +156,3 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.95
-    - type: FootstepModifier
-      footstepSoundCollection:
-        collection: XenoFootstepMedium

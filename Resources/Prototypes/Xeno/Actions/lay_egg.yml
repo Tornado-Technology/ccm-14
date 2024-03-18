@@ -6,8 +6,8 @@
     - type: InstantAction
       useDelay: 120
       priority: 7
-      sound: !type:SoundCollectionSpecifier
-        collection: XenoBreath
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: lay_egg
@@ -22,8 +22,8 @@
     - type: InstantAction
       useDelay: 20
       priority: 7
-      sound: !type:SoundCollectionSpecifier
-        collection: XenoBreath
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: lay_egg
