@@ -1,0 +1,28 @@
+- type: soundCollection
+  id: XenoScream
+  files:
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar1.ogg
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar2.ogg
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar3.ogg
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar4.ogg
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar5.ogg
+  - /Audio/_CM14/Xeno/XenoScream/alien_roar6.ogg
+
+- type: soundCollection
+  id: QueenScream
+  files:
+  - /Audio/_CM14/Xeno/QueenScream/alien_queen_command.ogg
+  - /Audio/_CM14/Xeno/QueenScream/alien_queen_command2.ogg
+  - /Audio/_CM14/Xeno/QueenScream/alien_queen_command3.ogg
+
+- type: soundCollection
+  id: XenoBreath
+  files:
+  - /Audio/_CM14/Xeno/XenoBreath/alien_queen_breath1.ogg
+  - /Audio/_CM14/Xeno/XenoBreath/alien_queen_breath2.ogg
+
+- type: soundCollection
+  id: XenoShoot
+  files:
+  - /Audio/_CM14/Xeno/XenoShoot/alien_spitacid.ogg
+  - /Audio/_CM14/Xeno/XenoShoot/alien_spitacid2.ogg

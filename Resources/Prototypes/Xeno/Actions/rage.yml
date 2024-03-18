@@ -6,11 +6,10 @@
   components:
     - type: InstantAction
       useDelay: 600
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: QueenScream
       icon:
         sprite: Actions/xeno.rsi
         state: rage
       event: !type:XenoRageEvent
       checkCanAccess: false
-      

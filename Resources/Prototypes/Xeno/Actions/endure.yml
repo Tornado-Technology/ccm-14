@@ -7,7 +7,7 @@
     - type: InstantAction
       useDelay: 10
       sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
+        path: /Audio/_CM14/Xeno/XenoActions/alien_dragsound_large.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: endure
