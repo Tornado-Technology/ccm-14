@@ -31,6 +31,13 @@
     - type: XenoDegradation
       prototype: MobXenoBull
       timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        600: 0.9
+        720: 0.85
+        840: 0.80
+        960: 0.75
+        1080: 0.70
 
 - type: entity
   name: Defiler
@@ -83,6 +90,13 @@
     - type: XenoDegradation
       prototype: MobSpitterXeno
       timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70
 
 - type: entity
   name: gorger
@@ -122,6 +136,13 @@
     - type: XenoDegradation
       prototype: MobHivelordXeno
       timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70
 
 - type: entity
   name: ravager
@@ -159,6 +180,13 @@
     - type: XenoDegradation
       prototype: MobBullXeno
       timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        1000: 0.9
+        1200: 0.85
+        1400: 0.80
+        1600: 0.75
+        1800: 0.70
 
 - type: damageModifierSet
   id: XenoRavager
@@ -229,3 +257,10 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.95
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        250: 0.9
+        300: 0.85
+        350: 0.80
+        400: 0.75
+        450: 0.70

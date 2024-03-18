@@ -37,6 +37,13 @@
         types:
           Structural: 10
     - type: XenoDegradation
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        200: 0.9
+        240: 0.85
+        280: 0.80
+        320: 0.75
+        360: 0.70
 
 - type: entity
   name: runner
@@ -91,6 +98,13 @@
           - MobMask
           layer:
           - MobLayer
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        150: 0.9
+        180: 0.85
+        210: 0.80
+        240: 0.75
+        270: 0.70
 
 - type: entity
   name: sentinel
@@ -144,6 +158,13 @@
           Brute: 18
     - type: XenoDegradation
     - type: XenoAcid
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        200: 0.9
+        240: 0.85
+        280: 0.80
+        320: 0.75
+        360: 0.70
 
 - type: entity
   name: warrior
@@ -181,3 +202,10 @@
         groups:
           Brute: 18
     - type: XenoDegradation
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70

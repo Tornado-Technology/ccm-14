@@ -41,6 +41,13 @@
     - type: XenoDegradation
       prototype: MobWarriorXeno
       timeUsage: 30
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        400: 0.9
+        480: 0.85
+        560: 0.80
+        640: 0.75
+        720: 0.70
 
 - type: entity
   name: hivelord
@@ -83,6 +90,13 @@
     - type: XenoDegradation
       prototype: MobDroneXeno
       timeUsage: 30
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        250: 0.9
+        300: 0.85
+        350: 0.80
+        400: 0.75
+        450: 0.70
 
 - type: entity
   name: hunter
@@ -133,6 +147,13 @@
     - type: Puller
       needsHands: false
       sprintModifier: 0.95
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        200: 0.9
+        240: 0.85
+        280: 0.80
+        320: 0.75
+        360: 0.70
 
 - type: entity
   name: spitter
@@ -191,3 +212,10 @@
       prototype: MobSentinelXeno
       timeUsage: 30
     - type: XenoAcid
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        250: 0.9
+        300: 0.85
+        350: 0.80
+        400: 0.75
+        450: 0.70
