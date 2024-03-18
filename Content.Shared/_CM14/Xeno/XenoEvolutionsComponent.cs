@@ -28,6 +28,22 @@ public sealed partial class XenoEvolutionsComponent : Component
 [Serializable, NetSerializable, ImplicitDataDefinitionForInheritors]
 public sealed partial class XenoEvolution
 {
+    private bool Equals(XenoEvolution other)
+    {
+        return Prototype == other.Prototype;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return ReferenceEquals(this, obj) || obj is XenoEvolution other && Equals(other);
+    }
+
+    public override int GetHashCode()
+    {
+        return Prototype.GetHashCode();
+    }
+
+
     [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), ViewVariables(VVAccess.ReadWrite)]
     public string Prototype = "MobFaceHuggerXeno";
 

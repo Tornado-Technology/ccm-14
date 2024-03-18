@@ -689,6 +689,22 @@
     Plastic: 20
 
 - type: latheRecipe
+  id: MagazineSmgMSG23W-Y
+  result: MagazineSmgMSG23W-Y
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
+  id: MagazineShotgunLiberator
+  result: MagazineShotgunLiberator
+  completetime: 2
+  materials:
+    Steel: 20
+    Plastic: 20
+
+- type: latheRecipe
   id: Magazine10x24mm
   result: Magazine10x24mm
   completetime: 2
@@ -753,12 +769,52 @@
     Plastic: 20
 
 - type: latheRecipe
-  id: Box10x24mm
-  result: Box10x24mm
+  id: Box1024mmCM
+  result: Box1024mmCM
   completetime: 5
   materials:
-    Plastic: 1200
-    Steel: 100
+    Plastic: 100
+    Steel: 1200
+
+- type: latheRecipe
+  id: Box12560RmmCM
+  result: Box12560RmmCM
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 1200
+
+- type: latheRecipe
+  id: Box450_BrushmasterCM
+  result: Box450_BrushmasterCM
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 1200
+
+- type: latheRecipe
+  id: Box458_SocomCM
+  result: Box458_SocomCM
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 1200
+
+- type: latheRecipe
+  id: BoxShellPunisher
+  result: BoxShellPunisher
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 1200
+
+- type: latheRecipe
+  id: BoxShellLiberator
+  result: BoxShellLiberator
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 1200
 
 - type: latheRecipe
   id: Magazine10x26mm
@@ -825,6 +881,19 @@
     Plasma: 50
 
 - type: latheRecipe
+  id: WeaponAntiqueLaser
+  result: WeaponAntiqueLaser
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 1000
+    Plasma: 100
+    Gold: 100
+
+
+# Аммуниция специалистов
+
+- type: latheRecipe # Патриот
   id: MagazineShotgunAFG-12
   result: MagazineShotgunAFG-12
   completetime: 10
@@ -834,8 +903,9 @@
     Glass: 100
     Plasma: 100
 
+
 - type: latheRecipe
-  id: FuelTankFlamethrower
+  id: FuelTankFlamethrower # Огнемёт
   result: FuelTankFlamethrower
   completetime: 10
   materials:
@@ -845,16 +915,16 @@
     Plasma: 1000
 
 - type: latheRecipe
-  id: MagazineAntiMaterialXM42B
-  result: MagazineAntiMaterialXM42B
+  id: BoxAntimaterialCM # Ксенобойка
+  result: BoxAntimaterialCM
   completetime: 10
   materials:
-    Steel: 100
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 1000
+    Plastic: 1000
+    Glass: 1000
+    Plasma: 1000
 
-- type: latheRecipe
+- type: latheRecipe # Подавитель
   id: MagazineLightRifleBox
   result: MagazineLightRifleBox
   completetime: 10
@@ -864,7 +934,7 @@
     Glass: 100
     Plasma: 100
 
-- type: latheRecipe
+- type: latheRecipe # Феникс
   id: BoxShotgunLMG
   result: BoxShotgunLMG
   completetime: 10
@@ -874,12 +944,23 @@
     Glass: 100
     Plasma: 100
 
-- type: latheRecipe
-  id: WeaponAntiqueLaser
-  result: WeaponAntiqueLaser
+- type: latheRecipe # Фугасная граната гранатомёта
+  id: GrenadeBlastMarine
+  result: GrenadeBlastMarine
   completetime: 10
   materials:
-    Steel: 1000
-    Glass: 1000
+    Steel: 100
+    Plastic: 100
+    Glass: 100
     Plasma: 100
-    Gold: 100
+
+- type: latheRecipe # Осколочная граната гранатомёта
+  id: GrenadeFragMarine
+  result: GrenadeFragMarine
+  completetime: 10
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
+

@@ -38,3 +38,4 @@
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     id: MilitaryMedicIDCard
+    pocket1: EmergencyMedipen

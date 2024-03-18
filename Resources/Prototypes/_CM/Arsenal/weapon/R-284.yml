@@ -13,7 +13,8 @@
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
   - type: Item
-    size: Normal
+    size: Huge
+    shape: 0,0,3,2
   - type: Clothing
     sprite: /Textures/_CM/TGMSArsenal/Textures/lmgshotgun.rsi
     quickEquip: false
@@ -53,9 +54,13 @@
   description: Крупнокалиберный дробовик специалиста R-284. На нем изображение феникса. Использует зажигательные патроны "Феникс".
   suffix: "Marines Gear"
   components:
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,2
   - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/lmgshotgun.rsi
+    sprite: /Textures/_CM/Objects/Weapons/Guns/Shotguns/Fenix.rsi
   - type: Clothing
-    sprite: /Textures/_CM/TGMSArsenal/Textures/lmgshotgun.rsi
+    sprite: /Textures/_CM/Objects/Weapons/Guns/Shotguns/Fenix.rsi
   - type: BallisticAmmoProvider
     capacity: 2

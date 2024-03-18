@@ -1,8 +1,7 @@
 - type: entity
-  id: BaseMagazineRifleM41A
+  id: MagazineRifleM41A
   name: "M41A magazine (12.5x60R)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
@@ -10,49 +9,22 @@
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgeRifle1024
     whitelist:
       tags:
         - CartridgeRifle1024
     capacity: 30
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/m41a.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
 
 - type: Tag
   id: CartridgeRifle1024
 
-- type: entity
-  id: MagazineRifleM41A
-  name: "M41A magazine (12.5x60R)"
-  parent: BaseMagazineRifleM41A
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: BaseMagazineRifleM4RA
+  id: MagazineRifleM4RA
   name: "M4RA magazine (12.5x60R)"
-  parent: BaseItem
-  abstract: true
+  parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
@@ -60,79 +32,29 @@
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
-    mayTransfer: true
+    proto: CartridgeRifle125x60R
     whitelist:
       tags:
         - CartridgeRifle125x60R
     capacity: 25
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
 
 - type: Tag
   id: CartridgeRifle125x60R
 
 - type: entity
-  id: MagazineRifleM4RA
-  name: "M4RA magazine (12.5x60R)"
-  parent: BaseMagazineRifleM4RA
+  parent: BaseBoxCM
+  id: Box1024mmCM
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle125x60R
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  abstract: true
-  parent: BaseItem
-  id: BaseBox10x24mmCM
-  components:
-  - type: BallisticAmmoProvider
-    mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle
-    proto: Cartridge10x24mm
-    capacity: 60
-  - type: Item
-    size: Normal
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+        - CartridgeRifle1024
+    proto: CartridgeRifle1024
+    capacity: 200
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  parent: BaseBox10x24mmCM
-  id: Box10x24mmCM
-  name: Box (10x24мм)
-  suffix: "Marines Gear"
-  components:
-  - type: BallisticAmmoProvider
-    capacity: 200
-    proto: CartridgeRifle1024
-  - type: Sprite
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
@@ -142,17 +64,20 @@
     magState: magb
     steps: 2
     zeroVisible: false
-  - type: Appearance
 
 - type: entity
-  parent: BaseBox10x24mmCM
-  id: Box125x60RmmCM
+  parent: BaseBoxCM
+  id: Box12560RmmCM
   name: Box (125x60R)
   components:
   - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeRifle125x60R
     capacity: 200
     proto: CartridgeRifle125x60R
   - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
@@ -162,5 +87,4 @@
     magState: magb
     steps: 2
     zeroVisible: false
-  - type: Appearance
 

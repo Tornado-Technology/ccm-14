@@ -75,6 +75,64 @@
 
 - type: entity
   parent: CMTAutoInjector
+  id: CMSigynateInjector
+  name: sigynate auto-injector
+  description: An auto-injector loaded with 3 uses of sigynate, a medicine for caustic damage. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Sigynate
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
+  id: CMUltravasculineInjector
+  name: ultravasculine auto-injector
+  description: An auto-injector loaded with 3 uses of ultravasculine, a medicine for potion damage. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Ultravasculine
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
+  id: CMStellibininInjector
+  name: stellibinin auto-injector
+  description: An auto-injector loaded with 3 uses of stellibinin, a medicine for potion damage. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Stellibinin
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
+  id: CMTranexamicAcidInjector
+  name: tranexamic acid auto-injector
+  description: An auto-injector loaded with 3 uses of TranexamicAcid, a medicine for potion damage. Each use is 5 units.
+  components:
+  - type: Hypospray
+    transferAmount: 5
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: TranexamicAcid
+          Quantity: 15
+
+- type: entity
+  parent: CMTAutoInjector
   id: CMTFirstAidrazineInjector
   name: First-Aid auto-injector
   description: A version of the tricordrazine auto-injector that can be used by everyone. Each use is 10 units.
@@ -96,6 +154,34 @@
 
 - type: entity
   parent: CMTAutoInjector
+  id: CMHyronalinAutoInjector
+  name: hyronalin auto-injector
+  description: An auto-injector loaded with 3 uses of hyronalin, a common anti-rad medicine. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Hyronalin
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
+  id: CMArithrazineAutoInjector
+  name: arithrazine auto-injector
+  description: An auto-injector loaded with 3 uses of arithrazine, a common anti-rad medicine. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Arithrazine
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
   id: CMDexalinPlusAutoInjector
   name: dexalin plus auto-injector
   description: An auto-injector loaded with 3 uses of dexalin plus, a common airloss medicine. Each use is 10 units.
@@ -106,6 +192,20 @@
         maxVol: 30
         reagents:
         - ReagentId: DexalinPlus
+          Quantity: 30
+
+- type: entity
+  parent: CMTAutoInjector
+  id: CMDermalineAutoInjector
+  name: dermaline auto-injector
+  description: An auto-injector loaded with 3 uses of dermaline, a common burn medicine. Each use is 10 units.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Dermaline
           Quantity: 30
 
 - type: entity

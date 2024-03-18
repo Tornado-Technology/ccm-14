@@ -110,7 +110,7 @@
   graph: MarineTurretGraph
   startNode: start
   targetNode: weaponTurretMarine
-  category: construction-category-structures
+  category: construction-category-cm-structures
   description: The engineer's best friend.
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
@@ -128,7 +128,7 @@
   graph: MarineFlameTurretGraph
   startNode: start
   targetNode: weaponTurretMarine
-  category: construction-category-structures
+  category: construction-category-cm-structures
   description: The engineer's best friend.
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi

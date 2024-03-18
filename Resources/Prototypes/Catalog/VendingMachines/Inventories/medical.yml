@@ -1,12 +1,23 @@
 - type: vendingMachineInventory
   id: NanoMedPlusInventory
   startingInventory:
-    CMHealthAnalyzer: 3
-    Brutepack: 5
+    CMSyringe: 5
+    BoxBeaker: 3
+    BoxBottle: 3
+    CMDefibrillator: 2
+    CMHealthAnalyzer: 2
+    CMHypospray: 1
+    ClothingEyesHudMedical: 1
+    EmergencyRollerBedSpawnFolded: 5
     CMOintment10: 5
     CMGauze10: 5
     CMBurnKit10: 5
     CMTraumaKit10: 5
     Bloodpack: 5
     EpinephrineChemistryBottle: 3
-    CMSyringe: 5
+    SigynateChemistryBottle: 3
+    BicaridineChemistryBottle: 3
+    DermalineChemistryBottle: 3
+    ArithrazineChemistryBottle: 3
+    DyloveneChemistryBottle: 3
+    TranexamicAcidChemistryBottle: 3

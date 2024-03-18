@@ -1,28 +1,17 @@
 - type: entity
-  id: WeaponSniperXM43E1
-  parent: BaseWeaponRifle
   name: XM43E1 Anti Materiel Rifle
-  description: An experimental anti-materiel rifle produced by Armat Systems, recently reacquired from the deep storage of an abandoned prototyping facility. This one in particular is currently undergoing field testing. Chambered in 10x99mm Caseless
-  suffix: CM
+  parent: BaseWeaponSniper
+  id: WeaponSniperXM43E1
+  description: A portable anti-materiel rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-materiel ammo.
   components:
   - type: Sprite
     sprite: _CM/Objects/Weapons/Guns/Snipers/xm43e1.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Item
-    size: Large
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: true
   - type: Clothing
-    sprite: _CM/Objects/Weapons/Guns/Snipers/xm43e1.rsi
     quickEquip: false
     slots:
     - Back
     - suitStorage
-    - belt
+    sprite: _CM/Objects/Weapons/Guns/Snipers/xm43e1.rsi
   - type: Wieldable
   - type: GunWieldBonus
     minAngle: 55
@@ -37,31 +26,10 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineAntiMaterialXM42B
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineAntiMaterialXM42B
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgeSniper10x99
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgeSniper10x99
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+      path: /Audio/_CM/Weapons/XM43E1shot.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeSniper10x99
+    capacity: 1
+    proto: CartridgeSniper10x99

@@ -26,7 +26,7 @@
   - type: StorageFill
     contents:
       - id: ClothingOuterArmorCaptainCarapace
-      - id: NukeDisk
+#      - id: NukeDisk
       - id: PinpointerNuclear
 #      - id: CaptainIDCard
       - id: ClothingOuterHardsuitCap
@@ -54,7 +54,7 @@
   - type: StorageFill
     contents:
       - id: ClothingOuterArmorCaptainCarapace
-      - id: NukeDisk
+#      - id: NukeDisk
       - id: PinpointerNuclear
 #      - id: CaptainIDCard
       - id: WeaponDisabler

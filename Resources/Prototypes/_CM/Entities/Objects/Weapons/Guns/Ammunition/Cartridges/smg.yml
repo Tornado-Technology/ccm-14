@@ -1,59 +1,26 @@
 - type: entity
-  id: BaseCartridgeSmg458Socom
-  parent: BaseCartridge
+  id: CartridgeSmg458Socom
+  parent: BaseCartridgeCM
   name: cartridge (458 Socom)22
-  abstract: true
   components:
   - type: Tag
     tags:
       - CartridgeSmg458Socom
   - type: CartridgeAmmo
     proto: BulletSmg458Socom
-    deleteOnSpawn: true
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
 
 - type: entity
-  id: CartridgeSmg458Socom
-  name: cartridge (458 Socom)
-  parent: BaseCartridgeSmg458Socom
-  components:
-  - type: CartridgeAmmo
-    proto: BulletSmg458Socom
-
-- type: entity
-  id: BaseCartridgeSmg450Brushmaster
-  parent: BaseCartridge
+  id: CartridgeSmg450Brushmaster
+  parent: BaseCartridgeCM
   name: cartridge (450Brushmaster)22
-  abstract: true
   components:
   - type: Tag
     tags:
       - CartridgeSmg450Brushmaster
   - type: CartridgeAmmo
     proto: BulletSmg450Brushmaster
-    deleteOnSpawn: true
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 10
 
-- type: entity
-  id: CartridgeSmg450Brushmaster
-  name: cartridge (450Brushmaster)
-  parent: BaseCartridgeSmg450Brushmaster
-  components:
-  - type: CartridgeAmmo
-    proto: BulletSmg450Brushmaster

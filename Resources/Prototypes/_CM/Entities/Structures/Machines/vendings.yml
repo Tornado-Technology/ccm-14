@@ -56,24 +56,28 @@
         amount: 1
       - id: WeaponSubMachineGunM39
         amount: 1
-      - id: WeaponMagnumVP-60x2
+      - id: WeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunUA571C
+      - id: WeaponShotgunLiberator
+        amount: 1
+      - id: WeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
     - name: Боеприпасы
       entries:
-      - id: BoxLethalshot
-        amount: 3
-      - id: SpeedLoaderMagnumVP-60x2
-        amount: 4
-      - id: MagazineRifleM39
-        amount: 5
       - id: MagazineRifleM41A
         amount: 5
       - id: MagazineRifleM4RA
         amount: 5
+      - id: MagazineRifleM39
+        amount: 5
+      - id: MagazineSmgMSG23W-Y
+        amount: 5
+      - id: MagazineShotgunLiberator
+        amount: 5
+      - id: BoxShellPunisher
+        amount: 1
     - name: Инструменты
       entries:
       - id: trayScanner
@@ -81,6 +85,8 @@
       - id: GasAnalyzer
         amount: 5
       - id: CMWelder
+        amount: 1
+      - id: WeldingFuelCanisterFull
         amount: 1
       - id: FlashlightLantern
         amount: 2
@@ -128,38 +134,8 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
   - type: CMAutomatedVendor
     sections:
-    - name: Вооружение
-      entries:
-      - id: WeaponRifleM4RA
-        amount: 1
-      - id: WeaponRifleM41A
-        amount: 1
-      - id: WeaponSubMachineGunM39
-        amount: 1
-      - id: WeaponMagnumVP-60x2
-        amount: 1
-      - id: WeaponShotgunUA571C
-        amount: 1
-      - id: MacheteMarine
-        amount: 1
-    - name: Боеприпасы
-      entries:
-      - id: BoxLethalshot
-        amount: 3
-      - id: SpeedLoaderMagnumVP-60x2
-        amount: 4
-      - id: MagazineRifleM39
-        amount: 5
-      - id: MagazineRifleM41A
-        amount: 5
-      - id: MagazineRifleM4RA
-        amount: 5
     - name: Медицина
       entries:
-      - id: CMHealthAnalyzer
-        amount: 20
-      - id: CMDefibrillator
-        amount: 5
       - id: CMOintment10
         amount: 5
       - id: CMGauze10
@@ -169,45 +145,79 @@
       - id: CMTraumaKit10
         amount: 5
       - id: CMFirstAidKitFilled
-        amount: 10
+        amount: 5
       - id: CMAdvFirstAidKitFilled
-        amount: 5
-      - id: MedkitToxinFilled
-        amount: 5
-      - id: MedkitBruteFilled
-        amount: 5
+        amount: 3
+      - id: CMToxinAidKitFilled
+        amount: 3
+      - id: CMBruteAidKitFilled
+        amount: 3
       - id: CMBurnAidKitFilled
-        amount: 5
+        amount: 3
       - id: CMFirstAidO2KitFilled
-        amount: 5
+        amount: 3
+      - id: CMRadAidKitFilled
+        amount: 3
+      - id: BoxBottleChem
+        amount: 1
     - name: Утилиты
       entries:
-      - id: PowerCellMedium
-        amount: 10
-      - id: PowerCellHigh
-        amount: 1
-      - id: HandheldCrewMonitor
-        amount: 1
-      - id: CMarineRollerBed
-        amount: 10
+      - id: BoxBodyBag
+        amount: 3
       - id: BoxEmergencyMarine
         amount: 3
       - id: BoxBeaker
         amount: 3
-      - id: CMSyringe
-        amount: 5
-      - id: CMSyringe
-        amount: 5
-      - id: FireExtinguisherMarine
-        amount: 1
-      - id: BoxBodyBag
+      - id: BoxBottle
         amount: 3
+      - id: CMSyringe
+        amount: 10
+      - id: MarineRollerBed
+        amount: 5
+      - id: PowerCellHigh
+        amount: 5
+      - id: CMHealthAnalyzer
+        amount: 5
+      - id: CMDefibrillator
+        amount: 2
+      - id: HandheldCrewMonitor
+        amount: 1
+      - id: CMHypospray
+        amount: 1
       - id: ClothingBeltMilitaryWebbingMed
         amount: 1
-      - id: MarineRollerBed
-        amount: 10
       - id: CMPouchMedicalSoc
-        amount: 2
+        amount: 1
+    - name: Вооружение
+      entries:
+      - id: WeaponRifleM4RA
+        amount: 1
+      - id: WeaponRifleM41A
+        amount: 1
+      - id: WeaponSubMachineGunM39
+        amount: 1
+      - id: WeaponSubMachineGunMSG23W-Y
+        amount: 1
+      - id: WeaponShotgunLiberator
+        amount: 1
+      - id: WeaponShotgunPunisher
+        amount: 1
+      - id: MacheteMarine
+        amount: 1
+    - name: Боеприпасы
+      entries:
+      - id: MagazineRifleM41A
+        amount: 5
+      - id: MagazineRifleM4RA
+        amount: 5
+      - id: MagazineRifleM39
+        amount: 5
+      - id: MagazineSmgMSG23W-Y
+        amount: 5
+      - id: MagazineShotgunLiberator
+        amount: 5
+      - id: BoxShellPunisher
+        amount: 1
 
 
 - type: entity
@@ -286,24 +296,28 @@
         amount: 1
       - id: WeaponSubMachineGunM39
         amount: 1
-      - id: WeaponMagnumVP-60x2
+      - id: WeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunUA571C
+      - id: WeaponShotgunLiberator
+        amount: 1
+      - id: WeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
     - name: Боеприпасы
       entries:
-      - id: BoxLethalshot
-        amount: 3
-      - id: SpeedLoaderMagnumVP-60x2
-        amount: 4
-      - id: MagazineRifleM39
-        amount: 5
       - id: MagazineRifleM41A
         amount: 5
       - id: MagazineRifleM4RA
         amount: 5
+      - id: MagazineRifleM39
+        amount: 5
+      - id: MagazineSmgMSG23W-Y
+        amount: 5
+      - id: MagazineShotgunLiberator
+        amount: 5
+      - id: BoxShellPunisher
+        amount: 1
 
 - type: entity
   parent: ColMarTechBase
@@ -385,24 +399,28 @@
         amount: 1
       - id: WeaponSubMachineGunM39
         amount: 1
-      - id: WeaponMagnumVP-60x2
+      - id: WeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunUA571C
+      - id: WeaponShotgunLiberator
+        amount: 1
+      - id: WeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
     - name: Боеприпасы
       entries:
-      - id: BoxLethalshot
-        amount: 3
-      - id: SpeedLoaderMagnumVP-60x2
-        amount: 4
-      - id: MagazineRifleM39
-        amount: 5
       - id: MagazineRifleM41A
         amount: 5
       - id: MagazineRifleM4RA
         amount: 5
+      - id: MagazineRifleM39
+        amount: 5
+      - id: MagazineSmgMSG23W-Y
+        amount: 5
+      - id: MagazineShotgunLiberator
+        amount: 5
+      - id: BoxShellPunisher
+        amount: 1
 
 - type: entity
   parent: ColMarTechBase
@@ -425,7 +443,7 @@
     - name: Броня
       entries:
       - id: ClothingOuterPrototypeC
-        amount: 4
+        amount: 2
     - name: Одежда
       entries:
       - id: ClothingEyesGlassesMeson

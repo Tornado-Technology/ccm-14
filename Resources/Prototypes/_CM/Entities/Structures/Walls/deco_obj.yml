@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructureDynamic
-  id: CMBarricadeBase
+  id: CMBarricadeDecBase
   name: Generic Barricade
   abstract: true
   description: The most basic, generic barricade you have ever seen. This probably shouldn't even be here.
@@ -14,9 +14,9 @@
 
 
 - type: entity
-  parent: CMBarricadeBase
+  parent: CMBarricadeDecBase
   id: CMBarricadeSandbagHalfHalfCircle
-  name: Мешки с песком 
+  name: Мешки с песком
   description: Отлично укрытие от града пуль.
   components:
   - type: MeleeSound
@@ -54,9 +54,9 @@
     node: nodeSandbag
 
 - type: entity
-  parent: CMBarricadeBase
+  parent: CMBarricadeDecBase
   id: CMBarricadeSandbagHalfCircle
-  name: Мешки с песком 
+  name: Мешки с песком
   description: Отлично укрытие от града пуль.
   components:
   - type: MeleeSound
@@ -94,9 +94,9 @@
     node: nodeSandbag
 
 - type: entity
-  parent: CMBarricadeBase
+  parent: CMBarricadeDecBase
   id: CMBarricadeSandbagSimpleOne
-  name: Мешки с песком 
+  name: Мешки с песком
   description: Отлично укрытие от града пуль.
   components:
   - type: MeleeSound
@@ -134,9 +134,9 @@
     node: nodeSandbag
 
 - type: entity
-  parent: CMBarricadeBase
+  parent: CMBarricadeDecBase
   id: CMBarricadeSandbagSimple
-  name: Мешки с песком 
+  name: Мешки с песком
   description: Отлично укрытие от града пуль.
   components:
   - type: MeleeSound

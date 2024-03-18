@@ -101,6 +101,7 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    count: 4
     proto: FenixBullet
     deleteOnSpawn: true
 
@@ -136,8 +137,12 @@
   name: Box (Феникс)
   suffix: "Marines Gear"
   components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
   - type: BallisticAmmoProvider
-    capacity: 6
+    capacity: 4
     proto: ShellLMG
   - type: Sprite
     layers:

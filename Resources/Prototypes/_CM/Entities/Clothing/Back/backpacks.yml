@@ -14,8 +14,9 @@
     slots:
     - back
   - type: Storage
+    quickInsert: true
     grid:
-    - 0,0,9,4 # TODO: Change this
+    - 0,0,8,4 # TODO: Change this
     maxItemSize: Huge
     blacklist:
       tags:

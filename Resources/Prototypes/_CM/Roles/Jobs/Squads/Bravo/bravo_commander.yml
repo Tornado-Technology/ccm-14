@@ -37,3 +37,4 @@
     jumpsuit: ClothingUniformJumpsuitbravo_leader
     id: BCommanderIDCard
     ears: ClothingHeadsetMarineBravoLeader
+    pocket1: EmergencyMedipen

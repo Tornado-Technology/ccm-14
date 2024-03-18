@@ -5,6 +5,7 @@
   description: Добывает ископаемые и приносит деньги. 
   components:
     - type: CMMiner
+      balanceGeneration: 150
     - type: MeleeSound
       soundGroups:
         Brute:
@@ -95,3 +96,22 @@
     - type: NavMapBeacon
       color: "#ff0000"
       text: Сломаный майнер
+
+- type: entity
+  id: MinerUltraMachine
+  parent: MinerMachine
+  name: Ультра майнер
+  description: Добывает редкие ископаемые и приносит много денег.
+  components:
+  - type: CMMiner
+    balanceGeneration: 500
+
+- type: entity
+  id: UltraMinerMachineBroken
+  parent: MinerMachineBroken
+  name: Сломанный ультра майнер
+  components:
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: Сломаный ультра майнер
+    

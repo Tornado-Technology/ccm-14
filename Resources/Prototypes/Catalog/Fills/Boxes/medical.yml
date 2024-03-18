@@ -37,7 +37,30 @@
   - type: StorageFill
     contents:
       - id: ChemistryEmptyBottle01
-        amount: 6
+        amount: 9
+  - type: Sprite
+    layers:
+      - state: box
+      - state: bottle
+
+- type: entity
+  name: chem bottle box
+  parent: BoxCardboard
+  id: BoxBottleChem
+  description: A box full of bottles with chemicates.
+  components:
+  - type: StorageFill
+    contents:
+      - id: BicaridineChemistryBottle
+        amount: 2
+      - id: DyloveneChemistryBottle
+        amount: 2
+      - id: ArithrazineChemistryBottle
+        amount: 1
+      - id: SigynateChemistryBottle
+        amount: 1
+      - id: EpinephrineChemistryBottle
+        amount: 1
   - type: Sprite
     layers:
       - state: box

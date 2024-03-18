@@ -31,7 +31,6 @@ public sealed class WieldableSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<WieldableComponent, UseInHandEvent>(OnUseInHand);
         SubscribeLocalEvent<WieldableComponent, ItemUnwieldedEvent>(OnItemUnwielded);
         SubscribeLocalEvent<WieldableComponent, GotUnequippedHandEvent>(OnItemLeaveHand);
@@ -119,9 +118,9 @@ public sealed class WieldableSystem : EntitySystem
             return;
 
         if (!component.Wielded)
-            args.Handled = TryWield(uid, component, args.User);
+            TryWield(uid, component, args.User);
         else
-            args.Handled = TryUnwield(uid, component, args.User);
+            TryUnwield(uid, component, args.User);
     }
 
     public bool CanWield(EntityUid uid, WieldableComponent component, EntityUid user, bool quiet = false)

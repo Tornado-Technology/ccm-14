@@ -30,10 +30,11 @@
     components:
       - type: JobRank
         job: AlfaCommander
-  
+
 - type: startingGear
   id: AlfaCommanderGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAlpha_leader
     id: ACommanderIDCard
     ears: ClothingHeadsetMarineAlfaLeader
+    pocket1: EmergencyMedipen

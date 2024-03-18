@@ -94,44 +94,65 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
   - type: CMAutomatedVendor
     sections:
-    - name: Основное вооружие
+    - name: Штурмовые Винтовки
       entries:
       - id: WeaponRifleM4RA
-        amount: 4
-      - id: WeaponSubMachineGunM39
-        amount: 3
+        amount: 2
       - id: WeaponRifleM41A
-        amount: 4
-    - name: Основные боеприпасы
-      entries:
+        amount: 2
       - id: MagazineRifleM4RA
-        amount: 16
+        amount: 12
       - id: MagazineRifleM41A
-        amount: 16
-      - id: MagazineRifleM39
-        amount: 16
-      - id: Box10x24mm
+        amount: 12
+      - id: Box12560RmmCM
         amount: 3
-      - id: Box125x60RmmCM
-        amount: 4
+      - id: Box1024mmCM
+        amount: 3
+
+    - name: Пистолеты-Пулемёты
+      entries:
+      - id: WeaponSubMachineGunM39
+        amount: 2
+      - id: WeaponSubMachineGunMSG23W-Y
+        amount: 2
+      - id: MagazineRifleM39
+        amount: 12
+      - id: MagazineSmgMSG23W-Y
+        amount: 12
       - id: Box450_BrushmasterCM
         amount: 3
+      - id: Box458_SocomCM
+        amount: 3
+
+    - name: Дробовики
+      entries:
+      - id: WeaponShotgunLiberator
+        amount: 2
+      - id: WeaponShotgunPunisher
+        amount: 2
+      - id: MagazineShotgunLiberator
+        amount: 12
+      - id: BoxShellPunisher
+        amount: 3
+      - id: BoxShellLiberator
+        amount: 3
+
     - name: Пистолеты
       entries:
       - id: WeaponPistol88M4
-        amount: 25
+        amount: 3
       - id: WeaponPistolArmatM5Y3
-        amount: 25
-    - name: Sidearm ammunition
-      entries:
+        amount: 3
       - id: MagazinePistol88M4
-        amount: 25
+        amount: 16
       - id: MagazinePistolAramatM5Y3
-        amount: 25
+        amount: 16
     - name: Утилиты
       entries:
       - id: MacheteMarine
         amount: 4
+      - id: SmokeGrenade
+        amount: 8
 
 
 - type: entity
@@ -187,12 +208,22 @@
       entries:
       - id: ClothingBackpackMarine
         amount: 2
+      - id: ClothingMilitaryBackpack
+        amount: 2
+      - id: ClothingBackpackMilitarySatchel
+        amount: 2
+      - id: ClothingBackpackMerc
+        amount: 2
       - id: ClothingBackpackSatchelMarine
-        amount: 4
+        amount: 2
+      - id: ClothingBackpackDuffelMilitary
+        amount: 2
+    - name: Ременно-плечевые системы
+      entries:
       - id: ClothingBeltMilitaryWebbing
         amount: 2
-      - id: BoxEmergencyMarine
-        amount: 10
+      - id: ClothingBeltMercWebbing
+        amount: 2
     - name: Маски
       entries:
       - id: ClothingMaskGasMarine
@@ -357,7 +388,7 @@
     - name: Броня
       entries:
       - id: ClothingOuterPrototypeC
-        amount: 4
+        amount: 2
     - name: Одежда
       entries:
       - id: ClothingEyesGlassesMeson

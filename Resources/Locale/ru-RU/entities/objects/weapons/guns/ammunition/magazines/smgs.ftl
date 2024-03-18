@@ -1,7 +1,3 @@
-ent-BaseMagazineRifleM39 = магазин M39 (10x24mm)
-    .desc = { ent-BaseItem.desc }
-ent-MagazineRifleM39 = магазин M39 (10x24mm)
-    .desc = { ent-BaseMagazineRifleM39.desc }
 ent-MagazineRifleM39AP = бронебойный магазин M39 (10x24mm)
     .desc = { ent-BaseMagazineRifleM39.desc }
 ent-BaseMagazineRifleM39Ex = расширенный магазин M39 (10x24mm)

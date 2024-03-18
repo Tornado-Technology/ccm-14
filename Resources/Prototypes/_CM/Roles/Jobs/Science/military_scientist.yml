@@ -20,7 +20,7 @@
     components:
       - type: JobRank
         job: MilitaryScientist
-  
+
 - type: startingGear
   id: MilitaryScientistGear
   equipment:
@@ -31,3 +31,4 @@
     ears: ClothingHeadsetAltScience
     belt: ClothingBeltUtilityEngineering
     shoes: ClothingShoesColorBrown
+    pocket1: EmergencyMedipen

@@ -4,17 +4,13 @@
   description: stun desc
   noSpawn: true
   components:
-    - type: EntityTargetAction
+    - type: WorldTargetAction
       useDelay: 15
       itemIconStyle: BigAction
-      whitelist:
-        components:
-          - Body
-      canTargetSelf: false
       checkCanAccess: false
-      interactOnMiss: false
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
+      interactOnMiss: true
+      sound: !type:SoundCollectionSpecifier
+        collection: XenoScream
       icon:
         sprite: Actions/xeno.rsi
         state: stun
