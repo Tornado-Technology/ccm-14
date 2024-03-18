@@ -1,6 +1,3 @@
-ent-CMBaseHealingItem = { ent-['BaseItem', 'CMEntityBase'] }
-
-  .desc = { ent-['BaseItem', 'CMEntityBase'].desc }
 ent-CMOintment = ointment
     .desc = Used to treat those nasty burns. Less effective on caustic burns.
     .suffix = Ten

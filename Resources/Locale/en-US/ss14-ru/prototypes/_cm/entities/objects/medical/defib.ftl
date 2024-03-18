@@ -1,9 +1,8 @@
 ent-CMBaseDefibrillator = defibrillator
     .desc = CLEAR! Zzzzat!
-ent-CMDefibrillator = { ent-['CMBaseDefibrillator', 'PowerCellSlotMediumItem'] }
-
+ent-CMDefibrillator = { ent-CMBaseDefibrillator }
   .suffix = CM14
-  .desc = { ent-['CMBaseDefibrillator', 'PowerCellSlotMediumItem'].desc }
+  .desc = { ent-CMBaseDefibrillator.desc }
 ent-CMDefibrillatorEmpty = { ent-CMDefibrillator }
     .suffix = CM14, Empty
     .desc = { ent-CMDefibrillator.desc }
