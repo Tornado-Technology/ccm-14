@@ -32,7 +32,4 @@ player-join-message = Игрок { $name } зашёл!
 player-first-join-message = Игрок { $name } зашёл на сервер впервые.
 # Displayed in chat to admins when a player leaves
 player-leave-message = Игрок { $name } вышел!
-latejoin-arrival-announcement =
-latejoin-arrival-sender =
-latejoin-arrivals-direction =
-latejoin-arrivals-direction-time =
+

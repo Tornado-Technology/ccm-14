@@ -1,21 +1,24 @@
-ent-PhysicistCrowbar = physicist crowbar
+ent-PhysicistCrowbar = монитровка
     .desc = { ent-Crowbar.desc }
-ent-CMScrewdriver = { ent-['Screwdriver', 'CMEntityBase'] }
 
-  .desc = { ent-['Screwdriver', 'CMEntityBase'].desc }
-ent-CMWirecutter = { ent-['Wirecutter', 'CMEntityBase'] }
+ent-CMScrewdriver = { ent-Screwdriver}
+  .desc = { ent-Screwdriver.desc }
 
-  .desc = { ent-['Wirecutter', 'CMEntityBase'].desc }
-ent-CMWrench = { ent-['Wrench', 'CMEntityBase'] }
+ent-CMWirecutter = {ent-Wirecutter}
+  .desc = { ent-Wirecutter.desc }
 
-  .desc = { ent-['Wrench', 'CMEntityBase'].desc }
+ent-CMWrench = { ent-Wrench }
+  .desc = { ent-Wrench.desc }
+
 ent-CMMultitool = Security Access Tuner
-    .desc = A small handheld tool used to override various machine functions.
+    .desc = Небольшой ручной инструмент, используемый для управления различными функциями машины.
     .suffix = Multitool
-ent-CMCrowbar = { ent-['Crowbar', 'CMEntityBase'] }
 
-  .desc = { ent-['Crowbar', 'CMEntityBase'].desc }
-ent-CMCrowbarRed = emergency crowbar
+ent-CMCrowbar = { ent-Crowbar }
+  .desc = { ent-Crowbar.desc }
+
+ent-CMCrowbarRed = экстренный лом
     .desc = { ent-CMCrowbar.desc }
-ent-CMWelder = welding tool
-    .desc = Melts anything as long as it's fueled, don't forget your eye protection!
+
+ent-CMWelder = сварочный аппарат
+    .desc = Плавит все, что угодно, пока оно заправлено топливом, не забудьте о защите глаз!
