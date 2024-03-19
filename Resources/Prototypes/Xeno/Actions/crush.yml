@@ -1,7 +1,7 @@
 - type: entity
   id: ActionXenoCrushDash
   name: jump
-  description: jump desc
+  description: Совершает сокрушительный рывок, нанасящий урон всему, что находиться находиться на пути, а также оглушает всех сущетсв кроме ксеноморфов, на 2 секунды.
   noSpawn: true
   components:
     - type: WorldTargetAction
