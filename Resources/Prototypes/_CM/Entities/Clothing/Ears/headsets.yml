@@ -34,8 +34,12 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommandMarine
+      - EncryptionKeyCommand
       - EncryptionKeyCommon
+      - EncryptionKeyAlpha
+      - EncryptionKeyDelta
+      - EncryptionKeyCharlie
+      - EncryptionKeyBravo
   - type: Sprite
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
@@ -66,7 +70,6 @@
     containers:
       key_slots:
       - EncryptionKeyAlpha
-      - EncryptionKeyCommon
       - EncryptionKeyCommand
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
@@ -84,7 +87,6 @@
       key_slots:
       - EncryptionKeyBravo
       - EncryptionKeyCommand
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
   - type: Clothing
@@ -100,7 +102,6 @@
     containers:
       key_slots:
       - EncryptionKeyCharlie
-      - EncryptionKeyCommon
       - EncryptionKeyCommand
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
@@ -117,7 +118,6 @@
     containers:
       key_slots:
       - EncryptionKeyDelta
-      - EncryptionKeyCommon
       - EncryptionKeyCommand
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
@@ -133,7 +133,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyAlpha
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
@@ -150,7 +149,6 @@
     containers:
       key_slots:
       - EncryptionKeyAlpha
-      - EncryptionKeyCommon
       - EncryptionKeyMedicalScience
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
@@ -167,7 +165,6 @@
     containers:
       key_slots:
       - EncryptionKeyAlpha
-      - EncryptionKeyCommon
       - EncryptionKeyEngineering
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
@@ -185,7 +182,6 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyAlpha
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
   - type: Clothing
@@ -200,7 +196,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyBravo
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
@@ -217,7 +212,6 @@
     containers:
       key_slots:
       - EncryptionKeyBravo
-      - EncryptionKeyCommon
       - EncryptionKeyEngineering
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
@@ -234,7 +228,6 @@
     containers:
       key_slots:
       - EncryptionKeyBravo
-      - EncryptionKeyCommon
       - EncryptionKeyMedicalScience
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
@@ -252,7 +245,6 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyBravo
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
   - type: Clothing
@@ -267,7 +259,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyCharlie
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
@@ -284,7 +275,6 @@
     containers:
       key_slots:
       - EncryptionKeyCharlie
-      - EncryptionKeyCommon
       - EncryptionKeyMedicalScience
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
@@ -301,7 +291,6 @@
     containers:
       key_slots:
       - EncryptionKeyCharlie
-      - EncryptionKeyCommon
       - EncryptionKeyEngineering
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
@@ -319,7 +308,6 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyCharlie
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
   - type: Clothing
@@ -335,7 +323,6 @@
     containers:
       key_slots:
       - EncryptionKeyDelta
-      - EncryptionKeyCommon
       - EncryptionKeyMedicalScience
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
@@ -352,7 +339,6 @@
     containers:
       key_slots:
       - EncryptionKeyDelta
-      - EncryptionKeyCommon
       - EncryptionKeyEngineering
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
@@ -368,7 +354,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyDelta
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
@@ -384,8 +369,8 @@
   - type: ContainerFill
     containers:
       key_slots:
+      - EncryptionKeyCommand
       - EncryptionKeyDelta
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
   - type: Clothing
@@ -400,6 +385,7 @@
   - type: ContainerFill
     containers:
       key_slots:
+      - EncryptionKeyCommand
       - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
