@@ -1,8 +1,8 @@
 ent-MobCrusherXeno = Крушитель
 ent-MobDefilerXeno = Осквернитель
 # actions-start
-ent-ActionCrusherJump = Jump
-    .desc = Make a jump.
+ent-ActionXenoCrushDash = Моментальный рывок
+    .desc = Совершаее сокрушительный рывок, нанасящий урон всему, что находиться находиться на пути, а также оглушает всех сущетсв кроме ксеноморфов, на 2 секунды.
 ent-ActionCrusherStun = Stun
     .desc = Stun object.
 ent-ActionDefilerDefaultSpit = Плевок
