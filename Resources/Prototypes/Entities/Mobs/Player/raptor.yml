@@ -48,19 +48,7 @@
   - type: MovementIgnoreGravity
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
-    - Command
-    - Engineering
-    - Medical
-    - Science
-    - Security
-    - Service
-    - Supply
-    - Alpha
-    - Bravo
-    - Charlie
-    - Delta
     globalReceive: true
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
