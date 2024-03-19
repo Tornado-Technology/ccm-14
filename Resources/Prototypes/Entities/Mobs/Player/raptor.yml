@@ -49,11 +49,13 @@
   - type: ActiveRadio
     channels:
     - Common
+    - Command
     globalReceive: true
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
       - Common
+      - Command
   - type: CanMoveInAir
   - type: Visibility
     layer: 1
