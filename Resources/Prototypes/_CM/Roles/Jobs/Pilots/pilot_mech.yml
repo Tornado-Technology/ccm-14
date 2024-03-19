@@ -31,4 +31,5 @@
     back: ClothingBackpackMarine
     shoes: ClothingShoesBootsCombat
     id: PilotMechIDCard
+    ears: ClothingHeadsetPilotShattle
     pocket1: EmergencyMedipen
