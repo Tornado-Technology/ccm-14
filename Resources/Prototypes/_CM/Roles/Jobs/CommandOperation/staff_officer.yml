@@ -36,7 +36,7 @@
     jumpsuit: ClothingUniformJumpsuitStaffOfficer
     eyes: ClothingEyesGlassesRPG
     id: StaffOfficerIDCard
-    ears: ClothingHeadsetMarineCommands
+    ears: ClothingHeadsetMarineHeadOperation
     belt: ClothingBeltAssault
     shoes: ClothingShoesCentcomBlack
     pocket1: EmergencyMedipen
