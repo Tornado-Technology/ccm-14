@@ -53,7 +53,7 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-      - Command
+      - Common
   - type: CanMoveInAir
   - type: Visibility
     layer: 1
