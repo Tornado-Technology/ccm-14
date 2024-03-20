@@ -55,6 +55,7 @@
     containers:
       key_slots:
       - EncryptionKeyHeadOperation
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/command.rsi
   - type: Clothing
@@ -387,6 +388,7 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyCommon
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
   - type: Clothing
