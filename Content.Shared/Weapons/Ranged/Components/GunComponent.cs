@@ -151,6 +151,12 @@ public partial class GunComponent : Component
     /// </summary>
     [DataField("clumsyProof")]
     public bool ClumsyProof = false;
+
+    // CCM change start
+    [DataField]
+    [AutoNetworkedField]
+    public bool StopMeleeOnShoot = true;
+    // CCM change end
 }
 
 [Flags]

@@ -166,6 +166,7 @@
     - type: LightningTarget
       priority: 2
       lightningExplode: false
+    - type: MiddleMouseShootKey
 
 - type: entity
   id: ActionXenoAcid

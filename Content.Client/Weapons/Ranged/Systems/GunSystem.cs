@@ -1,10 +1,11 @@
 using System.Numerics;
+using Content.Client._CM14.Gun;
 using Content.Client.Items;
 using Content.Client.Weapons.Ranged.Components;
 using Content.Shared.Camera;
 using Content.Shared.CombatMode;
+using Content.Shared.Input;
 using Content.Shared.Mech.Components;
-using Robust.Shared.Spawners;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
@@ -154,7 +155,14 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         var useKey = gun.UseKey ? EngineKeyFunctions.Use : EngineKeyFunctions.UseSecondary;
+        // CCM change start
+        if (TryComp<MiddleMouseShootKeyComponent>(entity, out _))
+        {
+            useKey = ContentKeyFunctions
+                .MouseMiddle; // Force mouse middle key
+        }
 
+        // CCM change end
         if (_inputSystem.CmdStates.GetState(useKey) != BoundKeyState.Down)
         {
             if (gun.ShotCounter != 0)
@@ -188,14 +196,16 @@ public sealed partial class GunSystem : SharedGunSystem
     }
 
     public override void Shoot(EntityUid gunUid, GunComponent gun, List<(EntityUid? Entity, IShootable Shootable)> ammo,
-        EntityCoordinates fromCoordinates, EntityCoordinates toCoordinates, out bool userImpulse, EntityUid? user = null, bool throwItems = false)
+        EntityCoordinates fromCoordinates, EntityCoordinates toCoordinates, out bool userImpulse,
+        EntityUid? user = null, bool throwItems = false)
     {
         userImpulse = true;
 
         // Rather than splitting client / server for every ammo provider it's easier
         // to just delete the spawned entities. This is for programmer sanity despite the wasted perf.
         // This also means any ammo specific stuff can be grabbed as necessary.
-        var direction = fromCoordinates.ToMapPos(EntityManager, TransformSystem) - toCoordinates.ToMapPos(EntityManager, TransformSystem);
+        var direction = fromCoordinates.ToMapPos(EntityManager, TransformSystem) -
+                        toCoordinates.ToMapPos(EntityManager, TransformSystem);
 
         foreach (var (ent, shootable) in ammo)
         {
@@ -362,6 +372,6 @@ public sealed partial class GunSystem : SharedGunSystem
         var uidPlayer = EnsureComp<AnimationPlayerComponent>(uid);
 
         _animPlayer.Stop(uid, uidPlayer, "muzzle-flash-light");
-        _animPlayer.Play(uid, uidPlayer, animTwo,"muzzle-flash-light");
+        _animPlayer.Play(uid, uidPlayer, animTwo, "muzzle-flash-light");
     }
 }

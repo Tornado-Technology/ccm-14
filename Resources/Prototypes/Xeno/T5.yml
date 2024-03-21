@@ -30,6 +30,7 @@
       availableModes:
       - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+      stopMeleeOnShoot: false
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.25
     - type: BasicEntityAmmoProvider

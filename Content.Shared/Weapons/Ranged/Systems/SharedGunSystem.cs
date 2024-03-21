@@ -114,6 +114,10 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         if (!TryComp<MeleeWeaponComponent>(uid, out var melee))
             return;
+        // CCM change start
+        if (!component.StopMeleeOnShoot)
+            return;
+        // CCM change end
 
         if (melee.NextAttack > component.NextFire)
         {
