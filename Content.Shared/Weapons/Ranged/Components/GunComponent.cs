@@ -154,7 +154,6 @@ public partial class GunComponent : Component
 
     // CCM change start
     [DataField]
-    [AutoNetworkedField]
     public bool StopMeleeOnShoot = true;
     // CCM change end
 }
