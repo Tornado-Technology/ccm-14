@@ -14,3 +14,6 @@
       collection: Whistle
   - type: UseDelay
     delay: 2.0
+  - type: Tag
+    tags:
+    - Whistle

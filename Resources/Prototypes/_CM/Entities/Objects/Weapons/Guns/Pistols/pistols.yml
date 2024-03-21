@@ -26,6 +26,9 @@
         whitelist:
           tags:
             - BulletPistol45GAP
+  - type: Tag
+    tags:
+    - Sidearm
 
 - type: Tag
   id: BulletPistol45GAP
@@ -62,6 +65,9 @@
         whitelist:
           tags:
             - BulletPistol4440
+  - type: Tag
+    tags:
+    - Sidearm
 
 - type: Tag
   id: BulletPistol4440

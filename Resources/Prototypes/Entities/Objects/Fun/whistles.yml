@@ -13,7 +13,7 @@
   - type: UseDelay
     delay: 0
   - type: EmitSoundOnUse
-    sound: 
+    sound:
       collection: BaseWhistle
   - type: Whistle
     distance: 5
@@ -28,3 +28,6 @@
     state: securityWhistle
   - type: Item
     sprite: Objects/Fun/whistle.rsi
+  - type: Tag
+    tags:
+    - Whistle

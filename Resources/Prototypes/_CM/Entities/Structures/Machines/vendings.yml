@@ -381,7 +381,7 @@
         amount: 1
       - id: CMPouchMagazineLarge
         amount: 1
-      - id: CMPouchCommand
+      - id: CMPouchCommandFill
         amount: 1
     - name: Маски
       entries:

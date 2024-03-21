@@ -42,7 +42,9 @@
       drawRate: 0
       useRate: 20
     - type: ActivatableUIRequiresPowerCell
-
+    - type: Tag
+      tags:
+      - HandheldMap
 - type: entity
   id: HandheldStationMapUnpowered
   parent: BaseHandheldStationMap

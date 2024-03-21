@@ -226,3 +226,20 @@
     - id: Brutepack
     - id: Ointment
     # todo cm14 autoinjectors bicard, kelotane, oxycodone, emergency x2
+
+- type: entity
+  parent: CMPouchCommand
+  id: CMPouchCommandFill
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponMagnumVP-60x2
+    - id: SpeedLoaderMagnumVP-60x2
+    - id: HandheldStationMap
+    - id: BoxFolderBlack
+    - id: SecurityWhistle
+    - id: CrayonWhite
+    - id: Pen
+    - id: FlareMarine
+      amount: 3
