@@ -35,7 +35,6 @@
     containers:
       key_slots:
       - EncryptionKeyCommand
-      - EncryptionKeyCommon
       - EncryptionKeyAlpha
       - EncryptionKeyDelta
       - EncryptionKeyCharlie
@@ -72,6 +71,7 @@
       key_slots:
       - EncryptionKeyAlpha
       - EncryptionKeyCommand
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
   - type: Clothing
@@ -88,6 +88,7 @@
       key_slots:
       - EncryptionKeyBravo
       - EncryptionKeyCommand
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
   - type: Clothing
@@ -104,6 +105,7 @@
       key_slots:
       - EncryptionKeyCharlie
       - EncryptionKeyCommand
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
   - type: Clothing
@@ -120,10 +122,76 @@
       key_slots:
       - EncryptionKeyDelta
       - EncryptionKeyCommand
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/delta.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetSpecAlfa
+  name: marine alfa radio headset
+  description: This is used by Alfa squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAlpha
+      - EncryptionKeyFireSuport
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/alfa.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/alfa.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetSpecBravo
+  name: marine bravo radio headset
+  description: This is used by Bravo squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBravo
+      - EncryptionKeyFireSuport
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/bravo.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/bravo.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetSpecCharlie
+  name: marine charlie radio headset
+  description: This is used by Charlie squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCharlie
+      - EncryptionKeyFireSuport
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/charlie.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/charlie.rsi
+
+- type: entity
+  parent: ClothingHeadsetMarineBase
+  id: ClothingHeadsetSpecDelta
+  name: marine delta radio headset
+  description: This is used by Delta squad members.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyDelta
+      - EncryptionKeyFireSuport
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/delta.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/delta.rsi
+
 ##--------------------------------------------------------------------------------------------Marine's
 - type: entity
   parent: ClothingHeadsetMarineBase
@@ -183,6 +251,7 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyAlpha
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/alfa.rsi
   - type: Clothing
@@ -246,6 +315,7 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyBravo
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/bravo.rsi
   - type: Clothing
@@ -309,6 +379,7 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyCharlie
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/charlie.rsi
   - type: Clothing
@@ -372,6 +443,7 @@
       key_slots:
       - EncryptionKeyCommand
       - EncryptionKeyDelta
+      - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/delta.rsi
   - type: Clothing
@@ -387,7 +459,6 @@
     containers:
       key_slots:
       - EncryptionKeyCommand
-      - EncryptionKeyCommon
       - EncryptionKeyFireSuport
   - type: Sprite
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
