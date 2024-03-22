@@ -584,6 +584,9 @@
     - MagazineScattershot
     - MechWeaponImmolator
     - MechWeaponSolaris
+    # Weapon borg modules
+    - BorgModuleWeaponLaserSimple
+    - BorgModuleWeaponLaserAdvanced
   - type: MaterialStorage
     whitelist:
       tags:

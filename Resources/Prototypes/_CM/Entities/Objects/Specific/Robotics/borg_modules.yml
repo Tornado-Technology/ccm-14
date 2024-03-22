@@ -1,0 +1,29 @@
+- type: entity
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  id: BorgModuleWeaponLaserSimple
+  name: weapon simple laser cyborg module
+  components:
+  - type: Sprite
+    layers:
+      - state: security
+      - state: icon-weapon
+  - type: ItemBorgModule
+    items:
+      - WeaponAdvancedLaser
+      - MacheteMarine
+
+- type: entity
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  id: BorgModuleWeaponLaserAdvanced
+  name: weapon advance laser cyborg module
+  components:
+  - type: Sprite
+    layers:
+      - state: security
+      - state: icon-weapon
+  - type: ItemBorgModule
+    items:
+      - WeaponAdvancedLaser
+      - WeaponAdvancedLaser
+      - WeaponAdvancedLaser
+      - MacheteMarine

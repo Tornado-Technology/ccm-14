@@ -158,8 +158,20 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - MechWeaponHades
-  - MagazineHades
+    - MechWeaponHades
+    - MagazineHades
+
+- type: technology
+  id: SimpleBorgWeapons
+  name: research-technology-simple-borg-weapons
+  icon:
+    sprite: Objects/Specific/Robotics/borgmodule.rsi
+    state: security
+  discipline: Arsenal
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+    - BorgModuleWeaponLaserSimple
 
 - type: technology
   id: MechWeaponScattershot
@@ -213,6 +225,18 @@
   - MarineCASClusterBomb
 
 - type: technology
+  id: AdvancedBorgWeapons
+  name: research-technology-advanced-borg-weapons
+  icon:
+    sprite: Objects/Specific/Robotics/borgmodule.rsi
+    state: security
+  discipline: Arsenal
+  tier: 3
+  cost: 5000
+  recipeUnlocks:
+    - BorgModuleWeaponLaserAdvanced
+
+- type: technology
   id: SpecialMunitions
   name: research-technology-special-munitions
   icon:
@@ -222,13 +246,13 @@
   tier: 3
   cost: 5000
   recipeUnlocks:
-  - MagazineShotgunAFG-12
-  - FuelTankFlamethrower
-  - BoxAntimaterialCM
-  - MagazineLightRifleBox
-  - BoxShotgunLMG
-  - GrenadeBlastMarine
-  - GrenadeFragMarine
+    - MagazineShotgunAFG-12
+    - FuelTankFlamethrower
+    - BoxAntimaterialCM
+    - MagazineLightRifleBox
+    - BoxShotgunLMG
+    - GrenadeBlastMarine
+    - GrenadeFragMarine
 #  - ClothingEyesGlassesSecurity
 #  - Truncheon
 #  - TelescopicShield
