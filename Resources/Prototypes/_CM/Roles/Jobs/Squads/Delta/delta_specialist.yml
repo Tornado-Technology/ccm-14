@@ -26,5 +26,5 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitdelta_spec
     id: DSpecialistsIDCard
-    ears: ClothingHeadsetMarineDelta
+    ears: ClothingHeadsetSpecDelta
     pocket1: EmergencyMedipen
