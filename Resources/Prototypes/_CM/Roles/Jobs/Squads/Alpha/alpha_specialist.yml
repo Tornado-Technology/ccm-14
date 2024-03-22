@@ -26,5 +26,5 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitAlpha_spec
     id: ASpecialistsIDCard
-    ears: ClothingHeadsetMarineAlfa
+    ears: ClothingHeadsetSpecAlfa
     pocket1: EmergencyMedipen
