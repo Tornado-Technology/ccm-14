@@ -26,5 +26,5 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitcharlie_spec
     id: CSpecialistsIDCard
-    ears: ClothingHeadsetMarineCharlie
+    ears: ClothingHeadsetSpecCharlie
     pocket1: EmergencyMedipen
