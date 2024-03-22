@@ -26,5 +26,5 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitbravo_spec
     id: BSpecialistsIDCard
-    ears: ClothingHeadsetMarineBravo
+    ears: ClothingHeadsetSpecBravo
     pocket1: EmergencyMedipen
