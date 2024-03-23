@@ -2,7 +2,7 @@
   parent: EncryptionKey
   id: EncryptionKeyFireSuport
   name: Ключ шифрования огневой подержки
-  description: Ключ шифрования, используемый.
+  description: Ключ шифрования, используемый для связи с огневой поддержкой.
   components:
   - type: EncryptionKey
     channels:
