@@ -51,6 +51,7 @@
       projectile: ProjectileNeurotoxinVeil
       speed: 25
     - type: XenoAcid
+      TimeSpan: 60
     - type: Gun
       fireRate: 0.25
       selectedMode: FullAuto
