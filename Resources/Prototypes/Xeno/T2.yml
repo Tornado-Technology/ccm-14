@@ -212,6 +212,7 @@
       prototype: MobSentinelXeno
       timeUsage: 30
     - type: XenoAcid
+      TimeSpan: 120
     - type: SlowOnDamage
       speedModifierThresholds:
         250: 0.9
