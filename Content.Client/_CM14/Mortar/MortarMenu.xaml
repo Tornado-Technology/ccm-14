@@ -1,0 +1,5 @@
+﻿<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'mortar-window-title'}" MinSize="120 160">
+    <BoxContainer Name="CoordsContainer" Orientation="Vertical">
+    </BoxContainer>
+</DefaultWindow>

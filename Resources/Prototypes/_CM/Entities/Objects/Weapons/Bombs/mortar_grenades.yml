@@ -1,0 +1,88 @@
+- type: entity
+  parent: [ BaseItem, CMEntityBase ]
+  id: CMBaseMortarGrenade
+  name: grenade cartridge
+  abstract: true
+  components:
+    - type: Tag
+      tags:
+        - MortarGrenade
+    - type: Sprite
+      sprite: _CM/Objects/Weapons/Grenades/mortar.rsi
+      state: he
+
+- type: entity
+  parent: CMBaseMortarGrenade
+  id: CMMortarGrenadeExplosion
+  name: mortar grenade explosion
+  description: Guaranteed to light up the mood.
+  noSpawn: true
+  components:
+    - type: Sprite
+      state: he
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: CASBombExplosion
+      maxIntensity: 15
+      intensitySlope: 2
+      totalIntensity: 200 # about a ~6 tile radius
+      canCreateVacuum: false
+
+- type: entity
+  parent: CMBaseMortarGrenade
+  id: CMMortarGrenadeCluster
+  name: mortar grenade cluster
+  description: Guaranteed to light up the mood.
+  noSpawn: true
+  components:
+    - type: Sprite
+      state: inc
+    - type: ClusterGrenade
+      fillPrototype: PelletClusterIncendiary
+      maxGrenadesCount: 50
+      grenadeType: enum.GrenadeType.Shoot
+    - type: EmitSoundOnTrigger
+      sound:
+        path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+    - type: ContainerContainer
+      containers:
+        cluster-payload: !type:Container
+
+- type: entity
+  parent: CMBaseMortarGrenade
+  id: CMMortarGrenadeSmoke
+  name: mortar grenade smoke
+  description: Guaranteed to light up the mood.
+  noSpawn: true
+  components:
+    - type: Sprite
+      state: smoke
+    - type: SmokeOnTrigger
+      duration: 30
+      spreadAmount: 50
+    - type: SoundOnTrigger
+      sound: /Audio/Effects/smoke.ogg
+    - type: ContainerContainer
+      containers:
+        cluster-payload: !type:Container
+
+- type: entity
+  parent: CMBaseMortarGrenade
+  id: CMMortarGrenadeIllumination
+  name: mortar grenade illumination
+  description: Guaranteed to light up the mood.
+  noSpawn: true
+  components:
+    - type: Sprite
+      state: illum
+    - type: ClusterGrenade
+      fillPrototype: ArtyFlare
+      baseTriggerDelay: 4
+      maxGrenadesCount: 8
+      delay: 6
+      distance: 10
+    - type: SoundOnTrigger
+      sound: /Audio/Effects/smoke.ogg
+    - type: ContainerContainer
+      containers:
+        cluster-payload: !type:Container

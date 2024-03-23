@@ -45,6 +45,11 @@
     categories:
     - name: Инженерные приспособления
       entries:
+      - name: Ящик c мортирой
+        cost: 20000
+        crate: CrateEngineeringSecure
+        entities:
+        - CMMortar
       - name: Ящик турелей(2x турель)
         cost: 20000
         crate: CrateEngineeringSecure
@@ -96,6 +101,30 @@
         - RCDAmmo
     - name: Взрывчатка
       entries:
+      - name: Ящик снарядов мортиры (2x взрывные)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+          - CMMortarGrenadeCartridgeExplosion
+          - CMMortarGrenadeCartridgeExplosion
+      - name: Ящик снарядов мортиры (2x зажигательные)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+          - CMMortarGrenadeCartridgeCluster
+          - CMMortarGrenadeCartridgeCluster
+      - name: Ящик снарядов мортиры (2x дымовые)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+          - CMMortarGrenadeCartridgeSmoke
+          - CMMortarGrenadeCartridgeSmoke
+      - name: Ящик снарядов мортиры (2x осветительные)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+          - CMMortarGrenadeCartridgeIllumination
+          - CMMortarGrenadeCartridgeIllumination
       - name: Ящик гранат(5x granade)
         cost: 5000
         crate: CrateWeaponSecure

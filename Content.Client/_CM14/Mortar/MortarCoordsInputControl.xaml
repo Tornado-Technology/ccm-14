@@ -1,0 +1,14 @@
+﻿<Control xmlns="https://spacestation14.io">
+    <GridContainer Margin = "2 0 0 0" Columns="4">
+        <Button Name="Save" Text="{Loc 'mortar-window-button-save'}" Access="Public"></Button>
+        <Button Name="Launch" Text="{Loc 'mortar-window-button-launch'}" Access="Public"></Button>
+        <GridContainer Margin = "2 0 0 0" Columns="2">
+            <Label Text="x:" StyleClasses="StatusFieldTitle"></Label>
+            <LineEdit Name="CoordsX" PlaceHolder="0"  Margin ="0 4" Access="Public" MinSize="40 20"/>
+        </GridContainer>
+        <GridContainer Margin = "2 0 0 0" Columns="2">
+            <Label Text="y:" StyleClasses="StatusFieldTitle"></Label>
+            <LineEdit Name="CoordsY" PlaceHolder="0"  Margin ="0 4" Access="Public" MinSize="40 20"/>
+        </GridContainer>
+    </GridContainer>
+</Control>
