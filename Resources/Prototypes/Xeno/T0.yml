@@ -52,7 +52,7 @@
     - type: Speech
     - type: Bloodstream
       bloodMaxVolume: 10
-      bloodReagent: Blood
+      bloodReagent: FluorosulfuricAcid
     - type: GhostRole
       allowMovement: true
       allowSpeech: true
