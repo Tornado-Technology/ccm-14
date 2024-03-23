@@ -7,7 +7,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobHivelordXeno
-          evolution: 600
+          evolution: 900
     - type: XenoDrone
     - type: XenoVines
     - type: XenoBuildWall
@@ -54,7 +54,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobHunterXeno
-          evolution: 600
+          evolution: 900
     - type: XenoRunner
     - type: XenoEvasion
     - type: MobThresholds
@@ -176,7 +176,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobBullXeno
-          evolution: 600
+          evolution: 900
     - type: XenoStun
     - type: XenoWarrior
     - type: MobThresholds
