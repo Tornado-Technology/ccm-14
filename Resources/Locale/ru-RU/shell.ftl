@@ -40,6 +40,7 @@ shell-invalid-grid-id = Недопустимый ID сетки.
 shell-invalid-map-id = Недопустимый ID карты.
 shell-invalid-entity-uid = { $uid } не является допустимым идентификатором uid.
 shell-invalid-bool = Неверный boolean.
+shell-invalid-int = Неверный integer.
 shell-entity-uid-must-be-number = EntityUid должен быть числом.
 shell-could-not-find-entity = Не удалось найти сущность { $entity }.
 shell-could-not-find-entity-with-uid = Не удалось найти сущность с uid { $uid }.
