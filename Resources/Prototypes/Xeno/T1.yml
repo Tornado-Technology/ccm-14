@@ -158,6 +158,7 @@
           Brute: 18
     - type: XenoDegradation
     - type: XenoAcid
+      TimeSpan: 180
     - type: SlowOnDamage
       speedModifierThresholds:
         200: 0.9
