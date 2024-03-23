@@ -35,6 +35,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommand
+      - EncryptionKeyFireSuport
       - EncryptionKeyAlpha
       - EncryptionKeyDelta
       - EncryptionKeyCharlie
