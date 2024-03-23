@@ -9,8 +9,8 @@
       itemIconStyle: BigAction
       checkCanAccess: false
       interactOnMiss: true
-      sound: !type:SoundCollectionSpecifier
-        collection: XenoScream
+      sound: !type:SoundPathSpecifier
+        path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: stun
