@@ -7,16 +7,16 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobRunnerXeno
-          evolution: 120
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobDroneXeno
-          evolution: 120
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobSentinelXeno
-          evolution: 120
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobWarriorXeno
-          evolution: 120
+          evolution: 240
     - type: FaceHugger
       paralyzeTime: 3
       chansePounce: 100
