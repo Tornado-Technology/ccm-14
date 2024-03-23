@@ -50,6 +50,7 @@
         groups:
           Brute: 36
     - type: XenoAcid
+      TimeSpan: 30
     - type: SlowOnDamage
       speedModifierThresholds:
         800: 0.9
@@ -75,6 +76,8 @@
     - type: XenoScreech
     - type: XenoVines
     - type: XenoBuildWall
+    - type: XenoAcid
+      TimeSpan: 30
       wallPrototype: XenoWallFortified
       timeUsage: 10
     - type: XenoSpit
