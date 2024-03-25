@@ -21,6 +21,7 @@ jobs:
     - name: Setup secrets
       env:
         SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
+        BOOST_URL: ${{ secrets.boost_url }}
       if: ${{ env.SSH_KEY != '' }}
       run: |
         mkdir -p ~/.ssh
