@@ -13,21 +13,16 @@ public sealed class XenoAcidSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoAcidComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoAcidComponent, XenoCorrosiveAcidEvent>(OnXenoCorrosiveAcid);
         SubscribeLocalEvent<XenoAcidComponent, XenoCorrosiveAcidDoAfterEvent>(OnXenoCorrosiveAcidDoAfter);
         SubscribeLocalEvent<CorrodingComponent, EntityUnpausedEvent>(OnCorrodingUnpaused);
     }
-    private void OnStartup(EntityUid uid, XenoAcidComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
-    }
+
     private void OnXenoCorrosiveAcid(Entity<XenoAcidComponent> xeno, ref XenoCorrosiveAcidEvent args)
     {
         if (xeno.Owner != args.Performer ||
@@ -36,7 +31,7 @@ public sealed class XenoAcidSystem : EntitySystem
             return;
         }
 
-        var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.AcidDelay, new XenoCorrosiveAcidDoAfterEvent(args), xeno, args.Target)
+        var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.AcidDelay, new XenoCorrosiveAcidDoAfterEvent(xeno.Comp.AcidId, xeno.Comp.AcidTime), xeno, args.Target)
         {
             BreakOnTargetMove = true,
             BreakOnUserMove = true

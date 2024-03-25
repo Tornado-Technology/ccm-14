@@ -9,16 +9,13 @@ namespace Content.Shared._CM14.Xeno.Systems;
 
 public sealed class XenoEvasionSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoEvasionComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoEvasionComponent, XenoEvasionEvent>(OnEvasion);
-
         SubscribeLocalEvent<XenoEvadesComponent, ProjectileHitAttemptEvent>(OnHitAttempt);
     }
 
@@ -37,11 +34,6 @@ public sealed class XenoEvasionSystem : EntitySystem
             evasion.DurationTime = 0;
             RemComp<XenoEvadesComponent>(uid);
         }
-    }
-
-    private void OnStartup(Entity<XenoEvasionComponent> ent, ref ComponentStartup args)
-    {
-        _actions.AddAction(ent, ent.Comp.Action);
     }
 
     private void OnEvasion(Entity<XenoEvasionComponent> ent, ref XenoEvasionEvent args)

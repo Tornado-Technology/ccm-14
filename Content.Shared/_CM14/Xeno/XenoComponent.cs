@@ -7,7 +7,7 @@ namespace Content.Shared._CM14.Xeno;
 public sealed partial class XenoComponent : Component
 {
     [DataField]
-    public EntProtoId ActionNightVision = "ActionXenoNightVision";
+    public List<EntProtoId> Actions = new() {"ActionXenoNightVision"};
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float HealthRegen = 0.25f;

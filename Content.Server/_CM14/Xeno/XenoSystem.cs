@@ -1,17 +1,15 @@
 using Content.Shared._CM14.Xeno;
-using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
-using Robust.Shared.Physics.Systems;
 using Content.Shared._CM14.Xeno.Components;
+using Robust.Server.GameObjects;
 
 namespace Content.Server._CM14.Xeno;
 
-public sealed class XenoSystem : EntitySystem
+public sealed partial class XenoSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
+    [Dependency] private readonly PhysicsSystem _physics = default!;
 
     public override void Initialize()
     {
@@ -20,9 +18,9 @@ public sealed class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
 
-    private void OnStartup(EntityUid uid, XenoComponent component, ComponentStartup args)
+    private void OnStartup(Entity<XenoComponent> xeno, ref ComponentStartup args)
     {
-        _actions.AddAction(uid, component.ActionNightVision);
+        OnActionsStartup(xeno, ref args);
     }
 
     public override void Update(float frameTime)

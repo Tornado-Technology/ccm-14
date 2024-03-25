@@ -13,21 +13,14 @@ public sealed class XenoRestSystem : EntitySystem
 {
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoRestComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoRestComponent, XenoRestEvent>(OnRest);
         SubscribeLocalEvent<XenoRestComponent, InteractionAttemptEvent>(OnInteract);
         SubscribeLocalEvent<XenoRestingComponent, UpdateCanMoveEvent>(OnCanMove);
-    }
-
-    private void OnStartup(Entity<XenoRestComponent> rest, ref ComponentStartup args)
-    {
-        _actions.AddAction(rest, rest.Comp.Action);
     }
 
     private void OnInteract(Entity<XenoRestComponent> rest, ref InteractionAttemptEvent args)

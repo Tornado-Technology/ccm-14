@@ -1,14 +1,14 @@
 - type: entity
-  abstract: true
   parent:
     - BaseMob
     - MobAtmosExposed
     - MobCombat
     - MobBloodstream
     - MobFlammable
+    - CMEntityBase
   id: MobXenoBase
+  abstract: true
   components:
-#    - type: FriendlyFire
     - type: Xeno
     - type: XenoEvolutions
     - type: MovementIgnoreGravity

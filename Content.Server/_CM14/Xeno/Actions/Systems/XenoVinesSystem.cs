@@ -1,6 +1,5 @@
 using System.Linq;
 using System.Numerics;
-using Content.Shared.Actions;
 using Content.Shared._CM14.Xeno;
 using Robust.Shared.Map;
 using Content.Server._CM14.Xeno.Actions.Components;
@@ -9,20 +8,13 @@ namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoVinesSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookupSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoVinesComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoVinesComponent, XenoVinesEvent>(OnSpawnVines);
-    }
-
-    private void OnStartup(EntityUid uid, XenoVinesComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnSpawnVines(EntityUid uid, XenoVinesComponent component, XenoVinesEvent args)

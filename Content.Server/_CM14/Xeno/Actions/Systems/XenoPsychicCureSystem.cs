@@ -1,5 +1,4 @@
 using Content.Server.Body.Systems;
-using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.DoAfter;
@@ -8,12 +7,10 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Actions.Components;
 
-
 namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoPsychicCureSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
@@ -23,15 +20,9 @@ public sealed class XenoPsychicCureSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoPsychicCureComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoPsychicCureComponent, XenoPsychicCureEvent>(OnPsychicCure);
         SubscribeLocalEvent<XenoPsychicCureComponent, XenoPsychicCureDoAfterEvent>(OnPsychicCureDoAfter);
         SubscribeLocalEvent<XenoRejuvenateProjComponent, StartCollideEvent>(OnCollide);
-    }
-
-    private void OnStartup(EntityUid uid, XenoPsychicCureComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnPsychicCureDoAfter(EntityUid uid, XenoPsychicCureComponent component,

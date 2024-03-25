@@ -25,14 +25,8 @@ public sealed class XenoBuildWallSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoBuildWallComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoBuildWallComponent, XenoBuildWallEvent>(OnBuild);
         SubscribeLocalEvent<XenoBuildWallComponent, XenoBuildWallDoAfterEvent>(OnBuildDoAfter);
-    }
-
-    private void OnStartup(EntityUid uid, XenoBuildWallComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnBuild(Entity<XenoBuildWallComponent> ent, ref XenoBuildWallEvent args)

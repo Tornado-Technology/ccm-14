@@ -1,4 +1,3 @@
-using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Robust.Shared.Timing;
 using Content.Shared._CM14.Xeno;
@@ -7,14 +6,12 @@ namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoRageSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoRageComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoRageComponent, XenoRageEvent>(OnToggle);
     }
 
@@ -35,11 +32,6 @@ public sealed class XenoRageSystem : EntitySystem
             Dirty(uid, comp);
             damageable.DamageModifierSetId = comp.PassiveModifierSet;
         }
-    }
-
-    private void OnStartup(EntityUid uid, XenoRageComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnToggle(EntityUid uid, XenoRageComponent component, XenoRageEvent args)

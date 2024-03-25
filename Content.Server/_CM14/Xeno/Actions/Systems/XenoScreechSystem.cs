@@ -1,4 +1,3 @@
-using Content.Shared.Actions;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Stunnable;
 using Content.Shared._CM14.Xeno;
@@ -8,7 +7,6 @@ namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoScreechSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
 
@@ -16,13 +14,7 @@ public sealed class XenoScreechSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoScreechComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoScreechComponent, XenoScreechEvent>(OnStun);
-    }
-
-    private void OnStartup(EntityUid uid, XenoScreechComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnStun(EntityUid uid, XenoScreechComponent comp, XenoScreechEvent args)

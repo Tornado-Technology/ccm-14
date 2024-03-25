@@ -1,114 +1,27 @@
 - type: entity
-  name: Crusher
-  parent: MobXenoBaseT3
-  id: MobCrusherXeno
-  components:
-    - type: XenoCrushDash
-    - type: XenoStun
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _CM/Mobs/Xenos/crusher.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        1200: Dead
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 1400
-        behaviors:
-        - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 30
-    - type: XenoDegradation
-      prototype: MobXenoBull
-      timeUsage: 60
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        600: 0.9
-        720: 0.85
-        840: 0.80
-        960: 0.75
-        1080: 0.70
-
-- type: entity
-  name: Defiler
-  parent: MobXenoBaseT3
-  id: MobDefilerXeno
-  components:
-    - type: XenoDefiler
-    - type: XenoExplosive
-    - type: XenoSpit
-      action: ActionDefilerDefaultSpit
-      projectile: ProjectileNeurotoxinVeil
-      speed: 25
-    - type: XenoAcid
-      TimeSpan: 60
-    - type: Gun
-      fireRate: 0.25
-      selectedMode: FullAuto
-      useKey: false
-      availableModes:
-      - FullAuto
-      soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
-    - type: BasicEntityAmmoProvider
-      proto: ProjectileToxinSpit
-      capacity: 1
-      count: 1
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _CM/Mobs/Xenos/defiler.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        600: Dead
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 800
-        behaviors:
-        - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 30
-    - type: XenoDegradation
-      prototype: MobSpitterXeno
-      timeUsage: 60
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        300: 0.9
-        360: 0.85
-        420: 0.80
-        480: 0.75
-        540: 0.70
-
-- type: entity
-  name: gorger
   parent: MobXenoBaseT3
   id: MobGorgerXeno
+  name: gorger
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoBuildWall
+        - ActionXenoVines
+        - ActionXenoRejuvenate
+        - ActionXenoNightVision
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
       timeUsage: 10
     - type: XenoSpitRejuvenate
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 18
+        types:
+          Structural: 20
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -122,18 +35,7 @@
         behaviors:
         - !type:GibBehavior { }
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/gorger.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 18
-        types:
-          Structural: 20
     - type: XenoDegradation
       prototype: MobHivelordXeno
       timeUsage: 60
@@ -146,18 +48,187 @@
         540: 0.70
 
 - type: entity
-  name: ravager
+  parent: MobXenoBaseT3
+  id: MobWarlockXeno
+  name: warlock
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoEvasion
+        - ActionXenoStealth
+        - ActionXenoPsychicJump
+        - ActionXenoNightVision
+    - type: XenoEvasion
+    - type: XenoStealth
+    - type: XenoPsychicJump
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 30
+    # Stealth
+    - type: Stealth
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.3
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/warlock.rsi
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        500: Dead
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 700
+          behaviors:
+            - !type:GibBehavior { }
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 6
+      baseSprintSpeed: 10
+    - type: XenoDegradation
+      prototype: MobHunterXeno
+      timeUsage: 60
+    - type: Puller
+      sprintModifier: 0.95
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        250: 0.9
+        300: 0.85
+        350: 0.80
+        400: 0.75
+        450: 0.70
+
+- type: entity
+  parent: MobXenoBaseT3
+  id: MobDefilerXeno
+  name: defiler
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoExplosive
+        - ActionXenoAcid
+        - ActionDefilerDefaultSpit
+        - ActionXenoNightVision
+    - type: XenoExplosive
+    - type: XenoAcid
+      acidTime: 60
+    - type: XenoSpit
+      projectile: ProjectileNeurotoxinVeil
+      speed: 25
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 30
+    # Shoot
+    - type: Gun
+      fireRate: 0.25
+      selectedMode: FullAuto
+      useKey: false
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.25
+    - type: BasicEntityAmmoProvider
+      proto: ProjectileToxinSpit
+      capacity: 1
+      count: 1
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/defiler.rsi
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 800
+          behaviors:
+            - !type:GibBehavior { }
+    - type: XenoDegradation
+      prototype: MobSpitterXeno
+      timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70
+
+- type: entity
+  parent: MobXenoBaseT3
+  id: MobCrusherXeno
+  name: crusher
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoCrushDash
+        - ActionXenoStun
+        - ActionXenoNightVision
+    - type: XenoCrushDash
+    - type: XenoStun
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 30
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/crusher.rsi
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        1200: Dead
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 1400
+          behaviors:
+            - !type:GibBehavior { }
+    - type: XenoDegradation
+      prototype: MobXenoBull
+      timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        600: 0.9
+        720: 0.85
+        840: 0.80
+        960: 0.75
+        1080: 0.70
+
+- type: entity
   parent: MobXenoBaseT3
   id: MobRavagerXeno
+  name: ravager
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoEndure
+        - ActionXenoRage
+        - ActionXenoStun
+        - ActionXenoNightVision
     - type: XenoEndure
     - type: XenoRage
+    - type: XenoStun
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 40
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/ravager.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -170,11 +241,6 @@
           damage: 2200
         behaviors:
         - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 30
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: XenoRavager
@@ -212,56 +278,3 @@
     Slash: 0
     Piercing: 0
     Heat: 1
-
-- type: entity
-  name: warlock
-  parent: MobXenoBaseT3
-  id: MobWarlockXeno
-  components:
-    - type: XenoWarlock
-    - type: XenoStealth
-    - type: XenoEvasion
-    - type: XenoPsychicJump
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _CM/Mobs/Xenos/warlock.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        500: Dead
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 700
-        behaviors:
-        - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 30
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 6
-      baseSprintSpeed: 10
-    - type: StealthOnMove
-      passiveVisibilityRate: -0.6
-      movementVisibilityRate: 0.4
-    - type: Stealth
-    - type: XenoDegradation
-      prototype: MobHunterXeno
-      timeUsage: 60
-    - type: Puller
-      needsHands: false
-      sprintModifier: 0.95
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        250: 0.9
-        300: 0.85
-        350: 0.80
-        400: 0.75
-        450: 0.70

@@ -17,10 +17,10 @@ public sealed partial class XenoCorrosiveAcidDoAfterEvent : DoAfterEvent
     [DataField]
     public TimeSpan Time = TimeSpan.FromSeconds(30);
 
-    public XenoCorrosiveAcidDoAfterEvent(XenoCorrosiveAcidEvent ev)
+    public XenoCorrosiveAcidDoAfterEvent(EntProtoId acidId, TimeSpan time)
     {
-        AcidId = ev.AcidId;
-        Time = ev.Time;
+        AcidId = acidId;
+        Time = time;
     }
 
     public override DoAfterEvent Clone()

@@ -1,92 +1,44 @@
 - type: entity
-  name: bull
-  parent: MobXenoBaseT2
-  id: MobBullXeno
-  components:
-    - type: XenoEvolutions
-      evolutions:
-        - !type:XenoEvolution
-          prototype: MobCrusherXeno
-          evolution: 1200
-        - !type:XenoEvolution
-          prototype: MobRavagerXeno
-          evolution: 2300
-    - type: XenoStun
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        800: Dead
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 1000
-        behaviors:
-        - !type:GibBehavior { }
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _CM/Mobs/Xenos/bull.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 28
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 3
-      baseSprintSpeed: 6
-    - type: XenoDegradation
-      prototype: MobWarriorXeno
-      timeUsage: 30
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        400: 0.9
-        480: 0.85
-        560: 0.80
-        640: 0.75
-        720: 0.70
-
-- type: entity
-  name: hivelord
   parent: MobXenoBaseT2
   id: MobHivelordXeno
+  name: hivelord
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoBuildWall
+        - ActionXenoVines
+        - ActionXenoNightVision
+    - type: XenoVines
+    - type: XenoBuildWall
+      wallPrototype: XenoWall
+    # Evolution
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
           prototype: MobGorgerXeno
           evolution: 1200
-    - type: XenoVines
-    - type: XenoBuildWall
-      wallPrototype: XenoWall
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 18
+        types:
+          Structural: 10
     - type: MobThresholds
       thresholds:
         0: Alive
         500: Dead
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 700
-        behaviors:
-        - !type:GibBehavior { }
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 700
+          behaviors:
+          - !type:GibBehavior { }
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/hivelord.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 18
-        types:
-          Structural: 10
     - type: XenoDegradation
       prototype: MobDroneXeno
       timeUsage: 30
@@ -99,18 +51,34 @@
         450: 0.70
 
 - type: entity
-  name: hunter
   parent: MobXenoBaseT2
   id: MobHunterXeno
+  name: hunter
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoEvasion
+        - ActionXenoStealth
+        - ActionXenoNightVision
+    - type: XenoEvasion
+    - type: XenoStealth
+    # Evolution
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
           prototype: MobWarlockXeno
           evolution: 1200
-    - type: XenoHunter
-    - type: XenoEvasion
-    - type: XenoStealth
+    # Attack
+    - type: MeleeWeapon
+        damage:
+          groups:
+            Brute: 24
+    # Stealth
+    - type: Stealth
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.3
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -124,23 +92,10 @@
         behaviors:
         - !type:GibBehavior { }
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/hunter.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 24
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10
-    - type: StealthOnMove
-      passiveVisibilityRate: -0.6
-      movementVisibilityRate: 0.4
-    - type: Stealth
     - type: XenoDegradation
       prototype: MobRunnerXeno
       timeUsage: 30
@@ -156,28 +111,38 @@
         360: 0.70
 
 - type: entity
-  name: spitter
   parent: MobXenoBaseT2
   id: MobSpitterXeno
+  name: spitter
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoExplosive
+        - ActionXenoAcid
+        - ActionXenoNightVision
     - type: XenoExplosive
+    - type: XenoAcid
+      acidTime: 120
+    # Evolution
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
           prototype: MobDefilerXeno
           evolution: 1200
-    - type: XenoSpitter
-    - type: XenoSpit
-      action: ActionDefilerDefaultSpit
-      projectile: ProjectileNeurotoxinVeil
-      speed: 20
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 24
+    # Shoot
     - type: Gun
       fireRate: 0.25
       selectedMode: FullAuto
       useKey: false
       projectileSpeed: 20
       availableModes:
-      - FullAuto
+        - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.25
@@ -186,11 +151,7 @@
       capacity: 1
       count: 1
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/spitter.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -203,16 +164,9 @@
           damage: 700
         behaviors:
         - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 24
     - type: XenoDegradation
       prototype: MobSentinelXeno
       timeUsage: 30
-    - type: XenoAcid
-      TimeSpan: 120
     - type: SlowOnDamage
       speedModifierThresholds:
         250: 0.9
@@ -220,3 +174,56 @@
         350: 0.80
         400: 0.75
         450: 0.70
+
+- type: entity
+  parent: MobXenoBaseT2
+  id: MobBullXeno
+  name: bull
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoStun
+        - ActionXenoNightVision
+    - type: XenoStun
+    # Evolution
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobCrusherXeno
+          evolution: 1200
+        - !type:XenoEvolution
+          prototype: MobRavagerXeno
+          evolution: 2300
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 28
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        800: Dead
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 1000
+          behaviors:
+            - !type:GibBehavior { }
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/bull.rsi
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 3
+      baseSprintSpeed: 6
+    - type: XenoDegradation
+      prototype: MobWarriorXeno
+      timeUsage: 30
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        400: 0.9
+        480: 0.85
+        560: 0.80
+        640: 0.75
+        720: 0.70

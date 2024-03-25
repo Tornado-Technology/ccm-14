@@ -1,25 +1,45 @@
 - type: entity
-  name: praetorian
   parent: MobXenoBaseT4
   id: MobPraetorianXeno
+  name: praetorian
   components:
-    - type: ShowXenoAgeIcons
-      jobId: JobPretor
-    - type: XenoPraetorian
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoSpawn
+        - ActionXenoRejuvenate
+        - ActionXenoAcid
+        - ActionDefilerDefaultSpit
+        - ActionXenoNightVision
     - type: XenoSpawnEntities
     - type: XenoSpitRejuvenate
+    - type: XenoAcid
+      acidTime: 30
     - type: XenoSpit
-      action: ActionDefilerDefaultSpit
       projectile: ProjectileNeurotoxinVeil
       speed: 25
+    # Evolution
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRoyalQueenXeno
+          evolution: 6500
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 36
+    # Shoot
     - type: Gun
       fireRate: 0.25
       selectedMode: FullAuto
       useKey: false
       availableModes:
-      - FullAuto
+        - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
       stopMeleeOnShoot: false
+    - type: ShowXenoAgeIcons
+      jobId: JobPretor
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.25
     - type: BasicEntityAmmoProvider
@@ -27,30 +47,19 @@
       capacity: 1
       count: 1
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/praetorian.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
         1600: Dead
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 1800
-        behaviors:
-        - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 36
-    - type: XenoAcid
-      TimeSpan: 30
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 1800
+          behaviors:
+            - !type:GibBehavior { }
     - type: SlowOnDamage
       speedModifierThresholds:
         800: 0.9
@@ -60,51 +69,67 @@
         1440: 0.70
 
 - type: entity
-  name: queen
   parent: MobXenoBaseT4
   id: MobQueenXeno
+  name: queen
   components:
-    - type: XenoEvolutions
-      evolutions:
-        - !type:XenoEvolution
-          prototype: MobRoyalQueenXeno
-          evolution: 6900
-    - type: ShowXenoAgeIcons
-      jobId: JobQuinn
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoStun
+        - ActionXenoLayEgg
+        - ActionXenoScreech
+        - ActionXenoBuildWall
+        - ActionXenoVines
+        - ActionXenoRejuvenate
+        - ActionXenoAcid
+        - ActionDefilerDefaultSpit
+        - ActionXenoNightVision
     - type: XenoLayEgg
     - type: XenoStun
     - type: XenoScreech
     - type: XenoVines
     - type: XenoBuildWall
-    - type: XenoAcid
-      TimeSpan: 30
       wallPrototype: XenoWallFortified
       timeUsage: 10
+    - type: XenoAcid
+      acidTime: 30
     - type: XenoSpit
-      action: ActionDefilerDefaultSpit
       projectile: ProjectileNeurotoxinVeilRoyal
       speed: 25
+    - type: XenoSpitRejuvenate
+    # Evolution
+    - type: XenoEvolutions
+      evolutions:
+        - !type:XenoEvolution
+          prototype: MobRoyalQueenXeno
+          evolution: 6500
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 20
+        types:
+          Structural: 20
+    # Shoot
     - type: Gun
       fireRate: 0.25
       selectedMode: FullAuto
       useKey: false
       stopMeleeOnShoot: false
       availableModes:
-      - FullAuto
+        - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    - type: ShowXenoAgeIcons
+      jobId: JobQuinn
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.25
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
       count: 1
-    - type: XenoSpitRejuvenate
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/queen.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -117,13 +142,6 @@
           damage: 2000
         behaviors:
         - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 18
-        types:
-          Structural: 15
     - type: SlowOnDamage
       speedModifierThresholds:
         900: 0.9
@@ -137,43 +155,46 @@
   parent: MobXenoBaseT4
   id: MobRounyXeno
   components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoEvasion
+        - ActionXenoStealth
+        - ActionXenoPsychicJump
+        - ActionXenoNightVision
+    - type: XenoEvasion
+    - type: XenoStealth
+    - type: XenoPsychicJump
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 36
+    # Stealth
+    - type: Stealth
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.6
+      movementVisibilityRate: 0.2
     - type: ShowXenoAgeIcons
       jobId: JobRuni
-    - type: XenoStealth
-    - type: XenoEvasion
-    - type: XenoPsychicJump
     - type: Sprite
-      drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/rouny.rsi
-      layers:
-      - map: [ "enum.XenoVisualLayers.Base" ]
-        state: running
     - type: MobThresholds
       thresholds:
         0: Alive
         800: Dead
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTypeTrigger
-          damageType: Blunt
-          damage: 1000
-        behaviors:
-        - !type:GibBehavior { }
-    - type: MeleeWeapon
-      hidden: true
-      damage:
-        groups:
-          Brute: 36
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 1000
+          behaviors:
+            - !type:GibBehavior { }
     - type: MovementSpeedModifier
       baseWalkSpeed: 6
       baseSprintSpeed: 10
-    - type: StealthOnMove
-      passiveVisibilityRate: -0.6
-      movementVisibilityRate: 0.2
-    - type: Stealth
     - type: Puller
-      needsHands: false
       sprintModifier: 0.95
     - type: SlowOnDamage
       speedModifierThresholds:

@@ -1,7 +1,6 @@
 using Content.Server.Body.Systems;
 using Content.Server.Mind.Commands;
 using Content.Server.Popups;
-using Content.Shared.Actions;
 using Content.Shared.DoAfter;
 using Content.Shared.Mind;
 using Content.Shared.Popups;
@@ -11,36 +10,23 @@ using Robust.Shared.Player;
 using Content.Server._CM14.Xeno.Actions.Components;
 using Content.Shared._CM14.Xeno;
 
-
 namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoDegradationSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
-
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-
     [Dependency] private readonly SharedContainerSystem _container = default!;
-
     [Dependency] private readonly SharedMindSystem _mind = default!;
-
     [Dependency] private readonly PopupSystem _popupSystem = default!;
-
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-
     [Dependency] private readonly BodySystem _bodySystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<XenoDegradationComponent, ComponentStartup>(OnStartup);
+
         SubscribeLocalEvent<XenoDegradationComponent, XenoDegradationEvent>(OnDegradation);
         SubscribeLocalEvent<XenoDegradationComponent, XenoDegradationDoAfterEvent>(OnDegradationDoAfter);
-    }
-
-    private void OnStartup(EntityUid uid, XenoDegradationComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnDegradation(Entity<XenoDegradationComponent> ent, ref XenoDegradationEvent args)

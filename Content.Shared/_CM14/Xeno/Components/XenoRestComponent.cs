@@ -7,9 +7,6 @@ namespace Content.Shared._CM14.Xeno.Components;
 public sealed partial class XenoRestComponent : Component
 {
     [DataField]
-    public EntProtoId Action = "ActionXenoRest";
-
-    [DataField]
     public int? OriginalDrawDepth;
 
     public bool IsInRest = false;

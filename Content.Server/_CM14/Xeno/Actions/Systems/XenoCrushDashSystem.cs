@@ -1,5 +1,4 @@
 using Content.Server.Disposal.Unit.Components;
-using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Mobs.Components;
@@ -13,7 +12,6 @@ namespace Content.Server._CM14.Xeno.Actions.Systems;
 
 public sealed class XenoCrushDashSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
@@ -23,14 +21,8 @@ public sealed class XenoCrushDashSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<XenoCrushDashComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<XenoCrushDashComponent, XenoCrushDashEvent>(OnDash);
         SubscribeLocalEvent<XenoCrushDashComponent, ThrowDoHitEvent>(OnDashHit);
-    }
-
-    private void OnStartup(EntityUid uid, XenoCrushDashComponent component, ComponentStartup args)
-    {
-        _actionsSystem.AddAction(uid, component.Action);
     }
 
     private void OnDash(EntityUid uid, XenoCrushDashComponent component, XenoCrushDashEvent args)
