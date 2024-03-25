@@ -37,6 +37,7 @@ jobs:
         rm Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
+        sed -i 's#""#"${{ secrets.boost_url }}"#g' Content.Server/_CM14/CVarReplacer/CVarReplacerSystem.cs
     # Corvax-Secrets-End
 
     - name: Get Engine Tag
