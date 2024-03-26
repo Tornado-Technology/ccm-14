@@ -21,7 +21,7 @@ jobs:
     - name: Setup secrets
       env:
         SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
-        FIRST: 's#""#'
+        FIRST: 's#""'
         BOOST_URL: ${{ secrets.BOOST_URL }}
         SECOND: '#g'
       if: ${{ env.SSH_KEY != '' }}
