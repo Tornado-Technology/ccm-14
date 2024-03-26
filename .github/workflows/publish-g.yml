@@ -40,6 +40,7 @@ jobs:
         cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
         echo ${{ secrets.BOOST_URL }}
+        echo ${{ secrets.boost_url }}
         FIRST+=${{ secrets.BOOST_URL }}
         FIRST+=$SECOND
         echo $FIRST
