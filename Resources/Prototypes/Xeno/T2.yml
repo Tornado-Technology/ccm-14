@@ -9,6 +9,7 @@
         - ActionXenoBuildWall
         - ActionXenoVines
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
@@ -61,6 +62,7 @@
         - ActionXenoEvasion
         - ActionXenoStealth
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoEvasion
     - type: XenoStealth
     # Evolution
@@ -71,9 +73,9 @@
           evolution: 1200
     # Attack
     - type: MeleeWeapon
-        damage:
-          groups:
-            Brute: 24
+      damage:
+        groups:
+          Brute: 24
     # Stealth
     - type: Stealth
     - type: StealthOnMove
@@ -121,6 +123,7 @@
         - ActionXenoExplosive
         - ActionXenoAcid
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 120
@@ -185,6 +188,7 @@
       actions:
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoStun
     # Evolution
     - type: XenoEvolutions

@@ -3,6 +3,9 @@
   id: MobFaceHuggerXeno
   name: face-hugger
   components:
+    - type: Xeno
+      actions:
+        - ActionXenoRest
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution

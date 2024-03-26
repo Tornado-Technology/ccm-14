@@ -9,6 +9,7 @@
         - ActionXenoBuildWall
         - ActionXenoVines
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoVines
     - type: XenoBuildWall
     # Evolution
@@ -57,6 +58,7 @@
       actions:
         - ActionXenoEvasion
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoEvasion
     # Evolution
     - type: XenoEvolutions
@@ -118,6 +120,7 @@
       actions:
         - ActionXenoAcid
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoAcid
       acidTime: 180
     # Evolution
@@ -180,6 +183,7 @@
       actions:
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoStun
     # Evolution
     - type: XenoEvolutions
