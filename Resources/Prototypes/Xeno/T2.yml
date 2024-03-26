@@ -124,9 +124,13 @@
         - ActionXenoAcid
         - ActionXenoNightVision
         - ActionXenoRest
+        - ActionDefilerDefaultSpit
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 120
+    - type: XenoSpit
+      projectile: ProjectileNeurotoxinVeil
+      speed: 25
     # Evolution
     - type: XenoEvolutions
       evolutions:
