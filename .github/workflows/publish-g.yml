@@ -22,6 +22,7 @@ jobs:
       env:
         SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
         FIRST: 's#""#'
+        URL: '"http://api.spacestation14.ru"'
         SECOND: '#g'
       if: ${{ env.SSH_KEY != '' }}
       run: |
@@ -39,9 +40,7 @@ jobs:
         rm Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
-        echo ${{ secrets.BOOST_URL }}
-        echo ${{ secrets.boost_url }}
-        FIRST+=${{ secrets.BOOST_URL }}
+        FIRST+=$URL
         FIRST+=$SECOND
         echo $FIRST
         sed -i $FIRST Content.Server/_CM14/CVarReplacer/CVarReplacerSystem.cs
