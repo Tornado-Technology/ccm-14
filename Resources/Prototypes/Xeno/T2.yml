@@ -10,6 +10,7 @@
         - ActionXenoVines
         - ActionXenoNightVision
         - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
@@ -63,6 +64,7 @@
         - ActionXenoStealth
         - ActionXenoNightVision
         - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEvasion
     - type: XenoStealth
     # Evolution
@@ -125,6 +127,7 @@
         - ActionXenoNightVision
         - ActionXenoRest
         - ActionDefilerDefaultSpit
+        - ActionXenoDegradation
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 120
@@ -193,6 +196,7 @@
         - ActionXenoStun
         - ActionXenoNightVision
         - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoStun
     # Evolution
     - type: XenoEvolutions
