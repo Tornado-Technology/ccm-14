@@ -131,7 +131,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobSpitterXeno
-          evolution: 600
+          evolution: 900
     # Shoot
     - type: Gun
       fireRate: 0.25
