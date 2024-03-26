@@ -21,6 +21,7 @@
   - type: Tag
     tags:
       - CartridgeShotGun8Gauge
+      - ShellCM
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
   - type: CartridgeAmmo
@@ -37,6 +38,7 @@
   - type: Tag
     tags:
       - ShellLiberator
+      - ShellCM
   - type: Sprite
     layers:
       - state: base
@@ -54,6 +56,7 @@
   - type: Tag
     tags:
       - ShellPunisher
+      - ShellCM
   - type: Sprite
     layers:
       - state: base
@@ -71,6 +74,7 @@
   - type: Tag
     tags:
       - ShellShotgunAFG-12
+      - ShellCM
   - type: Sprite
     layers:
       - state: base

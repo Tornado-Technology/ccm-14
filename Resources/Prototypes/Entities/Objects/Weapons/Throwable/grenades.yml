@@ -33,6 +33,9 @@
   parent: GrenadeBase
   id: ExGrenade
   components:
+  - type: Tag
+    tags:
+    - HandExplosive
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default

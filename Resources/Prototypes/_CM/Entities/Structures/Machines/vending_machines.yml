@@ -242,10 +242,12 @@
         amount: 5
       - id: FlareMarine
         amount: 20
-      - id: CMPouchMagazine
-        amount: 2
     - name: Подсумки
       entries:
+      - id: CMPouchMagazine
+        amount: 4
+      - id: CMPouchShotgun
+        amount: 4
       - id: CMPouchFlare
         amount: 4
       - id: CMPouchMedical

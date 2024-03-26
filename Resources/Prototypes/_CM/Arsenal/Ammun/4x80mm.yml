@@ -96,6 +96,9 @@
   parent: Base4x80mm
   suffix: "Marines Gear"
   components:
+  - type: Tag
+    tags:
+    - ShellCM
   - type: Sprite
     layers:
       - state: base

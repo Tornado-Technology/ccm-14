@@ -209,7 +209,6 @@
     - id: CMScrewdriver
     - id: CMWirecutter
     - id: CMCrowbar
-    - id: CableApcStack
     - id: CMMultitool
     - id: CMWrench
 

@@ -14,4 +14,13 @@
   id: Xeno
 
 - type: Tag
+  id: HandExplosive
+
+- type: Tag
   id: MortarGrenade
+
+- type: Tag
+  id: MacheteMarine
+
+- type: Tag
+  id: ShellCM
