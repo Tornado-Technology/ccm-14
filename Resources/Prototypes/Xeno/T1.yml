@@ -9,6 +9,8 @@
         - ActionXenoBuildWall
         - ActionXenoVines
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoVines
     - type: XenoBuildWall
     # Evolution
@@ -57,6 +59,8 @@
       actions:
         - ActionXenoEvasion
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEvasion
     # Evolution
     - type: XenoEvolutions
@@ -118,6 +122,8 @@
       actions:
         - ActionXenoAcid
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoAcid
       acidTime: 180
     # Evolution
@@ -125,7 +131,7 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobSpitterXeno
-          evolution: 600
+          evolution: 900
     # Shoot
     - type: Gun
       fireRate: 0.25
@@ -180,6 +186,8 @@
       actions:
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoStun
     # Evolution
     - type: XenoEvolutions

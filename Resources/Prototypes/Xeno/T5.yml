@@ -4,6 +4,18 @@
   id: MobRoyalQueenXeno
   components:
     - type: Xeno
+      actions:
+        - ActionXenoCrushDash
+        - ActionXenoStun
+        - ActionXenoLayEgg
+        - ActionXenoScreech
+        - ActionXenoBuildWall
+        - ActionXenoVines
+        - ActionXenoRejuvenate
+        - ActionXenoAcid
+        - ActionDefilerDefaultSpit
+        - ActionXenoNightVision
+        - ActionXenoRest
       healthRegen: 10
       healthRegenOnRest: 35
       healthRegenOnWeeds: 100

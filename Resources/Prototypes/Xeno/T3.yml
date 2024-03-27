@@ -10,6 +10,8 @@
         - ActionXenoVines
         - ActionXenoRejuvenate
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
@@ -59,6 +61,8 @@
         - ActionXenoStealth
         - ActionXenoPsychicJump
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEvasion
     - type: XenoStealth
     - type: XenoPsychicJump
@@ -114,6 +118,8 @@
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 60
@@ -175,6 +181,8 @@
         - ActionXenoCrushDash
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoCrushDash
     - type: XenoStun
     # Attack
@@ -219,6 +227,8 @@
         - ActionXenoRage
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEndure
     - type: XenoRage
     - type: XenoStun
