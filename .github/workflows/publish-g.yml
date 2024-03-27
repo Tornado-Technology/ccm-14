@@ -21,6 +21,9 @@ jobs:
     - name: Setup secrets
       env:
         SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
+        FIRST: 's#""#'
+        URL: '"http://api.spacestation14.ru"'
+        SECOND: '#g'
       if: ${{ env.SSH_KEY != '' }}
       run: |
         mkdir -p ~/.ssh
@@ -37,6 +40,10 @@ jobs:
         rm Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
         cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
+        FIRST+=$URL
+        FIRST+=$SECOND
+        echo $FIRST
+        sed -i $FIRST Content.Server/_CM14/CVarReplacer/CVarReplacerSystem.cs
     # Corvax-Secrets-End
 
     - name: Get Engine Tag

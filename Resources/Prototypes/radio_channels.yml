@@ -152,5 +152,5 @@
   id: FireSupport
   name: Огневая поддержка
   keycode: 'ж' # Corvax-Localization
-  frequency: 1353
+  frequency: 1487
   color: "#fcdf03"
