@@ -238,7 +238,7 @@
         amount: 10
       - id: FlashlightLantern
         amount: 30
-      - id: FireExtinguisherMarine
+      - id: FireExtinguisher
         amount: 5
       - id: FlareMarine
         amount: 20
@@ -250,11 +250,13 @@
         amount: 4
       - id: CMPouchFlare
         amount: 4
-      - id: CMPouchMedical
-        amount: 4
-      - id: CMPouchSurvival
-        amount: 4
       - id: CMPouchFirstAid
+        amount: 4
+      - id: CMPouchGeneral
+        amount: 4
+      - id: CMPouchGeneralMedium
+        amount: 4
+      - id: CMPouchGeneralLarge
         amount: 4
 
 - type: entity

@@ -5,6 +5,9 @@
   description: An auto-injector. Each use is 10 units.
   noSpawn: true
   components:
+  - type: Tag
+    tags:
+    - injectorCM
   - type: Sprite
     sprite: _CM/Objects/Medical/auto_injectors.rsi
     layers:

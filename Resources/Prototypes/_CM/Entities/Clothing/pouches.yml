@@ -96,6 +96,10 @@
   - type: Storage
     grid:
     - 0,0,4,1 #4 slots
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.97
+  - type: HeldSpeedModifier
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -108,6 +112,10 @@
   - type: Storage
     grid:
     - 0,0,6,1 #6 slot
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.95
+  - type: HeldSpeedModifier
 
 # flamertank / fueltank.rsi
 # m39ap pouch
@@ -178,13 +186,16 @@
     sprite: _CM/Clothing/Pouches/firstaid.rsi
   - type: Storage
     grid:
-    - 0,0,4,1 #4 slots
+    - 0,0,3,1 #4 slots
     whitelist:
       tags:
+      - injectorCM
       - Ointment
       # todo cm14 autoinjector
       - PillCanister
       - Brutepack
+      - CMTraumaKit
+      - CMBurnKit
       # todo cm14 splint
 
 - type: entity
@@ -510,10 +521,12 @@
   - type: Sprite
     sprite: _CM/Clothing/Pouches/medkit.rsi
   - type: Storage
+    maxItemSize: Huge
     grid:
-    - 0,0,7,1 #7 slots
+    - 0,0,2,2 #7 slots
     whitelist:
       tags:
+      - CMAidKit
       - DiscreteHealthAnalyzer
       - Brutepack
       - Ointment

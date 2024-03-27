@@ -432,7 +432,7 @@
   id: CMOintment
 
 - type: Tag
-  id: CMFirstAidKit
+  id: CMAidKit
 
 - type: Tag
   id: CMSynthGraft

@@ -16,12 +16,14 @@
     grid:
     - 0,0,4,1
   - type: Item
+    shape:
+    - 0,0,2,2
     size: Large
     sprite: _CM/Objects/Medical/first_aid_kits.rsi
     heldPrefix: firstaid
   - type: Tag
     tags:
-    - CMFirstAidKit
+    - CMAidKit
   - type: GenericVisualizer
     visuals:
       enum.SharedBagOpenVisuals.BagState:
