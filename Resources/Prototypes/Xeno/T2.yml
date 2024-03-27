@@ -71,9 +71,9 @@
           evolution: 1200
     # Attack
     - type: MeleeWeapon
-        damage:
-          groups:
-            Brute: 24
+      damage:
+        groups:
+          Brute: 24
     # Stealth
     - type: Stealth
     - type: StealthOnMove
