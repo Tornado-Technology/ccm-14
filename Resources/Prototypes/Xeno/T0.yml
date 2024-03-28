@@ -25,6 +25,9 @@
       paralyzeTime: 3
       chansePounce: 100
     - type: FaceHugging
+    - type: AddAccentClothing
+      accent: ReplacementAccent
+      replacement: mumble
     - type: Sprite
       sprite: _CM/Mobs/Xenos/face_hugger.rsi
       drawdepth: SmallMobs
