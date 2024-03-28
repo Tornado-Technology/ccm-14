@@ -178,6 +178,7 @@
   - type: EncryptionKey
     channels:
     - Security
+    - Command
     defaultChannel: Security
   - type: Sprite
     layers:
