@@ -48,13 +48,13 @@
   - type: MovementIgnoreGravity
   - type: ActiveRadio
     channels:
-    - Common
+    - FireSupport
     - Command
     globalReceive: true
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-      - Common
+      - FireSupport
       - Command
   - type: CanMoveInAir
   - type: Visibility
