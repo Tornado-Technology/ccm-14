@@ -208,3 +208,6 @@
         560: 0.80
         640: 0.75
         720: 0.70
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: XenoFootstepMedium

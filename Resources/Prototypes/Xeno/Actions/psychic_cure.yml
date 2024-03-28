@@ -7,8 +7,8 @@
     - type: EntityTargetAction
       useDelay: 0
       itemIconStyle: BigAction
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: XenoShoot
       icon:
         sprite: Actions/xeno.rsi
         state: psychic_cure

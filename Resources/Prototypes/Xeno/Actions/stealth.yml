@@ -7,8 +7,6 @@
     - type: InstantAction
       useDelay: 0
       priority: 7
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar1.ogg
       icon:
         sprite: Actions/xeno.rsi
         state: stealth

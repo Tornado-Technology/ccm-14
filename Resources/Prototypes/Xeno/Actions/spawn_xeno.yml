@@ -6,8 +6,8 @@
   components:
     - type: InstantAction
       useDelay: 90
-      sound: !type:SoundPathSpecifier
-        path: /Audio/Effects/alien_roar2.ogg
+      sound: !type:SoundCollectionSpecifier
+        collection: QueenScream
       icon:
         sprite: Actions/xeno.rsi
         state: spawn_tick

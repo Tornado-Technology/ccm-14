@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: XenoShoot
+  files:
+  - /Audio/_CM14/Xeno/XenoShoot/alien_spitacid.ogg
+  - /Audio/_CM14/Xeno/XenoShoot/alien_spitacid2.ogg
