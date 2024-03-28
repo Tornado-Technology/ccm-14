@@ -3,6 +3,10 @@
   id: MobFaceHuggerXeno
   name: face-hugger
   components:
+    - type: Xeno
+      actions:
+        - ActionXenoRest
+        - ActionXenoNightVision
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
@@ -21,6 +25,9 @@
       paralyzeTime: 3
       chansePounce: 100
     - type: FaceHugging
+    - type: AddAccentClothing
+      accent: ReplacementAccent
+      replacement: mumble
     - type: Sprite
       sprite: _CM/Mobs/Xenos/face_hugger.rsi
       drawdepth: SmallMobs

@@ -10,6 +10,8 @@
         - ActionXenoVines
         - ActionXenoRejuvenate
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWallFortified
@@ -21,7 +23,7 @@
         groups:
           Brute: 18
         types:
-          Structural: 20
+          Structural: 45
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -59,6 +61,8 @@
         - ActionXenoStealth
         - ActionXenoPsychicJump
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEvasion
     - type: XenoStealth
     - type: XenoPsychicJump
@@ -114,6 +118,8 @@
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 60
@@ -127,20 +133,97 @@
           Brute: 30
     # Shoot
     - type: Gun
-      fireRate: 0.25
+      fireRate: 0.75
       selectedMode: FullAuto
       useKey: false
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.01
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
       count: 1
     - type: Sprite
       sprite: _CM/Mobs/Xenos/defiler.rsi
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Blunt
+            damage: 800
+          behaviors:
+            - !type:GibBehavior { }
+    - type: XenoDegradation
+      prototype: MobSpitterXeno
+      timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70
+
+- type: entity
+  parent: MobXenoBaseT3
+  id: MobBoilerXeno
+  name: boiler
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        # Acid
+        - ActionXenoAcid
+        # Base actions
+        - ActionXenoRest
+        - ActionXenoNightVision
+        - ActionXenoDegradation
+    - type: XenoAcid
+      acidTime: 30
+    # Eye
+    - type: Eye
+      pvsSize: 45
+    - type: ContentEye
+      maxZoom: 1.75, 1.75
+    # Shoot
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      useKey: false
+      stopMeleeOnShoot: false
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    - type: ShowXenoAgeIcons
+      jobId: JobQuinn
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 25
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
+    - type: BasicEntityAmmoProvider
+      proto: XenoProjectileBombardAcid
+      capacity: 6
+      count: 6
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 30
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/boiler.rsi
+      offset: 0, 0.4
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -175,6 +258,8 @@
         - ActionXenoCrushDash
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoCrushDash
     - type: XenoStun
     # Attack
@@ -182,6 +267,8 @@
       damage:
         groups:
           Brute: 30
+        types:
+          Structural: 45
     - type: Sprite
       sprite: _CM/Mobs/Xenos/crusher.rsi
     - type: MobThresholds
@@ -219,6 +306,8 @@
         - ActionXenoRage
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEndure
     - type: XenoRage
     - type: XenoStun
@@ -227,6 +316,8 @@
       damage:
         groups:
           Brute: 40
+        types:
+          Structural: 35
     - type: Sprite
       sprite: _CM/Mobs/Xenos/ravager.rsi
     - type: MobThresholds

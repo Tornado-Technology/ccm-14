@@ -11,6 +11,7 @@
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoSpawnEntities
     - type: XenoSpitRejuvenate
     - type: XenoAcid
@@ -18,12 +19,6 @@
     - type: XenoSpit
       projectile: ProjectileNeurotoxinVeil
       speed: 25
-    # Evolution
-    - type: XenoEvolutions
-      evolutions:
-        - !type:XenoEvolution
-          prototype: MobRoyalQueenXeno
-          evolution: 6500
     # Attack
     - type: MeleeWeapon
       damage:
@@ -31,7 +26,7 @@
           Brute: 36
     # Shoot
     - type: Gun
-      fireRate: 0.25
+      fireRate: 1
       selectedMode: FullAuto
       useKey: false
       availableModes:
@@ -41,7 +36,11 @@
     - type: ShowXenoAgeIcons
       jobId: JobPretor
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.01
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
@@ -85,6 +84,7 @@
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoLayEgg
     - type: XenoStun
     - type: XenoScreech
@@ -110,10 +110,10 @@
         groups:
           Brute: 20
         types:
-          Structural: 20
+          Structural: 60
     # Shoot
     - type: Gun
-      fireRate: 0.25
+      fireRate: 1
       selectedMode: FullAuto
       useKey: false
       stopMeleeOnShoot: false
@@ -123,7 +123,11 @@
     - type: ShowXenoAgeIcons
       jobId: JobQuinn
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.01
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
@@ -162,6 +166,7 @@
         - ActionXenoStealth
         - ActionXenoPsychicJump
         - ActionXenoNightVision
+        - ActionXenoRest
     - type: XenoEvasion
     - type: XenoStealth
     - type: XenoPsychicJump

@@ -9,6 +9,8 @@
         - ActionXenoBuildWall
         - ActionXenoVines
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoVines
     - type: XenoBuildWall
       wallPrototype: XenoWall
@@ -24,7 +26,7 @@
         groups:
           Brute: 18
         types:
-          Structural: 10
+          Structural: 30
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -61,6 +63,8 @@
         - ActionXenoEvasion
         - ActionXenoStealth
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoEvasion
     - type: XenoStealth
     # Evolution
@@ -71,9 +75,9 @@
           evolution: 1200
     # Attack
     - type: MeleeWeapon
-        damage:
-          groups:
-            Brute: 24
+      damage:
+        groups:
+          Brute: 24
     # Stealth
     - type: Stealth
     - type: StealthOnMove
@@ -121,15 +125,24 @@
         - ActionXenoExplosive
         - ActionXenoAcid
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionDefilerDefaultSpit
+        - ActionXenoDegradation
     - type: XenoExplosive
     - type: XenoAcid
       acidTime: 120
+    - type: XenoSpit
+      projectile: ProjectileNeurotoxinVeil
+      speed: 25
     # Evolution
     - type: XenoEvolutions
       evolutions:
         - !type:XenoEvolution
           prototype: MobDefilerXeno
           evolution: 1200
+        - !type:XenoEvolution
+          prototype: MobBoilerXeno
+          evolution: 1300
     # Attack
     - type: MeleeWeapon
       damage:
@@ -137,7 +150,7 @@
           Brute: 24
     # Shoot
     - type: Gun
-      fireRate: 0.25
+      fireRate: 0.5
       selectedMode: FullAuto
       useKey: false
       projectileSpeed: 20
@@ -145,7 +158,11 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.01
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
@@ -185,6 +202,8 @@
       actions:
         - ActionXenoStun
         - ActionXenoNightVision
+        - ActionXenoRest
+        - ActionXenoDegradation
     - type: XenoStun
     # Evolution
     - type: XenoEvolutions
@@ -200,6 +219,8 @@
       damage:
         groups:
           Brute: 28
+        types:
+          Structural: 25
     - type: MobThresholds
       thresholds:
         0: Alive
