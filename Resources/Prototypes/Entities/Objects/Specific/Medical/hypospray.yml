@@ -121,6 +121,7 @@
   - type: Tag
     tags:
     - Trash
+    - injectorCM
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
@@ -218,7 +219,8 @@
         - ReagentId: TranexamicAcid
           Quantity: 5
   - type: Tag
-    tags: []
+    tags:
+    - injectorCM
 
 - type: entity
   name: burn auto-injector

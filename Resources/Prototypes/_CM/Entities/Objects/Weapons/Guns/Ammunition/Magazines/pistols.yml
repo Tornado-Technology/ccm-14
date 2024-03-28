@@ -1,3 +1,6 @@
+- type: Tag
+  id: MagazinePistol88M4
+
 - type: entity
   id: MagazinePistol88M4
   name: "88M4 magazine (45GAP)"
@@ -17,8 +20,9 @@
   - type: MagazineVisuals
     steps: 5
 
+
 - type: Tag
-  id: CartridgePistol45GAP
+  id: MagazinePistolAramatM5Y3
 
 - type: entity
   id: MagazinePistolAramatM5Y3
@@ -28,7 +32,6 @@
   - type: Tag
     tags:
       - MagazinePistolAramatM5Y3
-
   - type: BallisticAmmoProvider
     proto: CartridgePistol4440
     whitelist:
@@ -39,9 +42,6 @@
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
   - type: MagazineVisuals
     steps: 5
-
-- type: Tag
-  id: CartridgePistol4440
 
 - type: entity
   id: Box45GAP

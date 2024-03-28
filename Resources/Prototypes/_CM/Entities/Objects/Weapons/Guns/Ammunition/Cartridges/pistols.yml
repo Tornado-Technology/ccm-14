@@ -11,6 +11,9 @@
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige357.rsi
 
+- type: Tag
+  id: CartridgePistol45GAP
+
 - type: entity
   id: CartridgePistol4440
   name: cartridge (44.40)22
@@ -24,3 +27,5 @@
   - type: Sprite
     sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige9mm.rsi
 
+- type: Tag
+  id: CartridgePistol4440

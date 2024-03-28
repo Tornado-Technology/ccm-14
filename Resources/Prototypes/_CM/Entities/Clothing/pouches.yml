@@ -301,7 +301,8 @@
     - 0,0,3,1 #3 slots
     whitelist:
       tags:
-      - MagazinePistolM4A3
+      - MagazinePistolAramatM5Y3
+      - MagazinePistol88M4
       - SpeedLoaderMagnum
 
 - type: entity
@@ -406,7 +407,7 @@
     sprite: _CM/Clothing/Pouches/socmed.rsi
   - type: Storage
     grid:
-    - 0,0,7,1 #13 slots
+    - 0,0,5,1 #13 slots
 
 - type: entity
   parent: CMPouchMedicalSoc
@@ -429,25 +430,27 @@
   - type: Sprite
     sprite: _CM/Clothing/Pouches/frt_med.rsi
   - type: Storage
+    maxItemSize: Normal
     grid:
     - 0,0,4,1 #4 slots
     whitelist:
       tags:
+      #- Brutepack
+      #- Ointment
+      #- Bloodpack
+      #- PillCanister
+      #- Pill
+      #- Bottle
+      #- Syringe
+      #- Flashlight
+      #- CMSurgicalLine
+      #- CMSynthGraft
+      #- CMBurnKit
+      #- CMTraumaKit
+      #- CMOintment
       - DiscreteHealthAnalyzer
-      - Brutepack
-      - Ointment
-      - Bloodpack
-      - PillCanister
-      - Pill
-      - Bottle
-      - Syringe
-      - Flashlight
-      - CMSurgicalLine
-      - CMSynthGraft
-      - CMBurnKit
-      - CMTraumaKit
-      - CMOintment
       - BodyBag
+      - RollerBed
       components:
       - Hypospray
 
@@ -478,11 +481,13 @@
   - type: Storage
     maxItemSize: Normal
     grid:
-    - 0,0,2,1 #2 slots
+    - 0,0,1,1 #2 slots
+    - 3,0,4,1
     whitelist:
       tags:
       - GlassBeaker
       - Bottle
+      - ChemDispensable
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -494,8 +499,10 @@
     sprite: _CM/Clothing/Pouches/injectors.rsi
   - type: Storage
     grid:
-    - 0,0,7,1 #7 slots
-    #whitelist: # todo cm14 autoinjectors
+    - 0,0,4,1 #7 slots
+    whitelist:
+      tags:
+      - injectorCM
 
 - type: entity
   parent: CMPouchOpenClosed
@@ -527,15 +534,15 @@
     whitelist:
       tags:
       - CMAidKit
-      - DiscreteHealthAnalyzer
-      - Brutepack
-      - Ointment
-      - PillCanister
-      - Pill
-      - Bottle      # Surgical Line
+      #- DiscreteHealthAnalyzer
+      #- Brutepack
+      #- Ointment
+      #- PillCanister
+      #- Pill
+      #- Bottle      # Surgical Line
       # Roller
-      - BodyBag
-      - Bloodpack
+      #- BodyBag
+      #- Bloodpack
       components:
       - Hypospray
 

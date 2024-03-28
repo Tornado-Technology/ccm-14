@@ -185,7 +185,7 @@
         amount: 3
       - id: CMSyringe
         amount: 10
-      - id: MarineRollerBed
+      - id: MarineRollerBedSpawnFolded
         amount: 5
       - id: PowerCellHigh
         amount: 5
@@ -199,8 +199,17 @@
         amount: 1
       - id: ClothingBeltMilitaryWebbingMed
         amount: 1
+    - name: Подсумки
+      entries:
       - id: CMPouchMedicalSoc
         amount: 1
+      - id: CMPouchMedkit
+        amount: 2
+      - id: CMPouchFirstResponder
+        amount: 2
+      - id: CMPouchMedical
+        amount: 2
+
     - name: Вооружение
       entries:
       - id: WeaponRifleM4RA
@@ -287,11 +296,37 @@
         amount: 1
       - id: ClothingOuterArmorSPEC
         amount: 1
-    - name: Хранилища
+    - name: Рюкзаки
       entries:
+      - id: ClothingBackpackMarine
+        amount: 1
+      - id: ClothingMilitaryBackpack
+        amount: 1
+      - id: ClothingBackpackMilitarySatchel
+        amount: 1
+      - id: ClothingBackpackMerc
+        amount: 1
       - id: ClothingBackpackSatchelMarine
         amount: 1
+      - id: ClothingBackpackDuffelMilitary
+        amount: 1
+    - name: Ременно-плечевые системы
+      entries:
       - id: ClothingBeltMilitaryWebbing
+        amount: 1
+      - id: ClothingBeltMercWebbing
+        amount: 1
+    - name: Подсумки
+      entries:
+      - id: CMPouchMagazineLarge
+        amount: 1
+      - id: CMPouchShotgunLarge
+        amount: 1
+      - id: CMPouchGeneral
+        amount: 1
+      - id: CMPouchGeneralMedium
+        amount: 1
+      - id: CMPouchGeneralLarge
         amount: 1
     - name: Маски
       entries:
@@ -386,15 +421,39 @@
         amount: 1
       - id: ClothingHeadBeretGreen
         amount: 1
-    - name: Хранилища
+    - name: Рюкзаки
       entries:
+      - id: ClothingBackpackMarine
+        amount: 1
+      - id: ClothingMilitaryBackpack
+        amount: 1
+      - id: ClothingBackpackMilitarySatchel
+        amount: 1
+      - id: ClothingBackpackMerc
+        amount: 1
       - id: ClothingBackpackSatchelMarine
         amount: 1
+      - id: ClothingBackpackDuffelMilitary
+        amount: 1
+    - name: Ременно-плечевые системы
+      entries:
       - id: ClothingBeltMilitaryWebbing
         amount: 1
+      - id: ClothingBeltMercWebbing
+        amount: 1
+    - name: Подсумки
+      entries:
       - id: CMPouchMagazineLarge
         amount: 1
+      - id: CMPouchShotgunLarge
+        amount: 1
       - id: CMPouchCommandFill
+        amount: 1
+      - id: CMPouchGeneral
+        amount: 1
+      - id: CMPouchGeneralMedium
+        amount: 1
+      - id: CMPouchGeneralLarge
         amount: 1
     - name: Маски
       entries:

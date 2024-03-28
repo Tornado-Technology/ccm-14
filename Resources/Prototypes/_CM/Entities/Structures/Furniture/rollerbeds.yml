@@ -5,6 +5,9 @@
   name: roller bed
   description: A robust looking rollerbed used for emergencies.
   components:
+  - type: Tag
+    tags:
+    - RollerBed
   - type: Sprite
     sprite: _CM/Structures/Furniture/rollerbeds.rsi
     layers:

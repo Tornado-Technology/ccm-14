@@ -1265,12 +1265,6 @@
   id: MagazineSmgMSG23W-Y
 
 - type: Tag
-  id: MagazinePistol88M4
-
-- type: Tag
-  id: MagazinePistolAramatM5Y3
-
-- type: Tag
   id: SpeedLoaderMagnumVP-60x2
 
 - type: Tag
@@ -1314,3 +1308,6 @@
 
 - type: Tag
   id: WeaponMech
+
+- type: Tag
+  id: RollerBed
