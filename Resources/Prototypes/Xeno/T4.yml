@@ -36,7 +36,7 @@
     - type: ShowXenoAgeIcons
       jobId: JobPretor
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 1
+      rechargeCooldown: 0.01
       rechargeSound:
         path: /Audio/Effects/alien_roar1.ogg
         params:
@@ -123,7 +123,7 @@
     - type: ShowXenoAgeIcons
       jobId: JobQuinn
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 1
+      rechargeCooldown: 0.01
       rechargeSound:
         path: /Audio/Effects/alien_roar1.ogg
         params:

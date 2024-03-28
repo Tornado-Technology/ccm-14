@@ -44,7 +44,7 @@
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
       stopMeleeOnShoot: false
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.2
+      rechargeCooldown: 0.01
       rechargeSound:
         path: /Audio/Effects/alien_roar1.ogg
         params:

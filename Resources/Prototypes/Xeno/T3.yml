@@ -140,7 +140,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.75
+      rechargeCooldown: 0.01
       rechargeSound:
         path: /Audio/Effects/alien_roar1.ogg
         params:
