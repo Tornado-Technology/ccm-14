@@ -25,7 +25,6 @@
   - type: ActiveRadio
     channels:
     - Binary
-    - Common
   - type: NameIdentifier
     group: MMI
   - type: DoAfter
@@ -97,7 +96,6 @@
     - type: ActiveRadio
       channels:
       - Binary
-      - Common
     - type: NameIdentifier
       group: PositronicBrain
     - type: DoAfter
