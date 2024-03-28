@@ -25,7 +25,7 @@
         groups:
           Brute: 8
         types:
-          Structural: 10
+          Structural: 20
     - type: Sprite
       sprite: _CM/Mobs/Xenos/drone.rsi
     - type: MobThresholds
@@ -141,7 +141,11 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.01
+      rechargeSound:
+        path: /Audio/Effects/alien_roar1.ogg
+        params:
+          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpitWeak
       capacity: 1
@@ -200,6 +204,8 @@
       damage:
         groups:
           Brute: 18
+        types:
+          Structural: 15
     - type: MobThresholds
       thresholds:
         0: Alive

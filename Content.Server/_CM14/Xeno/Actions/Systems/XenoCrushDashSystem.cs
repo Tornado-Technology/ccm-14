@@ -52,6 +52,6 @@ public sealed class XenoCrushDashSystem : EntitySystem
         }
 
         _damageableSystem.TryChangeDamage(args.Target,
-            new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 300));
+            new DamageSpecifier(_proto.Index<DamageTypePrototype>("Structural"), 100));
     }
 }

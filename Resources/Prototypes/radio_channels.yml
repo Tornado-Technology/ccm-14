@@ -150,7 +150,7 @@
 
 - type: radioChannel
   id: FireSupport
-  name: Огневая поддержка
+  name: chat-radio-firesupport
   keycode: 'ж' # Corvax-Localization
   frequency: 1487
   color: "#fcdf03"

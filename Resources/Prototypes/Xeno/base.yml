@@ -104,6 +104,7 @@
       molsPerSecondPerUnitMass: 0.0005
     - type: Speech
       speechVerb: LargeMob
+      speechSounds: Xeno
     - type: StatusEffects
       allowed:
       - SlowedDown
@@ -167,6 +168,9 @@
       priority: 2
       lightningExplode: false
     - type: MiddleMouseShootKey
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: XenoFootstepMedium
 
 - type: entity
   id: ActionXenoAcid
@@ -208,6 +212,9 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: BarestepHard
 
 - type: entity
   abstract: true
@@ -244,6 +251,7 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
+    
 
 - type: entity
   abstract: true
@@ -262,6 +270,8 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
+    
+
 
 - type: entity
   abstract: true
@@ -280,6 +290,9 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: XenoFootstepLarge
 
 - type: entity
   abstract: true
@@ -298,3 +311,6 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: XenoFootstepLarge

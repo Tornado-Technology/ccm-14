@@ -317,7 +317,6 @@
   - type: EncryptionKey
     channels:
     - Binary
-    - Common
     - Command
     - CentCom
     - Engineering

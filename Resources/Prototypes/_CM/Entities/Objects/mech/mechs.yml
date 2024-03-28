@@ -2,7 +2,7 @@
   id: MechSidewinder
   parent: BaseMech
   name: MCU "Sidewinder"
-  description: A mechanized combat unit "Sidewinder". DO NOT SHOOT HIM.
+  description: Механизированый боевой юнит "Sidewinder". НЕ СТРЕЛЯЙТЕ ПО НЕМУ.
   components:
   - type: Sprite
     drawdepth: Mobs
