@@ -6,6 +6,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponShotgunEnforcerAFG-12
-      - id: MagazineShotgunAFG-12
+      - id: WeaponShotgunPatriot
+      - id: MagazineShotgunPatriot
         amount: 10

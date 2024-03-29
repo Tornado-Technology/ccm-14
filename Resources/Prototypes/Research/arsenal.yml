@@ -246,11 +246,11 @@
   tier: 3
   cost: 5000
   recipeUnlocks:
-    - MagazineShotgunAFG-12
+    - MagazineShotgunPatriot
     - FuelTankFlamethrower
     - BoxAntimaterialCM
     - MagazineLightRifleBox
-    - BoxShotgunLMG
+    - BoxShellFenix
     - GrenadeBlastMarine
     - GrenadeFragMarine
 #  - ClothingEyesGlassesSecurity

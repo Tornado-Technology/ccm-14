@@ -7,5 +7,5 @@
   - type: StorageFill
     contents:
       - id: TGMSFenix
-      - id: BoxShotgunLMG
+      - id: BoxShellFenix
         amount: 14

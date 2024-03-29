@@ -268,7 +268,7 @@
     whitelist:
       tags: #this gonna be hell
       - MagazineLightRifleBox
-      - MagazineShotgunAFG-12
+      - MagazineShotgunPatriot
       - MagazineRifleM4RA
       - MagazineRifleM41A
       - MagazineRifle

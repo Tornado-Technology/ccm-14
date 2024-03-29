@@ -1,52 +1,17 @@
+# Магазин Патриота
 - type: entity
-  id: MagazineShotgunUA571C
-  name: ammo drum (24 Gauge)
-  parent: BaseMagazineCM
-  components:
-  - type: Tag
-    tags:
-    - MagazineShotgunUA571C
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-        - CartridgeShotGun24Gauge
-    capacity: 16
-    soundRack:
-      path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi
-
-
-- type: entity
-  id: MagazineShotgunK221
-  name: ammo drum (8 Gauge)
-  parent: BaseMagazineCM
-  components:
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-        - CartridgeShotGun8Gauge
-    capacity: 16
-    soundRack:
-      path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi
-
-- type: entity
-  id: MagazineShotgunAFG-12
+  id: MagazineShotgunPatriot
   name: ammo drum AFG-12 (.50 pellet)
   parent: BaseMagazineCM
   components:
   - type: Tag
     tags:
-    - MagazineShotgunAFG-12
+    - MagazineShotgunPatriot
   - type: BallisticAmmoProvider
-    proto: ShellShotgunAFG-12
+    proto: ShellShotgunPatriot
     whitelist:
       tags:
-        - ShellShotgunAFG-12
+        - ShellShotgunPatriot
     capacity: 16
     soundRack:
       path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
@@ -58,8 +23,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
-
-
+# Магазин Освободителя
 - type: entity
   id: MagazineShotgunLiberator
   name: ammo drum AFG-12 (.50 pellet)
@@ -80,8 +44,7 @@
     steps: 1
     zeroVisible: true
 
-
-# Boxes
+# Коробка дроби Карателя
 - type: entity
   parent: BaseBoxCM
   id: BoxShellPunisher
@@ -102,9 +65,7 @@
     steps: 2
     zeroVisible: false
 
-
-
-
+# Коробка дроби Освободителя
 - type: entity
   parent: BaseBoxCM
   id: BoxShellLiberator
@@ -127,3 +88,36 @@
     magState: magb
     steps: 2
     zeroVisible: false
+
+# Обоймы Феникса
+- type: entity
+  parent: BaseItem
+  id: BoxShellFenix
+  suffix: "Marines Gear"
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - ShellFenix
+    proto: ShellFenix
+    capacity: 4
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Textures/_CM/TGMSArsenal/Textures/boxlmgshotgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance

@@ -894,8 +894,8 @@
 # Аммуниция специалистов
 
 - type: latheRecipe # Патриот
-  id: MagazineShotgunAFG-12
-  result: MagazineShotgunAFG-12
+  id: MagazineShotgunPatriot
+  result: MagazineShotgunPatriot
   completetime: 10
   materials:
     Steel: 100
@@ -935,8 +935,8 @@
     Plasma: 100
 
 - type: latheRecipe # Феникс
-  id: BoxShotgunLMG
-  result: BoxShotgunLMG
+  id: BoxShellFenix
+  result: BoxShellFenix
   completetime: 10
   materials:
     Steel: 100

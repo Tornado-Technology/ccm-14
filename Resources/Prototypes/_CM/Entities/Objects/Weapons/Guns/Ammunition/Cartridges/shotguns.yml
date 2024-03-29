@@ -1,35 +1,4 @@
-- type: entity
-  id: CartridgeShotGun24Gauge
-  name: cartridge (24 Gauge)22
-  parent: BaseCartridgeCM
-  components:
-  - type: Tag
-    tags:
-      - CartridgeShotGun24Gauge
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
-  - type: CartridgeAmmo
-    count: 10
-    spread: 30
-    proto: BulletShotGun24Gauge
-
-- type: entity
-  id: CartridgeShotGun8Gauge
-  name: cartridge (8 Gauge)22
-  parent: BaseCartridgeCM
-  components:
-  - type: Tag
-    tags:
-      - CartridgeShotGun8Gauge
-      - ShellCM
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
-  - type: CartridgeAmmo
-    proto: BulletShotGun8Gauge
-    count: 10
-    spread: 25
-
-
+# Освободитель
 - type: entity
   id: ShellLiberator
   name: shell (.50)
@@ -48,6 +17,7 @@
     count: 5
     spread: 25
 
+# Каратель
 - type: entity
   id: ShellPunisher
   name: shell (.50)
@@ -66,14 +36,15 @@
     count: 8
     spread: 40
 
+# Патриот
 - type: entity
-  id: ShellShotgunAFG-12
+  id: ShellShotgunPatriot
   name: shell (.50)
   parent: BaseShellShotgun
   components:
   - type: Tag
     tags:
-      - ShellShotgunAFG-12
+      - ShellShotgunPatriot
       - ShellCM
   - type: Sprite
     layers:
@@ -84,6 +55,32 @@
     count: 5
     spread: 20
 
+# Феникс
+- type: entity
+  id: ShellFenix
+  name: Cartridge (Феникс)
+  parent: BaseCartridge
+  suffix: "Marines Gear"
+  components:
+  - type: Tag
+    tags:
+    - ShellCM
+    - ShellFenix
+  - type: CartridgeAmmo
+    count: 4
+    proto: FenixBullet
+    spread: 20
+    deleteOnSpawn: true
+    soundEject:
+      collection: ShellEject
+  - type: Sprite
+    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrigelmgshotgun.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
 - type: Tag
   id: ShellLiberator
 
@@ -91,4 +88,7 @@
   id: ShellPunisher
 
 - type: Tag
-  id: ShellShotgunAFG-12
+  id: ShellShotgunPatriot
+
+- type: Tag
+  id: ShellFenix

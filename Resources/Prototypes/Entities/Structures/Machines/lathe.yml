@@ -720,7 +720,7 @@
       - C4
       - MarineCASFlareBomb
       - MarineCASClusterBomb
-      #- MagazineShotgunAFG-12
+      #- MagazineShotgunPatriot
       #- FuelTankFlamethrower
       #- BoxAntimaterialCM
       #- MagazineLightRifleBox
@@ -840,8 +840,8 @@
         - GrenadeFragMarine
         - GrenadeBlastMarine
         - BoxAntimaterialCM
-        - MagazineShotgunAFG-12
-        - BoxShotgunLMG
+        - MagazineShotgunPatriot
+        - BoxShellFenix
         - FuelTankFlamethrower
         - MagazineLightRifleBox
     - type: MaterialStorage
