@@ -22,7 +22,7 @@
     sprite: _CM/Clothing/fieldCommander/comma_beret.rsi
   - type: Clothing
     sprite: _CM/Clothing/fieldCommander/comma_beret.rsi
- 
+
 #-----------------------fort-m3_vest.rsi
 - type: entity
   parent: ClothingOuterArmorRiot
@@ -37,16 +37,16 @@
   - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.7 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
-        Heat: 0.7
-        Caustic: 0.7
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
+        Heat: 0.35
+        Caustic: 0.35
   - type: ExplosionResistance
-    damageCoefficient: 0.7
+    damageCoefficient: 0.45
   - type: ClothingSpeedModifier
     walkModifier: 1
-    sprintModifier: 1   
+    sprintModifier: 1
 #-----------------------glass_mask.rsi
 
 - type: entity
