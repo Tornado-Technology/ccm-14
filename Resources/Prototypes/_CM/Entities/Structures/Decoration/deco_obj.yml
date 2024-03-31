@@ -2,7 +2,7 @@
   id: SteelWhiteBarrel
   parent: BaseStructureDynamic
   name: Железная белая бочка
-  description:  Пустая железная бочка. Нет, пива в нем нет.
+  description:  Пустая железная бочка. Нет, пива в ней нет.
   components:
   - type: Sprite
     sprite: _CM/Structures/Decoration/steel_barrel.rsi
@@ -52,8 +52,8 @@
 - type: entity
   id: SteelBlueBarrel
   parent: BaseStructureDynamic
-  name: Железная синия бочка
-  description:  Пустая железная бочка. Нет, пива в нем нет.
+  name: Железная синяя бочка
+  description:  Пустая железная бочка. Нет, пива в ней нет.
   components:
   - type: Sprite
     sprite: _CM/Structures/Decoration/steel_barrel.rsi
