@@ -350,3 +350,18 @@
       layers:
         - state: crypt_rusted
         - state: pirate_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyFireSuport
+  name: Ключ шифрования огневой подержки
+  description: Ключ шифрования, используемый для связи с огневой поддержкой
+  components:
+  - type: EncryptionKey
+    channels:
+    - FireSupport
+    defaultChannel: FireSupport
+  - type: Sprite
+    layers:
+    - state: crypt_silver
+    - state: com_label
