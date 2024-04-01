@@ -161,6 +161,8 @@
   description: "Никогда не выгорает, но довольно хрупкая"
   suffix: MarinesGear
   components:
+  - type: Clickable
+  - type: InteractionOutline
   - type: MovedByPressure
   - type: EmitSoundOnCollide
     sound:
@@ -222,6 +224,8 @@
             acts: [ "Destruction" ]
           - !type:PlaySoundBehavior
             sound: /Audio/Effects/metalbreak.ogg
+  - type: Pullable
+  - type: DamageExaminable
 
 - type: entity
   parent: BaseItem
