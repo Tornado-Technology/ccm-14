@@ -255,6 +255,7 @@
     idleState: icon
     runningState: building
     dynamicRecipes:
+      - FloodlightCM
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
