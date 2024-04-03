@@ -80,7 +80,7 @@ entities:
       pos: -0.734375,-0.7343749
       parent: 1
     - type: BecomesStation
-      id: TGMS_Valkyrie
+      id: TGMS_Valkyrie_old
     - type: MarineMap
     - type: MapGrid
       chunks:
