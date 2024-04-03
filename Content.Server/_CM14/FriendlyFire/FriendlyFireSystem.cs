@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using Content.Server.NPC.Components;
 using Content.Shared.Projectiles;
+using Content.Shared._CM14.FriendlyFire;
+using Robust.Shared.GameStates;
 
 namespace Content.Server._CM14.FriendlyFire;
 
@@ -39,6 +41,8 @@ public sealed partial class FriendlyFireSystem : EntitySystem
             return;
 
         friendlyFire.Enabled = !friendlyFire.Enabled;
+
+        Dirty(ent, friendlyFire);
     }
 
     public void SetEnabled(EntityUid ent, bool state)
@@ -47,6 +51,7 @@ public sealed partial class FriendlyFireSystem : EntitySystem
             return;
 
         friendlyFire.Enabled = state;
+        Dirty(ent, friendlyFire);
     }
 
     public bool GetEnabled(EntityUid ent)
