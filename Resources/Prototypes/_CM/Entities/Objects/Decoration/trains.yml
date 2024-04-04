@@ -1,0 +1,143 @@
+- type: entity
+  id: BaseTrain
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    sprite: _CM/Objects/Decoration/trains.rsi
+    netsync: false
+    drawdepth: Overdoors
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,0,1.5,-1"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              SheetSteel:
+                min: 10
+                max: 20
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+
+- type: entity
+  id: TrainAmmunition
+  parent: BaseTrain
+  name: Amunition Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_ammunition
+
+- type: entity
+  id: ContainerHyperdyneTrain
+  parent: BaseTrain
+  name: Hyperdyne Container Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_container_hyperdyne
+
+- type: entity
+  id: ContainerNanotrasenTrain
+  parent: BaseTrain
+  name: Nanotrasen Container Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_container_nanotrasen
+
+- type: entity
+  id: ContainerTrain
+  parent: BaseTrain
+  name: Container Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_container
+
+
+- type: entity
+  id: CratesTrain
+  parent: BaseTrain
+  name: Crates Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_crates
+
+- type: entity
+  id: EmptyTrain
+  parent: BaseTrain
+  name: Nanotrasen Container Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_empty
+
+- type: entity
+  id: HeadNanotrasenTrain
+  parent: BaseTrain
+  name: Train Head
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_head_nanotrasen
+
+- type: entity
+  id: SupergunTrain
+  parent: BaseTrain
+  name: Supergun Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_supergun
+
+- type: entity
+  id: WagonNanotrasenTrain
+  parent: BaseTrain
+  name: Nanotrasen Wagon Train
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_wagon_nanotrasen
+
+- type: entity
+  id: WagonTrain
+  parent: BaseTrain
+  name: Train Wagon
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_wagon
+
+- type: entity
+  id: WeaponTrain
+  parent: BaseTrain
+  name: Weapon Wagon
+  description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.
+  components:
+  - type: Sprite
+    state: train_weapons
