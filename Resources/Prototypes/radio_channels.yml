@@ -154,3 +154,4 @@
   keycode: 'ж' # Corvax-Localization
   frequency: 1487
   color: "#fcdf03"
+  longRange: true
