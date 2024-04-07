@@ -5,7 +5,7 @@ using Content.Shared.Mobs.Components;
 using Robust.Client.GameObjects;
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
-namespace Content.Client._CM14.Xeno;
+namespace Content.Client._CM14.Xeno.Systems;
 
 public sealed class XenoVisualizerSystem : VisualizerSystem<XenoRestComponent>
 {

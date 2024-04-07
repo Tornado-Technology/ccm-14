@@ -1,12 +1,10 @@
 using Robust.Client.Graphics;
-
-namespace Content.Client._CM14.XenoVision;
-
-using Content.Shared.Eye;
-using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
+using XenoVisionComponent = Content.Client._CM14.Xeno.Components.XenoVisionComponent;
+
+namespace Content.Client._CM14.Xeno.Overlays;
 
 public sealed class XenoVisionOverlay : Overlay
 {

@@ -1,21 +1,38 @@
+using Content.Client._CM14.Xeno.Components;
+using Content.Client._CM14.Xeno.Overlays;
+using Content.Shared._CM14.Xeno;
 using Content.Shared.GameTicking;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 
-namespace Content.Client._CM14.XenoVision;
+namespace Content.Client._CM14.Xeno.Systems;
 
-public sealed class XenoVisionSystem : EntitySystem
+public sealed class XenoSystem : EntitySystem
 {
+    [Dependency] private readonly ILightManager _lightManager = default!;
+    [Dependency] private readonly SharedEyeSystem _eyeSystem = default!;
     [Dependency] private readonly IOverlayManager _overlayMan = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
 
     public override void Initialize()
     {
         base.Initialize();
+
+        SubscribeLocalEvent<XenoVisionComponent, XenoNightVisionEvent>(OnNightVisionToggle);
         SubscribeLocalEvent<XenoVisionComponent, PlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<XenoVisionComponent, PlayerDetachedEvent>(OnPlayerDetached);
         SubscribeLocalEvent<XenoVisionComponent, RoundRestartCleanupEvent>(OnRoundRestart);
+    }
+
+    private void OnNightVisionToggle(EntityUid uid, XenoVisionComponent component, XenoNightVisionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        component.Enabled = !component.Enabled;
+
+        UpdateVision((uid, component));
     }
 
     private void OnPlayerAttached(EntityUid uid, XenoVisionComponent component, PlayerAttachedEvent args)
@@ -26,8 +43,8 @@ public sealed class XenoVisionSystem : EntitySystem
             return;
         if (args.Entity != uid)
             return;
-
-        ToggleVision(component, true);
+        component.Enabled = true;
+        UpdateVision((uid, component));
     }
 
     private void OnPlayerDetached(EntityUid uid, XenoVisionComponent component, PlayerDetachedEvent args)
@@ -38,8 +55,8 @@ public sealed class XenoVisionSystem : EntitySystem
             return;
         if (args.Entity != uid)
             return;
-
-        ToggleVision(component, false);
+        component.Enabled = false;
+        UpdateVision((uid, component));
     }
 
     private void OnRoundRestart(EntityUid uid, XenoVisionComponent component, RoundRestartCleanupEvent args)
@@ -49,20 +66,26 @@ public sealed class XenoVisionSystem : EntitySystem
         if (_player.LocalSession.AttachedEntity != uid)
             return;
 
-        ToggleVision(component, false);
+        component.Enabled = false;
+        UpdateVision((uid, component));
     }
 
-    private void ToggleVision(XenoVisionComponent component, bool enabled)
+    private void UpdateVision(Entity<XenoVisionComponent> ent)
     {
-        if (enabled)
+        _eyeSystem.SetDrawLight(ent.Owner, !ent.Comp.Enabled);
+        _eyeSystem.SetDrawFov(ent.Owner, !ent.Comp.Enabled);
+        _lightManager.DrawLighting = !ent.Comp.Enabled;
+        _lightManager.DrawHardFov = !ent.Comp.Enabled;
+
+        if (ent.Comp.Enabled)
         {
-            component.VisionOverlay ??= new XenoVisionOverlay();
-            _overlayMan.AddOverlay(component.VisionOverlay);
+            ent.Comp.VisionOverlay ??= new XenoVisionOverlay();
+            _overlayMan.AddOverlay(ent.Comp.VisionOverlay);
         }
         else
         {
-            if (component.VisionOverlay != null)
-                _overlayMan.RemoveOverlay(component.VisionOverlay);
+            if (ent.Comp.VisionOverlay != null)
+                _overlayMan.RemoveOverlay(ent.Comp.VisionOverlay);
         }
     }
 }

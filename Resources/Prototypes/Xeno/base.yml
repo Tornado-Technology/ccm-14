@@ -56,7 +56,6 @@
       coldDamageThreshold: -150
       currentTemperature: 310.15
     - type: Eye
-      drawFov: false
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/queen.rsi
@@ -172,7 +171,7 @@
       footstepSoundCollection:
         collection: XenoFootstepMedium
     - type: XenoVision
-      color: "#C0C0C0"
+      color: "#3b3b3b"
 
 - type: entity
   id: ActionXenoAcid
