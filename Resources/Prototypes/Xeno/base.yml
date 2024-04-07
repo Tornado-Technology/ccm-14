@@ -171,6 +171,8 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepMedium
+    - type: XenoVision
+      color: "#C0C0C0"
 
 - type: entity
   id: ActionXenoAcid
@@ -251,7 +253,7 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-    
+
 
 - type: entity
   abstract: true
@@ -270,7 +272,7 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-    
+
 
 
 - type: entity
