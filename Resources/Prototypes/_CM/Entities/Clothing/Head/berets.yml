@@ -118,3 +118,14 @@
     sprite: _CM/Clothing/Head/Berets/zeleniy.rsi
   - type: Clothing
     sprite: _CM/Clothing/Head/Berets/zeleniy.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretWhite
+  name: Белая фуражка штаба
+  description: Белая фуражка для белых людей
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/WhiteCommandBeret.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/WhiteCommandBeret.rsi
