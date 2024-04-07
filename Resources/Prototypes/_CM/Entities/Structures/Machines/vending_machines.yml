@@ -196,6 +196,10 @@
         amount: 10
       - id: ClothingHeadHelmetMarine
         amount: 5
+      - id: ClothingHeadHatBeretWhite
+        amount: 6
+      - id: ClothingUniformJumpsuitWhiteDress
+        amount: 6
     - name: Очки
       entries:
       - id: ClothingEyesGlassesBallistic
