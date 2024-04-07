@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "size": {
+        "x": 128,
+        "y": 80
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/f8f4aeda930fcd0805ca4cc76d9bc9412a5b3428",
+    "states": [
+        {
+            "name": "train_ammunition"
+        },
+        {
+            "name": "train_container_hyperdyne"
+        },
+        {
+            "name": "train_container_nanotrasen"
+        },
+        {
+            "name": "train_container"
+        },
+        {
+            "name": "train_crates"
+        },
+        {
+            "name": "train_empty"
+        },
+        {
+            "name": "train_head_nanotrasen"
+        },
+        {
+            "name": "train_supergun"
+        },
+        {
+            "name": "train_wagon_nanotrasen"
+        },
+        {
+            "name": "train_wagon"
+        },
+        {
+            "name": "train_weapons"
+        }
+    ]
+}

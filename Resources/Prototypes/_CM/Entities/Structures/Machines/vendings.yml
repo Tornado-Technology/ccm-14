@@ -197,6 +197,8 @@
         amount: 1
       - id: CMHypospray
         amount: 1
+      - id: ClothingEyesHudMedical
+        amount: 1
       - id: ClothingBeltMilitaryWebbingMed
         amount: 1
     - name: Подсумки

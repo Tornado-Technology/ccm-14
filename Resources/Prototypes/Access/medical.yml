@@ -14,10 +14,10 @@
   id: Paramedic
   name: id-card-access-level-paramedic
 
-- type: accessGroup
-  id: Medical
-  tags:
-  - ChiefMedicalOfficer
-  - Medical
-  - Chemistry
-  - Security
+#- type: accessGroup
+#  id: Medical
+#  tags:
+#  - ChiefMedicalOfficer
+#  - Medical
+#  - Chemistry
+#  - Security
