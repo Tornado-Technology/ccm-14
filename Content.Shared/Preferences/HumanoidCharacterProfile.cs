@@ -393,7 +393,6 @@ namespace Content.Shared.Preferences
 
         public void EnsureValid(IConfigurationManager configManager, IPrototypeManager prototypeManager, string[] sponsorPrototypes)
         {
-            var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 
             if (!prototypeManager.TryIndex<SpeciesPrototype>(Species, out var speciesPrototype) || speciesPrototype.RoundStart == false)
             {
@@ -450,7 +449,7 @@ namespace Content.Shared.Preferences
 
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = Regex.Replace(name, @"[^А-Яа-яёЁ0-9' -]", string.Empty); // Corvax: Only cyrillic names
+                name = Regex.Replace(name, @"[^Рђ-РЇР°-СЏС‘РЃ0-9' -]", string.Empty); // Corvax: Only cyrillic names
             }
 
             if (configManager.GetCVar(CCVars.ICNameCase))

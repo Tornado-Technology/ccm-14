@@ -50,9 +50,10 @@ public sealed class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealthIconsCo
         if (!IsActive || args.InContainer)
             return;
 
-        if (TryComp<XenoComponent>(uid, out _)) return; // Corvax CM fix
+        if (HasComp<XenoComponent>(entity)) return; // Corvax CM fix
 
-        var healthIcons = DecideHealthIcons(damageableComponent);
+
+        var healthIcons = DecideHealthIcons(entity);
 
         args.StatusIcons.AddRange(healthIcons);
     }

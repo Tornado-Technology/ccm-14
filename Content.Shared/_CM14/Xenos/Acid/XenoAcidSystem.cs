@@ -1,4 +1,4 @@
-﻿using Content.Shared.Coordinates;
+using Content.Shared.Coordinates;
 using Content.Shared.DoAfter;
 using Content.Shared.Popups;
 using Robust.Shared.Network;
@@ -33,8 +33,7 @@ public sealed class XenoAcidSystem : EntitySystem
 
         var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.AcidDelay, new XenoCorrosiveAcidDoAfterEvent(xeno.Comp.AcidId, xeno.Comp.AcidTime), xeno, args.Target)
         {
-            BreakOnTargetMove = true,
-            BreakOnUserMove = true
+            BreakOnMove = true
         };
         _doAfter.TryStartDoAfter(doAfter);
     }
