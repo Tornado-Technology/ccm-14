@@ -108,6 +108,9 @@
             "name": "Brigmedic"
         },
         {
+            "name": "Pilot"
+        },
+        {
             "name": "MedicalDoctor"
         },
         {
@@ -174,7 +177,11 @@
             "name": "HeadRevolutionary"
         },
         {
-            "name": "MindShield"
+            "name": "MindShield",
+            "delays":
+            [
+                [1.0,1.0]
+            ]
         },
         {
             "name": "Polyce"
@@ -301,6 +308,12 @@
         },
         {
             "name": "PilotMech"
+        },
+        {
+            "name": "Visitor"
+        },
+        {
+            "name": "InitialInfected"
         }
     ]
 }

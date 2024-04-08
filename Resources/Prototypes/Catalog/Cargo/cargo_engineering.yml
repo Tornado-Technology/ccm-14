@@ -5,7 +5,7 @@
     state: coillv-30
   product: CrateEngineeringCableLV
   cost: 300
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
@@ -15,7 +15,7 @@
     state: coilmv-30
   product: CrateEngineeringCableMV
   cost: 300
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
@@ -25,7 +25,7 @@
     state: coilhv-30
   product: CrateEngineeringCableHV
   cost: 300
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
@@ -35,7 +35,7 @@
     state: coilall-30
   product: CrateEngineeringCableBulk
   cost: 750
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
@@ -45,7 +45,37 @@
     state: icon
   product: CrateEngineeringElectricalSupplies
   cost: 4500
-  category: Engineering
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: StationBeaconBundle
+  icon:
+    sprite: Objects/Devices/station_beacon.rsi
+    state: icon
+  product: CrateEngineeringStationBeaconBundle
+  cost: 500
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: EngineeringJetpack
+  icon:
+    sprite: Objects/Tanks/Jetpacks/blue.rsi
+    state: icon
+  product: CrateEngineeringJetpack
+  cost: 1000
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: EngineeringMiniJetpack
+  icon:
+    sprite: Objects/Tanks/Jetpacks/mini.rsi
+    state: icon
+  product: CrateEngineeringMiniJetpack
+  cost: 750
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
@@ -55,18 +85,18 @@
     state: icon
   product: CrateAirlockKit
   cost: 1100
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
   name: Ящик с турелью
   id: TurretMarineKit
   icon:
-    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: syndie_lethal
-  product: CrateTurretMarine
-  cost: 40000
-  category: Engineering
+    sprite: Clothing/Head/Helmets/eva.rsi
+    state: icon
+  product: CrateEvaKit
+  cost: 5000
+  category: cargoproduct-category-name-engineering
   group: market
 
 
@@ -74,18 +104,38 @@
   id: EngineeringRCDAmmo
   icon:
     sprite: Objects/Tools/rcd.rsi
-    state: icon
+    state: ammo
   product: CrateRCDAmmo
   cost: 2500
-  category: Engineering
+  category: cargoproduct-category-name-engineering
   group: market
 
 - type: cargoProduct
   id: EngineeringRCD
   icon:
     sprite: Objects/Tools/rcd.rsi
-    state: ammo
+    state: icon
   product: CrateRCD
   cost: 800
-  category: Engineering
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: EngineeringParticleDecelerators
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+    state: base
+  product: CrateParticleDecelerators
+  cost: 15000
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: EngineeringSpaceHeater
+  icon:
+    sprite: Structures/Piping/Atmospherics/Portable/portable_sheater.rsi
+    state: sheaterOff
+  product: SpaceHeaterAnchored
+  cost: 300
+  category: cargoproduct-category-name-engineering
   group: market

@@ -11,6 +11,7 @@
     3: 0.75
 
 - type: techDiscipline
+<<<<<<< HEAD
   id: Biochemical
   name: research-discipline-biochemical
   color: "#449ae6"
@@ -23,6 +24,8 @@
     3: 0.3
 
 - type: techDiscipline
+=======
+>>>>>>> ss14/master
   id: Arsenal
   name: research-discipline-arsenal
   color: "#dc373b"

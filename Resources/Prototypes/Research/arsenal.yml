@@ -22,6 +22,7 @@
   tier: 1
   cost: 1750
   recipeUnlocks:
+<<<<<<< HEAD
   - VoiceTrigger
   - SignalTrigger
   - TimerTrigger
@@ -45,6 +46,33 @@
 - type: technology
   id: RegularMunitions
   name: research-technology-regular-munitions
+=======
+  - ShellShotgunIncendiary
+  - CartridgePistolIncendiary
+  - CartridgeMagnumIncendiary
+  - CartridgeLightRifleIncendiary
+  - CartridgeRifleIncendiary
+  - MagazineBoxPistolIncendiary
+  - MagazineBoxMagnumIncendiary
+  - MagazineBoxLightRifleIncendiary
+  - MagazineBoxRifleIncendiary
+
+- type: technology
+  id: WeaponizedLaserManipulation
+  name: research-technology-weaponized-laser-manipulation
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - WeaponLaserCarbine
+
+- type: technology
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
+>>>>>>> ss14/master
   icon:
     sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
     state: base
@@ -63,6 +91,7 @@
   #- Magazine9mm
   #- MagazinePP
 
+<<<<<<< HEAD
 #- type: technology # Перенес исследования пистолетных патрон в регулярное вооружение.
   #id: SmallMunitions
   #name: research-technology-small-munitions
@@ -197,6 +226,42 @@
   cost: 5000
   recipeUnlocks:
   - MechWeaponImmolator
+=======
+- type: technology
+  id: AdvancedRiotControl
+  name: research-technology-advanced-riot-control
+  icon:
+    sprite: Objects/Weapons/Melee/truncheon.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - Truncheon
+  - TelescopicShield
+  - HoloprojectorSecurity
+  - WeaponDisablerSMG
+
+# Tier 2
+>>>>>>> ss14/master
+
+- type: technology
+  id: ExplosiveTechnology
+  name: research-technology-explosive-technology
+  icon:
+    sprite: Objects/Devices/payload.rsi
+    state: payload-explosive-armed
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - SignallerAdvanced
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ExplosivePayload
+  - ChemicalPayload
 
 - type: technology
   id: ConcentratedLaserWeaponry
@@ -225,6 +290,7 @@
   - MarineCASClusterBomb
 
 - type: technology
+<<<<<<< HEAD
   id: AdvancedBorgWeapons
   name: research-technology-advanced-borg-weapons
   icon:
@@ -260,6 +326,8 @@
 #  - WeaponDisablerSMG
 
 - type: technology
+=======
+>>>>>>> ss14/master
   id: BasicShuttleArmament
   name: research-technology-basic-shuttle-armament
   icon:
@@ -322,6 +390,7 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+<<<<<<< HEAD
 
 - type: technology
   id: MechWeaponSolaris
@@ -334,3 +403,5 @@
   cost: 5000
   recipeUnlocks:
   - MechWeaponSolaris
+=======
+>>>>>>> ss14/master

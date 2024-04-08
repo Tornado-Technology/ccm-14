@@ -1,6 +1,4 @@
-using Content.Server.Fluids.Components;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Content.Shared.Fluids.Components;
 
@@ -69,10 +67,5 @@ public sealed partial class PuddleSystem
                 QueueDel(uid);
             }
         }
-    }
-
-    public bool CanFullyEvaporate(Solution solution)
-    {
-        return solution.GetTotalPrototypeQuantity(EvaporationReagents) == solution.Volume;
     }
 }
