@@ -18,6 +18,7 @@ using Content.Server._CM14.Xeno.Mobs.Components;
 using Content.Shared._CM14.Xeno;
 using Robust.Server.GameObjects;
 using Content.Shared._CM14.Xeno;
+using Content.Shared._CM14.Xeno.Components;
 
 namespace Content.Server._CM14.Xeno.Mobs.Systems;
 

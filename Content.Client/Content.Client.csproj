@@ -28,6 +28,17 @@
   <ItemGroup>
     <Folder Include="Spawners\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="_CM14\Surgery\CMSurgeryStepButton.cs">
+      <DependentUpon>CMSurgeryStepButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_CM14\Surgery\CMSurgeryWindow.cs">
+      <DependentUpon>CMSurgeryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_CM14\Xeno\UI\XenoChoiceControl.cs">
+      <DependentUpon>XenoChoiceControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\XamlIL.targets" />
 </Project>

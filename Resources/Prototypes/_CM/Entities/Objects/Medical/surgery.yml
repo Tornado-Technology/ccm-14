@@ -1,0 +1,339 @@
+# Base
+- type: entity
+  parent: BaseToolSurgery
+  id: CMBaseToolSurgery
+  abstract: true
+  name: Ретрактор
+  description: Ретрактор — это хирургический инструмент, используемый для разделения краев хирургического разреза/раны.
+  components:
+  - type: CMSurgeryTool
+
+
+
+# Retractor
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMRetractor
+  name: Ретрактор
+  description: Ретрактор — это хирургический инструмент, используемый для разделения краев хирургического разреза/раны.
+  components:
+  - type: CMSurgeryTool
+    startSound:
+      path: /Audio/_CM/Medical/Surgery/retractor1.ogg
+    endSound:
+      path: /Audio/_CM/Medical/Surgery/retractor2.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/retractor.rsi
+    state: retractor
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/retractor.rsi
+  - type: CMRetractor
+
+# - Predator
+- type: entity
+  parent: CMRetractor
+  id: CMRetractorPredator
+  name: открывашка-хищник
+  components:
+  - type: Sprite
+    state: predator_retractor
+
+
+
+# Hemostat
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMHemostat
+  name: Гемостат
+  description: Хирургический зажим. Вы чуствуете его здесь...
+  components:
+  - type: CMSurgeryTool
+    endSound:
+      path: /Audio/_CM/Medical/Surgery/hemostat1.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/hemostat.rsi
+    state: hemostat
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/hemostat.rsi
+  - type: CMHemostat
+
+# - Predator
+- type: entity
+  parent: CMHemostat
+  id: CMHemostatPredator
+  name: pincher
+  components:
+  - type: Sprite
+    state: predator_hemostat
+
+
+
+# Cautery
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMCautery
+  name: Прижигатель
+  description: Останавливает кровь.
+  components:
+  - type: CMSurgeryTool
+    startSound:
+      path: /Audio/_CM/Medical/Surgery/cautery1.ogg
+    endSound:
+      path: /Audio/_CM/Medical/Surgery/cautery2.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/cautery.rsi
+    state: cautery
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/cautery.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Heat: 5
+    soundHit:
+      path: /Audio/Effects/lightburn.ogg
+  - type: CMCautery
+
+# - Predator
+- type: entity
+  parent: CMCautery
+  id: CMCauteryPredator
+  name: cauterizer
+  components:
+  - type: Sprite
+    state: predator_cautery
+
+
+
+# Surgical drill
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMSurgicalDrill
+  name: хиругическая дрель
+  description: Лучший инструмент любого стоматолога.
+  components:
+  - type: CMSurgeryTool
+    startSound:
+      path: /Audio/_CM/Medical/Surgery/saw.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/drill.rsi
+    state: drill
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/drill.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 10
+    soundHit:
+      path: /Audio/Items/drill_hit.ogg
+  - type: CMSurgicalDrill
+
+# - Bonedrill
+- type: entity
+  parent: CMSurgicalDrill
+  id: CMSurgicalDrillPredator
+  name: костедробилка
+  components:
+  - type: Sprite
+    state: predator_drill
+
+
+
+# Scalpel
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMScalpel
+  name: скальпель
+  description: Один раз измерь, и восемь раз порежь
+  components:
+  - type: CMSurgeryTool
+    startSound:
+      path: /Audio/_CM/Medical/Surgery/scalpel1.ogg
+    endSound:
+      path: /Audio/_CM/Medical/Surgery/scalpel2.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
+    state: scalpel
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
+  - type: Sharp
+    butcherDelayModifier: 1.5
+  - type: Utensil
+    types:
+    - Knife
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    swingLeft: true
+    attackRate: 1.5
+    damage:
+      types:
+        Slash: 8
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: CMScalpel
+
+# - Predator
+- type: entity
+  parent: CMScalpel
+  id: CMScalpelPredator
+  name: кусачки
+  components:
+  - type: Sprite
+    state: predator_scalpel
+
+# - Laser
+- type: entity
+  parent: CMScalpel
+  id: CMScalpelLaser
+  name: прототип лазерного скальпеля
+  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель. Ранний прототип
+  components:
+  - type: Sprite
+    layers:
+    - state: scalpel_laser
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 0
+  - type: ItemToggle
+    predictable: false
+  - type: ItemToggleHot
+  - type: UseDelay
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Slash: 14
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { state: scalpel_laser_on }
+          False: { state: scalpel_laser }
+
+# - - Improved
+- type: entity
+  parent: CMScalpelLaser
+  id: CMScalpelLaserImproved
+  name: лазерный скальпель
+  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель.
+  components:
+  - type: Sprite
+    layers:
+    - state: scalpel_laser_2
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { state: scalpel_laser_2_on }
+          False: { state: scalpel_laser_2 }
+
+# - - Advanced
+- type: entity
+  parent: CMScalpelLaser
+  id: CMScalpelLaserAdvanced
+  name: улучшенный лазерный скальпель
+  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель. Он очень мощный...
+  components:
+  - type: Sprite
+    layers:
+    - state: scalpel_laser_3
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { state: scalpel_laser_3_on }
+          False: { state: scalpel_laser_3 }
+
+
+# Circular saw
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMCircularSaw
+  name: циркулярная пила
+  description: Режь большие штуки!
+  components:
+  - type: CMSurgeryTool
+    startSound:
+      path: /Audio/_CM/Medical/Surgery/saw.ogg
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/saw.rsi
+    state: saw
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/saw.rsi
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 15
+    soundHit:
+      path: /Audio/Items/drill_hit.ogg
+  - type: Tool
+    qualities:
+    - Sawing
+    speed: 1.5
+  - type: CMBoneSaw
+
+# - Predator
+- type: entity
+  parent: CMCircularSaw
+  id: CMCircularSawPredator
+  name: пила по кости
+  components:
+  - type: Sprite
+    state: predator_bonesaw
+
+
+
+# Bone setter
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMBonesetter
+  name: костоправ
+  components: # TODO CM14
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/bonesetter.rsi
+    state: bonesetter
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/bonesetter.rsi
+
+# - Predator
+- type: entity
+  parent: CMBonesetter
+  id: CMBonesetterPredator
+  name: установщик костей
+  components:
+  - type: Sprite
+    state: predator_bonesetter
+
+
+
+# Pump
+# Wound clamp
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMWoundClamp
+  name: wound clamp
+  description: Used for clamping wounds after treatment.
+  components: # TODO CM14
+  - type: Sprite
+    sprite: _CM14/Objects/Medical/Surgery/wound_clamp.rsi
+    state: wound_clamp
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/wound_clamp.rsi
+
+# Bone Gel
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMBoneGel
+  name: Костный гель.
+  description: Странно, почему он не кончился?!...
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/bone_gel.rsi
+    state: bone-gel
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/bone_gel.rsi
+    state: bone-gel
+  - type: CMBoneGel

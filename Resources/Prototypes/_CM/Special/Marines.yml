@@ -174,7 +174,7 @@
     canResistFire: true
     damage:
       types:
-        Heat: 1 
+        Heat: 1
   - type: Temperature
     heatDamageThreshold: 360
     coldDamageThreshold: 260
@@ -182,10 +182,10 @@
     specificHeat: 42
     coldDamage:
       types:
-        Cold: 0.1 
+        Cold: 0.1
     heatDamage:
       types:
-        Heat: 0.1 
+        Heat: 0.1
   - type: HumanoidAppearance
     species: Marine
   - type: Body
@@ -274,17 +274,9 @@
   - type: CreamPied
   - type: Stripping
   - type: Strippable
-  - type: UserInterface
-    interfaces:
-      - key: enum.VoiceMaskUIKey.Key
-        type: VoiceMaskBoundUserInterface
-      - key: enum.HumanoidMarkingModifierKey.Key
-        type: HumanoidMarkingModifierBoundUserInterface
-      - key: enum.StrippingUiKey.Key
-        type: StrippableBoundUserInterface
   - type: Puller
   - type: Butcherable
-    butcheringType: Spike 
+    butcheringType: Spike
     spawned:
       - id: FoodMeat
         amount: 5
@@ -304,8 +296,8 @@
   - type: StandingState
   - type: Fingerprint
   - type: MobPrice
-    price: 1500 
-    deathPenalty: 0.01 
+    price: 1500
+    deathPenalty: 0.01
   - type: TTS # Corvax-TTS
   - type: Hunger
   - type: Thirst
@@ -348,7 +340,20 @@
       - SurveillanceCameraEntertainment
   - type: TagInteraction
     blacklistTag: InteractionCAS
-  
+  - type: CMSurgeryTarget
+  - type: UserInterface
+    interfaces:
+      - key: enum.VoiceMaskUIKey.Key
+        type: VoiceMaskBoundUserInterface
+      - key: enum.HumanoidMarkingModifierKey.Key
+        type: HumanoidMarkingModifierBoundUserInterface
+      - key: enum.StrippingUiKey.Key
+        type: StrippableBoundUserInterface
+      - key: enum.HumanoidMarkingModifierKey.Key
+        type: HumanoidMarkingModifierBoundUserInterface
+      - key: enum.CMSurgeryUIKey.Key
+        type: CMSurgeryBui
+
 - type: species
   id: Marine
   name: species-name-human
@@ -358,7 +363,7 @@
   markingLimits: MarineMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
-  
+
 - type: markingPoints
   id: MarineMarkingLimits
   points:
