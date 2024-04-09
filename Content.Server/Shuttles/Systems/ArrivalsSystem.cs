@@ -532,8 +532,7 @@ public sealed class ArrivalsSystem : EntitySystem
             var arrivalsComp = EnsureComp<ArrivalsShuttleComponent>(component.Shuttle);
             arrivalsComp.Station = uid;
             EnsureComp<ProtectedGridComponent>(uid);
-            _shuttles.FTLTravel(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration,
-                dock: true);
+            _shuttles.FTLToDock(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
             arrivalsComp.NextTransfer =
                 _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
         }

@@ -447,10 +447,10 @@ namespace Content.Shared.Preferences
 
             name = name.Trim();
 
-            if (configManager.GetCVar(CCVars.RestrictedNames))
+            /*if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = Regex.Replace(name, @"[^Рђ-РЇР°-СЏС‘РЃ0-9' -]", string.Empty); // Corvax: Only cyrillic names
-            }
+                name = Regex.Replace(name, @"[^Р С’-Р Р‡Р В°-РЎРЏРЎвЂР Рѓ0-9' -]", string.Empty); // Corvax: Only cyrillic names
+            }*/
 
             if (configManager.GetCVar(CCVars.ICNameCase))
             {

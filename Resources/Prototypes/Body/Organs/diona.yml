@@ -102,7 +102,7 @@
     layers:
       - state: lung-l
       - state: lung-r
-  - type: Lung 
+  - type: Lung
   - type: Metabolizer
     removeEmpty: true
     solutionOnBody: false
@@ -131,7 +131,7 @@
   description: "The source of incredible, unending intelligence. Honk."
   components:
   - type: Brain
-  - type: Nymph # This will make the organs turn into a nymph when they're removed. 
+  - type: Nymph # This will make the organs turn into a nymph when they're removed.
     entityPrototype: OrganDionaNymphBrain
     transferMind: true
 
@@ -154,40 +154,3 @@
   components:
   - type: Nymph
     entityPrototype: OrganDionaNymphLungs
-
-# Nymphs that the organs will turn into
-- type: entity
-  id: OrganDionaNymphBrain
-  parent: MobDionaNymph
-  noSpawn: true
-  name: diona nymph
-  suffix: Brain
-  description: Contains the brain of a formerly fully-formed Diona. Killing this would kill the Diona forever. You monster.
-  components:
-  - type: IsDeadIC
-  - type: Body
-    prototype: AnimalNymphBrain
-
-- type: entity
-  id: OrganDionaNymphStomach
-  parent: MobDionaNymphAccent 
-  noSpawn: true
-  name: diona nymph
-  suffix: Stomach
-  description: Contains the stomach of a formerly fully-formed Diona. It doesn't taste any better for it. 
-  components:
-  - type: IsDeadIC
-  - type: Body
-    prototype: AnimalNymphStomach
-
-- type: entity
-  id: OrganDionaNymphLungs
-  parent: MobDionaNymphAccent
-  noSpawn: true
-  name: diona nymph
-  suffix: Lungs
-  description: Contains the lungs of a formerly fully-formed Diona. Breathtaking. 
-  components:
-  - type: IsDeadIC
-  - type: Body
-    prototype: AnimalNymphLungs
