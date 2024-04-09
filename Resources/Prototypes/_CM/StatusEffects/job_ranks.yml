@@ -8,70 +8,70 @@
   parent: JobRankIcon
   id: JobRankComm
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: comm
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankMajor
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: major
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankEnisgn
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: enisgn
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankSecondLieuntenant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: second_lieuntenant
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankChiefPettyOfficer
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: chief_petty_officer
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankPettyOfficerFirstClass
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: petty_officer_first_class
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankPettyOfficerSecondClass
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: petty_officer_second_class
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankPettyOfficerThirdClass
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
-    state: petty_officer_third_class    
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
+    state: petty_officer_third_class
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankOfficer
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: officer
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankWaltuh
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: waltuh
 
 # Command operations
@@ -79,21 +79,21 @@
   parent: JobRankIcon
   id: JobRankRearAdmiral
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: rear_admiral
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankViceAdmiral
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: vice_admiral
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankCommander
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: commander
 
 # CMO
@@ -101,14 +101,14 @@
   parent: JobRankIcon
   id: JobRankCMO
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: cmo
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankChiefHealthOfficer
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: chief_health_officer
 
 # Medical
@@ -116,14 +116,14 @@
   parent: JobRankIcon
   id: JobRankMedicalDoctor
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: medical_doctor
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankMedicalResident
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: medical_resident
 
 # Scientist
@@ -131,14 +131,14 @@
   parent: JobRankIcon
   id: JobRankDotctor
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: doctor
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankProffesor
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: proffesor
 
 # Sergeants
@@ -146,42 +146,42 @@
   parent: JobRankIcon
   id: JobRankSergeantMajor
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: sergeant_major
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankMasterSergeant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: master_sergant
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankFirstSergeant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: first_sergaent
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankCommanderSergeant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: commander_sergeant
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankStaffSergeant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: staff_sergeant
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankSergeant
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: sergeant
 
 # Corporals
@@ -189,14 +189,14 @@
   parent: JobRankIcon
   id: JobRankCoporal
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: coporal
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankLanceCorporal
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: lance_corporal
 
 # Private
@@ -204,14 +204,14 @@
   parent: JobRankIcon
   id: JobRankPrivateFirstClass
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: private_first_class
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankPrivate
   icon:
-    sprite: _CM14/Interface/Misc/job_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/job_ranks_icons.rsi
     state: private
 
 # Xeno

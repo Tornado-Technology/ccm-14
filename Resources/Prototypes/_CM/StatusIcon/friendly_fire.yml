@@ -3,7 +3,7 @@
   priority: 5
   locationPreference: Right
   icon:
-    sprite: _CM14/Interface/Misc/friendly_fire_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/friendly_fire_icons.rsi
     state: friendly_fire_enabled
 
 - type: statusIcon
@@ -11,5 +11,5 @@
   priority: 4
   locationPreference: Right
   icon:
-    sprite: _CM14/Interface/Misc/friendly_fire_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/friendly_fire_icons.rsi
     state: friendly_fire_disabled

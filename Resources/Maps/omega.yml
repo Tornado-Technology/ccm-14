@@ -70208,13 +70208,6 @@ entities:
     - type: Transform
       pos: -34.5,15.5
       parent: 4812
-- proto: SpawnVehicleJanicart
-  entities:
-  - uid: 1481
-    components:
-    - type: Transform
-      pos: -22.5,-6.5
-      parent: 4812
 - proto: SpawnVehicleSecway
   entities:
   - uid: 8348

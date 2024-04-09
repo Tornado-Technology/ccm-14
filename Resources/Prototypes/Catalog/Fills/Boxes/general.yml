@@ -484,7 +484,7 @@
   - type: StorageFill
     contents:
       - id: EncryptionKeyAlpha
-        amount: 6
+        amount: 4
 
 - type: entity
   name: bravo encryption key box
@@ -494,7 +494,7 @@
   - type: StorageFill
     contents:
       - id: EncryptionKeyBravo
-        amount: 6
+        amount: 4
 
 - type: entity
   name: charlie encryption key box
@@ -504,7 +504,7 @@
   - type: StorageFill
     contents:
       - id: EncryptionKeyCharlie
-        amount: 6
+        amount: 4
 
 - type: entity
   name: delta encryption key box
@@ -514,4 +514,4 @@
   - type: StorageFill
     contents:
       - id: EncryptionKeyDelta
-        amount: 6
+        amount: 4
