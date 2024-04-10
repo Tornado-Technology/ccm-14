@@ -9,6 +9,7 @@ public sealed partial class XenoRuleComponent : Component
     ///     this is literally the minimum threshold required for correct play,
     ///     otherwise the round will end instantly.
     /// </summary>
+    public EntityUid JumpAction;
     [DataField("minPlayers")]
     public int MinPlayers = 2;
 

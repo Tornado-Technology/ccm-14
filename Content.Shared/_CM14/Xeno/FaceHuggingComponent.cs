@@ -12,6 +12,8 @@ public sealed partial class FaceHuggingComponent : Component
     [DataField("faceHuggerJumpAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string FaceHuggerJumpAction = "ActionFaceHuggerJump";
 
+    public EntityUid? JumpAction;
+
 
     [ViewVariables(VVAccess.ReadWrite), DataField("soundFaceHugging")]
     public SoundSpecifier? SoundFaceHugging = new SoundPathSpecifier("/Audio/Effects/demon_consume.ogg")

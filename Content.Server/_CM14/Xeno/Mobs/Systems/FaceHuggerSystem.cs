@@ -37,6 +37,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     public override void Initialize()
     {
         SubscribeLocalEvent<FaceHuggingComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<FaceHuggingComponent, ComponentShutdown>(OnShutdown);
 
         SubscribeLocalEvent<FaceHuggingComponent, FaceHuggerJumpActionEvent>(OnJumpFaceHugger);
         SubscribeLocalEvent<FaceHuggerComponent, ThrowDoHitEvent>(OnFaceHuggerDoHit);
@@ -45,17 +46,22 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         SubscribeLocalEvent<FaceHuggerComponent, BeingUnequippedAttemptEvent>(OnUnequipAttempt);
         SubscribeLocalEvent<FaceHuggerComponent, GotEquippedHandEvent>(OnGotEquippedHand);
         SubscribeLocalEvent<FaceHuggerComponent, GotUnequippedEvent>(OnGotUnequipped);
-        SubscribeLocalEvent<FaceHuggerComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
     private void OnStartup(EntityUid uid, FaceHuggingComponent component, ComponentStartup args)
     {
-        _actionsSystem.AddAction(uid, component.FaceHuggerJumpAction);
+        component.JumpAction = _actionsSystem.AddAction(uid, component.FaceHuggerJumpAction);
+    }
+
+    private void OnShutdown(EntityUid uid, FaceHuggingComponent component, ComponentShutdown args)
+    {
+        _actionsSystem.RemoveAction(component.JumpAction);
+
     }
 
     private void OnFaceHuggerDoHit(EntityUid uid, FaceHuggerComponent component, ThrowDoHitEvent args)
     {
-        if (component.IsDeath)
+        if (component.RemainingEggs < 0)
             return;
 
         if (TryComp(args.Target, out HuggerOnFaceComponent? _))
@@ -65,11 +71,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
             return;
 
         if (HasComp<XenoComponent>(args.Target))
-            return;
-
-
-        TryComp(uid, out FaceHuggerComponent? faceHuggerComponent);
-        if (faceHuggerComponent == null)
             return;
 
         if (!HasComp<HumanoidAppearanceComponent>(args.Target))
@@ -97,9 +98,14 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
 
-        faceHuggerComponent.Equipped = args.Target;
+        component.Equipped = args.Target;
 
         _popup.PopupEntity(Loc.GetString("Something jumped on you!"), args.Target, args.Target, PopupType.LargeCaution);
+        component.RemainingEggs -= 1;
+        if (component.RemainingEggs >= 1)
+            return;
+        if (TryComp(uid, out FaceHuggingComponent? faceHuggingComponent))
+            _actionsSystem.RemoveAction(faceHuggingComponent.JumpAction);
     }
 
     private void OnJumpFaceHugger(EntityUid uid, FaceHuggingComponent component, FaceHuggerJumpActionEvent args)
@@ -143,9 +149,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
     private void OnGotEquippedHand(EntityUid uid, FaceHuggerComponent component, GotEquippedHandEvent args)
     {
-        if (component.IsDeath)
-            return;
-
         _damageableSystem.TryChangeDamage(args.User,
             new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 5));
     }
@@ -165,15 +168,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         EnsureComp<NPCMeleeCombatComponent>(uid);
     }
-
-    private static void OnMobStateChanged(EntityUid uid, FaceHuggerComponent component, MobStateChangedEvent args)
-    {
-        if (args.NewMobState == MobState.Dead)
-        {
-            component.IsDeath = true;
-        }
-    }
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);

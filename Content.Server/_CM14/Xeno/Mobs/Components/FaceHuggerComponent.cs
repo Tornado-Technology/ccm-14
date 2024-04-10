@@ -3,8 +3,9 @@ namespace Content.Server._CM14.Xeno.Mobs.Components;
 [RegisterComponent]
 public sealed partial class FaceHuggerComponent : Component
 {
+    [DataField]
+    public int RemainingEggs = 2;
 
-    public bool IsDeath = false;
     public EntityUid Equipped;
 
     [DataField("paralyzeTime"), ViewVariables(VVAccess.ReadWrite)]
