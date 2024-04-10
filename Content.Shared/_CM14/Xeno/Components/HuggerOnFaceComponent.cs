@@ -10,7 +10,7 @@ public sealed partial class HuggerOnFaceComponent : Component
     public bool RootsCut = false;
 
     [DataField]
-    public float LayEggTime = 360f;
+    public float LayEggTime = 480f;
 
     [DataField]
     public float CurrentTime = 0f;

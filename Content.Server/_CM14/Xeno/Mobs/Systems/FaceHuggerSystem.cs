@@ -64,7 +64,9 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (HasComp<FaceHuggerComponent>(args.Target))
             return;
 
-        _entityManager.AddComponent<HuggerOnFaceComponent>(args.Target);
+        if (HasComp<XenoComponent>(args.Target))
+            return;
+
 
         TryComp(uid, out FaceHuggerComponent? faceHuggerComponent);
         if (faceHuggerComponent == null)
@@ -82,6 +84,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (!TryComp(args.Target, out InventoryComponent? inventory))
             return;
 
+
+        _entityManager.AddComponent<HuggerOnFaceComponent>(args.Target);
         _inventory.TryUnequip(args.Target, "mask", true, true, false, inventory);
         var equipped = _inventory.TryEquip(args.Target, uid, "mask", true, true, false, inventory);
         if (!equipped)
