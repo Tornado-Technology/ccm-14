@@ -26,6 +26,8 @@ public sealed class ActionsComponentState : ComponentState
     }
 }
 
+public readonly record struct ActionMetaData(bool ClientExclusive);
+
 /// <summary>
 ///     Determines how the action icon appears in the hotbar for item actions.
 /// </summary>

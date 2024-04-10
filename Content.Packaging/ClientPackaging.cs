@@ -14,7 +14,7 @@ public static class ClientPackaging
     /// <summary>
     /// Be advised this can be called from server packaging during a HybridACZ build.
     /// </summary>
-    public static async Task PackageClient(bool skipBuild, string configuration, IPackageLogger logger)
+    public static async Task PackageClient(bool skipBuild, IPackageLogger logger)
     {
         logger.Info("Building client...");
 
@@ -27,7 +27,7 @@ public static class ClientPackaging
                 {
                     "build",
                     Path.Combine("Content.Client", "Content.Client.csproj"),
-                    "-c", configuration,
+                    "-c", "Release",
                     "--nologo",
                     "/v:m",
                     "/t:Rebuild",
@@ -97,27 +97,8 @@ public static class ClientPackaging
             assemblies, // Corvax-Secrets
             cancel: cancel);
 
-        await WriteClientResources(contentDir, pass, cancel); // Corvax-Secrets: Support content resource ignore to ignore server-only prototypes
+        await RobustClientPackaging.WriteClientResources(contentDir, pass, cancel);
 
         inputPass.InjectFinished();
     }
-
-    // Corvax-Secrets-Start
-    public static IReadOnlySet<string> ContentClientIgnoredResources { get; } = new HashSet<string>
-    {
-        "CorvaxSecretsServer"
-    };
-
-    private static async Task WriteClientResources(
-        string contentDir,
-        AssetPass pass,
-        CancellationToken cancel = default)
-    {
-        var ignoreSet = RobustClientPackaging.ClientIgnoredResources
-            .Union(RobustSharedPackaging.SharedIgnoredResources)
-            .Union(ContentClientIgnoredResources).ToHashSet();
-
-        await RobustSharedPackaging.DoResourceCopy(Path.Combine(contentDir, "Resources"), pass, ignoreSet, cancel: cancel);
-    }
-    // Corvax-Secrets-End
 }

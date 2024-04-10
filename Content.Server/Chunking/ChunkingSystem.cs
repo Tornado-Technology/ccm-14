@@ -8,7 +8,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
-using ChunkIndicesEnumerator = Robust.Shared.Map.Enumerators.ChunkIndicesEnumerator;
 
 namespace Content.Shared.Chunking;
 
@@ -30,7 +29,13 @@ public sealed class ChunkingSystem : EntitySystem
     {
         base.Initialize();
         _xformQuery = GetEntityQuery<TransformComponent>();
-        Subs.CVar(_configurationManager, CVars.NetMaxUpdateRange, OnPvsRangeChanged, true);
+        _configurationManager.OnValueChanged(CVars.NetMaxUpdateRange, OnPvsRangeChanged, true);
+    }
+
+    public override void Shutdown()
+    {
+        base.Shutdown();
+        _configurationManager.UnsubValueChanged(CVars.NetMaxUpdateRange, OnPvsRangeChanged);
     }
 
     private void OnPvsRangeChanged(float value)

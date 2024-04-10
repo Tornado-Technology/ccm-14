@@ -19,5 +19,8 @@
         base:
           On: { state: tray-on }
           Off: { state: tray-off }
+  - type: Tag
+    tags:
+      - DroneUsable
   - type: StaticPrice
     price: 60

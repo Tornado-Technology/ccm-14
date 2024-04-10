@@ -21,15 +21,9 @@ namespace Content.Server.Chemistry.TileReactions
         [DataField("requiredSlipSpeed")] private float _requiredSlipSpeed = 6;
         [DataField("paralyzeTime")] private float _paralyzeTime = 1;
 
-        /// <summary>
-        /// <see cref="SlipperyComponent.SuperSlippery"/>
-        /// </summary>
-        [DataField("superSlippery")] private bool _superSlippery;
-
         public FixedPoint2 TileReact(TileRef tile, ReagentPrototype reagent, FixedPoint2 reactVolume)
         {
-            if (reactVolume < 5)
-                return FixedPoint2.Zero;
+            if (reactVolume < 5) return FixedPoint2.Zero;
 
             var entityManager = IoCManager.Resolve<IEntityManager>();
 
@@ -39,15 +33,14 @@ namespace Content.Server.Chemistry.TileReactions
                 var slippery = entityManager.EnsureComponent<SlipperyComponent>(puddleUid);
                 slippery.LaunchForwardsMultiplier = _launchForwardsMultiplier;
                 slippery.ParalyzeTime = _paralyzeTime;
-                slippery.SuperSlippery = _superSlippery;
-                entityManager.Dirty(puddleUid, slippery);
+                entityManager.Dirty(slippery);
 
                 var step = entityManager.EnsureComponent<StepTriggerComponent>(puddleUid);
                 entityManager.EntitySysManager.GetEntitySystem<StepTriggerSystem>().SetRequiredTriggerSpeed(puddleUid, _requiredSlipSpeed, step);
 
-                var slow = entityManager.EnsureComponent<SpeedModifierContactsComponent>(puddleUid);
+                var slow = entityManager.EnsureComponent<SlowContactsComponent>(puddleUid);
                 var speedModifier = 1 - reagent.Viscosity;
-                entityManager.EntitySysManager.GetEntitySystem<SpeedModifierContactsSystem>().ChangeModifiers(puddleUid, speedModifier, slow);
+                entityManager.EntitySysManager.GetEntitySystem<SlowContactsSystem>().ChangeModifiers(puddleUid, speedModifier, slow);
 
                 return reactVolume;
             }

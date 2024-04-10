@@ -43,7 +43,6 @@ namespace Content.Shared.Preferences
             HumanoidCharacterAppearance appearance,
             ClothingPreference clothing,
             BackpackPreference backpack,
-            SpawnPriorityPreference spawnPriority,
             Dictionary<string, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
             List<string> antagPreferences,
@@ -59,7 +58,6 @@ namespace Content.Shared.Preferences
             Appearance = appearance;
             Clothing = clothing;
             Backpack = backpack;
-            SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
             PreferenceUnavailable = preferenceUnavailable;
             _antagPreferences = antagPreferences;
@@ -72,7 +70,7 @@ namespace Content.Shared.Preferences
             Dictionary<string, JobPriority> jobPriorities,
             List<string> antagPreferences,
             List<string> traitPreferences)
-            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.Appearance, other.Clothing, other.Backpack, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.Appearance, other.Clothing, other.Backpack,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences)
         {
         }
@@ -94,12 +92,11 @@ namespace Content.Shared.Preferences
             HumanoidCharacterAppearance appearance,
             ClothingPreference clothing,
             BackpackPreference backpack,
-            SpawnPriorityPreference spawnPriority,
             IReadOnlyDictionary<string, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
             IReadOnlyList<string> antagPreferences,
             IReadOnlyList<string> traitPreferences)
-            : this(name, flavortext, species, voice, age, sex, gender, appearance, clothing, backpack, spawnPriority, new Dictionary<string, JobPriority>(jobPriorities),
+            : this(name, flavortext, species, voice, age, sex, gender, appearance, clothing, backpack, new Dictionary<string, JobPriority>(jobPriorities),
                 preferenceUnavailable, new List<string>(antagPreferences), new List<string>(traitPreferences))
         {
         }
@@ -120,7 +117,6 @@ namespace Content.Shared.Preferences
                new HumanoidCharacterAppearance(),
             ClothingPreference.Jumpsuit,
             BackpackPreference.Backpack,
-            SpawnPriorityPreference.None,
             new Dictionary<string, JobPriority>
             {
                 {SharedGameTicker.FallbackOverflowJob, JobPriority.High}
@@ -149,7 +145,6 @@ namespace Content.Shared.Preferences
                 HumanoidCharacterAppearance.DefaultWithSpecies(species),
                 ClothingPreference.Jumpsuit,
                 BackpackPreference.Backpack,
-                SpawnPriorityPreference.None,
                 new Dictionary<string, JobPriority>
                 {
                     {SharedGameTicker.FallbackOverflowJob, JobPriority.High}
@@ -194,21 +189,11 @@ namespace Content.Shared.Preferences
             ).ID;
             // Corvax-TTS-End
 
-            var gender = Gender.Epicene;
-
-            switch (sex)
-            {
-                case Sex.Male:
-                    gender = Gender.Male;
-                    break;
-                case Sex.Female:
-                    gender = Gender.Female;
-                    break;
-            }
+            var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
 
             var name = GetName(species, gender);
 
-            return new HumanoidCharacterProfile(name, "", species, voiceId, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), ClothingPreference.Jumpsuit, BackpackPreference.Backpack, SpawnPriorityPreference.None,
+            return new HumanoidCharacterProfile(name, "", species, voiceId, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), ClothingPreference.Jumpsuit, BackpackPreference.Backpack,
                 new Dictionary<string, JobPriority>
                 {
                     {SharedGameTicker.FallbackOverflowJob, JobPriority.High},
@@ -235,7 +220,6 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterAppearance Appearance { get; private set; }
         public ClothingPreference Clothing { get; private set; }
         public BackpackPreference Backpack { get; private set; }
-        public SpawnPriorityPreference SpawnPriority { get; private set; }
         public IReadOnlyDictionary<string, JobPriority> JobPriorities => _jobPriorities;
         public IReadOnlyList<string> AntagPreferences => _antagPreferences;
         public IReadOnlyList<string> TraitPreferences => _traitPreferences;
@@ -291,10 +275,6 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Backpack = backpack };
         }
-        public HumanoidCharacterProfile WithSpawnPriorityPreference(SpawnPriorityPreference spawnPriority)
-        {
-            return new(this) { SpawnPriority = spawnPriority };
-        }
         public HumanoidCharacterProfile WithJobPriorities(IEnumerable<KeyValuePair<string, JobPriority>> jobPriorities)
         {
             return new(this, new Dictionary<string, JobPriority>(jobPriorities), _antagPreferences, _traitPreferences);
@@ -327,16 +307,16 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithAntagPreference(string antagId, bool pref)
         {
             var list = new List<string>(_antagPreferences);
-            if (pref)
+            if(pref)
             {
-                if (!list.Contains(antagId))
+                if(!list.Contains(antagId))
                 {
                     list.Add(antagId);
                 }
             }
             else
             {
-                if (list.Contains(antagId))
+                if(list.Contains(antagId))
                 {
                     list.Remove(antagId);
                 }
@@ -349,16 +329,16 @@ namespace Content.Shared.Preferences
             var list = new List<string>(_traitPreferences);
 
             // TODO: Maybe just refactor this to HashSet? Same with _antagPreferences
-            if (pref)
+            if(pref)
             {
-                if (!list.Contains(traitId))
+                if(!list.Contains(traitId))
                 {
                     list.Add(traitId);
                 }
             }
             else
             {
-                if (list.Contains(traitId))
+                if(list.Contains(traitId))
                 {
                     list.Remove(traitId);
                 }
@@ -384,15 +364,15 @@ namespace Content.Shared.Preferences
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (Clothing != other.Clothing) return false;
             if (Backpack != other.Backpack) return false;
-            if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
-        public void EnsureValid(IConfigurationManager configManager, IPrototypeManager prototypeManager, string[] sponsorPrototypes)
+        public void EnsureValid(string[] sponsorPrototypes)
         {
+            var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 
             if (!prototypeManager.TryIndex<SpeciesPrototype>(Species, out var speciesPrototype) || speciesPrototype.RoundStart == false)
             {
@@ -417,10 +397,15 @@ namespace Content.Shared.Preferences
             };
 
             // ensure the species can be that sex and their age fits the founds
-            if (!speciesPrototype.Sexes.Contains(sex))
-                sex = speciesPrototype.Sexes[0];
-
-            var age = Math.Clamp(Age, speciesPrototype.MinAge, speciesPrototype.MaxAge);
+            var age = Age;
+            if (speciesPrototype != null)
+            {
+                if (!speciesPrototype.Sexes.Contains(sex))
+                {
+                    sex = speciesPrototype.Sexes[0];
+                }
+                age = Math.Clamp(Age, speciesPrototype.MinAge, speciesPrototype.MaxAge);
+            }
 
             var gender = Gender switch
             {
@@ -447,10 +432,11 @@ namespace Content.Shared.Preferences
 
             name = name.Trim();
 
-            /*if (configManager.GetCVar(CCVars.RestrictedNames))
+            var configManager = IoCManager.Resolve<IConfigurationManager>();
+            if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = Regex.Replace(name, @"[^Р С’-Р Р‡Р В°-РЎРЏРЎвЂР Рѓ0-9' -]", string.Empty); // Corvax: Only cyrillic names
-            }*/
+                name = Regex.Replace(name, @"[^А-Яа-яёЁ0-9' -]", string.Empty); // Corvax: Only cyrillic names
+            }
 
             if (configManager.GetCVar(CCVars.ICNameCase))
             {
@@ -499,16 +485,8 @@ namespace Content.Shared.Preferences
                 _ => BackpackPreference.Backpack // Invalid enum values.
             };
 
-            var spawnPriority = SpawnPriority switch
-            {
-                SpawnPriorityPreference.None => SpawnPriorityPreference.None,
-                SpawnPriorityPreference.Arrivals => SpawnPriorityPreference.Arrivals,
-                SpawnPriorityPreference.Cryosleep => SpawnPriorityPreference.Cryosleep,
-                _ => SpawnPriorityPreference.None // Invalid enum values.
-            };
-
             var priorities = new Dictionary<string, JobPriority>(JobPriorities
-                .Where(p => prototypeManager.TryIndex<JobPrototype>(p.Key, out var job) && job.SetPreference && p.Value switch
+                .Where(p => prototypeManager.HasIndex<JobPrototype>(p.Key) && p.Value switch
                 {
                     JobPriority.Never => false, // Drop never since that's assumed default.
                     JobPriority.Low => true,
@@ -518,7 +496,7 @@ namespace Content.Shared.Preferences
                 }));
 
             var antags = AntagPreferences
-                .Where(id => prototypeManager.TryIndex<AntagPrototype>(id, out var antag) && antag.SetPreference)
+                .Where(prototypeManager.HasIndex<AntagPrototype>)
                 .ToList();
 
             var traits = TraitPreferences
@@ -533,7 +511,6 @@ namespace Content.Shared.Preferences
             Appearance = appearance;
             Clothing = clothing;
             Backpack = backpack;
-            SpawnPriority = spawnPriority;
 
             _jobPriorities.Clear();
 
@@ -565,13 +542,6 @@ namespace Content.Shared.Preferences
         }
         // Corvax-TTS-End
 
-        public ICharacterProfile Validated(IConfigurationManager configManager, IPrototypeManager prototypeManager, string[] sponsorPrototypes)
-        {
-            var profile = new HumanoidCharacterProfile(this);
-            profile.EnsureValid(configManager, prototypeManager, sponsorPrototypes); // Corvax-Sponsors
-            return profile;
-        }
-
         // sorry this is kind of weird and duplicated,
         /// working inside these non entity systems is a bit wack
         public static string GetName(string species, Gender gender)
@@ -598,7 +568,6 @@ namespace Content.Shared.Preferences
                     Clothing,
                     Backpack
                 ),
-                SpawnPriority,
                 PreferenceUnavailable,
                 _jobPriorities,
                 _antagPreferences,

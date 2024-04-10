@@ -46,7 +46,8 @@ public sealed class XenoPsychicCureSystem : EntitySystem
             new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(6.5f), new XenoPsychicCureDoAfterEvent(), uid,
                 target: args.Target, used: uid)
             {
-                BreakOnMove = true,
+                BreakOnUserMove = true,
+                BreakOnTargetMove = true,
                 NeedHand = false,
                 BreakOnDamage = true,
             };

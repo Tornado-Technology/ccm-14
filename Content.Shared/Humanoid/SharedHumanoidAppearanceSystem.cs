@@ -110,7 +110,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         if (dirty)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     protected virtual void SetLayerVisibility(
@@ -158,7 +158,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.MarkingSet = new(oldMarkings, prototype.MarkingPoints, _markingManager, _prototypeManager);
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     /// <summary>
@@ -188,7 +188,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.SkinColor = skinColor;
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     /// <summary>
@@ -212,7 +212,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             humanoid.CustomBaseLayers[layer] = new(id);
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     /// <summary>
@@ -233,7 +233,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             humanoid.CustomBaseLayers[layer] = new(null, color);
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     /// <summary>
@@ -255,7 +255,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (sync)
         {
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
         }
     }
 
@@ -341,7 +341,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         humanoid.Age = profile.Age;
 
-        Dirty(uid, humanoid);
+        Dirty(humanoid);
     }
 
     /// <summary>
@@ -374,7 +374,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.MarkingSet.AddBack(prototype.MarkingCategory, markingObject);
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     private void EnsureDefaultMarkings(EntityUid uid, HumanoidAppearanceComponent? humanoid)
@@ -408,7 +408,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.MarkingSet.AddBack(prototype.MarkingCategory, markingObject);
 
         if (sync)
-            Dirty(uid, humanoid);
+            Dirty(humanoid);
     }
 
     // Corvax-TTS-Start

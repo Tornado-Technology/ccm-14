@@ -1,5 +1,4 @@
 using Content.Shared.Database;
-using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Administration.Notes;
@@ -7,7 +6,7 @@ namespace Content.Shared.Administration.Notes;
 [Serializable, NetSerializable]
 public sealed record SharedAdminNote(
     int Id, // Id of note, message, watchlist, ban or role ban. Should be paired with NoteType to uniquely identify a shared admin note.
-    NetUserId Player, // Notes player
+    Guid Player, // Notes player
     int? Round, // Which round was it added in?
     string? ServerName, // Which server was this added on?
     TimeSpan PlaytimeAtNote, // Playtime at the time of getting the note

@@ -88,7 +88,13 @@ public sealed class JobRequirementsManager
             return false;
         }
 
-        var player = _playerManager.LocalSession;
+        if (job.Requirements == null ||
+            !_cfg.GetCVar(CCVars.GameRoleTimers))
+        {
+            return true;
+        }
+
+        var player = _playerManager.LocalPlayer?.Session;
         if (player == null)
             return true;
 
@@ -99,7 +105,7 @@ public sealed class JobRequirementsManager
     {
         reason = null;
 
-        if (requirements == null || !_cfg.GetCVar(CCVars.GameRoleTimers))
+        if (requirements == null)
             return true;
 
         var reasons = new List<string>();

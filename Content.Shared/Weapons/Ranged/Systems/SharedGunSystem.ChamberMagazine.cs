@@ -114,10 +114,7 @@ public abstract partial class SharedGunSystem
                 }
             }
 
-        if (!CycleCartridge(uid, component, user))
-        {
-            UpdateAmmoCount(uid);
-        }
+        CycleCartridge(uid, component, user);
 
         if (component.BoltClosed != false)
         {
@@ -207,12 +204,11 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Tries to take ammo from the magazine and insert into the chamber.
     /// </summary>
-    private bool CycleCartridge(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null, AppearanceComponent? appearance = null)
+    private void CycleCartridge(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null, AppearanceComponent? appearance = null)
     {
         // Try to put a new round in if possible.
         var magEnt = GetMagazineEntity(uid);
         var chambered = GetChamberEntity(uid);
-        var result = false;
 
         // Similar to what takeammo does though that uses an optimised version where
         // multiple bullets may be fired in a single tick.
@@ -249,11 +245,7 @@ public abstract partial class SharedGunSystem
             {
                 UpdateAmmoCount(uid);
             }
-
-            result = true;
         }
-
-        return result;
     }
 
     /// <summary>

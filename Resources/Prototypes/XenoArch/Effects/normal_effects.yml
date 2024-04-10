@@ -215,7 +215,6 @@
     - Mercury
     - VentCrud
     - WeldingFuel
-    - JuiceThatMakesYouWeh
 
 - type: artifactEffect
   id: EffectInstrumentSpawn
@@ -257,8 +256,7 @@
   effectHint: artifact-effect-hint-release
   components:
   - type: RadiationSource
-    intensity: 1
-    slope: 0.3
+    intensity: 2
 
 - type: artifactEffect
   id: EffectKnock
@@ -517,14 +515,14 @@
   targetDepth: 2
   effectHint: artifact-effect-hint-polymorph
   components:
-  - type: PolyOthersArtifact
+  - type: PolyArtifact
 
 - type: artifactEffect
   id: EffectPolyLizard
   targetDepth: 2
   effectHint: artifact-effect-hint-polymorph
   components:
-  - type: PolyOthersArtifact
+  - type: PolyArtifact
     polymorphPrototypeName: ArtifactLizard
 
 - type: artifactEffect
@@ -532,7 +530,7 @@
   targetDepth: 3
   effectHint: artifact-effect-hint-polymorph
   components:
-  - type: PolyOthersArtifact
+  - type: PolyArtifact
     polymorphPrototypeName: ArtifactLuminous
 
 - type: artifactEffect
@@ -557,8 +555,7 @@
   effectHint: artifact-effect-hint-release
   components:
   - type: RadiationSource
-    intensity: 2
-    slope: 0.3
+    intensity: 6
 
 - type: artifactEffect
   id: EffectMaterialSpawn

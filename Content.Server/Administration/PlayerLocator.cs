@@ -44,15 +44,13 @@ namespace Content.Server.Administration
         Task<LocatedPlayerData?> LookupIdAsync(NetUserId userId, CancellationToken cancel = default);
     }
 
-    internal sealed class PlayerLocator : IPlayerLocator, IDisposable, IPostInjectInit
+    internal sealed class PlayerLocator : IPlayerLocator, IDisposable
     {
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
-        [Dependency] private readonly ILogManager _logManager = default!;
 
         private readonly HttpClient _httpClient = new();
-        private ISawmill _sawmill = default!;
 
         public PlayerLocator()
         {
@@ -89,7 +87,7 @@ namespace Content.Server.Administration
 
             if (!resp.IsSuccessStatusCode)
             {
-                _sawmill.Error("Auth server returned bad response {StatusCode}!", resp.StatusCode);
+                Logger.ErrorS("PlayerLocate", "Auth server returned bad response {StatusCode}!", resp.StatusCode);
                 return null;
             }
 
@@ -97,7 +95,7 @@ namespace Content.Server.Administration
 
             if (responseData == null)
             {
-                _sawmill.Error("Auth server returned null response!");
+                Logger.ErrorS("PlayerLocate", "Auth server returned null response!");
                 return null;
             }
 
@@ -129,7 +127,7 @@ namespace Content.Server.Administration
 
             if (!resp.IsSuccessStatusCode)
             {
-                _sawmill.Error("Auth server returned bad response {StatusCode}!", resp.StatusCode);
+                Logger.ErrorS("PlayerLocate", "Auth server returned bad response {StatusCode}!", resp.StatusCode);
                 return null;
             }
 
@@ -137,7 +135,7 @@ namespace Content.Server.Administration
 
             if (responseData == null)
             {
-                _sawmill.Error("Auth server returned null response!");
+                Logger.ErrorS("PlayerLocate", "Auth server returned null response!");
                 return null;
             }
 
@@ -164,11 +162,6 @@ namespace Content.Server.Administration
         void IDisposable.Dispose()
         {
             _httpClient.Dispose();
-        }
-
-        void IPostInjectInit.PostInject()
-        {
-            _sawmill = _logManager.GetSawmill("PlayerLocate");
         }
     }
 }

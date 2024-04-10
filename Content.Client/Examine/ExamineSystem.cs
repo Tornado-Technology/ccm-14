@@ -33,6 +33,7 @@ namespace Content.Client.Examine
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IEyeManager _eyeManager = default!;
         [Dependency] private readonly VerbSystem _verbSystem = default!;
+        [Dependency] private readonly IBaseClient _client = default!;
 
         public const string StyleClassEntityTooltip = "entity-tooltip";
 
@@ -65,10 +66,12 @@ namespace Content.Client.Examine
         {
             if (!args.User.Valid)
                 return;
+            if (_playerManager.LocalPlayer == null)
+                return;
             if (_examineTooltipOpen == null)
                 return;
 
-            if (item == _examinedEntity && args.User == _playerManager.LocalEntity)
+            if (item == _examinedEntity && args.User == _playerManager.LocalPlayer.ControlledEntity)
                 CloseTooltip();
         }
 
@@ -115,7 +118,7 @@ namespace Content.Client.Examine
                 return false;
             }
 
-            _playerEntity = _playerManager.LocalEntity ?? default;
+            _playerEntity = _playerManager.LocalPlayer?.ControlledEntity ?? default;
 
             if (_playerEntity == default || !CanExamine(_playerEntity, entity))
             {
@@ -146,7 +149,7 @@ namespace Content.Client.Examine
 
         private void OnExamineInfoResponse(ExamineSystemMessages.ExamineInfoResponseMessage ev)
         {
-            var player = _playerManager.LocalEntity;
+            var player = _playerManager.LocalPlayer?.ControlledEntity;
             if (player == null)
                 return;
 
@@ -212,16 +215,14 @@ namespace Content.Client.Examine
             var vBox = new BoxContainer
             {
                 Name = "ExaminePopupVbox",
-                Orientation = LayoutOrientation.Vertical,
-                MaxWidth = _examineTooltipOpen.MaxWidth
+                Orientation = LayoutOrientation.Vertical
             };
             panel.AddChild(vBox);
 
             var hBox = new BoxContainer
             {
                 Orientation = LayoutOrientation.Horizontal,
-                SeparationOverride = 5,
-                Margin = new Thickness(6, 0, 6, 0)
+                SeparationOverride = 5
             };
 
             vBox.AddChild(hBox);
@@ -231,7 +232,8 @@ namespace Content.Client.Examine
                 var spriteView = new SpriteView
                 {
                     OverrideDirection = Direction.South,
-                    SetSize = new Vector2(32, 32)
+                    SetSize = new Vector2(32, 32),
+                    Margin = new Thickness(2, 0, 2, 0),
                 };
                 spriteView.SetEntity(target);
                 hBox.AddChild(spriteView);
@@ -239,17 +241,19 @@ namespace Content.Client.Examine
 
             if (knowTarget)
             {
-                var itemName = FormattedMessage.RemoveMarkup(Identity.Name(target, EntityManager, player));
-                var labelMessage = FormattedMessage.FromMarkup($"[bold]{itemName}[/bold]");
-                var label = new RichTextLabel();
-                label.SetMessage(labelMessage);
-                hBox.AddChild(label);
+                hBox.AddChild(new Label
+                {
+                    Text = Identity.Name(target, EntityManager, player),
+                    HorizontalExpand = true,
+                });
             }
             else
             {
-                var label = new RichTextLabel();
-                label.SetMessage(FormattedMessage.FromMarkup("[bold]???[/bold]"));
-                hBox.AddChild(label);
+                hBox.AddChild(new Label
+                {
+                    Text = "???",
+                    HorizontalExpand = true,
+                });
             }
 
             panel.Measure(Vector2Helpers.Infinity);
@@ -352,7 +356,7 @@ namespace Content.Client.Examine
 
         public void DoExamine(EntityUid entity, bool centeredOnCursor = true, EntityUid? userOverride = null)
         {
-            var playerEnt = userOverride ?? _playerManager.LocalEntity;
+            var playerEnt = userOverride ?? _playerManager.LocalPlayer?.ControlledEntity;
             if (playerEnt == null)
                 return;
 

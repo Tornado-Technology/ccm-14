@@ -11,6 +11,10 @@
   - type: HumanoidAppearance
     species: Arachnid
   - type: Hunger
+    starvationDamage:
+      types:
+        Cold: 0.5
+        Bloodloss: 0.5
   - type: Thirst
   - type: Sericulture
     action: ActionSericulture
@@ -30,18 +34,6 @@
         amount: 5
   - type: Inventory
     templateId: arachnid
-  - type: Reactive
-    reactions:
-    - reagents: [Water]
-      methods: [Touch]
-      effects:
-      - !type:WearableReaction
-        slot: head
-        prototypeID: WaterDropletHat
-    - reagents: [Water, SpaceCleaner]
-      methods: [Touch]
-      effects:
-      - !type:WashCreamPieReaction
   # Damage (Self)
   - type: Bloodstream
     bloodReagent: CopperBlood
@@ -49,7 +41,7 @@
   - type: MeleeWeapon
     animation: WeaponArcBite
     soundHit:
-      path: /Audio/Effects/bite.ogg
+      collection: AlienClaw
     damage:
       types:
         Piercing: 5

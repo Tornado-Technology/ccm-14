@@ -4,9 +4,6 @@ ent-BaseHandheldStationMap = station map
 ent-HandheldStationMap = { ent-BaseHandheldStationMap }
   .suffix = Handheld, Powered
   .desc = { ent-BaseHandheldStationMap.desc }
-ent-HandheldStationMapEmpty = { ent-HandheldStationMap }
-    .suffix = Handheld, Empty
-    .desc = { ent-HandheldStationMap.desc }
 
 ent-HandheldStationMapUnpowered = { ent-BaseHandheldStationMap }
     .suffix = Handheld, Unpowered

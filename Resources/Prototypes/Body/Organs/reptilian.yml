@@ -7,11 +7,9 @@
     specialDigestible:
       tags:
       - Fruit
-      - ReptilianFood
       - Meat
       - Pill
       - Crayon
-      - Paper
   - type: SolutionContainerManager
     solutions:
       stomach:

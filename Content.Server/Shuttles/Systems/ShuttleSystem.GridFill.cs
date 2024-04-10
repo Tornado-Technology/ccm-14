@@ -18,7 +18,12 @@ public sealed partial class ShuttleSystem
 
         SubscribeLocalEvent<GridFillComponent, MapInitEvent>(OnGridFillMapInit);
 
-        Subs.CVar(_cfg, CCVars.GridFill, OnGridFillChange);
+        _cfg.OnValueChanged(CCVars.GridFill, OnGridFillChange);
+    }
+
+    private void ShutdownGridFills()
+    {
+        _cfg.UnsubValueChanged(CCVars.GridFill, OnGridFillChange);
     }
 
     private void OnGridFillChange(bool obj)
@@ -71,7 +76,7 @@ public sealed partial class ShuttleSystem
         {
             if (TryComp<ShuttleComponent>(ent[0], out var shuttle))
             {
-                TryFTLProximity(ent[0], targetGrid.Value);
+                TryFTLProximity(ent[0], shuttle, targetGrid.Value);
             }
 
             _station.AddGridToStation(uid, ent[0]);
@@ -127,7 +132,7 @@ public sealed partial class ShuttleSystem
                 {
                     if (TryComp<ShuttleComponent>(ent[0], out var shuttle))
                     {
-                        TryFTLProximity(ent[0], targetGrid.Value);
+                        TryFTLProximity(ent[0], shuttle, targetGrid.Value);
                     }
                     else
                     {
@@ -206,7 +211,7 @@ public sealed partial class ShuttleSystem
 
                 if (config != null)
                 {
-                    FTLDock((ent[0], shuttleXform), config);
+                    FTLDock(config, shuttleXform);
 
                     if (TryComp<StationMemberComponent>(xform.GridUid, out var stationMember))
                     {
@@ -215,17 +220,6 @@ public sealed partial class ShuttleSystem
 
                     valid = true;
                 }
-            }
-
-            foreach (var compReg in component.AddComponents.Values)
-            {
-                var compType = compReg.Component.GetType();
-
-                if (HasComp(ent[0], compType))
-                    continue;
-
-                var comp = _factory.GetComponent(compType);
-                AddComp(ent[0], comp, true);
             }
         }
 

@@ -37,7 +37,8 @@ public sealed class XenoBuildWallSystem : EntitySystem
         var doAfterEventArgs =
            new DoAfterArgs(EntityManager, ent, TimeSpan.FromSeconds(ent.Comp.TimeUsage), new XenoBuildWallDoAfterEvent(args.Target.ToMap(EntityManager, _transform)), ent, target: ent, used: ent)
            {
-               BreakOnMove = true,
+               BreakOnUserMove = true,
+               BreakOnTargetMove = false,
                NeedHand = false,
                BreakOnDamage = true,
                BlockDuplicate = false,

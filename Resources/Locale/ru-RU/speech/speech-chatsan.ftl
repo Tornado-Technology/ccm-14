@@ -77,5 +77,3 @@ chatsan-word-41 = fyi
 chatsan-replacement-41 = for your information
 chatsan-word-42 = wyd
 chatsan-replacement-42 = what you doing
-chatsan-word-43 = ig
-chatsan-replacement-43 = i guess

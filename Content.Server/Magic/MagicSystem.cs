@@ -21,7 +21,6 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Spawners;
@@ -37,6 +36,7 @@ public sealed class MagicSystem : EntitySystem
     [Dependency] private readonly IComponentFactory _compFact = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly DoorBoltSystem _boltsSystem = default!;
     [Dependency] private readonly BodySystem _bodySystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedDoorSystem _doorSystem = default!;
@@ -119,8 +119,9 @@ public sealed class MagicSystem : EntitySystem
     {
         var doAfterEventArgs = new DoAfterArgs(EntityManager, args.User, component.LearnTime, new SpellbookDoAfterEvent(), uid, target: uid)
         {
+            BreakOnTargetMove = true,
+            BreakOnUserMove = true,
             BreakOnDamage = true,
-            BreakOnMove = true,
             NeedHand = true //What, are you going to read with your eyes only??
         };
 
@@ -168,7 +169,7 @@ public sealed class MagicSystem : EntitySystem
         foreach (var pos in GetSpawnPositions(xform, ev.Pos))
         {
             // If applicable, this ensures the projectile is parented to grid on spawn, instead of the map.
-            var mapPos = pos.ToMap(EntityManager, _transformSystem);
+            var mapPos = pos.ToMap(EntityManager);
             var spawnCoords = _mapManager.TryFindGridAt(mapPos, out var gridUid, out _)
                 ? pos.WithEntityId(gridUid, EntityManager)
                 : new(_mapManager.GetMapEntityId(mapPos.MapId), mapPos.Position);
@@ -217,7 +218,7 @@ public sealed class MagicSystem : EntitySystem
                 // This is shit but you get the idea.
                 var directionPos = casterXform.Coordinates.Offset(casterXform.LocalRotation.ToWorldVec().Normalized());
 
-                if (!TryComp<MapGridComponent>(casterXform.GridUid, out var mapGrid))
+                if (!_mapManager.TryGetGrid(casterXform.GridUid, out var mapGrid))
                     return new List<EntityCoordinates>();
 
                 if (!directionPos.TryGetTileRef(out var tileReference, EntityManager, _mapManager))
@@ -306,7 +307,7 @@ public sealed class MagicSystem : EntitySystem
         foreach (var entity in _lookup.GetEntitiesInRange(coords, args.Range))
         {
             if (TryComp<DoorBoltComponent>(entity, out var bolts))
-                _doorSystem.SetBoltsDown((entity, bolts), false);
+                _boltsSystem.SetBoltsDown(entity, bolts, false);
 
             if (TryComp<DoorComponent>(entity, out var doorComp) && doorComp.State is not DoorState.Open)
                 _doorSystem.StartOpening(entity);

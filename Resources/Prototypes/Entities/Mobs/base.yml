@@ -103,8 +103,6 @@
   - type: CombatMode
   - type: MeleeWeapon
     hidden: true
-    soundHit:
-      collection: MetalThud
     damage:
       groups:
         Brute: 5
@@ -210,7 +208,7 @@
   - type: Bloodstream
     bloodlossDamage:
       types:
-        Bloodloss: 0.5
+        Bloodloss: 1
     bloodlossHealDamage:
       types:
         Bloodloss: -1

@@ -135,7 +135,7 @@ public sealed partial class GunSystem : SharedGunSystem
         if (!Timing.IsFirstTimePredicted)
             return;
 
-        var entityNull = _player.LocalEntity;
+        var entityNull = _player.LocalPlayer?.ControlledEntity;
 
         if (entityNull == null || !TryComp<CombatModeComponent>(entityNull, out var combat) || !combat.IsInCombatMode)
         {
@@ -211,7 +211,7 @@ public sealed partial class GunSystem : SharedGunSystem
         {
             if (throwItems)
             {
-                Recoil(user, direction, gun.CameraRecoilScalarModified);
+                Recoil(user, direction, gun.CameraRecoilScalar);
                 if (IsClientSide(ent!.Value))
                     Del(ent.Value);
                 else
@@ -226,8 +226,8 @@ public sealed partial class GunSystem : SharedGunSystem
                     {
                         SetCartridgeSpent(ent!.Value, cartridge, true);
                         MuzzleFlash(gunUid, cartridge, user);
-                        Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
-                        Recoil(user, direction, gun.CameraRecoilScalarModified);
+                        Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
+                        Recoil(user, direction, gun.CameraRecoilScalar);
                         // TODO: Can't predict entity deletions.
                         //if (cartridge.DeleteOnSpawn)
                         //    Del(cartridge.Owner);
@@ -244,16 +244,16 @@ public sealed partial class GunSystem : SharedGunSystem
                     break;
                 case AmmoComponent newAmmo:
                     MuzzleFlash(gunUid, newAmmo, user);
-                    Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
-                    Recoil(user, direction, gun.CameraRecoilScalarModified);
+                    Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
+                    Recoil(user, direction, gun.CameraRecoilScalar);
                     if (IsClientSide(ent!.Value))
                         Del(ent.Value);
                     else
                         RemoveShootable(ent.Value);
                     break;
                 case HitscanPrototype:
-                    Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
-                    Recoil(user, direction, gun.CameraRecoilScalarModified);
+                    Audio.PlayPredicted(gun.SoundGunshot, gunUid, user);
+                    Recoil(user, direction, gun.CameraRecoilScalar);
                     break;
             }
         }

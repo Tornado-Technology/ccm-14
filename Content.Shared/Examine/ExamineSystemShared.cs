@@ -17,7 +17,6 @@ namespace Content.Shared.Examine
 {
     public abstract partial class ExamineSystemShared : EntitySystem
     {
-        [Dependency] private readonly SharedTransformSystem _transform = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
         [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
         [Dependency] protected readonly MobStateSystem MobStateSystem = default!;
@@ -58,7 +57,7 @@ namespace Content.Shared.Examine
             if (MobStateSystem.IsIncapacitated(examiner))
                 return false;
 
-            if (!InRangeUnOccluded(examiner, entity, ExamineDetailsRange))
+            if (!_interactionSystem.InRangeUnobstructed(examiner, entity, ExamineDetailsRange))
                 return false;
 
             // Is the target hidden in a opaque locker or something? Currently this check allows players to examine
@@ -78,7 +77,7 @@ namespace Content.Shared.Examine
             if (IsClientSide(examined))
                 return true;
 
-            return !Deleted(examined) && CanExamine(examiner, _transform.GetMapCoordinates(examined),
+            return !Deleted(examined) && CanExamine(examiner, EntityManager.GetComponent<TransformComponent>(examined).MapPosition,
                 entity => entity == examiner || entity == examined, examined);
         }
 
@@ -110,7 +109,7 @@ namespace Content.Shared.Examine
                 return false;
 
             return InRangeUnOccluded(
-                _transform.GetMapCoordinates(examiner),
+                EntityManager.GetComponent<TransformComponent>(examiner).MapPosition,
                 target,
                 GetExaminerRange(examiner),
                 predicate: predicate,
@@ -144,7 +143,7 @@ namespace Content.Shared.Examine
             return TryComp<EyeComponent>(uid, out var eye) && eye.DrawFov;
         }
 
-        public bool InRangeUnOccluded(MapCoordinates origin, MapCoordinates other, float range, Ignored? predicate, bool ignoreInsideBlocker = true, IEntityManager? entMan = null)
+        public static bool InRangeUnOccluded(MapCoordinates origin, MapCoordinates other, float range, Ignored? predicate, bool ignoreInsideBlocker = true, IEntityManager? entMan = null)
         {
             // No, rider. This is better.
             // ReSharper disable once ConvertToLocalFunction
@@ -154,7 +153,7 @@ namespace Content.Shared.Examine
             return InRangeUnOccluded(origin, other, range, predicate, wrapped, ignoreInsideBlocker, entMan);
         }
 
-        public bool InRangeUnOccluded<TState>(MapCoordinates origin, MapCoordinates other, float range,
+        public static bool InRangeUnOccluded<TState>(MapCoordinates origin, MapCoordinates other, float range,
             TState state, Func<EntityUid, TState, bool> predicate, bool ignoreInsideBlocker = true, IEntityManager? entMan = null)
         {
             if (other.MapId != origin.MapId ||
@@ -171,7 +170,7 @@ namespace Content.Shared.Examine
 
             if (length > MaxRaycastRange)
             {
-                Log.Warning("InRangeUnOccluded check performed over extreme range. Limiting CollisionRay size.");
+                Logger.Warning("InRangeUnOccluded check performed over extreme range. Limiting CollisionRay size.");
                 length = MaxRaycastRange;
             }
 
@@ -207,7 +206,7 @@ namespace Content.Shared.Examine
             return true;
         }
 
-        public bool InRangeUnOccluded(EntityUid origin, EntityUid other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
+        public static bool InRangeUnOccluded(EntityUid origin, EntityUid other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
         {
             var entMan = IoCManager.Resolve<IEntityManager>();
             var originPos = entMan.GetComponent<TransformComponent>(origin).MapPosition;
@@ -216,16 +215,16 @@ namespace Content.Shared.Examine
             return InRangeUnOccluded(originPos, otherPos, range, predicate, ignoreInsideBlocker);
         }
 
-        public bool InRangeUnOccluded(EntityUid origin, EntityCoordinates other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
+        public static bool InRangeUnOccluded(EntityUid origin, EntityCoordinates other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
         {
             var entMan = IoCManager.Resolve<IEntityManager>();
             var originPos = entMan.GetComponent<TransformComponent>(origin).MapPosition;
-            var otherPos = other.ToMap(entMan, _transform);
+            var otherPos = other.ToMap(entMan);
 
             return InRangeUnOccluded(originPos, otherPos, range, predicate, ignoreInsideBlocker);
         }
 
-        public bool InRangeUnOccluded(EntityUid origin, MapCoordinates other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
+        public static bool InRangeUnOccluded(EntityUid origin, MapCoordinates other, float range = ExamineRange, Ignored? predicate = null, bool ignoreInsideBlocker = true)
         {
             var entMan = IoCManager.Resolve<IEntityManager>();
             var originPos = entMan.GetComponent<TransformComponent>(origin).MapPosition;

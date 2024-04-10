@@ -7,7 +7,6 @@
   components:
   - type: EncryptionKey
   - type: Item
-    size: Tiny
     sprite: Objects/Devices/encryption_keys.rsi
   - type: Sprite
     sprite: Objects/Devices/encryption_keys.rsi
@@ -205,7 +204,7 @@
   parent: EncryptionKey
   id: EncryptionKeySyndie
   name: blood-red encryption key
-  description: An encryption key used by... wait... Who is the owner of this chip?
+  description: An encryption key used by... wait... Who is owner of this chip?
   components:
   - type: EncryptionKey
     channels:

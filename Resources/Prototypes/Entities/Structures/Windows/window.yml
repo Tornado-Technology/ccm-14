@@ -16,6 +16,7 @@
     arc: 360 # interact despite grilles
   - type: Tag
     tags:
+      - RCDDeconstructWhitelist
       - ForceFixRotations
       - Window
   - type: Sprite
@@ -41,15 +42,11 @@
   - type: ExaminableDamage
     messages: WindowMessages
   - type: Repairable
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 4
-    fx: EffectRCDDeconstruct4
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150 #excess damage (nuke?). avoid computational cost of spawning entities.
+        damage: 100
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -91,15 +88,6 @@
       sprite: Structures/Windows/cracks.rsi
   - type: StaticPrice
     price: 100
-  - type: BlockWeather
-  
-- type: entity
-  id: WindowRCDResistant
-  parent: Window
-  abstract: true
-  components:
-  - type: RCDDeconstructable
-    deconstructable: false
 
 - type: entity
   id: WindowDirectional
@@ -150,10 +138,6 @@
     damageModifierSet: Glass
   - type: ExaminableDamage
     messages: WindowMessages
-  - type: RCDDeconstructable
-    cost: 4
-    delay: 2
-    fx: EffectRCDDeconstruct2
   - type: Destructible
     thresholds:
     - trigger:
@@ -167,7 +151,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 25
+        damage: 50
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -176,7 +160,7 @@
         spawn:
           ShardGlass:
             min: 1
-            max: 1
+            max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Airtight
@@ -195,14 +179,6 @@
       sprite: Structures/Windows/cracks_directional.rsi
   - type: StaticPrice
     price: 10
-
-- type: entity
-  id: WindowDirectionalRCDResistant  
-  parent: WindowDirectional
-  abstract: true
-  components:
-  - type: RCDDeconstructable
-    deconstructable: false
 
 - type: entity
   id: WindowFrostedDirectional
@@ -254,11 +230,6 @@
         - FullTileMask
         layer:
         - GlassLayer
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: DamageVisuals
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi

@@ -2,7 +2,6 @@ using System.Linq;
 using Content.Server.Light.Components;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
-using Content.Shared.Light.EntitySystems;
 using Content.Shared.Light.Components;
 using Content.Shared.Popups;
 using Content.Shared.Storage;
@@ -14,7 +13,7 @@ using Robust.Shared.Containers;
 namespace Content.Server.Light.EntitySystems;
 
 [UsedImplicitly]
-public sealed class LightReplacerSystem : SharedLightReplacerSystem
+public sealed class LightReplacerSystem : EntitySystem
 {
     [Dependency] private readonly PoweredLightSystem _poweredLight = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -233,7 +232,7 @@ public sealed class LightReplacerSystem : SharedLightReplacerSystem
         // show some message if success
         if (insertedBulbs > 0 && userUid != null)
         {
-            var msg = Loc.GetString("comp-light-replacer-refill-from-storage", ("light-replacer", replacerUid));
+            var msg = Loc.GetString("comp-light-replacer-refill-from-storage", ("light-replacer", storageUid));
             _popupSystem.PopupEntity(msg, replacerUid, userUid.Value, PopupType.Medium);
         }
 

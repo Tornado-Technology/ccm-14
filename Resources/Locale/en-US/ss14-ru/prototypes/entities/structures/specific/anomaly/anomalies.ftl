@@ -42,6 +42,3 @@ ent-AnomalyFloraBulb = strange glowing berry
 ent-AnomalyLiquid = { ent-BaseAnomaly }
     .suffix = Liquid
     .desc = { ent-BaseAnomaly.desc }
-ent-AnomalyShadow = { ent-BaseAnomaly }
-    .suffix = Shadow
-    .desc = { ent-BaseAnomaly.desc }

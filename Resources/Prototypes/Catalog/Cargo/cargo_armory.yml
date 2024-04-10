@@ -3,9 +3,9 @@
   icon:
     sprite: Objects/Weapons/Grenades/grenade.rsi #Спрайт
     state: icon
-  product: CrateArmorySMG
-  cost: 9000
-  category: cargoproduct-category-name-armory
+  product: CrateArmoryGrenadess #Айди ящика с пушкой
+  cost: 52000
+  category: Security
   group: market
 
 - type: cargoProduct
@@ -13,19 +13,19 @@
   icon:
     sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi #Спрайт
     state: icon
-  product: CrateArmoryShotgun
-  cost: 7000
-  category: cargoproduct-category-name-armory
+  product: CrateArmoryRiffles #Айди ящика с пушкой
+  cost: 6200
+  category: Security
   group: market
 
 - type: cargoProduct
   id: CrateMagazinesConsole #Любое айди, такое, что нет в игре
   icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  product: CrateTrackingImplants
-  cost: 1000
-  category: cargoproduct-category-name-armory
+    sprite: _CM/Objects/Weapons/Guns/Pistols/m4a3.rsi #Спрайт
+    state: icon
+  product: CrateArmoryMagazines #Айди ящика с оружием
+  cost: 4000
+  category: Security
   group: market
 
 - type: cargoProduct
@@ -35,7 +35,7 @@
     state: icon
   product: CrateArmoryFlaeras #Айди ящика с оружием
   cost: 3000
-  category: cargoproduct-category-name-armory
+  category: Security
   group: market
 
 - type: cargoProduct
@@ -43,9 +43,9 @@
   icon:
     sprite:  Structures/Storage/Crates/chemcrate_secure.rsi #Спрайт
     state: icon
-  product: CrateArmoryLaser
-  cost: 4800
-  category: cargoproduct-category-name-armory
+  product: CrateGoldSilverUranium #Айди ящика с оружием
+  cost: 5600
+  category: Materials
   group: market
 
 - type: cargoProduct
@@ -53,9 +53,9 @@
   icon:
     sprite: Objects/Weapons/Bombs/c4.rsi #Спрайт
     state: icon
-  product: CrateArmoryPistols
-  cost: 5200
-  category: cargoproduct-category-name-armory
+  product: CrateArmoryC4 #Айди ящика с оружием
+  cost: 4000
+  category: Security
   group: market
 
 

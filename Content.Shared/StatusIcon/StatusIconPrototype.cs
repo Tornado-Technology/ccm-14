@@ -34,18 +34,6 @@ public partial class StatusIconData : IComparable<StatusIconData>
     {
         return Priority.CompareTo(other?.Priority ?? int.MaxValue);
     }
-
-    /// <summary>
-    /// The layer the icon is displayed on. Mod is drawn above Base. Base | Mod
-    /// </summary>
-    [DataField]
-    public StatusIconLayer Layer = StatusIconLayer.Base;
-
-    /// <summary>
-    /// Offset of the status icon, up and down only.
-    /// </summary>
-    [DataField]
-    public int Offset = 0;
 }
 
 /// <summary>
@@ -74,10 +62,4 @@ public enum StatusIconLocationPreference : byte
     None,
     Left,
     Right,
-}
-
-public enum StatusIconLayer : byte
-{
-    Base,
-    Mod,
 }

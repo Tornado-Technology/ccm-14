@@ -9929,6 +9929,13 @@ entities:
     - type: Transform
       pos: 24.538218,15.750836
       parent: 1653
+- proto: VehicleJanicartDestroyed
+  entities:
+  - uid: 729
+    components:
+    - type: Transform
+      pos: 6.5,25.5
+      parent: 1653
 - proto: VendingMachineCigs
   entities:
   - uid: 928

@@ -5,8 +5,6 @@
   description: A piece of tech that gives cyborgs new abilities.
   abstract: true
   components:
-  - type: Item
-    storedRotation: -90
   - type: Sprite
     sprite: Objects/Specific/Robotics/borgmodule.rsi
   - type: BorgModule
@@ -145,7 +143,6 @@
   - type: ItemBorgModule
     items:
     - HandheldGPSBasic
-    - HandHeldMassScannerBorg
     - HandheldStationMapUnpowered
 
 - type: entity
@@ -177,7 +174,7 @@
     - Screwdriver
     - Wirecutter
     - Multitool
-    - WelderIndustrial
+    - Welder
 
 # cargo modules
 - type: entity
@@ -208,22 +205,6 @@
     - Shovel
     - OreBag
     - Crowbar
-    - RadioHandheld
-
-- type: entity
-  id: BorgModuleGrapplingGun
-  parent: [ BaseBorgModuleCargo, BaseProviderBorgModule ]
-  name: grappling gun cyborg module
-  components:
-  - type: Sprite
-    layers:
-    - state: cargo
-    - state: icon-grappling-gun
-  - type: ItemBorgModule
-    items:
-    - WeaponGrapplingGun
-    - WeaponCrusherDagger
-    - HandheldGPSBasic
 
 # engineering modules
 - type: entity
@@ -240,9 +221,22 @@
     - Omnitool
     - WelderExperimental
     - NetworkConfigurator
-    - RemoteSignaller
+
+- type: entity
+  id: BorgModuleGasAnalyzer
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: gas analyzer cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-gas-analyzer
+  - type: ItemBorgModule
+    items:
     - GasAnalyzer
-    - GeigerCounter
+    - trayScanner
+    - Crowbar
+    - Wrench
 
 - type: entity
   id: BorgModuleConstruction
@@ -318,11 +312,10 @@
     - AdvMopItem
     - HoloprojectorBorg
     - SprayBottleSpaceCleaner
-    - Dropper
 
 # medical modules
 - type: entity
-  id: BorgModuleDiagnosis # todo: reuse when med refractor is finished
+  id: BorgModuleDiagnosis
   parent: [ BaseBorgModuleMedical, BaseProviderBorgModule ]
   name: diagnosis cyborg module
   components:
@@ -377,7 +370,6 @@
     - state: icon-chemist
   - type: ItemBorgModule
     items:
-    - HandheldHealthAnalyzerUnpowered
     - Beaker
     - Beaker
     - BorgDropper
@@ -411,8 +403,6 @@
     items:
     - AnomalyScanner
     - AnomalyLocatorUnpowered
-    - RemoteSignaller
-    - Multitool
 
 # service modules
 - type: entity
@@ -431,7 +421,7 @@
     - HandLabeler
     - Lighter
     - DrinkShaker
-    - BorgDropper
+    - Syringe
 
 - type: entity
   id: BorgModuleMusique
@@ -493,7 +483,7 @@
     - BikeHorn
     - ClownRecorder
     - BikeHornInstrument
-
+   
 #syndicate modules
 - type: entity
   id: BorgModuleSyndicateWeapon
@@ -517,13 +507,13 @@
   components:
     - type: Sprite
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+        - state: syndicate
+        - state: icon-tools
     - type: ItemBorgModule
       items:
-      - Crowbar
-      - Emag
-      - PinpointerSyndicateNuclear
+        - Crowbar
+        - Emag
+        - PinpointerSyndicateNuclear
 
 - type: entity
   id: BorgModuleEsword
@@ -533,12 +523,12 @@
   components:
     - type: Sprite
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+        - state: syndicate
+        - state: icon-tools
     - type: ItemBorgModule
       items:
-      - EnergySwordDouble
-      - PinpointerSyndicateNuclear
+        - EnergySwordDouble
+        - PinpointerSyndicateNuclear
 
 - type: entity
   id: BorgModuleL6C
@@ -548,9 +538,9 @@
   components:
     - type: Sprite
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+        - state: syndicate
+        - state: icon-tools
     - type: ItemBorgModule
       items:
-      - WeaponLightMachineGunL6C
-      - PinpointerSyndicateNuclear
+        - WeaponLightMachineGunL6C
+        - PinpointerSyndicateNuclear

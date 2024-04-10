@@ -76,7 +76,8 @@ public abstract partial class SharedGunSystem
 
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.FillDelay, new AmmoFillDoAfterEvent(), used: uid, target: args.Target, eventTarget: uid)
         {
-            BreakOnMove = true,
+            BreakOnTargetMove = true,
+            BreakOnUserMove = true,
             BreakOnDamage = false,
             NeedHand = true
         });
@@ -187,10 +188,10 @@ public abstract partial class SharedGunSystem
 
         // Reset shotting for cycling
         if (Resolve(uid, ref gunComp, false) &&
-            gunComp is { FireRateModified: > 0f } &&
+            gunComp is { FireRate: > 0f } &&
             !Paused(uid))
         {
-            gunComp.NextFire = Timing.CurTime + TimeSpan.FromSeconds(1 / gunComp.FireRateModified);
+            gunComp.NextFire = Timing.CurTime + TimeSpan.FromSeconds(1 / gunComp.FireRate);
         }
 
         Dirty(uid, component);
@@ -265,7 +266,7 @@ public abstract partial class SharedGunSystem
         args.Capacity = component.Capacity;
     }
 
-    public void UpdateBallisticAppearance(EntityUid uid, BallisticAmmoProviderComponent component)
+    private void UpdateBallisticAppearance(EntityUid uid, BallisticAmmoProviderComponent component)
     {
         if (!Timing.IsFirstTimePredicted || !TryComp<AppearanceComponent>(uid, out var appearance))
             return;
