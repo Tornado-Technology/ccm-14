@@ -9,9 +9,9 @@
   - type: Icon
     sprite: _CM/Structures/Walls/girder.rsi
     state: girder
-  - type: Construction
-    graph: CMGirder
-    node: girder
+  # - type: Construction
+  #   graph: CMGirder
+  #   node: girder
 
 - type: entity
   parent: CMGirder
@@ -24,9 +24,9 @@
   - type: Icon
     sprite: _CM/Structures/Walls/girder.rsi
     state: girder
-  - type: Construction
-    graph: CMGirder
-    node: reinforcedGirder
+  # - type: Construction
+  #   graph: CMGirder
+  #   node: reinforcedGirder
   - type: Destructible
     thresholds:
       - trigger:

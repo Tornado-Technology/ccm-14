@@ -10,7 +10,7 @@
   cost: 5000
   recipeUnlocks:
   - FloodlightCM
-  
+
 - type: technology
   id: SalvageEquipment
   name: research-technology-salvage-equipment
@@ -93,7 +93,6 @@
   tier: 1
   cost: 3750
   recipeUnlocks:
-  - BorgModuleGasAnalyzer
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
 
@@ -116,8 +115,6 @@
   - RipleyPeripheralsElectronics
   - MechEquipmentGrabber
 
-# Tier 2
-
 - type: technology
   id: Grappling
   name: research-technology-grappling
@@ -131,6 +128,22 @@
   - WeaponGrapplingGun
   - BorgModuleGrapplingGun
 
+# Tier 2
+
+- type: technology
+  id: SpaceScanning
+  name: research-technology-space-scanning
+  icon:
+    sprite: Objects/Tools/handheld_mass_scanner.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - RadarConsoleCircuitboard
+  - HandHeldMassScanner
+  - BorgModuleGPS
+
 - type: technology
   id: Shuttlecraft
   name: research-technology-shuttlecraft
@@ -142,7 +155,6 @@
   cost: 5000
   recipeUnlocks:
   - ShuttleConsoleCircuitboard
-  - RadarConsoleCircuitboard
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
   - MiniGravityGeneratorCircuitboard

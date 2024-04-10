@@ -85,6 +85,8 @@
     runningState: building
     staticRecipes:
       - Wirecutter
+      - Igniter
+      - Signaller
       - Screwdriver
       - Welder
       - Wrench
@@ -98,6 +100,7 @@
       - CableHVStack
       - HandheldGPSBasic
       - TRayScanner
+      - AirTank
       - GasAnalyzer
       - UtilityBelt
       - Fulton
@@ -110,9 +113,11 @@
       - Syringe
       - HandLabeler
       - LightTube
+      - LedLightTube
       - SodiumLightTube
       - ExteriorLightTube
       - LightBulb
+      - LedLightBulb
       - Bucket
       - WeldingFuelCanister
       - DrinkMug
@@ -135,7 +140,6 @@
       - TrashBag
       - PowerCellSmall
       - PowerCellMedium
-      - VehicleWheelchairFolded
       - RollerBedSpawnFolded
       - CheapRollerBedSpawnFolded
       - EmergencyRollerBedSpawnFolded
@@ -157,6 +161,8 @@
       - CellRechargerCircuitboard
       - BorgChargerCircuitboard
       - WeaponCapacitorRechargerCircuitboard
+      - HandheldStationMap
+      - ClothingHeadHatWelding
   - type: EmagLatheRecipes
     emagStaticRecipes:
        - CartridgePistol
@@ -172,15 +178,7 @@
        - MagazineBoxLightRifle
        - GrenadeBlast
     emagDynamicRecipes:
-      - CartridgePistolRubber
-      - CartridgeMagnumRubber
       - ShellShotgunBeanbag
-      - CartridgeRifleRubber
-      - CartridgeLightRifleRubber
-      - MagazineBoxPistolRubber
-      - MagazineBoxMagnumRubber
-      - MagazineBoxRifleRubber
-      - MagazineBoxLightRifleRubber
       - ShellShotgunIncendiary
       - CartridgePistolIncendiary
       - CartridgeMagnumIncendiary
@@ -254,6 +252,10 @@
   - type: Lathe
     idleState: icon
     runningState: building
+    staticRecipes:
+    - LargeBeaker
+    - Dropper
+    - ClothingEyesGlassesChemical
     dynamicRecipes:
       - FloodlightCM
       - PowerDrill
@@ -261,7 +263,6 @@
       - AnomalyScanner
       - AnomalyLocator
       - AnomalyLocatorWide
-      - HandheldCrewMonitor
       - Scalpel
       - Retractor
       - Cautery
@@ -270,16 +271,12 @@
       - HoloprojectorField
       - Saw
       - Hemostat
-      - Beaker
-      - LargeBeaker
       - CryostasisBeaker
       - SyringeCryostasis
-      - Dropper
       - Syringe
       - Implanter
       - PillCanister
       - ChemistryEmptyBottle01
-      - Drone
       - AdvMopItem
       - WeaponSprayNozzle
       - ClothingBackpackWaterTank
@@ -289,15 +286,16 @@
       - ExplosivePayload
       - FlashPayload
       - Signaller
+      - SignallerAdvanced
       - SignalTrigger
       - VoiceTrigger
       - Igniter
+      - HandHeldMassScanner
       - PowerCellMicroreactor
       - PowerCellHigh
       - WeaponPistolCHIMP
       - WeaponGauntletGorilla
       - SynthesizerInstrument
-      - RPED
       - ClothingShoesBootsMagSci
       - ClothingShoesBootsSpeed
       - NodeScanner
@@ -318,7 +316,10 @@
       - HandTeleporter
       - Hypospray
       - FauxTileAstroGrass
+      - FauxTileMowedAstroGrass
+      - FauxTileJungleAstroGrass
       - FauxTileAstroIce
+      - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
   - type: EmagLatheRecipes
@@ -398,8 +399,6 @@
       - CryoPodMachineCircuitboard
       - VaccinatorMachineCircuitboard
       - DiagnoserMachineCircuitboard
-      - ChemMasterMachineCircuitboard
-      - ChemDispenserMachineCircuitboard
       - BiomassReclaimerMachineCircuitboard
       - BiofabricatorMachineCircuitboard
       - SurveillanceCameraRouterCircuitboard
@@ -460,10 +459,9 @@
       - ArtifactAnalyzerMachineCircuitboard
       - TraversalDistorterMachineCircuitboard
       - ArtifactCrusherMachineCircuitboard
-      - BoozeDispenserMachineCircuitboard
-      - SodaDispenserMachineCircuitboard
       - TelecomServerCircuitboard
       - MassMediaCircuitboard
+      - ReagentGrinderIndustrialMachineCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -497,7 +495,6 @@
     - SciFlash
     - BorgModuleCable
     - BorgModuleFireExtinguisher
-    - BorgModuleGPS
     - BorgModuleRadiationDetection
     - BorgModuleTool
     - BorgModuleAppraisal
@@ -546,8 +543,8 @@
     - BorgModuleAdvancedCleaning
     - BorgModuleMining
     - BorgModuleGrapplingGun
-    - BorgModuleGasAnalyzer
     - BorgModuleAdvancedTool
+    - BorgModuleGPS
     - BorgModuleRCD
     - BorgModuleArtifact
     - BorgModuleAnomaly
@@ -849,6 +846,8 @@
       whitelist:
         tags:
           - Sheet
+          - RawMaterial
+          - Ingot
 
 - type: entity
   id: MedicalTechFab
@@ -880,15 +879,18 @@
       - Defibrillator
       - HandheldHealthAnalyzer
       - ClothingHandsGlovesLatex
+      - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
       - DiseaseSwab
       - Beaker
+      - LargeBeaker
+      - Dropper
+      - Jug
       - Syringe
       - Implanter
       - PillCanister
       - BodyBag
       - ChemistryEmptyBottle01
-      - VehicleWheelchairFolded
       - RollerBedSpawnFolded
       - CheapRollerBedSpawnFolded
       - EmergencyRollerBedSpawnFolded
@@ -900,21 +902,18 @@
       - MedkitAdvanced
       - MedkitRadiation
       - MedkitCombat
-    dynamicRecipes:
-      - HandheldCrewMonitor
-      - ClothingHandsGlovesNitrile
-      - CryostasisBeaker
-      - LargeBeaker
-      - Dropper
       - Scalpel
       - Retractor
       - Cautery
       - Drill
       - Saw
       - Hemostat
+      - ClothingEyesGlassesChemical
+    dynamicRecipes:
+      - ChemicalPayload
+      - CryostasisBeaker
       - BluespaceBeaker
       - SyringeBluespace
-      - Jug
       - SyringeCryostasis
   - type: Machine
     board: MedicalTechFabCircuitboard
@@ -974,6 +973,8 @@
       - ClothingUniformJumpskirtDetective
       - ClothingUniformJumpsuitEngineering
       - ClothingUniformJumpskirtEngineering
+      - ClothingUniformJumpsuitSeniorEngineer
+      - ClothingUniformJumpskirtSeniorEngineer
       - ClothingHeadHatHopcap
       - ClothingUniformJumpsuitHoP
       - ClothingUniformJumpskirtHoP
@@ -999,23 +1000,31 @@
       - ClothingHeadHatBeretSeniorPhysician
       - ClothingUniformJumpsuitMedicalDoctor
       - ClothingUniformJumpskirtMedicalDoctor
+      - ClothingUniformJumpsuitSeniorPhysician
+      - ClothingUniformJumpskirtSeniorPhysician
       - ClothingUniformJumpsuitMime
       - ClothingUniformJumpskirtMime
       - ClothingUniformJumpsuitMusician
       - ClothingUniformJumpsuitParamedic
       - ClothingUniformJumpskirtParamedic
+      - ClothingUniformJumpsuitSeniorOfficer
+      - ClothingUniformJumpskirtSeniorOfficer
       - ClothingUniformJumpsuitPrisoner
       - ClothingUniformJumpskirtPrisoner
       - ClothingHeadHatQMsoft
+      - ClothingHeadHatBeretQM
       - ClothingUniformJumpsuitQM
       - ClothingUniformJumpskirtQM
       - ClothingUniformJumpsuitQMTurtleneck
       - ClothingUniformJumpskirtQMTurtleneck
+      - ClothingUniformJumpsuitQMFormal
       - ClothingHeadHatBeretRND
       - ClothingUniformJumpsuitResearchDirector
       - ClothingUniformJumpskirtResearchDirector
       - ClothingUniformJumpsuitScientist
       - ClothingUniformJumpskirtScientist
+      - ClothingUniformJumpsuitSeniorResearcher
+      - ClothingUniformJumpskirtSeniorResearcher
       - ClothingHeadHatBeretSecurity
       - ClothingUniformJumpsuitSec
       - ClothingUniformJumpskirtSec
@@ -1026,6 +1035,7 @@
       - ClothingHeadHatWarden
       - ClothingUniformJumpsuitWarden
       - ClothingUniformJumpskirtWarden
+      - ClothingHeadHatParamedicsoft
       # Winter outfits
       - ClothingOuterWinterCap
       - ClothingOuterWinterCE
@@ -1066,6 +1076,25 @@
       - ClothingNeckTieRed
       - ClothingNeckTieDet
       - ClothingNeckTieSci
+      # Scarfs - All scarfs avaible in winterdrobe
+      - ClothingNeckScarfStripedGreen
+      - ClothingNeckScarfStripedBlue
+      - ClothingNeckScarfStripedRed
+      - ClothingNeckScarfStripedBrown
+      - ClothingNeckScarfStripedLightBlue
+      - ClothingNeckScarfStripedOrange
+      - ClothingNeckScarfStripedBlack
+      - ClothingNeckScarfStripedPurple
+      # Carpets
+      - Carpet
+      - CarpetBlack
+      - CarpetPink
+      - CarpetBlue
+      - CarpetGreen
+      - CarpetOrange
+      - CarpetPurple
+      - CarpetCyan
+      - CarpetWhite
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - ClothingHeadHatCentcomcap

@@ -26,7 +26,7 @@
     key: cm_xeno_weeds
     base: weed_dir
     mode: CardinalFlags
-  - type: SlowContacts
+  - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
     ignoreWhitelist:
@@ -80,7 +80,7 @@
     key: cm_xeno_weeds
     base: weed_dir
     mode: CardinalFlags
-  - type: SlowContacts
+  - type: SpeedModifierContacts
     walkSpeedModifier: 0.75
     sprintSpeedModifier: 0.75
     ignoreWhitelist:

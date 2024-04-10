@@ -11000,14 +11000,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 45.5,-40.5
       parent: 2
-- proto: BaseMedicalPDA
-  entities:
-  - uid: 218
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 132.45265,-27.93349
-      parent: 2
 - proto: Bed
   entities:
   - uid: 7
@@ -25281,13 +25273,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 180.5,-91.5
-      parent: 2
-- proto: ComputerStationRecords
-  entities:
-  - uid: 2157
-    components:
-    - type: Transform
-      pos: 158.5,-86.5
       parent: 2
 - proto: ComputerTelevision
   entities:
@@ -90581,23 +90566,6 @@ entities:
     - type: Transform
       pos: -4.5,-38.5
       parent: 2
-- proto: SpawnVehicleATV
-  entities:
-  - uid: 19015
-    components:
-    - type: Transform
-      pos: 74.5,-19.5
-      parent: 2
-  - uid: 19016
-    components:
-    - type: Transform
-      pos: 75.5,-19.5
-      parent: 2
-  - uid: 19017
-    components:
-    - type: Transform
-      pos: 78.5,-18.5
-      parent: 2
 - proto: SpeedLoaderMagnumAP
   entities:
   - uid: 13931
@@ -92136,19 +92104,6 @@ entities:
     components:
     - type: Transform
       pos: 14.014952,-80.7603
-      parent: 2
-- proto: VehicleKeyATV
-  entities:
-  - uid: 18871
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 68.45403,-15.426813
-      parent: 2
-  - uid: 18872
-    components:
-    - type: Transform
-      pos: 68.78216,-15.348688
       parent: 2
 - proto: VendingMachineCargoDrobe
   entities:

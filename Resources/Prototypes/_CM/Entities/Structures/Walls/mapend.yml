@@ -180,7 +180,7 @@
   name: deepy water
   description: A real thirst quencher.
   components:
-  - type: SlowContacts
+  - type: SpeedModifierContacts
     walkSpeedModifier: 0.2
     sprintSpeedModifier: 0.1
 
