@@ -1,7 +1,5 @@
 ent-LockerBooze = booze storage
     .desc = This is where the bartender keeps the booze.
-ent-LockerSteel = secure closet
-    .desc = { ent-LockerBaseSecure.desc }
 ent-LockerQuarterMaster = quartermaster's locker
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerSalvageSpecialist = salvage specialist's equipment

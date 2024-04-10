@@ -68330,6 +68330,13 @@ entities:
     - type: Transform
       pos: 28.5,17.5
       parent: 1
+- proto: SpawnVehicleJanicart
+  entities:
+  - uid: 7663
+    components:
+    - type: Transform
+      pos: 14.5,-1.5
+      parent: 1
 - proto: SpawnVehicleSecway
   entities:
   - uid: 5319

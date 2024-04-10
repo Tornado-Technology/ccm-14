@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   parent: BaseMob
   id: BaseBorgChassis
   name: cyborg
@@ -74,8 +74,7 @@
   - type: SiliconLawBound
   - type: EmagSiliconLaw
     stunTime: 5
-  - type: SiliconLawProvider
-    laws: Crewsimov
+    emagLaws: SyndicateStatic
   - type: IonStormTarget
   - type: Strippable
   - type: InventorySlots
@@ -83,7 +82,6 @@
     templateId: borg
   - type: Hands
     showInHands: false
-    disableExplosionRecursion: true
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
@@ -132,9 +130,6 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai
-  - type: Vocal
-    sounds:
-      Unsexed: UnisexSilicon
   - type: UnblockableSpeech
   - type: Construction
     graph: Cyborg
@@ -144,7 +139,6 @@
   - type: Lock
     locked: true
   - type: ActivatableUIRequiresLock
-  - type: LockedWiresPanel
   - type: Flashable
   - type: Damageable
     damageContainer: Silicon

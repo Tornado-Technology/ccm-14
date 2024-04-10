@@ -27,7 +27,6 @@ namespace Content.Client.Construction
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
-        [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
 
         private readonly Dictionary<int, EntityUid> _ghosts = new();
@@ -186,7 +185,7 @@ namespace Content.Client.Construction
             [NotNullWhen(true)] out EntityUid? ghost)
         {
             ghost = null;
-            if (_playerManager.LocalEntity is not { } user ||
+            if (_playerManager.LocalPlayer?.ControlledEntity is not { } user ||
                 !user.IsValid())
             {
                 return false;
@@ -196,7 +195,7 @@ namespace Content.Client.Construction
                 return false;
 
             // This InRangeUnobstructed should probably be replaced with "is there something blocking us in that tile?"
-            var predicate = GetPredicate(prototype.CanBuildInImpassable, loc.ToMap(EntityManager, _transformSystem));
+            var predicate = GetPredicate(prototype.CanBuildInImpassable, loc.ToMap(EntityManager));
             if (!_interactionSystem.InRangeUnobstructed(user, loc, 20f, predicate: predicate))
                 return false;
 

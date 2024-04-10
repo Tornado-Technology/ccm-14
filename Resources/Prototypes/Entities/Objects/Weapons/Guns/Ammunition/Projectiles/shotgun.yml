@@ -26,7 +26,7 @@
       types:
         Blunt: 10
   - type: StaminaDamageOnCollide
-    damage: 40 # 3 hits to stun
+    damage: 55 # 2 hits to stun
 
 - type: entity
   id: PelletShotgun
@@ -81,13 +81,12 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: shard
+    state: buckshot
   - type: Projectile
     damage:
       types:
         Piercing: 3
-        Slash: 3
-
+        Slash: 3 #remember, it's metal shrapnel!
 
 - type: entity
   id: PelletShotgunTranquilizer
@@ -110,9 +109,9 @@
     solution: ammo
   - type: DrainableSolution
     solution: ammo
-  - type: SolutionInjectOnProjectileHit
+  - type: SolutionInjectOnCollide
     transferAmount: 15
-    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
   - type: InjectableSolution
     solution: ammo
 
@@ -133,7 +132,10 @@
           !type:PhysShapeAabb
           bounds: "-0.1,-0.1,0.1,0.1"
         mask:
-          - BulletImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+    - PelletShotgunFlare
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot-flare

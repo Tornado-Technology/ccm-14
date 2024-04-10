@@ -9,7 +9,7 @@
       - state: icon-0
         map: ["enum.StorageFillLayers.Fill"]
   - type: Storage
-    maxItemSize: Normal
+    maxItemSize: Small
     grid:
     - 0,0,7,5
     quickInsert: true
@@ -25,6 +25,7 @@
   - type: Tag
     tags:
     - TrashBag
+    - DroneUsable
   - type: Appearance
   - type: StorageFillVisualizer
     maxFillLevels: 4

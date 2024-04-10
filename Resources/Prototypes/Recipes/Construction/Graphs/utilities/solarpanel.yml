@@ -6,11 +6,11 @@
       edges:
         - to: solarassembly
           steps:
-            - tag: SolarAssemblyFlatpack
+            - tag: SolarAssemblyPart
               name: Solar Assembly Parts
               icon:
-                sprite: Objects/Devices/flatpack.rsi
-                state: solar-assembly-part
+                sprite: Objects/Power/solar_parts.rsi
+                state: solar_assembly_parts
               doAfter: 1
 
     - node: solarassembly
@@ -19,7 +19,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: SolarAssemblyFlatpack
+              prototype: SolarAssemblyPart
               amount: 1
             - !type:DeleteEntity {}
           steps:

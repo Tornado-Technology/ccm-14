@@ -50,6 +50,7 @@ public sealed class AmbientSoundSystem : SharedAmbientSoundSystem
     private static AudioParams _params = AudioParams.Default
         .WithVariation(0.01f)
         .WithLoop(true)
+        .WithAttenuation(Attenuation.LinearDistance)
         .WithMaxDistance(7f);
 
     /// <summary>
@@ -98,10 +99,10 @@ public sealed class AmbientSoundSystem : SharedAmbientSoundSystem
         UpdatesOutsidePrediction = true;
         UpdatesAfter.Add(typeof(AmbientSoundTreeSystem));
 
-        Subs.CVar(_cfg, CCVars.AmbientCooldown, SetCooldown, true);
-        Subs.CVar(_cfg, CCVars.MaxAmbientSources, SetAmbientCount, true);
-        Subs.CVar(_cfg, CCVars.AmbientRange, SetAmbientRange, true);
-        Subs.CVar(_cfg, CCVars.AmbienceVolume, SetAmbienceGain, true);
+        _cfg.OnValueChanged(CCVars.AmbientCooldown, SetCooldown, true);
+        _cfg.OnValueChanged(CCVars.MaxAmbientSources, SetAmbientCount, true);
+        _cfg.OnValueChanged(CCVars.AmbientRange, SetAmbientRange, true);
+        _cfg.OnValueChanged(CCVars.AmbienceVolume, SetAmbienceGain, true);
         SubscribeLocalEvent<AmbientSoundComponent, ComponentShutdown>(OnShutdown);
     }
 
@@ -137,6 +138,11 @@ public sealed class AmbientSoundSystem : SharedAmbientSoundSystem
     {
         base.Shutdown();
         ClearSounds();
+
+        _cfg.UnsubValueChanged(CCVars.AmbientCooldown, SetCooldown);
+        _cfg.UnsubValueChanged(CCVars.MaxAmbientSources, SetAmbientCount);
+        _cfg.UnsubValueChanged(CCVars.AmbientRange, SetAmbientRange);
+        _cfg.UnsubValueChanged(CCVars.AmbienceVolume, SetAmbienceGain);
     }
 
     private int PlayingCount(string countSound)

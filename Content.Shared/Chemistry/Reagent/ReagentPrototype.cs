@@ -89,15 +89,6 @@ namespace Content.Shared.Chemistry.Reagent
         [DataField]
         public SpriteSpecifier? MetamorphicSprite { get; private set; } = null;
 
-        [DataField]
-        public int MetamorphicMaxFillLevels { get; private set; } = 0;
-
-        [DataField]
-        public string? MetamorphicFillBaseName { get; private set; } = null;
-
-        [DataField]
-        public bool MetamorphicChangeColor { get; private set; } = true;
-
         /// <summary>
         /// If this reagent is part of a puddle is it slippery.
         /// </summary>
@@ -111,7 +102,7 @@ namespace Content.Shared.Chemistry.Reagent
         [DataField]
         public float Viscosity;
 
-        /// <summary>
+         /// <summary>
         /// Should this reagent work on the dead?
         /// </summary>
         [DataField]
@@ -172,7 +163,7 @@ namespace Content.Shared.Chemistry.Reagent
                 if (plantMetabolizable.ShouldLog)
                 {
                     var entity = args.SolutionEntity;
-                    entMan.System<SharedAdminLogSystem>().Add(LogType.ReagentEffect, plantMetabolizable.LogImpact,
+                    EntitySystem.Get<SharedAdminLogSystem>().Add(LogType.ReagentEffect, plantMetabolizable.LogImpact,
                         $"Plant metabolism effect {plantMetabolizable.GetType().Name:effect} of reagent {ID:reagent} applied on entity {entMan.ToPrettyString(entity):entity} at {entMan.GetComponent<TransformComponent>(entity).Coordinates:coordinates}");
                 }
 

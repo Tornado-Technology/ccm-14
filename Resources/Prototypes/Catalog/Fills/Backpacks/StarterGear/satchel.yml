@@ -215,16 +215,6 @@
       - id: BoxSurvival
       - id: Bible
       - id: RubberStampChaplain
-  
-- type: entity
-  noSpawn: true
-  parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelLawyerFilled
-  components:
-  - type: StorageFill
-    contents:
-      - id: BoxSurvival
-      - id: RubberStampLawyer
 
 - type: entity
   noSpawn: true
@@ -280,6 +270,15 @@
 
 - type: entity
   noSpawn: true
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelDrone
+  components:
+  - type: Tag
+    tags:
+    - InnateDontDelete
+
+- type: entity
+  noSpawn: true
   parent: ClothingBackpackSatchelMime
   id: ClothingBackpackSatchelMimeFilled
   components:
@@ -295,6 +294,7 @@
   components:
   - type: StorageFill
     contents:
+    - id: AdminPDA
     - id: GasAnalyzer
     - id: trayScanner
   - type: Unremoveable

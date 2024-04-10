@@ -18,13 +18,18 @@ public sealed class ThirstSystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
     [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
 
+    private ISawmill _sawmill = default!;
+
     public override void Initialize()
     {
         base.Initialize();
 
+        _sawmill = Logger.GetSawmill("thirst");
+
         SubscribeLocalEvent<ThirstComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovespeed);
         SubscribeLocalEvent<ThirstComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<ThirstComponent, RejuvenateEvent>(OnRejuvenate);
+        SubscribeLocalEvent<ThirstComponent, EntityUnpausedEvent>(OnUnpaused);
     }
 
     private void OnMapInit(EntityUid uid, ThirstComponent component, MapInitEvent args)
@@ -152,7 +157,7 @@ public sealed class ThirstSystem : EntitySystem
                 return;
 
             default:
-                Log.Error($"No thirst threshold found for {component.CurrentThirstThreshold}");
+                _sawmill.Error($"No thirst threshold found for {component.CurrentThirstThreshold}");
                 throw new ArgumentOutOfRangeException($"No thirst threshold found for {component.CurrentThirstThreshold}");
         }
     }
@@ -178,5 +183,10 @@ public sealed class ThirstSystem : EntitySystem
             thirst.CurrentThirstThreshold = calculatedThirstThreshold;
             UpdateEffects(uid, thirst);
         }
+    }
+
+    private void OnUnpaused(EntityUid uid, ThirstComponent component, ref EntityUnpausedEvent args)
+    {
+        component.NextUpdateTime += args.PausedTime;
     }
 }

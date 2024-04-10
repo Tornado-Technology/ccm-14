@@ -1,5 +1,6 @@
 ﻿using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Containers;
+using Robust.Shared.Network;
 
 namespace Content.Shared.CartridgeLoader;
 
@@ -10,6 +11,7 @@ public abstract class SharedCartridgeLoaderSystem : EntitySystem
     [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly INetManager _netMan = default!;
 
     public override void Initialize()
     {
@@ -123,11 +125,3 @@ public sealed class CartridgeUiReadyEvent : EntityEventArgs
         Loader = loader;
     }
 }
-
-/// <summary>
-/// Gets sent by the cartridge loader system to the cartridge loader entity so another system
-/// can handle displaying the notification
-/// </summary>
-/// <param name="Message">The message to be displayed</param>
-[ByRefEvent]
-public record struct CartridgeLoaderNotificationSentEvent(string Header, string Message);

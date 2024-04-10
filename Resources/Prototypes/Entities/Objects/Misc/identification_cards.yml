@@ -588,8 +588,8 @@
   id: AgentIDCard
   suffix: Agent
   components:
-  - type: PresetIdCard
-    job: Passenger
+  - type: IdCard
+    jobTitle: Passenger
   - type: Access
     tags:
     - Maintenance
@@ -646,7 +646,6 @@
     - JobIconServiceWorker
     - JobIconSecurityCadet
     - JobIconZookeeper
-    - JobIconVisitor
   - type: ActivatableUI
     key: enum.AgentIDCardUiKey.Key
     inHandsOnly: true
@@ -662,21 +661,6 @@
         type: AgentIDCardBoundUserInterface
       - key: enum.ChameleonUiKey.Key
         type: ChameleonBoundUserInterface
-# Corvax-HiddenDesc-Start
-  - type: HiddenDescription
-    entries:
-    - label: corvax-hidden-desc-AgentIDCard-syndicate
-      whitelistMind:
-        components:
-          - TraitorRole
-          - NukeOperative
-    - label: corvax-hidden-desc-AgentIDCard-research
-      jobRequired:
-        - ResearchAssistant
-        - ResearchDirector
-        - Scientist
-        - Borg
-# Corvax-HiddenDesc-End
 
 - type: entity
   name: passenger ID card

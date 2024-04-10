@@ -16,11 +16,10 @@ ent-BoxHeadset = коробка гарнитур
     .desc = Коробка запасных пассажирских гарнитур.
 ent-BoxMesonScanners = коробка инженерных очков
     .desc = Коробка запасных инженерных очков.
-ent-BoxMRE = сухой паёк
-    .desc = Коробка старых военных ИРП. Они, на удивление, не испортились.
+ent-BoxMRE = И.Р.П.
+    .desc = Коробка старых военных пайков. Они, на удивление, не испортились.
 ent-BoxHugHealing = коробка обнимашек
     .desc = Специальная коробка для чутких людей.
-    .suffix = Медицинский
 ent-BoxInflatable = коробка надувных стен
     .desc = Надувные стены не должны использоваться в качестве плавучих средств.
 ent-BoxPerformer = коробка в честь дня Хацунэ Мику
@@ -47,11 +46,8 @@ ent-BoxEncryptionKeySecurity = коробка ключей шифрования 
     .desc = { ent-BoxEncryptionKeyPassenger.desc }
 ent-BoxEncryptionKeyService = коробка ключей шифрования сервисного отдела
     .desc = { ent-BoxEncryptionKeyPassenger.desc }
-# Corvax-HiddenDesc-Start
-ent-BoxEncryptionKeySyndie = коробка ключей шифрования
-    .suffix = коробка ключей шифрования Синдиката
-    .desc = { ent-BoxEncryptionKeyPassenger.desc }
-# Corvax-HiddenDesc-End
+ent-BoxEncryptionKeySyndie = коробка ключей шифрования синдиката
+    .desc = Два ключа шифрования синдиката по цене одного. Для простоты использования уменьшена.
 ent-BoxDeathRattleImplants = коробка имплантов Предсмертный хрип
     .desc = Шесть имплантов Предсмертный хрип и портативные GPS-навигаторы для всего отряда.
 ent-BoxLeadLined = освинцованная коробка

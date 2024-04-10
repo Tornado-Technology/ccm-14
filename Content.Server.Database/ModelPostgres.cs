@@ -10,6 +10,11 @@ namespace Content.Server.Database
 {
     public sealed class PostgresServerDbContext : ServerDbContext
     {
+        static PostgresServerDbContext()
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
+
         public PostgresServerDbContext(DbContextOptions<PostgresServerDbContext> options) : base(options)
         {
         }

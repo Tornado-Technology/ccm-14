@@ -57,4 +57,3 @@ shell-argument-number-invalid = Аргумент { $index } должен быт�
 # Hints
 shell-argument-username-hint = <username>
 shell-argument-count-must-be-between = Количество аргументов должно быть числом от { $lower } до { $upper }!
-shell-argument-username-optional-hint = [username]

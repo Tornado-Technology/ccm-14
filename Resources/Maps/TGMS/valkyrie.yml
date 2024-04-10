@@ -135467,6 +135467,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: VehicleJanicartDestroyed
+  entities:
+  - uid: 4075
+    components:
+    - type: Transform
+      pos: 52.5,37.5
+      parent: 3
 - proto: VendingMachineBooze
   entities:
   - uid: 473

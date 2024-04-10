@@ -133,7 +133,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         else if (TryComp(uid, out SpriteComponent? sprite))
             rsi = sprite.BaseRSI;
 
-        if (rsi == null)
+        if (rsi == null || rsi.Path == null)
             return false;
 
         var correctedSlot = slot;
@@ -271,7 +271,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {
             if (!revealedLayers.Add(key))
             {
-                Log.Warning($"Duplicate key for clothing visuals: {key}. Are multiple components attempting to modify the same layer? Equipment: {ToPrettyString(equipment)}");
+                Logger.Warning($"Duplicate key for clothing visuals: {key}. Are multiple components attempting to modify the same layer? Equipment: {ToPrettyString(equipment)}");
                 continue;
             }
 
@@ -281,9 +281,6 @@ public sealed class ClientClothingSystem : ClothingSystem
                 // note that every insertion requires reshuffling & remapping all the existing layers.
                 sprite.AddBlankLayer(index);
                 sprite.LayerMapSet(key, index);
-
-                if (layerData.Color != null)
-                    sprite.LayerSetColor(key, layerData.Color.Value);
             }
             else
                 index = sprite.LayerMapReserveBlank(key);

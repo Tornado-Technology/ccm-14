@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Content.Server.Database;
 using Content.Shared.Administration.Notes;
 using Content.Shared.Database;
@@ -6,7 +7,7 @@ namespace Content.Server.Administration.Notes;
 
 public static class AdminNotesExtensions
 {
-    public static SharedAdminNote ToShared(this IAdminRemarksRecord note)
+    public static SharedAdminNote ToShared(this IAdminRemarksCommon note)
     {
         NoteSeverity? severity = null;
         var secret = false;
@@ -17,26 +18,26 @@ public static class AdminNotesExtensions
         bool? seen = null;
         switch (note)
         {
-            case AdminNoteRecord adminNote:
+            case AdminNote adminNote:
                 type = NoteType.Note;
                 severity = adminNote.Severity;
                 secret = adminNote.Secret;
                 break;
-            case AdminWatchlistRecord:
+            case AdminWatchlist:
                 type = NoteType.Watchlist;
                 secret = true;
                 break;
-            case AdminMessageRecord adminMessage:
+            case AdminMessage adminMessage:
                 type = NoteType.Message;
                 seen = adminMessage.Seen;
                 break;
-            case ServerBanNoteRecord ban:
+            case ServerBanNote ban:
                 type = NoteType.ServerBan;
                 severity = ban.Severity;
                 unbannedTime = ban.UnbanTime;
                 unbannedByName = ban.UnbanningAdmin?.LastSeenUserName ?? Loc.GetString("system-user");
                 break;
-            case ServerRoleBanNoteRecord roleBan:
+            case ServerRoleBanNote roleBan:
                 type = NoteType.RoleBan;
                 severity = roleBan.Severity;
                 bannedRoles = roleBan.Roles;
@@ -48,13 +49,12 @@ public static class AdminNotesExtensions
         }
 
         // There may be bans without a user, but why would we ever be converting them to shared notes?
-        if (note.Player is null)
-            throw new ArgumentNullException(nameof(note), "Player user ID cannot be null for a note");
-
+        if (note.PlayerUserId is null)
+            throw new ArgumentNullException(nameof(note.PlayerUserId), "Player user ID cannot be null for a note");
         return new SharedAdminNote(
             note.Id,
-            note.Player!.UserId,
-            note.Round?.Id,
+            note.PlayerUserId.Value,
+            note.RoundId,
             note.Round?.Server.Name,
             note.PlaytimeAtNote,
             type,
@@ -63,9 +63,9 @@ public static class AdminNotesExtensions
             secret,
             note.CreatedBy?.LastSeenUserName ?? Loc.GetString("system-user"),
             note.LastEditedBy?.LastSeenUserName ?? string.Empty,
-            note.CreatedAt.UtcDateTime,
-            note.LastEditedAt?.UtcDateTime,
-            note.ExpirationTime?.UtcDateTime,
+            note.CreatedAt,
+            note.LastEditedAt,
+            note.ExpirationTime,
             bannedRoles,
             unbannedTime,
             unbannedByName,

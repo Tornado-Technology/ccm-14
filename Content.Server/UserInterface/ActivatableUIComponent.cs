@@ -1,15 +1,14 @@
-﻿using Content.Shared.Whitelist;
-using Robust.Server.GameObjects;
-using Robust.Server.Player;
 using Robust.Shared.Player;
-using Robust.Shared.Serialization.TypeSerializers.Implementations;
+using Robust.Shared.Reflection;
+using Robust.Shared.Serialization;
 
 namespace Content.Server.UserInterface
 {
     [RegisterComponent]
-    public sealed partial class ActivatableUIComponent : Component
+    public sealed partial class ActivatableUIComponent : Component,
+            ISerializationHooks
     {
-        [DataField(required: true, customTypeSerializer:typeof(EnumSerializer))]
+        [ViewVariables]
         public Enum? Key { get; set; }
 
         [ViewVariables(VVAccess.ReadWrite)]
@@ -22,6 +21,9 @@ namespace Content.Server.UserInterface
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField]
         public bool AdminOnly { get; set; } = false;
+
+        [DataField("key", required: true)]
+        private string _keyRaw = default!;
 
         [DataField]
         public LocId VerbText = "ui-verb-toggle-open";
@@ -38,18 +40,11 @@ namespace Content.Server.UserInterface
         public bool RequireHands = true;
 
         /// <summary>
-        ///     Entities that are required to open this UI.
-        /// </summary>
-        [DataField("allowedItems")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public EntityWhitelist? AllowedItems = null;
-
-        /// <summary>
         ///     Whether you can activate this ui with activateinhand or not
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField]
-        public bool RightClickOnly;
+        public bool rightClickOnly = false;
 
         /// <summary>
         ///     Whether spectators (non-admin ghosts) should be allowed to view this UI.
@@ -71,5 +66,13 @@ namespace Content.Server.UserInterface
         /// </summary>
         [ViewVariables]
         public ICommonSession? CurrentSingleUser;
+
+        void ISerializationHooks.AfterDeserialization()
+        {
+            var reflectionManager = IoCManager.Resolve<IReflectionManager>();
+            if (reflectionManager.TryParseEnumReference(_keyRaw, out var key))
+                Key = key;
+        }
     }
 }
+

@@ -1,5 +1,5 @@
-using System.Linq;
-using Content.Shared.UserInterface;
+﻿using System.Linq;
+using Content.Server.UserInterface;
 using Content.Shared.Database;
 using Content.Shared.NameIdentifier;
 using Content.Shared.PowerCell.Components;
@@ -107,7 +107,7 @@ public sealed partial class BorgSystem
         if (_powerCell.TryGetBatteryFromSlot(uid, out var battery))
         {
             hasBattery = true;
-            chargePercent = battery.CurrentCharge / battery.MaxCharge;
+            chargePercent = battery.Charge / battery.MaxCharge;
         }
 
         var state = new BorgBuiState(chargePercent, hasBattery);

@@ -400,9 +400,6 @@
           Quantity: 3
         - ReagentId: Fat
           Quantity: 3
-  - type: SliceableFood
-    count: 3
-    slice: FoodMeatCutlet
 
 - type: entity
   name: raw lizard meat
@@ -455,7 +452,7 @@
         reagents:
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
-        - ReagentId: GastroToxin
+        - ReagentId: Toxin
           Quantity: 4
         - ReagentId: Fat
           Quantity: 4
@@ -720,7 +717,6 @@
     tags:
     - Cooked
     - Meat
-    - Steak
   - type: Sprite
     layers:
     - state: plain-cooked
@@ -780,7 +776,6 @@
     tags:
     - Cooked
     - Meat
-    - Steak
   - type: Sprite
     layers:
     - state: product-cooked
@@ -949,7 +944,6 @@
     tags:
     - Cooked
     - Meat
-    - Steak
   - type: Sprite
     layers:
     - state: goliath-cooked
@@ -979,7 +973,6 @@
     tags:
     - Cooked
     - Meat
-    - Steak
   - type: Sprite
     layers:
     - state: rouny-cooked
@@ -1005,7 +998,6 @@
     tags:
     - Cooked
     - Meat
-    - Steak
   - type: Sprite
     layers:
     - state: lizard-cooked

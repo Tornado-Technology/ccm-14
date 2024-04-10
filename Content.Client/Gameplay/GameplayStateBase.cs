@@ -104,7 +104,7 @@ namespace Content.Client.Gameplay
 
         public IEnumerable<EntityUid> GetClickableEntities(EntityCoordinates coordinates)
         {
-            return GetClickableEntities(coordinates.ToMap(_entityManager, _entitySystemManager.GetEntitySystem<SharedTransformSystem>()));
+            return GetClickableEntities(coordinates.ToMap(_entityManager));
         }
 
         public IEnumerable<EntityUid> GetClickableEntities(MapCoordinates coordinates)
@@ -203,7 +203,7 @@ namespace Content.Client.Gameplay
             }; // TODO make entityUid nullable
 
             // client side command handlers will always be sent the local player session.
-            var session = _playerManager.LocalSession;
+            var session = _playerManager.LocalPlayer?.Session;
             if (inputSys.HandleInputCommand(session, func, message))
             {
                 kArgs.Handle();

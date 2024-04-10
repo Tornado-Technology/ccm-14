@@ -3,243 +3,243 @@
   parent: JobIcon
   id: JobIconAlfaMarine
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: AlfaMarine
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeltaMarine
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: DeltaMarine
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBravoMarine
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: BravoMarine
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconCharlieMarine
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: CharlieMarine
 # Medic ---------------------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconAlfaMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: AlfaMedic
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeltaMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: DeltaMedic
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBravoMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: BravoMedic
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconCharlieMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: CharlieMedic
 # Engineer ----------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconAlfaEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: AlfaEngineer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeltaEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: DeltaEngineer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBravoEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: BravoEngineer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconCharlieEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: CharlieEngineer
 # Commander Garrisons ------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconAlfaCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: AlfaCommander
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeltaCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: DeltaCommander
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBravoCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: BravoCommander
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconCharlieCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: CharlieCommander
 # Specialist ----------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconAlfaSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: AlfaSpecialist
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeltaSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: DeltaSpecialist
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBravoSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: BravoSpecialist
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconCharlieSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: CharlieSpecialist
 # Police --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryPoliceman
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Warden
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryPoliceOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Polyce
 # Scientist -----------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryScientist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: MilitaryScientist
 # Cargo --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconSupplyOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: SupplyOfficer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconRigger
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Rigger
 # Medic --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryMainMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: MilitaryMainMedic
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconMilitaryMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: MilitaryMedic
 # Engineer --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconChiefShipsEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: ChiefShipsEngineer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconShipsEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: ShipsEngineer
 # Command --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconHeadComm
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Head
 - type: statusIcon
   parent: JobIcon
   id: JobIconFieldCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: FieldCommander
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconStaffOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: StaffOfficer
 # Pilots --------------------------------------
 - type: statusIcon
   parent: JobIcon
   id: JobIconPilotOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: PilotOfficer
 - type: statusIcon
   parent: JobIcon
   id: JobIconPilotRaptor
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: PilotOfficerRaptor
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconPilotMech
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: PilotMech
 # Xeno ----------------------------------------
 
@@ -247,26 +247,26 @@
   parent: JobIcon
   id: JobIconKseno
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Kseno
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconRuni
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Runi
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconQuinn
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Quinn
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconPretor
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: Interface/Misc/job_icons.rsi
     state: Pretor

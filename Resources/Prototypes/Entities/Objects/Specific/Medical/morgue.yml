@@ -40,7 +40,7 @@
           bounds: "-0.25,-0.4,0.25,0.1"
         density: 20
         mask:
-        - ItemMask
+        - Impassable
   - type: EntityStorage
     capacity: 1
     isCollidableWhenOpen: true
@@ -102,8 +102,6 @@
   name: ash
   description: This used to be something, but now it's not.
   components:
-  - type: Item
-    size: Tiny
   - type: Sprite
     sprite: Objects/Materials/materials.rsi
     state: ash
@@ -120,8 +118,7 @@
   - type: SolutionSpiker
     sourceSolution: food
     ignoreEmpty: true
-  - type: ScoopableSolution
-    solution: food
+  - type: DeleteOnTrigger
   - type: Extractable
     grindableSolutionName: food
 
@@ -144,9 +141,6 @@
           maxVol: 50
           reagents:
             - ReagentId: Ash
-              Quantity: 25
-            - ReagentId: Necrosol
-              Quantity: 25
-    - type: GuideHelp
-      guides:
-      - MinorAntagonists
+              Quantity: 5
+            - ReagentId: SpaceLube
+              Quantity: 5

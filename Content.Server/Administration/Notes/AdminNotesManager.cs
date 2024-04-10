@@ -144,7 +144,7 @@ public sealed class AdminNotesManager : IAdminNotesManager, IPostInjectInit
 
         var note = new SharedAdminNote(
             noteId,
-            (NetUserId) player,
+            player,
             roundId,
             serverName,
             playtime,
@@ -306,34 +306,34 @@ public sealed class AdminNotesManager : IAdminNotesManager, IPostInjectInit
         NoteModified?.Invoke(newNote);
     }
 
-    public async Task<List<IAdminRemarksRecord>> GetAllAdminRemarks(Guid player)
+    public async Task<List<IAdminRemarksCommon>> GetAllAdminRemarks(Guid player)
     {
         return await _db.GetAllAdminRemarks(player);
     }
 
-    public async Task<List<IAdminRemarksRecord>> GetVisibleRemarks(Guid player)
+    public async Task<List<IAdminRemarksCommon>> GetVisibleRemarks(Guid player)
     {
         if (_config.GetCVar(CCVars.SeeOwnNotes))
         {
             return await _db.GetVisibleAdminNotes(player);
         }
         _sawmill.Warning($"Someone tried to call GetVisibleNotes for {player} when see_own_notes was false");
-        return new List<IAdminRemarksRecord>();
+        return new List<IAdminRemarksCommon>();
     }
 
-    public async Task<List<AdminWatchlistRecord>> GetActiveWatchlists(Guid player)
+    public async Task<List<AdminWatchlist>> GetActiveWatchlists(Guid player)
     {
         return await _db.GetActiveWatchlists(player);
     }
 
-    public async Task<List<AdminMessageRecord>> GetNewMessages(Guid player)
+    public async Task<List<AdminMessage>> GetNewMessages(Guid player)
     {
         return await _db.GetMessages(player);
     }
 
-    public async Task MarkMessageAsSeen(int id, bool dismissedToo)
+    public async Task MarkMessageAsSeen(int id)
     {
-        await _db.MarkMessageAsSeen(id, dismissedToo);
+        await _db.MarkMessageAsSeen(id);
     }
 
     public void PostInject()

@@ -184,9 +184,6 @@
         reagents:
         - ReagentId: HotCocoa
           Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/hot_coco.rsi
-    state: icon-vend
   - type: Sprite
     sprite: Objects/Consumable/Drinks/hot_coco.rsi
     layers:
@@ -212,9 +209,6 @@
         reagents:
         - ReagentId: Coffee
           Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/hot_coffee.rsi
-    state: icon-vend
   - type: Sprite
     sprite: Objects/Consumable/Drinks/hot_coffee.rsi
     layers:
@@ -242,15 +236,7 @@
           Quantity: 20
   - type: Sprite
     sprite: Objects/Consumable/Drinks/cafe_latte.rsi
-    layers:
-      - state: icon_empty
-      - state: fill-1
-        map: ["enum.SolutionContainerLayers.Fill"]
   - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    fillBaseName: fill-
-    changeColor: false
   - type: TrashOnSolutionEmpty
     solution: drink
 
@@ -266,9 +252,6 @@
         reagents:
         - ReagentId: Tea
           Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/teacup.rsi
-    state: icon-vend-tea
   - type: Sprite
     sprite: Objects/Consumable/Drinks/teacup.rsi
     layers:
@@ -294,9 +277,6 @@
         reagents:
         - ReagentId: GreenTea
           Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/teacup.rsi
-    state: icon-vend-green-tea
   - type: Sprite
     sprite: Objects/Consumable/Drinks/teacup.rsi
     layers:
@@ -350,6 +330,7 @@
   - type: Tag
     tags:
     - Trash
+    - DroneUsable
     - WhitelistChameleon
   - type: TrashOnSolutionEmpty
     solution: drink

@@ -14,7 +14,6 @@
   - BorgModuleHarvesting
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
-  - ReagentGrinderIndustrialMachineCircuitboard
 
 - type: technology
   id: CritterMechs
@@ -83,10 +82,7 @@
   cost: 2500
   recipeUnlocks:
   - FauxTileAstroGrass
-  - FauxTileMowedAstroGrass
-  - FauxTileJungleAstroGrass
   - FauxTileAstroIce
-  - FauxTileAstroSnow
 
 - type: technology
   id: RoboticCleanliness
@@ -186,4 +182,3 @@
   cost: 500
   recipeUnlocks:
   - ClothingShoesBootsSpeed
-

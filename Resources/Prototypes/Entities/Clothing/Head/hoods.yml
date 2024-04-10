@@ -94,7 +94,6 @@
     sprite: Clothing/Head/Hoods/chaplain.rsi
   - type: Tag
     tags:
-    - HidesHair
     - HamsterWearable
     - WhitelistChameleon
 
@@ -108,10 +107,6 @@
     sprite: Clothing/Head/Hoods/cult.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/cult.rsi
-  - type: Tag
-    tags:
-    - HidesHair
-    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -125,7 +120,6 @@
     sprite: Clothing/Head/Hoods/nun.rsi
   - type: Tag
     tags:
-    - HidesHair
     - HamsterWearable
     - WhitelistChameleon
 
@@ -159,10 +153,6 @@
     sprite: Clothing/Head/Hoods/goliathcloak.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/goliathcloak.rsi
-  - type: Tag
-    tags:
-    - HidesHair
-    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase

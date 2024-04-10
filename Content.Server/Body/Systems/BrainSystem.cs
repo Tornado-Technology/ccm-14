@@ -4,7 +4,6 @@ using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
-using Content.Shared.Pointing;
 
 namespace Content.Server.Body.Systems
 {
@@ -16,9 +15,8 @@ namespace Content.Server.Body.Systems
         {
             base.Initialize();
 
-            SubscribeLocalEvent<BrainComponent, OrganAddedToBodyEvent>((uid, _, args) => HandleMind(args.Body, uid));
-            SubscribeLocalEvent<BrainComponent, OrganRemovedFromBodyEvent>((uid, _, args) => HandleMind(uid, args.OldBody));
-            SubscribeLocalEvent<BrainComponent, PointAttemptEvent>(OnPointAttempt);
+            SubscribeLocalEvent<BrainComponent, AddedToPartInBodyEvent>((uid, _, args) => HandleMind(args.Body, uid));
+            SubscribeLocalEvent<BrainComponent, RemovedFromPartInBodyEvent>((uid, _, args) => HandleMind(uid, args.OldBody));
         }
 
         private void HandleMind(EntityUid newEntity, EntityUid oldEntity)
@@ -37,11 +35,6 @@ namespace Content.Server.Body.Systems
                 return;
 
             _mindSystem.TransferTo(mindId, newEntity, mind: mind);
-        }
-
-        private void OnPointAttempt(Entity<BrainComponent> ent, ref PointAttemptEvent args)
-        {
-            args.Cancel();
         }
     }
 }
