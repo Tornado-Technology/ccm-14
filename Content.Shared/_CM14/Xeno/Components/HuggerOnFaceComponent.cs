@@ -9,6 +9,12 @@ public sealed partial class HuggerOnFaceComponent : Component
     [AutoNetworkedField, DataField]
     public bool RootsCut = false;
 
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
-    public TimeSpan BurstAt;
+    [DataField]
+    public float LayEggTime = 360f;
+
+    [DataField]
+    public float CurrentTime = 0f;
+
+    [DataField("infectionEgg")]
+    public string InfectionEgg = "XenoLarvaEgg";
 }

@@ -6,7 +6,7 @@
 - type: entity
   parent: CMSurgeryBase
   id: CMSurgeryOpenIncision
-  name: Open Incision
+  name: Сделать разрез
   components:
   - type: CMSurgery
     steps:
@@ -17,7 +17,7 @@
 - type: entity
   parent: CMSurgeryBase
   id: CMSurgeryCloseIncision
-  name: Close Incision
+  name: Закрыть разрез
   components:
   - type: CMSurgery
     priority: 1
@@ -28,11 +28,37 @@
 
 - type: entity
   parent: CMSurgeryBase
+  id: CMSurgeryCloseRibcage
+  name: Закрыть грудную клетку
+  components:
+  - type: CMSurgery
+    priority: 1
+    requirement: CMSurgeryOpenRibcage
+    steps:
+    - CMSurgeryStepMendRibcage
+    - CMSurgeryStepCloseBones
+
+- type: entity
+  parent: CMSurgeryBase
   id: CMSurgeryOpenRibcage
-  name: Open Ribcage
+  name: Вскрыть грудную клетку
   components:
   - type: CMSurgery
     requirement: CMSurgeryOpenIncision
+    steps:
+    - CMSurgeryStepRetractSkin
+    - CMSurgeryStepSawBones
+    - CMSurgeryStepPriseOpenBones
+  - type: CMSurgeryPartCondition
+    part: Torso
+
+- type: entity
+  parent: CMSurgeryBase
+  id: CMSurgeryCloseRibcage
+  name: Закрыть грудную клетку
+  components:
+  - type: CMSurgery
+    requirement: CMSurgeryOpenRibcage
     steps:
     - CMSurgeryStepSawBones
     - CMSurgeryStepPriseOpenBones
@@ -41,9 +67,9 @@
 
 - type: entity
   parent: CMSurgeryBase
-  id: CMSurgeryAlienEmbryoRemoval
-  name: Alien Embryo Removal
-  description: Removal of an alien embryo from the body.
+  id: CMSurgeryAlienEmbryoRootsRemoval
+  name: Удалить эмбрион чужого
+  description: Вырежьте чужого, если не хотите, чтоб ваш друг стал не таким, как раьнше.
   components:
   - type: CMSurgery
     priority: -1

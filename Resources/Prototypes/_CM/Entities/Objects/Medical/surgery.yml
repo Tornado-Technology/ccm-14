@@ -4,6 +4,7 @@
   id: CMBaseToolSurgery
   abstract: true
   name: Ретрактор
+  suffix: CM
   description: Ретрактор — это хирургический инструмент, используемый для разделения краев хирургического разреза/раны.
   components:
   - type: CMSurgeryTool
@@ -135,9 +136,7 @@
   components:
   - type: Sprite
     state: predator_drill
-
-
-
+  - type: CMBoneDrill
 # Scalpel
 - type: entity
   parent: CMBaseToolSurgery

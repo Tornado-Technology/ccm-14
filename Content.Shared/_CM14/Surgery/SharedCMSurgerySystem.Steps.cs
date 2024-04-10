@@ -128,7 +128,7 @@ public abstract partial class SharedCMSurgerySystem
     private void OnToolCanPerform(Entity<CMSurgeryStepComponent> ent, ref CMSurgeryCanPerformStepEvent args)
     {
         if (!TryComp(args.User, out SkillsComponent? skills) ||
-            skills.Surgery < ent.Comp.Skill)
+            skills.Surgery < ent.Comp.MinSkill)
         {
             args.Invalid = StepInvalidReason.MissingSkills;
             return;
@@ -172,8 +172,7 @@ public abstract partial class SharedCMSurgerySystem
 
     private void OnCutLarvaRootsStep(Entity<CMSurgeryCutLarvaRootsStepComponent> ent, ref CMSurgeryStepEvent args)
     {
-        if (TryComp(args.Body, out HuggerOnFaceComponent? hugged) &&
-            hugged.BurstAt > _timing.CurTime)
+        if (TryComp(args.Body, out HuggerOnFaceComponent? hugged))
         {
             hugged.RootsCut = true;
         }
@@ -221,8 +220,16 @@ public abstract partial class SharedCMSurgerySystem
             }
         }
 
+        var doAfterTime = 2f;
+        if (_prototypes.Index<EntityPrototype>(args.Step).TryGetComponent<CMSurgeryStepComponent>(out var comp))
+        {
+            doAfterTime = comp.DoAfter;
+        }
+
+
+
         var ev = new CMSurgeryDoAfterEvent(GetNetEntity(part), args.Surgery, args.Step);
-        var doAfter = new DoAfterArgs(EntityManager, user, 2, ev, body, body)
+        var doAfter = new DoAfterArgs(EntityManager, user, doAfterTime, ev, body, body)
         {
             BreakOnUserMove = true,
             BreakOnTargetMove = true

@@ -8,7 +8,13 @@ namespace Content.Shared._CM14.Surgery.Steps;
 public sealed partial class CMSurgeryStepComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public int Skill = 1;
+    public int MinSkill = 1;
+
+    [DataField, AutoNetworkedField]
+    public int GoodSkill = 1;
+
+    [DataField, AutoNetworkedField]
+    public float DoAfter = 2.5f;
 
     [DataField]
     public ComponentRegistry? Tool;

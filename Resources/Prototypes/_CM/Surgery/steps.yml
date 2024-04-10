@@ -19,8 +19,12 @@
     sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
     state: scalpel
   - type: CMSurgeryStepBleedEffect
-    amount: 5
+    amount: 12
   - type: CMSurgeryStepEmoteEffect
+  - type: CMSurgeryStepDamageEffect
+    damage:
+      types:
+        Slash: 8
 
 - type: entity
   parent: CMSurgeryStepBase
@@ -36,12 +40,12 @@
     sprite: _CM/Objects/Medical/Surgery/hemostat.rsi
     state: hemostat
   - type: CMSurgeryStepBleedEffect
-    amount: -5
+    amount: -7
 
 - type: entity
   parent: CMSurgeryStepBase
   id: CMSurgeryStepRetractSkin
-  name: Кожный ретрактор
+  name: Используйте кожный ретрактор
   components:
   - type: CMSurgeryStep
     tool:
@@ -66,11 +70,15 @@
     sprite: _CM/Objects/Medical/Surgery/saw.rsi
     state: saw
   - type: CMSurgeryStepEmoteEffect
+  - type: CMSurgeryStepDamageEffect
+    damage:
+      types:
+        Blunt: 8
 
 - type: entity
   parent: CMSurgeryStepBase
   id: CMSurgeryStepPriseOpenBones
-  name: Вскрыть кости
+  name: Вскрыть кости грудной клетки
   components:
   - type: CMSurgeryStep
     tool:
@@ -80,6 +88,10 @@
   - type: Sprite
     sprite: _CM/Objects/Medical/Surgery/retractor.rsi
     state: retractor
+  - type: CMSurgeryStepDamageEffect
+    damage:
+      types:
+        Blunt: 4
 
 - type: entity
   parent: CMSurgeryStepBase
@@ -87,14 +99,15 @@
   name: Отрубить щупальца грудолома
   components:
   - type: CMSurgeryStep
-    skill: 2
+    minSkill: 1
+    goodSkill: 1
+    doAfter: 3.5
     tool:
     - type: CMScalpel
   - type: CMSurgeryCutLarvaRootsStep
   - type: Sprite
     sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
     state: scalpel
-  - type: CMSurgeryOperatingTableCondition
 
 - type: entity
   parent: CMSurgeryStepBase
@@ -102,11 +115,13 @@
   name: Вырезать грудолома
   components:
   - type: CMSurgeryStep
-    skill: 2
+    minSkill: 2
+    goodSkill: 2
+    doAfter: 5.5
     tool:
-    - type: CMHemostat
+    - type: CMRetractor
     bodyRemove:
-    - type: VictimHugged
+    - type: HuggerOnFace
   - type: Sprite
     sprite: _CM/Objects/Medical/Surgery/hemostat.rsi
     state: hemostat
@@ -115,7 +130,7 @@
 - type: entity
   parent: CMSurgeryStepBase
   id: CMSurgeryStepCloseBones
-  name: Закрыть кости
+  name: Закрыть грудную клетку
   components:
   - type: CMSurgeryStep
     tool:
@@ -125,6 +140,10 @@
   - type: Sprite
     sprite: _CM/Objects/Medical/Surgery/retractor.rsi
     state: retractor
+  - type: CMSurgeryStepDamageEffect
+    damage:
+      types:
+        Blunt: 5
 
 - type: entity
   parent: CMSurgeryStepBase

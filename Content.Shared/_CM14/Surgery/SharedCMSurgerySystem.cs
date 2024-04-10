@@ -98,6 +98,7 @@ public abstract partial class SharedCMSurgerySystem : EntitySystem
 
     private void OnRemoveLarva(Entity<CMSurgeryRemoveLarvaComponent> ent, ref CMSurgeryCompletedEvent args)
     {
+        Log.Debug("REmoved!");
         RemCompDeferred<HuggerOnFaceComponent>(ent);
     }
 

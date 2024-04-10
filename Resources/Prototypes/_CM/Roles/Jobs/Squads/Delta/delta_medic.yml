@@ -18,6 +18,8 @@
     components:
       - type: JobRank
         job: DeltaMedic
+      - type: Skills
+        surgery: 1
 
 - type: startingGear
   id: DeltaMedicGear
