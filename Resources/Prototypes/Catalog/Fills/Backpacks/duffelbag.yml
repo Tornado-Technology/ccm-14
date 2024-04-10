@@ -6,12 +6,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Hemostat
-      - id: Saw
-      - id: Drill
-      - id: Cautery
-      - id: Retractor
-      - id: Scalpel
+      - id: CMHemostat
+      - id: CMCircularSaw
+      - id: CMSurgicalDrill
+      - id: CMCautery
+      - id: CMRetractor
+      - id: CMScalpel
 
 - type: entity
   id: ClothingBackpackDuffelCBURNFilled
@@ -38,12 +38,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Hemostat
-      - id: SawAdvanced
-      - id: Drill
-      - id: Cautery
-      - id: Retractor
-      - id: ScalpelAdvanced
+      - id: CMHemostat
+      - id: CMCircularSaw
+      - id: CMSurgicalDrill
+      - id: CMCautery
+      - id: CMRetractor
+      - id: CMScalpelLaserImproved
       - id: ClothingHandsGlovesNitrile
       - id: EmergencyRollerBedSpawnFolded
 

@@ -18,6 +18,8 @@
     components:
       - type: JobRank
         job: MilitaryMainMedic
+  - type: Skills
+    surgery: 5
 
 - type: startingGear
   id: MilitaryMainMedicGear

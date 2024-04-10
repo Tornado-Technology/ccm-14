@@ -17,7 +17,7 @@ using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Mobs.Components;
 using Content.Shared._CM14.Xeno;
 using Robust.Server.GameObjects;
-using Content.Shared._CM14.Xeno;
+using Content.Shared._CM14.Xeno.Components;
 
 namespace Content.Server._CM14.Xeno.Mobs.Systems;
 
@@ -51,11 +51,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     private void OnStartup(EntityUid uid, FaceHuggingComponent component, ComponentStartup args)
     {
         _actionsSystem.AddAction(uid, component.FaceHuggerJumpAction);
-
-        if (!TryComp(uid, out FaceHuggerComponent? comp))
-            return;
-        comp.IsEgged = false;
-        comp.isDeath = false;
     }
 
     private void OnFaceHuggerDoHit(EntityUid uid, FaceHuggerComponent component, ThrowDoHitEvent args)
@@ -92,14 +87,13 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (!equipped)
             return;
 
-        component.EquipedOn = args.Target;
-        component.OwnerId = uid;
+        component.Equipped = args.Target;
 
         RemComp<CombatModeComponent>(uid);
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
 
-        faceHuggerComponent.EquipedOn = args.Target;
+        faceHuggerComponent.Equipped = args.Target;
 
         _popup.PopupEntity(Loc.GetString("Something jumped on you!"), args.Target, args.Target, PopupType.LargeCaution);
     }
@@ -122,8 +116,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (args.Slot != "mask")
             return;
 
-        component.EquipedOn = args.Equipee;
-        component.OwnerId = uid;
+        component.Equipped = args.Equipee;
 
         RemComp<CombatModeComponent>(uid);
 
@@ -136,14 +129,11 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (args.Slot != "mask")
             return;
 
-        if (component.EquipedOn != args.Unequipee)
+        if (component.Equipped != args.Unequipee)
             return;
 
         if (HasComp<FaceHuggerComponent>(args.Unequipee))
             return;
-
-        _damageableSystem.TryChangeDamage(args.Unequipee,
-            new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10));
         args.Cancel();
     }
 
@@ -161,20 +151,14 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (args.Slot != "mask")
             return;
 
-        component.EquipedOn = new EntityUid();
+        component.Equipped = new EntityUid();
         var combatMode = EntityManager.AddComponent<CombatModeComponent>(uid);
 
         _combat.SetInCombatMode(uid, true, combatMode);
 
-        if (TryComp(uid, out FaceHuggerComponent? freq))
-        {
-            freq.InfectionAccumulator = 0;
-        }
-
         if (TryComp<XenoEvolutionsComponent>(uid, out var evolution))
             evolution.Enabled = true;
 
-        RemComp<HuggerOnFaceComponent>(args.Equipee);
         EnsureComp<NPCMeleeCombatComponent>(uid);
     }
 
@@ -192,55 +176,50 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         foreach (var comp in EntityQuery<FaceHuggerComponent>())
         {
-            comp.Accumulator += frameTime;
-
-            if (comp.EquipedOn is not { Valid: true } targetId)
+            if (comp.Equipped is not { Valid: true } targetId)
             {
-                comp.InfectionAccumulator = 0;
                 continue;
             }
 
             if (TryComp(targetId, out MobStateComponent? mobState))
             {
-                comp.InfectionAccumulator += frameTime;
                 if (mobState.CurrentState is MobState.Dead)
                 {
                     _inventory.TryUnequip(targetId, "mask", true, true);
-                    _damageableSystem.TryChangeDamage(comp.OwnerId,
-                        new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 30));
                     EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
-                    comp.EquipedOn = new EntityUid();
-                    comp.InfectionAccumulator = 0;
+                    comp.Equipped = new EntityUid();
                     return;
                 }
             }
 
-            if (comp.Accumulator <= comp.DamageFrequency)
-                continue;
-            comp.Accumulator = 0;
-
-            _damageableSystem.TryChangeDamage(targetId,
-                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 3));
-
-            if (comp.InfectionAccumulator <= comp.InfectionFrequency)
-                continue;
-
-            if (comp.IsEgged)
-                continue;
-            comp.IsEgged = true;
-            comp.InfectionAccumulator = 0;
-
             if (!HasComp<HuggerOnFaceComponent>(targetId))
                 return;
 
-            _inventory.TryUnequip(targetId, "mask", true, true);
+            if (TryComp(targetId, out HuggerOnFaceComponent? huggerOnFaceComponent))
+            {
+                huggerOnFaceComponent.CurrentTime += frameTime;
+            }
+        }
 
-            Spawn(comp.InfectionEgg, Transform(comp.OwnerId).Coordinates);
-            _damageableSystem.TryChangeDamage(targetId,
-                new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
+        var query = EntityQueryEnumerator<HuggerOnFaceComponent>();
+        while (query.MoveNext(out var uid, out var comp))
+        {
+            if (comp.RootsCut)
+            {
+                comp.CurrentTime += frameTime / 3;
+            }
+            else
+            {
+                comp.CurrentTime += frameTime;
+            }
+            if (comp.CurrentTime >= comp.LayEggTime)
+            {
+                _inventory.TryUnequip(uid, "mask", true, true);
 
-            RemComp<HuggerOnFaceComponent>(targetId);
-            comp.EquipedOn = new EntityUid();
+                Spawn(comp.InfectionEgg, Transform(uid).Coordinates);
+                _damageableSystem.TryChangeDamage(uid,
+                    new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
+            }
         }
     }
 }
