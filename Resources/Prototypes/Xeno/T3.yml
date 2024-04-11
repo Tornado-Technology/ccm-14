@@ -182,12 +182,14 @@
     # Actions
     - type: Xeno
       actions:
+        - ActionXenoExplosive
         # Acid
         - ActionXenoAcid
         # Base actions
         - ActionXenoRest
         - ActionXenoNightVision
         - ActionXenoDegradation
+    - type: XenoExplosive
     - type: XenoAcid
       acidTime: 30
     # Eye
