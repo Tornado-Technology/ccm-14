@@ -34,8 +34,7 @@ public sealed class XenoDegradationSystem : EntitySystem
         var doAfterEventArgs = new DoAfterArgs(EntityManager, ent, TimeSpan.FromSeconds(ent.Comp.TimeUsage),
             new XenoDegradationDoAfterEvent(), ent, target: ent, used: ent)
         {
-            BreakOnUserMove = true,
-            BreakOnTargetMove = false,
+            BreakOnMove = true,
             NeedHand = false,
             BreakOnDamage = true,
             BlockDuplicate = true,

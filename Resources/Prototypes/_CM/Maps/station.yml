@@ -2,6 +2,7 @@
   id: StandardTGMSStation
   parent:
     - BaseStation
+    - BaseStationRecords
     - BaseStationJobsSpawning
     - BaseStationAlertLevels
     - BaseStationArrivalsTGCM
@@ -14,6 +15,7 @@
   id: StandardTGMSXeno
   parent:
     - BaseStation
+    - BaseStationRecords
     - BaseStationJobsSpawning
     - BaseStationAlertLevels
   noSpawn: true
@@ -27,4 +29,4 @@
   components:
     - type: StationArrivals
       shuttlePath: /Maps/TGMS/normandy.yml
-    
+

@@ -1,4 +1,4 @@
-﻿using Content.Server.Chat.Systems;
+using Content.Server.Chat.Systems;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
@@ -162,7 +162,7 @@ public sealed partial class EmergencyRetreatSystem : EntitySystem
             return;
         }
 
-        _shuttle.FTLTravel(emergencyRetreat, shuttle, target, emergencyRetreat.Comp.FtlStartupTime, emergencyRetreat.Comp.FtlHyperspaceTime, emergencyRetreat.Comp.FtlDock);
+        _shuttle.FTLToDock(emergencyRetreat, shuttle, target, emergencyRetreat.Comp.FtlStartupTime, emergencyRetreat.Comp.FtlHyperspaceTime);
     }
 
     private void FailFtl(Entity<EmergencyRetreatComponent> emergencyRetreat)

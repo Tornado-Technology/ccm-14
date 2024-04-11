@@ -1,8 +1,9 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.NPC.Components;
 using Content.Shared.Projectiles;
 using Content.Shared._CM14.FriendlyFire;
 using Robust.Shared.GameStates;
+using Content.Shared.NPC.Components;
 
 namespace Content.Server._CM14.FriendlyFire;
 
