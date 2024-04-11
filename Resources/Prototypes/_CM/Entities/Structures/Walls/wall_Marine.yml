@@ -7,7 +7,6 @@
     - type: Tag
       tags:
         - Wall
-        - RCDDeconstructWhitelist
     - type: Sprite
       sprite: _CM/Structures/Walls/hull.rsi
     - type: Icon
@@ -49,7 +48,6 @@
     - type: Tag
       tags:
         - Wall
-        - RCDDeconstructWhitelist
     - type: Sprite
       sprite: _CM/Structures/Walls/hull_evac.rsi
     - type: Icon
@@ -91,7 +89,6 @@
     - type: Tag
       tags:
         - Wall
-        - RCDDeconstructWhitelist
     - type: Sprite
       sprite: _CM/Structures/Walls/hull_lab.rsi
     - type: Icon

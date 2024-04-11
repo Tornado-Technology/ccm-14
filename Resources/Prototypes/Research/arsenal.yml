@@ -199,6 +199,24 @@
   - MechWeaponImmolator
 
 - type: technology
+  id: ExplosiveTechnology
+  name: research-technology-explosive-technology
+  icon:
+    sprite: Objects/Devices/payload.rsi
+    state: payload-explosive-armed
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - SignallerAdvanced
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ExplosivePayload
+  - ChemicalPayload
+
+- type: technology
   id: ConcentratedLaserWeaponry
   name: research-technology-concentrated-laser-weaponry
   icon:

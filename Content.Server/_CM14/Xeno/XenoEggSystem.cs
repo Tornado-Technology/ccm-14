@@ -42,8 +42,10 @@ public sealed partial class XenoEggSystem : EntitySystem
         childXform.LocalRotation = targetTransformComp.LocalRotation;
 
         if (_containerSystem.TryGetContainingContainer(uid, out var cont))
-            cont.Insert(child);
-
+        {
+            _containerSystem.Insert(child, cont);
+        }
+            
         _mindSystem.TransferTo(mindId, child, mind: mind);
         EntityManager.DeleteEntity(uid);
     }

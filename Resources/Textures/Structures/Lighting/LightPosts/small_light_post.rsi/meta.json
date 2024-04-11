@@ -2,30 +2,25 @@
   "version": 1,
   "size": {
     "x": 32,
-    "y": 48
+    "y": 32
   },
   "license": "CC-BY-SA-3.0",
-  "copyright": "By Peptide90 for SS14. empy, broken and burnt versions by Nekomancer.",
+  "copyright": "by ko4erga (discord)",
   "states": [
     {
-      "name": "off",
-      "directions": 4
+      "name": "broken"
     },
     {
-      "name": "on",
-      "directions": 4
+      "name": "burned"
     },
     {
-      "name": "empty",
-      "directions": 4
+      "name": "base"
     },
-	{
-	  "name": "broken",
-    "directions": 4
-	},
     {
-      "name": "burnt",
-      "directions": 4
+    "name": "empty"
+    },
+    {
+       "name": "glow"
     }
   ]
 }

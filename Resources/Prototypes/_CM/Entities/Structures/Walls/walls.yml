@@ -53,7 +53,6 @@
   - type: Tag
     tags:
       - Wall
-      - RCDDeconstructWhitelist
   - type: Destructible
     thresholds:
     - trigger:
@@ -70,9 +69,9 @@
   - type: IconSmooth
     key: walls
     base: metal
-  - type: Construction
-    graph: CMGirder
-    node: wall
+  # - type: Construction # Я заебался видеть эти варны
+  #   graph: CMGirder
+  #   node: wall
 
 - type: entity
   parent: CMWallMetal
@@ -118,7 +117,6 @@
   - type: Tag
     tags:
       - Wall
-      - RCDDeconstructWhitelist
   - type: Destructible
     thresholds:
     - trigger:
@@ -135,9 +133,9 @@
   - type: IconSmooth
     key: walls
     base: rwall
-  - type: Construction
-    graph: CMGirder
-    node: reinforcedWall
+  # - type: Construction # Я заебался видеть эти варны
+  #   graph: CMGirder
+  #   node: reinforcedWall
   - type: StaticPrice
     price: 150
 
