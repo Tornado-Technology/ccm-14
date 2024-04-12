@@ -60,9 +60,8 @@ public sealed class XenoEvolutionSystem : EntitySystem
             if (state.CurrentState != MobState.Alive)
                 continue;
 
-            if (_tiers.TryGetValue(tiers.Tier, out var tier))
+            if (_tiers.Remove(tiers.Tier, out var tier))
             {
-                _tiers.Remove(tiers.Tier);
                 _tiers.Add(tiers.Tier, tier + 1);
             }
             else
@@ -98,7 +97,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
 
     private void OnEvolve(Entity<XenoEvolutionsComponent> ent, ref EvolveMessage args)
     {
-        if (ent.Comp.Evolutions.TryGetValue(args.Evolution, out var value))
+        if (ent.Comp.Evolutions.TryGetValue(args.Evolution, out _) && ent.Comp.Enabled)
         {
             PolymorphEntity(ent, args.Evolution.Prototype);
         }
@@ -139,7 +138,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
         _updateTimer -= 1;
 
         var query = EntityQueryEnumerator<XenoComponent, XenoEvolutionsComponent, UserInterfaceComponent>();
-        while (query.MoveNext(out var uid, out var _, out var evolution, out var uiComp))
+        while (query.MoveNext(out var uid, out _, out var evolution, out var uiComp))
         {
             var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer,
                 evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);

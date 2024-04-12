@@ -9,7 +9,7 @@ public sealed partial class XenoDegradationComponent : Component
 {
     [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)),
      ViewVariables(VVAccess.ReadWrite)]
-    public string Prototype = "MobFaceHuggerXeno";
+    public string Prototype = "MobLarvaXeno";
 
     [DataField]
     public EntProtoId Action = "ActionXenoDegradation";
