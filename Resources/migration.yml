@@ -8,6 +8,10 @@
 # WallSolid: Window
 # Table: null
 
+# 2024-04-12 - CM
+BaseMedicalPDA: null
+BorgModuleGasAnalyzer: null
+
 # 2024-02-04 - CM
 VendingMachineSec: CMVendingMachineMilitaryPolice
 
