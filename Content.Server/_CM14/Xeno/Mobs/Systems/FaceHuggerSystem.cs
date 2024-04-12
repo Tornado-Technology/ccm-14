@@ -205,6 +205,14 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         var query = EntityQueryEnumerator<HuggerOnFaceComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
+            if (TryComp(uid, out MobStateComponent? mobState))
+            {
+                if (mobState.CurrentState is MobState.Dead)
+                {
+                    RemComp<HuggerOnFaceComponent>(uid);
+                    return;
+                }
+            }
             if (comp.RootsCut)
             {
                 comp.CurrentTime += frameTime / 2;
