@@ -9,4 +9,4 @@
   canBeAntag: false
   icon: "JobIconKseno"
   supervisors: job-supervisors-quinn
-  jobEntity: MobFaceHuggerXeno
+  jobEntity: MobLarvaXeno

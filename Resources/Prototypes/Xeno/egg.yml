@@ -40,10 +40,3 @@
     description: Готово вылупиться
     rules: "Вырасти в полноценного защитника улья."
   - type: GhostTakeoverAvailable
-
-- type: entity
-  id: XenoLarvaEgg
-  parent: XenoEgg
-  components:
-  - type: XenoEgg
-    target: MobLarvaXeno

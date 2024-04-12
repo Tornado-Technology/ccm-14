@@ -18,10 +18,10 @@ public sealed partial class XenoEvolutionsComponent : Component
     [DataField("evolution"), ViewVariables(VVAccess.ReadWrite)]
     public float Evolution = 0f;
 
-    [DataField("EvolutionModifier"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField("evolutionModifier"), ViewVariables(VVAccess.ReadWrite)]
     public float EvolutionModifer = BaseEvolutionModifer;
 
-    [DataField("Enabled"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField("enabled"), ViewVariables(VVAccess.ReadWrite)]
     public bool Enabled = true;
 }
 

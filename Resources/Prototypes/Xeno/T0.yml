@@ -3,27 +3,18 @@
   id: MobFaceHuggerXeno
   name: face-hugger
   components:
+    - type: XenoEvolutions
+      enabled: false
+      evolutions:
+      - !type:XenoEvolution
+        prototype: MobLarvaXeno
+        evolution: 0
     - type: Xeno
       actions:
         - ActionXenoRest
         - ActionXenoNightVision
-    - type: XenoEvolutions
-      evolutions:
-        - !type:XenoEvolution
-          prototype: MobRunnerXeno
-          evolution: 240
-        - !type:XenoEvolution
-          prototype: MobDroneXeno
-          evolution: 240
-        - !type:XenoEvolution
-          prototype: MobSentinelXeno
-          evolution: 240
-        - !type:XenoEvolution
-          prototype: MobWarriorXeno
-          evolution: 240
     - type: FaceHugger
       paralyzeTime: 3
-      chansePounce: 100
     - type: FaceHugging
     - type: AddAccentClothing
       accent: ReplacementAccent
@@ -97,7 +88,8 @@
         70: 0.80
         80: 0.75
         90: 0.70
-
+    - type: Reflect
+      reflectProb: 0.25
 
 - type: entity
   id: ActionFaceHuggerJump
@@ -125,16 +117,24 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobRunnerXeno
-          evolution: 0
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobDroneXeno
-          evolution: 0
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobSentinelXeno
-          evolution: 0
+          evolution: 240
         - !type:XenoEvolution
           prototype: MobWarriorXeno
-          evolution: 0
+          evolution: 240
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: FaceHugger
+      description: FaceHugger
+      rules: FaceHugger
+    - type: GhostTakeoverAvailable
     - type: Sprite
       drawdepth: Mobs
       sprite: _CM/Mobs/Xenos/larva.rsi
@@ -150,6 +150,37 @@
       damage:
         groups:
           Brute: 15
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.20
+          density: 20
+          mask:
+          - SmallMobMask
+          layer:
+          - SmallMobLayer
+
+- type: entity
+  id: MobEggedLarvaXeno
+  suffix: Fast evolution
+  parent: MobLarvaXeno
+  components:
+  - type: XenoEvolutions
+    evolutions:
+    - !type:XenoEvolution
+      prototype: MobRunnerXeno
+      evolution: 20
+    - !type:XenoEvolution
+      prototype: MobDroneXeno
+      evolution: 20
+    - !type:XenoEvolution
+      prototype: MobSentinelXeno
+      evolution: 20
+    - !type:XenoEvolution
+      prototype: MobWarriorXeno
+      evolution: 20
 
 - type: entity
   name: Tick Xeno

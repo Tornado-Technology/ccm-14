@@ -7,14 +7,14 @@ namespace Content.Shared._CM14.Xeno.Components;
 public sealed partial class HuggerOnFaceComponent : Component
 {
     [AutoNetworkedField, DataField]
-    public bool RootsCut = false;
+    public bool RootsCut;
 
     [DataField]
-    public float LayEggTime = 480f;
+    public float LayEggTime = 300f;
 
     [DataField]
-    public float CurrentTime = 0f;
+    public float CurrentTime;
 
     [DataField("infectionEgg")]
-    public string InfectionEgg = "XenoLarvaEgg";
+    public string InfectionEgg = "MobEggedLarvaXeno";
 }

@@ -15,9 +15,13 @@ using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Robust.Shared.Prototypes;
 using Content.Server._CM14.Xeno.Mobs.Components;
+using Content.Server.Mind.Commands;
+using Content.Server.Traits.Assorted;
 using Content.Shared._CM14.Xeno;
 using Robust.Server.GameObjects;
 using Content.Shared._CM14.Xeno.Components;
+using Content.Shared.Mind;
+using Robust.Shared.Containers;
 
 namespace Content.Server._CM14.Xeno.Mobs.Systems;
 
@@ -33,6 +37,8 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedCombatModeSystem _combat = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly SharedMindSystem _mind = default!;
 
     public override void Initialize()
     {
@@ -104,8 +110,11 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         component.RemainingEggs -= 1;
         if (component.RemainingEggs >= 1)
             return;
-        if (TryComp(uid, out FaceHuggingComponent? faceHuggingComponent))
-            _actionsSystem.RemoveAction(faceHuggingComponent.JumpAction);
+        if (!TryComp(uid, out FaceHuggingComponent? faceHuggingComponent))
+            return;
+        _actionsSystem.RemoveAction(faceHuggingComponent.JumpAction);
+        if (TryComp<XenoEvolutionsComponent>(uid, out var evolution))
+            evolution.Enabled = true;
     }
 
     private void OnJumpFaceHugger(EntityUid uid, FaceHuggingComponent component, FaceHuggerJumpActionEvent args)
@@ -129,9 +138,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         component.Equipped = args.Equipee;
 
         RemComp<CombatModeComponent>(uid);
-
-        if (TryComp<XenoEvolutionsComponent>(uid, out var evolution))
-            evolution.Enabled = false;
     }
 
     private void OnUnequipAttempt(EntityUid uid, FaceHuggerComponent component, BeingUnequippedAttemptEvent args)
@@ -163,9 +169,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         _combat.SetInCombatMode(uid, true, combatMode);
 
-        if (TryComp<XenoEvolutionsComponent>(uid, out var evolution))
-            evolution.Enabled = true;
-
         EnsureComp<NPCMeleeCombatComponent>(uid);
     }
     public override void Update(float frameTime)
@@ -195,7 +198,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
             if (TryComp(targetId, out HuggerOnFaceComponent? huggerOnFaceComponent))
             {
-                huggerOnFaceComponent.CurrentTime += frameTime;
+                huggerOnFaceComponent.CurrentTime += frameTime*2;
             }
         }
 
@@ -204,7 +207,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         {
             if (comp.RootsCut)
             {
-                comp.CurrentTime += frameTime / 3;
+                comp.CurrentTime += frameTime / 2;
             }
             else
             {
@@ -213,10 +216,17 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
             if (comp.CurrentTime >= comp.LayEggTime)
             {
                 _inventory.TryUnequip(uid, "mask", true, true);
+                RemComp<HuggerOnFaceComponent>(uid);
+                var larva = Spawn(comp.InfectionEgg, Transform(uid).Coordinates);
+                MakeSentientCommand.MakeSentient(larva, EntityManager);
+                if (_container.TryGetContainingContainer(uid, out var cont))
+                    _container.Insert(larva, cont);
 
-                Spawn(comp.InfectionEgg, Transform(uid).Coordinates);
+                if (_mind.TryGetMind(uid, out var mindId, out var mind))
+                    _mind.TransferTo(mindId, larva, mind: mind);
                 _damageableSystem.TryChangeDamage(uid,
-                    new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Brute"), 10000));
+                    new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 200));
+                EnsureComp<UnrevivableComponent>(uid);
             }
         }
     }
