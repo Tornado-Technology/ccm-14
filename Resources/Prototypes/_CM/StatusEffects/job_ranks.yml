@@ -219,26 +219,26 @@
   parent: JobRankIcon
   id: JobRankXenoAncient
   icon:
-    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/xeno_ranks_icons.rsi
     state: ancient
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankXenoElder
   icon:
-    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/xeno_ranks_icons.rsi
     state: elder
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankXenoMature
   icon:
-    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/xeno_ranks_icons.rsi
     state: mature
 
 - type: statusIcon
   parent: JobRankIcon
   id: JobRankXenoYoung
   icon:
-    sprite: _CM14/Interface/Misc/xeno_ranks_icons.rsi
+    sprite: /Textures/_CM14/Interface/Misc/xeno_ranks_icons.rsi
     state: young
