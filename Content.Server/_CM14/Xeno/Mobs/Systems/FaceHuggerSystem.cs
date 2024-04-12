@@ -187,7 +187,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
                 if (mobState.CurrentState is MobState.Dead)
                 {
                     _inventory.TryUnequip(targetId, "mask", true, true);
-                    EntityManager.RemoveComponent<HuggerOnFaceComponent>(targetId);
+                    RemComp<HuggerOnFaceComponent>(targetId);
                     comp.Equipped = new EntityUid();
                     return;
                 }
