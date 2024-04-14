@@ -1,0 +1,49 @@
+﻿- type: entity
+  id: ActionXenoPlantWeeds
+  parent: ActionXenoBase
+  name: Plant Weeds # TODO CM14 description
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM14/Actions/xeno_actions.rsi
+      state: plant_weeds
+    event: !type:XenoPlantWeedsActionEvent
+    useDelay: 1
+
+- type: entity
+  id: ActionXenoChooseStructure
+  parent: ActionXenoBase
+  name: Choose Resin Structure # TODO CM14 description
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM14/Actions/xeno_actions.rsi
+      state: retrieve_egg
+    event: !type:XenoChooseStructureActionEvent
+  - type: XenoChooseConstructionAction
+
+- type: entity
+  id: ActionXenoSecreteStructure
+  parent: ActionXenoBase
+  name: Secrete Resin # TODO CM14 description
+  components:
+  - type: WorldTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM14/Actions/xeno_actions.rsi
+      state: secrete_resin
+    event: !type:XenoSecreteStructureActionEvent
+
+- type: entity
+  id: ActionXenoOrderConstruction
+  parent: ActionXenoBase
+  name: Order Construction # TODO CM14 description
+  components:
+  - type: WorldTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM14/Actions/xeno_actions.rsi
+      state: morph_resin
+    event: !type:XenoOrderConstructionActionEvent
