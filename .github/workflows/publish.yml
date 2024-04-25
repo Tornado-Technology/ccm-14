@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
 
     steps:
     - name: Install dependencies
@@ -24,9 +24,6 @@ jobs:
     - name: Setup secrets
       env:
         SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
-        FIRST: 's#""#'
-        SECOND: '#g'
-        URL: '"http://api.spacestation14.ru"'
       if: ${{ env.SSH_KEY != '' }}
       run: |
         mkdir -p ~/.ssh
@@ -39,14 +36,6 @@ jobs:
         cp -R Secrets/Resources/ServerPrototypes Resources/Prototypes/CorvaxSecretsServer
         cp -R Secrets/Resources/Locale Resources/Locale/ru-RU/corvax-secrets
         cp -R Secrets/Resources/Textures Resources/Textures/CorvaxSecrets
-        rm Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
-        rm Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
-        cp Secret_CM/sponsor-tiers.yml Resources/Prototypes/CorvaxSecrets/sponsor-tiers.yml
-        cp Secret_CM/ghost-themes.yml Resources/Prototypes/CorvaxSecrets/ghost-themes.yml
-        FIRST+=$URL
-        FIRST+=$SECOND
-        echo $FIRST
-        sed -i $FIRST Content.Server/_CM14/CVarReplacer/CVarReplacerSystem.cs
     # Corvax-Secrets-End
 
     - name: Setup .NET Core
