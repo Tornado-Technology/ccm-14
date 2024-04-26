@@ -8,7 +8,6 @@
       actions:
         - ActionXenoBuildWall
         - ActionXenoVines
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoVines
@@ -58,7 +57,6 @@
     - type: Xeno
       actions:
         - ActionXenoEvasion
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoEvasion
@@ -121,7 +119,6 @@
     - type: Xeno
       actions:
         - ActionXenoAcid
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoAcid
@@ -189,7 +186,6 @@
     - type: Xeno
       actions:
         - ActionXenoStun
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoStun

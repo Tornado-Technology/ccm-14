@@ -9,7 +9,6 @@
         - ActionXenoBuildWall
         - ActionXenoVines
         - ActionXenoRejuvenate
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoVines
@@ -60,7 +59,6 @@
         - ActionXenoEvasion
         - ActionXenoStealth
         - ActionXenoPsychicJump
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoEvasion
@@ -117,7 +115,6 @@
         - ActionXenoExplosive
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoExplosive
@@ -187,7 +184,6 @@
         - ActionXenoAcid
         # Base actions
         - ActionXenoRest
-        - ActionXenoNightVision
         - ActionXenoDegradation
     - type: XenoExplosive
     - type: XenoAcid
@@ -259,7 +255,6 @@
       actions:
         - ActionXenoCrushDash
         - ActionXenoStun
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoCrushDash
@@ -307,7 +302,6 @@
         - ActionXenoEndure
         - ActionXenoRage
         - ActionXenoStun
-        - ActionXenoNightVision
         - ActionXenoRest
         - ActionXenoDegradation
     - type: XenoEndure
