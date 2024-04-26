@@ -74,7 +74,7 @@ public sealed class NightVisionSystem : SharedNightVisionSystem
 
     private void Full()
     {
-        _overlay.AddOverlay(new NightVisionOverlay());
+        _overlay.RemoveOverlay(new NightVisionOverlay());
         _light.Enabled = false;
     }
 }

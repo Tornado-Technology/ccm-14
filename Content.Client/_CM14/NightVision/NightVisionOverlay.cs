@@ -40,6 +40,9 @@ public sealed class NightVisionOverlay : Overlay
         var entities = _entity.EntityQueryEnumerator<MobStateComponent, SpriteComponent, TransformComponent>();
         while (entities.MoveNext(out var uid, out _, out var sprite, out var xform))
         {
+            if (_players.LocalEntity == uid)
+                continue;
+
             if (xform.MapID != eye?.Position.MapId)
                 continue;
 
