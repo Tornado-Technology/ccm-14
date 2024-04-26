@@ -14,7 +14,6 @@
         - ActionXenoRejuvenate
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
-        - ActionXenoNightVision
         - ActionXenoRest
       healthRegen: 10
       healthRegenOnRest: 35

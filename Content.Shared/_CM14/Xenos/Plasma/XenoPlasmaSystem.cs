@@ -1,5 +1,4 @@
-﻿using Content.Shared._CM14.Xenos.Evolution;
-using Content.Shared.Alert;
+﻿using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Content.Shared.Popups;
@@ -30,7 +29,6 @@ public sealed class XenoPlasmaSystem : EntitySystem
         SubscribeLocalEvent<XenoPlasmaComponent, RejuvenateEvent>(OnXenoRejuvenate);
         SubscribeLocalEvent<XenoPlasmaComponent, XenoTransferPlasmaActionEvent>(OnXenoTransferPlasmaAction);
         SubscribeLocalEvent<XenoPlasmaComponent, XenoTransferPlasmaDoAfterEvent>(OnXenoTransferDoAfter);
-        SubscribeLocalEvent<XenoPlasmaComponent, NewXenoEvolvedComponent>(OnNewXenoEvolved);
     }
 
     private void OnXenoPlasmaMapInit(Entity<XenoPlasmaComponent> ent, ref MapInitEvent args)
@@ -97,15 +95,6 @@ public sealed class XenoPlasmaSystem : EntitySystem
         _popup.PopupEntity(Loc.GetString("cm-xeno-plasma-transferred-to-self", ("plasma", args.Amount), ("target", self.Owner), ("total", otherXeno.Plasma)), target, target);
 
         _audio.PlayPredicted(self.Comp.PlasmaTransferSound, self, self);
-    }
-
-    private void OnNewXenoEvolved(Entity<XenoPlasmaComponent> newXeno, ref NewXenoEvolvedComponent args)
-    {
-        if (TryComp(args.OldXeno, out XenoPlasmaComponent? oldXeno))
-        {
-            var newPlasma = FixedPoint2.Min(oldXeno.Plasma, newXeno.Comp.MaxPlasma);
-            SetPlasma(newXeno, newPlasma);
-        }
     }
 
     private void UpdateAlert(Entity<XenoPlasmaComponent> xeno)

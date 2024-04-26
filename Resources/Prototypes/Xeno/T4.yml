@@ -10,7 +10,6 @@
         - ActionXenoRejuvenate
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
-        - ActionXenoNightVision
         - ActionXenoRest
     - type: XenoSpawnEntities
     - type: XenoSpitRejuvenate
@@ -83,7 +82,6 @@
         - ActionXenoRejuvenate
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
-        - ActionXenoNightVision
         - ActionXenoRest
     - type: XenoLayEgg
     - type: XenoStun
@@ -165,7 +163,6 @@
         - ActionXenoEvasion
         - ActionXenoStealth
         - ActionXenoPsychicJump
-        - ActionXenoNightVision
         - ActionXenoRest
     - type: XenoEvasion
     - type: XenoStealth

@@ -1,6 +1,6 @@
-﻿using System.Numerics;
-using Content.Shared._CM14.Xenos;
-using Content.Shared._CM14.Xenos.Pheromones;
+﻿/*
+
+using System.Numerics;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -116,3 +116,5 @@ public sealed class XenoPheromonesOverlay : Overlay
         handle.DrawTexture(texture, position);
     }
 }
+
+*/

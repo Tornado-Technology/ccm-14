@@ -6,6 +6,7 @@ namespace Content.Shared._CM14.Xenos.Armor;
 
 public sealed class XenoArmorSystem : EntitySystem
 {
+    /*
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
@@ -75,4 +76,5 @@ public sealed class XenoArmorSystem : EntitySystem
     {
         args.Armor -= ent.Comp.Amount;
     }
+    */
 }

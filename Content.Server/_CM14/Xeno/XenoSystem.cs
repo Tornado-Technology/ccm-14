@@ -2,6 +2,7 @@ using Content.Shared._CM14.Xeno;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Content.Shared._CM14.Xeno.Components;
+using Content.Shared._CM14.Xenos;
 using Robust.Server.GameObjects;
 
 namespace Content.Server._CM14.Xeno;
@@ -51,6 +52,9 @@ public sealed partial class XenoSystem : EntitySystem
 
             if (TryComp<DamageableComponent>(uid, out var damageable))
                 HealDamage((uid, damageable), healthRegen * frameTime);
+
+            var ev = new XenoRegenEvent();
+            RaiseLocalEvent(uid, ref ev);
 
             Dirty(uid, xeno);
         }
