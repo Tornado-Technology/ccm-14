@@ -229,7 +229,6 @@
     factions:
     - Passive
 
-
 - type: entity
   parent: MobChicken
   id: MobChicken1
@@ -254,7 +253,6 @@
         Base: dead-1
       Dead:
         Base: dead-1
-
 
 - type: entity
   parent: MobChicken
@@ -417,7 +415,6 @@
     makeSentient: true
     allowSpeech: true
     allowMovement: true
-    whitelistRequired: false
     name: ghost-role-information-mothroach-name
     description: ghost-role-information-mothroach-description
   - type: Fixtures
@@ -528,6 +525,13 @@
         damage: 60
       behaviors:
       - !type:GibBehavior { }
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Mouse_burning
+
+
+# Note that the mallard duck is actually a male drake mallard, with the brown duck being the female variant of the same species, however ss14 lacks sex specific textures
+# The white duck is more akin to a pekin or call duck.
 
 - type: entity
   name: mallard duck #Quack
@@ -746,9 +750,8 @@
           Quantity: 30
   - type: Udder
     reagentId: Milk
-    targetSolution: udder
-    quantity: 25
-    updateRate: 30
+    quantityPerUpdate: 25
+    growthDelay: 30
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -899,9 +902,8 @@
         maxVol: 250
   - type: Udder
     reagentId: MilkGoat
-    targetSolution: udder
-    quantity: 25
-    updateRate: 20
+    quantityPerUpdate: 25
+    growthDelay: 20
   - type: Wooly
   - type: Food
     solution: wool
@@ -1303,7 +1305,6 @@
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
 
-
 - type: entity
   id: MobMonkeySyndicateAgent
   parent: MobBaseSyndicateMonkey
@@ -1595,6 +1596,9 @@
   - type: BadFood
   - type: NonSpreaderZombie
   - type: PreventSpiller
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Mouse_burning
 
 - type: entity
   parent: MobMouse
@@ -3060,10 +3064,13 @@
   - type: Bloodstream
     bloodMaxVolume: 60
   - type: CanEscapeInventory
-    BaseResistTime: 3
+    baseResistTime: 3
   - type: MobPrice
     price: 60
   - type: NonSpreaderZombie
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Mouse_burning
 
 - type: entity
   name: pig
@@ -3138,17 +3145,17 @@
     - Passive
 
 - type: entity
-  name: Rudi
+  name: diona nymph
   parent: SimpleMobBase
-  id: MobRudi
-  description: Dude, how do you get so cute!? I want to look like you!
+  id: MobDionaNymph
+  description: It's like a cat, only.... branch-ier.
   components:
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: rudi
-      sprite: _CM/Mobs/rudi.rsi
+      state: nymph
+      sprite: Mobs/Animals/nymph.rsi
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -3156,40 +3163,71 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 5
+        density: 100 # High, because wood is heavy.
         mask:
         - MobMask
         layer:
         - MobLayer
-  - type: Speech
-    speechVerb: Arachnid
-    speechSounds: Arachnid
+  - type: Inventory
+    speciesId: cat
+    templateId: pet
+  - type: InventorySlots
+  - type: Strippable
+  - type: Bloodstream
+    bloodReagent: Sap
+    bloodMaxVolume: 60
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: Rudi
+        Base: nymph
       Critical:
-        Base: rudiCrit
+        Base: nymph_sleep
       Dead:
-        Base: rudiDeath
+        Base: nymph_dead
+  - type: Butcherable
+    spawned:
+    - id: MaterialWoodPlank1
+      amount: 2
   - type: InteractionPopup
-    successChance: 0.5
-    interactSuccessString: petting-success-hamster
-    interactFailureString: petting-failure-hamster
-    interactSuccessSpawn: EffectHearts
+    successChance: 0.7
+    interactSuccessString: petting-success-nymph
+    interactFailureString: petting-failure-nymph
     interactSuccessSound:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-  - type: ReplacementAccent
-    accent: crab
-  - type: Bloodstream
-    bloodMaxVolume: 50
-    bloodReagent: CopperBlood
+      path: /Audio/Animals/nymph_chirp.ogg
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      60: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.5
+  - type: Grammar
+    attributes:
+      gender: epicene
+  - type: Speech
+    speechVerb: Plant
   - type: Tag
     tags:
+    - DoorBumpOpener
     - VimPilot
-  - type: HTN
-    rootTask:
-      task: RuminantCompound
-  - type: Body
-    prototype: AnimalHemocyanin
-  - type: XenoRest
+  - type: Emoting
+  - type: BodyEmotes
+    soundsId: Nymph
+  - type: Reform
+    actionPrototype: DionaReformAction
+    reformTime: 10
+    popupText: diona-reform-attempt
+    reformPrototype: MobDionaReformed
+
+- type: entity
+  parent: MobDionaNymph
+  id: MobDionaNymphAccent # No talky. For non-brain & wild nymphs
+  suffix: Accent
+  components:
+  - type: ReplacementAccent
+    accent: nymph

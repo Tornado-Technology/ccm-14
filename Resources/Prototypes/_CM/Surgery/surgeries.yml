@@ -28,18 +28,6 @@
 
 - type: entity
   parent: CMSurgeryBase
-  id: CMSurgeryCloseRibcage
-  name: Закрыть грудную клетку
-  components:
-  - type: CMSurgery
-    priority: 1
-    requirement: CMSurgeryOpenRibcage
-    steps:
-    - CMSurgeryStepMendRibcage
-    - CMSurgeryStepCloseBones
-
-- type: entity
-  parent: CMSurgeryBase
   id: CMSurgeryOpenRibcage
   name: Вскрыть грудную клетку
   components:
@@ -58,6 +46,7 @@
   name: Закрыть грудную клетку
   components:
   - type: CMSurgery
+    priority: 1
     requirement: CMSurgeryOpenRibcage
     steps:
     - CMSurgeryStepSawBones
