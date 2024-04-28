@@ -223,7 +223,7 @@
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
           - !type:PlaySoundBehavior
-            sound: /Audio/Effects/metalbreak.ogg
+            sound: /Audio/Effects/metal_break1.ogg
   - type: Pullable
   - type: DamageExaminable
 

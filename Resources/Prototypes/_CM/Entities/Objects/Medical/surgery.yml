@@ -317,7 +317,7 @@
   description: Used for clamping wounds after treatment.
   components: # TODO CM14
   - type: Sprite
-    sprite: _CM14/Objects/Medical/Surgery/wound_clamp.rsi
+    sprite: _CM/Objects/Medical/Surgery/wound_clamp.rsi
     state: wound_clamp
   - type: Item
     sprite: _CM/Objects/Medical/Surgery/wound_clamp.rsi
