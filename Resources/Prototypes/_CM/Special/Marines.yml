@@ -209,6 +209,13 @@
       0: Alive
       100: Critical
       200: Dead
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: Deathgasp
   - type: Destructible
     thresholds:
       - trigger:
