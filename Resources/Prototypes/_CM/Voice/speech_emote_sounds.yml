@@ -1,0 +1,21 @@
+- type: emoteSounds
+  id: Xeno
+  params:
+    variation: 0.125
+  sounds:
+    XenoGrowl:
+      collection: XenoGrowl
+    XenoHelp:
+      collection: XenoHelp
+    Scream:
+      collection: XenoHiss
+    XenoRoar:
+      collection: XenoRoar
+
+- type: emoteSounds
+  id: XenoLarva
+  params:
+    variation: 0.125
+  sounds:
+    XenoRoar:
+      collection: XenoLarvaRoar

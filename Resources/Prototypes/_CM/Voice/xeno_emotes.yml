@@ -1,0 +1,23 @@
+- type: emote
+  id: XenoGrowl
+  category: Vocal
+  chatMessages: [рычит!]
+  chatTriggers:
+    - growl
+    - рычит
+
+- type: emote
+  id: XenoHelp
+  category: Vocal
+  chatMessages: [кричит о помощи!]
+  chatTriggers:
+    - кричит о помощи
+
+- type: emote
+  id: XenoRoar
+  category: Vocal
+  chatMessages: [ревёт!]
+  chatTriggers:
+    - roars
+    - ревёт
+    - ревет

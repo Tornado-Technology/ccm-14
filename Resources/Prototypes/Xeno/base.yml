@@ -110,6 +110,11 @@
     - type: Speech
       speechVerb: LargeMob
       speechSounds: Xeno
+    - type: Vocal
+      sounds:
+        Male: Xeno
+        Female: Xeno
+        Unsexed: Xeno
     - type: StatusEffects
       allowed:
       - SlowedDown
