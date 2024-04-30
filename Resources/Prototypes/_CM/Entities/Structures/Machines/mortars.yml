@@ -15,8 +15,8 @@
       key: enum.MortarUiKey.Key
     - type: UserInterface
       interfaces:
-        - key: enum.MortarUiKey.Key
-          type: MortarBui
+          enum.MortarUiKey.Key:
+            type: MortarBui
     - type: Mortar
     - type: ItemSlots
       slots:

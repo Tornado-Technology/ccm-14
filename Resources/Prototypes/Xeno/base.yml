@@ -21,7 +21,7 @@
     - type: Actions
     - type: UserInterface
       interfaces:
-        - key: enum.XenoEvolutionUiKey.Key
+        enum.XenoEvolutionUiKey.Key:
           type: XenoEvolutionBoundUserInterface
     - type: ShowXenoAgeIcons
       jobId: JobKseno

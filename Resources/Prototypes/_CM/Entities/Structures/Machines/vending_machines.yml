@@ -8,8 +8,8 @@
     sprite: _CM/Structures/Machines/VendingMachines/colmartechweapons.rsi
   - type: UserInterface
     interfaces:
-    - key: enum.CMAutomatedVendorUI.Key
-      type: CMAutomatedVendorBui
+      enum.CMAutomatedVendorUI.Key:
+        type: CMAutomatedVendorBui
   - type: AmbientOnPowered
   - type: AmbientSound
     volume: -9

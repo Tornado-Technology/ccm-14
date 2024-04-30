@@ -50,8 +50,6 @@ namespace Content.Client.Preferences.UI
         private Button _saveButton => CSaveButton;
         private OptionButton _sexButton => CSexButton;
         private OptionButton _genderButton => CPronounsButton;
-        private OptionButton _voiceButton => CVoiceButton; // Corvax-TTS
-        private Button _voicePlayButton => CVoicePlayButton; // Corvax-TTS
         private Slider _skinColor => CSkin;
         private OptionButton _spawnPriorityButton => CSpawnPriorityButton;
         private SingleMarkingPicker _hairPicker => CHairStylePicker;
@@ -783,14 +781,6 @@ namespace Content.Client.Preferences.UI
             SetDirty();
         }
 
-        // Corvax-TTS-Start
-        private void SetVoice(string newVoice)
-        {
-            Profile = Profile?.WithVoice(newVoice);
-            IsDirty = true;
-        }
-        // Corvax-TTS-End
-
         private void SetSpecies(string newSpecies)
         {
             Profile = Profile?.WithSpecies(newSpecies);
@@ -1157,7 +1147,6 @@ namespace Content.Client.Preferences.UI
             UpdateAntagPreferences();
             UpdateTraitPreferences();
             UpdateMarkings();
-            UpdateTTSVoicesControls(); // Corvax-TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();

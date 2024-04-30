@@ -16,8 +16,8 @@
     closeOnHandDeselect: false
   - type: UserInterface
     interfaces:
-    - key: enum.HealthAnalyzerUiKey.Key
-      type: HealthAnalyzerBoundUserInterface
+      enum.HealthAnalyzerUiKey.Key:
+        type: HealthAnalyzerBoundUserInterface
   - type: HealthAnalyzer
     scanDelay: 0
     scanningEndSound:

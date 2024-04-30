@@ -15,7 +15,7 @@
     sprite: Objects/Devices/distant_store.rsi
   - type: UserInterface
     interfaces:
-    - key: enum.StoreUiKey.Key
-      type: StoreBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
   - type: ActivatableUI
     key: enum.StoreUiKey.Key

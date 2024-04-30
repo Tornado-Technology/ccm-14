@@ -46,7 +46,7 @@
       key: enum.EmergencyRetreatUiKey.Key
     - type: UserInterface
       interfaces:
-        - key: enum.EmergencyRetreatUiKey.Key
+        enum.EmergencyRetreatUiKey.Key:
           type: EmergencyRetreatBoundUserInterface
     - type: EmergencyRetreatConsole
     - type: PointLight

@@ -16,6 +16,7 @@ using Content.Shared._CM14.EmergencyRetreat;
 using Content.Shared._CM14.Xeno;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Overlays;
+using Content.Server.GameTicking.Components;
 
 namespace Content.Server._CM14.Rules.Xeno;
 

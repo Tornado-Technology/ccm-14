@@ -84,7 +84,6 @@
   - type: IgnoreUIRange
   - type: ShowRevIcons
   - type: ShowZombieIcons
-  - type: ShowSecurityIcons
   - type: Inventory
     templateId: aghost
   - type: InventorySlots

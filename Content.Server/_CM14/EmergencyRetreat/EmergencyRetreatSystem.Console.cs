@@ -26,7 +26,7 @@ public sealed partial class EmergencyRetreatSystem
 
     private void OnConsoleRunFtlMessage(Entity<EmergencyRetreatConsoleComponent> console, ref EmergencyRetreatRunFtlMessage args)
     {
-        var user = args.Session.AttachedEntity;
+        var user = args.Actor;
         if (!Exists(user))
             return;
 
@@ -36,11 +36,11 @@ public sealed partial class EmergencyRetreatSystem
 
         if (TryRunFtl((owner, emergencyRetreat)))
         {
-            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(user.Value):player} started an emergency evacuation in {ToPrettyString(console)}");
+            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(user):player} started an emergency evacuation in {ToPrettyString(console)}");
             return;
         }
 
-        _adminLogger.Add(LogType.Action, LogImpact.Medium, $"{ToPrettyString(user.Value):player} tried to start an emergency evacuation in {ToPrettyString(console)}");
+        _adminLogger.Add(LogType.Action, LogImpact.Medium, $"{ToPrettyString(user):player} tried to start an emergency evacuation in {ToPrettyString(console)}");
     }
 
     private void OnUpdateState(Entity<EmergencyRetreatComponent> emergencyRetreat)
@@ -75,6 +75,6 @@ public sealed partial class EmergencyRetreatSystem
             state = emergencyRetreat.State;
         }
 
-        _userInterface.TrySetUiState(console, EmergencyRetreatUiKey.Key, new EmergencyRetreatBoundUserInterfaceState(state, time));
+        _userInterface.SetUiState(owner, EmergencyRetreatUiKey.Key, new EmergencyRetreatBoundUserInterfaceState(state, time));
     }
 }
