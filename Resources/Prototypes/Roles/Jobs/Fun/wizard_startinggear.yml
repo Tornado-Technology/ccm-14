@@ -8,9 +8,6 @@
     outerClothing: ClothingOuterWizard
     shoes: ClothingShoesWizard
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorDarkBlue
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardRedGear
@@ -21,9 +18,6 @@
     outerClothing: ClothingOuterWizardRed
     shoes: ClothingShoesWizard
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorRed
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardVioletGear
@@ -34,9 +28,6 @@
     outerClothing: ClothingOuterWizardViolet
     shoes: ClothingShoesWizard
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorPurple
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardHardsuitGear
@@ -46,6 +37,3 @@
     outerClothing: ClothingOuterHardsuitWizard
     shoes: ClothingShoesWizard
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorPurple
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

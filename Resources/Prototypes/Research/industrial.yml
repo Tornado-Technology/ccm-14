@@ -25,6 +25,7 @@
   - BorgModuleMining
   - OreProcessorIndustrialMachineCircuitboard
   - OreBagOfHolding
+  - ClothingMaskWeldingGas
 
 - type: technology
   id: AdvancedPowercells
