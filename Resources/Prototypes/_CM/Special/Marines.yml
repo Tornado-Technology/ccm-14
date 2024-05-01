@@ -11,7 +11,6 @@
   - type: SleepEmitSound
   - type: SSDIndicator
   - type: Marine
-  - type: ShowSecurityIcons # Will allow them to see their own, but not strangers due to changes to the HUD system
   - type: GhostTakeoverAvailable
   - type: LagCompensation
   - type: RangedDamageSound
@@ -350,16 +349,15 @@
   - type: CMSurgeryTarget
   - type: UserInterface
     interfaces:
-      - key: enum.VoiceMaskUIKey.Key
+      enum.VoiceMaskUIKey.Key:
         type: VoiceMaskBoundUserInterface
-      - key: enum.HumanoidMarkingModifierKey.Key
+      enum.HumanoidMarkingModifierKey.Key:
         type: HumanoidMarkingModifierBoundUserInterface
-      - key: enum.StrippingUiKey.Key
+      enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      - key: enum.HumanoidMarkingModifierKey.Key
-        type: HumanoidMarkingModifierBoundUserInterface
-      - key: enum.CMSurgeryUIKey.Key
+      enum.CMSurgeryUIKey.Key:
         type: CMSurgeryBui
+  - type: ShowJobIcons
 
 - type: species
   id: Marine

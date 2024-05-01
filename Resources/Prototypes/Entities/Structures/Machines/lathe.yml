@@ -38,10 +38,10 @@
   - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
-    - key: enum.LatheUiKey.Key
-      type: LatheBoundUserInterface
-    - key: enum.ResearchClientUiKey.Key
-      type: ResearchClientBoundUserInterface
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
   - type: Transform
     anchored: true
   - type: Pullable
@@ -122,6 +122,7 @@
       - DrinkGlass
       - DrinkShotGlass
       - DrinkGlassCoupeShaped
+      - CustomDrinkJug
       - FoodPlate
       - FoodPlateSmall
       - FoodPlatePlastic
@@ -155,6 +156,7 @@
       - APCElectronics
       - SMESMachineCircuitboard
       - SubstationMachineCircuitboard
+      - WallmountSubstationElectronics
       - CellRechargerCircuitboard
       - BorgChargerCircuitboard
       - WeaponCapacitorRechargerCircuitboard
@@ -288,6 +290,7 @@
       - PowerCellMicroreactor
       - PowerCellHigh
       - WeaponPistolCHIMP
+      - ClothingMaskWeldingGas
       - WeaponGauntletGorilla
       - SynthesizerInstrument
       - ClothingShoesBootsMagSci
@@ -451,11 +454,11 @@
       - AnomalySynchronizerCircuitboard
       - APECircuitboard
       - ArtifactAnalyzerMachineCircuitboard
-      - TraversalDistorterMachineCircuitboard
       - ArtifactCrusherMachineCircuitboard
       - TelecomServerCircuitboard
       - MassMediaCircuitboard
       - ReagentGrinderIndustrialMachineCircuitboard
+      - JukeboxCircuitBoard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -688,6 +691,7 @@
       #- ShellShotgunPractice
       - WeaponLaserCarbinePractice
       - WeaponDisablerPractice
+      - BoxShotgunPractice 
     dynamicRecipes:
       #- MagazineRifleM41A
       #- MagazineRifleM4RA
@@ -758,8 +762,8 @@
       - TimerTrigger
       - Truncheon
       - VoiceTrigger
-      - WeaponDisablerPractice
       - WeaponAdvancedLaser
+      - WeaponDisabler
       - WeaponDisablerSMG
       - WeaponLaserCannon
       - WeaponLaserCarbine
@@ -1035,7 +1039,8 @@
       - ClothingOuterWinterCE
       - ClothingOuterWinterCMO
       - ClothingOuterWinterHoP
-      - ClothingOuterWinterHoS
+      - ClothingOuterWinterHoSUnarmored
+      - ClothingOuterWinterWardenUnarmored
       - ClothingOuterWinterQM
       - ClothingOuterWinterRD
       - ClothingNeckMantleCap

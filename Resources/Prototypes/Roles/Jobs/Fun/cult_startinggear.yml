@@ -9,9 +9,6 @@
     outerClothing: ClothingOuterArmorCult
     shoes: ClothingShoesCult
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorBlack
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: CultistGear
@@ -22,6 +19,3 @@
     outerClothing: ClothingOuterRobesCult
     shoes: ClothingShoesColorRed
     ears: ClothingHeadsetService
-  innerClothingSkirt: ClothingUniformJumpskirtColorBlack
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

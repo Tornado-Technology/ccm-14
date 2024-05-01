@@ -4,6 +4,7 @@ using Robust.Shared.Spawners;
 using Content.Server.Audio;
 using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.Components;
+using Content.Server.GameTicking.Components;
 
 
 namespace Content.Server._CM14.Rules.Barrier;

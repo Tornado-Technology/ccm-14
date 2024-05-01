@@ -64,7 +64,7 @@ public sealed class CMSurgerySystem : SharedCMSurgerySystem
             }
         }
 
-        _ui.TrySetUiState(body, CMSurgeryUIKey.Key, new CMSurgeryBuiState(surgeries));
+        _ui.SetUiState(body, CMSurgeryUIKey.Key, new CMSurgeryBuiState(surgeries));
     }
 
     private void OnToolAfterInteract(Entity<CMSurgeryToolComponent> ent, ref AfterInteractEvent args)
@@ -91,7 +91,7 @@ public sealed class CMSurgerySystem : SharedCMSurgerySystem
         }
 
         args.Handled = true;
-        _ui.TryOpen(args.Target.Value, CMSurgeryUIKey.Key, actor.PlayerSession);
+        _ui.OpenUi(args.Target.Value, CMSurgeryUIKey.Key, actor.PlayerSession);
 
         RefreshUI(args.Target.Value);
     }

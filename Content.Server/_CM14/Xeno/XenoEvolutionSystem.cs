@@ -91,8 +91,8 @@ public sealed class XenoEvolutionSystem : EntitySystem
     {
         if (!TryComp<ActorComponent>(ent, out var actor))
             return;
-
-        _ui.TryToggleUi(ent, XenoEvolutionUiKey.Key, actor.PlayerSession);
+        var (owner, component) = ent;
+        _ui.TryToggleUi(owner, XenoEvolutionUiKey.Key, actor.PlayerSession);
     }
 
     private void OnEvolve(Entity<XenoEvolutionsComponent> ent, ref EvolveMessage args)
@@ -107,7 +107,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
     {
         if (_ui.IsUiOpen(uid, XenoEvolutionUiKey.Key) && TryComp<ActorComponent>(uid, out var actor))
         {
-            _ui.TryClose(uid, XenoEvolutionUiKey.Key, actor.PlayerSession);
+            _ui.CloseUi(uid, XenoEvolutionUiKey.Key, actor.PlayerSession);
         }
 
         var targetTransformComp = Transform(uid);
@@ -142,7 +142,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
         {
             var state = new XenoEvolutionBoundInterfaceState(evolution.Evolution, evolution.EvolutionModifer,
                 evolution.Evolutions, evolution.Enabled, _tierLimit, _tiers);
-            _ui.TrySetUiState(uid, XenoEvolutionUiKey.Key, state, ui: uiComp);
+            _ui.SetUiState(uid, XenoEvolutionUiKey.Key, state);
         }
     }
 }

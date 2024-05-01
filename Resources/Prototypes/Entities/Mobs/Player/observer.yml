@@ -48,7 +48,7 @@
   - type: Tag
     tags:
     - BypassInteractionRangeChecks
-  - type: ShowSecurityIcons
+  - type: ShowJobIcons
 
 - type: entity
   id: ActionGhostBoo

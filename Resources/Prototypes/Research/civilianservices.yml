@@ -70,6 +70,7 @@
     - BorgModuleClowning
     - DawInstrumentMachineCircuitboard
     - MassMediaCircuitboard
+    - JukeboxCircuitBoard
 
 # Tier 2
 - type: technology
@@ -161,8 +162,6 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-# Tier 3
-
 - type: technology
   id: BluespaceCargoTransport
   name: research-technology-bluespace-cargo-transport
@@ -174,6 +173,8 @@
   cost: 500
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard
+
+# Tier 3
 
 - type: technology
   id: QuantumFiberWeaving

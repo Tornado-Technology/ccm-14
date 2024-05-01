@@ -38,7 +38,7 @@ public sealed partial class MortarSystem
 
     private void OnLaunch(Entity<MortarComponent> mortar, ref MortarLaunchMessage args)
     {
-        var user = args.Session.AttachedEntity;
+        var user = args.Actor;
         if (!Exists(user))
             return;
 
@@ -57,6 +57,7 @@ public sealed partial class MortarSystem
 
     private void UpdateUI(Entity<MortarComponent> mortar)
     {
-        _userInterface.TrySetUiState(mortar, MortarUiKey.Key, new MortarBoundUserInterfaceState(mortar.Comp.SavedPositions));
+        var (owner, component) = mortar;
+        _userInterface.SetUiState(owner, MortarUiKey.Key, new MortarBoundUserInterfaceState(mortar.Comp.SavedPositions));
     }
 }

@@ -16,7 +16,7 @@ public abstract class SharedCMAutomatedVendorSystem : EntitySystem
         var sections = vendor.Comp.Sections.Count;
         if (args.Section < 0 || args.Section >= sections)
         {
-            Log.Error($"Player {args.Session.Name} sent an invalid vend section: {args.Section}. Max: {sections}");
+            Log.Error($"Player {args.Actor} sent an invalid vend section: {args.Section}. Max: {sections}");
             return;
         }
 
@@ -24,7 +24,7 @@ public abstract class SharedCMAutomatedVendorSystem : EntitySystem
         var entries = section.Entries.Count;
         if (args.Entry < 0 || args.Entry >= entries)
         {
-            Log.Error($"Player {args.Session.Name} sent an invalid vend entry: {args.Entry}. Max: {entries}");
+            Log.Error($"Player {args.Actor} sent an invalid vend entry: {args.Entry}. Max: {entries}");
             return;
         }
 

@@ -62,7 +62,7 @@
   - type: Speech
     speechVerb: Ghost
   - type: Alerts
-  - type: ShowSecurityIcons
+  - type: ShowJobIcons
 
 - type: body
   id: Raptor

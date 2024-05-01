@@ -39,6 +39,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.6
 
 - type: reagent
   id: Beer
@@ -55,6 +56,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.6
 
 - type: reagent
   id: BlueCuracao
@@ -462,6 +464,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.3
+  fizziness: 0.8
 
 # Mixed Alcohol
 
@@ -679,6 +682,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.15
+  fizziness: 0.3
 
 - type: reagent
   id: BlackRussian
@@ -818,6 +822,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.2
 
 - type: reagent
   id: DemonsBlood
@@ -833,6 +838,7 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.3
 
 - type: reagent
   id: DevilsKiss
@@ -920,6 +926,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.15
 
 - type: reagent
   id: GargleBlaster
@@ -966,6 +973,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.4 # A little high, but it has fizz in the name
 
 - type: reagent
   id: GinTonic
@@ -989,6 +997,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.4
 
 - type: reagent
   id: Gildlager
@@ -1066,6 +1075,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.6
 
 - type: reagent
   id: IrishCarBomb
@@ -1203,6 +1213,7 @@
   metamorphicMaxFillLevels: 2
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.7
 
 - type: reagent
   id: Margarita
@@ -1256,6 +1267,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.4
 
 - type: reagent
   id: Mojito
@@ -1271,6 +1283,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.3
 
 - type: reagent
   id: Moonshine
@@ -1375,6 +1388,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.4
 
 - type: reagent
   id: PinaColada
@@ -1504,6 +1518,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.3
 
 - type: reagent
   id: SuiDream
@@ -1519,6 +1534,7 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.2
 
 - type: reagent
   id: SyndicateBomb
@@ -1534,6 +1550,7 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  fizziness: 0.6
 
 - type: reagent
   id: TequilaSunrise
@@ -1572,6 +1589,7 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  fizziness: 0.2
 
 - type: reagent
   id: ThreeMileIsland
@@ -1659,6 +1677,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.4
 
 - type: reagent
   id: WhiskeyCola
@@ -1682,6 +1701,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.3
 
 - type: reagent
   id: WhiskeySoda
@@ -1705,6 +1725,7 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07
+  fizziness: 0.4
 
 - type: reagent
   id: WhiteGilgamesh
@@ -1722,6 +1743,7 @@
         - !type:AdjustReagent
           reagent: Ethanol
           amount: 0.15
+  fizziness: 0.5
 
 - type: reagent
   id: WhiteRussian
