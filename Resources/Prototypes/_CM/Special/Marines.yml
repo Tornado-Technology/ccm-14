@@ -357,6 +357,7 @@
         type: StrippableBoundUserInterface
       enum.CMSurgeryUIKey.Key:
         type: CMSurgeryBui
+  - type: ShowJobIcons
 
 - type: species
   id: Marine
