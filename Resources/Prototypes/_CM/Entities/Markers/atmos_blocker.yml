@@ -1,0 +1,19 @@
+- type: entity
+  name: Atmos Fix Vacuum Blocker Marker
+  id: AtmosFixVacuumBlockerMarker
+  description: "No Vacuum"
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - sprite: Markers/atmos.rsi # {
+        state: base
+        shader: unshaded
+      - sprite: Markers/atmos.rsi
+        shader: unshaded # }
+        state: vacuum
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: Tag
+    tags:
+      - SpreaderIgnore

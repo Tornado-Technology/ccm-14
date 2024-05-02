@@ -1,0 +1,55 @@
+- type: tile
+  id: Border
+  name: tiles-border
+  friction: 0
+  isSubfloor: true
+  isSpace: true
+  sturdy: false
+  thermalConductivity: 0.4
+  heatCapacity: 700000
+  sprite: /Textures/_CM/Tiles/empty.png
+
+- type: entity
+  id: FloorBorderEntity
+  name: border
+  description: You can't even see the bottom.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Chasm
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.4
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Tiles/Planet/Chasms/basalt_chasm.rsi
+    drawdepth: BelowFloor
+    layers:
+    - state: chasm
+  - type: Icon
+    sprite: Tiles/Planet/Chasms/basalt_chasm.rsi
+    state: full
+  - type: IconSmooth
+    key: chasm
+    base: chasm
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - WallLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: Tag
+    tags:
+    - HideContextMenu
+  - type: Marker
