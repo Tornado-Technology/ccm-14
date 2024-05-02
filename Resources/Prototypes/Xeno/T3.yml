@@ -130,7 +130,7 @@
           Brute: 30
     # Shoot
     - type: Gun
-      fireRate: 0.75
+      fireRate: 0.6
       selectedMode: FullAuto
       useKey: false
       availableModes:
@@ -138,10 +138,6 @@
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.01
-      rechargeSound:
-        path: /Audio/Effects/alien_roar1.ogg
-        params:
-          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
@@ -195,7 +191,7 @@
       maxZoom: 1.75, 1.75
     # Shoot
     - type: Gun
-      fireRate: 1
+      fireRate: 0.2
       selectedMode: FullAuto
       useKey: false
       stopMeleeOnShoot: false
@@ -206,10 +202,6 @@
       jobId: JobQuinn
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 25
-      rechargeSound:
-        path: /Audio/Effects/alien_roar1.ogg
-        params:
-          volume: -9
     - type: BasicEntityAmmoProvider
       proto: XenoProjectileBombardAcid
       capacity: 6

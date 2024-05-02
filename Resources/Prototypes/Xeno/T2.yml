@@ -147,7 +147,7 @@
           Brute: 24
     # Shoot
     - type: Gun
-      fireRate: 0.5
+      fireRate: 0.4
       selectedMode: FullAuto
       useKey: false
       projectileSpeed: 20
@@ -156,10 +156,6 @@
       soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.01
-      rechargeSound:
-        path: /Audio/Effects/alien_roar1.ogg
-        params:
-          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
