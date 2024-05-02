@@ -35,7 +35,7 @@
       projectile: ProjectileNeurotoxinVeilRoyal
       speed: 25
     - type: Gun
-      fireRate: 5
+      fireRate: 1
       selectedMode: FullAuto
       useKey: false
       availableModes:
@@ -44,10 +44,6 @@
       stopMeleeOnShoot: false
     - type: RechargeBasicEntityAmmo
       rechargeCooldown: 0.01
-      rechargeSound:
-        path: /Audio/Effects/alien_roar1.ogg
-        params:
-          volume: -9
     - type: BasicEntityAmmoProvider
       proto: ProjectileToxinSpit
       capacity: 1
