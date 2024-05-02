@@ -1,7 +1,7 @@
 - type: job
   id: FieldCommander
   name: job-name-fieldcommander
-  description: job-supervisors-staff-officer
+  description: job-description-fieldcommander
   playTimeTracker: JobFieldCommander
   requirements:
   - !type:DepartmentTimeRequirement
