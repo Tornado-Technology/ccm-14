@@ -1,9 +1,18 @@
-# TODO: Сделать свой маппул
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - TGCM_Erida
-  - TGCM_Desert
-  - TGCM_IceColony
-  - TGCM_Astropolis
-  - TGCM_Hokses
+  - Atlas
+  - Bagel
+  - Box
+  - Cluster
+  - Core
+  - Fland
+  - Marathon
+  - Meta
+  - Oasis
+  - Omega
+  - Origin
+  - Saltern
+  - Packed
+  - Reach
+  - Train

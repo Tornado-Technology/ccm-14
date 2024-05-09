@@ -1,4 +1,5 @@
 # Tier 1
+
 - type: technology
   id: SalvageWeapons
   name: research-technology-salvage-weapons
@@ -7,196 +8,96 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 500
+  cost: 5000
   recipeUnlocks:
   - WeaponProtoKineticAccelerator
   - ShuttleGunKineticCircuitboard
+  # These are roundstart but not replenishable for salvage
 
 - type: technology
-  id: LocalExplosion
-  name: research-technology-local-explosion
+  id: DraconicMunitions
+  name: research-technology-draconic-munitions
   icon:
-    sprite: Objects/Misc/landmine.rsi
-    state: landmine-inactive
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    state: incendiarydisplay
   discipline: Arsenal
   tier: 1
-  cost: 1750
+  cost: 10000
   recipeUnlocks:
-  - VoiceTrigger
-  - SignalTrigger
-  - TimerTrigger
-  - ExplosivePayload
-  - FlashPayload
-  - ChemicalPayload
+  - BoxShotgunIncendiary
+  - MagazineRifleIncendiary
+  - MagazinePistolIncendiary
+  - MagazineLightRifleIncendiary
+  - SpeedLoaderMagnumIncendiary
+  - MagazineShotgunIncendiary
+  - MagazineBoxPistolIncendiary
+  - MagazineBoxMagnumIncendiary
+  - MagazineBoxLightRifleIncendiary
+  - MagazineBoxRifleIncendiary
 
 - type: technology
-  id: MechWeaponUltra
-  name: research-technology-ultra
+  id: WeaponizedLaserManipulation
+  name: research-technology-weaponized-laser-manipulation
   icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_uac2
-  discipline: Arsenal
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - MechWeaponUltra
-  - MagazineAC
-
-- type: technology
-  id: RegularMunitions
-  name: research-technology-regular-munitions
-  icon:
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
-    state: base
-  discipline: Arsenal
-  tier: 1
-  cost: 1750
-  recipeUnlocks:
-  - MagazineRifleM41A
-  - MagazineRifleM4RA
-  - MagazineRifleM39
-  - MagazineSmgMSG23W-Y
-  - MagazineShotgunLiberator
-  - MagazinePistolAramatM5Y3
-  - MagazinePistol88M4
-  #- Magazine10x24mm
-  #- Magazine9mm
-  #- MagazinePP
-
-#- type: technology # Перенес исследования пистолетных патрон в регулярное вооружение.
-  #id: SmallMunitions
-  #name: research-technology-small-munitions
-  #icon:
-  #  sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi
-  #  state: base
-  #discipline: Arsenal
-  #tier: 1
-  #cost: 1750
-  #recipeUnlocks:
-  #- MagazinePistolAramatM5Y3
-  #- MagazinePistol88M4
-
-
-#- type: technology
-#  id: SpeedLoading
-#  name: research-technology-speed-loading
-#  icon:
-#    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
-#    state: base
-#  discipline: Arsenal
-#  tier: 1
-#  cost: 1000
-#  recipeUnlocks:
-#  - SpeedLoaderMagnum
-#  - SpeedLoaderMagnumVP-60x2
-#  - SpeedLoaderLightRifle
-#  - SpeedLoaderMosin
-#  - SpeedLoader9mm
-#  - SpeedLoaderMagnum357
-
-- type: technology
-  id: BoxMunitions
-  name: research-technology-box-munitions
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
-    state: base-b
-  discipline: Arsenal
-  tier: 1
-  cost: 1725
-  recipeUnlocks:
-  - Box1024mmCM
-  - Box12560RmmCM
-  - Box450_BrushmasterCM
-  - Box458_SocomCM
-  - BoxShellPunisher
-  - BoxShellLiberator
-  #- Magazine10x26mm
-  #- MagazineBoxMagnum
-  #- Box9mm
-  #- MagazineBox357
-
-- type: technology
-  id: ExplosiveDevices
-  name: research-technology-explosive-devices
-  icon:
-    sprite: Objects/Weapons/Bombs/c4.rsi
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
     state: icon
   discipline: Arsenal
-  tier: 2
-  cost: 2225
+  tier: 1
+  cost: 7500
   recipeUnlocks:
-  - ExGrenade
-  - C4
-
-#- type: technology
-#  id: UraniumMunitions
-#  name: research-technology-uranium-munitions
-#  icon:
-#    sprite: Objects/Materials/Sheets/other.rsi
-#    state: uranium
-#  discipline: Arsenal
-#  tier: 1
-#  cost: 2225
-#  recipeUnlocks:
-#  - ShellShotgunUranium
-#  - CartridgePistolUranium
-#  - CartridgeMagnumUranium
-#  - CartridgeLightRifleUranium
-#  - CartridgeRifleUranium
-#  - MagazineBoxPistolUranium
-#  - MagazineBoxMagnumUranium
-#  - MagazineBoxLightRifleUranium
-#  - MagazineBoxRifleUranium
+  - WeaponLaserCarbine
 
 - type: technology
-  id: MechWeaponHades
-  name: research-technology-hades
+  id: NonlethalAmmunition
+  name: research-technology-nonlethal-ammunition
   icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_uac2
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    state: beanbag
   discipline: Arsenal
-  tier: 2
+  tier: 1
   cost: 5000
   recipeUnlocks:
-    - MechWeaponHades
-    - MagazineHades
+  - MagazineShotgunBeanbag
+  - ShellTranquilizer 
+  - BoxBeanbag 
+  - WeaponDisabler
 
 - type: technology
-  id: SimpleBorgWeapons
-  name: research-technology-simple-borg-weapons
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
   icon:
-    sprite: Objects/Specific/Robotics/borgmodule.rsi
-    state: security
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: uranium
   discipline: Arsenal
-  tier: 2
-  cost: 5000
+  tier: 1
+  cost: 7500
   recipeUnlocks:
-    - BorgModuleWeaponLaserSimple
+  - MagazineRifleUranium
+  - MagazinePistolUranium
+  - MagazineLightRifleUranium
+  - SpeedLoaderMagnumUranium
+  - MagazineBoxPistolUranium
+  - MagazineBoxMagnumUranium
+  - MagazineBoxLightRifleUranium
+  - MagazineBoxRifleUranium
+  - BoxShotgunUranium
 
 - type: technology
-  id: MechWeaponScattershot
-  name: research-technology-scatter
+  id: AdvancedRiotControl
+  name: research-technology-advanced-riot-control
   icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_scatter
+    sprite: Objects/Weapons/Melee/truncheon.rsi
+    state: icon
   discipline: Arsenal
-  tier: 2
-  cost: 5000
+  tier: 1
+  cost: 8000
   recipeUnlocks:
-  - MechWeaponScattershot
-  - MagazineScattershot
+  - Truncheon
+  - TelescopicShield
+  - HoloprojectorSecurity
+  - WeaponDisablerSMG
 
-- type: technology
-  id: MechWeaponImmolator
-  name: research-technology-immolator
-  icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_laser
-  discipline: Arsenal
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - MechWeaponImmolator
+# Tier 2
 
 - type: technology
   id: ExplosiveTechnology
@@ -220,78 +121,42 @@
   id: ConcentratedLaserWeaponry
   name: research-technology-concentrated-laser-weaponry
   icon:
-    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
-  - WeaponLaserCarbine
   - WeaponLaserCannon
 
 - type: technology
-  id: TotalDestruction
-  name: research-technology-total-destruction
+  id: WaveParticleHarnessing
+  name: research-technology-wave-particle-harnessing
   icon:
-    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 225
+  cost: 10000
   recipeUnlocks:
-  - MarineCASFlareBomb
-  - MarineCASClusterBomb
-
-- type: technology
-  id: AdvancedBorgWeapons
-  name: research-technology-advanced-borg-weapons
-  icon:
-    sprite: Objects/Specific/Robotics/borgmodule.rsi
-    state: security
-  discipline: Arsenal
-  tier: 3
-  cost: 5000
-  recipeUnlocks:
-    - BorgModuleWeaponLaserAdvanced
-
-- type: technology
-  id: SpecialMunitions
-  name: research-technology-special-munitions
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
-    state: base
-  discipline: Arsenal
-  tier: 3
-  cost: 5000
-  recipeUnlocks:
-    - MagazineShotgunPatriot
-    - FuelTankFlamethrower
-    - BoxAntimaterialCM
-    - MagazineLightRifleBox
-    - BoxShellFenix
-    - GrenadeBlastMarine
-    - GrenadeFragMarine
-#  - ClothingEyesGlassesSecurity
-#  - Truncheon
-#  - TelescopicShield
-#  - HoloprojectorSecurity
-#  - WeaponDisablerSMG
+  - WeaponXrayCannon
 
 - type: technology
   id: BasicShuttleArmament
   name: research-technology-basic-shuttle-armament
-  icon:
+  icon: 
     sprite: Structures/Power/cage_recharger.rsi
     state: full
   discipline: Arsenal
   tier: 2
-  cost: 5250
+  cost: 10500
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
   - PowerCageMedium
   - MagazineGrenadeEmpty
   - GrenadeFlash
+  - GrenadeBlast
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
@@ -308,47 +173,35 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 5000
+  cost: 15000
   recipeUnlocks:
   - WeaponAdvancedLaser
+  - PortableRecharger
 
 - type: technology
-  id: AdvancedLasers
-  name: research-technology-advanced-lasers
+  id: ExperimentalBatteryAmmo
+  name: research-technology-experimental-battery-ammo
   icon:
     sprite: Objects/Weapons/Guns/Battery/svalinn.rsi
     state: icon
   discipline: Arsenal
-  tier: 4
-  cost: 7500
+  tier: 3
+  cost: 15000
   recipeUnlocks:
-  - WeaponAntiqueLaser
   - WeaponLaserSvalinn
-
+  
 - type: technology
   id: AdvancedShuttleWeapon
   name: research-technology-advanced-shuttle-weapon
-  icon:
+  icon: 
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 7500
+  cost: 15000
   recipeUnlocks:
   - GrenadeEMP
   - PowerCageHigh
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
-
-- type: technology
-  id: MechWeaponSolaris
-  name: research-technology-solaris
-  icon:
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_laser
-  discipline: Arsenal
-  tier: 3
-  cost: 5000
-  recipeUnlocks:
-  - MechWeaponSolaris

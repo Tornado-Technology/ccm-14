@@ -150,6 +150,7 @@
     bloodMaxVolume: 0.1
   - type: ZombieImmune
 
+
 - type: entity
   name: chicken
   parent: SimpleMobBase
@@ -433,6 +434,8 @@
     speechVerb: Moth
     speechSounds: Squeak
     allowedEmotes: ['Chitter', 'Squeak']
+  - type: FaxableObject
+    insertingState: inserting_mothroach
   - type: MothAccent
   - type: Sprite
     sprite: Mobs/Animals/mothroach.rsi
@@ -1540,6 +1543,8 @@
     rootTask:
       task: MouseCompound
   - type: Physics
+  - type: FaxableObject
+    insertingState: inserting_mouse
   - type: Fixtures
     fixtures:
       fix1:
@@ -2856,7 +2861,7 @@
       - DoorBumpOpener
   - type: MovementAlwaysTouching
   - type: PressureImmunity
-  
+  - type: StepTriggerImmune
   - type: Insulated
   - type: InteractionPopup
     successChance: 0.7
@@ -3070,6 +3075,8 @@
   - type: Item
     size: Tiny
   - type: Physics
+  - type: FaxableObject
+    insertingState: inserting_hamster
   - type: Fixtures
     fixtures:
       fix1:

@@ -72,6 +72,8 @@
   - type: InputMover
   - type: MobMover
   - type: ZombieImmune
+  - type: ClothingRequiredStepTriggerImmune
+    slots: All
 
 - type: entity
   abstract: true

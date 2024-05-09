@@ -215,6 +215,9 @@
   - type: GuideHelp
     guides:
       - Cyborgs
+  - type: StepTriggerImmune
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
 
 - type: entity
   id: BaseBorgChassisNT

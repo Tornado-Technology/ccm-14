@@ -116,7 +116,6 @@
       - LightBulb
       - LedLightBulb
       - Bucket
-      - WeldingFuelCanister
       - DrinkMug
       - DrinkMugMetal
       - DrinkGlass
@@ -164,44 +163,55 @@
       - ClothingHeadHatWelding
   - type: EmagLatheRecipes
     emagStaticRecipes:
-       - CartridgePistol
-       - CartridgeMagnum
-       - ShellShotgun
-       - ShellShotgunFlare
-       - ShellTranquilizer
-       - CartridgeLightRifle
-       - CartridgeRifle
-       - MagazineBoxPistol
-       - MagazineBoxMagnum
-       - MagazineBoxRifle
-       - MagazineBoxLightRifle
-       - GrenadeBlast
+      - BoxLethalshot
+      - BoxShotgunFlare
+      - MagazineBoxLightRifle
+      - MagazineBoxMagnum
+      - MagazineBoxPistol
+      - MagazineBoxRifle
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazinePistol 
+      - MagazinePistolEmpty
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineShotgun
+      - MagazineShotgunEmpty
+      - ShellTranquilizer
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
     emagDynamicRecipes:
-      - ShellShotgunBeanbag
-      - ShellShotgunIncendiary
-      - CartridgePistolIncendiary
-      - CartridgeMagnumIncendiary
-      - CartridgeLightRifleIncendiary
-      - CartridgeRifleIncendiary
-      - MagazineBoxPistolIncendiary
-      - MagazineBoxMagnumIncendiary
-      - MagazineBoxLightRifleIncendiary
-      - MagazineBoxRifleIncendiary
-      - ShellShotgunUranium
-      - CartridgePistolUranium
-      - CartridgeMagnumUranium
-      - CartridgeLightRifleUranium
-      - CartridgeRifleUranium
-      - MagazineBoxPistolUranium
-      - MagazineBoxMagnumUranium
-      - MagazineBoxLightRifleUranium
-      - MagazineBoxRifleUranium
-      - PowerCageSmall
-      - PowerCageMedium
-      - PowerCageHigh
-      - MagazineGrenadeEmpty
+      - BoxBeanbag
+      - BoxShotgunIncendiary
+      - BoxShotgunUranium
+      - GrenadeBlast
       - GrenadeEMP
       - GrenadeFlash
+      - MagazineBoxLightRifleIncendiary
+      - MagazineBoxLightRifleUranium
+      - MagazineBoxMagnumIncendiary
+      - MagazineBoxMagnumUranium
+      - MagazineBoxPistolIncendiary
+      - MagazineBoxPistolUranium
+      - MagazineBoxRifleIncendiary
+      - MagazineBoxRifleUranium
+      - MagazineGrenadeEmpty
+      - MagazineLightRifleIncendiary
+      - MagazineLightRifleUranium
+      - MagazinePistolIncendiary
+      - MagazinePistolUranium
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - MagazineShotgunBeanbag
+      - MagazineShotgunIncendiary
+      - MagazineShotgunIncendiary
+      - PowerCageHigh
+      - PowerCageMedium
+      - PowerCageSmall
+      - SpeedLoaderMagnumIncendiary
+      - SpeedLoaderMagnumUranium
 
 - type: entity
   id: AutolatheHyperConvection
@@ -253,7 +263,6 @@
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
-      - FloodlightCM
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
@@ -279,7 +288,6 @@
       - MegaSprayBottle
       - TimerTrigger
       - ChemicalPayload
-      - ExplosivePayload
       - FlashPayload
       - Signaller
       - SignallerAdvanced
@@ -309,9 +317,6 @@
       - ClothingBackpackDuffelHolding
       - WelderExperimental
       - JawsOfLife
-      - ClothingEyesGlassesChemical
-      - HandTeleporter
-      - Hypospray
       - FauxTileAstroGrass
       - FauxTileMowedAstroGrass
       - FauxTileJungleAstroGrass
@@ -366,27 +371,27 @@
     idleState: icon
     runningState: building
     staticRecipes:
-      - MicrowaveMachineCircuitboard
-      - ReagentGrinderMachineCircuitboard
-      - BoozeDispenserMachineCircuitboard
-      - SodaDispenserMachineCircuitboard
-      - MedicalTechFabCircuitboard
-      - AmmoTechFabCircuitboard
-      - SecurityTechFabCircuitboard
-      - ElectrolysisUnitMachineCircuitboard
-      - CentrifugeMachineCircuitboard
-      - CondenserMachineCircuitBoard
-      - ProtolatheMachineCircuitboard
-      - AutolatheMachineCircuitboard
-      - CircuitImprinterMachineCircuitboard
-      - OreProcessorMachineCircuitboard
-      - MaterialReclaimerMachineCircuitboard
-      - ElectrolysisUnitMachineCircuitboard
-      - CentrifugeMachineCircuitboard
-      - CondenserMachineCircuitBoard
-      - UniformPrinterMachineCircuitboard
-      - FloorGreenCircuit
-      - FloorBlueCircuit
+    - ProtolatheMachineCircuitboard
+    - AutolatheMachineCircuitboard
+    - CircuitImprinterMachineCircuitboard
+    - OreProcessorMachineCircuitboard
+    - MaterialReclaimerMachineCircuitboard
+    - ElectrolysisUnitMachineCircuitboard
+    - CentrifugeMachineCircuitboard
+    - ChemDispenserMachineCircuitboard
+    - ChemMasterMachineCircuitboard
+    - CondenserMachineCircuitBoard
+    - HotplateMachineCircuitboard
+    - PrinterDocMachineCircuitboard # Corvax-Printer
+    - UniformPrinterMachineCircuitboard
+    - FloorGreenCircuit
+    - FloorBlueCircuit
+    - MicrowaveMachineCircuitboard
+    - ReagentGrinderMachineCircuitboard
+    - ElectricGrillMachineCircuitboard
+    - BoozeDispenserMachineCircuitboard
+    - SodaDispenserMachineCircuitboard
+    - SpaceHeaterMachineCircuitBoard
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
       - HellfireFreezerMachineCircuitBoard
@@ -412,9 +417,7 @@
       - PowerComputerCircuitboard
       - AutolatheHyperConvectionMachineCircuitboard
       - ProtolatheHyperConvectionMachineCircuitboard
-      - ReagentGrinderMachineCircuitboard
-      - HotplateMachineCircuitboard
-      - ElectricGrillMachineCircuitboard
+      - CircuitImprinterHyperConvectionMachineCircuitboard
       - FatExtractorMachineCircuitboard
       - FlatpackerMachineCircuitboard
       - SheetifierMachineCircuitboard
@@ -465,6 +468,21 @@
         - Sheet
         - RawMaterial
         - Ingot
+
+- type: entity
+  id: CircuitImprinterHyperConvection
+  parent: CircuitImprinter
+  name: hyper convection circuit imprinter
+  description: A highly-experimental circuit imprinter that harnesses the power of extreme heat to slowly create objects more cost-effectively.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/circuit_imprinter_hypercon.rsi
+  - type: Lathe
+    materialUseMultiplier: 0.5
+    timeMultiplier: 1.5
+  - type: LatheHeatProducing
+  - type: Machine
+    board: CircuitImprinterHyperConvectionMachineCircuitboard
 
 - type: entity
   id: ExosuitFabricator
@@ -571,17 +589,6 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
-    - MechWeaponUltra
-    - MagazineAC
-    - MechWeaponHades
-    - MagazineHades
-    - MechWeaponScattershot
-    - MagazineScattershot
-    - MechWeaponImmolator
-    - MechWeaponSolaris
-    # Weapon borg modules
-    - BorgModuleWeaponLaserSimple
-    - BorgModuleWeaponLaserAdvanced
   - type: MaterialStorage
     whitelist:
       tags:
@@ -660,104 +667,85 @@
     idleState: icon
     runningState: icon
     staticRecipes:
-      #- ClothingEyesHudSecurity
-      - Flash
-      - Handcuffs
-      - Zipties
-      - Stunbaton
-      #- ForensicPad
-      - RiotShield
-      #- ShellShotgun
-      #- ShellShotgunSlug
-      #- ShellShotgunFlare
-      #- ShellTranquilizer
-      #- MagazinePistol
-      #- MagazinePistolSubMachineGun
-      #- MagazinePistolSubMachineGunTopMounted
-      #- MagazineRifle
-      #- MagazineLightRifle
-      #- MagazineBoxPistol
-      #- MagazineBoxMagnum
-      #- MagazineBoxRifle
-      #- MagazineBoxLightRifle
-      #- SpeedLoaderMagnum
-      #- TargetHuman
-      #- TargetSyndicate
-      #- TargetClown
-      #- MagazineBoxLightRiflePractice
-      #- MagazineBoxMagnumPractice
-      #- MagazineBoxPistolPractice
-      #- MagazineBoxRiflePractice
-      #- ShellShotgunPractice
-      - WeaponLaserCarbinePractice
-      - WeaponDisablerPractice
+      - BoxLethalshot
+      - BoxShotgunFlare
       - BoxShotgunPractice 
+      - BoxShotgunSlug
+      - ClothingEyesHudSecurity
+      - Flash
+      - ForensicPad
+      - Handcuffs
+      - MagazineBoxLightRifle
+      - MagazineBoxLightRiflePractice
+      - MagazineBoxMagnum
+      - MagazineBoxMagnumPractice
+      - MagazineBoxPistol
+      - MagazineBoxPistolPractice
+      - MagazineBoxRifle
+      - MagazineBoxRiflePractice
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazinePistol 
+      - MagazinePistolEmpty
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMountedEmpty
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineShotgun
+      - MagazineShotgunEmpty
+      - MagazineShotgunSlug
+      - RiotShield
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
+      - Stunbaton
+      - TargetClown
+      - TargetHuman
+      - TargetSyndicate
+      - WeaponDisablerPractice
+      - WeaponLaserCarbinePractice
+      - Zipties
     dynamicRecipes:
-      #- MagazineRifleM41A
-      #- MagazineRifleM4RA
-      #- MagazinePistolAramatM5Y3
-      #- MagazinePistol88M4
-      #- MagazineRifleM39
-      #- Magazine10x24mm
-      #- SpeedLoaderMagnum
-      #- SpeedLoaderMagnumVP-60x2
-      #- SpeedLoaderLightRifle
-      #- SpeedLoaderMosin
-      #- SpeedLoader9mm
-      #- SpeedLoaderMagnum357
-      #- Magazine9mm
-      #- MagazinePP
-      #- Box1024mmCM
-      #- Magazine10x26mm
-      #- MagazineBoxMagnum
-      #- Box9mm
-      #- MagazineBox357
-      - ExGrenade
-      - C4
-      - MarineCASFlareBomb
-      - MarineCASClusterBomb
-      #- MagazineShotgunPatriot
-      #- FuelTankFlamethrower
-      #- BoxAntimaterialCM
-      #- MagazineLightRifleBox
-      - WeaponLaserCarbine
-      - WeaponLaserCannon
-      #- CartridgeLightRifleIncendiary
-      #- CartridgeMagnumIncendiary
-      #- CartridgePistolIncendiary
-      #- CartridgeRifleIncendiary
-      #- CartridgeLightRifleUranium
-      #- CartridgeMagnumUranium
-      #- CartridgePistolUranium
-      #- CartridgeRifleUranium
-      #- CartridgeLightRifleRubber
-      #- CartridgeMagnumRubber
-      #- CartridgePistolRubber
-      #- CartridgeRifleRubber
-      #- ClothingEyesGlassesSecurity
+      - BoxBeanbag
+      - BoxShotgunIncendiary
+      - BoxShotgunUranium
       - ExplosivePayload
       - FlashPayload
-      - HoloprojectorSecurity
-      #- MagazineBoxLightRifleIncendiary
-      #- MagazineBoxMagnumIncendiary
-      #- MagazineBoxPistolIncendiary
-      #- MagazineBoxRifleIncendiary
-      #- MagazineBoxLightRifleUranium
-      #- MagazineBoxMagnumUranium
-      #- MagazineBoxPistolUranium
-      #- MagazineBoxRifleUranium
-      #- MagazineBoxLightRifleRubber
-      #- MagazineBoxMagnumRubber
-      #- MagazineBoxPistolRubber
-      #- MagazineBoxRifleRubber
-      #- MagazineGrenadeEmpty
+      - GrenadeBlast
       - GrenadeEMP
       - GrenadeFlash
-      #- ShellShotgunBeanbag
-      #- ShellShotgunIncendiary
-      #- ShellShotgunUranium
+      - HoloprojectorSecurity
+      - MagazineBoxLightRifleIncendiary
+      - MagazineBoxLightRifleUranium
+      - MagazineBoxMagnumIncendiary
+      - MagazineBoxMagnumUranium
+      - MagazineBoxPistolIncendiary
+      - MagazineBoxPistolUranium
+      - MagazineBoxRifleIncendiary
+      - MagazineBoxRifleUranium
+      - MagazineGrenadeEmpty
+      - MagazineLightRifleIncendiary
+      - MagazineLightRifleUranium
+      - MagazinePistolIncendiary
+      - MagazinePistolUranium
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - MagazineShotgunBeanbag
+      - MagazineShotgunIncendiary
+      - PortableRecharger
+      - PowerCageHigh
+      - PowerCageMedium
+      - PowerCageSmall
+      - ShellTranquilizer
+      - ShuttleGunDusterCircuitboard
+      - ShuttleGunFriendshipCircuitboard
+      - ShuttleGunPerforatorCircuitboard
+      - ShuttleGunSvalinnMachineGunCircuitboard
       - Signaller
       - SignalTrigger
+      - SpeedLoaderMagnumIncendiary
+      - SpeedLoaderMagnumUranium
       - TelescopicShield
       - TimerTrigger
       - Truncheon
@@ -768,13 +756,6 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
-      - PowerCageSmall
-      - PowerCageMedium
-      - PowerCageHigh
-      - ShuttleGunSvalinnMachineGunCircuitboard
-      - ShuttleGunPerforatorCircuitboard
-      - ShuttleGunFriendshipCircuitboard
-      - ShuttleGunDusterCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -806,40 +787,26 @@
     - type: Lathe
       idleState: icon
       runningState: icon
-      dynamicRecipes:
+      staticRecipes:
+        - BoxLethalshot
+        - BoxShotgunFlare
+        - BoxShotgunSlug
+        - MagazineBoxLightRifle
+        - MagazineBoxMagnum
+        - MagazineBoxPistol
+        - MagazineBoxRifle
+        - MagazineLightRifle
+        - MagazineLightRifleEmpty
+        - MagazinePistol 
+        - MagazinePistolEmpty 
+        - MagazineRifle
+        - MagazineRifleEmpty
+        - MagazineShotgun
+        - MagazineShotgunEmpty
+        - MagazineShotgunSlug
+        - ShellTranquilizer
         - SpeedLoaderMagnum
-        - SpeedLoaderMagnumVP-60x2
-        - SpeedLoaderLightRifle
-        - SpeedLoaderMosin
-        - SpeedLoader9mm
-        - SpeedLoaderMagnum357
-        #- Magazine9mm #Магазин от VP-70. Оно есть но пока не используется
-        #- MagazinePP
-        #- Magazine10x26mm
-        # Штатная аммуниция морпехов
-        - MagazineShotgunLiberator
-        - MagazineRifleM41A
-        - MagazineRifleM4RA
-        - MagazinePistolAramatM5Y3
-        - MagazinePistol88M4
-        - MagazineRifleM39
-        - MagazineSmgMSG23W-Y
-        - Box1024mmCM
-        - Box12560RmmCM
-        - Box450_BrushmasterCM
-        - Box458_SocomCM
-        - BoxShellPunisher
-        - BoxShellLiberator
-        #- ExGrenade Теперь только в охранфабе
-        #- C4
-        # Аммуниция специалистов
-        - GrenadeFragMarine
-        - GrenadeBlastMarine
-        - BoxAntimaterialCM
-        - MagazineShotgunPatriot
-        - BoxShellFenix
-        - FuelTankFlamethrower
-        - MagazineLightRifleBox
+        - SpeedLoaderMagnumEmpty
     - type: MaterialStorage
       whitelist:
         tags:

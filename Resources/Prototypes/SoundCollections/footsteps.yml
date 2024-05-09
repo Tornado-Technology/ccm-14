@@ -202,25 +202,12 @@
   - /Audio/Effects/Footsteps/spurs2.ogg
   - /Audio/Effects/Footsteps/spurs3.ogg
 
-  - /Audio/Effects/Footsteps/meatslap.ogg\
+- type: soundCollection
+  id: FootstepBorg
+  files:
+  - /Audio/Effects/Footsteps/borgwalk1.ogg
 
 - type: soundCollection
-  id: FootstepAlienCharge
+  id: FootstepHoverBorg
   files:
-  - /Audio/Effects/Footsteps/alien/charge1.ogg
-  - /Audio/Effects/Footsteps/alien/charge2.ogg
-  - /Audio/Effects/Footsteps/alien/charge3.ogg
-
-- type: soundCollection
-  id: FootstepAlienLarge
-  files:
-  - /Audio/Effects/Footsteps/alien/large1.ogg
-  - /Audio/Effects/Footsteps/alien/large2.ogg
-  - /Audio/Effects/Footsteps/alien/large3.ogg
-
-- type: soundCollection
-  id: FootstepAlienMedium
-  files:
-  - /Audio/Effects/Footsteps/alien/medium1.ogg
-  - /Audio/Effects/Footsteps/alien/medium2.ogg
-  - /Audio/Effects/Footsteps/alien/medium3.ogg
+  - /Audio/Effects/Footsteps/borgwalk2.ogg
