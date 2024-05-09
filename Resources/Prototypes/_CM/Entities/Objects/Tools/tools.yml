@@ -1,26 +1,6 @@
-- type: entity
-  parent: Crowbar
-  id: PhysicistCrowbar
-  name: physicist crowbar
-  components:
-  - type: Tag
-    tags:
-    - Crowbar
-  - type: Sprite
-    state: red-icon
-  - type: Item
-    heldPrefix: red
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 10
-        Structural: 20
-
-- type: entity
-  parent: [Screwdriver, CMEntityBase]
+﻿- type: entity
+  parent: Screwdriver
   id: CMScrewdriver
-  name: Screwdriver
-  description: Industrial grade torque in a small screwdriving package.
   components:
   - type: RandomSprite
     available:
@@ -33,10 +13,11 @@
       map: [ "enum.DamageStateVisualLayers.Base" ]
     - state: screwdriver-screwybits
   - type: Item
+    size: Tiny
     sprite: _CM/Objects/Tools/screwdriver.rsi
 
 - type: entity
-  parent: [Wirecutter, CMEntityBase]
+  parent: Wirecutter
   id: CMWirecutter
   components:
   - type: Sprite
@@ -50,22 +31,24 @@
     - enum.DamageStateVisualLayers.Base:
         cutters: Rainbow
   - type: Item
+    size: Small
     sprite: _CM/Objects/Tools/wirecutters.rsi
 
 - type: entity
-  parent: [Wrench, CMEntityBase]
+  parent: Wrench
   id: CMWrench
   components:
   - type: Sprite
     sprite: _CM/Objects/Tools/wrench.rsi
     state: icon
   - type: Item
+    size: Small
     sprite: _CM/Objects/Tools/wrench.rsi
 
 - type: entity
-  parent: [Multitool, CMEntityBase]
+  parent: Multitool
   id: CMMultitool
-  name: Security Access Tuner
+  name: security access tuner
   description: A small handheld tool used to override various machine functions.
   suffix: Multitool
   components:
@@ -74,16 +57,18 @@
     layers: []
     state: multitool
   - type: Item
+    size: Small
     sprite: _CM/Objects/Tools/multitool.rsi
 
 - type: entity
-  parent: [Crowbar, CMEntityBase]
+  parent: Crowbar
   id: CMCrowbar
   components:
   - type: Sprite
     sprite: _CM/Objects/Tools/crowbar.rsi
     state: icon
   - type: Item
+    size: Small
     sprite: _CM/Objects/Tools/crowbar.rsi
 
 - type: entity
@@ -101,104 +86,12 @@
     heldPrefix: red
 
 - type: entity
-  name: welding tool
-  parent: BaseItem
-  id: CMWelder
-  description: "Melts anything as long as it's fueled, don't forget your eye protection!"
+  parent: HandLabeler
+  id: CMHandLabeler
   components:
-  - type: EmitSoundOnLand
-    sound:
-      path: Audio/Items/welder_drop.ogg
-  - type: Sprite
-    sprite: _CM/Objects/Tools/welder.rsi
-    layers:
-    - state: icon
-    - state: welder_flame
-      visible: false
-      shader: unshaded
-      map: ["enum.ToggleVisuals.Layer"]
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
-          True: { visible: true }
-          False: { visible: false }
-  - type: Item
-    size: Small
-    sprite: _CM/Objects/Tools/welder.rsi
-  - type: ItemToggle
-    predictable: false
-    soundActivate:
-      collection: WelderOn
-      params:
-        variation: 0.125
-        volume: -1
-    soundDeactivate:
-      collection: WelderOff
-      params:
-        variation: 0.125
-        volume: -1
-  - type: ItemToggleMeleeWeapon
-    activatedSoundOnHit:
-      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
-      params:
-        variation: 0.250
-        volume: -2
-    activatedSoundOnHitNoDamage:
-      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
-      params:
-        variation: 0.250
-        volume: -2
-    activatedDamage:
-        types:
-            Heat: 8
-  - type: ItemToggleSize
-    activatedSize: Large
-  - type: ItemToggleHot
-  - type: ItemToggleDisarmMalus
-    activatedDisarmMalus: 0.6
-  - type: ToggleableLightVisuals
-    spriteLayer: flame
-    inhandVisuals:
-      left:
-      - state: inhand-left-flame
-        shader: unshaded
-      right:
-      - state: inhand-right-flame
-        shader: unshaded
-  - type: UseDelay
-  - type: MeleeWeapon
-    wideAnimationRotation: -90
-    damage:
-      types:
-        Blunt: 5 #i mean... i GUESS you could use it like that
-  - type: RefillableSolution
-    solution: Welder
-  - type: SolutionContainerManager
-    solutions:
-      Welder:
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 100
-        maxVol: 100
-  - type: Tool
-    useSound:
-      collection: Welder
-    qualities: Welding
-  - type: Welder
-  - type: PointLight
-    enabled: false
-    radius: 3.5
-    color: orange
-    netsync: false
-  - type: Appearance
-  - type: RequiresEyeProtection
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 200
-  - type: StaticPrice
-    price: 40
-  - type: IgnitionSource
-    temperature: 700
-
-
+    - type: Sprite
+      sprite: _CM/Objects/Tools/hand_labeler.rsi
+      state: hand_labeler
+    - type: Item
+      size: Normal
+      sprite: _CM/Objects/Tools/hand_labeler.rsi

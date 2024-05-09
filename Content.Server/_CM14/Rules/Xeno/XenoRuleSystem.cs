@@ -10,10 +10,11 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
-using Content.Server._CM14.Xeno;
+using Content.Server._CM14.Xenos;
 using Content.Server.Communications;
 using Content.Shared._CM14.EmergencyRetreat;
-using Content.Shared._CM14.Xeno;
+using Content.Shared._CM14.Marines;
+using Content.Shared._CM14.Xenos;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Overlays;
 using Content.Server.GameTicking.Components;
@@ -51,8 +52,8 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         SubscribeLocalEvent<XenoComponent, MobStateChangedEvent>(OnXenoMobStateChanged);
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMarineMobStateChanged);
 
-        SubscribeLocalEvent<XenoEggComponent, DestructionEventArgs>(OnDestruction);
-        SubscribeLocalEvent<XenoEggComponent, ComponentStartup>(OnEggComponentInit);
+        // SubscribeLocalEvent<XenoEggComponent, DestructionEventArgs>(OnDestruction);
+        // SubscribeLocalEvent<XenoEggComponent, ComponentStartup>(OnEggComponentInit);
         SubscribeLocalEvent<NukeDisarmSuccessEvent>(OnNukeDisarm);
 
         SubscribeLocalEvent<CommunicationConsoleCallShuttleAttemptEvent>(OnShuttleCallAttempt);
@@ -85,15 +86,15 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
         }
     }
 
-    private void OnEggComponentInit(EntityUid uid, XenoEggComponent component, ComponentStartup args)
-    {
-        CheckRoundShouldEnd();
-    }
+    // private void OnEggComponentInit(EntityUid uid, XenoEggComponent component, ComponentStartup args)
+    // {
+    //     CheckRoundShouldEnd();
+    // }
 
-    private void OnDestruction(EntityUid uid, XenoEggComponent component, DestructionEventArgs args)
-    {
-        CheckRoundShouldEnd();
-    }
+    // private void OnDestruction(EntityUid uid, XenoEggComponent component, DestructionEventArgs args)
+    // {
+    //     CheckRoundShouldEnd();
+    // }
 
     private void OnNukeDisarm(NukeDisarmSuccessEvent ev)
     {
@@ -131,36 +132,36 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
                 type == WinCondition.AllXenoDied ||
                 type == WinCondition.RoyalQueenExist);
 
-            Eggs = Count(typeof(XenoEggComponent));
+            // Eggs = Count(typeof(XenoEggComponent));
             Xenos = GetMobAliveCount<XenoComponent>();
             Marines = GetMobAliveCount<MarineComponent>();
 
             var sender = Loc.GetString("ai-announcement-sender");
 
-            if (Eggs == 20)
-            {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"),
-                    sender, false, colorOverride: Color.Yellow);
-                _audio.PlayGlobal("/Audio/Misc/redalert.ogg", Filter.Broadcast(), recordReplay: true);
-            }
+            // if (Eggs == 20)
+            // {
+            //     _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-medium"),
+            //         sender, false, colorOverride: Color.Yellow);
+            //     _audio.PlayGlobal("/Audio/Misc/redalert.ogg", Filter.Broadcast(), recordReplay: true);
+            // }
 
-            if (Eggs == 40)
-            {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"),
-                    sender, false, colorOverride: Color.Orange);
-                _audio.PlayGlobal("/Audio/Misc/siren.ogg", Filter.Broadcast(), recordReplay: true);
-            }
+            // if (Eggs == 40)
+            // {
+            //     _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-hight"),
+            //         sender, false, colorOverride: Color.Orange);
+            //     _audio.PlayGlobal("/Audio/Misc/siren.ogg", Filter.Broadcast(), recordReplay: true);
+            // }
 
-            if (Eggs >= xeno.WinningXenoEggCount)
-            {
-                _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"),
-                    sender, false, colorOverride: Color.Red);
-                _audio.PlayGlobal("/Audio/Misc/delta.ogg", Filter.Broadcast(), recordReplay: true);
+            // if (Eggs >= xeno.WinningXenoEggCount)
+            // {
+            //     _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("ai-announcement-xeno-egg-count-warning-crit"),
+            //         sender, false, colorOverride: Color.Red);
+            //     _audio.PlayGlobal("/Audio/Misc/delta.ogg", Filter.Broadcast(), recordReplay: true);
 
-                xeno.WinConditions.Add(WinCondition.EggsWinningCount);
-                SetWinType(uid, WinType.XenoMinor, xeno);
-                continue;
-            }
+            //     xeno.WinConditions.Add(WinCondition.EggsWinningCount);
+            //     SetWinType(uid, WinType.XenoMinor, xeno);
+            //     continue;
+            // }
 
             if (Xenos == 0)
             {
@@ -178,7 +179,7 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
             // if all checks false, trying to predict game end (for force end round behavior)
             // check a queen exist
             // @TODO add xenoRoleComponent or something else to get easy way get any type of xeno
-            var t5query = EntityQueryEnumerator<XenoTierComponent>();
+            var t5query = EntityQueryEnumerator<XenoComponent>();
             while (t5query.MoveNext(out var tempQueenUid, out var xenoTier))
             {
                 if (xenoTier.Tier == 4 && TryComp<MetaDataComponent>(tempQueenUid, out var queenMeta))

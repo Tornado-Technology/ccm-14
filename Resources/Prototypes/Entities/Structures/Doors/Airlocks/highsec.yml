@@ -49,11 +49,11 @@
       types:
         Blunt: 50
     openSound:
-      path: /Audio/_CM14/Machines/airlock.ogg
+      path: /Audio/_CM/Machines/airlock.ogg
     closeSound:
-      path: /Audio/_CM14/Machines/airlock.ogg
+      path: /Audio/_CM/Machines/airlock.ogg
     denySound:
-      path: /Audio/_CM14/Machines/buzz_two.ogg
+      path: /Audio/_CM/Machines/buzz_two.ogg
   - type: Weldable
     fuel: 10
     time: 10

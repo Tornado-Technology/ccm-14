@@ -19,7 +19,7 @@
     CableHVStack: 15
     CMWelder: 2
     ClothingUniformJumpsuitMarine: 1
-    ClothingHandsGlovesMarine: 1
+    CMHandsBlack: 1
     ClothingShoesBootsMarine: 1
     BoxMRPFilled: 1
     FlashlightLantern: 2
@@ -32,7 +32,7 @@
     ClothingMaskCoif: 1
     WeaponRifleM4RA: 1
     MagazineRifleM4RA: 5
-    WeaponRifleM41A: 1
+    CMWeaponRifleM41A: 1
     MagazineRifleM41A: 5
     WeaponSubMachineGunM39: 1
     MagazineRifleM39: 5

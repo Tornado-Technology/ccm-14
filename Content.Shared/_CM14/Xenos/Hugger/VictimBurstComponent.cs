@@ -1,0 +1,16 @@
+﻿using Robust.Shared.GameStates;
+using Robust.Shared.Utility;
+using static Robust.Shared.Utility.SpriteSpecifier;
+
+namespace Content.Shared._CM14.Xenos.Hugger;
+
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[Access(typeof(SharedXenoHuggerSystem))]
+public sealed partial class VictimBurstComponent : Component
+{
+    [DataField, AutoNetworkedField]
+    public Enum BurstLayer = VictimHuggedLayer.Burst;
+
+    [DataField, AutoNetworkedField]
+    public SpriteSpecifier BurstSprite = new Rsi(new ResPath("/Textures/_CM/Effects/chest_burst.rsi"), "bursted_stand");
+}

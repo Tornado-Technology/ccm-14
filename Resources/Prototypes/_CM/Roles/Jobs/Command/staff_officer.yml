@@ -1,0 +1,53 @@
+- type: job
+  id: StaffOfficer
+  name: job-name-staffofficer
+  description: job-description-staffofficer
+  playTimeTracker: JobStaffOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryPoliceOfficer
+      time: 3600 # 1 hrs
+    - !type:RoleTimeRequirement
+      role: JobSupplyOfficer
+      time: 3600 # 1 hrs
+    - !type:RoleTimeRequirement
+      role: JobFieldCommander
+      time: 3600 # 1 hrs
+    - !type:DepartmentTimeRequirement
+      department: CommandersGarrisons
+      time: 3600 # 1 hrs
+  weight: 5
+  startingGear: CMGearStaffOfficer
+  icon: "CMJobIconStaffOfficer"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - MarineMain
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: StaffOfficer
+    - type: Skills
+      construction: 2
+      engineer: 2
+      fireman: 1
+      intel: 1
+      jtac: 3
+      leadership: 2
+      medical: 2
+      overwatch: 1
+      police: 1
+      powerLoader: 1
+      vehicles: 1
+    - type: MarineOrders
+
+- type: startingGear
+  id: CMGearStaffOfficer
+  equipment:
+    jumpsuit: CMJumpsuitBO
+    back: CMSatchelMarine
+    shoes: CMShoesLaceup
+    head: CMHeadCap
+    id: CMIDCardStaffOfficer
+    ears: CMHeadsetLeader

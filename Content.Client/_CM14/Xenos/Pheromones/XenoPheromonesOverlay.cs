@@ -1,6 +1,6 @@
-﻿/*
-
-using System.Numerics;
+﻿using System.Numerics;
+using Content.Shared._CM14.Xenos;
+using Content.Shared._CM14.Xenos.Pheromones;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -22,9 +22,9 @@ public sealed class XenoPheromonesOverlay : Overlay
     private readonly SpriteSystem _sprite;
     private readonly TransformSystem _transform;
 
-    private readonly ShaderInstance _shader;
+    private readonly EntityQuery<TransformComponent> _xformQuery;
 
-    private EntityQuery<TransformComponent> _xformQuery;
+    private readonly ShaderInstance _shader;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
 
@@ -34,6 +34,8 @@ public sealed class XenoPheromonesOverlay : Overlay
 
         _sprite = _entity.System<SpriteSystem>();
         _transform = _entity.System<TransformSystem>();
+
+        _xformQuery = _entity.GetEntityQuery<TransformComponent>();
 
         _shader = _prototype.Index<ShaderPrototype>("unshaded").Instance();
     }
@@ -46,7 +48,6 @@ public sealed class XenoPheromonesOverlay : Overlay
         var handle = args.WorldHandle;
         var eyeRot = args.Viewport.Eye?.Rotation ?? default;
 
-        _xformQuery = _entity.GetEntityQuery<TransformComponent>();
         var scaleMatrix = Matrix3.CreateScale(new Vector2(1, 1));
         var rotationMatrix = Matrix3.CreateRotation(-eyeRot);
 
@@ -75,7 +76,7 @@ public sealed class XenoPheromonesOverlay : Overlay
         {
             var emitting = pheromones.Pheromones;
             var name = $"aura_{emitting.ToString().ToLowerInvariant()}";
-            var icon = new Rsi(new ResPath("/Textures/_CM14/Interface/xeno_pheromones_hud.rsi"), name);
+            var icon = new Rsi(new ResPath("/Textures/_CM/Interface/xeno_pheromones_hud.rsi"), name);
 
             DrawIcon((uid, sprite, xform), in args, icon, scaleMatrix, rotationMatrix);
         }
@@ -116,5 +117,3 @@ public sealed class XenoPheromonesOverlay : Overlay
         handle.DrawTexture(texture, position);
     }
 }
-
-*/

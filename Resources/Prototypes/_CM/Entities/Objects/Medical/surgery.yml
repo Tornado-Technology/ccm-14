@@ -3,20 +3,19 @@
   parent: BaseToolSurgery
   id: CMBaseToolSurgery
   abstract: true
-  name: Ретрактор
-  suffix: CM
-  description: Ретрактор — это хирургический инструмент, используемый для разделения краев хирургического разреза/раны.
+  name: retractor
+  description: Retracts stuff.
   components:
+  - type: Item
+    size: Small
   - type: CMSurgeryTool
-
-
 
 # Retractor
 - type: entity
   parent: CMBaseToolSurgery
   id: CMRetractor
-  name: Ретрактор
-  description: Ретрактор — это хирургический инструмент, используемый для разделения краев хирургического разреза/раны.
+  name: retractor
+  description: Retracts stuff.
   components:
   - type: CMSurgeryTool
     startSound:
@@ -34,7 +33,7 @@
 - type: entity
   parent: CMRetractor
   id: CMRetractorPredator
-  name: открывашка-хищник
+  name: opener
   components:
   - type: Sprite
     state: predator_retractor
@@ -45,8 +44,8 @@
 - type: entity
   parent: CMBaseToolSurgery
   id: CMHemostat
-  name: Гемостат
-  description: Хирургический зажим. Вы чуствуете его здесь...
+  name: hemostat
+  description: You think you have seen this before.
   components:
   - type: CMSurgeryTool
     endSound:
@@ -73,8 +72,8 @@
 - type: entity
   parent: CMBaseToolSurgery
   id: CMCautery
-  name: Прижигатель
-  description: Останавливает кровь.
+  name: cautery
+  description: This stops bleeding.
   components:
   - type: CMSurgeryTool
     startSound:
@@ -85,6 +84,7 @@
     sprite: _CM/Objects/Medical/Surgery/cautery.rsi
     state: cautery
   - type: Item
+    size: Tiny
     sprite: _CM/Objects/Medical/Surgery/cautery.rsi
   - type: MeleeWeapon
     damage:
@@ -109,8 +109,8 @@
 - type: entity
   parent: CMBaseToolSurgery
   id: CMSurgicalDrill
-  name: хиругическая дрель
-  description: Лучший инструмент любого стоматолога.
+  name: surgical drill
+  description: You can drill using this item. You dig?
   components:
   - type: CMSurgeryTool
     startSound:
@@ -132,17 +132,19 @@
 - type: entity
   parent: CMSurgicalDrill
   id: CMSurgicalDrillPredator
-  name: костедробилка
+  name: bone drill
   components:
   - type: Sprite
     state: predator_drill
-  - type: CMBoneDrill
+
+
+
 # Scalpel
 - type: entity
   parent: CMBaseToolSurgery
   id: CMScalpel
-  name: скальпель
-  description: Один раз измерь, и восемь раз порежь
+  name: scalpel
+  description: Cut, cut, and once more cut.
   components:
   - type: CMSurgeryTool
     startSound:
@@ -153,6 +155,7 @@
     sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
     state: scalpel
   - type: Item
+    size: Tiny
     sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
   - type: Sharp
     butcherDelayModifier: 1.5
@@ -174,7 +177,7 @@
 - type: entity
   parent: CMScalpel
   id: CMScalpelPredator
-  name: кусачки
+  name: cutter
   components:
   - type: Sprite
     state: predator_scalpel
@@ -183,8 +186,8 @@
 - type: entity
   parent: CMScalpel
   id: CMScalpelLaser
-  name: прототип лазерного скальпеля
-  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель. Ранний прототип
+  name: prototype laser scalpel
+  description: A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks like an unreliable early model.
   components:
   - type: Sprite
     layers:
@@ -207,15 +210,15 @@
     visuals:
       enum.ToggleVisuals.Toggled:
         enum.ToggleVisuals.Layer:
-          True: { state: scalpel_laser_on }
-          False: { state: scalpel_laser }
+          True: {state: scalpel_laser_on}
+          False: {state: scalpel_laser}
 
 # - - Improved
 - type: entity
   parent: CMScalpelLaser
   id: CMScalpelLaserImproved
-  name: лазерный скальпель
-  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель.
+  name: laser scalpel
+  description: A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks trustworthy, though it could be better.
   components:
   - type: Sprite
     layers:
@@ -225,15 +228,15 @@
     visuals:
       enum.ToggleVisuals.Toggled:
         enum.ToggleVisuals.Layer:
-          True: { state: scalpel_laser_2_on }
-          False: { state: scalpel_laser_2 }
+          True: {state: scalpel_laser_2_on}
+          False: {state: scalpel_laser_2}
 
 # - - Advanced
 - type: entity
   parent: CMScalpelLaser
   id: CMScalpelLaserAdvanced
-  name: улучшенный лазерный скальпель
-  description: Скальпель, с утсановленным направленным лазером. Работает как прижигататель и скальпель. Он очень мощный...
+  name: advanced laser scalpel
+  description: A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks to be the pinnacle of precision energy cutlery!
   components:
   - type: Sprite
     layers:
@@ -243,16 +246,37 @@
     visuals:
       enum.ToggleVisuals.Toggled:
         enum.ToggleVisuals.Layer:
-          True: { state: scalpel_laser_3_on }
-          False: { state: scalpel_laser_3 }
+          True: {state: scalpel_laser_3_on}
+          False: {state: scalpel_laser_3}
+
+# - Pict System
+- type: entity
+  parent: CMScalpel
+  id: CMScalpelPICT
+  name: PICT system
+  description: The Precision Incision and Cauterization Tool uses a high-frequency vibrating blade, laser cautery, and suction liquid control system to precisely sever target tissues while preventing all fluid leakage. Despite its troubled development program and horrifying price tag, outside of complex experimental surgeries it isn't any better than an ordinary twenty-dollar scalpel and can't create a full-length incision bloodlessly.
+  components:
+  - type: Sprite
+    state: pict_system
+
+# - Manager
+- type: entity
+  parent: CMScalpel
+  id: CMScalpelManager
+  name: incision management system
+  description: A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps.
+  components:
+  - type: Sprite
+    state: scalpel_manager
+
 
 
 # Circular saw
 - type: entity
   parent: CMBaseToolSurgery
   id: CMCircularSaw
-  name: циркулярная пила
-  description: Режь большие штуки!
+  name: circular saw
+  description: For heavy-duty cutting.
   components:
   - type: CMSurgeryTool
     startSound:
@@ -270,7 +294,7 @@
       path: /Audio/Items/drill_hit.ogg
   - type: Tool
     qualities:
-    - Sawing
+      - Sawing
     speed: 1.5
   - type: CMBoneSaw
 
@@ -278,7 +302,7 @@
 - type: entity
   parent: CMCircularSaw
   id: CMCircularSawPredator
-  name: пила по кости
+  name: bone saw
   components:
   - type: Sprite
     state: predator_bonesaw
@@ -289,7 +313,7 @@
 - type: entity
   parent: CMBaseToolSurgery
   id: CMBonesetter
-  name: костоправ
+  name: bone setter
   components: # TODO CM14
   - type: Sprite
     sprite: _CM/Objects/Medical/Surgery/bonesetter.rsi
@@ -301,7 +325,7 @@
 - type: entity
   parent: CMBonesetter
   id: CMBonesetterPredator
-  name: установщик костей
+  name: bone placer
   components:
   - type: Sprite
     state: predator_bonesetter
@@ -322,17 +346,30 @@
   - type: Item
     sprite: _CM/Objects/Medical/Surgery/wound_clamp.rsi
 
+
+
+# Autopsy (actually just a laser scalpel)
+- type: entity
+  parent: CMBaseToolSurgery
+  id: CMAutopsy
+  name: Weyland Brand Automatic Autopsy System(TM)
+  description: Putting the FUN back in Autopsy.  This little gadget performs an entire autopsy of whatever strange life form you've found in about 30 seconds.
+  components: # TODO CM14
+  - type: Sprite
+    sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
+    state: scalpel_laser_2
+  - type: Item
+    sprite: _CM/Objects/Medical/Surgery/scalpel.rsi
+
+
+
 # Bone Gel
 - type: entity
   parent: CMBaseToolSurgery
   id: CMBoneGel
-  name: Костный гель.
-  description: Странно, почему он не кончился?!...
+  name: bone gel
   components:
   - type: Sprite
-    sprite: _CM/Objects/Medical/Surgery/bone_gel.rsi
-    state: bone-gel
-  - type: Item
     sprite: _CM/Objects/Medical/Surgery/bone_gel.rsi
     state: bone-gel
   - type: CMBoneGel

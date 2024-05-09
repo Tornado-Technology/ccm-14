@@ -1,34 +1,20 @@
 - type: entity
-  id: CartridgeRifle1024
-  name: cartridge (10x24 rifle)22
-  parent: BaseCartridgeCM
+  parent: BaseCartridgeRifle
+  id: CMBaseCartridgeRifle
+  name: cartridge
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifle10x24mm
+  name: cartridge (10x24mm)
   components:
   - type: Tag
     tags:
-      - CartridgeRifle1024
+      - Cartridge
+      - CMCartridgeRifle10x24mm
   - type: CartridgeAmmo
-    proto: BulletRifle1024
-  - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
-
-- type: entity
-  id: CartridgeRifle1024AP
-  name: cartridge (10x24 rifle armor-piercing)
-  parent: CartridgeRifle1024
-  components:
-  - type: CartridgeAmmo
-    proto: BulletRifleAP1024
-
-- type: entity
-  id: CartridgeRifle125x60R
-  parent: BaseCartridgeCM
-  name: cartridge (12.5x60R rifle)22
-  components:
-  - type: Tag
-    tags:
-      - CartridgeRifle125x60R
-  - type: CartridgeAmmo
-    proto: BulletRifle125x60R
-  - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
-
+    proto: BulletRifle10x24mm

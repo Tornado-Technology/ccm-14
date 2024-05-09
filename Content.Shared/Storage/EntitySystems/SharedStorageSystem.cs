@@ -1,6 +1,8 @@
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._CM14.Inventory;
+using Content.Shared._CM14.Storage;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
@@ -57,6 +59,7 @@ public abstract class SharedStorageSystem : EntitySystem
     [Dependency] protected readonly SharedTransformSystem TransformSystem = default!;
     [Dependency] private   readonly SharedUserInterfaceSystem _ui = default!;
     [Dependency] protected readonly UseDelaySystem UseDelay = default!;
+    [Dependency] protected readonly CMStorageSystem CMStorage = default!;
 
     private EntityQuery<ItemComponent> _itemQuery;
     private EntityQuery<StackComponent> _stackQuery;
@@ -178,6 +181,7 @@ public abstract class SharedStorageSystem : EntitySystem
         }
 
         component.SavedLocations = state.SavedLocations;
+        UpdateUI((uid, component));
     }
 
     public override void Shutdown()
@@ -300,8 +304,11 @@ public abstract class SharedStorageSystem : EntitySystem
     ///     Opens the storage UI for an entity
     /// </summary>
     /// <param name="entity">The entity to open the UI for</param>
-    public void OpenStorageUI(EntityUid uid, EntityUid entity, StorageComponent? storageComp = null, bool silent = false)
+    public void OpenStorageUI(EntityUid uid, EntityUid entity, StorageComponent? storageComp = null, bool silent = false, bool doAfter = true)
     {
+        if (doAfter && CMStorage.OpenDoAfter(uid, entity, storageComp, silent))
+            return;
+
         if (!Resolve(uid, ref storageComp, false))
             return;
 
@@ -604,6 +611,7 @@ public abstract class SharedStorageSystem : EntitySystem
                 && storageComp.StorageRemoveSound != null)
                 Audio.PlayPredicted(storageComp.StorageRemoveSound, uid, player);
             {
+                UpdateUI((uid, storageComp));
                 return;
             }
         }
@@ -763,6 +771,23 @@ public abstract class SharedStorageSystem : EntitySystem
 
         UpdateAppearance((entity, entity.Comp, null));
         UpdateUI((entity, entity.Comp));
+
+        var items = new List<(EntityUid Id, ItemStorageLocation Location)>();
+        foreach (var (item, location) in entity.Comp.StoredItems)
+        {
+            items.Add((item, location));
+        }
+
+        items.Sort(static (a, b) => a.Location.Position.X.CompareTo(b.Location.Position.X));
+
+        foreach (var (item, location) in items)
+        {
+            if (CMInventoryExtensions.TryGetFirst(entity, item, out var newLocation) &&
+                location != newLocation)
+            {
+                TrySetItemStorageLocation(item, (entity, entity), newLocation);
+            }
+        }
     }
 
     private void OnInsertAttempt(EntityUid uid, StorageComponent component, ContainerIsInsertingAttemptEvent args)
@@ -887,14 +912,16 @@ public abstract class SharedStorageSystem : EntitySystem
         }
 
         var maxSize = GetMaxItemSize((uid, storageComp));
-        if (ItemSystem.GetSizePrototype(item.Size) > maxSize)
+        if (ItemSystem.GetSizePrototype(item.Size) > maxSize
+            && !CMStorage.IgnoreItemSize((uid, storageComp), insertEnt))
         {
             reason = "comp-storage-too-big";
             return false;
         }
 
         if (TryComp<StorageComponent>(insertEnt, out var insertStorage)
-            && GetMaxItemSize((insertEnt, insertStorage)) >= maxSize)
+            && GetMaxItemSize((insertEnt, insertStorage)) >= maxSize
+            && !CMStorage.IgnoreItemSize((uid, storageComp), insertEnt))
         {
             reason = "comp-storage-too-big";
             return false;
@@ -1166,7 +1193,7 @@ public abstract class SharedStorageSystem : EntitySystem
             {
                 for (var angle = startAngle; angle <= Angle.FromDegrees(360 - startAngle); angle += Math.PI / 2f)
                 {
-                    var location = new ItemStorageLocation(angle, (x, y));
+                    var location = new ItemStorageLocation(0, (x, y));
                     if (ItemFitsInGridLocation(itemEnt, storageEnt, location))
                     {
                         storageLocation = location;

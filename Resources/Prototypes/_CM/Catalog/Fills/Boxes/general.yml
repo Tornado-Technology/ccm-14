@@ -1,12 +1,24 @@
 - type: entity
-  parent: BoxMRP
-  id: BoxMRPFilled
+  name: cardboard box
+  parent: BoxBase
+  id: CMBoxCardboard
+  description: A cardboard box for storing things.
   components:
-    - type: StorageFill
-      contents:
-        - id: FoodMREEntree
-        - id: FoodMRESide
-        - id: FoodMRESnack
-        - id: FoodMREDessert
-        - id: DrinkWaterWYBottleFull
-        - id: CigPackLSMini
+  - type: Sprite
+    sprite: _CM/Objects/Storage/boxes.rsi
+    state: box
+  - type: Item
+    sprite: _CM/Objects/Storage/boxes.rsi
+    size: Large
+    shape:
+    - 0,0,6,1
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,6,1
+  - type: Tag
+    tags:
+    - CMBoxStorage
+
+- type: Tag
+  id: CMBoxStorage

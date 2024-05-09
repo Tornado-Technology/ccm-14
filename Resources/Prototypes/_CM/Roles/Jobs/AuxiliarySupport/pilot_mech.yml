@@ -1,0 +1,41 @@
+- type: job
+  id: PilotMech
+  name: job-name-pilotmech
+  description: job-description-pilotmech
+  playTimeTracker: JobPilotMech
+  startingGear: MechPilotGear
+  icon: "JobIconPilotMech"
+  supervisors: job-supervisors-staff-officer
+  canBeAntag: false
+  requirements:
+  - !type:OverallPlaytimeRequirement
+      time: 72000 # 20 hrs
+  - !type:RoleTimeRequirement
+      role: JobPilotNormandy
+      time: 18000 # 5 hrs
+  access:
+    - Pilot
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: PilotMech
+    - type: Skills
+      intel: 1
+      jtac: 2
+      leadership: 1
+      medical: 2
+      overwatch: 1
+      pilot: 2
+      powerLoader: 2
+      surgery: 1
+    - type: MarineOrders
+
+- type: startingGear
+  id: MechPilotGear
+  equipment:
+    jumpsuit: CMJumpsuitPilot
+    back: CMSatchel
+    shoes: CMBootsBlackFilled
+    id: PilotMechIDCard
+    ears: CMHeadsetPilot

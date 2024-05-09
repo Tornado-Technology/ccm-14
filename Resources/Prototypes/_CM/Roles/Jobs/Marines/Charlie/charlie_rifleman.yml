@@ -1,0 +1,19 @@
+- type: job
+  id: CharlieMarine
+  name: job-name-charlie-marine
+  description: job-description-charlieamarine
+  playTimeTracker: JobCharlieMarine
+  startingGear: CMGearRifleman
+  icon: "JobIconCharlieMarine"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - Rifleman
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: CharlieMarine
+    - type: Skills
+  hasIcon: false

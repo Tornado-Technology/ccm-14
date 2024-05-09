@@ -1,0 +1,142 @@
+﻿- type: entity
+  abstract: true
+  id: XenoBaseProjectile
+  name: projectile
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: false
+    sprite: _CM/Objects/Xeno/xeno_projectiles.rsi
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Projectile
+    impactEffect: XenoProjectileImpactEffect
+    damage: {}
+  - type: TimedDespawn
+    lifetime: 0.3
+
+# Часовой
+- type: entity
+  id: XenoSlowingSpitProjectile
+  parent: XenoBaseProjectile
+  name: slowing spit
+  categories:
+  - hideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Xeno/xeno_projectiles.rsi
+    layers:
+    - state: neurotoxin
+      shader: unshaded
+  - type: XenoSlowingSpitProjectile
+    slow: 0
+    paralyze: 1
+    armorResistsKnockdown: true
+  - type: Projectile
+    impactEffect: XenoProjectileImpactEffect
+    damage:
+      types:
+        Slash: 45 # TODO НАСТРОИТЬ УРОН
+
+# Плеватель
+- type: entity
+  id: XenoSpitProjectile
+  parent: XenoBaseProjectile
+  name: spit
+  categories:
+  - hideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Xeno/xeno_projectiles.rsi
+    layers:
+    - state: neurotoxin
+      shader: unshaded
+  - type: XenoSlowingSpitProjectile
+    slow: 0
+    paralyze: 0
+    armorResistsKnockdown: true
+  - type: Projectile
+    impactEffect: XenoProjectileImpactEffect
+    deleteOnCollide: false
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Slash: 45 # TODO НАСТРОИТЬ УРОН
+
+# Плеватель дробовик
+- type: entity
+  id: XenoScatteredSpitProjectile
+  parent: XenoBaseProjectile
+  name: scattered spit
+  categories:
+  - hideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Xeno/xeno_projectiles.rsi
+    layers:
+    - state: neurotoxin
+      shader: unshaded
+  - type: XenoSlowingSpitProjectile
+    slow: 0
+    paralyze: 1
+    armorResistsKnockdown: false
+
+# Кислотное облако
+- type: entity
+  id: XenoSmokeProjectile
+  name: scattered spit
+  parent: XenoBaseProjectile
+  categories:
+  - hideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Xeno/xeno_projectiles.rsi
+    layers:
+    - state: neurotoxin
+      shader: unshaded
+  - type: SmokeOnTrigger
+    duration: 10
+    spreadAmount: 20
+    smokePrototype: Smoke
+    solution:
+      reagents:
+      - ReagentId: XenoAcidSmoke
+        Quantity: 30
+  - type: TriggerOnCollide
+    fixtureID: projectile
+
+# Бегун
+- type: entity
+  id: XenoBoneChipsProjectile
+  parent: XenoBaseProjectile
+  name: bone chips
+  categories:
+  - hideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/shards.rsi
+    layers:
+    - state: bonechips
+      shader: unshaded
+  - type: XenoSlowingSpitProjectile
+    slow: 2.5
+    paralyze: 0
+  - type: TimedDespawn
+    lifetime: 0.3
+  - type: Projectile
+    impactEffect: null
+    damage:
+      types:
+        Slash: 45

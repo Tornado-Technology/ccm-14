@@ -5,7 +5,7 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _CM14/Interface/Actions/precision_shooting.rsi
+      sprite: _CM/Interface/Actions/precision_shooting.rsi
       state: off
     event: !type:ToggleActionEvent
     useDelay: 1

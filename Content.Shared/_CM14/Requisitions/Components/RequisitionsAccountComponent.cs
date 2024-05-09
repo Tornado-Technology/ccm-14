@@ -3,6 +3,7 @@
 namespace Content.Shared._CM14.Requisitions.Components;
 
 [RegisterComponent, NetworkedComponent]
+[Access(typeof(SharedRequisitionsSystem))]
 public sealed partial class RequisitionsAccountComponent : Component
 {
     [DataField]
@@ -12,7 +13,7 @@ public sealed partial class RequisitionsAccountComponent : Component
     public int Balance;
 
     [DataField]
-    public int StartingDollarsPerMarine = 400;
+    public int StartingDollarsPerMarine = 0;
 
     [DataField]
     public int GainPerMinute = 300;

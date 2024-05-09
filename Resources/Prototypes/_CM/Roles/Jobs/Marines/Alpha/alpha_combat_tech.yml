@@ -1,0 +1,47 @@
+- type: job
+  id: AlfaEngineer
+  name: job-name-alfa-engineer
+  description: job-description-alfaengineer
+  playTimeTracker: JobAlfaEngineer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobShipsEngineer
+      time: 10800 # 3 hrs
+  startingGear: CMGearCombatTech
+  icon: "JobIconAlfaEngineer"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - CombatTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: AlfaEngineer
+    - type: Skills
+      constructiopn: 2
+      engineer: 2
+      jtac: 1
+      vehicle: 1
+
+- type: startingGear
+  id: CMGearCombatTech
+  equipment:
+    jumpsuit: CMJumpsuitMarineEngineer # TODO CM14 all squad roles should spawn with no jumpsuit but still have clothes on
+    back: CMSatchelMarineTech
+    id: CMDogtagCombatTech
+
+- type: startingGear
+  id: CMGearCombatTechEquipped
+  equipment:
+    jumpsuit: CMJumpsuitMarineEngineer
+    back: CMSatchelMarineTech
+    shoes: CMBootsBlackFilled
+    eyes: ClothingEyesGlassesMeson
+    head: CMArmorHelmetM10Tech
+    outerClothing: CMArmorM3Medium
+    gloves: CMHandsInsulated
+    id: CMDogtagCombatTech
+    ears: CMHeadsetAlphaEngineer
+    belt: CMBeltUtilityCombatFilled

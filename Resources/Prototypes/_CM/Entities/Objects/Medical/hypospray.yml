@@ -16,11 +16,8 @@
     fillBaseName: hypospray
     emptySpriteName: hypospray
     changeColor: true
-  - type: SolutionContainerManager
-    solutions:
-      hypospray:
-        maxVol: 25
   - type: Item
+    size: Small
     sprite: _CM/Objects/Medical/hypospray.rsi
   - type: Hypospray
     injectSound: /Audio/_CM/Medical/hypospray.ogg

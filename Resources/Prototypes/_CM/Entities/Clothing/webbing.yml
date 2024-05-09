@@ -1,20 +1,23 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   abstract: true
   id: CMWebbingBase
   name: webbing
   components:
   - type: Sprite
-    sprite: _CM/Clothing/webbing.rsi
+    sprite: _CM/Objects/Clothing/webbing.rsi
   - type: Item
-    size: Huge
+    size: Large
   - type: Storage
     maxItemSize: Small
     grid:
-    - 0,0,2,1
-    blacklist:
+    - 0,0,5,1
+  - type: IgnoreContentsSize
+    items:
       tags:
-      - Pouch
+      - CMMagazinePistol
+      - CMMagazineRifle
+      - CMMagazineSniper
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -34,3 +37,6 @@
   - type: Sprite
     layers:
     - state: webbing
+  - type : Storage
+    grid:
+    - 0,0,5,1

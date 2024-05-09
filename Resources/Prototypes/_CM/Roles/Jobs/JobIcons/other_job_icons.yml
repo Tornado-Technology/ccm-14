@@ -1,0 +1,20 @@
+- type: statusIcon
+  parent: CMJobIconBase
+  id: CMJobIconCorrespondent
+  icon:
+    sprite: /Textures/_CM/Interface/cm_job_icons.rsi
+    state: empty
+
+- type: statusIcon
+  parent: CMJobIconBase
+  id: CMJobIconSurvivor
+  icon:
+    sprite: /Textures/_CM/Interface/cm_job_icons.rsi
+    state: empty
+
+- type: statusIcon
+  parent: CMJobIconBase
+  id: CMJobIconLiaison
+  icon:
+    sprite: /Textures/_CM/Interface/cm_job_icons.rsi
+    state: hudW-Y

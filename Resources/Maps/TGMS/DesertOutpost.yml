@@ -3,10 +3,10 @@ meta:
   postmapinit: false
 tilemap:
   0: Space
-  1: CMFloorComms
-  3: CMFloorOuterhull
+  1: CMFloorTComms0
+  3: CMFloorSteel
   4: CMFloorSteel
-  5: CMFloorSteelRiveted
+  5: CMFloorSteel
   7: CMPlating
   11: FloorAsphalt
   14: FloorAsteroidSand
@@ -91809,7 +91809,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 14.5,-40.5
       parent: 2
-- proto: TGMSMP5
+- proto: CMWeaponRifleM41A
   entities:
   - uid: 14115
     components:
@@ -104858,7 +104858,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 124.66499,-88.27173
       parent: 2
-- proto: WeaponTurretMarine
+- proto: CMWeaponTurretMarine
   entities:
   - uid: 16019
     components:
@@ -106424,7 +106424,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 53.78926,-69.42131
       parent: 2
-- proto: XenoWall
+- proto: WallXenoResin
   entities:
   - uid: 16270
     components:
@@ -106436,7 +106436,7 @@ entities:
     - type: Transform
       pos: 44.5,-88.5
       parent: 2
-- proto: XenoWallFortified
+- proto: WallXenoResinThick
   entities:
   - uid: 16272
     components:

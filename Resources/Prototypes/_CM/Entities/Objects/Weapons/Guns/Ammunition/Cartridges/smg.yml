@@ -1,26 +1,19 @@
 - type: entity
-  id: CartridgeSmg458Socom
-  parent: BaseCartridgeCM
-  name: cartridge (458 Socom)22
+  parent: BaseCartridgeCaselessRifle
+  id: CMCartridgeSMGBase
+  abstract: true
   components:
-  - type: Tag
-    tags:
-      - CartridgeSmg458Socom
   - type: CartridgeAmmo
-    proto: BulletSmg458Socom
-  - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
+    deleteOnSpawn: true
 
 - type: entity
-  id: CartridgeSmg450Brushmaster
-  parent: BaseCartridgeCM
-  name: cartridge (450Brushmaster)22
+  parent: CMCartridgeSMGBase
+  id: CMCartridge10x20mm
+  name: cartridge (10x20mm)
   components:
   - type: Tag
     tags:
-      - CartridgeSmg450Brushmaster
+      - Cartridge
+      - CMCartridge10x20mm
   - type: CartridgeAmmo
-    proto: BulletSmg450Brushmaster
-  - type: Sprite
-    sprite: /Textures/_CM/TGMSArsenal/Textures/cartrige10x24mm.rsi
-
+    proto: Bullet10x20mm

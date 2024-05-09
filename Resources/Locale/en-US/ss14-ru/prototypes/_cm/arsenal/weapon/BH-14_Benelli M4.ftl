@@ -1,9 +1,0 @@
-ent-BaseBH14 = BH-14
-    .desc = A rooty tooty point and shooty.
-    .suffix = Marines Gear
-ent-TGMSBH14 = BH-14
-    .desc = A shotgun that looks like a single-shot weapon, but it's not. This is a very superior weapon! Multiclass weapons. Uses 6/12g caliber cartridges.
-    .suffix = Marines Gear
-ent-BaseBeneliM4 = Beneli M4
-    .desc = A rooty tooty point and shooty.
-    .suffix = Marines Gear

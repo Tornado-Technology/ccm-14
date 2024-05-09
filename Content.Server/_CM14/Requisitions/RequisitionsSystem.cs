@@ -1,18 +1,16 @@
-using System.Numerics;
+﻿using System.Numerics;
 using Content.Server.Cargo.Components;
 using Content.Server.Storage.EntitySystems;
-using Content.Server.UserInterface;
+using Content.Shared._CM14.Marines;
 using Content.Shared._CM14.Requisitions;
 using Content.Shared._CM14.Requisitions.Components;
 using Content.Shared.Mobs.Components;
+using Content.Shared.UserInterface;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
-using Content.Server.Cargo.Systems;
 using static Content.Shared._CM14.Requisitions.Components.RequisitionsElevatorMode;
-using MarineComponent = Content.Server._CM14.Xeno.MarineComponent;
-using Content.Shared.UserInterface;
 
 namespace Content.Server._CM14.Requisitions;
 
@@ -25,15 +23,13 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly PhysicsSystem _physics = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly PricingSystem _pricingSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<RequisitionsComputerComponent, MapInitEvent>(OnComputerMapInit);
-        SubscribeLocalEvent<RequisitionsComputerComponent, BeforeActivatableUIOpenEvent>(
-            OnComputerBeforeActivatableUIOpen);
+        SubscribeLocalEvent<RequisitionsComputerComponent, BeforeActivatableUIOpenEvent>(OnComputerBeforeActivatableUIOpen);
 
         SubscribeLocalEvent<RequisitionsElevatorComponent, EntityUnpausedEvent>(OnElevatorUnpaused);
 
@@ -56,8 +52,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
             ent.Comp.ToggledAt = at + args.PausedTime;
     }
 
-    private void OnComputerBeforeActivatableUIOpen(Entity<RequisitionsComputerComponent> computer,
-        ref BeforeActivatableUIOpenEvent args)
+    private void OnComputerBeforeActivatableUIOpen(Entity<RequisitionsComputerComponent> computer, ref BeforeActivatableUIOpenEvent args)
     {
         SendUIState(computer);
     }
@@ -67,16 +62,14 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
         var actor = args.Actor;
         if (args.Category >= computer.Comp.Categories.Count)
         {
-            Log.Error(
-                $"Player {ToPrettyString(actor)} tried to buy out of bounds requisitions order: category {args.Category}");
+            Log.Error($"Player {ToPrettyString(actor)} tried to buy out of bounds requisitions order: category {args.Category}");
             return;
         }
 
         var category = computer.Comp.Categories[args.Category];
         if (args.Order >= category.Entries.Count)
         {
-            Log.Error(
-                $"Player {ToPrettyString(actor)} tried to buy out of bounds requisitions order: category {args.Category}");
+            Log.Error($"Player {ToPrettyString(actor)} tried to buy out of bounds requisitions order: category {args.Category}");
             return;
         }
 
@@ -141,7 +134,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
         Dirty(elevator);
     }
 
-    public Entity<RequisitionsAccountComponent> GetAccount()
+    private Entity<RequisitionsAccountComponent> GetAccount()
     {
         var query = EntityQueryEnumerator<RequisitionsAccountComponent>();
         while (query.MoveNext(out var uid, out var account))
@@ -269,8 +262,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
         }
     }
 
-    private void SetMode(Entity<RequisitionsElevatorComponent> elevator, RequisitionsElevatorMode mode,
-        RequisitionsElevatorMode? nextMode)
+    private void SetMode(Entity<RequisitionsElevatorComponent> elevator, RequisitionsElevatorMode mode, RequisitionsElevatorMode? nextMode)
     {
         elevator.Comp.Mode = mode;
         elevator.Comp.NextMode = nextMode;
@@ -344,8 +336,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
         {
             if (entity == elevator.Comp.Audio)
                 continue;
-            var reward = _pricingSystem.GetPrice(entity);
-            account.Comp.Balance += (int) reward;
+
             if (HasComp<CargoSellBlacklistComponent>(entity))
                 continue;
 
@@ -419,7 +410,7 @@ public sealed class RequisitionsSystem : SharedRequisitionsSystem
                     _ => TimeSpan.Zero
                 };
 
-                var moveDelay = startDelay + elevator.Mode switch
+                var moveDelay= startDelay + elevator.Mode switch
                 {
                     Lowering => elevator.LowerDelay,
                     Raising => elevator.RaiseDelay,

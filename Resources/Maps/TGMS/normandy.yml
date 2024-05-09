@@ -4,7 +4,7 @@ meta:
 tilemap:
   0: Space
   4: CMFloorSteel
-  5: CMFloorSteelRiveted
+  5: CMFloorSteel
   119: Lattice
   120: Plating
 entities:

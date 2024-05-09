@@ -11,7 +11,7 @@ public sealed partial class XenoPlasmaComponent : Component
     [DataField, AutoNetworkedField]
     public FixedPoint2 Plasma;
 
-    [DataField, AutoNetworkedField]
+    [DataField(required: true), AutoNetworkedField]
     public int MaxPlasma = 300;
 
     [DataField, AutoNetworkedField]
@@ -20,6 +20,9 @@ public sealed partial class XenoPlasmaComponent : Component
     [DataField, AutoNetworkedField]
     public SoundSpecifier PlasmaTransferSound = new SoundCollectionSpecifier("XenoDrool");
 
-    [DataField, AutoNetworkedField]
+    [DataField(required: true), AutoNetworkedField]
     public FixedPoint2 PlasmaRegenOnWeeds;
+
+    [DataField, AutoNetworkedField]
+    public FixedPoint2 PlasmaRegenOffWeeds = 0.05;
 }

@@ -4,12 +4,12 @@ meta:
 tilemap:
   0: Space
   6: Border
-  1: CMFloorComms
-  2: CMFloorMono
-  3: CMFloorOuterhull
+  1: CMFloorTComms0
+  2: CMFloorPlate
+  3: CMFloorSteel
   4: CMFloorSteel
-  5: CMFloorSteelRiveted
-  7: CMPlating
+  5: CMFloorSteel
+  7: CMFloorSteel
   19: FloorAstroGrass
   21: FloorBar
   24: FloorBlueCircuit
@@ -22944,7 +22944,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,20.5
       parent: 2
-- proto: AirlockSquadAlphaGlassLocked
+- proto: CMAirlockPrepAlphaLocked
   entities:
   - uid: 390
     components:
@@ -22968,7 +22968,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 101.5,44.5
       parent: 2
-- proto: AirlockSquadBravoGlassLocked
+- proto: CMAirlockPrepBravoLocked
   entities:
   - uid: 394
     components:
@@ -22986,7 +22986,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 115.5,-10.5
       parent: 2
-- proto: AirlockSquadCharlieGlassLocked
+- proto: CMAirlockPrepCharlieLocked
   entities:
   - uid: 397
     components:
@@ -23020,7 +23020,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 96.5,-3.5
       parent: 2
-- proto: AirlockSquadDeltaGlass
+- proto: CMAirlockPrepDeltaLocked
   entities:
   - uid: 403
     components:
@@ -23032,8 +23032,6 @@ entities:
     - type: Transform
       pos: 123.5,33.5
       parent: 2
-- proto: AirlockSquadDeltaGlassLocked
-  entities:
   - uid: 405
     components:
     - type: Transform
@@ -23046,7 +23044,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 114.5,38.5
       parent: 2
-- proto: AirlockSquadLeaderAlphaGlassLocked
+- proto: CMAirlockPrepAlphaSL
   entities:
   - uid: 407
     components:
@@ -23054,14 +23052,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 98.5,40.5
       parent: 2
-- proto: AirlockSquadLeaderBravoGlassLocked
+- proto: CMAirlockPrepBravoSL
   entities:
   - uid: 408
     components:
     - type: Transform
       pos: 112.5,-2.5
       parent: 2
-- proto: AirlockSquadLeaderCharlieGlassLocked
+- proto: CMAirlockPrepCharlieSL
   entities:
   - uid: 409
     components:
@@ -23069,7 +23067,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 104.5,-6.5
       parent: 2
-- proto: AirlockSquadLeaderDeltaGlassLocked
+- proto: CMAirlockPrepDeltaSL
   entities:
   - uid: 410
     components:
@@ -23077,7 +23075,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 118.5,40.5
       parent: 2
-- proto: AirlockSquadSpecialistAlphaGlassLocked
+- proto: CMAirlockPrepAlphaSpec
   entities:
   - uid: 411
     components:
@@ -23085,14 +23083,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 103.5,36.5
       parent: 2
-- proto: AirlockSquadSpecialistBravoGlassLocked
+- proto: CMAirlockPrepBravoSpec
   entities:
   - uid: 412
     components:
     - type: Transform
       pos: 112.5,-6.5
       parent: 2
-- proto: AirlockSquadSpecialistCharlieGlassLocked
+- proto: CMAirlockPrepCharlieSpec
   entities:
   - uid: 413
     components:
@@ -23100,7 +23098,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 104.5,-2.5
       parent: 2
-- proto: AirlockSquadSpecialistDeltaGlassLocked
+- proto: CMAirlockPrepDeltaSpec
   entities:
   - uid: 414
     components:
@@ -48654,7 +48652,7 @@ entities:
     - type: Transform
       pos: -14.432652,13.411197
       parent: 2
-- proto: Cartrige9mm
+- proto: CMCartridgePistol9mm
   entities:
   - uid: 5501
     components:
@@ -54570,7 +54568,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 149.5,-0.5
       parent: 2
-- proto: CausticAutoInjector
+- proto: CMKelotaneAutoInjector
   entities:
   - uid: 1314
     components:
@@ -55970,7 +55968,7 @@ entities:
           priority: 0
           component: ClothingSpeedModifier
         title: null
-- proto: ClothingBackpackMarine
+- proto: CMBackpack
   entities:
   - uid: 1256
     components:
@@ -56339,7 +56337,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingBackpackSatchelMarine
+- proto: CMSatchel
   entities:
   - uid: 60
     components:
@@ -56649,7 +56647,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingBeltMarineComfortable
+- proto: CMSatchel
   entities:
   - uid: 6823
     components:
@@ -57314,7 +57312,7 @@ entities:
       parent: 1337
     - type: Physics
       canCollide: False
-- proto: ClothingHeadsetPilotShattle
+- proto: CMHeadsetPilot
   entities:
   - uid: 1241
     components:
@@ -57517,7 +57515,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterArmorMarineLight
+- proto: CMArmorM3T
   entities:
   - uid: 1242
     components:
@@ -57626,7 +57624,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterPrototypeC
+- proto: CMArmorM3T
   entities:
   - uid: 33
     components:
@@ -57818,7 +57816,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingShoesBootsMarine
+- proto: CMBootsBlackFilled
   entities:
   - uid: 1212
     components:
@@ -57889,7 +57887,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitMarine
+- proto: JumpsuitMarine
   entities:
   - uid: 87
     components:
@@ -57941,7 +57939,7 @@ entities:
     - type: Transform
       pos: 41.250103,-4.3418674
       parent: 2
-- proto: ClothingUniformJumpsuitMilitaryMedHeadDoc
+- proto: CMJumpsuitMarineMedic
   entities:
   - uid: 1214
     components:
@@ -58088,7 +58086,7 @@ entities:
     - type: Transform
       pos: 122.5,39.5
       parent: 2
-- proto: CMBruteAidKitFilled
+- proto: CMFirstAidKitFilled
   entities:
   - uid: 6894
     components:
@@ -58770,13 +58768,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CMPouchShotgunLarge
-  entities:
-  - uid: 6945
-    components:
-    - type: Transform
-      pos: 111.24515,-5.174378
-      parent: 2
 - proto: CMPouchSurvival
   entities:
   - uid: 6743
@@ -71948,7 +71939,7 @@ entities:
     - type: Transform
       pos: 130.5,5.5
       parent: 2
-- proto: CMWeaponDisablerRife
+- proto: WeaponDisablerSMG
   entities:
   - uid: 1257
     components:
@@ -93617,7 +93608,7 @@ entities:
     - type: Transform
       pos: 34.20608,40.580963
       parent: 2
-- proto: DrinkWaterWYBottleFull
+- proto: CMDrinkWYWaterBottle30
   entities:
   - uid: 10858
     components:
@@ -103287,14 +103278,14 @@ entities:
     - type: Transform
       pos: 89.40328,45.358753
       parent: 2
-- proto: FoodMealChicken
+- proto: CMUSCMPreparedMealChicken
   entities:
   - uid: 11186
     components:
     - type: Transform
       pos: 77.48413,38.28626
       parent: 2
-- proto: FoodMealCornbread
+- proto: CMUSCMPreparedMealCornbread
   entities:
   - uid: 11187
     components:
@@ -103306,7 +103297,7 @@ entities:
     - type: Transform
       pos: 86.62888,37.716724
       parent: 2
-- proto: FoodMealFriesCarrot
+- proto: CMUSCMPreparedMealPasta
   entities:
   - uid: 11190
     components:
@@ -103315,7 +103306,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: FoodMealPasta
+- proto: CMUSCMPreparedMealPasta
   entities:
   - uid: 11192
     components:
@@ -103332,7 +103323,7 @@ entities:
     - type: Transform
       pos: 81.46694,37.654224
       parent: 2
-- proto: FoodMealPork
+- proto: CMUSCMPreparedMealPork
   entities:
   - uid: 11195
     components:
@@ -103344,14 +103335,14 @@ entities:
     - type: Transform
       pos: 77.47721,35.8886
       parent: 2
-- proto: FoodMealTofu
+- proto: CMUSCMPreparedMealTofu
   entities:
   - uid: 11197
     components:
     - type: Transform
       pos: 77.499756,37.208134
       parent: 2
-- proto: FoodMealTrash
+- proto: CMUSCMPreparedMealTofu
   entities:
   - uid: 11198
     components:
@@ -129369,7 +129360,7 @@ entities:
       parent: 43
     - type: Physics
       canCollide: False
-- proto: MagazinePistol88M4
+- proto: CMMagazinePistol88m4AP
   entities:
   - uid: 1350
     components:
@@ -129405,7 +129396,7 @@ entities:
       unspawnedCount: 16
     - type: Physics
       canCollide: False
-- proto: MagazinePistolAramatM5Y3
+- proto: CMMagazinePistolM4A3
   entities:
   - uid: 618
     components:
@@ -129549,7 +129540,7 @@ entities:
       parent: 14444
     - type: Physics
       canCollide: False
-- proto: MagazineRifleM39
+- proto: CMMagazineM39
   entities:
   - uid: 61
     components:
@@ -129695,7 +129686,7 @@ entities:
       parent: 1258
     - type: Physics
       canCollide: False
-- proto: MagazineRifleM41A
+- proto: CMMagazineRifleM41A
   entities:
   - uid: 24
     components:
@@ -129745,7 +129736,7 @@ entities:
       parent: 23
     - type: Physics
       canCollide: False
-- proto: MagazineRifleM4RA
+- proto: CMMagazineRifleM4RA
   entities:
   - uid: 1231
     components:
@@ -130352,7 +130343,7 @@ entities:
       containers:
         cluster-payload: !type:Container
           ents: []
-- proto: MarineCombatKnife
+- proto: CMM5Bayonet
   entities:
   - uid: 14516
     components:
@@ -130416,7 +130407,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 108.5,36.5
       parent: 2
-- proto: MarineRollerBedSpawnFolded
+- proto: CMRollerBedSpawnFolded
   entities:
   - uid: 14526
     components:
@@ -141080,7 +141071,7 @@ entities:
     - type: Transform
       pos: -14.325854,13.723032
       parent: 2
-- proto: SpeedLoaderMagnumVP-60x2
+- proto: CMSpeedLoaderM44
   entities:
   - uid: 17
     components:
@@ -141188,7 +141179,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 84.4118,24.445692
       parent: 2
-- proto: SpeedLoaderMosin
+- proto: CMWeaponRifleM4RA
   entities:
   - uid: 16210
     components:
@@ -144539,7 +144530,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 154.5,12.5
       parent: 2
-- proto: TGMSM4A1
+- proto: CMWeaponRifleM4RA
   entities:
   - uid: 16781
     components:
@@ -144548,7 +144539,7 @@ entities:
       parent: 2
     - type: StaticPrice
       price: 1500
-- proto: TGMSMosin
+- proto: CMWeaponRifleM41AE2
   entities:
   - uid: 16782
     components:
@@ -145202,7 +145193,7 @@ entities:
     - type: Transform
       pos: 148.5,18.5
       parent: 2
-- proto: VendingMachineMarineFood
+- proto: ColMarTechFood
   entities:
   - uid: 16847
     components:
@@ -145329,7 +145320,7 @@ entities:
     - type: Transform
       pos: 106.5,37.5
       parent: 2
-- proto: VendingMachineMarineMechWeapons
+- proto: ColMarTechFood # TODO!!! VendingMachineMarineMechWeapons
   entities:
   - uid: 16872
     components:
@@ -145363,7 +145354,7 @@ entities:
     - type: Transform
       pos: 120.5,39.5
       parent: 2
-- proto: VendingMachineMarineMunition
+- proto: ColMarTechFood # VendingMachineMarineMunition
   entities:
   - uid: 16878
     components:
@@ -145397,7 +145388,7 @@ entities:
     - type: Transform
       pos: 109.5,37.5
       parent: 2
-- proto: VendingMachineMarineUniform
+- proto: ColMarTechSurplus
   entities:
   - uid: 16884
     components:
@@ -145509,7 +145500,7 @@ entities:
     - type: Transform
       pos: 95.5,-7.5
       parent: 2
-- proto: VendingMachineMarineWeapons
+- proto: ColMarTechGuns
   entities:
   - uid: 16906
     components:
@@ -148765,7 +148756,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponMagnumVP-60x2
+- proto: CMSpeedLoaderM44 # РЕВОЛЬВЕР 44
   entities:
   - uid: 19
     components:
@@ -148826,7 +148817,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 84.5368,24.445692
       parent: 2
-- proto: WeaponPistol88M4
+- proto: CMWeaponPistol88m4
   entities:
   - uid: 1355
     components:
@@ -148834,7 +148825,7 @@ entities:
       parent: 1337
     - type: Physics
       canCollide: False
-- proto: WeaponPistolArmatM5Y3
+- proto: CMWeaponPistolM4A3
   entities:
   - uid: 620
     components:
@@ -148878,7 +148869,7 @@ entities:
     - type: Transform
       pos: -14.495152,13.5341215
       parent: 2
-- proto: WeaponRifleM41A
+- proto: CMWeaponRifleM41A
   entities:
   - uid: 20
     components:
@@ -148886,7 +148877,7 @@ entities:
       parent: 4
     - type: Physics
       canCollide: False
-- proto: WeaponRifleM4RA
+- proto: CMMagazineRifleM4RA
   entities:
   - uid: 1250
     components:
@@ -148895,7 +148886,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponSniperMosin
+- proto: CMMagazineRifleM4RA
   entities:
   - uid: 17414
     components:
@@ -148977,7 +148968,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: WeaponSubMachineGunM39
+- proto: CMWeaponSMGM39
   entities:
   - uid: 93
     components:
@@ -149022,7 +149013,7 @@ entities:
     - type: Transform
       pos: 131.5,4.5
       parent: 2
-- proto: WeaponTurretMarine
+- proto: CMWeaponTurretMarine
   entities:
   - uid: 17421
     components:

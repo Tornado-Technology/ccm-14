@@ -8,6 +8,7 @@
     neck: BedsheetCult
     outerClothing: ClothingOuterArmorCult
     shoes: ClothingShoesCult
+    id: PassengerPDA
     ears: ClothingHeadsetService
 
 - type: startingGear
@@ -18,4 +19,5 @@
     head: ClothingHeadHatHoodCulthood
     outerClothing: ClothingOuterRobesCult
     shoes: ClothingShoesColorRed
+    id: PassengerPDA
     ears: ClothingHeadsetService

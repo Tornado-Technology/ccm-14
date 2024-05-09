@@ -36,11 +36,12 @@
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
+    - map: ["enum.WebbingVisualLayers.Base"]
     - map: [ "eyes" ]
     - map: [ "belt" ]
-    - map: [ "id" ]
     - map: [ "neck" ]
     - map: [ "back" ]
+    - map: [ "id" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -233,7 +234,6 @@
   id: BaseMobSpeciesOrganic
   abstract: true
   components:
-  - type: Marine
   - type: Flashable
   - type: Barotrauma
     damage:
@@ -351,6 +351,7 @@
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
+    - map: ["enum.WebbingVisualLayers.Base"]
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]

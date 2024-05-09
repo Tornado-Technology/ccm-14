@@ -569,3 +569,6 @@ binds:
   type: State
   key: MouseRight
   canFocus: true
+- function: CMXenoWideSwing
+  type: State
+  key: Space

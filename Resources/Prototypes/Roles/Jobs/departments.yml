@@ -1,116 +1,104 @@
 - type: department
-  id: CommandersGarrisons
-  description: department-CommandersGarrisons-description
-  color: "#B22222"
+  id: Cargo
+  description: department-Cargo-description
+  color: "#A46106"
   roles:
-    - AlfaCommander
-    - DeltaCommander
-    - BravoCommander
-    - CharlieCommander
+  - CargoTechnician
+  - Quartermaster
+  - SalvageSpecialist
 
 - type: department
-  id: SpecialistsGarrison
-  description: department-SpecialistsGarrison-description
-  color: "#1E90FF"
+  id: Civilian
+  description: department-Civilian-description
+  color: "#9FED58"
+  weight: -10
   roles:
-    - AlfaSpecialist
-    - DeltaSpecialist
-    - BravoSpecialist
-    - CharlieSpecialist
-
-- type: department
-  id: MedicsGarrison
-  description: department-MedicsGarrison-description
-  color: "#FFD700"
-  roles:
-    - AlfaMedic
-    - DeltaMedic
-    - BravoMedic
-    - CharlieMedic
-
-- type: department
-  id: EngineersGarrison
-  description: department-EngineersGarrison-description
-  color: "#FFD700"
-  roles:
-    - AlfaEngineer
-    - DeltaEngineer
-    - BravoEngineer
-    - CharlieEngineer
-
-- type: department
-  id: MarinesGarrison
-  description: department-MarinesGarrison-description
-  color: "#8A2BE2"
-  roles:
-    - AlfaMarine
-    - DeltaMarine
-    - BravoMarine
-    - CharlieMarine
-
-- type: department
-  id: MilitaryPolice
-  description: department-MilitaryPolice-description
-  color: "#DC143C"
-  roles:
-    - MilitaryPoliceman
-    - MilitaryPoliceOfficer
-
-- type: department
-  id: MilitaryScientist
-  description: department-MilitaryScientist-description
-  color: "#C71585"
-  roles:
-    - MilitaryScientist
-
-- type: department
-  id: LogisticsSupport
-  description: department-LogisticsSupport-description
-  color: "#FF8C00"
-  roles:
-    - SupplyOfficer
-    - Rigger
-
-- type: department
-  id: MedicalUnit
-  description: department-MedicalUnit-description
-  color: "#20B2AA"
-  roles:
-    - MilitaryMedic
-    - MilitaryMainMedic
-
-- type: department
-  id: ConstructionBattalion
-  description: department-ConstructionBattalion-description
-  color: "#F0E68C"
-  roles:
-    - ChiefShipsEngineer
-    - ShipsEngineer
+  - Bartender
+  - Borg
+  - Botanist
+  - Boxer
+  - Chaplain
+  - Chef
+  - Clown
+  - HeadOfPersonnel
+  - Janitor
+  - Lawyer
+  - Librarian
+  - Mime
+  - Musician
+  - Passenger
+  - Reporter
+  - Visitor
+  - Zookeeper
+  - ServiceWorker
 
 - type: department
   id: Command
   description: department-Command-description
-  color: "#7FFFD4"
+  color: "#334E6D"
   roles:
-    - HeadOperations
-    - FieldCommander
-    - StaffOfficer
+  - Captain
+  - CentralCommandOfficial
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Quartermaster
+  primary: false
+  weight: 100
 
 - type: department
-  id: Pilots
-  description: department-Pilots-description
-  color: "#7FFFD4"
+  id: Engineering
+  description: department-Engineering-description
+  color: "#EFB341"
   roles:
-    - PilotNormandy
-    - PilotRaptor
-    - PilotMech
+  - AtmosphericTechnician
+  - ChiefEngineer
+  - StationEngineer
+  - TechnicalAssistant
 
 - type: department
-  id: Xeno
-  description: department-Xeno-description
-  color: "#4B0082"
+  id: Medical
+  description: department-Medical-description
+  color: "#52B4E9"
   roles:
-    - Kseno
-    - Pretor
-    - Quinn
-    - Runi
+  - Chemist
+  - ChiefMedicalOfficer
+  - MedicalDoctor
+  - MedicalIntern
+  - Psychologist
+  - Paramedic
+
+- type: department
+  id: Security
+  description: department-Security-description
+  color: "#DE3A3A"
+  weight: 20
+  roles:
+  - HeadOfSecurity
+  - SecurityCadet
+  - SecurityOfficer
+  - Detective
+  - Warden
+
+- type: department
+  id: Science
+  description: department-Science-description
+  color: "#D381C9"
+  roles:
+  - ResearchDirector
+  - Scientist
+  - ResearchAssistant
+
+- type: department
+  id: Specific
+  description: department-Specific-description
+  color: "#9FED58"
+  weight: 10
+  roles:
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  primary: false

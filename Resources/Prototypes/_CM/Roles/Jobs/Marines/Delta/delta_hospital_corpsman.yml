@@ -1,0 +1,25 @@
+- type: job
+  id: DeltaMedic
+  name: job-name-delta-medic
+  description: job-description-deltamedic
+  playTimeTracker: JobDeltaMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 10800 # 3 hrs
+  startingGear: CMGearHospitalCorpsman
+  icon: "JobIconDeltaMedic"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - HospitalCorpsman
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: DeltaMedic
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1

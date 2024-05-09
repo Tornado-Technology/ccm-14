@@ -3,14 +3,14 @@
   startingInventory:
     ClothingShoesBootsMarine: 4
     ClothingUniformJumpsuitMarine: 4
-    ClothingHandsGlovesMarine: 4
+    CMHandsBlack: 4
     ClothingHeadsetMarineAlfa: 4
     ClothingHeadHelmetMarine: 4
     BoxMRPFilled: 4
     ClothingOuterArmorMarineLight: 4
     ClothingOuterArmorMarineMedium: 4
     ClothingOuterArmorMarineHeavy: 4
-    ClothingBackpackMarine: 4
+    CMPersonalStorageBase: 4
     ClothingBackpackSatchelMarine: 4
     ClothingMaskGasRebreather: 4
     MiniFireExtinguisherMarine: 4

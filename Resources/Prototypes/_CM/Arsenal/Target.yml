@@ -7,8 +7,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CM/Mobs/Xenos/queen.rsi
-    state: running
+    sprite: _CM/Mobs/Xenos/Queen/queen.rsi
+    state: alive
     color: "#FFFF00"
     shader: StencilClear
     directional: true
@@ -48,8 +48,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CM/Mobs/Xenos/ravager.rsi
-    state: running
+    sprite: _CM/Mobs/Xenos/Ravager/ravager.rsi
+    state: alive
     color: "#FFFF00"
     shader: StencilClear
     directional: true
@@ -61,8 +61,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CM/Mobs/Xenos/burrower.rsi
-    state: running
+    sprite: _CM/Mobs/Xenos/Burrower/burrower.rsi
+    state: alive
     color: "#FFFF00"
     shader: StencilClear
     directional: true

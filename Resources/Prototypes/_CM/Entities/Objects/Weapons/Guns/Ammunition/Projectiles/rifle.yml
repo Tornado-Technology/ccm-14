@@ -1,33 +1,10 @@
 - type: entity
-  id: BulletRifle1024
-  name: bullet (10x24 rifle)
   parent: BaseBullet
+  id: BulletRifle10x24mm
+  name: bullet (10x24mm)
   noSpawn: true
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 35
-
-- type: entity
-  id: BulletRifleAP1024
-  name: bullet (10x24 rifle armor-piercing)
-  parent: BaseBulletAP
-  noSpawn: true
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 13
-    ignoreResistances: true
-
-- type: entity
-  id: BulletRifle125x60R
-  name: bullet (12.5x60R rifle)
-  parent: BaseBullet
-  noSpawn: true
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 50
+        Piercing: 44

@@ -584,6 +584,34 @@
     - MobMonkey
 
 - type: entity
+  name: Purple Snake Spawner
+  id: SpawnMobPurpleSnake
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: purple_snake
+      sprite: Mobs/Aliens/Xenos/purple_snake.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobPurpleSnake
+
+- type: entity
+  name: Small Purple Snake Spawner
+  id: SpawnMobSmallPurpleSnake
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: small_purple_snake
+      sprite: Mobs/Aliens/Xenos/purple_snake.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSmallPurpleSnake
+
+- type: entity
   name: Slug Spawner
   id: SpawnMobSlug
   parent: MarkerBase
@@ -810,17 +838,3 @@
   - type: ConditionalSpawner
     prototypes:
     - MobLuminousEntity
-
-- type: entity
-  name: Rudi Spawner
-  id: SpawnMobRudi
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-      - state: green
-      - state: rudi
-        sprite: _CM/Mobs/rudi.rsi
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRudi

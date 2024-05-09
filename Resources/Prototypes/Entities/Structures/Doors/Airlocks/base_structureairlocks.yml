@@ -55,11 +55,11 @@
       types:
         Blunt: 15
     openSound:
-      path: /Audio/_CM14/Machines/airlock.ogg
+      path: /Audio/_CM/Machines/airlock.ogg
     closeSound:
-      path: /Audio/_CM14/Machines/airlock.ogg
+      path: /Audio/_CM/Machines/airlock.ogg
     denySound:
-      path: /Audio/_CM14/Machines/buzz_two.ogg
+      path: /Audio/_CM/Machines/buzz_two.ogg
   - type: ContainerContainer
     containers:
       board: !type:Container

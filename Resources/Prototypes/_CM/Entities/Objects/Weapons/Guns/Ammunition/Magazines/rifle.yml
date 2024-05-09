@@ -1,90 +1,137 @@
 - type: entity
-  id: MagazineRifleM41A
-  name: "M41A magazine (12.5x60R)"
-  parent: BaseMagazineCM
+  parent: BaseMagazineRifle
+  id: CMMagazineRifleM41A
+  name: "M41A magazine (10x24mm)"
   components:
   - type: Tag
     tags:
-      - MagazineRifleM41A
-  - type: Item
-    size: Small
+    - CMMagazineRifle
+    - CMMagazineRifleM41A
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle1024
+    mayTransfer: True
     whitelist:
       tags:
-        - CartridgeRifle1024
-    capacity: 30
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mm
+    capacity: 40
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/m41a.rsi
-
-- type: Tag
-  id: CartridgeRifle1024
-
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m41a.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
 
 - type: entity
-  id: MagazineRifleM4RA
-  name: "M4RA magazine (12.5x60R)"
-  parent: BaseMagazineCM
+  parent: CMMagazineRifleM41A
+  id: CMMagazineExtendedRifleM41A
+  name: "M41A extended magazine (10x24mm)"
   components:
   - type: Tag
     tags:
-      - MagazineRifleM4RA
-  - type: Item
-    size: Small
+    - CMMagazineRifle
+    - CMMagazineRifleM41A
   - type: BallisticAmmoProvider
-    proto: CartridgeRifle125x60R
+    mayTransfer: True
     whitelist:
       tags:
-        - CartridgeRifle125x60R
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mm
+    capacity: 60
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m41ae.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: CMMagazineRifleM41AE2
+  name: "M41AE2 magazine (10x24mm)"
+  parent: CMMagazineRifleM41A
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleM41AE2
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mm
+    capacity: 300
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m41ae2.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseMagazineRifle
+  id: CMMagazineRifleM4RA
+  name: "M4RA magazine (10x24mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleM4RA
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mm
     capacity: 25
   - type: Sprite
-    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazine/Snipers/m4ra.rsi
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m4ra.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: CMMagazineRifleM4RA
+  id: CMMagazineRifleExtendedM4RA
+  name: "M4RA extended magazine (10x24mm)"
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 35
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m4rae.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: Tag
-  id: CartridgeRifle125x60R
+  id: CMMagazineRifle
 
-- type: entity
-  parent: BaseBoxCM
-  id: Box1024mmCM
-  components:
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-        - CartridgeRifle1024
-    proto: CartridgeRifle1024
-    capacity: 200
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
-    layers:
-    - state: base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb
-    steps: 2
-    zeroVisible: false
+- type: Tag
+  id: CMMagazineRifleM41A
 
-- type: entity
-  parent: BaseBoxCM
-  id: Box12560RmmCM
-  name: Box (125x60R)
-  components:
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-        - CartridgeRifle125x60R
-    capacity: 200
-    proto: CartridgeRifle125x60R
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
-    layers:
-    - state: base-b
-      map: ["enum.GunVisualLayers.Base"]
-    - state: magb-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: magb
-    steps: 2
-    zeroVisible: false
+- type: Tag
+  id: CMMagazineRifleM41AE2
 
+- type: Tag
+  id: CMMagazineRifleM4RA

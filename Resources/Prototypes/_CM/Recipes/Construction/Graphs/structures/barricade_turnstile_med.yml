@@ -1,4 +1,5 @@
 - type: constructionGraph
+  parent: CM
   id: BarricadeTurnstileMedGraph
   start: start
   graph:
@@ -11,7 +12,7 @@
       - !type:SnapToGrid
         southRotation: true
       steps:
-      - material: Steel
+      - material: CMSteel
         amount: 2
         doAfter: 3
 
@@ -21,7 +22,7 @@
     - to: start
       completed:
         - !type:SpawnPrototype
-          prototype: SheetSteel1
+          prototype: CMSheetMetal1
           amount: 1
         - !type:DeleteEntity
       conditions:

@@ -3,7 +3,7 @@
   startingInventory:
     StoreSpecialist: 1
     ClothingUniformJumpsuitMarine: 1
-    ClothingHandsGlovesMarine: 1
+    CMHandsBlack: 1
     ClothingShoesBootsMarine: 1
     BoxMRPFilled: 1
     FlashlightLantern: 2
@@ -21,7 +21,7 @@
     ClothingHeadBeretGray: 1
     ClothingHeadBeretBlue: 1
     ClothingHeadBeretGreen: 1
-    ClothingBackpackMarine: 1
+    CMPersonalStorageBase: 1
     ClothingBackpackSatchelMarine: 1
     ClothingBeltMilitaryWebbing: 1
     ClothingMaskGasMarine: 1
@@ -29,7 +29,7 @@
     ClothingMaskCoif: 1
     WeaponRifleM4RA: 1
     MagazineRifleM4RA: 5
-    WeaponRifleM41A: 1
+    CMWeaponRifleM41A: 1
     MagazineRifleM41A: 10
     WeaponSubMachineGunM39: 1
     MagazineRifleM39: 5

@@ -1,0 +1,24 @@
+- type: entity
+  name: flare
+  parent: Flare
+  id: CMFlare
+  description: A red USCM issued flare. There are instructions on the side, it reads 'pull cord, make light'.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/flare.rsi
+    layers:
+      - map: [ enum.ExpendableLightVisualLayers.Base ]
+        state: flare_base
+      - map: [ enum.ExpendableLightVisualLayers.Overlay ]
+        state: flare_unlit
+        color: "#FFFFFF"
+      - map: [ enum.ExpendableLightVisualLayers.Glow ]
+        state: flare_burn
+        color: "#FFFFFF"
+        visible: false
+        shader: unshaded
+  - type: Icon
+    sprite: _CM/Objects/Misc/flare.rsi
+    state: flare
+  - type: Item
+    sprite: _CM/Objects/Misc/flare.rsi

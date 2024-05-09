@@ -1,9 +1,0 @@
-- type: entity
-  parent: BulletDisablerSmg
-  id: CMBulletDisablerRife
-  name : disabler bolt rife
-  suffix: CM
-  noSpawn: true
-  components:
-  - type: StaminaDamageOnCollide
-    damage: 30

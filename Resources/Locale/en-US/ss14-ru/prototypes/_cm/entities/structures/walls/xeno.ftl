@@ -1,9 +1,0 @@
-ent-BaseWallXeno = { ent-BaseWall }
-    .suffix = CM
-    .desc = { ent-BaseWall.desc }
-ent-XenoWallFragile = Xeno wall fragile
-    .desc = { ent-BaseWallXeno.desc }
-ent-XenoWall = Xeno wall
-    .desc = { ent-BaseWallXeno.desc }
-ent-XenoWallFortified = Xeno wall fortified
-    .desc = { ent-BaseWallXeno.desc }

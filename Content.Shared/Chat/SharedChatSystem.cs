@@ -1,4 +1,6 @@
 using System.Collections.Frozen;
+using Content.Shared._CM14.Chat;
+using Content.Shared._CM14.Xenos;
 using Content.Shared.Popups;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
@@ -15,16 +17,19 @@ public abstract class SharedChatSystem : EntitySystem
     public const char LocalPrefix = '>';
     public const char ConsolePrefix = '/';
     public const char DeadPrefix = '\\';
-    public const char LOOCPrefix = '_'; // Corvax-Localization
+    public const char LOOCPrefix = '(';
     public const char OOCPrefix = '[';
-    public const char EmotesPrefix = '%'; // Corvax-Localization
+    public const char EmotesPrefix = '@';
     public const char EmotesAltPrefix = '*';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
-    public const char DefaultChannelKey = 'r'; // Corvax-Localization
+    public const char DefaultChannelKey = 'h';
 
     [ValidatePrototypeId<RadioChannelPrototype>]
-    public const string CommonChannel = "Common";
+    public const string CommonChannel = "MarineCommon";
+
+    [ValidatePrototypeId<RadioChannelPrototype>]
+    public const string HivemindChannel = "Hivemind";
 
     public static string DefaultChannelPrefix = $"{RadioChannelPrefix}{DefaultChannelKey}";
 
@@ -106,11 +111,13 @@ public abstract class SharedChatSystem : EntitySystem
         if (input.Length == 0)
             return false;
 
-
+        // TODO CM14 replace all of this with something else when chat code isnt a joke
         if (input.StartsWith(RadioCommonPrefix))
         {
             output = SanitizeMessageCapital(input[1..].TrimStart());
-            channel = _prototypeManager.Index<RadioChannelPrototype>(CommonChannel);
+            channel = HasComp<XenoComponent>(source)
+                ? _prototypeManager.Index<RadioChannelPrototype>(HivemindChannel)
+                : _prototypeManager.Index<RadioChannelPrototype>(CommonChannel);
             return true;
         }
 
@@ -120,6 +127,9 @@ public abstract class SharedChatSystem : EntitySystem
         if (input.Length < 2 || char.IsWhiteSpace(input[1]))
         {
             output = SanitizeMessageCapital(input[1..].TrimStart());
+            if (HasComp<XenoComponent>(source))
+                return false;
+
             if (!quiet)
                 _popup.PopupEntity(Loc.GetString("chat-manager-no-radio-key"), source, source);
             return true;
@@ -144,6 +154,13 @@ public abstract class SharedChatSystem : EntitySystem
             var msg = Loc.GetString("chat-manager-no-such-channel", ("key", channelKey));
             _popup.PopupEntity(msg, source, source);
         }
+
+        var prefixEv = new ChatGetPrefixEvent(channel);
+        RaiseLocalEvent(source, ref prefixEv);
+        channel = prefixEv.Channel;
+
+        if (HasComp<XenoComponent>(source) && channel == null)
+            return false;
 
         return true;
     }

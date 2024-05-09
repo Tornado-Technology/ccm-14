@@ -134,7 +134,7 @@
     state: train_wagon
 
 - type: entity
-  id: WeaponTrain
+  id: CMWeaponTrain
   parent: BaseTrain
   name: Weapon Wagon
   description: A standard-measure shipping container for bulk transport of goods. This one is blank, offering no clue as to its contents.

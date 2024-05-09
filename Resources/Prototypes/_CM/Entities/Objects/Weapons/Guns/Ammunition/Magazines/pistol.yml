@@ -1,0 +1,69 @@
+- type: entity
+  abstract: true
+  parent: BaseMagazinePistol
+  id: CMBaseMagazinePistol
+  components:
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: CMMagazinePistolM4A3
+  name: M4A3 magazine (9mm)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - CMMagazinePistolM4A3
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgePistol9mm
+    proto: CMCartridgePistol9mm
+    capacity: 9
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/m4a3.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: CMMagazinePistol88m4AP
+  name: 88M4 AP magazine (9mm)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - CMMagazinePistol88m4AP
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgePistol9mm
+    proto: CMCartridgePistol88m4AP
+    capacity: 19
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Magazines/88m4.rsi
+    layers:
+    - state: base_ap
+      map: ["enum.GunVisualLayers.Base"]
+    - state: base_ap-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: base_ap
+
+- type: Tag
+  id: CMMagazinePistol
+
+- type: Tag
+  id: CMMagazinePistolM4A3
+
+- type: Tag
+  id: CMMagazinePistol88m4AP

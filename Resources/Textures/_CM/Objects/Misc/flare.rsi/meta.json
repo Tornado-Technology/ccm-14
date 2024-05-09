@@ -1,14 +1,31 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/0f6496a55ceefa0f1bf1668fcef49b5182471695",
+  "license": null,
+  "copyright": null,
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "icon"
+      "name": "cas_flare"
+    },
+    {
+      "name": "cas_flare_spent"
+    },
+    {
+      "name": "cas_flare-on",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "flare"
     },
     {
       "name": "flare_base"
@@ -23,12 +40,15 @@
       "name": "flare_burn",
       "delays": [
         [
-          0.05,
-          0.05,
-          0.05,
-          0.05
+          0.1,
+          0.1,
+          0.1,
+          0.1
         ]
       ]
+    },
+    {
+      "name": "flare-on"
     },
     {
       "name": "lit-inhand-left",

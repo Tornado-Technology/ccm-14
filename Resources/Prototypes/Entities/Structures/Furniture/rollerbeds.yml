@@ -71,9 +71,6 @@
             False: {visible: true}
     - type: StaticPrice
       price: 120
-    - type: Tag
-      tags:
-      - RollerBed
 
 - type: entity
   parent: RollerBed

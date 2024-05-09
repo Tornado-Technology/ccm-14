@@ -1,0 +1,44 @@
+- type: job
+  id: MilitaryScientist
+  name: job-name-militaryscientist
+  description: job-description-militaryscientist
+  playTimeTracker: JobMilitaryScientist
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 108000 # 30 hours
+  startingGear: CMGearResearcher
+  icon: "CMJobIconResearcher"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-head-operations
+  canBeAntag: false
+  accessGroups:
+  - Researcher
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: MilitaryScientist
+    - type: Skills
+      intel: 1
+      medical: 3
+      research: 1
+      surgery: 2
+
+- type: startingGear
+  id: CMGearResearcher
+  equipment:
+    jumpsuit: CMJumpsuitResearch
+    back: CMSatchel
+    shoes: CMShoesLaceup
+    id: CMIDCardResearcher
+    # TODO CM14 random chemical synthesis note, syringe,
+
+- type: startingGear
+  id: CMGearResearcherEquipped
+  equipment:
+    jumpsuit: CMJumpsuitResearch
+    back: CMSatchelMedical
+    gloves: CMHandsLatex
+    shoes: CMShoesLaceup
+    id: CMIDCardResearcher
+    ears: CMHeadsetResearcher

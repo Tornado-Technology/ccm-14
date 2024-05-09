@@ -1,9 +1,9 @@
+﻿using Content.Shared._CM14.Xenos.Plasma;
 using Content.Shared.Coordinates;
 using Content.Shared.DoAfter;
 using Content.Shared.Popups;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
-using Content.Shared.Actions;
 
 namespace Content.Shared._CM14.Xenos.Acid;
 
@@ -13,6 +13,7 @@ public sealed class XenoAcidSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly XenoPlasmaSystem _xenoPlasma = default!;
 
     public override void Initialize()
     {
@@ -20,18 +21,17 @@ public sealed class XenoAcidSystem : EntitySystem
 
         SubscribeLocalEvent<XenoAcidComponent, XenoCorrosiveAcidEvent>(OnXenoCorrosiveAcid);
         SubscribeLocalEvent<XenoAcidComponent, XenoCorrosiveAcidDoAfterEvent>(OnXenoCorrosiveAcidDoAfter);
-        SubscribeLocalEvent<CorrodingComponent, EntityUnpausedEvent>(OnCorrodingUnpaused);
     }
 
     private void OnXenoCorrosiveAcid(Entity<XenoAcidComponent> xeno, ref XenoCorrosiveAcidEvent args)
     {
         if (xeno.Owner != args.Performer ||
-            !CheckCorrodablePopups(xeno, args.Target))
+            !CheckCorrodiblePopups(xeno, args.Target))
         {
             return;
         }
 
-        var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.AcidDelay, new XenoCorrosiveAcidDoAfterEvent(xeno.Comp.AcidId, xeno.Comp.AcidTime), xeno, args.Target)
+        var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.AcidDelay, new XenoCorrosiveAcidDoAfterEvent(args), xeno, args.Target)
         {
             BreakOnMove = true
         };
@@ -43,7 +43,10 @@ public sealed class XenoAcidSystem : EntitySystem
         if (args.Handled || args.Cancelled || args.Target is not { } target)
             return;
 
-        if (!CheckCorrodablePopups(xeno, target))
+        if (!CheckCorrodiblePopups(xeno, target))
+            return;
+
+        if (!_xenoPlasma.TryRemovePlasmaPopup(xeno.Owner, args.PlasmaCost))
             return;
 
         if (_net.IsClient)
@@ -59,16 +62,12 @@ public sealed class XenoAcidSystem : EntitySystem
         });
     }
 
-    private void OnCorrodingUnpaused(Entity<CorrodingComponent> ent, ref EntityUnpausedEvent args)
+    private bool CheckCorrodiblePopups(Entity<XenoAcidComponent> xeno, EntityUid target)
     {
-        ent.Comp.CorrodesAt += args.PausedTime;
-    }
-
-    private bool CheckCorrodablePopups(Entity<XenoAcidComponent> xeno, EntityUid target)
-    {
-        if (!HasComp<CorrodableComponent>(target))
+        if (!TryComp(target, out CorrodibleComponent? corrodible) ||
+            !corrodible.IsCorrodible)
         {
-            _popup.PopupClient(Loc.GetString("cm-xeno-acid-not-corrodable", ("target", target)), xeno, xeno);
+            _popup.PopupClient(Loc.GetString("cm-xeno-acid-not-corrodible", ("target", target)), xeno, xeno);
             return false;
         }
 

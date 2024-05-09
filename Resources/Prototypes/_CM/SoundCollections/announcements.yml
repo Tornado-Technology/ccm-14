@@ -1,0 +1,11 @@
+- type: soundCollection
+  id: CMRoundEnd
+  files:
+  - /Audio/Announcements/RoundEnd/apc_destroyed.ogg
+  - /Audio/_CM/Announcements/RoundEnd/CIAPencils.ogg
+  - /Audio/_CM/Announcements/RoundEnd/Game_Over_Man.ogg
+  - /Audio/_CM/Announcements/RoundEnd/lets_get_outta_here.ogg
+  - /Audio/_CM/Announcements/RoundEnd/hysterical.ogg
+  - /Audio/_CM/Announcements/RoundEnd/surrounded_by_assholes.ogg
+  - /Audio/_CM/Announcements/RoundEnd/NotBadForAHuman.ogg
+  - /Audio/_CM/Announcements/RoundEnd/its_only_game.ogg

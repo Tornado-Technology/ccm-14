@@ -7,7 +7,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using System.Numerics;
-using Content.Shared._CM14.Xeno;
+using Content.Shared._CM14.Xenos;
 using Content.Shared.StatusIcon.Components;
 using Content.Client.UserInterface.Systems;
 using Robust.Shared.Prototypes;

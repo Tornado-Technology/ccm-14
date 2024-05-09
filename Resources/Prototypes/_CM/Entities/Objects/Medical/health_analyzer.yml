@@ -5,6 +5,8 @@
   description: A hand-held body scanner capable of distinguishing vital signs of the subject.
   suffix: CM14
   components:
+  - type: Item
+    size: Small
   - type: Tag
     tags:
       - DiscreteHealthAnalyzer
@@ -12,15 +14,15 @@
     sprite: _CM/Objects/Medical/health_analyzer.rsi
     state: health
   - type: ActivatableUI
-    key: enum.HealthAnalyzerUiKey.Key
-    closeOnHandDeselect: false
+    key: enum.HealthScannerUIKey.Key
+    inHandsOnly: true
+    requireActiveHand: false
   - type: UserInterface
     interfaces:
-      enum.HealthAnalyzerUiKey.Key:
-        type: HealthAnalyzerBoundUserInterface
-  - type: HealthAnalyzer
-    scanDelay: 0
-    scanningEndSound:
+      enum.HealthScannerUIKey.Key:
+        type: HealthScannerBoundUserInterface
+  - type: HealthScanner
+    sound:
       path: "/Audio/_CM/Medical/healthanalyzer.ogg"
   - type: Appearance
   - type: GuideHelp

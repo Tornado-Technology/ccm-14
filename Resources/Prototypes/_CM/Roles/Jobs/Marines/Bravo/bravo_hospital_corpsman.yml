@@ -1,0 +1,25 @@
+- type: job
+  id: BravoMedic
+  name: job-name-bravo-medic
+  description: job-description-bravomedic
+  playTimeTracker: JobBravoMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 10800 # 3 hrs
+  startingGear: CMGearHospitalCorpsman
+  icon: "JobIconBravoMedic"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - HospitalCorpsman
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: BravoMedic
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1

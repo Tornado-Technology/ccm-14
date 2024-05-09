@@ -7,7 +7,7 @@ using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
 using System.Linq;
-using Content.Shared._CM14.Xeno;
+using Content.Shared._CM14.Xenos;
 
 namespace Content.Client.Overlays;
 

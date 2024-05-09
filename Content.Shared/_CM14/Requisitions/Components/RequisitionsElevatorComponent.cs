@@ -57,10 +57,10 @@ public sealed partial class RequisitionsElevatorComponent : Component
     public TimeSpan LowerSoundDelay = TimeSpan.FromSeconds(2);
 
     [DataField]
-    public SoundSpecifier? LoweringSound = new SoundPathSpecifier("/Audio/_CM14/Machines/asrs_lowering.ogg");
+    public SoundSpecifier? LoweringSound = new SoundPathSpecifier("/Audio/_CM/Machines/asrs_lowering.ogg");
 
     [DataField]
-    public SoundSpecifier? RaisingSound = new SoundPathSpecifier("/Audio/_CM14/Machines/asrs_raising.ogg");
+    public SoundSpecifier? RaisingSound = new SoundPathSpecifier("/Audio/_CM/Machines/asrs_raising.ogg");
 
     public object LoweringAnimation;
 

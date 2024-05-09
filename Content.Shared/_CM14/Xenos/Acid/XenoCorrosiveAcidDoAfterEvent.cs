@@ -9,18 +9,19 @@ namespace Content.Shared._CM14.Xenos.Acid;
 public sealed partial class XenoCorrosiveAcidDoAfterEvent : DoAfterEvent
 {
     [DataField]
-    public EntProtoId AcidId = "XenoAcid";
+    public EntProtoId AcidId = "XenoAcidNormal";
 
     [DataField]
-    public FixedPoint2 PlasmaCost = 75;
+    public FixedPoint2 PlasmaCost = 100;
 
     [DataField]
-    public TimeSpan Time = TimeSpan.FromSeconds(30);
+    public TimeSpan Time = TimeSpan.FromSeconds(150);
 
-    public XenoCorrosiveAcidDoAfterEvent(EntProtoId acidId, TimeSpan time)
+    public XenoCorrosiveAcidDoAfterEvent(XenoCorrosiveAcidEvent ev)
     {
-        AcidId = acidId;
-        Time = time;
+        AcidId = ev.AcidId;
+        PlasmaCost = ev.PlasmaCost;
+        Time = ev.Time;
     }
 
     public override DoAfterEvent Clone()

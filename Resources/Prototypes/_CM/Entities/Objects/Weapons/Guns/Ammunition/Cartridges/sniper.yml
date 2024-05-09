@@ -1,28 +1,44 @@
+﻿- type: entity
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeSniper10x28mm
+  name: cartridge (10x28mm)
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Tag
+    tags:
+    - Cartridge
+    - CMCartridgeSniper10x28mm
+  - type: CartridgeAmmo
+    proto: CMBulletSniper10x28mm
+
 - type: entity
-  id: CartridgeSniper10x99
-  parent: BaseCartridgeCM
-  name: cartridge (10x99)
+  parent: CMCartridgeSniper10x28mm
+  id: CMCartridgeSniper10x28mmIncendiary
+  name: cartridge (10x28mm) (incendiary)
+  components:
+  - type: CartridgeAmmo
+    proto: CMBulletSniper10x28mmIncendiary
+
+- type: entity
+  parent: CMCartridgeSniper10x28mm
+  id: CMCartridgeSniper10x28mmFlak
+  name: cartridge (10x28mm) (Flak)
+  components:
+  - type: CartridgeAmmo
+    proto: CMBulletSniper10x28mmFlak
+
+- type: entity
+  parent: CMCartridgeSniper10x28mm
+  id: CMCartridgeSniper10x99mmAntiMateriel
+  name: cartridge (10x99mm) (AntiMateriel)
   components:
   - type: Tag
     tags:
-      - CartridgeSniper10x99
+    - Cartridge
+    - CMCartridgeSniper10x99mm
   - type: CartridgeAmmo
-    proto: BulletSniper10x99
-  - type: Sprite
-    sprite: /Textures/Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
-
-- type: entity
-  id: CartridgeSniper10x99AP
-  parent: CartridgeSniper10x99
-  name: cartridge (10x99 armor-piercing)
-  components:
-  - type: CartridgeAmmo
-    proto: BulletSniper10x99AP
-
-- type: entity
-  id: CartridgeSniper10x99Uranium
-  parent: CartridgeSniper10x99
-  name: cartridge (10x99 uranium)
-  components:
-  - type: CartridgeAmmo
-    proto: BulletSniper10x99Uranium
+    proto: CMBulletSniper10x99mmAntiMateriel

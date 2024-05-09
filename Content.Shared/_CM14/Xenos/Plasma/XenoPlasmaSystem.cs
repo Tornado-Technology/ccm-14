@@ -1,4 +1,5 @@
-﻿using Content.Shared.Alert;
+﻿using Content.Shared._CM14.Xenos.Evolution;
+using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Content.Shared.Popups;
@@ -25,10 +26,10 @@ public sealed class XenoPlasmaSystem : EntitySystem
 
         SubscribeLocalEvent<XenoPlasmaComponent, MapInitEvent>(OnXenoPlasmaMapInit);
         SubscribeLocalEvent<XenoPlasmaComponent, ComponentRemove>(OnXenoPlasmaRemove);
-        SubscribeLocalEvent<XenoPlasmaComponent, XenoRegenEvent>(OnXenoRegen);
         SubscribeLocalEvent<XenoPlasmaComponent, RejuvenateEvent>(OnXenoRejuvenate);
         SubscribeLocalEvent<XenoPlasmaComponent, XenoTransferPlasmaActionEvent>(OnXenoTransferPlasmaAction);
         SubscribeLocalEvent<XenoPlasmaComponent, XenoTransferPlasmaDoAfterEvent>(OnXenoTransferDoAfter);
+        SubscribeLocalEvent<XenoPlasmaComponent, NewXenoEvolvedComponent>(OnNewXenoEvolved);
     }
 
     private void OnXenoPlasmaMapInit(Entity<XenoPlasmaComponent> ent, ref MapInitEvent args)
@@ -39,11 +40,6 @@ public sealed class XenoPlasmaSystem : EntitySystem
     private void OnXenoPlasmaRemove(Entity<XenoPlasmaComponent> ent, ref ComponentRemove args)
     {
         _alerts.ClearAlertCategory(ent, AlertCategory.XenoPlasma);
-    }
-
-    private void OnXenoRegen(Entity<XenoPlasmaComponent> xeno, ref XenoRegenEvent args)
-    {
-        RegenPlasma((xeno, xeno), xeno.Comp.PlasmaRegenOnWeeds);
     }
 
     private void OnXenoRejuvenate(Entity<XenoPlasmaComponent> xeno, ref RejuvenateEvent args)
@@ -95,6 +91,15 @@ public sealed class XenoPlasmaSystem : EntitySystem
         _popup.PopupEntity(Loc.GetString("cm-xeno-plasma-transferred-to-self", ("plasma", args.Amount), ("target", self.Owner), ("total", otherXeno.Plasma)), target, target);
 
         _audio.PlayPredicted(self.Comp.PlasmaTransferSound, self, self);
+    }
+
+    private void OnNewXenoEvolved(Entity<XenoPlasmaComponent> newXeno, ref NewXenoEvolvedComponent args)
+    {
+        if (TryComp(args.OldXeno, out XenoPlasmaComponent? oldXeno))
+        {
+            var newPlasma = FixedPoint2.Min(oldXeno.Plasma, newXeno.Comp.MaxPlasma);
+            SetPlasma(newXeno, newPlasma);
+        }
     }
 
     private void UpdateAlert(Entity<XenoPlasmaComponent> xeno)

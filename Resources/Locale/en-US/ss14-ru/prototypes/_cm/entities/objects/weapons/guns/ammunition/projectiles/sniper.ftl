@@ -1,9 +1,0 @@
-ent-BulletSniper10x99 = bullet (7.62x54)
-    .suffix = CM
-    .desc = { ent-BaseBullet.desc }
-ent-BulletSniper10x99AP = bullet (7.62x54 armor-piercing)
-    .suffix = CM
-    .desc = { ent-BaseBullet.desc }
-ent-BulletSniper10x99Uranium = bullet (7.62x54 uranium)
-    .suffix = CM
-    .desc = { ent-BaseBullet.desc }

@@ -1,5 +1,6 @@
 # Walls
 - type: construction
+  parent: CM
   id: CMGirder
   name: girder
   graph: CMGirder
@@ -18,6 +19,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   id: CMGirderReinforced
   name: reinforced girder
   graph: CMGirder
@@ -36,6 +38,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   id: CMWallMetal
   name: wall
   graph: CMGirder
@@ -54,6 +57,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   id: CMWallReinforced
   name: reinforced wall
   graph: CMGirder
@@ -69,10 +73,11 @@
   canRotate: false
   canBuildInImpassable: false
   conditions:
-    - !type:TileNotBlocked
+  - !type:TileNotBlocked
 
 # Airlocks
 - type: construction
+  parent: CM
   name: airlock
   id: CMAirlock
   graph: CMAirlock
@@ -90,6 +95,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   name: glass airlock
   id: CMAirlockGlass
   graph: CMAirlock
@@ -106,9 +112,47 @@
   conditions:
     - !type:TileNotBlocked
 
-# Barricades
+
+# Windoors
+- type: construction
+  parent: CM
+  name: windoor
+  id: CMWindoor
+  graph: CMWindoor
+  startNode: start
+  targetNode: windoor
+  category: construction-category-cm-structures
+  description: It opens, it closes, and you can see through it!
+  icon:
+    sprite: _CM/Structures/Doors/windoor_assemblies.rsi
+    state: windoor_assembly01
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
+  name: secure windoor
+  id: CMWindoorSecure
+  graph: CMWindoor
+  startNode: start
+  targetNode: windoorSecure
+  category: construction-category-cm-structures
+  description: It opens, it closes, and you can see through it! This one looks tough.
+  icon:
+    sprite: _CM/Structures/Doors/windoor_assemblies.rsi
+    state: secure_assembly01
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:TileNotBlocked
+
+# Barricades
+- type: construction
+  parent: CM
   name: Metal Barricade
   id: CMBarricadeMetal
   graph: BarricadeMetalGraph
@@ -126,23 +170,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Sandbag Barricade
-  id: CMBarricadeSandbag
-  graph: BarricadeSandbagGraph
-  startNode: start
-  targetNode: nodeSandbag
-  category: construction-category-cm-structures
-  description: A military grade pile of sand.
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: _CM/Structures/Walls/Barricades/barricade.rsi
-    state: sandbag
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
+  parent: CM
   name: Turnstile
   id: CMBarricadeTurnstile
   graph: BarricadeTurnstileGraph
@@ -160,6 +188,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   name: Medical Turnstile
   id: CMBarricadeTurnstileMed
   graph: BarricadeTurnstileMedGraph
@@ -177,13 +206,14 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   name: Folding Metal Barricade
   id: CMBarricadeMetalDoor
   graph: BarricadeMetalDoorGraph
   startNode: start
   targetNode: nodeBarricadeMetalDoor
   category: construction-category-cm-structures
-  description: A fence to ensure marines stay in line in medical.
+  description: A barricade that can be folded or opened to allow marines through.
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -194,13 +224,14 @@
     - !type:TileNotBlocked
 
 - type: construction
+  parent: CM
   name: Folding Plasteel Barricade
   id: CMBarricadePlasteelDoor
   graph: BarricadePlasteelDoorGraph
   startNode: start
   targetNode: nodeBarricadePlasteelDoor
   category: construction-category-cm-structures
-  description: A fence to ensure marines stay in line in medical.
+  description: A barricade that can be folded or opened to allow marines through. Made from hardened plasteel.
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -212,6 +243,7 @@
 
 # Other
 - type: construction
+  parent: CM
   id: CMCatwalk
   name: catwalk
   graph: CMCatwalk

@@ -4,8 +4,8 @@
   name: Майнер 
   description: Добывает ископаемые и приносит деньги. 
   components:
-    - type: CMMiner
-      balanceGeneration: 150
+    # - type: CMMiner
+    #   balanceGeneration: 150
     - type: MeleeSound
       soundGroups:
         Brute:
@@ -102,9 +102,9 @@
   parent: MinerMachine
   name: Ультра майнер
   description: Добывает редкие ископаемые и приносит много денег.
-  components:
-  - type: CMMiner
-    balanceGeneration: 500
+  # components:
+  # - type: CMMiner
+  #   balanceGeneration: 500
 
 - type: entity
   id: UltraMinerMachineBroken

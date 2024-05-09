@@ -1,0 +1,57 @@
+- type: job
+  id: MilitaryMainMedic
+  name: job-name-militarymainmedic
+  description: job-description-militarymainmedic
+  playTimeTracker: JobMilitaryMainMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 36000 # 10 hrs
+  weight: 5
+  startingGear: CMGearCMO
+  icon: "CMJobIconCMO"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-staff-officer
+  canBeAntag: false
+  accessGroups:
+  - CMCMO
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: MilitaryMainMedic
+    - type: Skills
+      fireman: 1
+      intel: 1
+      jtac: 3
+      leadership: 2
+      medical: 3
+      overwatch: 1
+      police: 1
+      research: 1
+      surgery: 2
+    - type: MarineOrders
+
+
+- type: startingGear
+  id: CMGearCMO
+  equipment:
+    jumpsuit: CMJumpsuitCMO
+    back: CMSatchel
+    shoes: ClothingShoesColorWhite
+    id: CMIDCardCMO
+    # TODO CM14 random chemical synthesis note
+
+- type: startingGear
+  id: CMGearCMOEquipped
+  equipment:
+    jumpsuit: CMJumpsuitCMO
+    outerClothing: CMCoatLong
+    back: CMSatchelMedical
+    gloves: CMHandsLatex
+    shoes: ClothingShoesColorWhite
+    head: CMHeadCapCMO
+    id: CMIDCardCMO
+    ears: CMHeadsetCMO
+    belt: CMBeltMedicalFilled

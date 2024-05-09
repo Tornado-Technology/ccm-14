@@ -1,0 +1,39 @@
+- type: job
+  id: CharlieCommander
+  name: job-name-charlie-commander
+  description: job-description-charliecommander
+  playTimeTracker: JobCharlieCommander
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: EngineersGarrison
+      time: 18000 # 5 hrs
+    - !type:DepartmentTimeRequirement
+      department: SpecialistsGarrison
+      time: 18000 # 5 hrs
+    - !type:DepartmentTimeRequirement
+      department: MedicsGarrison
+      time: 18000 # 5 hrs
+  startingGear: CMGearSquadLeader
+  icon: "JobIconCharlieCommander"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-field-commander
+  canBeAntag: false
+  accessGroups:
+  - SquadLeader
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: CharlieCommander
+    - type: Skills
+      construction: 2
+      cqc: 1
+      endurance: 2
+      engineer: 2
+      fireman: 1
+      intel: 1
+      jtac: 2
+      leadership: 1
+      medical: 1
+      vehicle: 1
+    - type: MarineOrders

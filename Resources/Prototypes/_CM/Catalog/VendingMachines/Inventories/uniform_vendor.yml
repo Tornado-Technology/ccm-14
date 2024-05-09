@@ -3,7 +3,7 @@
   startingInventory:
     BoxEmergencyMarine: 6
     ClothingUniformJumpsuitMarine: 10
-    ClothingHandsGlovesMarine: 10
+    CMHandsBlack: 10
     ClothingShoesBootsMarine: 10
     BoxMRPFilled: 10
     FlashlightLantern: 30
@@ -16,7 +16,7 @@
     ClothingEyesGlassesBallistic: 5
     ClothingEyesGlassesPrescriptionBallistic: 5
     ClothingEyesGlassesRPG: 5
-    ClothingBackpackMarine: 2
+    CMPersonalStorageBase: 2
     ClothingBackpackSatchelMarine: 4
     ClothingBeltMilitaryWebbing: 2
     ClothingMaskGasMarine: 4

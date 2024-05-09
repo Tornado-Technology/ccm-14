@@ -32,7 +32,7 @@
         amount: 1
       - id: ClothingShoesBootsMarine
         amount: 1
-      - id: ClothingHandsGlovesMarine
+      - id: CMHandsBlack
         amount: 1
       - id: ClothingUniformJumpsuitMarine
         amount: 1
@@ -102,17 +102,17 @@
         amount: 3
     - name: Вооружение
       entries:
-      - id: WeaponRifleM4RA
+      - id: CMWeaponRifleM4RA
         amount: 1
-      - id: WeaponRifleM41A
+      - id: CMWeaponRifleM41A
         amount: 1
-      - id: WeaponSubMachineGunM39
+      - id: CMWeaponSubMachineGunM39
         amount: 1
-      - id: WeaponSubMachineGunMSG23W-Y
+      - id: CMWeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunLiberator
+      - id: CMWeaponShotgunLiberator
         amount: 1
-      - id: WeaponShotgunPunisher
+      - id: CMWeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
@@ -214,17 +214,17 @@
 
     - name: Вооружение
       entries:
-      - id: WeaponRifleM4RA
+      - id: CMWeaponRifleM4RA
         amount: 1
-      - id: WeaponRifleM41A
+      - id: CMWeaponRifleM41A
         amount: 1
-      - id: WeaponSubMachineGunM39
+      - id: CMWeaponSubMachineGunM39
         amount: 1
-      - id: WeaponSubMachineGunMSG23W-Y
+      - id: CMWeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunLiberator
+      - id: CMWeaponShotgunLiberator
         amount: 1
-      - id: WeaponShotgunPunisher
+      - id: CMWeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
@@ -272,7 +272,7 @@
       entries:
       - id: ClothingUniformJumpsuitMarine
         amount: 1
-      - id: ClothingHandsGlovesMarine
+      - id: CMHandsBlack
         amount: 1
       - id: ClothingShoesBootsMarine
         amount: 1
@@ -300,7 +300,7 @@
         amount: 1
     - name: Рюкзаки
       entries:
-      - id: ClothingBackpackMarine
+      - id: CMPersonalStorageBase
         amount: 1
       - id: ClothingMilitaryBackpack
         amount: 1
@@ -340,17 +340,17 @@
         amount: 1
     - name: Вооружение
       entries:
-      - id: WeaponRifleM4RA
+      - id: CMWeaponRifleM4RA
         amount: 1
-      - id: WeaponRifleM41A
+      - id: CMWeaponRifleM41A
         amount: 1
-      - id: WeaponSubMachineGunM39
+      - id: CMWeaponSubMachineGunM39
         amount: 1
-      - id: WeaponSubMachineGunMSG23W-Y
+      - id: CMWeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunLiberator
+      - id: CMWeaponShotgunLiberator
         amount: 1
-      - id: WeaponShotgunPunisher
+      - id: CMWeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
@@ -401,7 +401,7 @@
         amount: 1
       - id: ClothingUniformJumpsuitMarine
         amount: 1
-      - id: ClothingHandsGlovesMarine
+      - id: CMHandsBlack
         amount: 1
       - id: ClothingShoesBootsMarine
         amount: 1
@@ -425,7 +425,7 @@
         amount: 1
     - name: Рюкзаки
       entries:
-      - id: ClothingBackpackMarine
+      - id: CMPersonalStorageBase
         amount: 1
       - id: ClothingMilitaryBackpack
         amount: 1
@@ -467,17 +467,17 @@
         amount: 1
     - name: Вооружение
       entries:
-      - id: WeaponRifleM4RA
+      - id: CMWeaponRifleM4RA
         amount: 1
-      - id: WeaponRifleM41A
+      - id: CMWeaponRifleM41A
         amount: 1
-      - id: WeaponSubMachineGunM39
+      - id: CMWeaponSubMachineGunM39
         amount: 1
-      - id: WeaponSubMachineGunMSG23W-Y
+      - id: CMWeaponSubMachineGunMSG23W-Y
         amount: 1
-      - id: WeaponShotgunLiberator
+      - id: CMWeaponShotgunLiberator
         amount: 1
-      - id: WeaponShotgunPunisher
+      - id: CMWeaponShotgunPunisher
         amount: 1
       - id: MacheteMarine
         amount: 1
@@ -542,7 +542,7 @@
         amount: 1
     - name: Рюкзаки
       entries:
-      - id: ClothingBackpackMarine
+      - id: CMPersonalStorageBase
         amount: 4
       - id: ClothingBackpackSatchelMarine
         amount: 4
@@ -610,7 +610,7 @@
     sections:
     - name: Рюкзаки
       entries:
-      - id: ClothingBackpackMarine
+      - id: CMPersonalStorageBase
         amount: 4
       - id: ClothingBackpackSatchelMarine
         amount: 4
@@ -630,9 +630,9 @@
         amount: 2
     - name: Вооружение
       entries:
-      - id: WeaponDisablerSMG
+      - id: CMWeaponDisablerSMG
         amount: 5
-      - id: WeaponRifleM41A
+      - id: CMWeaponRifleM41A
         amount: 4
       - id: MagazineRifleM41A
         amount: 16

@@ -110,7 +110,7 @@
     closeSound:
       path: /Audio/Machines/windoor_open.ogg
     denySound:
-      path: /Audio/_CM14/Machines/buzz_two.ogg
+      path: /Audio/_CM/Machines/buzz_two.ogg
   - type: Airlock
     keepOpenIfClicked: true
     openPanelVisible: true

@@ -63,11 +63,13 @@
     channels:
     - Supply
     - Binary
+    - Common
     - Science
   - type: ActiveRadio
     channels:
     - Supply
     - Binary
+    - Common
     - Science
   - type: AccessReader
     access: [["Cargo"], ["Salvage"], ["Command"], ["Research"]]
@@ -104,11 +106,13 @@
     channels:
     - Engineering
     - Binary
+    - Common
     - Science
   - type: ActiveRadio
     channels:
     - Engineering
     - Binary
+    - Common
     - Science
   - type: AccessReader
     access: [["Engineering"], ["Command"], ["Research"]]
@@ -153,11 +157,13 @@
     channels:
     - Service
     - Binary
+    - Common
     - Science
   - type: ActiveRadio
     channels:
     - Service
     - Binary
+    - Common
     - Science
   - type: AccessReader
     access: [["Service"], ["Command"], ["Research"]]
@@ -202,18 +208,23 @@
     channels:
     - Medical
     - Binary
+    - Common
     - Science
   - type: ActiveRadio
     channels:
     - Medical
     - Binary
+    - Common
     - Science
   - type: AccessReader
     access: [["Medical"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgDutch
-  - type: TTS # Corvax-TTS
-    voice: TrainingRobot
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHoverBorg
+      params:
+        volume: -6
 
 - type: entity
   id: BorgChassisService
@@ -245,11 +256,13 @@
     channels:
     - Service
     - Binary
+    - Common
     - Science
   - type: ActiveRadio
     channels:
     - Service
     - Binary
+    - Common
     - Science
   - type: AccessReader
     access: [["Service"], ["Command"], ["Research"]]

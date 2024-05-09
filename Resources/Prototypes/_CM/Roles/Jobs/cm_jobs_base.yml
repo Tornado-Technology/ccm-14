@@ -1,0 +1,9 @@
+﻿- type: job
+  abstract: true
+  id: CMJobBase
+  isCM: true
+
+- type: department
+  abstract: true
+  id: CMDepartmentBase
+  isCM: true

@@ -7,7 +7,7 @@
 - type: entity
   parent: WeaponTurretNanoTrasen
   name: turret
-  id: WeaponTurretMarine
+  id: CMWeaponTurretMarine
   suffix: "Marines Gear"
   description: The engineer's best friend. It does not understand back.
   components:
@@ -48,9 +48,9 @@
     capacity: 350
 
 - type: entity
-  parent: WeaponTurretMarine
+  parent: CMWeaponTurretMarine
   name: flame turret
-  id: WeaponFlameTurretMarine
+  id: CMWeaponFlameTurretMarine
   components:
     - type: Gun
       fireRate: 2
@@ -70,7 +70,7 @@
   graph:
     - node: start
       edges:
-        - to: weaponTurretMarine
+        - to: CMWeaponTurretMarine
           steps:
             - tag: Turret
               name: folding turret
@@ -81,8 +81,8 @@
           completed:
             - !type:SnapToGrid
               southRotation: true
-    - node: weaponTurretMarine
-      entity: WeaponTurretMarine
+    - node: CMWeaponTurretMarine
+      entity: CMWeaponTurretMarine
 
 - type: constructionGraph
   id: MarineFlameTurretGraph
@@ -90,7 +90,7 @@
   graph:
     - node: start
       edges:
-        - to: weaponTurretMarine
+        - to: CMWeaponTurretMarine
           steps:
             - tag: FlameTurret
               name: folding flame turret
@@ -101,7 +101,7 @@
           completed:
             - !type:SnapToGrid
               southRotation: true
-    - node: weaponTurretMarine
+    - node: CMWeaponTurretMarine
       entity: WeaponFlameTurretMarine
 
 - type: construction
@@ -109,7 +109,7 @@
   id: MarineTurretConstruction
   graph: MarineTurretGraph
   startNode: start
-  targetNode: weaponTurretMarine
+  targetNode: CMWeaponTurretMarine
   category: construction-category-cm-structures
   description: The engineer's best friend.
   icon:
@@ -127,7 +127,7 @@
   id: MarineFlameTurretConstruction
   graph: MarineFlameTurretGraph
   startNode: start
-  targetNode: weaponTurretMarine
+  targetNode: CMWeaponTurretMarine
   category: construction-category-cm-structures
   description: The engineer's best friend.
   icon:

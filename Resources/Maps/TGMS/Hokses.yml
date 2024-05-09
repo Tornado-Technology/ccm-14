@@ -3,9 +3,9 @@ meta:
   postmapinit: false
 tilemap:
   0: Space
-  1: CMFloorComms
-  2: CMFloorMono
-  3: CMFloorOuterhull
+  1: CMFloorTComms0
+  2: CMFloorPlate
+  3: CMFloorSteel
   4: CMFloorSteel
   7: CMPlating
   11: FloorAsphalt
@@ -138025,7 +138025,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,149.5
       parent: 2
-- proto: XenoWallFortified
+- proto: WallXenoResinThick
   entities:
   - uid: 22704
     components:

@@ -1,4 +1,4 @@
 - type: vendingMachineInventory
-  id: WeaponsMechVendInventory
+  id: CMWeaponsMechVendInventory
   startingInventory:
     MechWeaponFireDart: 1

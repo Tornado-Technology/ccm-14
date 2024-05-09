@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   parent: Syringe
   id: CMSyringe
   suffix: CM14
@@ -18,5 +18,6 @@
     sprite: _CM/Objects/Medical/syringe.rsi
     state: "syringe"
   - type: Item
+    storedRotation: 90
     size: Tiny
     sprite: _CM/Objects/Medical/syringe.rsi

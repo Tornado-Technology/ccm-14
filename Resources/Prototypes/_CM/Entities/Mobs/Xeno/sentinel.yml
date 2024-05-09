@@ -1,0 +1,52 @@
+﻿- type: entity
+  parent:
+  - CMXenoDeveloped
+  - CMXenoTail
+  - CMXenoFlammable
+  id: CMXenoSentinel
+  name: Sentinel
+  description: A slithery, spitting kind of alien.
+  components:
+  - type: Sprite
+    sprite: _CM/Mobs/Xenos/Sentinel/sentinel.rsi
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      600: Dead
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    # - ActionXenoWatch
+    - ActionXenoTailStab
+    - ActionXenoAcidWeak
+    - ActionXenoSlowingSpit
+    - ActionXenoParalyzingSlash
+    - ActionXenoEvolve300
+    tier: 1
+  - type: XenoDevour
+  - type: XenoPlasma
+    plasma: 400
+    maxPlasma: 400
+    plasmaRegenOnWeeds: 3
+  - type: XenoArmor
+    explosionArmor: 10
+  - type: XenoEvolution
+    evolvesTo:
+    - CMXenoSpitter
+  - type: XenoParalyzingSlash
+  - type: XenoSlowingSpit
+    plasmaCost: 40
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 22.5
+  - type: Tackle
+    threshold: 4
+    stun: 8

@@ -1,9 +1,0 @@
-ent-BaseCartridgeSniper10x99 = cartridge (10x99)
-    .suffix = CM
-    .desc = { ent-BaseCartridge.desc }
-ent-CartridgeSniper10x99 = cartridge (10x99)
-    .desc = { ent-BaseCartridgeSniper10x99.desc }
-ent-CartridgeSniper10x99AP = cartridge (10x99 armor-piercing)
-    .desc = { ent-BaseCartridgeSniper10x99.desc }
-ent-CartridgeSniper10x99Uranium = cartridge (10x99 uranium)
-    .desc = { ent-BaseCartridgeSniper10x99.desc }

@@ -1,0 +1,54 @@
+- type: job
+  id: AlfaMedic
+  name: job-name-alfa-medic
+  description: job-description-alfamedic
+  playTimeTracker: JobAlfaMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMilitaryMedic
+      time: 10800 # 3 hrs
+  startingGear: CMGearHospitalCorpsman
+  icon: "JobIconAlfaMedic"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - HospitalCorpsman
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: AlfaMedic
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1
+
+- type: startingGear
+  id: AlfaMedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAlpha_med
+    id: AMedicIDCard
+    ears: ClothingHeadsetMarineAlfa
+    pocket1: EmergencyMedipen
+
+- type: startingGear
+  id: CMGearHospitalCorpsman
+  equipment:
+    jumpsuit: CMJumpsuitMarineMedic # TODO CM14 all squad roles should spawn with no jumpsuit but still have clothes on
+    back: CMSatchelMarineMedic
+    id: CMDogtagHospitalCorpsman
+
+- type: startingGear
+  id: CMGearHospitalCorpsmanEquipped
+  equipment:
+    jumpsuit: CMJumpsuitMarineMedic
+    back: CMSatchelMarineMedic
+    shoes: CMBootsBlackFilled
+    gloves: CMHandsBlackMarine
+    eyes: ClothingEyesHudMedical
+    head: CMArmorHelmetM10Medic
+    outerClothing: CMArmorM3Medium
+    id: CMDogtagHospitalCorpsman
+    ears: CMHeadsetAlphaMedic
+    belt: CMBeltMedicBagFilled

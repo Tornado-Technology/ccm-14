@@ -1,0 +1,16 @@
+- type: entity
+  name: welding tool
+  parent: Welder
+  id: CMWelder
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Tools/welder.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      map: ["enum.ToggleVisuals.Layer"]
+      shader: unshaded
+      visible: false
+  - type: Item
+    size: Small
+    sprite: _CM/Objects/Tools/welder.rsi

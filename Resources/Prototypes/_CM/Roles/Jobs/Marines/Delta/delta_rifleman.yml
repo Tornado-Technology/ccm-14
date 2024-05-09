@@ -1,0 +1,19 @@
+- type: job
+  id: DeltaMarine
+  name: job-name-delta-marine
+  description: job-description-deltamarine
+  playTimeTracker: JobDeltaMarine
+  startingGear: CMGearRifleman
+  icon: "JobIconDeltaMarine"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+  - Rifleman
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: DeltaMarine
+    - type: Skills
+  hasIcon: false

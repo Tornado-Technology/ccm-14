@@ -259,10 +259,10 @@
   id: CableCoil
 
 - type: Tag
-  id: CannonBall
+  id: CaneBlade
 
 - type: Tag
-  id: CannonRestrict
+  id: CannonBall
 
 - type: Tag
   id: CannotSuicide
@@ -401,6 +401,9 @@
   id: ClownSuit
 
 - type: Tag
+  id: CluwneHappyHonk
+
+- type: Tag
   id: CluwneHorn
 
 - type: Tag
@@ -485,31 +488,7 @@
   id: CrystalRed
 
 - type: Tag
-  id: CMAidKit
-
-- type: Tag
-  id: CMSynthGraft
-
-- type: Tag
-  id: CMBloodPack
-
-- type: Tag
-  id: CMGauze
-
-- type: Tag
-  id: CMOintment
-
-- type: Tag
-  id: CMSurgicalLine
-
-- type: Tag
-  id: CMPillCanister
-
-- type: Tag
-  id: CMBurnKit
-
-- type: Tag
-  id: CMTraumaKit
+  id: CubanCarp
 
 - type: Tag
   id: DeathAcidifier
@@ -888,6 +867,9 @@
   id: Meat
 
 - type: Tag
+  id: Medal
+
+- type: Tag
   id: Medkit
 
 - type: Tag
@@ -1126,13 +1108,13 @@
   id: Shiv
 
 - type: Tag
-  id: ShoesRequiredStepTriggerImmune
-
-- type: Tag
   id: Shovel
 
 - type: Tag
   id: Sidearm
+
+- type: Tag
+  id: SignalTrigger
 
 - type: Tag
   id: SkeletonMotorcycleKeys
@@ -1148,9 +1130,6 @@
 
 - type: Tag
   id: Smokable
-
-- type: Tag
-  id: SnapPop
 
 - type: Tag
   id: SnowyLabs
@@ -1263,6 +1242,9 @@
   id: TrashBag
 
 - type: Tag
+  id: Truncheon
+
+- type: Tag
   id: Unimplantable
 
 - type: Tag
@@ -1282,9 +1264,6 @@
 
 - type: Tag
   id: Wall
-
-- type: Tag
-  id: FOBProtection
 
 - type: Tag
   id: WallmountGeneratorAPUElectronics
@@ -1346,70 +1325,4 @@
 - type: Tag
   id: WriteIgnoreStamps
 
-# PUT YOUR TAGS IN ALPHABETICAL ORDER
-
-- type: Tag
-  id: CartridgeMagnumVP-60x2
-
-- type: Tag
-  id: MagazineRifleM41A
-
-- type: Tag
-  id: MagazineRifleM39
-
-- type: Tag
-  id: MagazineRifleM4RA
-
-- type: Tag
-  id: MagazineAntiMaterialXM42B
-
-- type: Tag
-  id: MagazineSmgMSG23W-Y
-
-- type: Tag
-  id: SpeedLoaderMagnumVP-60x2
-
-- type: Tag
-  id: CartridgeShotGun24Gauge
-
-- type: Tag
-  id: MagazineShotgunUA571C
-
-- type: Tag
-  id: CartridgeShotGun8Gauge
-
-- type: Tag
-  id: MagazineShotgunPatriot
-
-- type: Tag
-  id: MagazineShotgunLiberator
-
-- type: Tag
-  id: CartridgeSniper10x99
-
-- type: Tag
-  id: InteractionCAS
-
-- type: Tag
-  id: Pouch
-
-- type: Tag
-  id: CartridgeAC
-
-- type: Tag
-  id: CartridgeHades
-
-- type: Tag
-  id: MagazineAC
-
-- type: Tag
-  id: MagazineShotgunMech
-
-- type: Tag
-  id: MagazineHades
-
-- type: Tag
-  id: WeaponMech
-
-- type: Tag
-  id: RollerBed
+# ALPHABETICAL

@@ -7,6 +7,7 @@
     head: ClothingHeadHatWizard
     outerClothing: ClothingOuterWizard
     shoes: ClothingShoesWizard
+    id: PassengerPDA
     ears: ClothingHeadsetService
 
 - type: startingGear
@@ -17,6 +18,7 @@
     head: ClothingHeadHatRedwizard
     outerClothing: ClothingOuterWizardRed
     shoes: ClothingShoesWizard
+    id: PassengerPDA
     ears: ClothingHeadsetService
 
 - type: startingGear
@@ -27,6 +29,7 @@
     head: ClothingHeadHatVioletwizard
     outerClothing: ClothingOuterWizardViolet
     shoes: ClothingShoesWizard
+    id: PassengerPDA
     ears: ClothingHeadsetService
 
 - type: startingGear
@@ -36,4 +39,5 @@
     back: ClothingBackpackFilled
     outerClothing: ClothingOuterHardsuitWizard
     shoes: ClothingShoesWizard
+    id: PassengerPDA
     ears: ClothingHeadsetService

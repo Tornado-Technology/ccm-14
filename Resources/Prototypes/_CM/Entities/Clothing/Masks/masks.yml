@@ -1,40 +1,37 @@
 - type: entity
-  parent: ClothingMaskPullableBase
-  id: ClothingMaskGasRebreather
-  name: rebreather
-  description: A close-fitting device that instantly heats or cools down air when you inhale so it doesn't damage your lungs.
-  components:
-  - type: Sprite
-    sprite: _CM/Clothing/Mask/rebreather.rsi
-  - type: Clothing
-    sprite: _CM/Clothing/Mask/rebreather.rsi
-  - type: BreathMask
-  - type: IngestionBlocker
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-
-- type: entity
   parent: ClothingMaskGas
-  id: ClothingMaskGasMarine
+  id: CMClothingMaskGas
   name: gas mask
   description: A face-covering mask that can be connected to an air supply. Filters harmful gases from the air.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Mask/gas_mask.rsi
+    sprite: _CM/Objects/Clothing/Mask/gas.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Mask/gas_mask.rsi
-  - type: IngestionBlocker
-  - type: IdentityBlocker
+    sprite: _CM/Objects/Clothing/Mask/gas.rsi
+  - type: Item
+    size: Small
 
 - type: entity
   parent: ClothingMaskPullableBase
-  id: ClothingMaskCoif
-  name: heat absorbent coif
-  description: A close-fitting cap that covers the top, back, and sides of the head. Can also be adjusted to cover the lower part of the face so it keeps the user warm in harsh conditions.
+  id: CMClothingMaskSterile
+  name: sterile mask
+  description: A sterile mask designed to help prevent the spread of diseases.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Mask/coif.rsi
+    sprite: _CM/Objects/Clothing/Mask/sterile.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Mask/coif.rsi
-  - type: IdentityBlocker
+    sprite: _CM/Objects/Clothing/Mask/sterile.rsi
+  - type: IngestionBlocker
+  - type: Item
+    storedRotation: -90
+
+- type: entity
+  parent: ClothingMaskGas
+  id: CMClothingMaskMedical
+  name: gas mask
+  description: A close-fitting sterile mask that can be connected to an air supply.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Clothing/Mask/medical.rsi
+  - type: Clothing
+    sprite: _CM/Objects/Clothing/Mask/medical.rsi
