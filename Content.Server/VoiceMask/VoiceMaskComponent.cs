@@ -15,12 +15,6 @@ public sealed partial class VoiceMaskComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public string VoiceName = "Unknown";
 
-    // Corvax-TTS-Start
-    [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
-    public string VoiceId = SharedHumanoidAppearanceSystem.DefaultVoice;
-    // Corvax-TTS-End
-
     /// <summary>
     /// If EnableSpeechVerbModification is true, overrides the speech verb used when this entity speaks.
     /// </summary>

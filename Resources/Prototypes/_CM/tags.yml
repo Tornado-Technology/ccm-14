@@ -2,9 +2,6 @@
   id: Marine
 
 - type: Tag
-  id: Whistle
-
-- type: Tag
   id: HandheldMap
 
 - type: Tag

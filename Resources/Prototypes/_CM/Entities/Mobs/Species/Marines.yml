@@ -303,7 +303,6 @@
   - type: MobPrice
     price: 1500
     deathPenalty: 0.01
-  - type: TTS # Corvax-TTS
   - type: Hunger
   - type: Thirst
   - type: Perishable

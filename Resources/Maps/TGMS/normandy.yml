@@ -2062,7 +2062,7 @@ entities:
       pos: 3.5,17.5
       parent: 1
       type: Transform
-- proto: VendingMachineMarineFood
+- proto: ColMarTechFood
   entities:
   - uid: 225
     components:

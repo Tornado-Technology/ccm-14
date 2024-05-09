@@ -44,7 +44,6 @@ public sealed class XenoRuleSystem : GameRuleSystem<XenoRuleComponent>
     {
         base.Initialize();
 
-        SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
         SubscribeLocalEvent<NukeExplodedEvent>(OnNukeExploded);
         SubscribeLocalEvent<NukeArmSuccessEvent>(OnNukeArmed);
         SubscribeLocalEvent<EmergencyRetreatDoneEvent>(OnEmergencyRetreatDone);

@@ -1,9 +1,0 @@
-- type: speechSounds
-  id: Xeno
-  saySound:
-    path: /Audio/_CM/Xeno/XenoSpeech/alien_talk.ogg
-  askSound:
-    path: /Audio/_CM/Xeno/XenoSpeech/alien_talk2.ogg
-  exclaimSound:
-    path: /Audio/_CM/Xeno/XenoSpeech/alien_talk3.ogg
-
