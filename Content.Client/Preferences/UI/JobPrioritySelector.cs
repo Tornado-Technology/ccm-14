@@ -23,6 +23,7 @@ public sealed class JobPrioritySelector : RequirementsSelector<JobPrototype>
     public JobPrioritySelector(RoleLoadout? loadout, JobPrototype proto, ButtonGroup btnGroup, IPrototypeManager protoMan)
         : base(proto, btnGroup)
     {
+        Visible = proto.IsCM;
         Options.OnItemSelected += args => PriorityChanged?.Invoke(Priority);
 
         var items = new[]

@@ -1,5 +1,5 @@
 - type: job
-  id: PilotRaptor
+  id: CMPilotGunship
   name: job-name-pilotraptor
   description: job-description-pilotraptor
   playTimeTracker: JobPilotRaptor
@@ -9,17 +9,15 @@
   canBeAntag: false
   requirements:
   - !type:OverallPlaytimeRequirement
-      time: 72000 # 20 hrs
+    time: 72000 # 20 hrs
   - !type:RoleTimeRequirement
-      role: JobPilotNormandy
-      time: 18000 # 5 hrs
+    role: JobPilotNormandy
+    time: 18000 # 5 hrs
   access:
   - Pilot
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: PilotRaptor
     - type: Skills
       intel: 1
       jtac: 2

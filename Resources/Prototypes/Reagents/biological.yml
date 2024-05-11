@@ -14,8 +14,6 @@
   recognizable: true
   physicalDesc: reagent-physical-desc-ferrous
   slippery: false
-  boilingPoint: 100.0 # CM - Optimization for removing debris caused by liquids
-  meltingPoint: 0.0 # CM
   metabolisms:
     Drink:
       effects:

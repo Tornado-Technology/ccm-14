@@ -1,0 +1,14 @@
+- type: entity
+  parent: Smoke
+  id: CMXenoAcidSmoke
+  name: acid smoke
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: _CM/Effects/chemsmoke.rsi
+    state: chemsmoke
+  - type: SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: CMXenoAcidSmokeReagent
+        Quantity: 30

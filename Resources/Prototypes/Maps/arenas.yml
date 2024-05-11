@@ -11,6 +11,6 @@
           mapNameTemplate: "Meteor Arena"
         - type: StationJobs
           overflowJobs:
-            - CharlieMarine # KEKW
+            - Passenger
           availableJobs:
-            CharlieMarine: [ -1, -1 ]
+            Passenger: [ -1, -1 ]

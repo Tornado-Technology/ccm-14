@@ -1,18 +1,18 @@
 - type: gameMap
-  id: TGCM_Desert
-  mapName: Desert Outpost
-  mapPath: /Maps/TGMS/DesertOutpost.yml
+  id: CMDesert
+  mapName: "Пустынный форпост"
+  mapPath: /Maps/_CM/desert_outpost.yml
   minPlayers: 0
   stations:
-    TGCM_Desert:
-      stationProto: StandardTGMSXeno
+    CMDesert:
+      stationProto: CMStandardXeno
       components:
-        - type: StationSpawning
-        - type: StationJobs
-          overflowJobs:
-            - Kseno
-          availableJobs:
-            Kseno: [ 17, 17 ]
-            Pretor: [ 1, 1 ]
-            Quinn: [ 1, 1 ]
-            Runi: [ 1, 1 ]
+      - type: StationSpawning
+      - type: StationJobs
+        overflowJobs:
+        - Kseno
+        availableJobs:
+          Kseno: [ 17, 17 ]
+          Pretor: [ 1, 1 ]
+          Quinn: [ 1, 1 ]
+          Runi: [ 1, 1 ]

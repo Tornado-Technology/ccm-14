@@ -1,17 +1,17 @@
 - type: gameMap
-  id: TGCM_Erida
-  mapName: Erida
-  mapPath: /Maps/TGMS/erida.yml
+  id: CMErida
+  mapName: "Эрида"
+  mapPath: /Maps/_CM/erida.yml
   minPlayers: 0
   stations:
-    TGCM_Erida:
-      stationProto: StandardTGMSXeno
+    CMErida:
+      stationProto: CMStandardXeno
       components:
-        - type: StationJobs
-          overflowJobs:
-            - Kseno
-          availableJobs:
-            Kseno: [ 17, 17 ]
-            Pretor: [ 1, 1 ]
-            Quinn: [ 1, 1 ]
-            Runi: [ 1, 1 ]
+      - type: StationJobs
+        overflowJobs:
+        - Kseno
+        availableJobs:
+          Kseno: [ 17, 17 ]
+          Pretor: [ 1, 1 ]
+          Quinn: [ 1, 1 ]
+          Runi: [ 1, 1 ]

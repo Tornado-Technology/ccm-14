@@ -210,3 +210,31 @@
     event: !type:XenoBoneChipsActionEvent
     useDelay: 12
     range: 15
+
+- type: entity
+  id: ActionXenoScreech
+  parent: ActionXenoBase
+  name: Screech (250)
+  description: Lie down to regenerate health and plasma more quickly while on weeds.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM/Actions/xeno_actions.rsi
+      state: screech
+    event: !type:XenoScreechActionEvent
+    useDelay: 50
+
+- type: entity
+  id: ActionXenoStomp
+  parent: ActionXenoBase
+  name: Stomp (20)
+  description: Lie down to regenerate health and plasma more quickly while on weeds.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _CM/Actions/xeno_actions.rsi
+      state: stomp
+    event: !type:XenoStompActionEvent
+    useDelay: 20

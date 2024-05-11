@@ -26,10 +26,14 @@
     # - ActionXenoWatch
     - ActionXenoTailStab
     #    - ActionXenoCharge
-    #    - ActionXenoStomp
+    - ActionXenoStomp
     #    - ActionXenoDefensiveShield
     tier: 3
   - type: XenoDevour
+  - type: XenoStomp
+    damage:
+      types:
+        Blunt: 60
   - type: XenoPlasma
     plasma: 400
     maxPlasma: 400

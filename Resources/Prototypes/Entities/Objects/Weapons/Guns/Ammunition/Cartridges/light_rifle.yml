@@ -1,6 +1,7 @@
 - type: entity
   id: BaseCartridgeLightRifle
   name: cartridge (.30 rifle)
+  parent: BaseCartridge
   abstract: true
   components:
   - type: Tag
@@ -9,7 +10,6 @@
     - CartridgeLightRifle
   - type: CartridgeAmmo
     proto: BulletLightRifle
-    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:

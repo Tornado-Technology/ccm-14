@@ -13,6 +13,7 @@
     - BaseStationNews
     - BaseStationCargo
     - BaseStationJobsSpawning
+    - BaseStationRecords
     - BaseStationArrivals
     - BaseStationGateway
     - BaseStationShuttles
@@ -44,6 +45,7 @@
   parent:
   - BaseStation
   - BaseStationJobsSpawning
+  - BaseStationRecords
   - BaseStationNanotrasen
   noSpawn: true
   components:

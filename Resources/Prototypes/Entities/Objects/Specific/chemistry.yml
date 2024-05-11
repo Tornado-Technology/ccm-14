@@ -514,7 +514,4 @@
     areaInsertRadius: 1
     storageInsertSound: /Audio/Effects/pill_insert.ogg
     storageRemoveSound: /Audio/Effects/pill_remove.ogg
-    whitelist:
-      tags:
-        - Pill
   - type: Dumpable

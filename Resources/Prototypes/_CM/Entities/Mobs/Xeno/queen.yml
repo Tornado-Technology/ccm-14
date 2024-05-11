@@ -49,7 +49,7 @@
 #    - ActionXenoRoyalJelly
 #    - ActionXenoMarkResin
     # Mature
-#    - ActionXenoScreech
+    - ActionXenoScreech
 #    - ActionXenoSpit
 #    - ActionXenoToggleSpitType
     # TODO CM14 fire immunity
@@ -73,6 +73,7 @@
     armor: 25
     explosionArmor: 100
   - type: XenoWordQueen
+  - type: XenoScreech
   - type: MeleeWeapon
     damage:
       groups:
@@ -121,3 +122,10 @@
       path: /Audio/_CM/Xeno/alien_queen_died.ogg
       params:
         volume: -6
+  - type: WhitelistPickup
+    any:
+    - type: XenoEgg
+  - type: XenoEvolutionGranter
+  - type: XenoEvolutionCapped
+    id: CMXenoQueen
+    max: 1

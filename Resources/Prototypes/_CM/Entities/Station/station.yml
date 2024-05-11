@@ -1,0 +1,37 @@
+- type: entity
+  id: CMStandardStation
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - CMBaseStationAlertLevels
+  - CMBaseStationArrivals
+  - BaseStationCargo
+  noSpawn: true
+  components:
+  - type: Transform
+
+- type: entity
+  id: CMStandardXeno
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - CMBaseStationAlertLevels
+  noSpawn: true
+  components:
+  - type: Transform
+
+- type: entity
+  id: CMBaseStationArrivals
+  abstract: true
+  components:
+  - type: StationArrivals
+    shuttlePath: /Maps/_CM/Shuttles/normandy.yml
+
+- type: entity
+  id: CMBaseStationAlertLevels
+  abstract: true
+  components:
+    - type: AlertLevel
+      alertLevelPrototype: CMStationAlerts

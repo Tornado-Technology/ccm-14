@@ -1,0 +1,52 @@
+- type: alertLevels
+  id: CMStationAlerts
+  defaultLevel: crimsonSword
+  levels:
+    crimsonSword:
+      announcement: alert-level-crimson-sword-announcement
+      color: Green
+      sound:
+        path: /Audio/_CM/Announcements/notice2.ogg
+        params:
+          volume: -3
+    eyeHope:
+      announcement: alert-level-eye-hope-announcement
+      color: Yellow
+      sound:
+        path: /Audio/_CM/Announcements/notice2.ogg
+        params:
+          volume: -3
+    shield:
+      announcement: alert-level-shield-announcement
+      color: Red
+      sound:
+        path: /Audio/_CM/Announcements/notice2.ogg
+        params:
+          volume: -3
+    citadel:
+      announcement: alert-level-citadel-announcement
+      color: DodgerBlue
+      sound:
+        path: /Audio/_CM/Announcements/notice1.ogg
+        params:
+          volume: -3
+    mayday:
+      announcement: alert-level-mayday-announcement
+      forceEnableEmergencyLights: true
+      emergencyLightColor: DarkViolet
+      color: DarkViolet
+      sound:
+        path: /Audio/Misc/delta_alt.ogg
+        params:
+          volume: -3
+    nuclearThreat:
+      announcement: alert-level-nuclear-threat-announcement
+      selectable: false
+      sound:
+        path: /Audio/_CM/Announcements/alarm4.ogg
+        params:
+          volume: -3
+      disableSelection: true
+      color: "#308e30"
+      emergencyLightColor: Green
+      forceEnableEmergencyLights: true

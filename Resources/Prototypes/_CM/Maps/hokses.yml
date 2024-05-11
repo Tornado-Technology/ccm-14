@@ -1,18 +1,18 @@
 - type: gameMap
-  id: TGCM_Hokses
-  mapName: Hokses
-  mapPath: /Maps/TGMS/Hokses.yml
+  id: CMHokses
+  mapName: "Хоксес"
+  mapPath: /Maps/_CM/hokses.yml
   minPlayers: 0
   stations:
-    TGCM_Hokses:
-      stationProto: StandardTGMSXeno
+    CMHokses:
+      stationProto: CMStandardXeno
       components:
-        - type: StationSpawning
-        - type: StationJobs
-          overflowJobs:
-            - Kseno
-          availableJobs:
-            Kseno: [ 17, 17 ]
-            Pretor: [ 1, 1 ]
-            Quinn: [ 1, 1 ]
-            Runi: [ 1, 1 ]
+      - type: StationSpawning
+      - type: StationJobs
+        overflowJobs:
+        - Kseno
+        availableJobs:
+          Kseno: [ 17, 17 ]
+          Pretor: [ 1, 1 ]
+          Quinn: [ 1, 1 ]
+          Runi: [ 1, 1 ]

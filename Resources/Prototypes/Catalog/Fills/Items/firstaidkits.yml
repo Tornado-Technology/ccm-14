@@ -31,10 +31,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: CMTraumaKit10
-      - id: CMGauze10
+      - id: Brutepack
+      - id: Gauze
       - id: PillCanisterIron
-      - id: PillCanisterBicaridine
+      - id: PillCanisterCopper
 
 - type: entity
   id: MedkitToxinFilled
@@ -43,9 +43,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: CMHealthAnalyzer
+      - id: SyringeIpecac
+      - id: SyringeEthylredoxrazine
       - id: AntiPoisonMedipen
-        amount: 2
       - id: PillCanisterDylovene
       - id: PillCanisterCharcoal
 
@@ -69,10 +69,11 @@
   components:
   - type: StorageFill
     contents:
+      - id: SyringePhalanximine
       - id: RadAutoInjector
-        amount: 2
+      - id: EmergencyMedipen
       - id: PillCanisterHyronalin
-      - id: PillCanisterArithrazine
+
 - type: entity
   id: MedkitAdvancedFilled
   suffix: Filled
@@ -92,12 +93,11 @@
   components:
   - type: StorageFill
     contents:
-      - id: CMHealthAnalyzer
-      - id: CMBurnKit10
-      - id: CMTraumaKit10
-      - id: CombatMedipen
-      - id: StimpackMini
-        amount: 3
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
+      - id: SyringeEphedrine
+      - id: BruteAutoInjector
+      - id: BurnAutoInjector
 
 - type: entity
   id: StimkitFilled

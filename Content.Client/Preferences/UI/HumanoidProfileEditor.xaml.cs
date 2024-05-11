@@ -540,7 +540,9 @@ namespace Content.Client.Preferences.UI
                             ("departmentName", departmentName))
                     };
 
-                    if (firstCategory)
+                    category.Visible = department.IsCM;
+
+                    if (firstCategory && category.Visible)
                     {
                         firstCategory = false;
                     }

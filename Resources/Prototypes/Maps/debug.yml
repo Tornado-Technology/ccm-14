@@ -11,9 +11,9 @@
           mapNameTemplate: "Empty"
         - type: StationJobs
           overflowJobs:
-            - MilitaryScientist
+            - Passenger
           availableJobs:
-            MilitaryScientist: [ -1, -1 ]
+            Passenger: [ -1, -1 ]
 
 - type: gameMap
   id: Dev
@@ -28,6 +28,23 @@
           mapNameTemplate: "Dev"
         - type: StationJobs
           overflowJobs:
-          - HeadOperations
+          - Captain
           availableJobs:
-            HeadOperations: [ -1, -1 ]
+            Captain: [ -1, -1 ]
+
+- type: gameMap
+  id: TestTeg
+  mapName: Test TEG
+  mapPath: /Maps/Test/test_teg.yml
+  minPlayers: 0
+  stations:
+    TEG:
+      stationProto: TestStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "TEG"
+        - type: StationJobs
+          overflowJobs:
+            - ChiefEngineer
+          availableJobs:
+            ChiefEngineer: [ -1, -1 ]

@@ -50,7 +50,6 @@
   - type: WirelessNetworkConnection
     range: 1200
   - type: StationLimitedNetwork
-  - type: WebbingClothing
 
 - type: entity
   abstract: true

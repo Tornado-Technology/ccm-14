@@ -12,18 +12,3 @@
         path: /Audio/Corvax/Announcements/centcomm.ogg
         params:
           volume: -4
-
-- type: entity
-  parent: ComputerComms
-  id: UGEComputerComms
-  name: uge communications computer
-  components:
-    - type: AccessReader
-      access: [[ "Command" ]]
-    - type: CommunicationsConsole
-      title: comms-console-announcement-title-uge
-      global: true
-      sound:
-        path: /Audio/Corvax/Announcements/OPS2.ogg
-        params:
-          volume: -4

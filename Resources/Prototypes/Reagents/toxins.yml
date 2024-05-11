@@ -192,10 +192,8 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: acid
   color: "#5050ff"
-  # boilingPoint: 165
-  # meltingPoint: -87
-  boilingPoint: 100.0 # CM - Optimization for removing debris caused by liquids
-  meltingPoint: 0.0 # CM
+  boilingPoint: 165
+  meltingPoint: -87
   reactiveEffects:
     Acidic:
       methods: [ Touch ]

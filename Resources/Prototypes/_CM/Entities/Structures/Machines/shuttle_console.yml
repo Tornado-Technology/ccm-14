@@ -16,16 +16,16 @@
   components:
   - type: Sprite
     state: console
-  # - type: DropshipNavigationComputer
-  # - type: ActivatableUI
-  #   key: enum.DropshipNavigationUiKey.Key
-  # - type: AccessReader
-  #   access: [["CMAccessPilot"]]
-  # - type: ActivatableUIRequiresAccess
-  # - type: UserInterface
-  #   interfaces:
-  #     enum.DropshipNavigationUiKey.Key:
-  #       type: DropshipNavigationBui
+  - type: DropshipNavigationComputer
+  - type: ActivatableUI
+    key: enum.DropshipNavigationUiKey.Key
+  - type: AccessReader
+    access: [["CMAccessPilot"]]
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.DropshipNavigationUiKey.Key:
+        type: DropshipNavigationBui
 
 # TODO CM14 alamo and normandy specific names for each
 - type: entity
@@ -55,5 +55,5 @@
   components:
   - type: Sprite
     state: green
-  # - type: FTLBeacon
-  # - type: DropshipDestination
+  - type: FTLBeacon
+  - type: DropshipDestination

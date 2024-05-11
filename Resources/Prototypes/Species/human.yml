@@ -2,9 +2,9 @@
   id: Human
   name: species-name-human
   roundStart: false
-  prototype: BaseMarine
+  prototype: MobHuman
   sprites: MobHumanSprites
-  markingLimits: MarineMarkingLimits
+  markingLimits: MobHumanMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
 

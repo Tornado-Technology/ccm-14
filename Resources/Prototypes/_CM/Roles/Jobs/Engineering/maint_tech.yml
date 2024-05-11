@@ -1,5 +1,5 @@
 - type: job
-  id: ShipsEngineer
+  id: CMMaintTech
   name: job-name-shipsengineer
   description: job-description-shipsengineer
   playTimeTracker: JobShipsEngineer
@@ -26,8 +26,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: ShipsEngineer
     - type: Skills
       domestics: 1
       construction: 3

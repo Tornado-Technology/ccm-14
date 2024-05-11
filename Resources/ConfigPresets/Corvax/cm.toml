@@ -1,0 +1,76 @@
+[net]
+tickrate        = 30
+max_connections = 150
+
+[game]
+hostname         = "🛰️ Corvax — Колониальные Морпехи 🌍 [Бета тест]"
+desc             = "Corvax первый русскоязычный проект в Space Station 14.\nНа Колониальных Морпехах средние требования к RP."
+defaultpreset    = "NuclearWar"
+map_pool         = "CMDefaultMapPool"
+fallbackenabled  = false
+soft_max_players = 100
+lobbyduration    = 240
+peaceful_end     = false
+
+[game.panic_bunker]
+custom_reason         = "Сервер находится в режиме бункер"
+enabled               = true
+disable_with_admins   = true
+enable_without_admins = true
+show_reason           = true
+deny_vpn              = true
+min_account_age       = 1440
+min_overall_hours     = 24
+
+[whitelist]
+enabled = false
+
+[vote]
+restart_required_ratio = 0.85
+same_type_timeout      = 300.0
+timerrestart           = 30
+map_enabled            = true
+preset_enabled         = false
+
+[shuttle]
+arrivals          = true
+arrivals_returns  = true
+arrivals_planet   = false
+arrivals_cooldown = 100.0
+auto_call_time    = 0
+
+[audio]
+ahelp_sound = "/Audio/_CM/Effects/Admin/adminhelp.ogg"
+
+[server]
+rules_header = "ui-rules-header-colonial-marines"
+rules_file   = "RulesCM.txt"
+
+[discord]
+rich_main_icon_id = "corvax"
+
+[rules]
+time = 45.0
+
+[viewport]
+maximum_width = 26
+
+[infolinks]
+discord = "https://discord.gg/VWJZFUWgRc"
+wiki    = "https://station14.ru/wiki/Колониальные_морпехи"
+patreon = "https://boosty.to/corvax"
+appeal  = "https://discord.gg/QBCV2f42xG"
+
+[ic]
+flavor_text            = true
+random_species_weights = ""
+show_ssd_indicator     = false
+
+[hub]
+tags = "lang:ru,rp:med,region:eu_e"
+
+[gateway]
+generator_enabled = false
+
+[procgen]
+preload = false

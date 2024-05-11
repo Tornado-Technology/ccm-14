@@ -1,6 +1,6 @@
 ﻿- type: entity
   noSpawn: true
-  parent: [BaseTraitorObjective]
+  parent: [BaseTraitorObjective, BaseLivingObjective]
   id: EscapeShuttleTwinObjective
   name: Escape to centcom alive and unrestrained.
   description: Continue your covert implementation already on Centcom.
@@ -10,11 +10,11 @@
       icon:
         sprite: Structures/Furniture/chairs.rsi
         state: shuttle
-      issuer: syndicate
+    - type: EscapeShuttleCondition
 
 - type: entity
   noSpawn: true
-  parent: [BaseTraitorObjective]
+  parent: [BaseTraitorObjective, BaseKillObjective]
   id: KillTwinObjective
   name: Kill original persona.
   description: Kill your original persona and take his place.
@@ -22,4 +22,5 @@
     - type: Objective
       difficulty: 1.75
       unique: false
-      issuer: syndicate
+    - type: TargetObjective
+      title: objective-condition-kill-person-title

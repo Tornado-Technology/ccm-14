@@ -47,9 +47,6 @@
   - type: Pinpointer
     component: NukeDisk
     targetName: nuclear authentication disk
-  - type: Tag
-    tags:
-    - Pinpointer
 
 - type: entity
   name: syndicate pinpointer

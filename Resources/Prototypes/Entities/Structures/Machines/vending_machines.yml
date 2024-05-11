@@ -411,7 +411,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.9
+    initialStockQuality: 0.33
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: SpeakOnUIClosed
@@ -556,7 +557,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.9
+    initialStockQuality: 0.33
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: Speech
@@ -590,7 +592,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.9
+    initialStockQuality: 0.33
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: SpeakOnUIClosed
@@ -626,7 +629,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.9
+    initialStockQuality: 0.33
   - type: Advertise
     pack: RobustSoftdrinksAds
   - type: SpeakOnUIClosed
@@ -787,7 +791,7 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.3
+    ejectDelay: 0.6
   - type: Advertise
     pack: NanoMedAds
   - type: SpeakOnUIClosed
@@ -1254,7 +1258,7 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.8
   - type: Advertise
     pack: GoodCleanFunAds
   - type: SpeakOnUIClosed
@@ -1999,7 +2003,7 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
-    ejectDelay: 0.5
+    ejectDelay: 1.9
     soundVend: /Audio/Items/bikehorn.ogg
     initialStockQuality: 1.0 # Nobody knows how Honk does it, but their vending machines always seem well-stocked...
   - type: Sprite

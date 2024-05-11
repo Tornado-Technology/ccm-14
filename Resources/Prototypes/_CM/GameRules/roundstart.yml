@@ -1,0 +1,14 @@
+# custom main marine gamerule
+- type: entity
+  id: Xeno
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: XenoRule
+  
+- type: entity
+  id: Barrier
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: CMBarrierRule

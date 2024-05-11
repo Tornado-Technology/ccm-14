@@ -226,12 +226,3 @@
     Steel: 600
     Plastic: 300
 
-- type: latheRecipe
-  id: Hypospray
-  result: Hypospray
-  completetime: 6
-  materials:
-    Steel: 100
-    Glass: 500
-    Plasma: 100
-    Gold: 50

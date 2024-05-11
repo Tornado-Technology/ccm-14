@@ -612,25 +612,3 @@
     Steel: 250
     Glass: 250
     Plastic: 250
-
-- type: latheRecipe
-  id: BorgModuleWeaponLaserSimple
-  result: BorgModuleWeaponLaserSimple
-  category: Robotics
-  completetime: 3
-  materials:
-    Steel: 500
-    Glass: 500
-    Plastic: 250
-    Gold: 50
-
-- type: latheRecipe
-  id: BorgModuleWeaponLaserAdvanced
-  result: BorgModuleWeaponLaserAdvanced
-  category: Robotics
-  completetime: 3
-  materials:
-    Steel: 1000
-    Glass: 1000
-    Plastic: 500
-    Gold: 100

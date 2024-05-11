@@ -1,5 +1,3 @@
-using Content.Shared.Damage;
-using Content.Shared.Tag;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio;
@@ -140,6 +138,12 @@ public sealed partial class GunComponent : Component
     public EntityCoordinates? ShootCoordinates = null;
 
     /// <summary>
+    /// Who the gun is being requested to shoot at directly.
+    /// </summary>
+    [ViewVariables]
+    public EntityUid? Target = null;
+
+    /// <summary>
     ///     The base value for how many shots to fire per burst.
     /// </summary>
     [DataField, AutoNetworkedField]
@@ -226,13 +230,8 @@ public sealed partial class GunComponent : Component
     /// Whether or not someone with the
     /// clumsy trait can shoot this
     /// </summary>
-    [DataField("clumsyProof")]
-    public bool ClumsyProof = false;
-
-    // CCM change start
     [DataField]
-    public bool StopMeleeOnShoot = true;
-    // CCM change end
+    public bool ClumsyProof = false;
 }
 
 [Flags]
@@ -243,5 +242,4 @@ public enum SelectiveFire : byte
     SemiAuto = 1 << 0,
     Burst = 1 << 1,
     FullAuto = 1 << 2, // Not in the building!
-    burst = 1 << 2, // Not in the building!
 }

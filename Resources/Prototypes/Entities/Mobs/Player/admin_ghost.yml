@@ -101,8 +101,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
@@ -114,8 +114,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
@@ -127,8 +127,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
@@ -140,8 +140,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
@@ -153,8 +153,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
@@ -166,8 +166,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: Corvax/Interface/AdminActions/records.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/records.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }

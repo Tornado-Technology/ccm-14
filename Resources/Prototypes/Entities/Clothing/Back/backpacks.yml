@@ -187,16 +187,8 @@
   name: merc bag
   description: A backpack that has been in many dangerous places, a reliable combat backpack.
   components:
-  - type: Storage
-    quickInsert: true
-    grid:
-    - 0,0,8,3 # TODO: Change this
-    - 0,5,1,6
-    - 3,5,5,6
-    - 7,5,8,6
-    maxItemSize: Huge
-  - type: Sprite
-    sprite: Clothing/Back/Backpacks/merc.rsi
+    - type: Sprite
+      sprite: Clothing/Back/Backpacks/merc.rsi
 
 #ERT
 - type: entity

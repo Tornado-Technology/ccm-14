@@ -1,0 +1,10 @@
+- type: gamePreset
+  id: NuclearWar
+  alias:
+  - NuclearWar
+  name: xeno-title
+  description: xeno-description
+  showInVote: true
+  rules:
+  - Xeno
+  - Barrier

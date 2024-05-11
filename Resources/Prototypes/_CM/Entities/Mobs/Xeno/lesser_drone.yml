@@ -50,3 +50,17 @@
   - type: Tackle
     threshold: 5
     stun: 5
+  - type: DamageOffWeeds
+    damage:
+      types:
+        Blunt: 2.5
+  - type: WhitelistPickup
+    any:
+    - type: XenoHugger
+    - type: XenoEgg
+  - type: MultiHandedHolder
+    items:
+    - hands: 2
+      whitelist:
+        components:
+        - XenoEgg

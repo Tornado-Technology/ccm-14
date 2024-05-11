@@ -61,12 +61,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: CMScalpel
-      - id: CMRetractor
-      - id: CMCautery
-      - id: CMSurgicalDrill
-      - id: CMCircularSaw
-      - id: CMHemostat
+      - id: Scalpel
+      - id: Retractor
+      - id: Cautery
+      - id: Drill
+      - id: Saw
+      - id: Hemostat
       - id: ClothingMaskSterile
 
 - type: entity

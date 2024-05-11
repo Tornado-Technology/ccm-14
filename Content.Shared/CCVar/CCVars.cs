@@ -154,7 +154,7 @@ namespace Content.Shared.CCVar
         ///     Controls the default game preset.
         /// </summary>
         public static readonly CVarDef<string>
-            GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "NuclearWar", CVar.ARCHIVE);
+            GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
 
         /// <summary>
         ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -166,7 +166,7 @@ namespace Content.Shared.CCVar
         ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
         /// </summary>
         public static readonly CVarDef<string>
-            GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "", CVar.ARCHIVE);
+            GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Traitor,Extended", CVar.ARCHIVE);
 
         /// <summary>
         ///     Controls if people can win the game in Suspicion or Deathmatch.
@@ -229,25 +229,6 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool>
             GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", false, CVar.SERVER | CVar.REPLICATED);
-
-        /// <summary>
-        ///     Whether a random position offset will be applied to the station on roundstart.
-        /// </summary>
-        public static readonly CVarDef<bool> StationOffset =
-            CVarDef.Create("game.station_offset", false);
-
-        /// <summary>
-        /// When the default blueprint is loaded what is the maximum amount it can be offset from 0,0.
-        /// Does nothing without <see cref="StationOffset"/> as true.
-        /// </summary>
-        public static readonly CVarDef<float> MaxStationOffset =
-            CVarDef.Create("game.maxstationoffset", 1000.0f);
-
-        /// <summary>
-        ///     Whether a random rotation will be applied to the station on roundstart.
-        /// </summary>
-        public static readonly CVarDef<bool> StationRotation =
-            CVarDef.Create("game.station_rotation", false);
 
         /// <summary>
         ///     When enabled, guests will be assigned permanent UIDs and will have their preferences stored.
@@ -431,7 +412,7 @@ namespace Content.Shared.CCVar
         ///     Whether tips being shown is enabled at all.
         /// </summary>
         public static readonly CVarDef<bool> TipsEnabled =
-            CVarDef.Create("tips.enabled", false);
+            CVarDef.Create("tips.enabled", true);
 
         /// <summary>
         ///     The dataset prototype to use when selecting a random tip.
@@ -634,7 +615,7 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AdminChatSoundVolume =
             CVarDef.Create("audio.admin_chat_sound_volume", -5f, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
         public static readonly CVarDef<string> AHelpSound =
-            CVarDef.Create("audio.ahelp_sound", "/Audio/_CM/Effects/Admin/adminhelp.ogg", CVar.ARCHIVE | CVar.CLIENTONLY);
+            CVarDef.Create("audio.ahelp_sound", "/Audio/Effects/adminhelp.ogg", CVar.ARCHIVE | CVar.CLIENTONLY);
 
         /*
          * HUD
@@ -1362,7 +1343,7 @@ namespace Content.Shared.CCVar
         /// Whether the arrivals terminal should be on a planet map.
         /// </summary>
         public static readonly CVarDef<bool> ArrivalsPlanet =
-            CVarDef.Create("shuttle.arrivals_planet", false, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_planet", true, CVar.SERVERONLY);
 
         /// <summary>
         /// Whether the arrivals shuttle is enabled.
@@ -1380,7 +1361,7 @@ namespace Content.Shared.CCVar
         /// Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.
         /// </summary>
         public static readonly CVarDef<float> ArrivalsCooldown =
-            CVarDef.Create("shuttle.arrivals_cooldown", 100f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_cooldown", 50f, CVar.SERVERONLY);
 
         /// <summary>
         /// Are players allowed to return on the arrivals shuttle.
@@ -1446,7 +1427,7 @@ namespace Content.Shared.CCVar
         ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
         /// </summary>
         public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-            CVarDef.Create("shuttle.auto_call_time", 0, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.auto_call_time", 90, CVar.SERVERONLY);
 
         /// <summary>
         ///     Time in minutes after the round was extended (by recalling the shuttle) to call

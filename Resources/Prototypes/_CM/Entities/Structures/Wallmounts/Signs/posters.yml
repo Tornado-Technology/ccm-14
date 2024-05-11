@@ -418,3 +418,81 @@
   components:
   - type: Sprite
     state: falling_falcons
+
+# Постеры ОПЗ
+
+- type: entity
+  parent: PosterBase
+  id: PosterUGE_1
+  name: United Government of Earth
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm1
+
+- type: entity
+  parent: PosterBase
+  id: PosterUGE_2
+  name: United Government of Earth
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm5
+
+- type: entity
+  parent: PosterBase
+  id: PosterUGE_3
+  name: United Government of Earth
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm6
+
+# Постеры CША
+- type: entity
+  parent: PosterBase
+  id: PosterUSA_1
+  name: United States of America
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm2
+
+- type: entity
+  parent: PosterBase
+  id: PosterUSA_2
+  name: United States of America
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm3
+
+- type: entity
+  parent: PosterBase
+  id: PosterUSA_3
+  name: United States of America
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster_cm4
+
+# Микс постеры
+
+- type: entity
+  parent: PosterBase
+  id: Poster_mix_1
+  name: Phew phew!
+  description: Thats what I'm pround of!
+  components:
+  - type: Sprite
+    state: poster002_legit
+
+- type: entity
+  parent: PosterBase
+  id: Poster_mix_2
+  name: NUKIE!!!!
+  description: Whis I could NUKIE!!!
+  components:
+  - type: Sprite
+    state: poster003_legit
+

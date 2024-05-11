@@ -51,8 +51,8 @@
     types:
       Radiation: 5
       Heat: 4
-      Blunt: 4
-      Piercing: 5
+      Blunt: 3
+      Piercing: 3
   lightColor: Green
   fireColor: Green
   texturePath: /Textures/Effects/fire_greyscale.rsi
@@ -133,17 +133,3 @@
 # STOP
 # BEFORE YOU ADD MORE EXPLOSION TYPES CONSIDER IF AN EXISTING ONE IS SUITABLE
 # ADDING NEW ONES IS PROHIBITIVELY EXPENSIVE
-
-- type: explosion
-  id: CASBombExplosion
-  damagePerIntensity:
-    types:
-      Heat: 5
-      Blunt: 10
-      Piercing: 10
-  tileBreakChance: [ 0, 0.5, 1 ]
-  tileBreakIntensity: [ 0, 10, 30 ]
-  tileBreakRerollReduction: 20
-  lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
-  fireStates: 3

@@ -396,10 +396,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
-      - !type:HealthChange
-        damage:
-          types:
-            Radiation: -0.25
 
 - type: reagent
   id: Whiskey

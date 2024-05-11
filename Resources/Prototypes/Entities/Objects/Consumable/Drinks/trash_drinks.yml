@@ -288,8 +288,6 @@
   parent: DrinkBottleBaseEmpty
   id: DrinkBottleVodka
   components:
-  - type: Item
-    size: Normal
   - type: Sprite
     sprite: Objects/Consumable/TrashDrinks/vodkabottle_empty.rsi
 

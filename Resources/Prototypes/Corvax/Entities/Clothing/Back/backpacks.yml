@@ -7,10 +7,8 @@
   - type: Sprite
     sprite: Corvax/Back/Backpacks/military.rsi
   - type: Storage
-    quickInsert: true
     grid:
-    - 0,0,8,3 # TODO: Change this
-    - 2,5,6,6
+    - 0,0,6,3 # TODO: Change this
     maxItemSize: Huge
 
 - type: entity

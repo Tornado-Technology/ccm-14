@@ -166,14 +166,14 @@
   components:
   - type: StorageFill
     contents:
-    - id: DrinkMREFlask
-    - id: FoodSnackNutribrick
-    - id: FoodSnackMREBrownie
-    - id: FoodCondimentPacketKetchup
+      - id: DrinkMREFlask
+      - id: FoodSnackNutribrick
+      - id: FoodSnackMREBrownie
+      - id: FoodCondimentPacketKetchup
   - type: Sprite
     layers:
-    - state: box_olive
-    - state: writing
+      - state: box_olive
+      - state: writing
 
 - type: entity
   parent: BoxHug
@@ -475,43 +475,3 @@
     layers:
       - state: box
       - state: darts
-
-- type: entity
-  name: alpha encryption key box
-  parent: BoxEncryptionKeyPassenger
-  id: BoxEncryptionKeyAlpha
-  components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyAlpha
-        amount: 4
-
-- type: entity
-  name: bravo encryption key box
-  parent: BoxEncryptionKeyPassenger
-  id: BoxEncryptionKeyBravo
-  components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyBravo
-        amount: 4
-
-- type: entity
-  name: charlie encryption key box
-  parent: BoxEncryptionKeyPassenger
-  id: BoxEncryptionKeyCharlie
-  components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyCharlie
-        amount: 4
-
-- type: entity
-  name: delta encryption key box
-  parent: BoxEncryptionKeyPassenger
-  id: BoxEncryptionKeyDelta
-  components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyDelta
-        amount: 4

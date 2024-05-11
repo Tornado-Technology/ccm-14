@@ -110,6 +110,6 @@
     - type: FaxMachine
       name: "Captain's Office"
       receiveNukeCodes: true
-      receiveStationGoal: false # Corvax-StationGoal
+      receiveStationGoal: true # Corvax-StationGoal
     - type: StealTarget
       stealGroup: FaxMachineCaptain

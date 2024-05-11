@@ -94,6 +94,10 @@
     amount: 0
     maxAmount: 4
 
+  - id: WeaponLauncherChinaLake
+    prob: 0.30
+    maxAmount: 3
+
   - id: WeaponLauncherRocket
     prob: 0.20
     maxAmount: 3

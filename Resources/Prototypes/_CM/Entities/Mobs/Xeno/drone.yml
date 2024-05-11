@@ -37,6 +37,7 @@
     - ActionXenoSecreteStructure
     - ActionXenoTransferPlasma
     - ActionXenoEvolve300
+    hudOffset: 0,0.15
     tier: 1
   - type: XenoAcid
   - type: XenoConstruction
@@ -53,6 +54,7 @@
     - CMXenoCarrier
     - CMXenoBurrower
     - CMXenoHivelord
+    - CMXenoQueen
   - type: XenoPheromones
     pheromonesMultiplier: 2
   - type: XenoPlasma
@@ -62,3 +64,13 @@
   - type: Tackle
     threshold: 4
     stun: 7
+  - type: WhitelistPickup
+    any:
+    - type: XenoHugger
+    - type: XenoEgg
+  - type: MultiHandedHolder
+    items:
+    - hands: 2
+      whitelist:
+        components:
+        - XenoEgg

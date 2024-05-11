@@ -31,7 +31,7 @@ public sealed class CPRSystem : EntitySystem
     [ValidatePrototypeId<DamageTypePrototype>]
     private const string HealType = "Asphyxiation";
 
-    private static readonly FixedPoint2 HealAmount = FixedPoint2.New(5);
+    private static readonly FixedPoint2 HealAmount = FixedPoint2.New(10);
 
     public override void Initialize()
     {

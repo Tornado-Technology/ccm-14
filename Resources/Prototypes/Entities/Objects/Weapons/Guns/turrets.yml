@@ -43,8 +43,8 @@
       fixtures:
         fix1:
           shape:
-            !type:PhysShapeCircle
-            radius: 0.3
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
           density: 60
           mask:
             - MachineMask
@@ -73,13 +73,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 100
+            damage: 600
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 100
+            damage: 300
           # TODO: Construction graph
           behaviors:
             - !type:DoActsBehavior
@@ -141,7 +141,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 200
+            damage: 600
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]

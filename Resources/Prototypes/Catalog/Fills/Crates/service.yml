@@ -89,6 +89,9 @@
     - id: RevolverCapGun
     - id: BarberScissors
     - id: ClothingUniformJumpskirtOldDress
+    - id: BikeHorn
+    - id: ClownRecorder
+    - id: ClothingBeltSuspenders
 
 - type: entity
   id: CrateServiceCustomSmokable
@@ -126,16 +129,16 @@
     - id: BoxFolderYellow
     - id: NewtonCradle
 
-#- type: entity
-#  id: CrateServicePersonnel
-#  parent: CrateCommandSecure
-#  name: personnel crate
-#  description: Contains a box of blank ID cards and PDAs.
-#  components:
-#  - type: StorageFill
-#    contents:
-#    - id: BoxPDA
-#    - id: BoxID
+- type: entity
+  id: CrateServicePersonnel
+  parent: CrateCommandSecure
+  name: personnel crate
+  description: Contains a box of blank ID cards and PDAs.
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxPDA
+    - id: BoxID
 
 - type: entity
   id: CrateServiceBooks

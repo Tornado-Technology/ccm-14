@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CM/Structures/cryostorage.rsi
+    sprite: Structures/cryostorage.rsi
     layers:
     - state: sleeper_0
       map: ["base"]

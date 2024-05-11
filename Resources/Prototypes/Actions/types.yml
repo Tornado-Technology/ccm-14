@@ -212,19 +212,6 @@
     priority: -100
 
 - type: entity
-  id: ActionXenoCombatModeToggle
-  name: "[color=red]Combat Mode[/color]"
-  description: Enter combat mode
-  noSpawn: true
-  components:
-  - type: InstantAction
-    checkCanInteract: false
-    icon: Interface/Actions/harmXenoOff.png
-    iconOn: Interface/Actions/harmXeno.png
-    event: !type:ToggleCombatActionEvent
-    priority: -100
-
-- type: entity
   id: ActionCombatModeToggleOff
   parent: ActionCombatModeToggle
   name: "[color=red]Combat Mode[/color]"
@@ -236,18 +223,6 @@
     autoPopulate: false
     priority: -100
 
-- type: entity
-  id: ActionXenoCombatModeToggleOff
-  parent: ActionXenoCombatModeToggle
-  name: "[color=red]Combat Mode[/color]"
-  description: Enter combat mode
-  noSpawn: true
-  components:
-  - type: InstantAction
-    enabled: false
-    autoPopulate: false
-    priority: -100
-  
 - type: entity
   id: ActionChangeVoiceMask
   name: Set name

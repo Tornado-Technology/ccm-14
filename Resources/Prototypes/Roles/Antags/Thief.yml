@@ -2,5 +2,5 @@
   id: Thief
   name: roles-antag-thief-name
   antagonist: true
-  setPreference: false
+  setPreference: true
   objective: roles-antag-thief-objective

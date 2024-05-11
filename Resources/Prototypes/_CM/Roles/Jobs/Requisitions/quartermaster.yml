@@ -1,46 +1,46 @@
-- type: job
-  id: SupplyOfficer
-  name: job-name-supplyofficer
-  description: job-description-supplyofficer
-  playTimeTracker: JobSupplyOfficer
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobRigger
-      time: 36000 # 10 hrs
-  weight: 5
-  startingGear: CMGearQuartermaster
-  icon: "CMJobIconQuartermaster"
-  requireAdminNotify: true
-  joinNotifyCrew: true
-  supervisors: job-supervisors-staff-officer
-  canBeAntag: false
-  accessGroups:
-  - CMQM
-  special:
-  - !type:AddComponentSpecial
-    components:
-    - type: JobRank
-      job: SupplyOfficer
-    - type: Skills
-      construction: 2
-      fireman: 1
-      intel: 1
-      jtac: 3
-      leadership: 2
-      overwatch: 1
-      police: 1
-      powerLoader: 2
-    - type: MarineOrders
+# - type: job
+#   id: SupplyOfficer
+#   name: job-name-supplyofficer
+#   description: job-description-supplyofficer
+#   playTimeTracker: JobSupplyOfficer
+#   requirements:
+#     - !type:RoleTimeRequirement
+#       role: JobRigger
+#       time: 36000 # 10 hrs
+#   weight: 5
+#   startingGear: CMGearQuartermaster
+#   icon: "CMJobIconQuartermaster"
+#   requireAdminNotify: true
+#   joinNotifyCrew: true
+#   supervisors: job-supervisors-staff-officer
+#   canBeAntag: false
+#   accessGroups:
+#   - CMQM
+#   special:
+#   - !type:AddComponentSpecial
+#     components:
+#     - type: JobRank
+#       job: SupplyOfficer
+#     - type: Skills
+#       construction: 2
+#       fireman: 1
+#       intel: 1
+#       jtac: 3
+#       leadership: 2
+#       overwatch: 1
+#       police: 1
+#       powerLoader: 2
+#     - type: MarineOrders
 
-- type: startingGear
-  id: CMGearQuartermaster
-  equipment:
-    jumpsuit: CMJumpsuitQM
-    back: CMSatchelMarineTech
-    shoes: CMBootsBlack
-    head: CMHeadCapCargo
-    gloves: CMHandsInsulated
-    id: CMIDCardQuartermaster
-    ears: CMHeadsetQM
-    pocket1: CMPouchGeneralMedium
-    pocket2: Flash # TODO CM14 cm flash
+# - type: startingGear
+#   id: CMGearQuartermaster
+#   equipment:
+#     jumpsuit: CMJumpsuitQM
+#     back: CMSatchelMarineTech
+#     shoes: CMBootsBlack
+#     head: CMHeadCapCargo
+#     gloves: CMHandsInsulated
+#     id: CMIDCardQuartermaster
+#     ears: CMHeadsetQM
+#     pocket1: CMPouchGeneralMedium
+#     pocket2: Flash # TODO CM14 cm flash

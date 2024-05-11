@@ -1,46 +1,46 @@
 - type: gameMap
-  id: valkyrie
-  mapName: Valkyrie
-  mapPath: /Maps/TGMS/Valkyrie_2.yml
+  id: CMValkyrie
+  mapName: "Валькирия"
+  mapPath: /Maps/_CM/valkyrie.yml
   minPlayers: 0
   stations:
-    TGMS_Valkyrie:
-      stationProto: StandardTGMSStation
+    CMValkyrie:
+      stationProto: CMStandardStation
       components:
-        - type: StationJobs
-          availableJobs:
-            AlfaMarine: [ 8, 8 ]
-            AlfaMedic: [ 1, 1 ]
-            AlfaEngineer: [ 1, 1 ]
-            AlfaCommander: [ 1, 1 ]
-            AlfaSpecialist: [ 1, 1 ]
-            DeltaMarine: [ 8, 8 ]
-            DeltaMedic: [ 1, 1 ]
-            DeltaEngineer: [ 1, 1 ]
-            DeltaCommander: [ 1, 1 ]
-            DeltaSpecialist: [ 1, 1 ]
-            BravoMarine: [ 8, 8 ]
-            BravoMedic: [ 1, 1 ]
-            BravoEngineer: [ 1, 1 ]
-            BravoCommander: [ 1, 1 ]
-            BravoSpecialist: [ 1, 1 ]
-            CharlieMarine: [ 8, 8 ]
-            CharlieMedic: [ 1, 1 ]
-            CharlieEngineer: [ 1, 1 ]
-            CharlieCommander: [ 1, 1 ]
-            CharlieSpecialist: [ 1, 1 ]
-            MilitaryPoliceman: [ 3, 3 ]
-            MilitaryPoliceOfficer: [ 1, 1 ]
-            MilitaryScientist: [ 2, 2 ]
-            SupplyOfficer: [ 1, 1 ]
-            Rigger: [ 2, 2 ]
-            MilitaryMedic: [ 4, 4 ]
-            MilitaryMainMedic: [ 2, 1 ]
-            ChiefShipsEngineer: [ 2, 1 ]
-            ShipsEngineer: [ 2, 2 ]
-            HeadOperations: [ 1, 1 ]
-            FieldCommander: [ 1, 1 ]
-            StaffOfficer: [ 1, 1 ]
-            PilotRaptor: [ 1, 1 ]
-            PilotNormandy: [ 1, 1 ]
-            PilotMech: [ 1, 1 ]
+      - type: StationJobs
+        availableJobs:
+          AlfaMarine: [ 8, 8 ]
+          AlfaMedic: [ 1, 1 ]
+          AlfaEngineer: [ 1, 1 ]
+          AlfaCommander: [ 1, 1 ]
+          AlfaSpecialist: [ 1, 1 ]
+          DeltaMarine: [ 8, 8 ]
+          DeltaMedic: [ 1, 1 ]
+          DeltaEngineer: [ 1, 1 ]
+          DeltaCommander: [ 1, 1 ]
+          DeltaSpecialist: [ 1, 1 ]
+          BravoMarine: [ 8, 8 ]
+          BravoMedic: [ 1, 1 ]
+          BravoEngineer: [ 1, 1 ]
+          BravoCommander: [ 1, 1 ]
+          BravoSpecialist: [ 1, 1 ]
+          CharlieMarine: [ 8, 8 ]
+          CharlieMedic: [ 1, 1 ]
+          CharlieEngineer: [ 1, 1 ]
+          CharlieCommander: [ 1, 1 ]
+          CharlieSpecialist: [ 1, 1 ]
+          MilitaryPoliceman: [ 3, 3 ]
+          MilitaryPoliceOfficer: [ 1, 1 ]
+          MilitaryScientist: [ 2, 2 ]
+          SupplyOfficer: [ 1, 1 ]
+          Rigger: [ 2, 2 ]
+          MilitaryMedic: [ 4, 4 ]
+          MilitaryMainMedic: [ 2, 1 ]
+          ChiefShipsEngineer: [ 2, 1 ]
+          ShipsEngineer: [ 2, 2 ]
+          HeadOperations: [ 1, 1 ]
+          FieldCommander: [ 1, 1 ]
+          StaffOfficer: [ 1, 1 ]
+          PilotRaptor: [ 1, 1 ]
+          PilotNormandy: [ 1, 1 ]
+          PilotMech: [ 1, 1 ]

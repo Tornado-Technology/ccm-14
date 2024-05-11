@@ -1,14 +1,4 @@
 - type: cargoProduct
-  id: EngineAmeShielding
-  icon:
-    sprite: Objects/Power/AME/ame_part.rsi
-    state: box
-  product: CrateEngineeringAMEShielding
-  cost: 6000
-  category: Engineering
-  group: market
-
-- type: cargoProduct
   id: EngineAmeJar
   icon:
     sprite: Objects/Power/AME/ame_jar.rsi
@@ -19,7 +9,7 @@
   group: market
 
 - type: cargoProduct
-  id: EngineAmeControl
+  id: EngineSingularityGenerator
   icon:
     sprite: Structures/Power/Generation/Singularity/generator.rsi
     state: icon

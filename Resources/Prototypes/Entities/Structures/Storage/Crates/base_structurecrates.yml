@@ -97,7 +97,6 @@
   components:
   - type: Weldable
   - type: ResistLocker
-  - type: RequisitionsCrate
 
 - type: entity
   parent: CrateBaseWeldable

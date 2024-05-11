@@ -4,18 +4,18 @@
   description: job-description-staffofficer
   playTimeTracker: JobStaffOfficer
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobMilitaryPoliceOfficer
-      time: 3600 # 1 hrs
-    - !type:RoleTimeRequirement
-      role: JobSupplyOfficer
-      time: 3600 # 1 hrs
-    - !type:RoleTimeRequirement
-      role: JobFieldCommander
-      time: 3600 # 1 hrs
-    - !type:DepartmentTimeRequirement
-      department: CommandersGarrisons
-      time: 3600 # 1 hrs
+  # - !type:RoleTimeRequirement
+  #   role: JobMilitaryPoliceOfficer
+  #   time: 3600 # 1 hrs
+  # - !type:RoleTimeRequirement
+  #   role: JobSupplyOfficer
+  #   time: 3600 # 1 hrs
+  - !type:RoleTimeRequirement
+    role: JobFieldCommander
+    time: 3600 # 1 hrs
+  - !type:DepartmentTimeRequirement
+    department: CMCommand
+    time: 3600 # 1 hrs
   weight: 5
   startingGear: CMGearStaffOfficer
   icon: "CMJobIconStaffOfficer"
@@ -26,8 +26,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: StaffOfficer
     - type: Skills
       construction: 2
       engineer: 2

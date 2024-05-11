@@ -1,5 +1,5 @@
 - type: job
-  id: PilotNormandy
+  id: CMPilotDropship
   name: job-name-pilotnormandy
   description: job-description-pilotnormandy
   playTimeTracker: JobPilotNormandy
@@ -8,12 +8,10 @@
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
   access:
-    - Pilot
+  - Pilot
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: PilotNormandy
     - type: Skills
       intel: 1
       jtac: 2

@@ -20,12 +20,12 @@
             Caustic: 1.5
 
 - type: reagent
-  id: XenoAcidSmoke
+  id: CMXenoAcidSmokeReagent
   name: reagent-name-xeno-acid
   group: Toxins
   desc: reagent-desc-xeno-acid
   physicalDesc: reagent-physical-desc-strong-smelling
-  color: "#00cc33" # maybe change?
+  color: "#ffffff"
   boilingPoint: 4200.0
   meltingPoint: 3550.0
   slippery: false

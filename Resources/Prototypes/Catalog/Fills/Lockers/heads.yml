@@ -29,9 +29,9 @@
   - type: StorageFill
     contents:
       - id: ClothingOuterArmorCaptainCarapace
-#      - id: NukeDisk
+      - id: NukeDisk
       - id: PinpointerNuclear
-#      - id: CaptainIDCard
+      - id: CaptainIDCard
       - id: ClothingOuterHardsuitCap
       - id: ClothingMaskGasCaptain
       - id: WeaponDisabler
@@ -57,9 +57,9 @@
   - type: StorageFill
     contents:
       - id: ClothingOuterArmorCaptainCarapace
-#      - id: NukeDisk
+      - id: NukeDisk
       - id: PinpointerNuclear
-#      - id: CaptainIDCard
+      - id: CaptainIDCard
       - id: WeaponDisabler
       - id: CommsComputerCircuitboard
       - id: ClothingHeadsetAltCommand
@@ -111,10 +111,10 @@
   components:
   - type: StorageFill
     contents:
-#      - id: HoPIDCard
+      - id: HoPIDCard
       - id: ClothingHeadsetCommand
-#      - id: BoxPDA
-#      - id: BoxID
+      - id: BoxPDA
+      - id: BoxID
       - id: BoxHeadset
       - id: IDComputerCircuitboard
       - id: WeaponDisabler
@@ -313,8 +313,6 @@
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity
-      - id: ClothingUniformJumpskirtHosFormal
-      - id: ClothingUniformJumpsuitHosFormal
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
       - id: BoxEncryptionKeySecurity

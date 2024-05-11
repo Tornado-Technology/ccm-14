@@ -1,6 +1,6 @@
 # Dear god please stop adding ones with thousands of entities, learn how procgen works.
 
-# "Small"-class maps - Max size square: 7x7, indicated 3: small.5
+# "Small"-class maps - Max size square: 7x7, indicated size: 3.5
 
 - type: salvageMap
   id: Small1

@@ -1,0 +1,15 @@
+- type: entity
+  id: ActionRaptorEject
+  name: Eject
+  description: Ejects the pilot from the raptor
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/actions_mecha.rsi
+      state: mech_eject
+    event: !type:RaptorEjectPilotEvent
+    priority: -99999
+  - type: Visibility
+    layer: 1

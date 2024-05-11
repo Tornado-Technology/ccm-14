@@ -1,5 +1,5 @@
 - type: job
-  id: MilitaryScientist
+  id: CMResearcher
   name: job-name-militaryscientist
   description: job-description-militaryscientist
   playTimeTracker: JobMilitaryScientist
@@ -16,8 +16,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: MilitaryScientist
     - type: Skills
       intel: 1
       medical: 3

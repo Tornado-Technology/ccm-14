@@ -1,0 +1,85 @@
+# Кабели
+
+- type: entity
+  parent: CableHV
+  id: CMCableHVInvisible
+  suffix: Invisible
+  components:
+  - type: Marker
+
+- type: entity
+  parent: CableMV
+  id: CMCableMVInvisible
+  suffix: Invisible
+  components:
+  - type: Marker
+
+- type: entity
+  parent: CableApcExtension
+  id: CMCableLVInvisible
+  suffix: Invisible
+  components:
+  - type: Marker
+
+- type: entity
+  parent: CableTerminal
+  id: CMCableTerminalInvisible
+  suffix: Invisible
+  components:
+  - type: Marker
+
+# Генератор
+
+- type: entity
+  parent: BaseGenerator
+  id: CMGeneratorInvisible100kW
+  suffix: Invisible, 100kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 100000
+  - type: Marker
+
+# СМЭС
+
+- type: entity
+  parent: BaseSMES
+  id: CMSMESInvisible10MW
+  suffix: Invisible, 10MW
+  components:
+  - type: Battery
+    maxCharge: 10000000
+    startingCharge: 10000000
+  - type: Marker
+
+# Подстанция
+
+- type: entity
+  parent: BaseSubstation
+  id: CMSubstationInvisible5MJ
+  suffix: Invisible, 5MJ
+  components:
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000
+  - type: Marker
+
+# ЛКП
+
+- type: entity
+  parent: BaseAPC
+  id: CMAPCInvisible200kW
+  suffix: Invisible, 200kW
+  components:
+  - type: Battery
+    maxCharge: 200000
+    startingCharge: 200000
+  - type: Marker
+
+# Генератор гравитации
+
+- type: entity
+  id: CMGravityGeneratorInvisible
+  suffix: Invisible
+  parent: GravityGeneratorMini
+  components:
+  - type: Marker

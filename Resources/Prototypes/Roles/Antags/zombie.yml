@@ -2,8 +2,11 @@
   id: InitialInfected
   name: roles-antag-initial-infected-name
   antagonist: true
-  setPreference: false
+  setPreference: true
   objective: roles-antag-initial-infected-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 108000 # 30h # Corvax-RoleTime
 
 - type: antag
   id: Zombie

@@ -1,7 +1,7 @@
 - type: cargoProduct
-  id: CrateM4A1Console #Любое айди, такое, что нет в игре
+  id: ArmorySmg
   icon:
-    sprite: Objects/Weapons/Grenades/grenade.rsi #Спрайт
+    sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
     state: icon
   product: CrateArmorySMG
   cost: 9000
@@ -9,9 +9,9 @@
   group: market
 
 - type: cargoProduct
-  id: CrateM4RAconsole #Любое айди, такое, что нет в игре
+  id: ArmoryShotgun
   icon:
-    sprite: _CM/Objects/Weapons/Guns/Snipers/m4ra.rsi #Спрайт
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
     state: icon
   product: CrateArmoryShotgun
   cost: 7000
@@ -19,7 +19,7 @@
   group: market
 
 - type: cargoProduct
-  id: CrateMagazinesConsole #Любое айди, такое, что нет в игре
+  id: TrackingImplant
   icon:
     sprite: Objects/Specific/Medical/implanter.rsi
     state: implanter0
@@ -29,19 +29,19 @@
   group: market
 
 - type: cargoProduct
-  id: CrateFlaerss #Любое айди, такое, что нет в игре
+  id: TrainingBombs
   icon:
-    sprite: Objects/Misc/flare.rsi #Спрайт
-    state: icon
-  product: CrateArmoryFlaeras #Айди ящика с оружием
+    sprite: Structures/Machines/bomb.rsi
+    state: training-bomb
+  product: CrateTrainingBombs
   cost: 3000
   category: cargoproduct-category-name-armory
   group: market
 
 - type: cargoProduct
-  id: CrateGoldUranSilver #Любое айди, такое, что нет в игре
+  id: ArmoryLaser
   icon:
-    sprite:  Structures/Storage/Crates/chemcrate_secure.rsi #Спрайт
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
     state: icon
   product: CrateArmoryLaser
   cost: 4800
@@ -49,13 +49,11 @@
   group: market
 
 - type: cargoProduct
-  id: CrateC4Console #Любое айди, такое, что нет в игре
+  id: ArmoryPistol
   icon:
-    sprite: Objects/Weapons/Bombs/c4.rsi #Спрайт
+    sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
     state: icon
   product: CrateArmoryPistols
   cost: 5200
   category: cargoproduct-category-name-armory
   group: market
-
-

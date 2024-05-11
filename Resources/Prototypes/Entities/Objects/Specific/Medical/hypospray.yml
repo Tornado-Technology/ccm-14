@@ -124,7 +124,6 @@
   - type: Tag
     tags:
     - Trash
-    - injectorCM
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
@@ -149,21 +148,15 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: medipen_empty
-  - type: Hypospray
-    solutionName: pen
-    transferAmount: 35
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 35
+        maxVol: 15
         reagents:
-        - ReagentId: TranexamicAcid
-          Quantity: 5
         - ReagentId: Epinephrine
-          Quantity: 10
-        - ReagentId: Omnizine
-          Quantity: 20
-
+          Quantity: 12
+        - ReagentId: TranexamicAcid
+          Quantity: 3
   - type: Tag
     tags: []
 
@@ -224,8 +217,7 @@
         - ReagentId: TranexamicAcid
           Quantity: 5
   - type: Tag
-    tags:
-    - injectorCM
+    tags: []
 
 - type: entity
   name: burn auto-injector
@@ -402,15 +394,17 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 55
+        maxVol: 30
         reagents:
+        - ReagentId: Omnizine
+          Quantity: 25
         - ReagentId: TranexamicAcid
           Quantity: 5
-        - ReagentId: Omnizine
-          Quantity: 40
   - type: Hypospray
     solutionName: pen
-    transferAmount: 55
+    transferAmount: 30
+    onlyAffectsMobs: false
+    injectOnly: true
   - type: StaticPrice
     price: 500
   - type: Tag

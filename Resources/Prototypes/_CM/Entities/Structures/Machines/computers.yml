@@ -55,3 +55,44 @@
       color: "#c94242"
     - type: Computer
       board: CMEmergencyRetreatConsoleCircuitboard
+
+- type: entity
+  parent: BaseComputer
+  id: ComputerRaptorControl
+  name: raptor control console
+  description: Write your message to the world!
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: rp
+    - map: ["computerLayerKeys"]
+      state: service_keys
+  - type: Computer
+    board: ComputerMassMediaCircuitboard
+  - type: DeviceNetworkRequiresPower
+  - type: RaptorControl
+    observerId: RaptorObserver
+  - type: AccessReader
+    access: [[ "PilotRaptor" ]]
+  - type: Transform
+    anchored: true
+
+- type: entity
+  parent: ComputerComms
+  id: UGEComputerComms
+  name: uge communications computer
+  components:
+    - type: AccessReader
+      access: [[ "Command" ]]
+    - type: CommunicationsConsole
+      title: comms-console-announcement-title-uge
+      global: true
+      sound:
+        path: /Audio/Corvax/Announcements/OPS2.ogg
+        params:
+          volume: -4

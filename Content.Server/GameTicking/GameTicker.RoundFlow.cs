@@ -97,9 +97,9 @@ namespace Content.Server.GameTicking
 
             var maps = new List<GameMapPrototype>();
 #if !DEBUG
-            maps.Add(_prototypeManager.Index<GameMapPrototype>("valkyrie"));
+            maps.Add(_prototypeManager.Index<GameMapPrototype>("CMValkyrie"));
 #endif
-            var mainStationMap = _gameMapManager.GetSelectedMap() ?? _prototypeManager.Index<GameMapPrototype>("TGCM_Desert");
+            var mainStationMap = _gameMapManager.GetSelectedMap() ?? _prototypeManager.Index<GameMapPrototype>("CMErida");
             maps.Add(mainStationMap);
 
             if (CurrentPreset?.MapPool != null &&

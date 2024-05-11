@@ -1,0 +1,1722 @@
+Searching 177 files for "ToCoordinates"
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Acid\XenoAcidSystem.cs:
+   55          args.Handled = true;
+   56  
+   57:         var acid = SpawnAttachedTo(args.AcidId, target.ToCoordinates());
+   58          AddComp(target, new CorrodingComponent
+   59          {
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Charge\SharedXenoChargeSystem.cs:
+  110  
+  111          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  112:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  113      }
+  114  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Construction\Nest\XenoNestSystem.cs:
+  147              return;
+  148  
+  149:         var nestCoordinates = ent.Owner.ToCoordinates();
+  150          var offset = direction switch
+  151          {
+  ...
+  172          Dirty(victim, nestedComp);
+  173  
+  174:         _transform.SetCoordinates(victim, nest.ToCoordinates());
+  175          _transform.SetLocalRotation(victim, direction.ToAngle());
+  176  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Fling\SharedXenoFlingSystem.cs:
+  106  
+  107          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  108:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  109      }
+  110  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Headbutt\SharedXenoHeadbuttSystem.cs:
+  110  
+  111          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  112:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  113      }
+  114  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Punch\SharedXenoPunchSystem.cs:
+  105  
+  106          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  107:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  108      }
+  109  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Screech\XenoScreechSystem.cs:
+   76  
+   77          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+   78:         SpawnAttachedTo(xeno.Comp.Effect, xeno.Owner.ToCoordinates());
+   79      }
+   80  }
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Stomp\XenoStompSystem.cs:
+   66  
+   67              _stun.TryParalyze(receiver, xeno.Comp.ParalyzeTime, true);
+   68:             SpawnAttachedTo(xeno.Comp.Effect, receiver.ToCoordinates());
+   69          }
+   70  
+   ..
+   86  
+   87          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+   88:         SpawnAttachedTo(xeno.Comp.SelfEffect, xeno.Owner.ToCoordinates());
+   89      }
+   90  }
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Sweep\XenoTailSweepSystem.cs:
+   78  
+   79              _audio.PlayPvs(xeno.Comp.HitSound, marine);
+   80:             SpawnAttachedTo(xeno.Comp.HitEffect, marine.Owner.ToCoordinates());
+   81          }
+   82      }
+
+11 matches across 9 files
+
+
+Searching 2414 files for "public float"
+
+
+
+Searching 491 files for "public float"
+
+0 matches
+
+Searching 373 files for "public float"
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Medical\Scanner\HealthScannerUI.cs:
+    8  {
+    9      public NetEntity Target;
+   10:     public float BloodPercentage;
+   11:     public float? Temperature;
+   12      public Solution? Chemicals;
+   13  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Medical\Stasis\CMInStasisComponent.cs:
+    8  {
+    9      [DataField, AutoNetworkedField]
+   10:     public float IncubationMultiplier = 0.333f;
+   11  }
+   12  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Pulling\SlowOnPullComponent.cs:
+    8  {
+    9      [DataField(required: true), AutoNetworkedField]
+   10:     public float Multiplier = 1;
+   11  }
+   12  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Requisitions\Components\RequisitionsElevatorComponent.cs:
+   11  {
+   12      [DataField]
+   13:     public float Radius = 2;
+   14  
+   15      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\XenoComponent.cs:
+   31  
+   32      [DataField, AutoNetworkedField]
+   33:     public float MaxHealthDivisorHeal = 65;
+   34  
+   35      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Charge\XenoChargeComponent.cs:
+   19  
+   20      [DataField, AutoNetworkedField]
+   21:     public float Range = 3;
+   22  
+   23      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Crest\XenoCrestComponent.cs:
+   14  
+   15      [DataField, AutoNetworkedField]
+   16:     public float SpeedMultiplier = 0.70f;
+   17  }
+   18  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Fling\XenoFlingComponent.cs:
+   19  
+   20      [DataField, AutoNetworkedField]
+   21:     public float Range = 40;
+   22  
+   23      [DataField, AutoNetworkedField]
+   24:     public float ThrowStrength = 10;
+   25      
+   26      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Fortify\XenoFortifyComponent.cs:
+   20  
+   21      [DataField, AutoNetworkedField]
+   22:     public float ExplosionMultiplier = 0.4f;
+   23  
+   24      [DataField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Headbutt\XenoHeadbuttComponent.cs:
+   19  
+   20      [DataField, AutoNetworkedField]
+   21:     public float Range = 3;
+   22  
+   23      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Hugger\VictimHuggedComponent.cs:
+   59  
+   60      [DataField, AutoNetworkedField]
+   61:     public float IncubationMultiplier = 1;
+   62  
+   63      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Hugger\XenoHuggerComponent.cs:
+   14  
+   15      [DataField, AutoNetworkedField]
+   16:     public float HugRange = 1.5f;
+   17  }
+   18  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Pheromones\XenoFrenzyPheromonesComponent.cs:
+   19  
+   20      [DataField, AutoNetworkedField]
+   21:     public float AttackDamageModifier = 1.1f;
+   22  
+   23      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Plasma\XenoTransferPlasmaActionEvent.cs:
+   10  
+   11      [DataField]
+   12:     public float Range = 2.5f;
+   13  }
+   14  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Projectile\Bone\SlowedByBoneChipsComponent.cs:
+    9  {
+   10      [DataField, AutoNetworkedField]
+   11:     public float Multiplier = 0.5f;
+   12  
+   13      [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField, AutoPausedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Projectile\Bone\XenoBoneChipsComponent.cs:
+   10  {
+   11      [DataField, AutoNetworkedField]
+   12:     public float Speed = 6;
+   13  
+   14      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Projectile\Spit\Scattered\XenoScatteredSpitComponent.cs:
+   14  
+   15      [DataField, AutoNetworkedField]
+   16:     public float Speed = 10;
+   17  
+   18      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Projectile\Spit\Slowing\SlowedBySpitComponent.cs:
+    9  {
+   10      [DataField, AutoNetworkedField]
+   11:     public float Multiplier = 0.5f;
+   12  
+   13      [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField, AutoPausedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Projectile\Spit\Slowing\XenoSlowingSpitComponent.cs:
+   14  
+   15      [DataField, AutoNetworkedField]
+   16:     public float Speed = 10;
+   17  
+   18      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Punch\XenoPunchComponent.cs:
+   19  
+   20      [DataField, AutoNetworkedField]
+   21:     public float Range = 5;
+   22  
+   23      [DataField, AutoNetworkedField]
+   24:     public float ThrowStrength = 5;
+   25      
+   26      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Screech\XenoScreechComponent.cs:
+   18  
+   19      [DataField, AutoNetworkedField]
+   20:     public float StanRange = 10;
+   21  
+   22      [DataField, AutoNetworkedField]
+   23:     public float ParalyzeRange = 2;
+   24  
+   25      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Stomp\XenoStompComponent.cs:
+   22  
+   23      [DataField, AutoNetworkedField]
+   24:     public float ParalyzeRange = 2.5;
+   25  
+   26      [DataField, AutoNetworkedField]
+   27:     public float DamageRange = 0.5;
+   28  
+   29      [DataField, AutoNetworkedField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Sweep\XenoTailSweepComponent.cs:
+   15  
+   16      [DataField, AutoNetworkedField]
+   17:     public float Range = 1.25f;
+   18  
+   19      [DataField]
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Walker\XenoResinWalkerComponent.cs:
+   25  
+   26      [DataField, AutoNetworkedField]
+   27:     public float SpeedMultiplier = 1.66f;
+   28  }
+   29  
+
+29 matches across 24 files
+
+
+Searching 373 files for "ToCoordinates"
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Acid\XenoAcidSystem.cs:
+   55          args.Handled = true;
+   56  
+   57:         var acid = SpawnAttachedTo(args.AcidId, target.ToCoordinates());
+   58          AddComp(target, new CorrodingComponent
+   59          {
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Charge\SharedXenoChargeSystem.cs:
+  110  
+  111          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  112:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  113      }
+  114  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Construction\Nest\XenoNestSystem.cs:
+  147              return;
+  148  
+  149:         var nestCoordinates = ent.Owner.ToCoordinates();
+  150          var offset = direction switch
+  151          {
+  ...
+  172          Dirty(victim, nestedComp);
+  173  
+  174:         _transform.SetCoordinates(victim, nest.ToCoordinates());
+  175          _transform.SetLocalRotation(victim, direction.ToAngle());
+  176  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Fling\SharedXenoFlingSystem.cs:
+  106  
+  107          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  108:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  109      }
+  110  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Headbutt\SharedXenoHeadbuttSystem.cs:
+  110  
+  111          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  112:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  113      }
+  114  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Punch\SharedXenoPunchSystem.cs:
+  105  
+  106          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+  107:         SpawnAttachedTo(xeno.Comp.Effect, marineId.ToCoordinates());
+  108      }
+  109  
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Screech\XenoScreechSystem.cs:
+   62  
+   63              _stun.TryStun(receiver, xeno.Comp.StunTime, false);
+   64:             SpawnAttachedTo(xeno.Comp.Effect, receiver.ToCoordinates());
+   65          }
+   66  
+   ..
+   77  
+   78          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+   79:         SpawnAttachedTo(xeno.Comp.Effect, xeno.Owner.ToCoordinates());
+   80      }
+   81  }
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Stomp\XenoStompSystem.cs:
+   66  
+   67              _stun.TryParalyze(receiver, xeno.Comp.ParalyzeTime, true);
+   68:             SpawnAttachedTo(xeno.Comp.Effect, receiver.ToCoordinates());
+   69          }
+   70  
+   ..
+   86  
+   87          _audio.PlayPvs(xeno.Comp.Sound, xeno);
+   88:         SpawnAttachedTo(xeno.Comp.SelfEffect, xeno.Owner.ToCoordinates());
+   89      }
+   90  }
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Sweep\XenoTailSweepSystem.cs:
+   78  
+   79              _audio.PlayPvs(xeno.Comp.HitSound, marine);
+   80:             SpawnAttachedTo(xeno.Comp.HitEffect, marine.Owner.ToCoordinates());
+   81          }
+   82      }
+
+12 matches across 9 files
+
+
+Searching 2414 files for "Smoke"
+
+D:\Git\CorvaxCM\Resources\Prototypes\edge_spreaders.yml:
+    8  
+    9  - type: edgeSpreader
+   10:   id: Smoke
+   11    updatesPerSecond: 8
+   12  
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Mobs\Xeno\boiler.yml:
+   44    - type: XenoSlowingSpit
+   45      plasmaCost: 40
+   46:     projectileId: XenoSmokeProjectile
+   47    - type: XenoAcid
+   48    - type: XenoArmor
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Consumables\Smokeables\cigarettes.yml:
+    6    components:
+    7    - type: Sprite
+    8:     sprite: _CM/Objects/Consumable/Smokeables/lucky_strikes_4.rsi
+    9      layers:
+   10      - state: closed
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Consumables\Smokeables\matchbooks.yml:
+    7    components:
+    8    - type: Sprite
+    9:     sprite: _CM/Objects/Consumable/Smokeables/matchbook.rsi
+   10      layers:
+   11      - state: mpacket
+   ..
+   31        visible: false
+   32    - type: Item
+   33:     sprite: _CM/Objects/Consumable/Smokeables/matchbook.rsi
+   34      heldPrefix: null
+   35    - type: Storage
+   ..
+   63    components:
+   64    - type: Sprite
+   65:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   66    - type: Item
+   67:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   68  
+   69  - type: entity
+   ..
+   74    components:
+   75    - type: Sprite
+   76:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   77    - type: Item
+   78:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   79  
+   80  - type: entity
+   ..
+   85    components:
+   86    - type: Sprite
+   87:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   88    - type: Item
+   89:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   90  
+   91  - type: entity
+   ..
+   96    components:
+   97    - type: Sprite
+   98:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+   99    - type: Item
+  100:     sprite: _CM/Objects/Consumable/Smokeables/brown_matchbook.rsi
+  101  
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Weapons\Bombs\mortar_grenades.yml:
+   51  - type: entity
+   52    parent: CMBaseMortarGrenade
+   53:   id: CMMortarGrenadeSmoke
+   54:   name: mortar grenade smoke
+   55    description: Guaranteed to light up the mood.
+   56    noSpawn: true
+   57    components:
+   58      - type: Sprite
+   59:       state: smoke
+   60:     - type: SmokeOnTrigger
+   61        duration: 30
+   62        spreadAmount: 50
+   63      - type: SoundOnTrigger
+   64:       sound: /Audio/Effects/smoke.ogg
+   65      - type: ContainerContainer
+   66        containers:
+   ..
+   83        distance: 10
+   84      - type: SoundOnTrigger
+   85:       sound: /Audio/Effects/smoke.ogg
+   86      - type: ContainerContainer
+   87        containers:
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Weapons\Bombs\mortar_grenades_сartridge.yml:
+   35  - type: entity
+   36    parent: CMBaseMortarGrenadeCartridge
+   37:   id: CMMortarGrenadeCartridgeSmoke
+   38:   name: mortar grenade smoke cartridge
+   39    components:
+   40      - type: Sprite
+   41:       state: smoke
+   42      - type: CartridgeAmmo
+   43:       proto: CMMortarGrenadeSmoke
+   44  
+   45  - type: entity
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\projectiles.yml:
+   17  
+   18  - type: entity
+   19:   id: SmokeProjectile
+   20:   name: M40 smoke
+   21    parent: BaseBulletTrigger
+   22    noSpawn: true
+   ..
+   26      layers:
+   27        - state: grenade
+   28:   - type: SmokeOnTrigger
+   29      duration: 30
+   30      spreadAmount: 50
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Weapons\Throwable\grenades.yml:
+   41  - type: entity
+   42    parent: CMGrenadeBase
+   43:   id: M40Smoke
+   44:   name: M40 smoke grenade
+   45    description: A grenade that does exactly what it says on the tin.
+   46    components:
+   47    - type: Sprite
+   48:     sprite: _CM/Objects/Weapons/Grenades/m40smoke.rsi
+   49:   - type: SmokeOnTrigger
+   50      duration: 30
+   51      spreadAmount: 50
+   52    - type: SoundOnTrigger
+   53:     sound: /Audio/Effects/smoke.ogg
+   54    - type: DeleteOnTrigger
+   55    - type: TimerTriggerVisuals
+   56      primingSound:
+   57:       path: /Audio/Effects/Smoke-grenade.ogg
+   58    - type: Tag
+   59      tags:
+   ..
+   61      - LauncherCompatibleGrenade
+   62    - type: CartridgeAmmo
+   63:     proto: SmokeProjectile
+   64      deleteOnSpawn: true
+   65  
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Objects\Xeno\xeno_projectiles.yml:
+   96  # Кислотное облако
+   97  - type: entity
+   98:   id: XenoSmokeProjectile
+   99    name: scattered spit
+  100    parent: XenoBaseProjectile
+  ...
+  107      - state: neurotoxin
+  108        shader: unshaded
+  109:   - type: SmokeOnTrigger
+  110      duration: 10
+  111      spreadAmount: 20
+  112:     smokePrototype: Smoke
+  113      solution:
+  114        reagents:
+  115:       - ReagentId: XenoAcidSmoke
+  116          Quantity: 30
+  117    - type: TriggerOnCollide
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Structures\Machines\Vending\colmartech_vendors.yml:
+  431      #- id: CMM40HPDPPhosphorusPacket3
+  432      #  points: 20
+  433:     #- id: CMM40HSDPSmokePacket3
+  434      #  points: 10
+  435      #- id: CMM74AGMFragAirburstPacket3
+  ...
+  437      #- id: CMM74AGMIncendiaryAirburstPacket3
+  438      #  points: 15
+  439:     #- id: CMM74AGMSmokeAirburstPacket3
+  440      #  points: 10
+  441      #- id: CMM74AGMHornetAirburstPacket3
+  ...
+  644      #- id: CMM40HPDPWhitePhosphorusPacketx3
+  645      #  points: 18
+  646:     #- id: CMM40HSDPSmokePacketx3
+  647      #  points: 9
+  648      #- id: CMM74AGM-FragAirburstPacketx3
+  ...
+  650      #- id: CMM74AGM-IncendiaryAirburstPacketx3
+  651      #  points: 20
+  652:     #- id: CMM74AGM-SmokeAirburstPacketx3
+  653      #  points: 10
+  654      #- id: CMM74AGM-HornetAirburstPacketx3
+  ...
+  857      #- id: M74AGMIIncendiaryGrenadesx6
+  858      #  points: 40
+  859:     #- id: M74AGMSSmokeGrenadesx6
+  860      #  points: 20
+  861      - name: Extra Flamethrower Tanks
+  ...
+ 1026      #- id: CMM40HPDPPhosphorusPacket3
+ 1027      #  points: 18
+ 1028:     #- id: CMM40HSDPSmokePacket3
+ 1029      #  points: 9
+ 1030      #- id: CMM74AGMFragAirburstPacket3
+ ....
+ 1032      #- id: CMM74AGMIncendiaryAirburstPacket3
+ 1033      #  points: 18
+ 1034:     #- id: CMM74AGMSmokeAirburstPacket3
+ 1035      #  points: 10
+ 1036      #- id: CMM74AGMHornetAirburstPacket3
+ ....
+ 1275      #    CMM40HIDPIncendiaryPacketx3grenades: 18P
+ 1276      #    CMM40HPDPWhitePhosphorusPacketx3grenades: 18P
+ 1277:     #    CMM40HSDPSmokePacketx3grenades: 9P
+ 1278      #    CMM74AGMFragAirburstPacketx3airburstgrenades: 20P
+ 1279      #    CMM74AGMIncendiaryAirburstPacketx3airburstgrenades: 20P
+ 1280:     #    CMM74AGMSmokeAirburstPacketx3airburstgrenades: 10P
+ 1281      #    CMM74AGMHornetAirburstPacketx3airburstgrenades: 20P
+ 1282      #    CMM20MineBoxx4mines: 20P
+ ....
+ 1499      #- id: CMM40HPDPWhitePhosphorusPacketx3
+ 1500      #  points: 30
+ 1501:     #- id: CMM40HSDPSmokePacketx3
+ 1502      #  points: 15
+ 1503      #- id: CMM74AGM-FragAirburstPacketx3
+ ....
+ 1505      #- id: CMM74AGM-IncendiaryAirburstPacketx3
+ 1506      #  points: 20
+ 1507:     #- id: CMM74AGM-SmokeAirburstPacketx3
+ 1508      #  points: 10
+ 1509      #- id: CMM74AGM-HornetAirburstPacketx3
+ ....
+ 1656      #- id: CMM40HPDPWhitePhosphorusPacketx3
+ 1657      #  amount: 18
+ 1658:     #- id: CMM40HSDPSmokePacketx3
+ 1659      #  amount: 9
+ 1660      #- id: CMM74AGMFragAirburstPacketx3
+ ....
+ 1662      #- id: CMM74AGMIncendiaryAirburstPacketx3
+ 1663      #  amount: 20
+ 1664:     #- id: CMM74AGMSmokeAirburstPacketx3
+ 1665      #  amount: 10
+ 1666      #- id: CMM74AGMHornetAirburstPacketx3
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Entities\Structures\Walls\fog_walls.yml:
+   15      drawdepth: Effects
+   16      sprite: _CM/Effects/fog.rsi
+   17:     state: smoke
+   18    - type: PlacementReplacement
+   19      key: cm_fog_walls
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Reagents\xeno.yml:
+   21  
+   22  - type: reagent
+   23:   id: XenoAcidSmoke
+   24    name: reagent-name-xeno-acid
+   25    group: Toxins
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\thief_toolbox_sets.yml:
+  107    - FultonBeacon
+  108    - Fulton
+  109:   - SmokeGrenade
+  110:   - SmokeGrenade
+  111:   - SmokeGrenade
+  112  
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\uplink_catalog.yml:
+  196  
+  197  - type: listing
+  198:   id: UplinkSmokeGrenade
+  199:   name: uplink-smoke-grenade-name
+  200:   description: uplink-smoke-grenade-desc
+  201:   productEntity: SmokeGrenade
+  202    cost:
+  203      Telecrystal: 1
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\Cargo\cargo_service.yml:
+   40  
+   41  - type: cargoProduct
+   42:   id: ServiceSmokeables
+   43    icon:
+   44:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+   45      state: closed
+   46:   product: CrateServiceSmokeables
+   47    cost: 1500
+   48    category: cargoproduct-category-name-service
+   ..
+   52    id: ServiceCustomSmokable
+   53    icon:
+   54:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+   55      state: closed
+   56    product: CrateServiceCustomSmokable
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\Cargo\cargo_vending.yml:
+  180  
+  181  - type: cargoProduct
+  182:   id: CrateVendingMachineRestockSmokes
+  183    icon:
+  184      sprite: Objects/Specific/Service/vending_machine_restock.rsi
+  185      state: base
+  186:   product: CrateVendingMachineRestockSmokesFilled
+  187    cost: 1200
+  188    category: cargoproduct-category-name-service
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\Fills\Crates\service.yml:
+   44  
+   45  - type: entity
+   46:   id: CrateServiceSmokeables
+   47    parent: CrateGenericSteel
+   48:   name: smokeables crate
+   49:   description: Tired of a quick death on the station? Order this crate and chain-smoke your way to a coughy demise!
+   50    components:
+   51    - type: StorageFill
+   ..
+   94    id: CrateServiceCustomSmokable
+   95    parent: CrateGenericSteel
+   96:   name: DIY smokeables crate
+   97    description: Want to get a little creative with what you use to destroy your lungs? Then this crate is for you! Has everything you need to roll your own cigarettes.
+   98    components:
+
+D:\Git\CorvaxCM\Resources\Prototypes\Catalog\Fills\Crates\vending.yml:
+  172  
+  173  - type: entity
+  174:   id: CrateVendingMachineRestockSmokesFilled
+  175    parent: CratePlastic
+  176    name: ShadyCigs restock crate
+  ...
+  179    - type: StorageFill
+  180      contents:
+  181:       - id: VendingMachineRestockSmokes
+  182          amount: 2
+  183  
+
+D:\Git\CorvaxCM\Resources\Prototypes\Datasets\Names\death_commando.yml:
+   50    - Slate Slabrock
+   51    - Smash Lampjaw
+   52:   - Smoke Manmuscle
+   53    - Splint Chesthair
+   54    - Stabby McGee
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Clothing\Belt\belts.yml:
+  179          - Stunbaton
+  180          - FlashOnTrigger
+  181:         - SmokeOnTrigger
+  182          - Flash
+  183          - Handcuff
+  ...
+  197          whitelist:
+  198            components:
+  199:           - SmokeOnTrigger
+  200      sprite: Clothing/Belt/belt_overlay.rsi
+  201    - type: Appearance
+  ...
+  226        components:
+  227          - LightReplacer
+  228:         - SmokeOnTrigger
+  229      maxItemSize: Large
+  230    - type: ItemMapper
+  ...
+  479          - Stunbaton
+  480          - FlashOnTrigger
+  481:         - SmokeOnTrigger
+  482          - Flash
+  483          - Handcuff
+  ...
+  501          whitelist:
+  502            components:
+  503:           - SmokeOnTrigger
+  504      sprite: Clothing/Belt/belt_overlay.rsi
+  505    - type: Appearance
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Effects\admin_triggers.yml:
+   32    
+   33  - type: entity
+   34:   id: AdminInstantEffectSmoke3
+   35:   suffix: Smoke (03 sec)
+   36    parent: AdminInstantEffectBase
+   37    components:
+   38:   - type: SmokeOnTrigger
+   39      duration: 3
+   40      spreadAmount: 1
+   41    - type: SoundOnTrigger
+   42:     sound: /Audio/Effects/smoke.ogg
+   43    - type: TimerTriggerVisuals
+   44      primingSound:
+   45:       path: /Audio/Effects/Smoke-grenade.ogg
+   46    
+   47  - type: entity
+   48:   id: AdminInstantEffectSmoke10
+   49:   suffix: Smoke (10 sec)
+   50    parent: AdminInstantEffectBase
+   51    components:
+   52:   - type: SmokeOnTrigger
+   53      duration: 10
+   54      spreadAmount: 30
+   55    - type: SoundOnTrigger
+   56:     sound: /Audio/Effects/smoke.ogg
+   57    - type: TimerTriggerVisuals
+   58      primingSound:
+   59:       path: /Audio/Effects/Smoke-grenade.ogg
+   60    
+   61  - type: entity
+   62:   id: AdminInstantEffectSmoke30
+   63:   suffix: Smoke (30 sec)
+   64    parent: AdminInstantEffectBase
+   65    components:
+   66:   - type: SmokeOnTrigger
+   67      duration: 30
+   68      spreadAmount: 50
+   69    - type: SoundOnTrigger
+   70:     sound: /Audio/Effects/smoke.ogg
+   71    - type: TimerTriggerVisuals
+   72      primingSound:
+   73:       path: /Audio/Effects/Smoke-grenade.ogg
+   74  
+   75  - type: entity
+   ..
+   78    parent: AdminInstantEffectBase
+   79    components:
+   80:   - type: SmokeOnTrigger
+   81      duration: 10
+   82      spreadAmount: 30
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Effects\chemistry_effects.yml:
+    7    - type: Appearance
+    8    - type: AnimationPlayer
+    9:   - type: SmokeVisuals
+   10    - type: Transform
+   11      anchored: true
+   ..
+   23          layer:
+   24          - SlipLayer
+   25:   - type: Smoke
+   26    - type: ActiveEdgeSpreader
+   27    - type: EdgeSpreader
+   28:     id: Smoke
+   29    - type: SolutionContainerManager
+   30      solutions:
+   ..
+   35  - type: entity
+   36    parent: BaseFoam
+   37:   id: Smoke
+   38:   name: smoke
+   39    noSpawn: true
+   40    components:
+   41    - type: Occluder
+   42    - type: Sprite
+   43:     sprite: Effects/chemsmoke.rsi
+   44:     state: chemsmoke
+   45    - type: TimedDespawn
+   46      lifetime: 10
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Markers\Spawners\Random\posters.yml:
+   38        - PosterContrabandSyndicateRecruitment
+   39        - PosterContrabandClown
+   40:       - PosterContrabandSmoke
+   41        - PosterContrabandGreyTide
+   42        - PosterContrabandMissingGloves
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Markers\Spawners\Random\salvage.yml:
+   30          - CrateMaterialCardboard
+   31          - CrateServiceBooks
+   32:         - CrateServiceSmokeables
+   33          - CrateTrashCartFilled
+   34          - ClosetMaintenanceFilledRandom
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Food\meals.yml:
+  335      flavors:
+  336        - meaty
+  337:       - smokey
+  338    - type: Sprite
+  339      state: ribs
+  ...
+  352      tags:
+  353      - Meat
+  354: # Tastes like meat, smokey sauce.
+  355  
+  356  - type: entity
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Food\Baked\misc.yml:
+  469        - nutty
+  470        - creamy
+  471:       - smokey
+  472    - type: Sprite
+  473      state: chevrechaud
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigarettes\cartons.yml:
+    2    id: CigCartonGreen
+    3    parent: [ BoxCardboard, BaseBagOpenClose ]
+    4:   name: Spessman's Smokes carton
+    5:   description: "A carton containing 6 packets of Spessman's Smokes."
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+    9      layers:
+   10        - state: closed
+   ..
+   12          map: ["openLayer"]
+   13    - type: Item
+   14:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+   15      size: Normal
+   16    - type: Storage
+   ..
+   36    components:
+   37    - type: Sprite
+   38:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/red.rsi
+   39      layers:
+   40        - state: closed
+   41    - type: Item
+   42:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/red.rsi
+   43    - type: StorageFill
+   44      contents:
+   ..
+   53    components:
+   54    - type: Sprite
+   55:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/blue.rsi
+   56      layers:
+   57        - state: closed
+   58    - type: Item
+   59:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/blue.rsi
+   60    - type: StorageFill
+   61      contents:
+   ..
+   70    components:
+   71    - type: Sprite
+   72:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/black.rsi
+   73      layers:
+   74        - state: closed
+   75    - type: Item
+   76:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/black.rsi
+   77    - type: StorageFill
+   78      contents:
+   ..
+   83    id: CigCartonMixed
+   84    parent: CigCartonGreen
+   85:   name: Dan's soaked smokes
+   86:   description: A carton containg 3 packets of Dan's soaked smokes.
+   87    components:
+   88    - type: Sprite
+   89:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/mixed.rsi
+   90      layers:
+   91        - state: closed
+   92    - type: Item
+   93:     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/mixed.rsi
+   94    - type: StorageFill
+   95      contents:
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigarettes\cigarette.yml:
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+    9      state: unlit-icon
+   10    - type: Tag
+   ..
+   14    - type: SpaceGarbage
+   15    - type: Clothing
+   16:     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+   17      slots: [ mask ]
+   18      equippedPrefix: unlit
+   ..
+   20      size: Tiny
+   21    - type: Construction
+   22:     graph: smokeableCigarette
+   23      node: cigarette
+   24  
+   ..
+   31    components:
+   32    - type: Sprite
+   33:     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+   34      state: unlit-icon
+   35    - type: Tag
+   ..
+   39    - type: SpaceGarbage
+   40    - type: Clothing
+   41:     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+   42      slots: [ mask ]
+   43      equippedPrefix: unlit
+   ..
+   45      size: Tiny
+   46    - type: Construction
+   47:     graph: smokeableCigarette
+   48      node: cigarette
+   49  
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigarettes\joints.yml:
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi
+    9      state: unlit-icon
+   10    - type: Tag
+   ..
+   14    - type: SpaceGarbage
+   15    - type: Clothing
+   16:     sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi
+   17      slots: [ mask ]
+   18      equippedPrefix: unlit
+   ..
+   20      size: Tiny
+   21    - type: Construction
+   22:     graph: smokeableJoint
+   23      node: joint
+   24    - type: SolutionContainerManager
+   ..
+   38    components:
+   39    - type: Construction
+   40:     graph: smokeableJointRainbow
+   41      node: jointRainbow
+   42    - type: SolutionContainerManager
+   ..
+   65    components:
+   66    - type: Sprite
+   67:     sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi
+   68      state: unlit-icon
+   69    - type: Tag
+   ..
+   73    - type: SpaceGarbage
+   74    - type: Clothing
+   75:     sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi
+   76      slots: [ mask ]
+   77      equippedPrefix: unlit
+   ..
+   79      size: Tiny
+   80    - type: Construction
+   81:     graph: smokeableBlunt
+   82      node: blunt
+   83    - type: SolutionContainerManager
+   ..
+   97    components:
+   98    - type: Construction
+   99:     graph: smokeableBluntRainbow
+  100      node: bluntRainbow
+  101    - type: SolutionContainerManager
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigarettes\packs.yml:
+   13      - state: cig1
+   14        map: ["cig1"]
+   15:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   16        visible: false
+   17      - state: cig2
+   18        map: ["cig2"]
+   19:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   20        visible: false
+   21      - state: cig3
+   22        map: ["cig3"]
+   23:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   24        visible: false
+   25      - state: cig4
+   26        map: ["cig4"]
+   27:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   28        visible: false
+   29      - state: cig5
+   30        map: ["cig5"]
+   31:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   32        visible: false
+   33      - state: cig6
+   34        map: ["cig6"]
+   35:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   36        visible: false
+   37    - type: Tag
+   ..
+   81      - state: cig1
+   82        map: ["cig1"]
+   83:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   84        visible: false
+   85      - state: cig2
+   86        map: ["cig2"]
+   87:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   88        visible: false
+   89      - state: cig3
+   90        map: ["cig3"]
+   91:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   92        visible: false
+   93      - state: cig4
+   94        map: ["cig4"]
+   95:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+   96        visible: false
+   97      - state: cig5
+   98        map: ["cig5"]
+   99:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+  100        visible: false
+  101      - state: cig6
+  102        map: ["cig6"]
+  103:       sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+  104        visible: false
+  105    - type: Tag
+  ...
+  138    id: CigPackGreen
+  139    parent: CigPackBase
+  140:   name: Spessman's Smokes packet
+  141    description: A label on the packaging reads, Wouldn't a slow death make a change?
+  142    components:
+  143    - type: Sprite
+  144:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/green.rsi
+  145    - type: Item
+  146:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/green.rsi
+  147  
+  148  - type: entity
+  ...
+  153    components:
+  154    - type: Sprite
+  155:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/red.rsi
+  156    - type: Item
+  157:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/red.rsi
+  158  
+  159  - type: entity
+  ...
+  164    components:
+  165    - type: Sprite
+  166:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/blue.rsi
+  167    - type: Item
+  168:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/blue.rsi
+  169  
+  170  - type: entity
+  ...
+  175    components:
+  176    - type: Sprite
+  177:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/black.rsi
+  178    - type: Item
+  179:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/black.rsi
+  180  
+  181  - type: entity
+  ...
+  186    components:
+  187    - type: Sprite
+  188:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/syndicate.rsi
+  189    - type: Item
+  190:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/syndicate.rsi
+  191    - type: StorageFill
+  192      contents:
+  ...
+  197    id: CigPackMixedMedical
+  198    parent: CigPackMixedBase
+  199:   name: Dan's soaked smokes
+  200    suffix: Medical
+  201    description: Dan worked with NT chemistry to dispose of excess chemicals, ENJOY.
+  202    components:
+  203    - type: Sprite
+  204:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  205    - type: Item
+  206:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  207    - type: StorageFill
+  208      contents:
+  ...
+  225    id: CigPackMixed
+  226    parent: CigPackMixedBase
+  227:   name: Dan's soaked smokes
+  228    suffix: Mixed
+  229    description: Dan worked with NT chemistry to dispose of excess chemicals, ENJOY.
+  230    components:
+  231    - type: Sprite
+  232:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  233    - type: Item
+  234:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  235    - type: StorageFill
+  236      contents:
+  ...
+  259    id: CigPackMixedNasty
+  260    parent: CigPackMixedBase
+  261:   name: Dan's soaked smokes
+  262    suffix: Nasty
+  263    description: Dan worked with NT chemistry to dispose of excess chemicals, ENJOY.
+  264    components:
+  265    - type: Sprite
+  266:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  267    - type: Item
+  268:     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi
+  269    - type: StorageFill
+  270      contents:
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigarettes\rolling_paper.yml:
+    3    name: pack of rolling paper
+    4    id: PackPaperRolling
+    5:   description: A pack of thin pieces of paper used to make fine smokeables.
+    6    components:
+    7    - type: Storage
+    .
+   17          amount: 4
+   18    - type: Sprite
+   19:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   20      state: cigpapers
+   21    - type: Item
+   22:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   23  
+   24  - type: entity
+   ..
+   26    name: pack of rolling paper with filters
+   27    id: PackPaperRollingFilters
+   28:   description: A pack of filters and thin pieces of paper used to make fine smokeables.
+   29    components:
+   30    - type: Storage
+   ..
+   43    id: PaperRolling
+   44    name: rolling paper
+   45:   description: A thin piece of paper used to make fine smokeables.
+   46    suffix: Full
+   47    parent: BaseItem
+   ..
+   51      count: 5
+   52    - type: Sprite
+   53:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   54      state: cigpaper
+   55    - type: Item
+   56:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   57      size: Tiny
+   58    - type: Tag
+   ..
+   81      count: 5
+   82    - type: Sprite
+   83:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   84      state: cigfilter
+   85    - type: Item
+   86:     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
+   87      size: Tiny
+   88    - type: Tag
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigars\case.yml:
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Cigars/case.rsi
+    9      layers:
+   10      - state: closed
+   ..
+   39      - 0,0,3,1
+   40    - type: Item
+   41:     sprite: Objects/Consumable/Smokeables/Cigars/case.rsi
+   42      size: Normal
+   43      shape:
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Cigars\cigar.yml:
+    9    components:
+   10    - type: Sprite
+   11:     sprite: Objects/Consumable/Smokeables/Cigars/cigar.rsi
+   12      state: unlit-icon
+   13    - type: Tag
+   ..
+   16        - Trash
+   17    - type: Clothing
+   18:     sprite: Objects/Consumable/Smokeables/Cigars/cigar.rsi
+   19      slots: [ mask ]
+   20      equippedPrefix: unlit
+   ..
+   48    components:
+   49    - type: Sprite
+   50:     sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+   51      state: unlit-icon
+   52    - type: Clothing
+   53:     sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+   54      slots: [ mask ]
+   55      equippedPrefix: unlit
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Pipes\pipe.yml:
+    3    parent: BaseSmokingPipe
+    4    name: pipe
+    5:   description: Just like grandpappy used to smoke.
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Pipes/pipe.rsi
+    9      state: unlit-icon
+   10    - type: Clothing
+   11:     sprite: Objects/Consumable/Smokeables/Pipes/pipe.rsi
+   12      slots: [ mask ]
+   13      equippedPrefix: unlit
+   14    - type: Item
+   15      size: Tiny
+   16:     sprite: Objects/Consumable/Smokeables/Pipes/pipe.rsi
+   17    - type: Appearance
+   18    - type: BurnStateVisuals
+   ..
+   24    name: pipe
+   25    suffix: Tobacco
+   26:   description: Just like grandpappy used to smoke.
+   27    components:
+   28    - type: ContainerContainer
+   ..
+   47    name: pipe
+   48    suffix: Cannabis
+   49:   description: Just like grandpappy used to smoke.
+   50    components:
+   51    - type: ContainerContainer
+   ..
+   70    name: pipe
+   71    suffix: Rainbow Cannabis
+   72:   description: Just like grandpappy used to smoke.
+   73    components:
+   74    - type: ContainerContainer
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Consumable\Smokeables\Vapes\vape.yml:
+    6    components:
+    7    - type: Sprite
+    8:     sprite: Objects/Consumable/Smokeables/Vapes/vape-standard.rsi
+    9      state: icon
+   10  
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Misc\books_author.yml:
+  510    id: BookMedicalOfficer
+  511    name: horizon's battle - a medical officer's tale of trust and survival
+  512:   description: The cover features Smith, the medical officer, in his uniform, looking determined and ready to face any challenge. The backdrop shows the SS Horizon under attack, with explosions and smoke filling the space station. In the foreground, a wizard with a staff can be seen, adding an element of mystery and intrigue to the scene. The title is prominently displayed in bold letters, with the author's name and a tagline indicating the book's action-packed and suspenseful nature.
+  513    components:
+  514      - type: Sprite
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Misc\kudzu.yml:
+  268      - type: Sprite
+  269        drawdepth: Effects
+  270:       sprite: Effects/spookysmoke.rsi
+  271        layers:
+  272:       - state: spookysmoke
+  273          color: "#793a80dd"
+  274          map: [base]
+  ...
+  294          base:
+  295          - options: Default
+  296:           data: { state: spookysmoke }
+  297          - options: ReducedMotion
+  298:           data: { state: spookysmoke_static }
+  299  
+  300  - type: entity
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Specific\Hydroponics\leaves.yml:
+   59      color: darkgreen
+   60    - type: Construction
+   61:     graph: smokeableGroundCannabis
+   62      node: ground
+   63    - type: Tag
+   ..
+  159      color: white
+  160    - type: Construction
+  161:     graph: smokeableGroundCannabisRainbow
+  162      node: groundRainbow
+  163  
+  ...
+  166    parent: ProduceBase
+  167    id: LeavesTobacco
+  168:   description: "Dry them out to make some smokes."
+  169    components:
+  170    - type: Sprite
+  ...
+  212      color: brown
+  213    - type: Construction
+  214:     graph: smokeableGroundTobacco
+  215      node: ground
+  216    - type: Tag
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Specific\Service\vending_machine_restock.yml:
+  394  - type: entity
+  395    parent: BaseVendingMachineRestock
+  396:   id: VendingMachineRestockSmokes
+  397    name: ShadyCigs restock box
+  398    description: It's hard to see anything under all the Surgeon General warnings, but it mentions loading it into a vending machine.
+  ...
+  406      - state: green_bit
+  407        shader: unshaded
+  408:     - state: refill_smoke
+  409  
+  410  - type: entity
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Weapons\Bombs\funny.yml:
+   60      noRot: true
+   61      drawdepth: Effects
+   62:     sprite: Effects/chemsmoke.rsi
+   63:     state: chemsmoke
+   64      scale: "0.15, 0.15"
+   65    - type: EffectVisuals
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Objects\Weapons\Throwable\grenades.yml:
+  388  - type: entity
+  389    parent: GrenadeBase
+  390:   id: SmokeGrenade
+  391:   name: smoke grenade
+  392:   description: A tactical grenade that releases a large, long-lasting cloud of smoke when used.
+  393    components:
+  394    - type: Sprite
+  395:     sprite: Objects/Weapons/Grenades/smoke.rsi
+  396:   - type: SmokeOnTrigger
+  397      duration: 30
+  398      spreadAmount: 50
+  399    - type: SoundOnTrigger
+  400:     sound: /Audio/Items/smoke_grenade_smoke.ogg
+  401    - type: DeleteOnTrigger
+  402    - type: TimerTriggerVisuals
+  403      primingSound:
+  404:       path: /Audio/Items/smoke_grenade_prime.ogg
+  405  
+  406  - type: entity
+  407:   parent: SmokeGrenade
+  408    id: CleanerGrenade
+  409    name: cleanade
+  ...
+  412    - type: Sprite
+  413      sprite: Objects/Weapons/Grenades/janitor.rsi
+  414:   - type: SmokeOnTrigger
+  415      duration: 15
+  416      spreadAmount: 50
+  417:     smokePrototype: Foam
+  418      solution:
+  419        reagents:
+  ...
+  422  
+  423  - type: entity
+  424:   parent: SmokeGrenade
+  425    id: TearGasGrenade
+  426    name: tear gas grenade
+  ...
+  429    - type: Sprite
+  430      sprite: Objects/Weapons/Grenades/tear_gas.rsi
+  431:   - type: SmokeOnTrigger
+  432      duration: 10
+  433      spreadAmount: 30
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Structures\Machines\fatextractor.yml:
+   32        visible: false
+   33        map: ["enum.FatExtractorVisualLayers.Stack"]
+   34:     - state: fat_smoke
+   35        visible: false
+   36:       map: ["enum.FatExtractorVisualLayers.Smoke"]
+   37    - type: Lock
+   38      breakOnEmag: false
+   ..
+   47            True: { state: fat_door_on }
+   48            False: { state: fat_door_off }
+   49:         enum.FatExtractorVisualLayers.Smoke:
+   50            True: { visible: true }
+   51            False: { visible: false }
+
+D:\Git\CorvaxCM\Resources\Prototypes\Entities\Structures\Wallmounts\Signs\posters.yml:
+  107  - type: entity
+  108    parent: PosterBase
+  109:   id: PosterContrabandSmoke
+  110:   name: "Smoke"
+  111    description: "A poster advertising a rival corporate brand of cigarettes."
+  112    components:
+  ...
+  777    id: PosterLegitSafetyEyeProtection
+  778    name: "Safety: Eye Protection"
+  779:   description: "A poster instructing the viewer to wear eye protection when dealing with chemicals, smoke, or bright lights."
+  780    components:
+  781    - type: Sprite
+
+D:\Git\CorvaxCM\Resources\Prototypes\Flavors\flavors.yml:
+  126  
+  127  - type: flavor
+  128:   id: smokey
+  129    flavorType: Base
+  130:   description: flavor-base-smokey
+  131  
+  132  - type: flavor
+
+D:\Git\CorvaxCM\Resources\Prototypes\Recipes\Crafting\smokeables.yml:
+    1  - type: construction
+    2    name: joint
+    3:   id: smokeableJoint
+    4:   graph: smokeableJoint
+    5    startNode: start
+    6    targetNode: joint
+    7    category: construction-category-misc
+    8    description: "A roll of dried plant matter wrapped in thin paper."
+    9:   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
+   10    objectType: Item
+   11    
+   12  - type: construction
+   13    name: rainbow joint
+   14:   id: smokeableJointRainbow
+   15:   graph: smokeableJointRainbow
+   16    startNode: start
+   17    targetNode: jointRainbow
+   18    category: construction-category-misc
+   19    description: "A roll of dried plant matter wrapped in thin paper."
+   20:   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
+   21    objectType: Item
+   22  
+   23  - type: construction
+   24    name: blunt
+   25:   id: smokeableBlunt
+   26:   graph: smokeableBlunt
+   27    startNode: start
+   28    targetNode: blunt
+   29    category: construction-category-misc
+   30    description: "A roll of dried plant matter wrapped in a dried tobacco leaf."
+   31:   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi, state: unlit-icon }
+   32    objectType: Item
+   33  
+   34  - type: construction
+   35    name: rainbow blunt
+   36:   id: smokeableBluntRainbow
+   37:   graph: smokeableBluntRainbow
+   38    startNode: start
+   39    targetNode: bluntRainbow
+   40    category: construction-category-misc
+   41    description: "A roll of dried plant matter wrapped in a dried tobacco leaf."
+   42:   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi, state: unlit-icon }
+   43    objectType: Item
+   44  
+   45  - type: construction
+   46    name: cigarette
+   47:   id: smokeableCigarette
+   48:   graph: smokeableCigarette
+   49    startNode: start
+   50    targetNode: cigarette
+   51    category: construction-category-misc
+   52    description: "A roll of tobacco and nicotine."
+   53:   icon: { sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi, state: unlit-icon }
+   54    objectType: Item
+   55  
+   ..
+   58  - type: construction
+   59    name: ground cannabis
+   60:   id: smokeableGroundCannabis
+   61:   graph: smokeableGroundCannabis
+   62    startNode: start
+   63    targetNode: ground
+   ..
+   70  - type: construction
+   71    name: ground rainbow cannabis
+   72:   id: smokeableGroundCannabisRainbow
+   73:   graph: smokeableGroundCannabisRainbow
+   74    startNode: start
+   75    targetNode: groundRainbow
+   ..
+   81  - type: construction
+   82    name: ground tobacco
+   83:   id: smokeableGroundTobacco
+   84:   graph: smokeableGroundTobacco
+   85    startNode: start
+   86    targetNode: ground
+
+D:\Git\CorvaxCM\Resources\Prototypes\Recipes\Crafting\Graphs\smokeables.yml:
+    1  - type: constructionGraph
+    2:   id: smokeableJoint
+    3    start: start
+    4    graph:
+    .
+   15        
+   16  - type: constructionGraph
+   17:   id: smokeableJointRainbow
+   18    start: start
+   19    graph:
+   ..
+   30  
+   31  - type: constructionGraph
+   32:   id: smokeableBlunt
+   33    start: start
+   34    graph:
+   ..
+   44  
+   45  - type: constructionGraph
+   46:   id: smokeableBluntRainbow
+   47    start: start
+   48    graph:
+   ..
+   58  
+   59  - type: constructionGraph
+   60:   id: smokeableCigarette
+   61    start: start
+   62    graph:
+   ..
+   73  
+   74  - type: constructionGraph
+   75:   id: smokeableGroundCannabis
+   76    start: start
+   77    graph:
+   ..
+   87  
+   88  - type: constructionGraph
+   89:   id: smokeableGroundCannabisRainbow
+   90    start: start
+   91    graph:
+   ..
+  101  
+  102  - type: constructionGraph
+  103:   id: smokeableGroundTobacco
+  104    start: start
+  105    graph:
+
+D:\Git\CorvaxCM\Resources\Prototypes\Recipes\Lathes\chemistry.yml:
+   83    id: Vape
+   84    icon:
+   85:     sprite: Objects/Consumable/Smokeables/Vapes/vape-standard.rsi
+   86      state: icon
+   87    result: Vape
+
+D:\Git\CorvaxCM\Resources\Prototypes\Recipes\Reactions\chemicals.yml:
+  119  
+  120  - type: reaction
+  121:   id: Smoke
+  122    priority: 10
+  123    impact: High
+  ...
+  132      - !type:AreaReactionEffect
+  133        duration: 10
+  134:       prototypeId: Smoke
+  135        sound:
+  136:         path: /Audio/Effects/smoke.ogg
+  137  
+  138  - type: reaction
+
+D:\Git\CorvaxCM\Resources\Prototypes\Stacks\consumable_stacks.yml:
+   18    itemSize: 10
+   19  
+   20: # Smokeables
+   21  
+   22  - type: stack
+   23    id: PaperRolling
+   24    name: rolling paper
+   25:   icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigpaper }
+   26    spawn: PaperRolling
+   27    maxCount: 5
+   ..
+   31    id: CigaretteFilter
+   32    name: cigarette filter
+   33:   icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigfilter }
+   34    spawn: CigaretteFilter
+   35    maxCount: 5
+
+259 matches across 49 files
+
+
+Searching 2305 files for "HealthExaminable"
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Examine\CMExamineSystem.cs:
+    3  using Content.Shared.Damage;
+    4  using Content.Shared.Examine;
+    5: using Content.Shared.HealthExaminable;
+    6  using Content.Shared.Verbs;
+    7  
+    .
+   10  public sealed class CMExamineSystem : EntitySystem
+   11  {
+   12:     [Dependency] private readonly HealthExaminableSystem _healthExaminable = default!;
+   13      [Dependency] private readonly IdExaminableSystem _idExaminable = default!;
+   14  
+   15      public override void Initialize()
+   16      {
+   17:         SubscribeLocalEvent<ShortExamineComponent, GetVerbsEvent<ExamineVerb>>(OnGetExaminedVerbs, after: [typeof(HealthExaminableSystem), typeof(IdExaminableSystem)]);
+   18          SubscribeLocalEvent<IdExaminableComponent, ExaminedEvent>(OnIdExamined);
+   19:         SubscribeLocalEvent<HealthExaminableComponent, ExaminedEvent>(OnHealthExamined);
+   20      }
+   21  
+   ..
+   37      }
+   38  
+   39:     private void OnHealthExamined(Entity<HealthExaminableComponent> ent, ref ExaminedEvent args)
+   40      {
+   41          using (args.PushGroup(nameof(CMExamineSystem), -1))
+   ..
+   43              if (TryComp(ent, out DamageableComponent? damageable))
+   44              {
+   45:                 args.PushMessage(_healthExaminable.CreateMarkup(ent, ent.Comp, damageable));
+   46              }
+   47          }
+
+D:\Git\CorvaxCM\Content.Shared\HealthExaminable\HealthExaminableComponent.cs:
+    3  using Robust.Shared.Prototypes;
+    4  
+    5: namespace Content.Shared.HealthExaminable;
+    6  
+    7: [RegisterComponent, Access(typeof(HealthExaminableSystem))]
+    8: public sealed partial class HealthExaminableComponent : Component
+    9  {
+   10      public List<FixedPoint2> Thresholds = new()
+
+D:\Git\CorvaxCM\Content.Shared\HealthExaminable\HealthExaminableSystem.cs:
+    6  using Robust.Shared.Utility;
+    7  
+    8: namespace Content.Shared.HealthExaminable;
+    9  
+   10: public sealed class HealthExaminableSystem : EntitySystem
+   11  {
+   12      [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+   ..
+   16          base.Initialize();
+   17  
+   18:         SubscribeLocalEvent<HealthExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+   19      }
+   20  
+   21:     private void OnGetExamineVerbs(EntityUid uid, HealthExaminableComponent component, GetVerbsEvent<ExamineVerb> args)
+   22      {
+   23          if (!TryComp<DamageableComponent>(uid, out var damage))
+   ..
+   43      }
+   44  
+   45:     public FormattedMessage CreateMarkup(EntityUid uid, HealthExaminableComponent component, DamageableComponent damage)
+   46      {
+   47          var msg = new FormattedMessage();
+
+15 matches across 3 files
+
+
+Searching 2501 files for "HealthExaminable"
+
+D:\Git\CorvaxCM\Content.Server\Body\Systems\BloodstreamSystem.cs:
+   14  using Content.Shared.Drunk;
+   15  using Content.Shared.FixedPoint;
+   16: using Content.Shared.HealthExaminable;
+   17  using Content.Shared.Mobs.Systems;
+   18  using Content.Shared.Popups;
+
+D:\Git\CorvaxCM\Content.Server\HealthExaminable\HealthExaminableComponent.cs:
+    3  using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
+    4  
+    5: namespace Content.Server.HealthExaminable;
+    6  
+    7: [RegisterComponent, Access(typeof(HealthExaminableSystem))]
+    8: public sealed partial class HealthExaminableComponent : Component
+    9  {
+   10      public List<FixedPoint2> Thresholds = new()
+
+D:\Git\CorvaxCM\Content.Server\HealthExaminable\HealthExaminableSystem.cs:
+    6  using Robust.Shared.Utility;
+    7  
+    8: namespace Content.Server.HealthExaminable;
+    9  
+   10: public sealed class HealthExaminableSystem : EntitySystem
+   11  {
+   12      [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+   ..
+   16          base.Initialize();
+   17  
+   18:         SubscribeLocalEvent<HealthExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+   19      }
+   20  
+   21:     private void OnGetExamineVerbs(EntityUid uid, HealthExaminableComponent component, GetVerbsEvent<ExamineVerb> args)
+   22      {
+   23          if (!TryComp<DamageableComponent>(uid, out var damage))
+   ..
+   43      }
+   44  
+   45:     private FormattedMessage CreateMarkup(EntityUid uid, HealthExaminableComponent component, DamageableComponent damage)
+   46      {
+   47          var msg = new FormattedMessage();
+
+9 matches across 3 files
+
+
+Searching 6 files for "ActionXenoPlantWeeds"
+
+D:\Git\CorvaxCM\Resources\Prototypes\_CM\Actions\Xeno\xeno_construction_actions.yml:
+    1  - type: entity
+    2:   id: ActionXenoPlantWeeds
+    3    parent: ActionXenoBase
+    4    name: Plant Weeds (75) # TODO CM14 proper plasma costs
+
+1 match in 1 file
+
+
+Searching 384 files for "XenoPlantWeedsActionEvent"
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Construction\SharedXenoConstructionSystem.cs:
+   51          _hiveConstructionNodeQuery = GetEntityQuery<HiveConstructionNodeComponent>();
+   52  
+   53:         SubscribeLocalEvent<XenoConstructionComponent, XenoPlantWeedsActionEvent>(OnXenoPlantWeedsAction);
+   54  
+   55          SubscribeLocalEvent<XenoConstructionComponent, XenoChooseStructureActionEvent>(OnXenoChooseStructureAction);
+   ..
+   76      }
+   77  
+   78:     private void OnXenoPlantWeedsAction(Entity<XenoConstructionComponent> xeno, ref XenoPlantWeedsActionEvent args)
+   79      {
+   80          var coordinates = _transform.GetMoverCoordinates(xeno).SnapToGrid(EntityManager, _map);
+
+D:\Git\CorvaxCM\Content.Shared\_CM14\Xenos\Construction\Events\XenoPlantWeedsActionEvent.cs:
+    5  namespace Content.Shared._CM14.Xenos.Construction.Events;
+    6  
+    7: public sealed partial class XenoPlantWeedsActionEvent : InstantActionEvent
+    8  {
+    9      [DataField]
+
+3 matches across 2 files

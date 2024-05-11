@@ -68,7 +68,3 @@
   id: RevenantAbilities
   name: store-category-abilities
 
-- type: storeCategory
-  id: StoreWeapon
-  name: store-category-weapons-leadersquad
-

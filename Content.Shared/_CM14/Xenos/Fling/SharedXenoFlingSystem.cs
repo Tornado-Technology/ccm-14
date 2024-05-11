@@ -36,12 +36,12 @@ public abstract class SharedXenoFlingSystem : EntitySystem
 
     public override void Initialize()
     {
+        base.Initialize();
         _marineQuery = GetEntityQuery<MarineComponent>();
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
         _thrownItemQuery = GetEntityQuery<ThrownItemComponent>();
 
         SubscribeLocalEvent<XenoFlingComponent, XenoFlingActionEvent>(OnXenoFlingAction);
-        // SubscribeLocalEvent<XenoFlingComponent, ThrowDoHitEvent>(OnXenoFlingHit);
     }
 
     private void OnXenoFlingAction(Entity<XenoFlingComponent> xeno, ref XenoFlingActionEvent args)
@@ -50,13 +50,14 @@ public abstract class SharedXenoFlingSystem : EntitySystem
         {
             return;
         }
+
         var attempt = new XenoFlingAttemptEvent();
         RaiseLocalEvent(xeno, ref attempt);
-
         if (attempt.Cancelled)
         {
             return;
         }
+
         if (!_xenoPlasma.TryRemovePlasmaPopup(xeno.Owner, xeno.Comp.PlasmaCost))
         {
             return;

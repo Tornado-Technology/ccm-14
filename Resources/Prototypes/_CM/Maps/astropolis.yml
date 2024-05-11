@@ -1,18 +1,18 @@
 - type: gameMap
-  id: TGCM_Astropolis
-  mapName: Astropolis
-  mapPath: /Maps/TGMS/Astropolis.yml
+  id: CMAstropolis
+  mapName: "Астрополис"
+  mapPath: /Maps/_CM/astropolis.yml
   minPlayers: 0
   stations:
-    TGCM_Astropolis:
-      stationProto: StandardTGMSXeno
+    CMAstropolis:
+      stationProto: CMStandardXeno
       components:
-        - type: StationSpawning
-        - type: StationJobs
-          overflowJobs:
-            - Kseno
-          availableJobs:
-            Kseno: [ 17, 17 ]
-            Pretor: [ 1, 1 ]
-            Quinn: [ 1, 1 ]
-            Runi: [ 1, 1 ]
+      - type: StationSpawning
+      - type: StationJobs
+        overflowJobs:
+        - Kseno
+        availableJobs:
+          Kseno: [ 17, 17 ]
+          Pretor: [ 1, 1 ]
+          Quinn: [ 1, 1 ]
+          Runi: [ 1, 1 ]

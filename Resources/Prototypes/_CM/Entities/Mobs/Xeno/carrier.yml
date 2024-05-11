@@ -72,3 +72,7 @@
         - BulletImpassable
   - type: MovementSpeedModifier
     baseSprintSpeed: 3.5
+  - type: WhitelistPickup
+    any:
+    - type: XenoHugger
+    - type: XenoEgg

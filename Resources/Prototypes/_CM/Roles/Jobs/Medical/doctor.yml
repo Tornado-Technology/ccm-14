@@ -1,5 +1,5 @@
 - type: job
-  id: MilitaryMedic
+  id: CMDoctor
   name: job-name-militarymedic
   description: job-description-militarymedic
   playTimeTracker: JobMilitaryMedic
@@ -26,8 +26,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: MilitaryMedic
     - type: Skills
       medical: 3
       surgery: 2

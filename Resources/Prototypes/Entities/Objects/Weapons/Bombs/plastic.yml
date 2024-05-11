@@ -55,9 +55,6 @@
     startOnStick: true
     canToggleStartOnStick: true
   - type: TriggerOnSignal
-  - type: Tag
-    tags:
-    - HandExplosive
   - type: DeviceLinkSink
     ports:
       - Trigger

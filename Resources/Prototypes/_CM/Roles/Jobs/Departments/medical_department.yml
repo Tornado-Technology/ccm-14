@@ -1,0 +1,10 @@
+﻿- type: department
+  parent: CMDepartmentBase
+  id: CMMedbay
+  description: cm-department-Medical-description
+  color: "#008160"
+  roles:
+  # - MilitaryMainMedic
+  - CMDoctor
+  - CMResearcher
+  # - CMNurse

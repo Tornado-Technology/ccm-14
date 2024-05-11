@@ -22,6 +22,7 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
@@ -32,8 +33,6 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Shared.Mech.Components;
-using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -114,10 +113,6 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         if (!TryComp<MeleeWeaponComponent>(uid, out var melee))
             return;
-        // CCM change start
-        if (!component.StopMeleeOnShoot)
-            return;
-        // CCM change end
 
         if (melee.NextAttack > component.NextFire)
         {
@@ -130,34 +125,33 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         var user = args.SenderSession.AttachedEntity;
 
-        if (user == null || !_combatMode.IsInCombatMode(user))
+        if (user == null ||
+            !_combatMode.IsInCombatMode(user) ||
+            !TryGetGun(user.Value, out var ent, out var gun))
+        {
             return;
-
-        if (TryComp<MechPilotComponent>(user.Value, out var mechPilot))
-            user = mechPilot.Mech;
-
-        if (!TryGetGun(user.Value, out var ent, out var gun))
-            return;
+        }
 
         if (ent != GetEntity(msg.Gun))
             return;
 
         gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
+        gun.Target = GetEntity(msg.Target);
         AttemptShoot(user.Value, ent, gun);
     }
 
     private void OnStopShootRequest(RequestStopShootEvent ev, EntitySessionEventArgs args)
     {
-        var user = args.SenderSession.AttachedEntity;
         var gunUid = GetEntity(ev.Gun);
 
-        if (user == null)
+        if (args.SenderSession.AttachedEntity == null ||
+            !TryComp<GunComponent>(gunUid, out var gun) ||
+            !TryGetGun(args.SenderSession.AttachedEntity.Value, out _, out var userGun))
+        {
             return;
+        }
 
-        if (TryComp<MechPilotComponent>(user.Value, out var mechPilot))
-            user = mechPilot.Mech;
-
-        if (!TryGetGun(user.Value, out var ent, out var gun))
+        if (userGun != gun)
             return;
 
         StopShooting(gunUid, gun);
@@ -175,15 +169,6 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         gunEntity = default;
         gunComp = null;
-
-        if (TryComp<MechComponent>(entity, out var mech) &&
-            mech.CurrentSelectedEquipment.HasValue &&
-            TryComp<GunComponent>(mech.CurrentSelectedEquipment.Value, out var mechGun))
-        {
-            gunEntity = mech.CurrentSelectedEquipment.Value;
-            gunComp = mechGun;
-            return true;
-        }
 
         if (EntityManager.TryGetComponent(entity, out HandsComponent? hands) &&
             hands.ActiveHandEntity is { } held &&
@@ -212,6 +197,7 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         gun.ShotCounter = 0;
         gun.ShootCoordinates = null;
+        gun.Target = null;
         Dirty(uid, gun);
     }
 
@@ -268,10 +254,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (gun.NextFire > curTime)
             return;
 
-        var fireRateEv = new GetFireRateEvent(gun.FireRate);
-        RaiseLocalEvent(user, ref fireRateEv);
-
-        var fireRate = TimeSpan.FromSeconds(1f / fireRateEv.FireRate);
+        var fireRate = TimeSpan.FromSeconds(1f / gun.FireRateModified);
 
         // First shot
         // Previously we checked shotcounter but in some cases all the bullets got dumped at once

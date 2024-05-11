@@ -92,6 +92,7 @@
   - type: Blindable
   # Other
   - type: Inventory
+    templateId: marine
   - type: InventorySlots
   - type: Clickable
   - type: InteractionOutline
@@ -363,6 +364,7 @@
   - type: XenoNestable
   - type: Devourable
   - type: ImmuneToClothingRequiredStepTrigger
+  - type: Undisposable
 
 - type: species
   id: Marine

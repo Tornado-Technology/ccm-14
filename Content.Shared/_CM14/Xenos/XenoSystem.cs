@@ -1,17 +1,18 @@
 ﻿using Content.Shared._CM14.Marines;
 using Content.Shared._CM14.Medical.Scanner;
-using Content.Shared._CM14.Xenos.Construction;
 using Content.Shared._CM14.Xenos.Evolution;
 using Content.Shared._CM14.Xenos.Hive;
 using Content.Shared._CM14.Xenos.Pheromones;
 using Content.Shared._CM14.Xenos.Plasma;
 using Content.Shared._CM14.Xenos.Rest;
+using Content.Shared._CM14.Xenos.Weeds;
 using Content.Shared.Access.Components;
 using Content.Shared.Actions;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
+using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Radio;
@@ -35,8 +36,8 @@ public sealed class XenoSystem : EntitySystem
     [Dependency] private readonly StandingStateSystem _standing = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedXenoConstructionSystem _xenoConstruction = default!;
     [Dependency] private readonly XenoPlasmaSystem _xenoPlasma = default!;
+    [Dependency] private readonly SharedXenoWeedsSystem _xenoWeeds = default!;
 
     private readonly HashSet<EntityUid> _toUpdate = new();
 
@@ -63,6 +64,7 @@ public sealed class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoComponent, NewXenoEvolvedComponent>(OnNewXenoEvolved);
         SubscribeLocalEvent<XenoComponent, HealthScannerAttemptTargetEvent>(OnXenoHealthScannerAttemptTarget);
         SubscribeLocalEvent<XenoComponent, GetDefaultRadioChannelEvent>(OnXenoGetDefaultRadioChannel);
+        SubscribeLocalEvent<XenoComponent, AttackAttemptEvent>(OnXenoAttackAttempt);
 
         SubscribeLocalEvent<XenoWeedsComponent, StartCollideEvent>(OnWeedsStartCollide);
         SubscribeLocalEvent<XenoWeedsComponent, EndCollideEvent>(OnWeedsEndCollide);
@@ -82,7 +84,7 @@ public sealed class XenoSystem : EntitySystem
         }
 
         xeno.Comp.NextRegenTime = _timing.CurTime + xeno.Comp.RegenCooldown;
-        xeno.Comp.OnWeeds = _xenoConstruction.IsOnWeeds(xeno.Owner);
+        xeno.Comp.OnWeeds = _xenoWeeds.IsOnWeeds(xeno.Owner);
         Dirty(xeno);
     }
 
@@ -106,6 +108,20 @@ public sealed class XenoSystem : EntitySystem
     private void OnXenoGetDefaultRadioChannel(Entity<XenoComponent> ent, ref GetDefaultRadioChannelEvent args)
     {
         args.Channel = SharedChatSystem.HivemindChannel;
+    }
+
+    private void OnXenoAttackAttempt(Entity<XenoComponent> xeno, ref AttackAttemptEvent args)
+    {
+        if (args.Target is not { } target)
+            return;
+
+        // TODO CM14 different hives
+        // TODO CM14 this still falsely plays the hit red flash effect on xenos if others are hit in a wide swing
+        if (HasComp<XenoFriendlyComponent>(target) ||
+            _mobState.IsDead(target))
+        {
+            args.Cancel();
+        }
     }
 
     private void OnWeedsStartCollide(Entity<XenoWeedsComponent> ent, ref StartCollideEvent args)

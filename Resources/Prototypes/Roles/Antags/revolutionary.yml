@@ -2,8 +2,11 @@
   id: HeadRev
   name: roles-antag-rev-head-name
   antagonist: true
-  setPreference: false
+  setPreference: true
   objective: roles-antag-rev-head-objective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 108000 # 30h # Corvax-RoleTime
 
 - type: antag
   id: Rev

@@ -55,11 +55,11 @@
       types:
         Blunt: 15
     openSound:
-      path: /Audio/_CM/Machines/airlock.ogg
+      path: /Audio/Machines/airlock_open.ogg
     closeSound:
-      path: /Audio/_CM/Machines/airlock.ogg
+      path: /Audio/Machines/airlock_close.ogg
     denySound:
-      path: /Audio/_CM/Machines/buzz_two.ogg
+      path: /Audio/Machines/airlock_deny.ogg
   - type: ContainerContainer
     containers:
       board: !type:Container
@@ -148,7 +148,6 @@
     price: 150
   - type: LightningTarget
     priority: 1
-  - type: Godmode # Corvax-CM14-Changes
   - type: Tag
     tags:
       - Airlock

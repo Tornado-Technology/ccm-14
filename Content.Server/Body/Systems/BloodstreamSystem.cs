@@ -3,8 +3,8 @@ using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Chemistry.ReactionEffects;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Forensics;
-using Content.Server.HealthExaminable;
 using Content.Server.Popups;
+using Content.Shared._CM14.Medical.Stasis;
 using Content.Shared.Alert;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -13,6 +13,7 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Drunk;
 using Content.Shared.FixedPoint;
+using Content.Shared.HealthExaminable;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Rejuvenate;
@@ -114,6 +115,11 @@ public sealed class BloodstreamSystem : EntitySystem
                 continue;
 
             bloodstream.NextUpdate += bloodstream.UpdateInterval;
+
+            var ev = new BloodstreamMetabolizeAttemptEvent();
+            RaiseLocalEvent(uid, ref ev);
+            if (ev.Cancelled)
+                continue;
 
             if (!_solutionContainerSystem.ResolveSolution(uid, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution))
                 continue;

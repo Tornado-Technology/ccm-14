@@ -10,7 +10,6 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Effects;
 using Content.Shared.Interaction.Components;
-using Content.Server.Mech.Equipment.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged;
@@ -169,12 +168,9 @@ public sealed partial class GunSystem : SharedGunSystem
 
                     // Something like ballistic might want to leave it in the container still
                     if (!cartridge.DeleteOnSpawn && !Containers.IsEntityInContainer(ent!.Value))
-                    {
                         EjectCartridge(ent.Value, angle);
-                    }
 
                     Dirty(ent!.Value, cartridge);
-
                     break;
                 // Ammo shoots itself
                 case AmmoComponent newAmmo:
@@ -234,7 +230,7 @@ public sealed partial class GunSystem : SharedGunSystem
 
                         var hitName = ToPrettyString(hitEntity);
                         if (dmg != null)
-                            dmg = Damageable.TryChangeDamage(hitEntity, dmg, origin: user);
+                            dmg = Damageable.TryChangeDamage(hitEntity, dmg, origin: user, tool: ent);
 
                         // check null again, as TryChangeDamage returns modified damage values
                         if (dmg != null)
@@ -282,6 +278,13 @@ public sealed partial class GunSystem : SharedGunSystem
 
     private void ShootOrThrow(EntityUid uid, Vector2 mapDirection, Vector2 gunVelocity, GunComponent gun, EntityUid gunUid, EntityUid? user)
     {
+        if (gun.Target is { } target && !TerminatingOrDeleted(target))
+        {
+            var targeted = EnsureComp<TargetedProjectileComponent>(uid);
+            targeted.Target = target;
+            Dirty(uid, targeted);
+        }
+
         // Do a throw
         if (!HasComp<ProjectileComponent>(uid))
         {

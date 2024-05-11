@@ -17,8 +17,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: MilitaryPoliceman
     - type: Skills
       cqc: 2
       endurance: 2

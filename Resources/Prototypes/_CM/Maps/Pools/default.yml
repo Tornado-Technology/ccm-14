@@ -1,0 +1,8 @@
+- type: gameMapPool
+  id: CMDefaultMapPool
+  maps:
+  - CMErida
+  - CMDesert
+  - CMIceColony
+  - CMAstropolis
+  - CMHokses

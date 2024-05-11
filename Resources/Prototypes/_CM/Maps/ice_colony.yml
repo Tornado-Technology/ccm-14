@@ -1,0 +1,17 @@
+- type: gameMap
+  id: CMIceColony
+  mapName: "Ледяная колония"
+  mapPath: /Maps/_CM/ice_colony.yml
+  minPlayers: 0
+  stations:
+    CMIceColony:
+      stationProto: CMStandardXeno
+      components:
+        - type: StationJobs
+          overflowJobs:
+            - Kseno
+          availableJobs:
+            Kseno: [ 17, 17 ]
+            Pretor: [ 1, 1 ]
+            Quinn: [ 1, 1 ]
+            Runi: [ 1, 1 ]

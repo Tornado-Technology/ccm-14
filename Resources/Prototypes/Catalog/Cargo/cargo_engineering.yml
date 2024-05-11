@@ -89,8 +89,7 @@
   group: market
 
 - type: cargoProduct
-  name: Ящик с турелью
-  id: TurretMarineKit
+  id: EvaKit
   icon:
     sprite: Clothing/Head/Helmets/eva.rsi
     state: icon
@@ -98,7 +97,6 @@
   cost: 5000
   category: cargoproduct-category-name-engineering
   group: market
-
 
 - type: cargoProduct
   id: EngineeringRCDAmmo

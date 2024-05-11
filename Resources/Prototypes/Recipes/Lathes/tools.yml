@@ -245,10 +245,3 @@
     Steel: 750
     Plasma: 150
     Uranium: 150
-
-- type: latheRecipe
-  id: WeldingFuelCanister
-  result: WeldingFuelCanister
-  completetime: 2
-  materials:
-    Steel: 100
