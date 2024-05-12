@@ -13,7 +13,7 @@ public sealed partial class RequisitionsAccountComponent : Component
     public int Balance;
 
     [DataField]
-    public int StartingDollarsPerMarine = 0;
+    public int StartingDollarsPerMarine = 15000;
 
     [DataField]
     public int GainPerMinute = 300;

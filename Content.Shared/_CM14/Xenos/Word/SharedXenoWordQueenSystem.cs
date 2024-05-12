@@ -14,9 +14,9 @@ public abstract class SharedXenoWordQueenSystem : EntitySystem
     {
         SubscribeLocalEvent<XenoWordQueenComponent, XenoWordQueenActionEvent>(OnXenoWordQueenAction);
 
-        Subs.BuiEvents<XenoWordQueenComponent>(XenoWordQueenUI.Key, sub =>
+        Subs.BuiEvents<XenoWordQueenComponent>(XenoWordQueenUI.Key, subs =>
         {
-            sub.Event<XenoWordQueenBuiMessage>(OnXenoWordQueenBui);
+            subs.Event<XenoWordQueenBuiMsg>(OnXenoWordQueenBui);
         });
 
         _config.OnValueChanged(CCVars.ChatMaxMessageLength, OnChatMaxMessageLengthChanged, true);
@@ -34,11 +34,13 @@ public abstract class SharedXenoWordQueenSystem : EntitySystem
         if (args.Handled)
             return;
 
+        args.Handled = true;
         _ui.TryOpenUi(queen.Owner, XenoWordQueenUI.Key, queen);
     }
 
-    protected virtual void OnXenoWordQueenBui(Entity<XenoWordQueenComponent> queen, ref XenoWordQueenBuiMessage args)
+    protected virtual void OnXenoWordQueenBui(Entity<XenoWordQueenComponent> queen, ref XenoWordQueenBuiMsg args)
     {
+        _ui.CloseUi(queen.Owner, XenoWordQueenUI.Key, queen);
     }
 
     private void OnChatMaxMessageLengthChanged(int value)

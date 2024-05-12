@@ -22,7 +22,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._CM14.Xenos.Construction;
 
-public abstract class SharedXenoConstructionSystem : EntitySystem
+public sealed class SharedXenoConstructionSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly IComponentFactory _compFactory = default!;
@@ -53,13 +53,11 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
         SubscribeLocalEvent<XenoConstructionComponent, XenoPlantWeedsActionEvent>(OnXenoPlantWeedsAction);
 
         SubscribeLocalEvent<XenoConstructionComponent, XenoChooseStructureActionEvent>(OnXenoChooseStructureAction);
-        SubscribeLocalEvent<XenoConstructionComponent, XenoChooseStructureBuiMessage>(OnXenoChooseStructureBui);
 
         SubscribeLocalEvent<XenoConstructionComponent, XenoSecreteStructureActionEvent>(OnXenoSecreteStructureAction);
         SubscribeLocalEvent<XenoConstructionComponent, XenoSecreteStructureDoAfterEvent>(OnXenoSecreteStructureDoAfter);
 
         SubscribeLocalEvent<XenoConstructionComponent, XenoOrderConstructionActionEvent>(OnXenoOrderConstructionAction);
-        SubscribeLocalEvent<XenoConstructionComponent, XenoOrderConstructionBuiMessage>(OnXenoOrderConstructionBui);
         SubscribeLocalEvent<XenoConstructionComponent, XenoOrderConstructionDoAfterEvent>(OnXenoOrderConstructionDoAfter);
         SubscribeLocalEvent<XenoConstructionComponent, XenoConstructionAddPlasmaDoAfterEvent>(OnHiveConstructionNodeAddPlasmaDoAfter);
 
@@ -71,6 +69,16 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
         SubscribeLocalEvent<HiveConstructionNodeComponent, InteractNoHandEvent>(OnHiveConstructionNodeInteractedNoHand);
 
         SubscribeLocalEvent<HiveCoreComponent, MapInitEvent>(OnHiveCoreMapInit);
+
+        Subs.BuiEvents<XenoConstructionComponent>(XenoChooseStructureUI.Key, subs =>
+        {
+            subs.Event<XenoChooseStructureBuiMsg>(OnXenoChooseStructureBui);
+        });
+
+        Subs.BuiEvents<XenoConstructionComponent>(XenoOrderConstructionUI.Key, subs =>
+        {
+            subs.Event<XenoOrderConstructionBuiMsg>(OnXenoOrderConstructionBui);
+        });
 
         UpdatesAfter.Add(typeof(SharedPhysicsSystem));
     }
@@ -104,7 +112,7 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
         _ui.TryOpenUi(xeno.Owner, XenoChooseStructureUI.Key, xeno);
     }
 
-    private void OnXenoChooseStructureBui(Entity<XenoConstructionComponent> xeno, ref XenoChooseStructureBuiMessage args)
+    private void OnXenoChooseStructureBui(Entity<XenoConstructionComponent> xeno, ref XenoChooseStructureBuiMsg args)
     {
         if (!xeno.Comp.CanBuild.Contains(args.StructureId))
             return;
@@ -175,7 +183,7 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
         _ui.TryOpenUi(xeno.Owner, XenoOrderConstructionUI.Key, xeno);
     }
 
-    private void OnXenoOrderConstructionBui(Entity<XenoConstructionComponent> xeno, ref XenoOrderConstructionBuiMessage args)
+    private void OnXenoOrderConstructionBui(Entity<XenoConstructionComponent> xeno, ref XenoOrderConstructionBuiMsg args)
     {
         if (xeno.Comp.OrderingConstructionAt is not { } target ||
             !xeno.Comp.CanOrderConstruction.Contains(args.StructureId) ||
