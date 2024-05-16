@@ -4,10 +4,10 @@
   name: job-name-xeno
   description: job-description-xeno
   playTimeTracker: CMJobXeno
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 0
-  canBeAntag: false
   icon: "CMJobIconXeno"
   supervisors: job-supervisors-queen
   jobEntity: MobLarvaXeno
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMAccessXeno

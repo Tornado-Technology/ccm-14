@@ -8,3 +8,5 @@
   supervisors: job-supervisors-queen
   jobEntity: MobQueenXeno
   canBeAntag: false
+  accessGroups:
+  - CMAccessXeno
