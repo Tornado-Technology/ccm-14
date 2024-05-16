@@ -1,0 +1,9 @@
+# Jumpsuit
+- type: loadout
+  id: CMStandart
+  equipment: CMStandartUniform
+
+- type: startingGear
+  id: CMStandartUniform
+  equipment:
+    jumpsuit: CMJumpsuitCryo

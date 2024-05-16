@@ -1,0 +1,161 @@
+# Command
+- type: roleLoadout
+  id: CMJobHeadOperations
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobFieldCommander
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobStaffOfficer
+  groups:
+  - CMLoadoutStandart
+
+# Auxiliary Support
+- type: roleLoadout
+  id: CMJobPilotDropship
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobPilotGunship
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobPilotMech
+  groups:
+  - CMLoadoutStandart
+
+# Crew
+- type: roleLoadout
+  id: CMJobRigger
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobDoctor
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobShipEngineer
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobMilitaryPoliceman
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobResearcher
+  groups:
+  - CMLoadoutStandart
+
+# Marine alpha
+- type: roleLoadout
+  id: CMJobAlphaLeader
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobAlphaRifleman
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobAlphaMedic
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobAlphaTech
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobAlphaSpecialist
+  groups:
+  - CMLoadoutStandart
+
+# Marine Bravo
+- type: roleLoadout
+  id: CMJobBravoLeader
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobBravoRifleman
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobBravoMedic
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobBravoTech
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobBravoSpecialist
+  groups:
+  - CMLoadoutStandart
+
+# Marine Charlie
+- type: roleLoadout
+  id: CMJobCharlieLeader
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobCharlieRifleman
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobCharlieMedic
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobCharlieTech
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobCharlieSpecialist
+  groups:
+  - CMLoadoutStandart
+
+# Marine Delta
+- type: roleLoadout
+  id: CMJobDeltaLeader
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobDeltaRifleman
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobDeltaMedic
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobDeltaTech
+  groups:
+  - CMLoadoutStandart
+
+- type: roleLoadout
+  id: CMJobDeltaSpecialist
+  groups:
+  - CMLoadoutStandart

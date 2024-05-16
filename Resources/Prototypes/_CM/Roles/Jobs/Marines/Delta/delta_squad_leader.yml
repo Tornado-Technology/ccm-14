@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMDeltaLeader
   name: job-name-delta-leader
   description: job-description-deltaleader

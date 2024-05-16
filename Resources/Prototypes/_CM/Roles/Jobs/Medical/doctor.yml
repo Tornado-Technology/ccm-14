@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMDoctor
   name: job-name-militarymedic
   description: job-description-militarymedic

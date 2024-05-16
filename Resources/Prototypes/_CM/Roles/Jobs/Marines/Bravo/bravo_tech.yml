@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMBravoTech
   name: job-name-bravo-tech
   description: job-description-bravotech

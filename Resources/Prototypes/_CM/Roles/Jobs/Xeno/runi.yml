@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMRuni
   name: job-name-runi
   description: job-description-runi
@@ -7,3 +8,5 @@
   supervisors: job-supervisors-queen
   jobEntity: CMMobRounyXeno
   canBeAntag: false
+  accessGroups:
+  - CMAccessXeno

@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMBravoLeader
   name: job-name-bravo-leader
   description: job-description-bravoleader

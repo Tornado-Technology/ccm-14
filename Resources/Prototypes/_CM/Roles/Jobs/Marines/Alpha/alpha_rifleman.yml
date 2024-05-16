@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMAlphaRifleman
   name: job-name-alpha-rifleman
   description: job-description-alpharifleman

@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMStaffOfficer
   name: job-name-staffofficer
   description: job-description-staffofficer

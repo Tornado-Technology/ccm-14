@@ -211,28 +211,28 @@
 # Xeno
 - type: statusIcon
   parent: JobIcon
-  id: CMJobIconXeno
+  id: CMJobIconQueen
   icon:
     sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
-    state: delta_spec
-
-- type: statusIcon
-  parent: JobIcon
-  id: CMJobIconPretor
-  icon:
-    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
-    state: delta_spec
-
-- type: statusIcon
-  parent: JobIcon
-  id: CMJobIconQuinn
-  icon:
-    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
-    state: delta_spec
+    state: queen
 
 - type: statusIcon
   parent: JobIcon
   id: CMJobIconRuni
   icon:
     sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
-    state: delta_spec
+    state: runi
+
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconPretorian
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: pretorian
+
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconXeno
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: xeno

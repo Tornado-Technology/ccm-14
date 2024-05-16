@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMXeno
   name: job-name-xeno
   description: job-description-xeno

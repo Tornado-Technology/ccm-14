@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMFieldCommander
   name: job-name-fieldcommander
   description: job-description-fieldcommander

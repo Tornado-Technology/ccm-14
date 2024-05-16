@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMPilotGunship
   name: job-name-pilot-gunship
   description: job-description-pilotgunship

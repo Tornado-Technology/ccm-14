@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMDeltaSpecialist
   name: job-name-delta-specialist
   description: job-description-deltaspecialist

@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMMilitaryPoliceman
   name: job-name-militarypoliceman
   description: job-description-militarypoliceman

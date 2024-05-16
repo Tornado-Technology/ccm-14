@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMDeltaRifleman
   name: job-name-delta-rifleman
   description: job-description-deltarifleman

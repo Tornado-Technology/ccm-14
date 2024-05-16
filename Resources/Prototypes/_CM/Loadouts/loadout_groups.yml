@@ -1,0 +1,7 @@
+# Command
+- type: loadoutGroup
+  id: CMLoadoutStandart
+  name: marine standart
+  minLimit: 1
+  loadouts:
+  - CMStandart

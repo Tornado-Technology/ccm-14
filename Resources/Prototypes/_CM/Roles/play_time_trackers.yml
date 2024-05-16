@@ -1,3 +1,16 @@
+# Xeno
+- type: playTimeTracker
+  id: CMJobQueen
+
+- type: playTimeTracker
+  id: CMJobRuni
+
+- type: playTimeTracker
+  id: JobPretorian
+
+- type: playTimeTracker
+  id: CMJobXeno
+
 # Command
 - type: playTimeTracker
   id: CMJobHeadOperations

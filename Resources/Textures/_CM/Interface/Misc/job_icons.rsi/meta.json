@@ -8,6 +8,18 @@
     },
     "states": [
         {
+            "name": "queen"
+        },
+        {
+            "name": "pretorian"
+        },
+        {
+            "name": "runi"
+        },
+        {
+            "name": "xeno"
+        },
+        {
             "name": "alpha_med"
         },
         {

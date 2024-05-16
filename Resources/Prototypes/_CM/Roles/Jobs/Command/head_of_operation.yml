@@ -1,4 +1,5 @@
 - type: job
+  parent: CMJobBase
   id: CMHeadOperations
   name: job-name-headoperations
   description: job-description-headoperations
