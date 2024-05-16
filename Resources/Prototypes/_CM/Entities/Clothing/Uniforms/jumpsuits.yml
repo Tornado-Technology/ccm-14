@@ -5,16 +5,16 @@
   components:
   - type: Sprite
     sprite: _CM\Clothing\Uniforms\Jumpsuit\cargotech.rsi
-    # state: null
+    state: null
     layers:
       - state: icon
-      # - map: [ "enum.WebbingVisualLayers.Base" ]
+      - map: [ "enum.WebbingVisualLayers.Base" ]
   - type: Clothing
     sprite: _CM\Clothing\Uniforms\Jumpsuit\cargotech.rsi
   - type: SuitSensor
     randomMode: false
     mode: SensorCords
-  # - type: WebbingClothing
+  - type: WebbingClothing
 # TODO CMCorvax снять коммент при переходе на билд CM
   - type: Tag
     tags:

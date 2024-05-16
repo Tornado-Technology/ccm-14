@@ -2,3 +2,13 @@
   license: "CC-BY-SA-3.0"
   copyright: "Super Nova In The Catacombs by WigWoo1 on youtube. https://www.youtube.com/@WigWoo1"
   source: "https://www.youtube.com/watch?v=ly3-rhDTeOU&ab_channel=WigWoo1"
+
+- files: ["FortunateSon.ogg"]
+  license: ""
+  copyright: "Creedence Clearwater Revival - Fortunate Son"
+  source: "https://youtu.be/ZWijx_AgPiA?"
+
+- files: ["KlendathuDrop.ogg"]
+  license: ""
+  copyright: "Klendathu Drop - Starship Troopers Soundtrack (Basil Poledouris)"
+  source: "https://youtu.be/CIGHCoVzqtk?"

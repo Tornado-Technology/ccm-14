@@ -6,7 +6,6 @@
   startingGear: CMGearStaffOfficer
   icon: "CMJobIconStaffOfficer"
   supervisors: job-supervisors-head-operations
-# TODO CMCorvax проверить соответствие всех supervisors для КАЖДОЙ роли
   canBeAntag: false
   accessGroups:
   - CMShipMasterAccess

@@ -47,9 +47,8 @@
     walkModifier: 1
     sprintModifier: 0.9
   - type: HeldSpeedModifier
-  # - type: StorageOpenDoAfter
-  # - type: StorageCloseOnMove
-# TODO CMCorvax снять комменты при переход на CM
+  - type: StorageOpenDoAfter
+  - type: StorageCloseOnMove
 
 # Valkyrie personnel
 - type: entity

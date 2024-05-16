@@ -52,7 +52,6 @@
     whitelist:
       tags:
       - CMMortarShell
-# TODO Проверить правильность актуального тега для мортиры!
 
 - type: entity
   parent: CMBackpackBase

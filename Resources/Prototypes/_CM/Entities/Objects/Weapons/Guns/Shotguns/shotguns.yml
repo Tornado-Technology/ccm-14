@@ -53,15 +53,13 @@
       tags:
       - ShellShotgun
     capacity: 3
-    proto: CMShellShotgun
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
         ents: []
-  # - type: ShootUseDelay
-# TODO CMCorvax перенести компонент из CM визардов
+  - type: ShootUseDelay
 
 - type: entity
   parent: CMBaseWeaponShotgun

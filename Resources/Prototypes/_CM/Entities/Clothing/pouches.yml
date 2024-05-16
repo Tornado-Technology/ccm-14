@@ -1,4 +1,3 @@
-# TODO CMCorvax снять коммменты со всех строк после перехода на сборку
 - type: entity
   abstract: true
   parent: Clothing
@@ -80,14 +79,12 @@
     maxItemSize: Small
     grid:
     - 0,0,3,2
-  # - type: Storage
-  #   blacklist:
-  #     components:
-  #     - Bible
-  #     tags:
-  #     - CMFirstAidKit
-  #     - CMBoxStorage
-# TODO CMCorvax задать специфику для каждой сумки
+    blacklist:
+      components:
+      - Bible
+      tags:
+      - CMFirstAidKit
+      - CMBoxStorage
 
 - type: entity
   parent: CMPouchGeneral
@@ -165,7 +162,6 @@
     whitelist:
       tags:
       - Sidearm
-      # todo cm14 binoculars and CO tablet
 
 - type: entity
   parent: CMPouch
