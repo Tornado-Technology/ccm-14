@@ -1,0 +1,192 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponRifle
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Huge
+  - type: Wieldable
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+# Desert base
+- type: entity
+  parent: CMBaseWeaponRifle
+  id: CMWeaponRifleDesertM41A
+  name: M41A NAME
+  description: M41A DESC
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m41a.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m41a.rsi
+  - type: MagazineAmmoProvider
+  - type: Gun
+    minAngle: 10
+    maxAngle: 25
+    angleIncrease: 5
+    angleDecay: 15
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/m41a.ogg
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -12.5
+    angleIncrease: -2.5
+    angleDecay: -7.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/m41a_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/m41a_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM41A
+
+- type: entity
+  parent: CMBaseWeaponRifle
+  id: CMWeaponRifleDesertM4RA
+  name: M4RA NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M4RA DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m4ra.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m4ra.rsi
+  - type: Gun
+    minAngle: 15
+    maxAngle: 35
+    angleIncrease: 5
+    angleDecay: 20
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: GunWieldBonus
+    minAngle: -7.5
+    maxAngle: -17.5
+    angleIncrease: -2.5
+    angleDecay: -10
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM4RA
+
+- type: entity
+  parent: CMBaseWeaponRifle
+  id: CMWeaponRifleDesertM4RAS
+  name: M4RAS NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M4RAS DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m4ras.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Rifles\m4ras.rsi
+  - type: Gun
+    minAngle: 7.5
+    maxAngle: 17.5
+    angleIncrease: 2.5
+    angleDecay: 10
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -8
+    angleIncrease: -1
+    angleDecay: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM4RA
+
+# Jungle
+- type: entity
+  parent: CMWeaponRifleDesertM41A
+  id: CMWeaponRifleJungleM41A
+  name: M41A NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M41A DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m41a.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m41a.rsi
+
+- type: entity
+  parent: CMWeaponRifleDesertM4RA
+  id: CMWeaponRifleJungleM4RA
+  name: M4RA NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M4RA DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m4ra.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m4ra.rsi
+
+- type: entity
+  parent: CMWeaponRifleDesertM4RAS
+  id: CMWeaponRifleJungleM4RAS
+  name: M4RAS NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M4RAS DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m4ras.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Rifles\m4ras.rsi

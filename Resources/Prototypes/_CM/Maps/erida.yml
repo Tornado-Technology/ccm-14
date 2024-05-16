@@ -9,9 +9,9 @@
       components:
       - type: StationJobs
         overflowJobs:
-        - Kseno
+        - CMXeno
         availableJobs:
-          Kseno: [ 17, 17 ]
-          Pretor: [ 1, 1 ]
-          Quinn: [ 1, 1 ]
-          Runi: [ 1, 1 ]
+          CMXeno: [ 17, 17 ]
+          CMPretorian: [ 1, 1 ]
+          CMQueen: [ 1, 1 ]
+          CMRuni: [ 1, 1 ]

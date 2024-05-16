@@ -1,8 +1,0 @@
-﻿- type: accessLevel
-  id: CMAccessBrig
-  name: id-card-access-level-brig
-
-- type: accessLevel
-  id: CMAccessArmory
-  name: id-card-access-level-armory
-

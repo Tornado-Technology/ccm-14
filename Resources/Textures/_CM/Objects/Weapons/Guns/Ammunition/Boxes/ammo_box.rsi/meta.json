@@ -1,0 +1,134 @@
+{
+	"version": 1,
+	"license": "CC-BY-SA-3.0",
+	"copyright": "Taken from https://github.com/cmss13-devs/cmss13",
+	"size": {
+		"x": 32,
+		"y": 32
+	},
+	"states": [
+		{
+			"name": "base-d"
+		},
+        {
+            "name": "base-g"
+        },
+        {
+            "name": "base-s"
+        },
+		{
+			"name": "incendiary"
+		},
+        {
+            "name": "ap"
+        },
+		{
+			"name": "band_9"
+		},
+		{
+			"name": "band_20"
+		},
+		{
+			"name": "band_24"
+		},
+		{
+			"name": "band_45"
+		},
+		{
+			"name": "band_28"
+		},
+		{
+			"name": "band_60"
+		},
+		{
+			"name": "magd-1"
+		},
+		{
+			"name": "magd-2"
+		},
+		{
+			"name": "magd-3"
+		},
+		{
+			"name": "magd-4"
+		},
+		{
+			"name": "magd-5"
+		},
+        {
+            "name": "magdi-1"
+        },
+        {
+            "name": "magdi-2"
+        },
+        {
+            "name": "magdi-3"
+        },
+        {
+            "name": "magdi-4"
+        },
+        {
+            "name": "magdi-5"
+        },
+        {
+            "name": "magdap-1"
+        },
+        {
+            "name": "magdap-2"
+        },
+        {
+            "name": "magdap-3"
+        },
+        {
+            "name": "magdap-4"
+        },
+        {
+            "name": "magdap-5"
+        },
+        {
+            "name": "magg-1"
+        },
+        {
+            "name": "magg-2"
+        },
+        {
+            "name": "magg-3"
+        },
+        {
+            "name": "magg-4"
+        },
+        {
+            "name": "magg-5"
+        },
+        {
+            "name": "maggi-1"
+        },
+        {
+            "name": "maggi-2"
+        },
+        {
+            "name": "maggi-3"
+        },
+        {
+            "name": "maggi-4"
+        },
+        {
+            "name": "maggi-5"
+        },
+        {
+            "name": "maggap-1"
+        },
+        {
+            "name": "maggap-2"
+        },
+        {
+            "name": "maggap-3"
+        },
+        {
+            "name": "maggap-4"
+        },
+        {
+            "name": "maggap-5"
+        }
+	]
+}

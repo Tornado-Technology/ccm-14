@@ -1,0 +1,335 @@
+- type: entity
+  abstract: true
+  parent: ClothingUniformBase
+  id: CMJumpsuitBase
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cargotech.rsi
+    # state: null
+    layers:
+      - state: icon
+      # - map: [ "enum.WebbingVisualLayers.Base" ]
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cargotech.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorCords
+  # - type: WebbingClothing
+# TODO CMCorvax снять коммент при переходе на билд CM
+  - type: Tag
+    tags:
+      - ClothMade
+      - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: CMJumpsuitBase
+  id: CMJumpsuitStorageBase
+  components:
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,2,1
+
+- type: entity
+  abstract: true
+  parent: [ CMJumpsuitBase, BaseFoldable ]
+  id: CMJumpsuitBaseFoldable
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\ce.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_open
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\ce.rsi
+    state: equipped-HELMET
+    equippedPrefix: up
+  - type: Foldable
+    folded: false
+    canFoldInsideContainer: true
+    unfoldVerbText: "Закатать рукав"
+    foldVerbText: "Раскатать рукав"
+  - type: Appearance
+  - type: FoldableClothing
+    foldedEquippedPrefix: open
+    foldedHeldPrefix: open
+  - type: Item
+    heldPrefix: open
+
+- type: entity
+  parent: CMJumpsuitStorageBase
+  id: CMJumpsuitCargoTech
+  name: cargo technician uniform
+  description: A standard-issue cargo tech uniform.
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitChiefEngineer
+  name: chief engineer uniform
+  description: Standard-issue Chief Engineer uniform.
+
+- type: entity
+  parent: [ CMJumpsuitStorageBase, CMJumpsuitBaseFoldable ]
+  id: CMJumpsuitQM
+  name: QM uniform
+  description: A standard-issue cargo tech uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\qm.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\qm.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitCMO
+  name: cmo uniform
+  description: Standard-issue cmo uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cmo.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cmo.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitCO
+  name: commanding officer uniform
+  description: Standard-issue Commanding Officer uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\CO\co.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\CO\co.rsi
+
+- type: entity
+  parent: CMJumpsuitBase
+  id: CMJumpsuitCOField
+  name: CMJumpsuitCOField name (полевая форма ГО)
+  description: CMJumpsuitCOField desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\CO\field_suit.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\CO\field_suit.rsi
+
+- type: entity
+  parent: CMJumpsuitBase
+  id: CMJumpsuitCryo
+  name: CMJumpsuitCryo name
+  description: CMJumpsuitCryo desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cryo.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\cryo.rsi
+
+- type: entity
+  parent: CMJumpsuitBase
+  id: CMJumpsuitScientist
+  name: CMJumpsuitScientist name
+  description: CMJumpsuitScientist desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\scientist.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\scientist.rsi
+
+- type: entity
+  parent: CMJumpsuitBase
+  id: CMJumpsuitMarineFormal
+  name: formal marine uniform
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\marine_formal.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\marine_formal.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitMP
+  name: MP uniform
+  description: A standard-issue MP uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\MP\black.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\MP\black.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitOMP
+  name: OMP uniform
+  description: A standard-issue OMP uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\MP\black_omp.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\MP\black_omp.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitEngineer
+  name: USCM ComTech uniform
+  description: Standard-issue Marine combat technician fatigues. They have shards of light Kevlar to help protect against stabbing weapons and bullets.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\engineering.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\engineering.rsi
+
+- type: entity
+  parent: CMJumpsuitStorageBase
+  id: CMJumpsuitPilot
+  name: pilot uniform
+  description: Standard-issue pilot uniform.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\pilot.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\Jumpsuit\pilot.rsi
+
+# Desert marine base
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitDesertMarine
+  name: CMJumpsuitDesertMarine name
+  description: CMJumpsuitDesertMarine desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\standard.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\standard.rsi
+
+- type: entity
+  parent: [ CMJumpsuitStorageBase, CMJumpsuitBaseFoldable ]
+  id: CMJumpsuitDesertFieldCO
+  name: CMJumpsuitFieldCO name (полевая форма ПК)
+  description: CMJumpsuitFieldCO desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\CO\field_co.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\CO\field_co.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitDesertMarineEng
+  name: CMJumpsuitDesertMarineEng name
+  description: CMJumpsuitDesertMarineEngineer desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\engineer.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\engineer.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitDesertMarineMed
+  name: CMJumpsuitDesertMarineMed name
+  description: CMJumpsuitDesertMarineMed desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\medic.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\medic.rsi
+
+- type: entity
+  parent: CMJumpsuitBaseFoldable
+  id: CMJumpsuitDesertMarineSpec
+  name: CMJumpsuitDesertMarineSpec name
+  description: CMJumpsuitDesertMarineSpec desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\specialist.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\specialist.rsi
+
+- type: entity
+  parent: [ CMJumpsuitBaseFoldable, CMJumpsuitStorageBase ]
+  id: CMJumpsuitDesertMarineTanker
+  name: CMJumpsuitDesertMarineTanker name
+  description: CMJumpsuitDesertMarineTanker desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\tanker.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Desert\tanker.rsi
+
+# Jungle marine base
+- type: entity
+  parent: CMJumpsuitDesertMarine
+  id: CMJumpsuitJungleMarine
+  name: CMJumpsuitJungleMarine name
+  description: CMJumpsuitJungleMarine desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\standard.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\standard.rsi
+
+- type: entity
+  parent: CMJumpsuitDesertFieldCO
+  id: CMJumpsuitJungleFieldCO
+  name: CMJumpsuitFieldCO name (это полевая форма ПК)
+  description: CMJumpsuitFieldCO desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\CO\field_co.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\CO\field_co.rsi
+
+- type: entity
+  parent: CMJumpsuitDesertMarineEng
+  id: CMJumpsuitJungleMarineEng
+  name: CMJumpsuitJungleMarineEng name
+  description: CMJumpsuitJungleMarineEngineer desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\engineer.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\engineer.rsi
+
+- type: entity
+  parent: CMJumpsuitDesertMarineMed
+  id: CMJumpsuitJungleMarineMed
+  name: CMJumpsuitJungleMarineMed name
+  description: CMJumpsuitJungleMarineMed desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\medic.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\medic.rsi
+
+- type: entity
+  parent: CMJumpsuitDesertMarineSpec
+  id: CMJumpsuitJungleMarineSpec
+  name: CMJumpsuitJungleMarineSpec name
+  description: CMJumpsuitJungleMarineSpec desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\specialist.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\specialist.rsi
+
+- type: entity
+  parent: CMJumpsuitDesertMarineTanker
+  id: CMJumpsuitJungleMarineTanker
+  name: CMJumpsuitJungleMarineTanker name
+  description: CMJumpsuitJungleMarineTanker desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\tanker.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Uniforms\JumpsuitByMap\Jungle\tanker.rsi

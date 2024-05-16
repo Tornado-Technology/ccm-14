@@ -1,0 +1,63 @@
+- type: stack
+  id: CMOintment
+  name: ointment
+  icon: { sprite: "/Textures/_CM/Objects//Medical/medical.rsi", state: ointment }
+  spawn: CMOintment
+  maxCount: 10
+  itemSize: 1
+
+- type: stack
+  id: CMGauze
+  name: gauze
+  icon: { sprite: "/Textures/_CM/Objects//Medical/medical.rsi", state: gauze }
+  spawn: CMGauze
+  maxCount: 10
+  itemSize: 1
+
+- type: stack
+  id: CMSurgicalLine
+  name: surgical line
+  icon: { sprite: "/Textures/_CM/Objects/Specific/Medical/medical.rsi", state: line_brute }
+  spawn: CMSurgicalLine
+  maxCount: 1
+  itemSize: 1
+
+- type: stack
+  id: CMSynthGraft
+  name: CMSynthGraft
+  icon: { sprite: "/Textures/_CM/Objects/Specific/Medical/medical.rsi", state: line_burn }
+  spawn: CMSynthGraft
+  maxCount: 1
+  itemSize: 1
+
+- type: stack
+  id: CMBurnKit
+  name: advanced burn kit
+  icon: { sprite: "/Textures/_CM/Objects/Specific/Medical/medical.rsi", state: burnkit }
+  spawn: CMBurnKit
+  maxCount: 10
+  itemSize: 1
+
+- type: stack
+  id: CMTraumaKit
+  name: advanced trauma kit
+  icon: { sprite: "/Textures/_CM/Objects/Specific/Medical/medical.rsi", state: traumakit }
+  spawn: CMTraumaKit
+  maxCount: 10
+  itemSize: 1
+
+- type: stack
+  id: CMBurnkitUp
+  name: CMBurnkitUp name
+  icon: { sprite: "_CM/Objects/Specific/Medical/medical.rsi", state: burnkit_upgraded }
+  spawn: CMBurnkitUp
+  maxCount: 10
+  itemSize: 1
+
+- type: stack
+  id: CMTraumakitUp
+  name: CMTraumakitUp name
+  icon: { sprite: "_CM/Objects/Specific/Medical/medical.rsi", state: traumakit_upgraded }
+  spawn: CMTraumakitUp
+  maxCount: 10
+  itemSize: 1

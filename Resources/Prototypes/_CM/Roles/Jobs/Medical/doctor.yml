@@ -2,24 +2,11 @@
   id: CMDoctor
   name: job-name-militarymedic
   description: job-description-militarymedic
-  playTimeTracker: JobMilitaryMedic
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobAlfaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobDeltaMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobBravoMarine
-      time: 0
-    - !type:RoleTimeRequirement
-      role: JobCharlieMarine
-      time: 0
+  playTimeTracker: CMJobDoctor
   startingGear: CMGearDoctor
   icon: "CMJobIconDoctor"
+  supervisors: job-supervisors-staff-officer
   joinNotifyCrew: false
-  supervisors: job-supervisors-main-medic
   canBeAntag: false
   accessGroups:
   - CMMedbay
@@ -33,20 +20,6 @@
 - type: startingGear
   id: CMGearDoctor
   equipment:
-    jumpsuit: CMScrubsBlue
-    back: CMSatchelMedical
-    shoes: ClothingShoesColorWhite
-    id: CMIDCardDoctor
-
-- type: startingGear
-  id: CMGearDoctorEquipped
-  equipment:
-    jumpsuit: CMScrubsBlue
-    outerClothing: CMCoatLong
-    back: CMSatchelMedical
-    gloves: CMHandsLatex
-    shoes: ClothingShoesColorWhite
-    head: CMHeadCapSurgBlue
-    id: CMIDCardDoctor
+    jumpsuit: CMJumpsuitCryo
     ears: CMHeadsetMedical
-    belt: CMBeltMedicalFilled
+    id: CMIDCardDoctor

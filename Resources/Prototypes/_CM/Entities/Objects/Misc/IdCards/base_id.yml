@@ -1,0 +1,75 @@
+﻿- type: entity
+  abstract: true
+  parent: Clothing
+  id: CMIDCardBase
+  name: identification holo-badge
+  description: A slice of encoded compressed fiber glass. Used for identification and access control.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/id_cards.rsi
+    state: plain
+  - type: Clothing
+    sprite: _CM/Objects/Misc/id_cards.rsi
+    equippedPrefix: default
+    slots:
+    - idcard
+  - type: Item
+    size: Small
+    heldPrefix: default
+  - type: Access
+  - type: IdCard
+    nameLocId: cm-access-id-card-component-owner-name-job-title-text
+    fullNameLocId: cm-access-id-card-component-owner-full-name-job-title-text
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  abstract: true
+  parent: [ Clothing, CMIDCardBase ]
+  id: CMIDCardStandardDogtag
+  name: dogtags
+  description: contains information related to it's carrier, and grants access to the ship.
+  components:
+  - type: Sprite
+    state: dogtag
+  - type: Clothing
+    equippedPrefix: dogtag
+    slots:
+    - neck
+    - idcard
+  - type: Item
+    size: Tiny
+    heldPrefix: dogtag
+  - type: IdCard
+    nameLocId: cm-access-dogtags-component-owner-name-job-title-text
+    fullNameLocId: cm-access-dogtags-component-owner-full-name-job-title-text
+
+- type: entity
+  abstract: true
+  parent: CMIDCardBase
+  id: CMIDCardGold
+  name: gold identification holo-badge
+  description: A gold plated holo-badge which shows power and might.
+  components:
+  - type: Sprite
+    state: gold
+  - type: Clothing
+    equippedPrefix: gold
+  - type: Item
+    heldPrefix: gold
+
+- type: entity
+  abstract: true
+  parent: CMIDCardBase
+  id: CMIDCardSilver
+  name: silver identification holo-badge
+  description: A silver plated holo-badge which shows honour and dedication.
+  components:
+  - type: Sprite
+    state: silver
+  - type: Clothing
+    equippedPrefix: silver
+  - type: Item
+    heldPrefix: silver

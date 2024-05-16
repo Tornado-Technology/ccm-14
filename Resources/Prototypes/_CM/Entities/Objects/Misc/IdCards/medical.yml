@@ -1,0 +1,7 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardDoctor
+  name: doctor's ID card
+  components:
+  - type: PresetIdCard
+    job: CMDoctor

@@ -1,8 +1,15 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakDeveloper
-  name: developer's cloak
-  description: Comfortable blue raincoat with beautiful gold trim, full of bug-proof patches.
+  id: CMClothingNeckM68
+  name: CMClothingNeckM68 name
+  description: CMClothingNeckM68 desc
   components:
   - type: Sprite
-    sprite: Clothing/Neck/Cloaks/developer.rsi
+    sprite: _CM\Clothing\Neck\Cloaks\m68.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.40
+  # - type: FireProtection
+  #   reduction: 0.6
+# TODO CMCorvax заменить резист heat на FireProtection после апстрима

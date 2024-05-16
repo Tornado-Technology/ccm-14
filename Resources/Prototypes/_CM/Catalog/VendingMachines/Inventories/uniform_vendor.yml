@@ -2,7 +2,6 @@
   id: UniformVendInventory
   startingInventory:
     BoxEmergencyMarine: 6
-    ClothingUniformJumpsuitMarine: 10
     CMHandsBlack: 10
     ClothingShoesBootsMarine: 10
     BoxMRPFilled: 10
@@ -12,7 +11,6 @@
     ClothingOuterArmorMarineMedium: 4
     ClothingOuterArmorMarineHeavy: 4
     ClothingOuterPrototypeC: 1
-    ClothingHeadHelmetMarine: 4
     ClothingEyesGlassesBallistic: 5
     ClothingEyesGlassesPrescriptionBallistic: 5
     ClothingEyesGlassesRPG: 5
@@ -23,7 +21,6 @@
     ClothingMaskGasRebreather: 4
     ClothingMaskCoif: 6
     MarineRollerBed: 5
-    CMPouchSurvival: 3
     CMPouchFirstAid: 1
     CMPouchMagazine: 2
     CMPouchMedical: 1

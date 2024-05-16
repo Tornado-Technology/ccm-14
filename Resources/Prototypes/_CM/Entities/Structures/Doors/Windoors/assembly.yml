@@ -8,7 +8,7 @@
   components:
   - type: InteractionOutline
   - type: Sprite
-    sprite: _CM/Structures/Doors/windoor_assemblies.rsi/
+    sprite: _CM/Structures/Doors/Windoors/windoor_assemblies.rsi
     state: windoor_assembly01
   - type: Physics
   - type: Fixtures
@@ -62,7 +62,7 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          SheetPlasteel1: #todo cm14 look up
+          SheetPlasteel1:
             min: 1
             max: 2
   - type: Construction

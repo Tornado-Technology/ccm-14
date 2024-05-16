@@ -1,0 +1,67 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/cmss13-devs/cmss13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "gauze"
+        },
+        {
+            "name": "gauze-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "gauze-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "ointment"
+        },
+        {
+            "name": "ointment-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "ointment-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "line_brute"
+        },
+        {
+            "name": "line_burn"
+        },
+        {
+            "name": "traumakit"
+        },
+        {
+            "name": "burnkit"
+        },
+        {
+            "name": "burnkit_upgraded"
+        },
+        {
+            "name": "burnkitup-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "burnkitup-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "traumakit_upgraded"
+        },
+        {
+            "name": "traumakitup-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "traumakitup-inhand-right",
+            "directions": 4
+        }
+    ]
+}

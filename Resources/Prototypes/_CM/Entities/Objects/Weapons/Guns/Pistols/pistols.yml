@@ -1,0 +1,104 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponPistol
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_CM/Weapons/Guns/Cock/pistol_cock.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - Sidearm
+
+- type: entity
+  parent: BaseWeaponPistol
+  id: CMWeaponPistolHighpower
+  name: highpower name
+  description: highpower desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\Guns\Pistols\highpower.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Gun
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 5
+    angleDecay: 3
+    fireRate: 2
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazinePistolHighpower
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - CMCartridgePistol9
+
+- type: entity
+  parent: BaseWeaponPistol
+  id: CMWeaponPistolVP78
+  name: VP78 name
+  description: VP78 desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\Guns\Pistols\vp78.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Gun
+    minAngle: 1.5
+    maxAngle: 5
+    angleIncrease: 2.5
+    angleDecay: 1.5
+    fireRate: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/vp78_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/vp78_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazinePistolVP78
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - CMCartridgePistol9

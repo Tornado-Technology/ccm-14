@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: CMHudMedical
+  name: medical hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Eyes\Hud\med.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Eyes\Hud\med.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: Tag
+    tags:
+    - HudMedical
+  - type: SolutionScanner
+
+- type: entity
+  parent: [ ClothingEyesBase, ShowSecurityIcons ]
+  id: CMHudSecurity
+  name: security hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and security records.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Eyes\Hud\sec.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Eyes\Hud\sec.rsi
+  - type: Tag
+    tags:
+    - HudSecurity

@@ -1,0 +1,146 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponShotgun
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Large
+  - type: Wieldable
+  - type: AmmoCounter
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+# Desert base
+- type: entity
+  parent: CMBaseWeaponShotgun
+  id: CMWeaponShotgunDesertM37
+  name: M37 NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M37 DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Shotguns\m37.rsi
+    layers:
+    - state: icon
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Shotguns\m37.rsi
+  - type: Gun
+    fireRate: 0.5
+    minAngle: 5
+    maxAngle: 10
+    angleIncrease: 2.5
+    angleDecay: 5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_auto.ogg # Corvax-Guns
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: GunWieldBonus
+    minAngle: -2.5
+    maxAngle: -5
+    angleIncrease: -1
+    angleDecay: -2.5
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 3
+    proto: CMShellShotgun
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  # - type: ShootUseDelay
+# TODO CMCorvax перенести компонент из CM визардов
+
+- type: entity
+  parent: CMBaseWeaponShotgun
+  id: CMWeaponShotgunDesertXM51
+  name: XM51 name
+  description: XM51 DESC
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Shotguns\xm51.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Shotguns\xm51.rsi
+  - type: Gun
+    fireRate: 1.5
+    minAngle: 5
+    maxAngle: 10
+    angleIncrease: 2.5
+    angleDecay: 5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/shotgun_xm51.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: GunWieldBonus
+    minAngle: -2.5
+    maxAngle: -5
+    angleIncrease: -1
+    angleDecay: -2.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineShotgunXM51
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: MagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Tag
+    tags:
+      - CMWeaponShotgunXM51
+
+# Jungle
+- type: entity
+  parent: CMWeaponShotgunDesertM37
+  id: CMWeaponShotgunJungleM37
+  name: M37 NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M37 DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Shotguns\m37.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Shotguns\m37.rsi
+
+- type: entity
+  parent: CMWeaponShotgunDesertXM51
+  id: CMWeaponShotgunJungleXM51
+  name: XM51 name
+  description: XM51 DESC
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Shotguns\xm51.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Shotguns\xm51.rsi

@@ -1,12 +1,12 @@
 - type: job
-  id: Rigger
+  id: CMRigger
   name: job-name-rigger
   description: job-description-rigger
-  playTimeTracker: JobRigger
+  playTimeTracker: CMJobRigger
   startingGear: CMGearCargoTech
   icon: "CMJobIconCargoTech"
+  supervisors: job-supervisors-staff-officer
   joinNotifyCrew: false
-  supervisors: job-supervisors-supply-officer
   canBeAntag: false
   accessGroups:
   - CMCargoTech
@@ -20,12 +20,6 @@
 - type: startingGear
   id: CMGearCargoTech
   equipment:
-    jumpsuit: CMJumpsuitCargoTech
-    back: CMSatchelMarineTech
-    shoes: CMBootsBlack
-    head: CMHeadCapCargo
-    gloves: CMHandsInsulated
-    id: CMIDCardCargoTech
+    jumpsuit: CMJumpsuitCryo
     ears: CMHeadsetRequisition
-    pocket1: CMPouchGeneralMedium
-#    belt: TODO CM14 M276 Pattern General Pistol Holster Rig Filled
+    id: CMIDCardCargoTech

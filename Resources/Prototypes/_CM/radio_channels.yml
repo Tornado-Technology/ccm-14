@@ -1,68 +1,59 @@
-# High Command
-- type: radioChannel #USMC High Command, for events and such, basically CentComm channel
-  id: MarineHighCommand
-  name: chat-radio-marine-highcommand
-  keycode: "в" #z in cm13
-  frequency: 1471
-  color: "#318779"
-  longRange: true
-
-# Almayer channels
+# Valkyrie channels
 - type: radioChannel
   id: MarineCommon
   name: chat-radio-marine-common
-  keycode: ";" #; and g in cm13
+  keycode: ";"
   frequency: 1480
   color: "#a0a0a0"
 
 - type: radioChannel
   id: MarineCommand
   name: chat-radio-marine-command
-  keycode: "к" #v in cm13
+  keycode: "к"
   frequency: 1481
   color: "#5b96d4"
 
 - type: radioChannel
   id: MarineMedical
   name: chat-radio-marine-medical
-  keycode: "м" #m in cm13
+  keycode: "м"
   frequency: 1482
   color: "#009771"
 
 - type: radioChannel
   id: MarineEngineer
   name: chat-radio-marine-engineer
-  keycode: "и" #n in cm13
+  keycode: "и"
   frequency: 1483
   color: "#e4860c"
 
 - type: radioChannel
   id: MarineMilitaryPolice
   name: chat-radio-marine-military-police
-  keycode: "о" #p in cm13
+  keycode: "о"
   frequency: 1484
   color: "#be324f"
 
 - type: radioChannel
   id: MarineRequisition
   name: chat-radio-marine-requisition
-  keycode: "п" #u in cm13
+  keycode: "п"
   frequency: 1485
   color: "#b17324"
 
 - type: radioChannel
-  id: MarineIntel
-  name: chat-radio-marine-intel
+  id: MarineScience
+  name: chat-radio-marine-science
   keycode: "н" # Corvax-Localization
   frequency: 1486
-  color: "#059705"
+  color: "#c68cfa"
 
 - type: radioChannel
   id: MarineJTAC
   name: chat-radio-marine-jtac
   keycode: "ж" # Corvax-Localization
   frequency: 1487
-  color: "#ad3b98"
+  color: "#5a99ad"
 
 # Squad channels
 - type: radioChannel
@@ -80,13 +71,6 @@
   color: "#f2af03"
 
 - type: radioChannel
-  id: MarineCharlie
-  name: chat-radio-marine-charlie
-  keycode: 'ч' # Corvax-Localization
-  frequency: 1493
-  color: "#a94ac2"
-
-- type: radioChannel
   id: MarineDelta
   name: chat-radio-marine-delta
   keycode: 'д' # Corvax-Localization
@@ -94,32 +78,8 @@
   color: "#038ae1"
 
 - type: radioChannel
-  id: MarineEcho
-  name: chat-radio-marine-echo
-  keycode: "э" # Corvax-Localization
-  frequency: 1495
-  color: "#3be1b1"
-
-- type: radioChannel
-  id: MarineFoxtrot
-  name: chat-radio-marine-foxtrot
-  keycode: "ф" #f in cm13
-  frequency: 1496
-  color: "#c23c07"
-
-# Non USCM
-- type: radioChannel
-  id: Colony
-  name: chat-radio-colony
-  keycode: "е" #o in cm13
-  frequency: 1381
-  color: "#cf40a6" #todo cm14
-  longRange: true
-
-- type: radioChannel
-  id: Hivemind
-  name: chat-radio-hivemind
-  keycode: "у"
-  frequency: 426
-  color: "#8b36a6"
-  longRange: true
+  id: MarineCharlie
+  name: chat-radio-marine-charlie
+  keycode: 'ч' # Corvax-Localization
+  frequency: 1493
+  color: "#a94ac2"

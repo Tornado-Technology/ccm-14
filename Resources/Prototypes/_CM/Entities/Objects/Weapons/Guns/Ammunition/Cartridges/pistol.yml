@@ -1,43 +1,37 @@
 - type: entity
   abstract: true
-  parent: BaseCartridgePistol
-  id: CMCartridgePistolBase
+  parent: BaseCartridge
+  id: CMBaseCartridgePistol
   components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    state: base
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: Tag
+    tags:
+      - CMCartridgePistol9
   - type: CartridgeAmmo
     deleteOnSpawn: true
 
 - type: entity
-  id: CMCartridgePistol9mm
+  noSpawn: true
+  parent: CMBaseCartridgePistol
+  id: CMCartridgePistol9
   name: cartridge (9mm)
-  parent: CMCartridgePistolBase
   components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - CMCartridgePistol9mm
   - type: CartridgeAmmo
-    proto: CMBulletPistol9mm
+    proto: CMBulletPistol9
 
 - type: entity
-  id: CMCartridgePistol88m4AP
-  name: cartridge (9mm AP)
-  parent: CMCartridgePistolBase
+  noSpawn: true
+  parent: CMBaseCartridgePistol
+  id: CMCartridgePistolAP9
+  name: cartridge AP (9mm)
   components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - CMCartridgePistol9mm
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    state: ap
+    map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: CMBulletPistol88m4AP
-
-- type: entity
-  id: CMCartridgeRevolver44
-  name: cartridge (.44)
-  parent: CMCartridgePistolBase
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - CMCartridgeRevolver44
-  - type: CartridgeAmmo
-    proto: CMBulletRevolver44
+    proto: CMBulletPistolAP9

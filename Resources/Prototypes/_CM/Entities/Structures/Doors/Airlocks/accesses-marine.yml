@@ -1,247 +1,199 @@
 #Alpha
 - type: entity
+  suffix: Alpha, Common
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaCommon
-  suffix: Locked, Common
-  components:
-  - type: AccessReader
-    access: [["CMAccessMarinePrep"]]
 
 - type: entity
+  suffix: Alpha, Locked
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaLocked
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessMarinePrep"]]
+    access: [["CMAccessAlpha"]]
 
 - type: entity
+  suffix: Alpha SL, Locked
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaSL
   name: alpha squad leader preparations
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessSquadLeaderPrep"]]
+    access: [["CMAccessAlphaSquadLeaderPrep"]]
 
 - type: entity
+  suffix: Alpha spec, Locked
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaSpec
   name: alpha squad specialist preparations
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessSpecPrep"]]
+    access: [["CMAccessAlphaSpecPrep"]]
 
 - type: entity
+  suffix: Alpha tech, Locked
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaEngineer
   name: alpha squad comtech preparations
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessCombatTechPrep"]]
+    access: [["CMAccessAlphaTechPrep"]]
 
 - type: entity
+  suffix: Alpha med, Locked
   parent: CMAirlockPrepAlpha
   id: CMAirlockPrepAlphaMedical
   name: alpha squad medical preparations
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessMedPrep"]]
+    access: [["CMAccessAlphaMedPrep"]]
 
+#Bravo
 - type: entity
-  parent: CMAirlockPrepAlpha
-  id: CMAirlockPrepAlphaSmart
-  name: alpha squad smartgunner preparations
-  suffix: Locked
-  components:
-  - type: AccessReader
-    access: [["CMAccessAlpha", "CMAccessSmartPrep"]]
-
-# Bravo
-- type: entity
+  suffix: Bravo, Common
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoCommon
-  suffix: Locked, Common
-  components:
-  - type: AccessReader
-    access: [["CMAccessMarinePrep"]]
 
 - type: entity
+  suffix: Bravo, Locked
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoLocked
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessMarinePrep"]]
+    access: [["CMAccessBravo"]]
 
 - type: entity
+  suffix: Bravo SL, Locked
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoSL
-  name: bravo squad leader preparations
-  suffix: Locked
+  name: Bravo squad leader preparations
   components:
   - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessSquadLeaderPrep"]]
+    access: [["CMAccessBravoSquadLeaderPrep"]]
 
 - type: entity
+  suffix: Bravo spec, Locked
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoSpec
-  name: bravo squad specialist preparations
-  suffix: Locked
+  name: Bravo squad specialist preparations
   components:
   - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessSpecPrep"]]
+    access: [["CMAccessBravoSpecPrep"]]
 
 - type: entity
+  suffix: Bravo tech, Locked
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoEngineer
-  name: bravo squad comtech preparations
-  suffix: Locked
+  name: Bravo squad comtech preparations
   components:
   - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessCombatTechPrep"]]
+    access: [["CMAccessBravoTechPrep"]]
 
 - type: entity
+  suffix: Bravo med, Locked
   parent: CMAirlockPrepBravo
   id: CMAirlockPrepBravoMedical
-  name: bravo squad medical preparations
-  suffix: Locked
+  name: Bravo squad medical preparations
   components:
   - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessMedPrep"]]
+    access: [["CMAccessBravoMedPrep"]]
 
+#Charlie
 - type: entity
-  parent: CMAirlockPrepBravo
-  id: CMAirlockPrepBravoSmart
-  name: bravo squad smartgunner preparations
-  suffix: Locked
-  components:
-  - type: AccessReader
-    access: [["CMAccessBravo", "CMAccessSmartPrep"]]
-
-# Charlie
-- type: entity
+  suffix: Charlie, Common
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieCommon
-  suffix: Locked, Common
-  components:
-  - type: AccessReader
-    access: [["CMAccessMarinePrep"]]
 
 - type: entity
+  suffix: Charlie, Locked
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieLocked
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessMarinePrep"]]
+    access: [["CMAccessCharlie"]]
 
 - type: entity
+  suffix: Charlie SL, Locked
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieSL
-  name: charlie squad leader preparations
-  suffix: Locked
+  name: Charlie squad leader preparations
   components:
   - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessSquadLeaderPrep"]]
+    access: [["CMAccessCharlieSquadLeaderPrep"]]
 
 - type: entity
+  suffix: Charlie spec, Locked
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieSpec
-  name: charlie squad specialist preparations
-  suffix: Locked
+  name: Charlie squad specialist preparations
   components:
   - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessSpecPrep"]]
+    access: [["CMAccessCharlieSpecPrep"]]
 
 - type: entity
+  suffix: Charlie tech, Locked
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieEngineer
-  name: charlie squad comtech preparations
-  suffix: Locked
+  name: Charlie squad comtech preparations
   components:
   - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessCombatTechPrep"]]
+    access: [["CMAccessCharlieTechPrep"]]
 
 - type: entity
+  suffix: Charlie med, Locked
   parent: CMAirlockPrepCharlie
   id: CMAirlockPrepCharlieMedical
-  name: charlie squad medical preparations
-  suffix: Locked
+  name: Charlie squad medical preparations
   components:
   - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessMedPrep"]]
+    access: [["CMAccessCharlieMedPrep"]]
 
+#Delta
 - type: entity
-  parent: CMAirlockPrepCharlie
-  id: CMAirlockPrepCharlieSmart
-  name: charlie squad smartgunner preparations
-  suffix: Locked
-  components:
-  - type: AccessReader
-    access: [["CMAccessCharlie", "CMAccessSmartPrep"]]
-
-# Delta
-- type: entity
+  suffix: Delta, Common
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaCommon
-  suffix: Common, Locked
-  components:
-  - type: AccessReader
-    access: [["CMAccessMarinePrep"]]
 
 - type: entity
+  suffix: Delta, Locked
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaLocked
-  suffix: Locked
   components:
   - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessMarinePrep"]]
+    access: [["CMAccessDelta"]]
 
 - type: entity
+  suffix: Delta SL, Locked
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaSL
-  name: delta squad leader preparations
-  suffix: Locked
+  name: Delta squad leader preparations
   components:
   - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessSquadLeaderPrep"]]
+    access: [["CMAccessDeltaSquadLeaderPrep"]]
 
 - type: entity
+  suffix: Delta spec, Locked
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaSpec
-  name: delta squad specialist preparations
-  suffix: Locked
+  name: Delta squad specialist preparations
   components:
   - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessSpecPrep"]]
+    access: [["CMAccessDeltaSpecPrep"]]
 
 - type: entity
+  suffix: Delta tech, Locked
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaEngineer
-  name: delta squad comtech preparations
-  suffix: Locked
+  name: Delta squad comtech preparations
   components:
   - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessCombatTechPrep"]]
+    access: [["CMAccessDeltaTechPrep"]]
 
 - type: entity
+  suffix: Delta med, Locked
   parent: CMAirlockPrepDelta
   id: CMAirlockPrepDeltaMedical
-  name: delta squad medical preparations
-  suffix: Locked
+  name: Delta squad medical preparations
   components:
   - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessMedPrep"]]
-
-- type: entity
-  parent: CMAirlockPrepDelta
-  id: CMAirlockPrepDeltaSmart
-  name: delta squad smartgunner preparations
-  suffix: Locked
-  components:
-  - type: AccessReader
-    access: [["CMAccessDelta", "CMAccessSmartPrep"]]
+    access: [["CMAccessDeltaMedPrep"]]

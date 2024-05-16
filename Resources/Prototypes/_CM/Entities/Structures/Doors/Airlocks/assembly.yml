@@ -3,7 +3,7 @@
   id: CMAirlockAssembly
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/airlock_assemblies.rsi
+    sprite: _CM/Structures/Doors/Airlocks/airlock_assemblies.rsi
     state: as_0
   - type: Transform
     noRot: false

@@ -1,0 +1,30 @@
+﻿- type: accessLevel
+  id: CMAccessDropship
+  name: cm-access-dropship
+
+- type: accessLevel
+  id: CMAccessGunship
+  name: cm-job-name-pilot
+
+- type: accessLevel
+  id: CMAccessMech
+  name: cm-job-name-dcc
+
+- type: accessGroup
+  id: CMShipPilot
+  tags:
+  - CMAccessMaint
+  - CMAccessCommand
+  - CMAccessDropship
+  - CMAccessGunship
+
+- type: accessGroup
+  id: CMMechPilot
+  tags:
+  - CMAccessAlpha
+  - CMAccessBravo
+  - CMAccessCharlie
+  - CMAccessDelta
+  - CMAccessMaint
+  - CMAccessCommand
+  - CMAccessMech

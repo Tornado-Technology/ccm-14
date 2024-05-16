@@ -1,0 +1,30 @@
+- type: job
+  id: CMBravoSpecialist
+  name: job-name-bravo-specialist
+  description: job-description-bravospecialist
+  playTimeTracker: CMJobBravoSpecialist
+  startingGear: CMGearBravoSpecialist
+  icon: "CMJobIconBravoSpecialist"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMBravoSpec
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      cqc: 1
+      construction: 1
+      endurance: 2
+      engineer: 1
+      jtac: 1
+      meleeWeapons: 1
+      specialistWeapons: 1
+
+- type: startingGear
+  id: CMGearBravoSpecialist
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetBravo
+    id: CMDogtagBravoSpec

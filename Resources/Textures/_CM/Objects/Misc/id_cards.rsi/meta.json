@@ -1,22 +1,87 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github)",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-      "name": "default"
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/cmss13-devs/cmss13",
+    "size": {
+        "x": 32,
+        "y": 32
     },
-    {
-      "name": "default-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "default-inhand-right",
-      "directions": 4
-    }
-  ]
+    "states": [
+        {
+            "name": "plain"
+        },
+        {
+            "name": "id_generic"
+        },
+        {
+            "name": "head"
+        },
+        {
+            "name": "mp"
+        },
+        {
+            "name": "dogtag"
+        },
+        {
+            "name": "gold"
+        },
+        {
+            "name": "silver"
+        },
+        {
+            "name": "default-equipped-IDCARD",
+            "directions": 4
+        },
+        {
+            "name": "default-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "default-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "dogtag_taken"
+        },
+        {
+            "name": "dogtag-equipped-IDCARD",
+            "directions": 4
+        },
+        {
+            "name": "dogtag-equipped-NECK",
+            "directions": 4
+        },
+        {
+            "name": "dogtag-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "dogtag-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "gold-equipped-IDCARD",
+            "directions": 4
+        },
+        {
+            "name": "gold-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "gold-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "silver-equipped-IDCARD",
+            "directions": 4
+        },
+        {
+            "name": "silver-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "silver-inhand-right",
+            "directions": 4
+        }
+    ]
 }

@@ -1,0 +1,47 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineLaunchers
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    soundRack:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        variation: 0.05
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+      params:
+        variation: 0.05
+  - type: Item
+    size: Large
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\Guns\Ammunition\Magazine\Launchers\m92.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-4
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - CMMagazineLaunchers
+
+- type: entity
+  parent: CMBaseMagazineLaunchers
+  id: CMMagazineLaunchersM92
+  name: grenade cartridge m92
+  components:
+  - type: BallisticAmmoProvider
+    proto: M40HEDP
+    whitelist:
+      tags:
+        - LauncherCompatibleGrenade
+    capacity: 3

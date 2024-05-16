@@ -1,0 +1,98 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineBoxMagnum
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Boxes/ammo_box.rsi
+  - type: MagazineVisuals
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    mayTransfer: true
+
+# Desert boxes base
+# TODO пистолетам заменить спрайт коробки
+- type: entity
+  parent: CMBaseMagazineBoxMagnum
+  id: CMMagazineBoxDesertMagnum45
+  name: ammunition box DESERT (.45 magnum)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_45
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 60
+    proto: CMCartridgeMagnum45
+    whitelist:
+      tags:
+      - CartridgeMagnum
+
+- type: entity
+  parent: CMBaseMagazineBoxMagnum
+  id: CMMagazineBoxDesertMagnumAP45
+  name: ammunition AP box DESERT (.45 magnum)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magdap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_45
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 60
+    proto: CMCartridgeMagnumAP45
+    whitelist:
+      tags:
+      - CartridgeMagnum
+
+# Jungle boxes
+- type: entity
+  parent: CMMagazineBoxDesertMagnum45
+  id: CMMagazineBoxJungleMagnum45
+  name: ammunition box JUNGLE (.45 magnum)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_45
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertMagnumAP45
+  id: CMMagazineBoxJungleMagnumAP45
+  name: ammunition AP box JUNGLE (.45 magnum)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: maggap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_45
+  - type: MagazineVisuals
+    magState: maggap

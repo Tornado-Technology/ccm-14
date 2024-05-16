@@ -1,0 +1,72 @@
+- type: entity
+  abstract: true
+  parent: CMBackpackBase
+  id: CMSatchelBase
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Back/Satchels/Civilians/classic.rsi
+  - type: Storage
+    grid:
+    - 0,0,7,1
+
+# Valkyrie personnel
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelGeneral
+  name: leather satchel
+  description: A very fancy satchel made of fine leather. Looks pretty pricey.
+
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelEngineer
+  name: industrial satchel
+  description: A tough satchel with extra pockets.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Civilians\engineer.rsi
+
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelMedical
+  name: medical satchel
+  description: A sterile satchel used in medical departments.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Civilians\medical.rsi
+
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelSecurity
+  name: security satchel
+  description: A robust satchel composed of two drop pouches and a large internal pocket. Made of a stiff fabric, it isn't very comfy to wear.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Civilians\security.rsi
+
+# Marine
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelMarine
+  name: USCM satchel
+  description: A heavy-duty satchel carried by some USCM soldiers and support personnel.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Marines\standard.rsi
+
+- type: entity
+  parent: CMSatchelMarine
+  id: CMSatchelMarineMedic
+  name: USCM corpsman satchel
+  description: A heavy-duty satchel used by USCM medics. It sacrifices capacity for usability. A small patch is sewn to the top flap.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Marines\medic.rsi
+
+- type: entity
+  parent: CMSatchelMarine
+  id: CMSatchelMarineTech
+  name: USCM technician chestrig
+  description: A heavy-duty chestrig used by some USCM technicians.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Marines\techi.rsi

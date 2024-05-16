@@ -1,0 +1,434 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineBoxRifle
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Boxes/ammo_box.rsi
+  - type: MagazineVisuals
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+
+# Desert boxes base
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifle1020
+  name: ammunition box DESERT (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_20
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 500
+    proto: CMCartridgeRifle1020
+    whitelist:
+      tags:
+      - CMCartridgeRifle1020
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleIncendiary1020
+  name: ammunition box incendiary DESERT (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magdi-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_20
+  - type: MagazineVisuals
+    magState: magdi
+  - type: BallisticAmmoProvider
+    capacity: 250
+    proto: CMCartridgeRifleIncendiary1020
+    whitelist:
+      tags:
+      - CMCartridgeRifle1020
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleAP1020
+  name: ammunition box AP DESERT (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magdap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_20
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 500
+    proto: CMCartridgeRifleAP1020
+    whitelist:
+      tags:
+      - CMCartridgeRifle1020
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifle1024
+  name: ammunition box DESERT (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 300
+    proto: CMCartridgeRifle1024
+    whitelist:
+      tags:
+      - CMCartridgeRifle1024
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleIncendiary1024
+  name: ammunition box Incendiary DESERT (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magdi
+  - type: BallisticAmmoProvider
+    capacity: 150
+    proto: CMCartridgeRifleIncendiary1024
+    whitelist:
+      tags:
+      - CMCartridgeRifle1024
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleAP1024
+  name: ammunition box AP DESERT (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 300
+    proto: CMCartridgeRifleAP1024
+    whitelist:
+      tags:
+      - CMCartridgeRifle1024
+
+# TODO сделать спрайты для коробки extended
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertExtendedRifle1024
+  name: ammunition box extended DESERT (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 900
+    proto: CMCartridgeRifleAP1024
+    whitelist:
+      tags:
+      - CMCartridgeRifle1024
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertExtendedRifleAP1024
+  name: ammunition box AP extended DESERT (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 900
+    proto: CMCartridgeRifleAP1024
+    whitelist:
+      tags:
+      - CMCartridgeRifle1024
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifle1028
+  name: ammunition box DESERT (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_28
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 150
+    proto: CMCartridgeRifle1028
+    whitelist:
+      tags:
+      - CMCartridgeRifle1028
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleIncendiary1028
+  name: ammunition box Incendiary DESERT (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_28
+  - type: MagazineVisuals
+    magState: magdi
+  - type: BallisticAmmoProvider
+    capacity: 75
+    proto: CMCartridgeRifleIncendiary1028
+    whitelist:
+      tags:
+      - CMCartridgeRifle1028
+
+- type: entity
+  parent: CMBaseMagazineBoxRifle
+  id: CMMagazineBoxDesertRifleAP1028
+  name: ammunition box AP DESERT (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_28
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 150
+    proto: CMCartridgeRifleAP1028
+    whitelist:
+      tags:
+      - CMCartridgeRifle1028
+
+# Jungle boxes
+- type: entity
+  parent: CMMagazineBoxDesertRifle1020
+  id: CMMagazineBoxJungleRifle1020
+  name: ammunition box JUNGLE (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_20
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleIncendiary1020
+  id: CMMagazineBoxJungleRifleIncendiary1020
+  name: ammunition box incendiary JUNGLE (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: maggi-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_20
+  - type: MagazineVisuals
+    magState: maggi
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleAP1020
+  id: CMMagazineBoxJungleRifleAP1020
+  name: ammunition box AP JUNGLE (10x20 Rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: maggap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_20
+  - type: MagazineVisuals
+    magState: maggap
+
+- type: entity
+  parent: CMMagazineBoxDesertRifle1024
+  id: CMMagazineBoxJungleRifle1024
+  name: ammunition box JUNGLE (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleIncendiary1024
+  id: CMMagazineBoxJungleRifleIncendiary1024
+  name: ammunition box Incendiary JUNGLE (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_24
+  - type: MagazineVisuals
+    magState: maggi
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleAP1024
+  id: CMMagazineBoxJungleRifleAP1024
+  name: ammunition box AP JUNGLE (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_24
+  - type: MagazineVisuals
+    magState: maggap
+
+# TODO сделать спрайты для коробки extended
+- type: entity
+  parent: CMMagazineBoxDesertExtendedRifle1024
+  id: CMMagazineBoxJungleExtendedRifle1024
+  name: ammunition box extended JUNGLE (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_24
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertExtendedRifleAP1024
+  id: CMMagazineBoxJungleExtendedRifleAP1024
+  name: ammunition box AP extended JUNGLE (10x24 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_24
+  - type: MagazineVisuals
+    magState: maggap
+
+- type: entity
+  parent: CMMagazineBoxDesertRifle1028
+  id: CMMagazineBoxJungleRifle1028
+  name: ammunition box JUNGLE (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_28
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleIncendiary1028
+  id: CMMagazineBoxJungleRifleIncendiary1028
+  name: ammunition box JUNGLE (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+    - state: band_28
+  - type: MagazineVisuals
+    magState: maggi
+
+- type: entity
+  parent: CMMagazineBoxDesertRifleAP1028
+  id: CMMagazineBoxJungleRifleAP1028
+  name: ammunition box JUNGLE (10x28 rifle)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_28
+  - type: MagazineVisuals
+    magState: maggap

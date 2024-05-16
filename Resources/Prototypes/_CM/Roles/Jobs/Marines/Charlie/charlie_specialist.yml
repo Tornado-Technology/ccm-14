@@ -1,0 +1,30 @@
+- type: job
+  id: CMCharlieSpecialist
+  name: job-name-charlie-specialist
+  description: job-description-charliespecialist
+  playTimeTracker: CMJobCharlieSpecialist
+  startingGear: CMGearCharlieSpecialist
+  icon: "CMJobIconCharlieSpecialist"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMCharlieSpec
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      cqc: 1
+      construction: 1
+      endurance: 2
+      engineer: 1
+      jtac: 1
+      meleeWeapons: 1
+      specialistWeapons: 1
+
+- type: startingGear
+  id: CMGearCharlieSpecialist
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetCharlie
+    id: CMDogtagCharlieSpec

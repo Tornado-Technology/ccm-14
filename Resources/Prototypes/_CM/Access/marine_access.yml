@@ -15,35 +15,210 @@
   id: CMAccessDelta
   name: squad-delta
 
-# Almayer
+# Alpha
 - type: accessLevel
-  id: CMAccessMarinePrep
-  name: cm-job-name-rifleman
-
-- type: accessLevel
-  id: CMAccessMedPrep
+  id: CMAccessAlphaMedPrep
   name: cm-job-name-hospital-corpsman
 
 - type: accessLevel
-  id: CMAccessCombatTechPrep
-  name: cm-job-name-combat-tech
-
-- type: accessLevel
-  id: CMAccessSquadLeaderPrep
-  name: cm-job-name-fireteam-leader
-
-- type: accessLevel
-  id: CMAccessSpecPrep
+  id: CMAccessAlphaSpecPrep
   name: cm-job-name-weapons-specialist
 
 - type: accessLevel
-  id: CMAccessSmartPrep
-  name: cm-job-name-smartgunner
-
-- type: accessLevel
-  id: CMAccessFTLPrep
+  id: CMAccessAlphaSquadLeaderPrep
   name: cm-job-name-fireteam-leader
 
 - type: accessLevel
-  id: CMAccessMarineRifleman
-  name: cm-job-name-rifleman
+  id: CMAccessAlphaTechPrep
+  name: cm-job-name-combat-tech
+
+- type: accessGroup
+  id: CMAlphaMedic
+  tags:
+  - CMAccessMedical
+  - CMAccessAlpha
+  - CMAccessAlphaMedPrep
+
+- type: accessGroup
+  id: CMAlphaRifleman
+  tags:
+  - CMAccessAlpha
+
+- type: accessGroup
+  id: CMAlphaSpec
+  tags:
+  - CMAccessAlpha
+  - CMAccessAlphaSpecPrep
+
+- type: accessGroup
+  id: CMAlphaTech
+  tags:
+  - CMAccessAlpha
+  - CMAccessAlphaTechPrep
+
+- type: accessGroup
+  id: CMAlphaSquadLeader
+  tags:
+  - CMAccessMaint
+  - CMAccessMech
+  - CMAccessAlpha
+  - CMAccessAlphaMedPrep
+  - CMAccessAlphaSpecPrep
+  - CMAccessAlphaSquadLeaderPrep
+  - CMAccessAlphaCombatTechPrep
+
+# Bravo
+- type: accessLevel
+  id: CMAccessBravoMedPrep
+  name: cm-job-name-hospital-corpsman
+
+- type: accessLevel
+  id: CMAccessBravoSpecPrep
+  name: cm-job-name-weapons-specialist
+
+- type: accessLevel
+  id: CMAccessBravoSquadLeaderPrep
+  name: cm-job-name-fireteam-leader
+
+- type: accessLevel
+  id: CMAccessBravoTechPrep
+  name: cm-job-name-combat-tech
+
+- type: accessGroup
+  id: CMBravoMedic
+  tags:
+  - CMAccessMedical
+  - CMAccessBravo
+  - CMAccessBravoMedPrep
+
+- type: accessGroup
+  id: CMBravoRifleman
+  tags:
+  - CMAccessBravo
+
+- type: accessGroup
+  id: CMBravoSpec
+  tags:
+  - CMAccessBravo
+  - CMAccessBravoSpecPrep
+
+- type: accessGroup
+  id: CMBravoTech
+  tags:
+  - CMAccessBravo
+  - CMAccessBravoTechPrep
+
+- type: accessGroup
+  id: CMBravoSquadLeader
+  tags:
+  - CMAccessMaint
+  - CMAccessMech
+  - CMAccessBravo
+  - CMAccessBravoMedPrep
+  - CMAccessBravoSpecPrep
+  - CMAccessBravoSquadLeaderPrep
+  - CMAccessBravoCombatTechPrep
+
+# Charlie
+- type: accessLevel
+  id: CMAccessCharlieMedPrep
+  name: cm-job-name-hospital-corpsman
+
+- type: accessLevel
+  id: CMAccessCharlieSpecPrep
+  name: cm-job-name-weapons-specialist
+
+- type: accessLevel
+  id: CMAccessCharlieSquadLeaderPrep
+  name: cm-job-name-fireteam-leader
+
+- type: accessLevel
+  id: CMAccessCharlieTechPrep
+  name: cm-job-name-combat-tech
+
+- type: accessGroup
+  id: CMCharlieMedic
+  tags:
+  - CMAccessMedical
+  - CMAccessCharlie
+  - CMAccessCharlieMedPrep
+
+- type: accessGroup
+  id: CMCharlieRifleman
+  tags:
+  - CMAccessCharlie
+
+- type: accessGroup
+  id: CMCharlieSpec
+  tags:
+  - CMAccessCharlie
+  - CMAccessCharlieSpecPrep
+
+- type: accessGroup
+  id: CMCharlieTech
+  tags:
+  - CMAccessCharlie
+  - CMAccessCharlieTechPrep
+
+- type: accessGroup
+  id: CMCharlieSquadLeader
+  tags:
+  - CMAccessMaint
+  - CMAccessMech
+  - CMAccessCharlie
+  - CMAccessCharlieMedPrep
+  - CMAccessCharlieSpecPrep
+  - CMAccessCharlieSquadLeaderPrep
+  - CMAccessCharlieCombatTechPrep
+
+# Delta
+- type: accessLevel
+  id: CMAccessDeltaMedPrep
+  name: cm-job-name-hospital-corpsman
+
+- type: accessLevel
+  id: CMAccessDeltaSpecPrep
+  name: cm-job-name-weapons-specialist
+
+- type: accessLevel
+  id: CMAccessDeltaSquadLeaderPrep
+  name: cm-job-name-fireteam-leader
+
+- type: accessLevel
+  id: CMAccessDeltaTechPrep
+  name: cm-job-name-combat-tech
+
+- type: accessGroup
+  id: CMDeltaMedic
+  tags:
+  - CMAccessMedical
+  - CMAccessDelta
+  - CMAccessDeltaMedPrep
+
+- type: accessGroup
+  id: CMDeltaRifleman
+  tags:
+  - CMAccessDelta
+
+- type: accessGroup
+  id: CMDeltaSpec
+  tags:
+  - CMAccessDelta
+  - CMAccessDeltaSpecPrep
+
+- type: accessGroup
+  id: CMDeltaTech
+  tags:
+  - CMAccessDelta
+  - CMAccessDeltaTechPrep
+
+- type: accessGroup
+  id: CMDeltaSquadLeader
+  tags:
+  - CMAccessMaint
+  - CMAccessMech
+  - CMAccessDelta
+  - CMAccessDeltaMedPrep
+  - CMAccessDeltaSpecPrep
+  - CMAccessDeltaSquadLeaderPrep
+  - CMAccessDeltaCombatTechPrep

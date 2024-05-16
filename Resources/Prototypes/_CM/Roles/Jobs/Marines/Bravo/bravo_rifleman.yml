@@ -1,19 +1,24 @@
 - type: job
-  id: BravoMarine
-  name: job-name-bravo-marine
-  description: job-description-bravomarine
-  playTimeTracker: JobBravoMarine
-  startingGear: CMGearRifleman
-  icon: "JobIconBravoMarine"
-  joinNotifyCrew: false
+  id: CMBravoRifleman
+  name: job-name-bravo-rifleman
+  description: job-description-bravorifleman
+  playTimeTracker: CMJobBravoRifleman
+  startingGear: CMGearBravoRifleman
+  icon: "CMJobIconBravoRifleman"
   supervisors: job-supervisors-commander
+  joinNotifyCrew: false
   canBeAntag: false
   accessGroups:
-  - Rifleman
+  - CMBravoRifleman
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: BravoMarine
     - type: Skills
   hasIcon: false
+
+- type: startingGear
+  id: CMGearBravoRifleman
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetBravo
+    id: CMDogtagBravoRifleman

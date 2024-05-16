@@ -1,0 +1,27 @@
+- type: job
+  id: CMShipEngineer
+  name: job-name-shipsengineer
+  description: job-description-shipsengineer
+  playTimeTracker: CMJobShipEngineer
+  startingGear: CMGearShipEngineer
+  icon: "CMJobIconShipEngineer"
+  supervisors: job-supervisors-staff-officer
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMMaintTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      domestics: 1
+      construction: 3
+      engineer: 3
+      powerLoader: 2
+
+- type: startingGear
+  id: CMGearShipEngineer
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetEngineer
+    id: CMIDCardShipEngineer

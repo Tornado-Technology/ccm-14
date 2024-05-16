@@ -1,13 +1,10 @@
-# Almayer personnel
 - type: entity
-  parent: ClothingBackpack
   abstract: true
-  id: CMPersonalStorageBase
-  name: backpack
-  description: You wear this on your back and put items into it.
+  parent: ClothingBackpack
+  id: CMBackpackBase
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Civilians/standard.rsi
+    sprite: _CM\Clothing\Back\Backpacks\Marines\standart.rsi
     layers:
     - state: icon
     - state: open
@@ -33,12 +30,7 @@
   - type: Storage
     maxItemSize: Normal
     grid:
-    - 0,0,20,1
-    blacklist:
-      tags:
-      - Pouch
-      - CMFirstAidKit
-  #      - EngineerKit
+    - 0,0,4,3
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -47,122 +39,67 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  # - type: StorageOpenDoAfter
+  # - type: StorageCloseOnMove
+# TODO CMCorvax снять комменты при переход на CM
 
+# Valkyrie personnel
 - type: entity
-  parent: CMPersonalStorageBase
-  id: CMBackpack
-  name: backpack
-  description: You wear this on your back and put items into it.
-  components:
-  - type: StorageOpenDoAfter
-  - type: StorageCloseOnMove
-
-- type: entity
-  parent: CMBackpack
-  id: CMBackpackEngineer
-  name: industrial backpack
-  description: It's a tough backpack lookin' backpack used by engineers and the like.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Civilians/engineer.rsi
-
-- type: entity
-  parent: CMBackpack
+  parent: CMBackpackBase
   id: CMBackpackMedical
   name: medical backpack
   description: It's a backpack especially designed for use in a sterile environment.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Civilians/medical.rsi
+    sprite: _CM\Clothing\Back\Backpacks\Civilians\medical.rsi
 
 - type: entity
-  parent: CMBackpack
+  parent: CMBackpackBase
   id: CMBackpackSecurity
   name: security backpack
   description: It's a very robust backpack.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Civilians/security.rsi
+    sprite: _CM\Clothing\Back\Backpacks\Civilians\security.rsi
 
 - type: entity
-  parent: CMBackpack
+  parent: CMBackpackBase
   id: CMBackpackCommand
   name: marine commanding officer backpack
   description: The contents of this backpack are top secret.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/standard.rsi
+    sprite: _CM\Clothing\Back\Backpacks\Civilians\standard.rsi
 
 # Marine
 - type: entity
-  parent: CMBackpack
-  id: CMBackpackMarine
-  name: lightweight IMP backpack
-  description: The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/standard.rsi
+  parent: CMBackpackBase
+  id: CMBackpack
+  name: backpack
+  description: You wear this on your back and put items into it.
 
 - type: entity
-  parent: CMBackpackMarine
+  parent: CMBackpackBase
+  id: CMBackpackMarineEngineer
+  name: CMBackpackMarineEngineer name
+  description: CMBackpackMarineEngineer desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Backpacks\Marines\engineer.rsi
+
+- type: entity
+  parent: CMBackpackBase
   id: CMBackpackMarineMedic
-  name: USCM corpsman backpack
-  description: A standard-issue backpack worn by USCM medics.
+  name: CMBackpackMarineMedic name
+  description: CMBackpackMarineMedic desc
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/medic.rsi
-
-- type: entity
-  parent: CMBackpackMarine
-  id: CMBackpackMarineTech
-  name: USCM technician backpack
-  description: A standard-issue backpack worn by USCM technicians.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/techi.rsi
-
-# Specific
-- type: entity
-  parent: CMBackpack
-  id: CMBackpackMortar
-  name: USCM mortar shell backpack
-  description: A backpack specifically designed to hold ammunition for the M402 mortar.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/mortar.rsi
-  - type: Storage
-    whitelist:
-      tags:
-      - CMMortarShell
-
-- type: entity
-  parent: CMBackpack
-  id: CMBackpackWelder
-  name: USCM technician welderpack
-  description: A specialized backpack worn by USCM technicians. It carries a fueltank for quick welder refueling and use.
-  suffix: BROKEN, DONT SPAWN #todo cm14 backpack w solution holder support
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Back/Backpacks/Marines/welder.rsi
-  - type: ExaminableSolution
-    solution: tank
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        maxVol: 500
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 500
-  - type: ReagentTank
-    tankType: Fuel
-  - type: DrainableSolution
-    solution: tank
-  - type: SolutionTransfer
-    transferAmount: 50
-    maxTransferAmount: 100
-    minTransferAmount: 10
-    canChangeTransferAmount: true
-  - type: RefillableSolution
-    solution: tank
-  - type: DrawableSolution
-    solution: tank
+    sprite: _CM\Clothing\Back\Backpacks\Marines\medic.rsi

@@ -240,8 +240,6 @@
       entries: [ ]
     #- id: CMMagazineM4RAAP
     #  amount: 3
-    #- id: CMMagazineM39AP
-    #  amount: 3
     #- id: CMMagazineM41AAP
     #  amount: 3
     - name: Extended Ammunition
@@ -310,28 +308,12 @@
         amount: 10
       - id: CMMagazineRifleM4RA
         amount: 15
-      - id: CMMagazineM39
-        amount: 25
       - id: CMMagazineRifleM41A
         amount: 25
-    - name: Sidearms
-      entries:
-      - id: CMWeaponPistol88m4
-        amount: 25
-      #- id: CMWeaponRevolverM44
-      #  amount: 25
-      - id: CMWeaponPistolM4A3
-        amount: 25
-      #- id: WeaponFlareM82F
-      #  amount: 10
     - name: Sidearm ammunition
       entries:
-      - id: CMMagazinePistol88m4AP
-        amount: 25
       - id: CMSpeedLoaderM44
         amount: 20
-      - id: CMMagazinePistolM4A3
-        amount: 25
     - name: Attachments
       entries: [ ]
       #- id: CMAttachmentFoldingStockM39
@@ -380,7 +362,6 @@
       choices: { CMBackpack: 1 }
       entries:
       - id: CMBackpackMarine
-      - id: CMSatchelMarine
       #- id: CMShotgunScabbard # TODO: Make a Scabbard
     - name: Belt
       choices: { CMBelt: 1 }
@@ -754,7 +735,6 @@
       entries: [ ]
     #- id: CMBackpack
     #- id: CMScabbardMacheteFull
-    #- id: CMSatchel
     - name: Belt
       entries: [ ]
     #- id: CMG8AGeneralUtilityPouch
@@ -890,7 +870,6 @@
     - name: Backpack
       entries: [ ]
     #- id: CMBackpack
-    #- id: CMSatchel
     - name: Belt
       entries: [ ]
     #- id: CMG8AGeneralUtilityPouch
@@ -1042,8 +1021,6 @@
     - name: Ammunition
       entries: [ ]
     #- id: CMMagazineM4RAAP
-    #  points: 6
-    #- id: CMMagazineM39AP
     #  points: 6
     #- id: CMMagazineExtendedM39
     #  points: 6

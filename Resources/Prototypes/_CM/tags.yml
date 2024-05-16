@@ -1,4 +1,69 @@
 - type: Tag
+  id: CMPouch
+
+- type: Tag
+  id: CMCartridgeSniper60
+
+- type: Tag
+  id: CMCartridgePistol9
+
+- type: Tag
+  id: CMCartridgeRifle1020
+
+- type: Tag
+  id: CMCartridgeRifle1024
+
+- type: Tag
+  id: CMCartridgeRifle1028
+
+- type: Tag
+  id: LauncherCompatibleGrenade
+
+- type: Tag
+  id: CMMagazineSniperM42
+
+- type: Tag
+  id: CMMagazineLaunchers
+
+- type: Tag
+  id: CMMagazinePistolHighpower
+
+- type: Tag
+  id: CMMagazinePistolVP78
+
+- type: Tag
+  id: CMMagazineRifleM39
+
+- type: Tag
+  id: CMMagazineRifleM46C
+
+- type: Tag
+  id: CMMagazineRifleM41A
+
+- type: Tag
+  id: CMMagazineRifleM4RA
+
+- type: Tag
+  id: CMMagazineShotgunXM51
+
+- type: Tag
+  id: CMMagazineRifleM41AE2
+
+# Общий тег для всех обойм (whitelist Pounches Belt)
+- type: Tag
+  id: CMMagazines
+
+- type: Tag
+  id: Pouch
+
+- type: Tag
+  id: CMFlamethrowerTank
+
+- type: Tag
+  id: CMWeaponShotgunXM51
+
+
+- type: Tag
   id: Marine
 
 - type: Tag
@@ -26,18 +91,6 @@
   id: injectorCM
 
 - type: Tag
-  id: CMCartridge10x20mm
-
-- type: Tag
-  id: CMCartridgePistol9mm
-
-- type: Tag
-  id: CMCartridgeRevolver44
-
-- type: Tag
-  id: CMCartridgeRifle10x24mm
-
-- type: Tag
   id: CMMortarShell
 
 - type: Tag
@@ -63,12 +116,6 @@
 
 - type: Tag
   id: CMTraumaKit
-
-- type: Tag
-  id: Pouch
-
-- type: Tag
-  id: LauncherCompatibleGrenade
 
 - type: Tag
   id: CMAutoInjector

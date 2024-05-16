@@ -1,10 +1,113 @@
 - type: entity
-  parent: BaseBullet
-  id: BulletRifle10x24mm
-  name: bullet (10x24mm)
   noSpawn: true
+  parent: BaseBullet
+  id: CMBulletRifle1020
+  name: bullet (10x20 rifle)
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 44
+        Piercing: 30
+
+- type: entity
+  noSpawn: true
+  parent: BaseBulletIncendiary
+  id: CMBulletRifleIncendiary1020
+  name: bullet Incendiary (10x20 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+        Heat: 10
+  - type: IgnitionSource
+    ignited: true
+
+- type: entity
+  noSpawn: true
+  parent: BaseBulletAP
+  id: CMBulletRifleAP1020
+  name: bullet AP (10x20 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+        Blunt: 5
+    ignoreResistances: true
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: CMBulletRifle1024
+  name: bullet (10x24 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+
+- type: entity
+  noSpawn: true
+  parent: BaseBulletIncendiary
+  id: CMBulletRifleIncendiary1024
+  name: bullet Incendiary (10x24 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Heat: 10
+  - type: IgnitionSource
+    ignited: true
+
+- type: entity
+  noSpawn: true
+  parent: BaseBulletAP
+  id: CMBulletRifleAP1024
+  name: bullet AP (10x24 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 35
+        Blunt: 5
+    ignoreResistances: true
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: CMBulletRifle1028
+  name: bullet (10x28 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 70
+
+- type: entity
+  noSpawn: true
+  parent: BaseBulletIncendiary
+  id: CMBulletRifleIncendiary1028
+  name: bullet Incendiary (10x28 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 55
+        Heat: 10
+  - type: IgnitionSource
+    ignited: true
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: CMBulletRifleAP1028
+  name: bullet AP(10x28 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 60
+        Blunt: 5
+    ignoreResistances: true

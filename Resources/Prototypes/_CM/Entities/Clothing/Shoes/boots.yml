@@ -1,91 +1,59 @@
-# Dress Shoes
 - type: entity
-  parent: ClothingShoesBaseButcherable
-  id: CMShoesLaceup
-  name: laceup shoes
-  description: The height of fashion, and they're pre-polished!
+  abstract: true
+  parent: ClothingShoesBootsWork
+  id: CMBootsHolster
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Shoes/laceup.rsi
+    sprite: _CM\Clothing\Shoes\Boots\black.rsi
+    state: icon
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Shoes/laceup.rsi
-
-- type: entity
-  parent: CMShoesLaceup
-  id: CMShoesLaceupCommander
-  name: commanding officer dress shoes
-  description: Has special soles for better trampling those underneath.
-
-# Black Boots
-- type: entity
-  parent: ClothingShoesMilitaryBase
-  id: CMBootsBlack
-  name: black boots
-  description: Standard issue combat boots used by the USCM for combat situations.  All combat, all the time.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Shoes/Marines/black.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Shoes/Marines/black.rsi
-  - type: Matchbox
+    sprite: _CM\Clothing\Shoes\Boots\black.rsi
+  - type: Appearance
   - type: ItemSlots
     slots:
       item:
-        name: cm-knife
+        name: Knife
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
         whitelist:
           tags:
           - Knife
-
-- type: entity
-  parent: CMBootsBlack
-  id: CMBootsBlackFilled
-  suffix: Filled
-  components:
+  - type: ItemMapper
+    mapLayers:
+      icon-sheath:
+        whitelist:
+          tags:
+          - Knife
+  - type: NoSlip
   - type: ContainerFill
     containers:
       item:
       - CMM5Bayonet
 
-# Brown Boots
 - type: entity
-  parent: CMBootsBlack
+  parent: CMBootsHolster
+  id: CMBootsBlack
+  name: CMBootsBlack name
+  description: CMBootsBlack desc
+
+- type: entity
+  parent: CMBootsHolster
   id: CMBootsBrown
-  name: brown boots
-  description: Standard issue combat boots used by the USCM for combat situations. All combat, all the time. These are brown.
+  name: CMBootsBrown name
+  description: CMBootsBrown desc
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Shoes/Marines/brown.rsi
+    sprite: _CM\Clothing\Shoes\Boots\brown.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Shoes/Marines/brown.rsi
+    sprite: _CM\Clothing\Shoes\Boots\brown.rsi
 
 - type: entity
-  parent: CMBootsBrown
-  id: CMBootsBrownFilled
-  suffix: Filled
-  components:
-  - type: ContainerFill
-    containers:
-      item:
-      - CMM5Bayonet
-
-# Jungle Boots
-- type: entity
-  parent: CMBootsBlack
+  parent: CMBootsHolster
   id: CMBootsJungle
-  name: jungle boots
+  name: CMBootsJungle name
+  description: CMBootsJungle desc
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Shoes/Marines/jungle.rsi
+    sprite: _CM\Clothing\Shoes\Boots\jungle.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Shoes/Marines/jungle.rsi
-
-- type: entity
-  parent: CMBootsJungle
-  id: CMBootsJungleFilled
-  suffix: Filled
-  components:
-  - type: ContainerFill
-    containers:
-      item:
-      - CMM5Bayonet
-
+    sprite: _CM\Clothing\Shoes\Boots\jungle.rsi

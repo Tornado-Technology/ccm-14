@@ -1,0 +1,23 @@
+- type: entity
+  parent: BaseBullet
+  id: CMBulletMagnum45
+  name: bullet (.45 magnum)
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 90
+
+- type: entity
+  parent: BaseBulletAP
+  id: CMBulletMagnumAP45
+  name: bullet AP (.45 magnum armor-piercing)
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 70
+        Blunt: 10
+    ignoreResistances: true

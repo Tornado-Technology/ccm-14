@@ -1,0 +1,38 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseSpeedLoaderMagnum
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\Guns\Ammunition\SpeedLoaders\Magnum\speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-6
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeMagnum
+    capacity: 6
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Tag
+    tags:
+      - SpeedLoaderMagnum
+
+- type: entity
+  parent: CMBaseSpeedLoaderMagnum
+  id: CMSpeedLoaderMagnum45
+  name: "speed loader (.45 magnum)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnum
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false

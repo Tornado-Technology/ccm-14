@@ -1,0 +1,27 @@
+- type: job
+  id: CMDeltaTech
+  name: job-name-delta-tech
+  description: job-description-deltatech
+  playTimeTracker: CMJobDeltaTech
+  startingGear: CMGearDeltaTech
+  icon: "CMJobIconDeltaTech"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMDeltaTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      constructiopn: 2
+      engineer: 2
+      jtac: 1
+      vehicle: 1
+
+- type: startingGear
+  id: CMGearDeltaTech
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetDeltaTech
+    id: CMDogtagDeltaTech

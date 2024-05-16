@@ -1,0 +1,16 @@
+- type: accessLevel
+  id: CMAccessEngineering
+  name: id-card-access-level-engineering
+
+- type: accessLevel
+  id: CMAccessMaint
+  name: id-card-access-level-maintenance
+
+- type: accessGroup
+  id: CMMaintTech
+  tags:
+  - CMAccessEngineering
+  - CMAccessMaint
+  - CMAccessDropship
+  - CMAccessGunship
+  - CMAccessMech

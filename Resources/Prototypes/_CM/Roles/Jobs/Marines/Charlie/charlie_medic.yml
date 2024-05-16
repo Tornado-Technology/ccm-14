@@ -1,0 +1,26 @@
+- type: job
+  id: CMCharlieMedic
+  name: job-name-charlie-medic
+  description: job-description-charliemedic
+  playTimeTracker: CMJobCharlieMedic
+  startingGear: CMGearCharlieMedic
+  icon: "CMJobIconCharlieMedic"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMCharlieMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1
+
+- type: startingGear
+  id: CMGearCharlieMedic
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetCharlieMedic
+    id: CMDogtagCharlieMedic

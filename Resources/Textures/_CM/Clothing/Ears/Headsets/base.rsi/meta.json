@@ -1,0 +1,69 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/cmss13-devs/cmss13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+  "states": [
+    {
+        "name": "alpha_headset"
+    },
+    {
+        "name": "bravo_headset"
+    },
+    {
+        "name": "charlie_headset"
+    },
+    {
+        "name": "delta_headset"
+    },
+    {
+        "name": "ce_headset"
+    },
+    {
+        "name": "eng_headset"
+    },
+    {
+        "name": "cmo_headset"
+    },
+    {
+        "name": "med_headset"
+    },
+    {
+        "name": "fc_headset"
+    },
+    {
+        "name": "so_headset"
+    },
+    {
+        "name": "generic_headset"
+    },
+    {
+        "name": "head_headset"
+    },
+    {
+        "name": "qm_headset"
+    },
+    {
+        "name": "sec_headset"
+    },
+    {
+        "name": "omp_headset"
+    },
+    {
+        "name": "req_headset"
+    },
+    {
+        "name": "rnd_headset"
+    },
+    {
+        "name": "jtac_headset"
+    },
+    {
+      "name": "equipped-EARS",
+      "directions": 4
+    }
+  ]
+}

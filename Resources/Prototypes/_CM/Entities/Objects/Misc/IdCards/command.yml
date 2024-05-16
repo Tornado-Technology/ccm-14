@@ -1,0 +1,25 @@
+﻿- type: entity
+  parent: CMIDCardGold
+  id: CMIDCardHeadOperations
+  name: commanding officer ID card
+  components:
+  - type: Sprite
+    state: head
+  - type: PresetIdCard
+    job: CMHeadOperations
+
+- type: entity
+  parent: CMIDCardSilver
+  id: CMIDCardStaffOfficer
+  name: staff officer ID card
+  components:
+  - type: PresetIdCard
+    job: CMStaffOfficer
+
+- type: entity
+  parent: CMIDCardSilver
+  id: CMIDCardFieldCommander
+  name: executive officer ID card
+  components:
+  - type: PresetIdCard
+    job: CMFieldCommander

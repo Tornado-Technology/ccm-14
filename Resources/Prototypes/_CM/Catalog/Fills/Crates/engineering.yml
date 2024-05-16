@@ -82,8 +82,6 @@
     contents:
       - id: ToolboxElectricalFilled # todo cm14 use cm prototype
         amount: 2
-      - id: CMHandsInsulated
-        amount: 2
       - id: PowerCellMedium # todo cm14 use cm prototype
         amount: 2
       - id: PowerCellHigh # todo cm14 use cm prototype

@@ -1,23 +1,22 @@
 - type: entity
-  parent: BaseItem
   abstract: true
+  parent: BaseItem
   id: CMWebbingBase
-  name: webbing
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/webbing.rsi
+    sprite: _CM/Clothing/Webbing/webbing.rsi
+    layers:
+    - state: webbing
   - type: Item
     size: Large
   - type: Storage
     maxItemSize: Small
     grid:
-    - 0,0,5,1
+    - 0,0,4,2
   - type: IgnoreContentsSize
     items:
       tags:
-      - CMMagazinePistol
-      - CMMagazineRifle
-      - CMMagazineSniper
+      - CMMagazines
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -33,10 +32,63 @@
   id: CMWebbing
   name: webbing
   description: A sturdy mess of synthcotton belts and buckles, ready to share your burden.
+
+- type: entity
+  parent: CMWebbingBase
+  id: CMWebbingHolster
+  name: CMWebbingHolster name
+  description: CMWebbingHolster desc
   components:
   - type: Sprite
-    layers:
-    - state: webbing
-  - type : Storage
+    sprite: _CM/Clothing/Webbing/holster.rsi
+
+- type: entity
+  parent: CMWebbingBase
+  id: CMWebbingPouch
+  name: CMWebbingPouch name
+  description: CMWebbingPouch desc
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Webbing/drop_pouch.rsi
+
+- type: entity
+  parent: CMWebbingBase
+  id: CMWebbingPouchSurg
+  name: CMWebbingPouchSurg name
+  description: CMWebbingPouchSurg desc
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Webbing/drop_pouch_surg.rsi
+  - type: Storage
+    maxItemSize: Small
     grid:
-    - 0,0,5,1
+    - 0,0,3,2
+    whitelist:
+      tags:
+      - DiscreteHealthAnalyzer
+      - Pill
+      - Bottle
+      - Syringe
+      - PillCanister
+      - CMTraumaKit
+      - CMBurnKit
+      - Ointment
+      - Gauze
+      - Brutepack
+      - Bloodpack
+      - CMAutoInjector
+      - CMSurgicalLine
+      - CMSynthGraft
+
+- type: entity
+  parent: CMWebbingPouchSurg
+  id: CMWebbingSurg
+  name: CMWebbingSurg name
+  description: CMWebbingSurg desc
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Webbing/vest_surg.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,4,2

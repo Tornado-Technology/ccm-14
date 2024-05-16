@@ -1,0 +1,140 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponSubMachineGun
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Huge
+  - type: Wieldable
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+# Desert base
+- type: entity
+  parent: CMBaseWeaponSubMachineGun
+  id: CMWeaponSubMachineGunDesertM39
+  name: CMWeaponSubMachineGunDesertM39 name
+  description: CMWeaponSubMachineGunDesertM39 desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\SMGs\m39.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\SMGs\m39.rsi
+  - type: Gun
+    minAngle: 20
+    maxAngle: 40
+    angleIncrease: 10
+    angleDecay: 25
+    fireRate: 5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/m39.ogg
+  - type: GunWieldBonus
+    minAngle: -10
+    maxAngle: -20
+    angleIncrease: -5
+    angleDecay: -12.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/m39_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/m39_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM39
+
+- type: entity
+  parent: CMBaseWeaponSubMachineGun
+  id: CMWeaponSubMachineGunDesertM46C
+  name: CMWeaponSubMachineGunDesertM46C name
+  description: CMWeaponSubMachineGunDesertM46C desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\SMGs\m46c.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\SMGs\m46c.rsi
+  - type: Gun
+    minAngle: 10
+    maxAngle: 20
+    angleIncrease: 5
+    angleDecay: 12.5
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/m46c.ogg
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -10
+    angleIncrease: -2.5
+    angleDecay: -6
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/m46c_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/m46c_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM46C
+
+# Jungle
+- type: entity
+  parent: CMWeaponSubMachineGunDesertM39
+  id: CMWeaponSubMachineGunJungleM39
+  name: CMWeaponSubMachineGunJungleM39 name
+  description: CMWeaponSubMachineGunJungleM39 desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\SMGs\m39.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\SMGs\m39.rsi
+
+- type: entity
+  parent: CMWeaponSubMachineGunDesertM46C
+  id: CMWeaponSubMachineGunJungleM46C
+  name: CMWeaponSubMachineGunJungleM46C name
+  description: CMWeaponSubMachineGunJungleM46C desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\SMGs\m46c.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\SMGs\m46c.rsi

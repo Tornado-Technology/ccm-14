@@ -1,0 +1,101 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "alpha_med"
+        },
+        {
+            "name": "alpha_rifleman"
+        },
+        {
+            "name": "alpha_sl"
+        },
+        {
+            "name": "alpha_spec"
+        },
+        {
+            "name": "alpha_tech"
+        },
+        {
+            "name": "bravo_med"
+        },
+        {
+            "name": "bravo_rifleman"
+        },
+        {
+            "name": "bravo_sl"
+        },
+        {
+            "name": "bravo_spec"
+        },
+        {
+            "name": "bravo_tech"
+        },
+        {
+            "name": "charlie_med"
+        },
+        {
+            "name": "charlie_rifleman"
+        },
+        {
+            "name": "charlie_sl"
+        },
+        {
+            "name": "charlie_spec"
+        },
+        {
+            "name": "charlie_tech"
+        },
+        {
+            "name": "delta_med"
+        },
+        {
+            "name": "delta_rifleman"
+        },
+        {
+            "name": "delta_sl"
+        },
+        {
+            "name": "delta_spec"
+        },
+        {
+            "name": "delta_tech"
+        },
+        {
+            "name": "cargo_tech"
+        },
+        {
+            "name": "comm"
+        },
+        {
+            "name": "doctor"
+        },
+        {
+            "name": "engineer"
+        },
+        {
+            "name": "field_commander"
+        },
+        {
+            "name": "p_normandy"
+        },
+        {
+            "name": "mp"
+        },
+        {
+            "name": "m_engineer"
+        },
+        {
+            "name": "staff_officer"
+        },
+        {
+            "name": "researcher"
+        }
+    ]
+}

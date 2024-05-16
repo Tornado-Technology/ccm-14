@@ -1,0 +1,24 @@
+- type: entity
+  parent: FireExtinguisher
+  id: CMFireExtinguisher
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Belt\fire_extinguisher.rsi
+    layers:
+        - state: fire_extinguisher_closed
+          map: [ "enabled" ]
+  - type: Item
+    sprite: _CM\Clothing\Belt\fire_extinguisher.rsi
+    size: Normal
+  - type: Clothing
+    sprite: _CM\Clothing\Belt\fire_extinguisher.rsi
+    quickEquip: false
+    slots:
+    - belt
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 300
+        reagents:
+        - ReagentId: Water
+          Quantity: 300

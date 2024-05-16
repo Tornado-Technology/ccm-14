@@ -1,0 +1,50 @@
+- type: accessLevel
+  id: CMAccessCommand
+  name: id-card-access-level-command
+
+- type: accessLevel
+  id: CMAccessCO
+  name: cm-job-name-commanding-officer
+
+- type: accessGroup
+  id: CMShipMasterAccess
+  tags:
+  - CMAccessEngineering
+  - CMAccessMaint
+  - CMAccessDropship
+  - CMAccessGunship
+  - CMAccessMech
+  - CMAccessAlpha
+  - CMAccessBravo
+  - CMAccessCharlie
+  - CMAccessDelta
+  - CMAccessMedical
+  - CMAccessBrig
+  - CMAccessRequisitions
+  - CMAccessResearch
+
+- type: accessGroup
+  id: CMMarineMain
+  tags:
+  - CMAccessMaint
+  - CMAccessMech
+  - CMAccessAlpha
+  - CMAccessBravo
+  - CMAccessCharlie
+  - CMAccessDelta
+  - CMAccessAlphaMedPrep
+  - CMAccessAlphaSpecPrep
+  - CMAccessAlphaSquadLeaderPrep
+  - CMAccessAlphaTechPrep
+  - CMAccessBravoMedPrep
+  - CMAccessBravoSpecPrep
+  - CMAccessBravoSquadLeaderPrep
+  - CMAccessBravoTechPrep
+  - CMAccessCharlieMedPrep
+  - CMAccessCharlieSpecPrep
+  - CMAccessCharlieSquadLeaderPrep
+  - CMAccessCharlieTechPrep
+  - CMAccessDeltaMedPrep
+  - CMAccessDeltaSpecPrep
+  - CMAccessDeltaSquadLeaderPrep
+  - CMAccessDeltaTechPrep

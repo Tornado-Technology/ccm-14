@@ -1,0 +1,77 @@
+- type: entity
+  abstract: true
+  parent: BaseWindoor
+  id: CMWindoor
+  components:
+  - type: Sprite
+    sprite: /Textures/_CM/Structures/Doors/Windoors/windoor.rsi
+    layers:
+    - state: closed
+      map: [ "enum.DoorVisualLayers.Base" ]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: welded
+      map: [ "enum.WeldableLayers.BaseWelded" ]
+    - state: bolted_unlit
+      shader: unshaded
+      map: [ "enum.DoorVisualLayers.BaseBolted" ]
+    - state: emergency_unlit
+      shader: unshaded
+      map: [ "enum.DoorVisualLayers.BaseEmergencyAccess" ]
+    - state: panel_open
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+  - type: LayerChangeOnWeld
+    unWeldedLayer: AirlockLayer
+    weldedLayer: WallLayer
+  - type: Weldable
+    fuel: 5
+    time: 3
+  - type: Construction
+    graph: CMWindoor
+    node: windoor
+    containers:
+    - board
+  - type: Airlock
+    openUnlitVisible: true
+
+- type: entity
+  abstract: true
+  parent: BaseSecureWindoor
+  id: CMWindoorSecure
+  name: secure glass door
+  description: A thick chunk of tempered glass on metal track. Probably more robust than you.
+  components:
+  - type: Sprite
+    sprite: /Textures/_CM/Structures/Doors/Windoors/secure.rsi
+    layers:
+    - state: closed
+      map: [ "enum.DoorVisualLayers.Base" ]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: welded
+      map: [ "enum.WeldableLayers.BaseWelded" ]
+    - state: bolted_unlit
+      shader: unshaded
+      map: [ "enum.DoorVisualLayers.BaseBolted" ]
+    - state: emergency_unlit
+      shader: unshaded
+      map: [ "enum.DoorVisualLayers.BaseEmergencyAccess" ]
+    - state: panel_open
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+  - type: LayerChangeOnWeld
+    unWeldedLayer: AirlockLayer
+    weldedLayer: WallLayer
+  - type: Weldable
+    fuel: 5
+    time: 3
+  - type: AccessReader
+    containerAccessProvider: null
+  - type: Construction
+    graph: CMWindoor
+    node: windoorSecure
+    containers:
+    - board
+  - type: Airlock
+    openUnlitVisible: true

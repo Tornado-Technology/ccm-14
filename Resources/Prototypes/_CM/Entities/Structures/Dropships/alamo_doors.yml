@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: CMBaseDoor
+  parent: CMAirlock
   id: CMAlamoDoor
   name: alamo crew hatch
   placement:
@@ -34,7 +34,7 @@
     powerLoad: 0
 
 - type: entity
-  parent: CMBaseDoor
+  parent: CMAirlock
   id: CMAlamoCockpit
   name: cockpit
   suffix: Alamo

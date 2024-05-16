@@ -198,7 +198,7 @@
   - type: VendingMachine
     pack: CMVendorChemistry
   - type: AccessReader
-    access: [["CMAccessChemistry"]]
+    access: [["CMAccessMedical"]]
 
 - type: entity
   parent: CMVendorMedical

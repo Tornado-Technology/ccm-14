@@ -1,0 +1,26 @@
+- type: job
+  id: CMAplhaMedic
+  name: job-name-alpha-medic
+  description: job-description-alphamedic
+  playTimeTracker: CMJobAlphaMedic
+  startingGear: CMGearAlphaMedic
+  icon: "CMJobIconAlphaMedic"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMAlphaMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1
+
+- type: startingGear
+  id: CMGearAlphaMedic
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetAlphaMedic
+    id: CMDogtagAlphaMedic

@@ -18,7 +18,6 @@
     CableMVStack: 15
     CableHVStack: 15
     CMWelder: 2
-    ClothingUniformJumpsuitMarine: 1
     CMHandsBlack: 1
     ClothingShoesBootsMarine: 1
     BoxMRPFilled: 1
@@ -27,12 +26,10 @@
     ClothingOuterArmorMarineLight: 1
     ClothingOuterArmorMarineMedium: 1
     ClothingOuterArmorMarineHeavy: 1
-    ClothingHeadHelmetMarine: 1
     ClothingHeadHatBeretEngineering: 1
     ClothingMaskCoif: 1
     WeaponRifleM4RA: 1
     MagazineRifleM4RA: 5
-    CMWeaponRifleM41A: 1
     MagazineRifleM41A: 5
     WeaponSubMachineGunM39: 1
     MagazineRifleM39: 5

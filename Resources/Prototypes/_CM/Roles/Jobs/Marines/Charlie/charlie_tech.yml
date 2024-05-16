@@ -1,0 +1,29 @@
+- type: job
+  id: CMCharlieTech
+  name: job-name-charlie-tech
+  description: job-description-charlietech
+  playTimeTracker: CMJobCharlieTech
+  startingGear: CMGearCharlieTech
+  icon: "CMJobIconCharlieTech"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMCharlieTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: JobRank
+      job: CharlieEngineer
+    - type: Skills
+      constructiopn: 2
+      engineer: 2
+      jtac: 1
+      vehicle: 1
+
+- type: startingGear
+  id: CMGearCharlieTech
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetCharlieTech
+    id: CMDogtagCharlieTech

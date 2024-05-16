@@ -1,19 +1,15 @@
 - type: job
-  id: MilitaryPoliceman
+  id: CMMilitaryPoliceman
   name: job-name-militarypoliceman
   description: job-description-militarypoliceman
-  playTimeTracker: JobMilitaryPoliceman
-  requirements:
-  - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
-  weight: 5
+  playTimeTracker: CMJobMilitaryPoliceman
   startingGear: CMGearMilitaryPolice
   icon: "CMJobIconMilitaryPolice"
+  supervisors: job-supervisors-staff-officer
   joinNotifyCrew: false
-  supervisors: job-supervisors-police-officer
   canBeAntag: false
   accessGroups:
-  - MP
+  - CMMilitaryPolice
   special:
   - !type:AddComponentSpecial
     components:
@@ -24,30 +20,8 @@
       police: 2
 
 - type: startingGear
-  id: MilitaryPolicemanGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitMilitaryPolice
-    back: ClothingBackpackSecurityFilled
-    shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
-    eyes: ClothingEyesGlassesSecurity
-    head: ClothingHeadHelmetBasic
-    outerClothing: ClothingOuterVestArmorSec # Corvax-Resprite
-    id: PolicemanIDCard
-    ears: ClothingHeadsetSecurity
-    pocket1: EmergencyMedipen
-
-- type: startingGear
   id: CMGearMilitaryPolice
   equipment:
-    jumpsuit: CMJumpsuitMPBlack
-    back: CMSatchelSecurity
-    shoes: CMBootsBlackFilled
-    head: CMHeadBeretRed
-    eyes: ClothingEyesGlassesSecurity # todo cm14 replace with cm ones
-    gloves: CMHandsBlackMarine
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetMP
     id: CMIDCardMilitaryPolice
-    outerClothing: CMArmorM2MP
-    ears: CMHeadsetMPO
-    belt: CMBeltSecurityFilled
-    #    pocket1: TODO CM14 tape recorder
-    pocket2: CMPouchGeneralLarge

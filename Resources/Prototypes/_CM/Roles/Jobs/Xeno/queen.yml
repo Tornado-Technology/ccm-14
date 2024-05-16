@@ -1,0 +1,9 @@
+- type: job
+  id: CMQueen
+  name: job-name-queen
+  description: job-description-queen
+  playTimeTracker: CMJobQuinn
+  icon: "CMJobIconQuinn"
+  supervisors: job-supervisors-quinn
+  jobEntity: MobQueenXeno
+  canBeAntag: false

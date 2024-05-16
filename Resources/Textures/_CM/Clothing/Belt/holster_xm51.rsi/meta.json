@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/cmss13-devs/cmss13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-sheath"
+        },
+        {
+            "name": "closed"
+        },
+        {
+            "name": "equipped-BELT",
+            "directions": 4
+        },
+		{
+			"name": "sn-equipped-BELT",
+			"directions": 4
+		},
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

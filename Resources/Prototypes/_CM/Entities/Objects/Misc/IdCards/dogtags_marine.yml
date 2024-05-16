@@ -1,0 +1,183 @@
+﻿# Alpha
+- type: entity
+  suffix: Alpha
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagAlphaMedic
+  name: Alpha Rifleman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMAlphaMedic
+
+- type: entity
+  suffix: Alpha
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagAlphaRifleman
+  name: Alpha Combat Tech's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMAlphaRifleman
+
+- type: entity
+  suffix: Alpha
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagAlphaSpec
+  name: Alpha Fireteam Leader's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMAlphaSpecialist
+
+- type: entity
+  suffix: Alpha
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagAlphaTech
+  name: Alpha Smartgunner's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMSmartgunner
+
+- type: entity
+  suffix: Alpha
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagAlphaSL
+  name: Alpha Hospital Corpsman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMAlphaTech
+
+# Bravo
+- type: entity
+  suffix: Bravo
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagBravoMedic
+  name: Bravo Rifleman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMBravoMedic
+
+- type: entity
+  suffix: Bravo
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagBravoRifleman
+  name: Bravo Combat Tech's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMBravoRifleman
+
+- type: entity
+  suffix: Bravo
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagBravoSpec
+  name: Bravo Fireteam Leader's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMBravoSpecialist
+
+- type: entity
+  suffix: Bravo
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagBravoTech
+  name: Bravo Smartgunner's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMSmartgunner
+
+- type: entity
+  suffix: Bravo
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagBravoSL
+  name: Bravo Hospital Corpsman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMBravoTech
+
+# Charlie
+- type: entity
+  suffix: Charlie
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagCharlieMedic
+  name: Charlie Rifleman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMCharlieMedic
+
+- type: entity
+  suffix: Charlie
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagCharlieRifleman
+  name: Charlie Combat Tech's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMCharlieRifleman
+
+- type: entity
+  suffix: Charlie
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagCharlieSpec
+  name: Charlie Fireteam Leader's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMCharlieSpecialist
+
+- type: entity
+  suffix: Charlie
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagCharlieTech
+  name: Charlie Smartgunner's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMSmartgunner
+
+- type: entity
+  suffix: Charlie
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagCharlieSL
+  name: Charlie Hospital Corpsman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMCharlieTech
+
+# Delta
+- type: entity
+  suffix: Delta
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagDeltaMedic
+  name: Delta Rifleman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMDeltaMedic
+
+- type: entity
+  suffix: Delta
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagDeltaRifleman
+  name: Delta Combat Tech's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMDeltaRifleman
+
+- type: entity
+  suffix: Delta
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagDeltaSpec
+  name: Delta Fireteam Leader's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMDeltaSpecialist
+
+- type: entity
+  suffix: Delta
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagDeltaTech
+  name: Delta Smartgunner's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMSmartgunner
+
+- type: entity
+  suffix: Delta
+  parent: CMIDCardStandardDogtag
+  id: CMDogtagDeltaSL
+  name: Delta Hospital Corpsman's dogtags
+  components:
+  - type: PresetIdCard
+    job: CMDeltaTech

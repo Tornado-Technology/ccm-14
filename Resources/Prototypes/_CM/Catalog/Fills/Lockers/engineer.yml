@@ -23,8 +23,6 @@
 ##        prob: 0.7
       - id: CMBeltUtility
         prob: 0.2
-      - id: CMHandsInsulated
-        prob: 0.05
 ##      - id: SprayPainter
 ##        prob: 0.7
 

@@ -1,0 +1,26 @@
+- type: job
+  id: CMDeltaMedic
+  name: job-name-delta-medic
+  description: job-description-deltamedic
+  playTimeTracker: CMJobDeltaMedic
+  startingGear: CMGearDeltaMedic
+  icon: "CMJobIconDeltaMedic"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMDeltaMedic
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      jtac: 1
+      medical: 2
+      surgery: 1
+
+- type: startingGear
+  id: CMGearDeltaMedic
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetDeltaMedic
+    id: CMDogtagDeltaMedic

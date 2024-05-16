@@ -1,20 +1,138 @@
 - type: entity
-  parent: BaseCartridgeRifle
-  id: CMBaseCartridgeRifle
-  name: cartridge
   abstract: true
+  parent: BaseCartridge
+  id: CMBaseCartridgeRifle
   components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    state: base
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
   - type: CartridgeAmmo
     deleteOnSpawn: true
 
 - type: entity
+  noSpawn: true
   parent: CMBaseCartridgeRifle
-  id: CMCartridgeRifle10x24mm
-  name: cartridge (10x24mm)
+  id: CMCartridgeRifle1020
+  name: cartridge (10x20 rifle)
   components:
+  - type: CartridgeAmmo
+    proto: CMBulletRifle1020
   - type: Tag
     tags:
-      - Cartridge
-      - CMCartridgeRifle10x24mm
+    - CMCartridgeRifle1020
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleIncendiary1020
+  name: cartridge Incendiary (10x20 Rifle)
+  components:
+  - type: Sprite
+    state: incendiary
+    map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: BulletRifle10x24mm
+    proto: CMBulletRifleIncendiary1020
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1020
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleAP1020
+  name: cartridge AP (10x20 Rifle)
+  components:
+  - type: Sprite
+    state: ap
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletRifleAP1020
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1020
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifle1024
+  name: cartridge (10x24 rifle)
+  components:
+  - type: CartridgeAmmo
+    proto: CMBulletRifle1024
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1024
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleIncendiary1024
+  name: cartridge Incendiary (10x24 rifle)
+  components:
+  - type: Sprite
+    state: incendiary
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletRifleIncendiary1024
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1024
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleAP1024
+  name: cartridge AP (10x24 rifle)
+  components:
+  - type: Sprite
+    state: ap
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletRifleAP1024
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1024
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifle1028
+  name: cartridge (10x28 rifle)
+  components:
+  - type: CartridgeAmmo
+    proto: CMBulletRifle1028
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1028
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleIncendiary1028
+  name: cartridge Incendiary (10x28 rifle)
+  components:
+  - type: Sprite
+    state: incendiary
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletRifleIncendiary1028
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1028
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifleAP1028
+  name: cartridge AP (10x28 rifle)
+  components:
+  - type: Sprite
+    state: ap
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletRifleAP1028
+  - type: Tag
+    tags:
+    - CMCartridgeRifle1028

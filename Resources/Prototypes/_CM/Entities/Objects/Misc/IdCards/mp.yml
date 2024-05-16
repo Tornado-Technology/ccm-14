@@ -1,0 +1,9 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardMilitaryPolice
+  name: military police ID card
+  components:
+  - type: Sprite
+    state: mp
+  - type: PresetIdCard
+    job: CMMilitaryPoliceman

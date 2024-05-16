@@ -1,19 +1,15 @@
 - type: job
-  id: HeadOperations
+  id: CMHeadOperations
   name: job-name-headoperations
   description: job-description-headoperations
-  playTimeTracker: JobHeadOperations
-  requirements:
-  - !type:RoleTimeRequirement
-    role: JobStaffOfficer
-    time: 10800 # 3 hrs
-  weight: 5
-  startingGear: CMGearStaffOfficer
-  icon: "CMJobIconExecutiveOfficer"
+  playTimeTracker: CMJobHeadOperations
+  startingGear: CMGearHeadOperations
+  icon: "CMJobIconHeadOperations"
   supervisors: job-supervisors-uge
   canBeAntag: false
   accessGroups:
-  - MarineMain
+  - CMShipMasterAccess
+  - CMMarineMain
   special:
   - !type:AddComponentSpecial
     components:
@@ -36,12 +32,11 @@
     - type: MarineOrders
 
 - type: startingGear
-  id: CMGearExecutiveOfficer
+  id: CMGearHeadOperations
   equipment:
-    jumpsuit: CMJumpsuitBO
-    back: CMSatchel
-    shoes: CMShoesLaceup
-    head: CMHeadCap
-    outerClothing: CMCoatOfficer
-    id: CMIDCardExecutiveOfficer
-    ears: CMHeadsetLeader
+    jumpsuit: CMJumpsuitCO
+    back: CMSatchelGeneral
+    shoes: ClothingShoesBootsLaceup
+    ears: CMHeadsetSeniorCommand
+    id: CMIDCardHeadOperations
+

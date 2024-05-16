@@ -1,0 +1,88 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponLightMachineGun
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Huge
+  - type: Wieldable
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Gun
+    minAngle: 15
+    maxAngle: 45
+    angleIncrease: 5
+    angleDecay: 15
+    fireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/m41a.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: Appearance
+  - type: UseDelay
+    delay: 1.5
+  - type: StaticPrice
+    price: 500
+
+# Desert base
+- type: entity
+  parent: CMBaseWeaponLightMachineGun
+  id: CMWeaponRifleDesertM41AE2
+  name: M41AE2 NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M41AE2 DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\LMGs\m41ae2.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\LMGs\m41ae2.rsi
+  - type: GunWieldBonus
+    minAngle: -7.5
+    maxAngle: -22.5
+    angleIncrease: -2.5
+    angleDecay: -7.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_CM/Weapons/Guns/MagIn/m41ae_magin.ogg
+        ejectSound: /Audio/_CM/Weapons/Guns/MagOut/m41ae_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineRifleM41AE2
+
+# Jungle
+- type: entity
+  parent: CMWeaponRifleDesertM41AE2
+  id: CMWeaponRifleJungleM41AE2
+  name: M41AE2 NAME [ЖДЕМ ЛОРОВЕДОВ]
+  description: M41AE2 DESC [ЖДЕМ ЛОРОВЕДОВ]
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\LMGs\m41ae2.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\LMGs\m41ae2.rsi

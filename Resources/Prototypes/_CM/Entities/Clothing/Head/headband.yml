@@ -1,14 +1,14 @@
 # Headbands
 - type: entity
-  parent: CMHeadCap
+  parent: CMHeadBase
   id: CMHeadBandGreen
   name: green headband
   description: Piece of cloth to wrap around the head.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/green.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\green.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/green.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\green.rsi
 
 - type: entity
   parent: CMHeadBandGreen
@@ -16,9 +16,9 @@
   name: brown headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/brown.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\brown.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/brown.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\brown.rsi
 
 - type: entity
   parent: CMHeadBandGreen
@@ -26,9 +26,9 @@
   name: gray headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/gray.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\gray.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/gray.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\gray.rsi
 
 - type: entity
   parent: CMHeadBandGreen
@@ -36,9 +36,9 @@
   name: red headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/red.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\red.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/red.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\red.rsi
 
 - type: entity
   parent: CMHeadBandGreen
@@ -46,9 +46,9 @@
   name: tan headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/tan.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\tan.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/tan.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\tan.rsi
 
 # Squad headbands
 - type: entity
@@ -58,9 +58,9 @@
   description: Piece of cloth in colors of your squad.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/alpha.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\alpha.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/alpha.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\alpha.rsi
 
 - type: entity
   parent: CMHeadBandAlpha
@@ -68,9 +68,9 @@
   name: bravo headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/bravo.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\bravo.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/bravo.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\bravo.rsi
 
 - type: entity
   parent: CMHeadBandAlpha
@@ -78,9 +78,9 @@
   name: charlie headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/charlie.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\charlie.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/charlie.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\charlie.rsi
 
 - type: entity
   parent: CMHeadBandAlpha
@@ -88,9 +88,9 @@
   name: delta headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/delta.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\delta.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/delta.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\delta.rsi
 
 - type: entity
   parent: CMHeadBandAlpha
@@ -98,9 +98,9 @@
   name: echo headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/echo.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\echo.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/echo.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\echo.rsi
 
 - type: entity
   parent: CMHeadBandAlpha
@@ -108,9 +108,9 @@
   name: foxtrot headband
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/foxtrot.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\foxtrot.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/foxtrot.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\foxtrot.rsi
 
 # Role specific
 - type: entity
@@ -120,6 +120,6 @@
   description: A piece of cloth that belonged to an experienced special forces operative, nobody seems to recall his name though. Viper..? Serpent..?
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/intel.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\intel.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/headband/intel.rsi
+    sprite: _CM\Clothing\Head\Hats\Headband\intel.rsi

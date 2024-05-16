@@ -1,0 +1,81 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseWeaponSniper
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Huge
+  - type: Wieldable
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+# Desert base
+- type: entity
+  parent: CMBaseWeaponSniper
+  id: CMWeaponSniperDesertM42
+  name: CMWeaponSniperDesertM42 name
+  description: CMWeaponSniperDesertM42 desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Snipers\m42.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Desert\Snipers\m42.rsi
+  - type: Gun
+    projectileSpeed: 300
+    minAngle: 5
+    maxAngle: 15
+    angleIncrease: 5
+    angleDecay: 15
+    fireRate: 0.25
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/sniper.ogg
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -13
+    angleIncrease: -3
+    angleDecay: -13
+  # - type: ShootUseDelay
+# TODO перенести компонент из CM визардов
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CMMagazineSniperM42
+
+# Jungle
+- type: entity
+  parent: CMWeaponSniperDesertM42
+  id: CMWeaponSniperJungleM42
+  name: CMWeaponSniperJungleM42 name
+  description: CMWeaponSniperJungleM42 desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Snipers\m42.rsi
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\GunsByMap\Jungle\Snipers\m42.rsi

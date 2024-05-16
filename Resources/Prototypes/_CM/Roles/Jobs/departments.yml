@@ -1,0 +1,138 @@
+# Base
+- type: job
+  abstract: true
+  id: CMJobBase
+  isCM: true
+
+- type: department
+  abstract: true
+  id: CMDepartmentBase
+  isCM: true
+
+# Xeno
+- type: department
+  parent: CMDepartmentBase
+  id: CMXeno
+  description: department-Xeno-description
+  color: "#4B0082"
+  roles:
+    - CMXeno
+    - CMPretorian
+    - CMQueen
+    - CMRuni
+
+# Marine
+- type: department
+  parent: CMDepartmentBase
+  id: CMCommand
+  description: department-Command-description
+  color: "#7FFFD4"
+  roles:
+  - CMHeadOperations
+  - CMStaffOfficer
+  - CMFieldCommander
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMSquadLeader
+  description: department-CommandersGarrisons-description
+  color: "#B22222"
+  roles:
+  - CMAlphaLeader
+  - CMBravoLeader
+  - CMCharlieLeader
+  - CMDeltaLeader
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMSquadSpec
+  description: department-SpecialistsGarrison-description
+  color: "#1E90FF"
+  roles:
+  - CMAlphaSpecialist
+  - CMBravoSpecialist
+  - CMCharlieSpecialist
+  - CMDeltaSpecialist
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMSquadRifleman
+  description: department-MarinesGarrison-description
+  color: "#8A2BE2"
+  roles:
+  - CMAlphaRifleman
+  - CMBravoRifleman
+  - CMCharlieRifleman
+  - CMDeltaRifleman
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMSquadMedic
+  description: department-MedicsGarrison-description
+  color: "#FFD700"
+  roles:
+  - CMAplhaMedic
+  - CMBravoMedic
+  - CMCharlieMedic
+  - CMDeltaMedic
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMSquadTech
+  description: department-EngineersGarrison-description
+  color: "#FFD700"
+  roles:
+  - CMAlphaTech
+  - CMBravoTech
+  - CMCharlieTech
+  - CMDeltaTech
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMCrewRequisition
+  description: department-LogisticsSupport-description
+  color: "#FF8C00"
+  roles:
+  - CMRigger
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMCrewDoctor
+  description: department-MedicalUnit-description
+  color: "#20B2AA"
+  roles:
+  - CMDoctor
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMCrewShipEngineer
+  description: department-ConstructionBattalion-description
+  color: "#F0E68C"
+  roles:
+  - CMShipEngineer
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMCrewMilitaryPolice
+  description: department-MilitaryPolice-description
+  color: "#DC143C"
+  roles:
+  - CMMilitaryPoliceman
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMCrewScience
+  description: department CMCrewScience
+  color: "#334E6D"
+  roles:
+  - CMResearcher
+
+- type: department
+  parent: CMDepartmentBase
+  id: CMAuxiliarySupport
+  description: department-Pilots-description
+  color: "#7FFFD4"
+  roles:
+    - CMPilotDropship
+    - CMPilotGunship
+    - CMPilotMech

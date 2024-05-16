@@ -1,0 +1,99 @@
+# Command
+- type: playTimeTracker
+  id: CMJobHeadOperations
+
+- type: playTimeTracker
+  id: CMJobFieldCommander
+
+- type: playTimeTracker
+  id: CMJobStaffOfficer
+
+# Auxiliary Support
+- type: playTimeTracker
+  id: CMJobPilotDropship
+
+- type: playTimeTracker
+  id: CMJobPilotGunship
+
+- type: playTimeTracker
+  id: CMJobPilotMech
+
+# Crew
+- type: playTimeTracker
+  id: CMJobRigger
+
+- type: playTimeTracker
+  id: CMJobDoctor
+
+- type: playTimeTracker
+  id: CMJobShipEngineer
+
+- type: playTimeTracker
+  id: CMJobMilitaryPoliceman
+
+- type: playTimeTracker
+  id: CMJobResearcher
+
+# Marine alpha
+- type: playTimeTracker
+  id: CMJobAlphaLeader
+
+- type: playTimeTracker
+  id: CMJobAlphaRifleman
+
+- type: playTimeTracker
+  id: CMJobAlphaMedic
+
+- type: playTimeTracker
+  id: CMJobAlphaTech
+
+- type: playTimeTracker
+  id: CMJobAlphaSpecialist
+
+# Marine bravo
+- type: playTimeTracker
+  id: CMJobBravoLeader
+
+- type: playTimeTracker
+  id: CMJobBravoRifleman
+
+- type: playTimeTracker
+  id: CMJobBravoMedic
+
+- type: playTimeTracker
+  id: CMJobBravoTech
+
+- type: playTimeTracker
+  id: CMJobBravoSpecialist
+
+# Marine charlie
+- type: playTimeTracker
+  id: CMJobCharlieLeader
+
+- type: playTimeTracker
+  id: CMJobCharlieRifleman
+
+- type: playTimeTracker
+  id: CMJobCharlieMedic
+
+- type: playTimeTracker
+  id: CMJobCharlieTech
+
+- type: playTimeTracker
+  id: CMJobCharlieSpecialist
+
+# Marine delta
+- type: playTimeTracker
+  id: CMJobDeltaLeader
+
+- type: playTimeTracker
+  id: CMJobDeltaRifleman
+
+- type: playTimeTracker
+  id: CMJobDeltaMedic
+
+- type: playTimeTracker
+  id: CMJobDeltaTech
+
+- type: playTimeTracker
+  id: CMJobDeltaSpecialist

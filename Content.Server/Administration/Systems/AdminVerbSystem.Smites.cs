@@ -799,7 +799,7 @@ public sealed partial class AdminVerbSystem
         {
             Text = "Charlie",
             Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/_CM/Clothing/OuterClothing/Armor/comfortable_armor.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/_CM/Clothing/Uniforms/Jumpsuit/cryo.rsi"), "icon"),
             Act = () =>
             {
                 SetOutfitCommand.SetOutfit(args.Target, "CharlieComfortableGear", EntityManager, (_, clothing) =>

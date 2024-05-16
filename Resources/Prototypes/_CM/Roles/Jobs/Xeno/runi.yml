@@ -1,13 +1,9 @@
 - type: job
-  id: Runi
+  id: CMRuni
   name: job-name-runi
   description: job-description-runi
-  playTimeTracker: JobRuni
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobKseno
-      time: 36000 # 10 hrs
+  playTimeTracker: CMJobRuni
+  icon: "CMJobIconRuni"
+  supervisors: job-supervisors-queen
+  jobEntity: CMMobRounyXeno
   canBeAntag: false
-  icon: "JobIconRuni"
-  supervisors: job-supervisors-quinn
-  jobEntity: MobRounyXeno

@@ -1,0 +1,43 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineBoxGrenades
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Boxes/m79_cartridge.rsi
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: MagazineVisuals
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    mayTransfer: true
+
+# Boxes
+# TODO CMCorvax заменить спрайт коробки
+- type: entity
+  parent: CMBaseMagazineBoxGrenades
+  id: CMMagazineBoxM40HEDP
+  name: ammunition box гранаты (M40HEDP)
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+  - type: BallisticAmmoProvider
+    capacity: 15
+    proto: M40HEDP
+    whitelist:
+      tags:
+      - LauncherCompatibleGrenade

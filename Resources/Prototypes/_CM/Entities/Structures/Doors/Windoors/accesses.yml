@@ -1,41 +1,52 @@
-# Basic
+# Command
 - type: entity
-  parent: CMWindoor
-  id: CMWindoorKitchen
-  suffix: Kitchen, Locked
+  suffix: HeadOP, Locked
+  parent: CMWindoorSecure
+  id: CMWindoorHeadOPCommandLocked
   components:
   - type: AccessReader
-    access: [["CMAccessKitchen"]]
+    access: [["CMAccessCO"]]
 
-# Secure
 - type: entity
+  suffix: Command, Locked
   parent: CMWindoorSecure
-  id: CMWindoorSecureBrig
+  id: CMWindoorCommandLocked
+  components:
+  - type: AccessReader
+    access: [["CMAccessCommand"]]
+
+# MP
+- type: entity
   suffix: Brig, Locked
+  parent: CMWindoorSecure
+  id: CMWindoorBrigLocked
   components:
   - type: AccessReader
     access: [["CMAccessBrig"]]
 
+# Req
 - type: entity
-  parent: CMWindoorSecure
-  id: CMWindoorSecurerRequisitions
   suffix: Requisitions, Locked
+  parent: CMWindoorSecure
+  id: CMWindoorRequisitionsLocked
   components:
   - type: AccessReader
     access: [["CMAccessRequisitions"]]
 
+# Medical
 - type: entity
-  parent: CMWindoorSecure
-  id: CMWindoorSecureMedical
   suffix: Medical, Locked
+  parent: CMWindoorSecure
+  id: CMWindoorMedicalLocked
   components:
   - type: AccessReader
     access: [["CMAccessMedical"]]
 
+# Research
 - type: entity
   parent: CMWindoorSecure
-  id: CMWindoorSecureEngineering
-  suffix: Engineering, Locked
+  id: CMWindoorResearchLocked
+  suffix: Research, Locked
   components:
   - type: AccessReader
-    access: [["CMAccessEngineering"]]
+    access: [["CMAccessResearch"]]

@@ -1,177 +1,175 @@
 - type: entity
+  abstract: true
   parent: ClothingHeadBase
-  id: CMHeadBeret
-  name: beret
+  id: CMHeadBase
+  components:
+  - type: Tag
+    tags:
+    - ClothMade
+
+- type: entity
+  abstract: true
+  parent: [ CMHeadBase, BaseFoldable ]
+  id: CMHeadBaseFoldable
+  components:
+  - type: Sprite
+    sprite: /Uploaded/Sierra/Helmet/marine.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_up
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: /Uploaded/Sierra/Helmet/marine.rsi
+    state: equipped-HELMET
+    equippedPrefix: up
+  - type: Foldable
+    folded: false
+    canFoldInsideContainer: true
+    unfoldVerbText: "Развернуть"
+    foldVerbText: "Развернуть"
+# TODO CMCorvax добавить в .ftl?
+  - type: Appearance
+  - type: FoldableClothing
+    foldedEquippedPrefix: up
+    foldedHeldPrefix: up
+  - type: Item
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadBeretMP
+  name: CMHeadBeretMP name
   description: Does not protect a head from bullet.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/beret.rsi
+    sprite: _CM\Clothing\Head\Hats\beret_mp.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/beret.rsi
-  - type: Tag
-    tags:
-    - ClothMade
+    sprite: _CM\Clothing\Head\Hats\beret_mp.rsi
 
 - type: entity
-  parent: CMHeadBeret
-  id: CMHeadBeretRed
-  name: MP beret
+  parent: CMHeadBase
+  id: CMHeadBeretOMP
+  name: CMHeadBeretOMP name
+  description: Does not protect a head from bullet.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_red.rsi
+    sprite: _CM\Clothing\Head\Hats\beret_omp.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_red.rsi
+    sprite: _CM\Clothing\Head\Hats\beret_omp.rsi
 
 - type: entity
-  parent: CMHeadBeret
-  id: CMHeadBeretTan
-  name: tan beret
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_tan.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_tan.rsi
-
-- type: entity
-  parent: CMHeadBeret
-  id: CMHeadBeretWO
-  name: WO's beret
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_wo.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/beret_wo.rsi
-
-- type: entity
-  parent: CMHeadBeret
-  id: CMHeadBeretCO
-  name: CO's beret
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/beret.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/beret.rsi
-
-- type: entity
-  parent: CMHeadBeret
-  id: CMHeadBeretCOBlack
-  name: CO's beret
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/beret_black.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/beret_black.rsi
-
-# Caps
-- type: entity
-  parent: ClothingHeadBase
-  id: CMHeadCapMP
-  name: MP cap
-  description: A ball-cap worn by the more casual of the USCM's Military Police.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/mp_cap.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/mp_cap.rsi
-  - type: Tag
-    tags:
-    - ClothMade
-
-- type: entity
-  parent: CMHeadCapMP
-  id: CMHeadCapWarden
-  name: warden cap
-  description: Smells like donuts.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/warden.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/warden.rsi
-
-- type: entity
-  parent: CMHeadCapMP
-  id: CMHeadCapCargo
-  name: cargo cap
-  description: It's a baseball hat in a tasteless yellow color.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/cargo_cap.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/cargo_cap.rsi
-
-- type: entity
-  parent: CMHeadCapMP
-  id: CMHeadCap
-  name: cap
-  description: Standard baseball cap.
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/cap.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/cap.rsi
-
-- type: entity
-  parent: CMHeadCap
-  id: CMHeadCapCO
-  name: CO's cap
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/cap.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/cap.rsi
-
-- type: entity
-  parent: CMHeadCapCO
-  id: CMHeadCapCOFormalBlack
-  name: CO's formal cap
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/formal_black.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/formal_black.rsi
-
-- type: entity
-  parent: CMHeadCapCO
-  id: CMHeadCapCOFormalWhite
-  name: CO's formal cap
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/formal_white.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/CO/formal_white.rsi
-
-- type: entity
-  parent: CMHeadCap
-  id: CMHeadCapDrill
-  name: drill hat
-  description: From now on you will speak only when spoken to, and the first and last words out of your filthy sewers will be 'Sir.'
-  components:
-  - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/drill_hat.rsi
-  - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/drill_hat.rsi
-
-- type: entity
-  parent: CMHeadCap
+  parent: CMHeadBase
   id: CMHeadCapCMO
-  name: CMO's cap
+  name: CMHeadCapCMO name
+  description: Does not protect a head from bullet.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/cmo_cap.rsi
+    sprite: _CM\Clothing\Head\Hats\cmo_cap.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/cmo_cap.rsi
+    sprite: _CM\Clothing\Head\Hats\cmo_cap.rsi
 
-# surgical caps
 - type: entity
-  parent: CMHeadCap
+  parent: CMHeadBaseFoldable
+  id: CMHeadCapCargo
+  name: CMHeadCapCargo name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\cargo_cap.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\cargo_cap.rsi
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadBeretCO
+  name: CMHeadBeretCO name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\CO\beret.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\CO\beret.rsi
+
+- type: entity
+  parent: CMHeadBaseFoldable
+  id: CMHeadCapCO
+  name: CMHeadCapCO name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\CO\cap.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\CO\cap.rsi
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadCapDrill
+  name: CMHeadDrill name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\CO\drillhat.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\CO\drillhat.rsi
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadCapCOFormalBlack
+  name: CO's formal cap CMHeadCapCOFormalBlack
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\CO\formal_black.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\CO\formal_black.rsi
+
+- type: entity
+  parent: CMHeadCapCOFormalBlack
+  id: CMHeadCapCOFormalWhite
+  name: CMHeadCapCOFormalWhite name
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\CO\formal_white.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\CO\formal_white.rsi
+
+- type: entity
+  parent: CMHeadCapCOFormalBlack
+  id: CMHeadCapOMPFormal
+  name: CMHeadCapOMPFormal name
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\formal_omp.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\formal_omp.rsi
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadCapMP
+  name: CMHeadCapOMPFormal name
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\Hats\mp_cap.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\Hats\mp_cap.rsi
+
+# Surgical caps
+- type: entity
+  parent: CMHeadBase
   id: CMHeadCapSurgBlue
   name: blue surgical cap
   description: Standard-issue surgical cap.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/blue.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\blue.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/blue.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\blue.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Tag
+    tags:
+    - HidesHair
 
 - type: entity
   parent: CMHeadCapSurgBlue
@@ -179,9 +177,9 @@
   name: green surgical cap
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/green.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\green.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/green.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\green.rsi
 
 - type: entity
   parent: CMHeadCapSurgBlue
@@ -189,16 +187,102 @@
   name: purple surgical cap
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/purple.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\purple.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/purple.rsi
+    sprite: _CM\Clothing\Head\Hats\SurgicalCap\purple.rsi
 
+# Desert base
 - type: entity
-  parent: CMHeadCapSurgBlue
-  id: CMHeadCapSurgOrange
-  name: orange surgical cap
+  parent: CMHeadBase
+  id: CMHeadDesertBeret
+  name: CMHeadDesertBeret name
+  description: Does not protect a head from bullet.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/orange.rsi
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\beret.rsi
   - type: Clothing
-    sprite: _CM/Objects/Clothing/Head/Hats/SurgicalCap/orange.rsi
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\beret.rsi
+
+- type: entity
+  parent: CMHeadBase
+  id: CMHeadDesertBandana
+  name: CMHeadDesertBandana name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\bandana.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\bandana.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Tag
+    tags:
+    - HidesHair
+
+- type: entity
+  parent: CMHeadBaseFoldable
+  id: CMHeadDesertCapBoonie
+  name: CMHeadDesertCapBoonie name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\booniehat.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\booniehat.rsi
+
+- type: entity
+  parent: CMHeadBaseFoldable
+  id: CMHeadDesertCap
+  name: CMHeadDesertCap name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\cap.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Desert\cap.rsi
+
+# Jungle
+- type: entity
+  parent: CMHeadDesertBeret
+  id: CMHeadJungleBeret
+  name: MP beret
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\beret.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\beret.rsi
+
+- type: entity
+  parent: CMHeadDesertBandana
+  id: CMHeadJungleBandana
+  name: CMHeadJungleBandana name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\bandana.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\bandana.rsi
+
+- type: entity
+  parent: CMHeadDesertCapBoonie
+  id: CMHeadJungleCapBoonie
+  name: CMHeadJungleCapBoonie name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\booniehat.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\booniehat.rsi
+
+- type: entity
+  parent: CMHeadDesertCap
+  id: CMHeadJungleCap
+  name: CMHeadJungleCap name
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\cap.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HatsByMap\Jungle\cap.rsi

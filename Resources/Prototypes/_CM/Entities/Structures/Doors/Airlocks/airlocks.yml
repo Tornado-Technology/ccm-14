@@ -1,14 +1,14 @@
+# Base
 - type: entity
-  parent:
-  - CMBaseDoor
-  - CMBaseDoorConstructible
-  id: CMAirlock
+  abstract: true
+  parent: [ CMAirlock, CMBaseDoorConstructible ]
+  id: CMAirlockBase
   name: airlock
   placement:
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/personal_door.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Standart/personal.rsi
   - type: Construction
     graph: CMAirlock
     node: airlock
@@ -19,69 +19,12 @@
     department: CMMarine
 
 - type: entity
-  parent: CMAirlock
-  id: CMAirlockCommand
-  suffix: Command
+  abstract: true
+  parent: CMAirlockBase
+  id: CMAirlockGlassBase
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/com_door.rsi
-  - type: PaintableAirlock
-    department: CMCommand
-
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockEngineer
-  suffix: Engineering
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/engi_door.rsi
-  - type: PaintableAirlock
-    department: CMEngineering
-
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockMedical
-  suffix: Medical
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/medi_door.rsi
-  - type: PaintableAirlock
-    department: CMMedical
-
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockSecurity
-  suffix: Security
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/sec_door.rsi
-  - type: PaintableAirlock
-    department: CMMilitaryPolice
-
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockMaint
-  name: maintenance
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/maint_door.rsi
-
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockSecure
-  name: secure airlock
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/secure_door.rsi
-
-# Glass
-- type: entity
-  parent: CMAirlock
-  id: CMAirlockGlass
-  name: glass airlock
-  components:
-  - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/personal_door_glass.rsi
+    sprite: _CM\Structures\Doors\Airlocks\Glass\personal.rsi
   - type: Door
     occludes: false
   - type: Occluder
@@ -107,44 +50,104 @@
     tags:
     - GlassAirlock
 
+# Standart
 - type: entity
-  parent: CMAirlockGlass
-  id: CMAirlockGlassEngineer
-  suffix: Engineer
+  parent: CMAirlockBase
+  id: CMAirlockPersonal
+  name: personal airlock
+
+- type: entity
+  suffix: Command
+  parent: CMAirlockBase
+  id: CMAirlockCommand
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/engi_door_glass.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Standart/command.rsi
+  - type: PaintableAirlock
+    department: CMCommand
+
+- type: entity
+  suffix: Engineering
+  parent: CMAirlockBase
+  id: CMAirlockEngineer
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Doors/Airlocks/Standart/engineering.rsi
   - type: PaintableAirlock
     department: CMEngineering
 
 - type: entity
-  parent: CMAirlockGlass
-  id: CMAirlockGlassMedical
   suffix: Medical
+  parent: CMAirlockBase
+  id: CMAirlockMedical
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/medi_door_glass.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Standart/medical.rsi
   - type: PaintableAirlock
     department: CMMedical
 
 - type: entity
-  parent: CMAirlockGlass
-  id: CMAirlockGlassSecurity
   suffix: Security
+  parent: CMAirlockBase
+  id: CMAirlockSecurity
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/sec_door_glass.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Standart/security.rsi
+  - type: PaintableAirlock
+    department: CMMilitaryPolice
+
+- type: entity
+  suffix: Maint
+  parent: CMAirlockBase
+  id: CMAirlockMaint
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Doors/Airlocks/Standart/maint.rsi
+
+# Glass
+- type: entity
+  parent: CMAirlockGlassBase
+  id: CMAirlockGlassPersonal
+  name: glass airlock
+
+- type: entity
+  suffix: Engineer
+  parent: CMAirlockGlassBase
+  id: CMAirlockGlassEngineer
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Doors/Airlocks/Glass/engineering.rsi
+  - type: PaintableAirlock
+    department: CMEngineering
+
+- type: entity
+  suffix: Medical
+  parent: CMAirlockGlassBase
+  id: CMAirlockGlassMedical
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Doors/Airlocks/Glass/medical.rsi
+  - type: PaintableAirlock
+    department: CMMedical
+
+- type: entity
+  suffix: Security
+  parent: CMAirlockGlassBase
+  id: CMAirlockGlassSecurity
+  components:
+  - type: Sprite
+    sprite: _CM/Structures/Doors/Airlocks/Glass/security.rsi
   - type: PaintableAirlock
     department: CMMilitaryPolice
 
 # Prep
 - type: entity
-  parent: CMAirlockGlass
+  parent: CMAirlockGlassBase
   id: CMAirlockPrep
   name: preparations airlock
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/prep_door.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Glass/prep.rsi
 
 - type: entity
   parent: CMAirlockPrep
@@ -152,7 +155,7 @@
   name: alpha squad preparations
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/prep_door_alpha.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Glass/alpha.rsi
 
 - type: entity
   parent: CMAirlockPrep
@@ -160,7 +163,7 @@
   name: bravo squad preparations
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/prep_door_bravo.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Glass/bravo.rsi
 
 - type: entity
   parent: CMAirlockPrep
@@ -168,7 +171,7 @@
   name: charlie squad preparations
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/prep_door_charlie.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Glass/charlie.rsi
 
 - type: entity
   parent: CMAirlockPrep
@@ -176,4 +179,4 @@
   name: delta squad preparations
   components:
   - type: Sprite
-    sprite: _CM/Structures/Doors/Airlocks/prep_door_delta.rsi
+    sprite: _CM/Structures/Doors/Airlocks/Glass/delta.rsi

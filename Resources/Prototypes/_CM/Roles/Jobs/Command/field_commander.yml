@@ -1,19 +1,15 @@
 - type: job
-  id: FieldCommander
+  id: CMFieldCommander
   name: job-name-fieldcommander
   description: job-description-fieldcommander
-  playTimeTracker: JobFieldCommander
-  requirements:
-  - !type:DepartmentTimeRequirement
-    department: CMCommand
-    time: 36000 # 10 hours
+  playTimeTracker: CMJobFieldCommander
   weight: 10
-  startingGear: CMGearCommandingOfficer
-  icon: "CMJobIconCommandingOfficer"
+  startingGear: CMGearFieldCommander
+  icon: "CMJobIconFieldCommander"
   supervisors: job-supervisors-head-operations
   canBeAntag: false
   accessGroups:
-  - ShipMasterAccess
+  - CMMarineMain
   special:
   - !type:AddComponentSpecial
     components:
@@ -38,12 +34,9 @@
     - type: MarineOrders
 
 - type: startingGear
-  id: CMGearCommandingOfficer
+  id: CMGearFieldCommander
   equipment:
     jumpsuit: CMJumpsuitCO
-    back: CMSatchel
-    shoes: CMShoesLaceupCommander
-    head: CMHeadBeretCO
-    outerClothing: CMCoatOfficer
-    id: CMIDCardCommandingOfficer
-    ears: CMHeadsetSeniorCommand
+    back: CMSatchelGeneral
+    shoes: ClothingShoesBootsLaceup
+    ears: CMHeadsetFieldCommand

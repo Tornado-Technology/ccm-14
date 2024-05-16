@@ -1,0 +1,13 @@
+- type: accessLevel
+  id: CMAccessRequisitions
+  name: cm-department-Requisitions
+
+- type: accessGroup
+  id: CMCargoTech
+  tags:
+  - CMAccessMaint
+  - CMAccessRequisitions
+  - CMAccessAlpha
+  - CMAccessBravo
+  - CMAccessCharlie
+  - CMAccessDelta

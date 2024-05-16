@@ -1,12 +1,12 @@
 - type: job
-  id: Kseno
-  name: job-name-kseno
-  description: job-description-kseno
-  playTimeTracker: JobKseno
+  id: CMXeno
+  name: job-name-xeno
+  description: job-description-xeno
+  playTimeTracker: CMJobXeno
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 0
   canBeAntag: false
-  icon: "JobIconKseno"
-  supervisors: job-supervisors-quinn
+  icon: "CMJobIconXeno"
+  supervisors: job-supervisors-queen
   jobEntity: MobLarvaXeno

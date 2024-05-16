@@ -1,14 +1,14 @@
 - type: job
   id: CMPilotDropship
-  name: job-name-pilotnormandy
-  description: job-description-pilotnormandy
-  playTimeTracker: JobPilotNormandy
+  name: job-name-pilotdropship
+  description: job-description-pilotdropship
+  playTimeTracker: CMJobPilotDropship
   startingGear: CMGearPilotDropship
   icon: "CMJobIconPilotDropship"
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
   access:
-  - Pilot
+  - CMShipPilot
   special:
   - !type:AddComponentSpecial
     components:
@@ -21,13 +21,10 @@
       pilot: 2
       powerLoader: 2
       surgery: 1
-    - type: MarineOrders
 
 - type: startingGear
   id: CMGearPilotDropship
   equipment:
-    jumpsuit: CMJumpsuitPilot
-    back: CMSatchel
-    shoes: CMBootsBlackFilled
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetJTAC
     id: CMIDCardPilotDropship
-    ears: CMHeadsetPilot

@@ -1,0 +1,27 @@
+- type: job
+  id: CMBravoTech
+  name: job-name-bravo-tech
+  description: job-description-bravotech
+  playTimeTracker: CMJobBravoTech
+  startingGear: CMGearBravoTech
+  icon: "CMJobIconBravoTech"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMBravoTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      constructiopn: 2
+      engineer: 2
+      jtac: 1
+      vehicle: 1
+
+- type: startingGear
+  id: CMGearBravoTech
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetBravoTech
+    id: CMDogtagBravoTech

@@ -1,0 +1,97 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineBoxSniper
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Boxes/ammo_box.rsi
+  - type: MagazineVisuals
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+
+# Desert boxes base
+# TODO заменить коробки для снайперки
+- type: entity
+  parent: CMBaseMagazineBoxSniper
+  id: CMMagazineBoxDesertSniper60
+  name: ammunition box sniper DESERT (.60)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_60
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 50
+    proto: CMCartridgeSniper60
+    whitelist:
+      tags:
+      - CMCartridgeSniper60
+
+- type: entity
+  parent: CMBaseMagazineBoxSniper
+  id: CMMagazineBoxDesertSniperAP60
+  name: ammunition box sniper AP DESERT (.60)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magdap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_60
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 50
+    proto: CMCartridgeSniperAP60
+    whitelist:
+      tags:
+      - CMCartridgeRifle1020
+
+# Jungle boxes
+- type: entity
+  parent: CMMagazineBoxDesertSniper60
+  id: CMMagazineBoxJungleSniper60
+  name: ammunition box sniper JUNGLE (.60)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_60
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertSniperAP60
+  id: CMMagazineBoxJungleSniperAP60
+  name: ammunition box sniper AP JUNGLE (.60)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: maggap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_60
+  - type: MagazineVisuals
+    magState: maggap

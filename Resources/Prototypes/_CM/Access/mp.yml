@@ -1,0 +1,19 @@
+﻿- type: accessLevel
+  id: CMAccessBrig
+  name: id-card-access-level-brig
+
+- type: accessGroup
+  id: CMMilitaryPolice
+  tags:
+  - CMAccessEngineering
+  - CMAccessMaint
+  - CMAccessBrig
+  - CMAccessDropship
+  - CMAccessMech
+  - CMAccessMedical
+  - CMAccessAlpha
+  - CMAccessBravo
+  - CMAccessCharlie
+  - CMAccessDelta
+  - CMAccessRequisitions
+  - CMAccessResearch

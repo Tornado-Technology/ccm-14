@@ -1,20 +1,14 @@
 - type: job
-  id: PilotMech
+  id: CMPilotMech
   name: job-name-pilotmech
   description: job-description-pilotmech
-  playTimeTracker: JobPilotMech
-  startingGear: MechPilotGear
+  playTimeTracker: CMJobPilotMech
+  startingGear: CMMechPilotGear
   icon: "CMJobIconPilotDropship"
-  supervisors: job-supervisors-staff-officer
+  supervisors: job-supervisors-field-commander
   canBeAntag: false
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 72000 # 20 hrs
-  - !type:RoleTimeRequirement
-    role: JobPilotNormandy
-    time: 18000 # 5 hrs
   access:
-  - Pilot
+  - CMMechPilot
   special:
   - !type:AddComponentSpecial
     components:
@@ -27,13 +21,10 @@
       pilot: 2
       powerLoader: 2
       surgery: 1
-    - type: MarineOrders
 
 - type: startingGear
-  id: MechPilotGear
+  id: CMMechPilotGear
   equipment:
-    jumpsuit: CMJumpsuitPilot
-    back: CMSatchel
-    shoes: CMBootsBlackFilled
-    id: PilotMechIDCard
-    ears: CMHeadsetPilot
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetJTAC
+    id: CMIDCardPilotMech

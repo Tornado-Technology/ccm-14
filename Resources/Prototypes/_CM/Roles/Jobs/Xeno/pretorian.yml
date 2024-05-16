@@ -1,0 +1,12 @@
+- type: job
+  id: CMPretorian
+  name: job-name-pretorian
+  description: job-description-pretorian
+  playTimeTracker: JobPretor
+  icon: "CMJobIconPretor"
+  supervisors: job-supervisors-queen
+  jobEntity: CMMobPraetorianXeno
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMAccessXeno

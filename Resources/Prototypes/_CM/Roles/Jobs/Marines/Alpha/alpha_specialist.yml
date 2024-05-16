@@ -1,0 +1,30 @@
+- type: job
+  id: CMAlphaSpecialist
+  name: job-name-alpha-specialist
+  description: job-description-alphaspecialist
+  playTimeTracker: CMJobAlphaSpecialist
+  startingGear: CMGearAlphaSpecialist
+  icon: "CMJobIconAlphaSpecialist"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMAlphaSpec
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      cqc: 1
+      construction: 1
+      endurance: 2
+      engineer: 1
+      jtac: 1
+      meleeWeapons: 1
+      specialistWeapons: 1
+
+- type: startingGear
+  id: CMGearAlphaSpecialist
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetAlpha
+    id: CMDogtagAlphaSpec

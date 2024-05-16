@@ -1,20 +1,14 @@
 - type: job
   id: CMPilotGunship
-  name: job-name-pilotraptor
-  description: job-description-pilotraptor
-  playTimeTracker: JobPilotRaptor
+  name: job-name-pilot-gunship
+  description: job-description-pilotgunship
+  playTimeTracker: CMJobPilotGunship
   startingGear: CMGearPilotGunship
-  icon: "CMJobIconPilotGunship"
+  icon: "CMJobIconPilotDropship"
   supervisors: job-supervisors-staff-officer
   canBeAntag: false
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 72000 # 20 hrs
-  - !type:RoleTimeRequirement
-    role: JobPilotNormandy
-    time: 18000 # 5 hrs
   access:
-  - Pilot
+  - CMShipPilot
   special:
   - !type:AddComponentSpecial
     components:
@@ -27,13 +21,10 @@
       pilot: 2
       powerLoader: 2
       surgery: 1
-    - type: MarineOrders
 
 - type: startingGear
   id: CMGearPilotGunship
   equipment:
-    jumpsuit: CMJumpsuitPilot
-    back: CMSatchel
-    shoes: CMBootsBlackFilled
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetJTAC
     id: CMIDCardPilotGunship
-    ears: CMHeadsetPilot

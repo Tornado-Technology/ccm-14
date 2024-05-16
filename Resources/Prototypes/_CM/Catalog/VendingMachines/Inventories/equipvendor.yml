@@ -2,10 +2,8 @@
   id: EquipVendInventory
   startingInventory:
     ClothingShoesBootsMarine: 4
-    ClothingUniformJumpsuitMarine: 4
     CMHandsBlack: 4
     ClothingHeadsetMarineAlfa: 4
-    ClothingHeadHelmetMarine: 4
     BoxMRPFilled: 4
     ClothingOuterArmorMarineLight: 4
     ClothingOuterArmorMarineMedium: 4

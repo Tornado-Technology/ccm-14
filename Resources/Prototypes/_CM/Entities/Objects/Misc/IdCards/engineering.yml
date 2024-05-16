@@ -1,0 +1,7 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardShipEngineer
+  name: maintenance tech's ID card
+  components:
+  - type: PresetIdCard
+    job: CMShipEngineer

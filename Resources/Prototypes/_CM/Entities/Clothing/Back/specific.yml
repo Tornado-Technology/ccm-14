@@ -1,0 +1,117 @@
+﻿- type: entity
+  parent: Clothing
+  id: CMFlamethrowerTank
+  name: FlamethrowerTank name
+  description: FlamethrowerTank desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Backpacks\Marines\flamethrowertank.rsi
+    layers:
+    - state: icon
+    - state: full
+# TODO CMCorvax Обновить состояние half-full после обновления для ёмкостей с жидкостью
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    quickEquip: true
+    slots: back
+    sprite: _CM\Clothing\Back\Backpacks\Marines\flamethrowertank.rsi
+  - type: SolutionAmmoProvider
+    solutionId: tank
+    proto: CMFlamethrowerProjectile
+    deleteOnSpawn: true
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 2000
+        reagents:
+        - ReagentId: Napalm
+          Quantity: 2000
+  - type: SolutionTransfer
+    transferAmount: 1
+    maxTransferAmount: 1
+    minTransferAmount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 100
+  - type: ExaminableSolution
+    solution: tank
+  - type: Tag
+    tags:
+    - CMFlamethrowerTank
+
+- type: entity
+  parent: CMBackpackBase
+  id: CMBackpackMortar
+  name: USCM mortar shell backpack
+  description: A backpack specifically designed to hold ammunition for the M402 mortar.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Backpacks\Marines\mortar.rsi
+  - type: Storage
+    whitelist:
+      tags:
+      - CMMortarShell
+# TODO Проверить правильность актуального тега для мортиры!
+
+- type: entity
+  parent: CMBackpackBase
+  id: CMBackpackWelder
+  name: USCM technician welderpack
+  description: A specialized backpack worn by USCM technicians. It carries a fueltank for quick welder refueling and use.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Backpacks\Marines\welder.rsi
+  - type: ExaminableSolution
+    solution: tank
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 500
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 500
+  - type: ReagentTank
+    tankType: Fuel
+  - type: DrainableSolution
+    solution: tank
+  - type: SolutionTransfer
+    transferAmount: 50
+    maxTransferAmount: 100
+    minTransferAmount: 10
+    canChangeTransferAmount: true
+  - type: RefillableSolution
+    solution: tank
+  - type: DrawableSolution
+    solution: tank
+
+- type: entity
+  parent: CMSatchelBase
+  id: CMSatchelWelder
+  name: USCM technician welderSatchel
+  description: A specialized Satchel worn by USCM technicians. It carries a fueltank for quick welder refueling and use.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Back\Satchels\Marines\welder.rsi
+  - type: ExaminableSolution
+    solution: tank
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 250
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 250
+  - type: ReagentTank
+    tankType: Fuel
+  - type: DrainableSolution
+    solution: tank
+  - type: SolutionTransfer
+    transferAmount: 25
+    maxTransferAmount: 50
+    minTransferAmount: 10
+    canChangeTransferAmount: true
+  - type: RefillableSolution
+    solution: tank
+  - type: DrawableSolution
+    solution: tank

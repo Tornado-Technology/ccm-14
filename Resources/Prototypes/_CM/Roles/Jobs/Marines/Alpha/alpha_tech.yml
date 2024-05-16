@@ -1,0 +1,27 @@
+- type: job
+  id: CMAlphaTech
+  name: job-name-alpha-tech
+  description: job-description-alphatech
+  playTimeTracker: CMJobAlphaTech
+  startingGear: CMGearAlphaTech
+  icon: "CMJobIconAlphaTech"
+  supervisors: job-supervisors-commander
+  joinNotifyCrew: false
+  canBeAntag: false
+  accessGroups:
+  - CMAlphaTech
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      constructiopn: 2
+      engineer: 2
+      jtac: 1
+      vehicle: 1
+
+- type: startingGear
+  id: CMGearAlphaTech
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetAlphaTech
+    id: CMDogtagAlphaTech

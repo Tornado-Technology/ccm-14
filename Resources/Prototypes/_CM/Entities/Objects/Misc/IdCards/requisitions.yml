@@ -1,0 +1,7 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardCargoTech
+  name: cargo tech's ID card
+  components:
+  - type: PresetIdCard
+    job: CMRigger

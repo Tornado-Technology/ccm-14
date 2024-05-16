@@ -1,13 +1,88 @@
+# Desert M10 base
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHelmetMarine
-  name: M10 pattern marine helmet
+  id: CMArmorDesertHelmetM10
+  name: M10 Pattern Marine Helmet
   description: A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Head/Helmets/helmet.rsi
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\standard.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Head/Helmets/helmet.rsi
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\standard.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,2,1
+    blacklist:
+      tags:
+      - Pouch
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Caustic: 0.95
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Tag
+    tags:
+    - HidesHair
+
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM10Medic
+  name: M10 Medic Helmet
+  description: A special variant of the M10 Pattern Helmet worn by the medic marines of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\med.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\med.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM10MP
+  name: M10 Helmet MP
+  description: A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\mp.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\mp.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM10Tech
+  name: M10 Tech Helmet
+  description: A special variant of the M10 Pattern Helmet worn by the engineer marines of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\tech.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m10\tech.rsi
+
+# Desert M3 base
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM3Scout
+  name: M3-S Helmet
+  description: A custom helmet from the M3 series designed to be lightweight and used for recon missions.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m3\scout.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m3\scout.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -16,28 +91,228 @@
         Piercing: 0.9
         Heat: 0.9
         Caustic: 0.9
-  - type: Tag
-    tags:
-    - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadAltyn
-  name: Altyn
-  description: A standard specialist helmet.
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM3G4
+  name: M3-G4 Helmet
+  description: Pairs with the M3-G4 heavy grenadier plating. A distant cousin of the experimental B18 defensive helmet. As such, it also resists some facehugger latching attempts.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Head/Helmets/altyn.rsi
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m3\g4.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Head/Helmets/altyn.rsi
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m3\g4.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+
+# Desert M11 base
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM11
+  name: M11 Pattern Leader Helmet
+  description: A slightly fancier helmet for marine leaders. This one contains a small built-in camera and has cushioning to project your fragile brain.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m11.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m11.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
-        Heat: 0.8
-        Caustic: 0.8
-  - type: Tag
-    tags:
-    - WhitelistChameleon
+        Blunt: 0.92
+        Slash: 0.92
+        Piercing: 0.92
+        Heat: 0.92
+        Caustic: 0.92
+
+# Desert M30 base
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM30P
+  name: M30 Tactical Helmet Pilot
+  description: The M30 Pilot tactical helmet has an left eyepiece filter used to filter tactical data.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m30\pilot.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m30\pilot.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM30T
+  name: M30 Tactical Helmet Tanker
+  description: The M30 Tanker tactical helmet has an left eyepiece filter used to filter tactical data.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m30\tanker.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m30\tanker.rsi
+
+# Desert M35 base
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM35
+  name: M35 Helmet
+  description: A custom helmet from the M3 series designed to be highly flame retardant.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m35.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\m35.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.9
+  # - type: FireProtection
+  #   reduction: 0.1
+# TODO CMCorvax заменить резист heat на FireProtection после апстрима
+
+# Desert M45 base
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorDesertHelmetM45
+  name: M45 helmet name
+  description: M45 helmet name
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\ghillie.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Desert\ghillie.rsi
+
+# Jungle M10
+- type: entity
+  parent: CMArmorDesertHelmetM10
+  id: CMArmorJungleHelmetM10
+  name: M10 Medic Helmet
+  description: A special variant of the M10 Pattern Helmet worn by the medic marines of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\standard.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\standard.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10Medic
+  id: CMArmorJungleHelmetM10Medic
+  name: M10 Medic Helmet
+  description: A special variant of the M10 Pattern Helmet worn by the medic marines of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\med.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\med.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10MP
+  id: CMArmorJungleHelmetM10MP
+  name: M10 Helmet MP
+  description: A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\mp.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\mp.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM10Tech
+  id: CMArmorJungleHelmetM10Tech
+  name: M10 Tech Helmet
+  description: A special variant of the M10 Pattern Helmet worn by the engineer marines of the USCM.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\tech.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m10\tech.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+
+# Jungle M3
+- type: entity
+  parent: CMArmorDesertHelmetM3Scout
+  id: CMArmorJungleHelmetM3Scout
+  name: M3-S Helmet
+  description: A custom helmet from the M3 series designed to be lightweight and used for recon missions.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m3\scout.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m3\scout.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+
+- type: entity
+  parent: CMArmorDesertHelmetM3G4
+  id: CMArmorJungleHelmetM3G4
+  name: M3-G4 Helmet
+  description: Pairs with the M3-G4 heavy grenadier plating. A distant cousin of the experimental B18 defensive helmet. As such, it also resists some facehugger latching attempts.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m3\g4.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m3\g4.rsi
+
+# Jungle M11
+- type: entity
+  parent: CMArmorDesertHelmetM11
+  id: CMArmorJungleHelmetM11
+  name: M11 Pattern Leader Helmet
+  description: A slightly fancier helmet for marine leaders. This one contains a small built-in camera and has cushioning to project your fragile brain.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m11.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m11.rsi
+
+# Jungle M30
+- type: entity
+  parent: CMArmorDesertHelmetM30P
+  id: CMArmorJungleHelmetM30P
+  name: M30 Tactical Helmet Pilot
+  description: The M30 Pilot tactical helmet has an left eyepiece filter used to filter tactical data.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m30\pilot.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m30\pilot.rsi
+
+- type: entity
+  parent: CMArmorDesertHelmetM30T
+  id: CMArmorJungleHelmetM30T
+  name: M30 Tactical Helmet Tanker
+  description: The M30 Tanker tactical helmet has an left eyepiece filter used to filter tactical data.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m30\tanker.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m30\tanker.rsi
+
+# Jungle M35
+- type: entity
+  parent: CMArmorDesertHelmetM35
+  id: CMArmorJungleHelmetM35
+  name: M35 Helmet
+  description: A custom helmet from the M3 series designed to be highly flame retardant.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m35.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\m35.rsi
+
+# Jungle M45
+- type: entity
+  parent: CMArmorDesertHelmetM45
+  id: CMArmorJungleHelmetM45
+  name: M45 helmet name jungle
+  description: M45 helmet name jungle
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\ghillie.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Head\HelmetsByMap\Jungle\ghillie.rsi

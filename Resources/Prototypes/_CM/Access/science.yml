@@ -1,0 +1,10 @@
+- type: accessLevel
+  id: CMAccessResearch
+  name: id-card-access-level-research
+
+- type: accessGroup
+  id: CMResearch
+  tags:
+  - CMAccessMaint
+  - CMAccessResearch
+  - CMAccessMedical

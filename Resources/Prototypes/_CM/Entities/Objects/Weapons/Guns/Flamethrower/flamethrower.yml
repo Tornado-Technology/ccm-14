@@ -1,0 +1,46 @@
+- type: entity
+  parent: BaseItem
+  id: CMWeaponFlamethrowerM240
+  name: m240 Flamethrower name
+  description: m240 Flamethrower desc
+  components:
+  - type: Sprite
+    sprite: _CM\Objects\Weapons\Guns\Flamethrower\m240.rsi
+    state: base
+  - type: Clothing
+    sprite: _CM\Objects\Weapons\Guns\Flamethrower\m240.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    sprite: _CM\Objects\Weapons\Guns\Flamethrower\m240.rsi
+    size: Normal
+  - type: Wieldable
+  - type: Gun
+    projectileSpeed: 6
+    minAngle: 24
+    maxAngle: 45
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/_CM/Weapons/Guns/Gunshots/flamethrower.ogg
+    soundEmpty:
+      path: /Audio/_CM/Weapons/Guns/Empty/flamethrower_empty.ogg
+  - type: GunWieldBonus
+    minAngle: -10
+    maxAngle: -30
+    angleIncrease: -2
+    angleDecay: -10
+  - type: Appearance
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - CMFlamethrowerTank
+  - type: UseDelay
+    delay: 1.5

@@ -1,0 +1,23 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardPilotDropship
+  name: dropship pilot's ID card
+  components:
+  - type: PresetIdCard
+    job: CMPilotDropship
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardPilotGunship
+  name: gunship pilot's ID card
+  components:
+  - type: PresetIdCard
+    job: CMPilotGunship
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardPilotMech
+  name: mech pilot's ID card
+  components:
+  - type: PresetIdCard
+    job: CMPilotMech

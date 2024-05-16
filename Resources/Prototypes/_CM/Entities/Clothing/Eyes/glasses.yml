@@ -1,57 +1,23 @@
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesGlassesWelding
-  name: welding goggles
+  id: CMGlassesTactical
+  name: CMGlassesTactical name
+  description: CMGlassesTactical desc
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Eyes\Glasses\tactical.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Eyes\Glasses\tactical.rsi
+  - type: FlashImmunity
+
+- type: entity
+  parent: ClothingEyesBase
+  id: CMGlassesMeson
+  name: engineering goggles
   description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Eyes/Glasses/weldinggoggles.rsi
+    sprite: _CM\Clothing\Eyes\Glasses\meson.rsi
   - type: Clothing
-    sprite: _CM/Clothing/Eyes/Glasses/weldinggoggles.rsi
+    sprite: _CM\Clothing\Eyes\Glasses\meson.rsi
   - type: EyeProtection
-
-- type: entity
-  parent: ClothingEyesBase
-  id: ClothingEyesGlassesBallistic
-  name: marine ballistic goggles
-  description: Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes.
-  components:
-  - type: Sprite
-    sprite: _CM/Clothing/Eyes/Glasses/ballisticgoggles.rsi
-  - type: Clothing
-    sprite: _CM/Clothing/Eyes/Glasses/ballisticgoggles.rsi
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-
-- type: entity
-  parent: ClothingEyesBase
-  id: ClothingEyesGlassesPrescriptionBallistic
-  name: prescription marine ballistic goggles
-  description: Standard issue USCM goggles. Mostly used to decorate one's helmet. Contains prescription lenses in case you weren't sure if they were lame or not.
-  components:
-  - type: Sprite
-    sprite: _CM/Clothing/Eyes/Glasses/ballisticgoggles.rsi
-  - type: Clothing
-    sprite: _CM/Clothing/Eyes/Glasses/ballisticgoggles.rsi
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-  - type: VisionCorrection
-
-- type: entity
-  parent: ClothingEyesBase
-  id: ClothingEyesGlassesRPG
-  name: Marine RPG glasses
-  description: The Corps may call them Regulation Prescription Glasses but you know them as Rut Prevention Glasses.
-  components:
-  - type: Sprite
-    sprite: _CM/Clothing/Eyes/Glasses/marinerpgglasses.rsi
-  - type: Clothing
-    sprite: _CM/Clothing/Eyes/Glasses/marinerpgglasses.rsi
-  - type: FlashImmunity
-  - type: EyeProtection
-    protectionTime: 5
-  - type: Tag
-    tags:
-    - WhitelistChameleon

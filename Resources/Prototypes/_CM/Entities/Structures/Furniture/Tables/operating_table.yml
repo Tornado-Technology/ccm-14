@@ -5,10 +5,10 @@
   description: Used for advanced medical procedures.
   components:
   - type: Sprite
-    sprite: _CM/Objects/Medical/Surgery/operating_table.rsi
+    sprite: _CM/Objects/Specific/Medical/Surgery/operating_table.rsi
     state: base
     noRot: true
   - type: Icon
-    sprite: _CM/Objects/Medical/Surgery/operating_table.rsi
+    sprite: _CM/Objects/Specific/Medical/Surgery/operating_table.rsi
     state: base
   - type: CMOperatingTable

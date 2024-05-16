@@ -1,0 +1,9 @@
+- type: accessLevel
+  id: CMAccessMedical
+  name: id-card-access-level-medical
+
+- type: accessGroup
+  id: CMMedbay
+  tags:
+  - CMAccessMaint
+  - CMAccessMedical

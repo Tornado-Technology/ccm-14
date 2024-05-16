@@ -1,272 +1,238 @@
-# Marine ------------------------------------------------
+# Command
 - type: statusIcon
   parent: JobIcon
-  id: JobIconAlfaMarine
+  id: CMJobIconHeadOperations
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AlfaMarine
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: comm
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconDeltaMarine
+  id: CMJobIconFieldCommander
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: DeltaMarine
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: field_commander
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconBravoMarine
+  id: CMJobIconStaffOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: BravoMarine
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: staff_officer
+
+# Auxiliary Support
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconPilotDropship
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: p_normandy
+
+# Crew
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconCargoTech
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: cargo_tech
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconCharlieMarine
+  id: CMJobIconDoctor
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: CharlieMarine
-# Medic ---------------------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconAlfaMedic
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AlfaMedic
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: doctor
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconDeltaMedic
+  id: CMJobIconShipEngineer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: DeltaMedic
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: engineer
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconBravoMedic
+  id: CMJobIconMilitaryPolice
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: BravoMedic
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: mp
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconCharlieMedic
+  id: CMJobIconResearcher
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: CharlieMedic
-# Engineer ----------------------------------
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: researcher
+
+# Marine alpha
 - type: statusIcon
   parent: JobIcon
-  id: JobIconAlfaEngineer
+  id: CMJobIconAlphaLeader
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AlfaEngineer
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: alpha_sl
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconDeltaEngineer
+  id: CMJobIconAlphaRifleman
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: DeltaEngineer
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: alpha_rifleman
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconBravoEngineer
+  id: CMJobIconAlphaMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: BravoEngineer
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: alpha_med
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconCharlieEngineer
+  id: CMJobIconAlphaTech
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: CharlieEngineer
-# Commander Garrisons ------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconAlfaCommander
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AlfaCommander
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: alpha_tech
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconDeltaCommander
+  id: CMJobIconAlphaSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: DeltaCommander
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: alpha_spec
+
+# Marine bravo
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconBravoLeader
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: bravo_sl
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconBravoCommander
+  id: CMJobIconBravoRifleman
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: BravoCommander
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: bravo_rifleman
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconCharlieCommander
+  id: CMJobIconBravoMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: CharlieCommander
-# Specialist ----------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconAlfaSpecialist
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AlfaSpecialist
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: bravo_med
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconDeltaSpecialist
+  id: CMJobIconBravoTech
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: DeltaSpecialist
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: bravo_tech
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconBravoSpecialist
+  id: CMJobIconBravoSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: BravoSpecialist
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: bravo_spec
+
+# Marine charlie
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconCharlieLeader
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: charlie_sl
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconCharlieSpecialist
+  id: CMJobIconCharlieRifleman
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: CharlieSpecialist
-# Police --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconMilitaryPoliceman
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Warden
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: charlie_rifleman
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconMilitaryPoliceOfficer
+  id: CMJobIconCharlieMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Polyce
-# Scientist -----------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconMilitaryScientist
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: MilitaryScientist
-# Cargo --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconSupplyOfficer
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: SupplyOfficer
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: charlie_med
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconRigger
+  id: CMJobIconCharlieTech
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Rigger
-# Medic --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconMilitaryMainMedic
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: MilitaryMainMedic
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: charlie_tech
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconMilitaryMedic
+  id: CMJobIconCharlieSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: MilitaryMedic
-# Engineer --------------------------------------
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: charlie_spec
+
+# Marine delta
 - type: statusIcon
   parent: JobIcon
-  id: JobIconChiefShipsEngineer
+  id: CMJobIconDeltaLeader
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: ChiefShipsEngineer
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_sl
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconShipsEngineer
+  id: CMJobIconDeltaRifleman
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: ShipsEngineer
-# Command --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconHeadComm
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Head
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconFieldCommander
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: FieldCommander
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_rifleman
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconStaffOfficer
+  id: CMJobIconDeltaMedic
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: StaffOfficer
-# Pilots --------------------------------------
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconPilotOfficer
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: PilotOfficer
-- type: statusIcon
-  parent: JobIcon
-  id: JobIconPilotRaptor
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: PilotOfficerRaptor
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_med
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconPilotMech
+  id: CMJobIconDeltaTech
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: PilotMech
-# Xeno ----------------------------------------
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_tech
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconKseno
+  id: CMJobIconDeltaSpecialist
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Kseno
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_spec
+
+# Xeno
+- type: statusIcon
+  parent: JobIcon
+  id: CMJobIconXeno
+  icon:
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_spec
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconRuni
+  id: CMJobIconPretor
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Runi
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_spec
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconQuinn
+  id: CMJobIconQuinn
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Quinn
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_spec
 
 - type: statusIcon
   parent: JobIcon
-  id: JobIconPretor
+  id: CMJobIconRuni
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Pretor
+    sprite: /Textures/_CM/Interface/Misc/job_icons.rsi
+    state: delta_spec

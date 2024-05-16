@@ -7,7 +7,7 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: Kseno
+      job_id: CMXeno
     - type: Sprite
       layers:
         - state: green
@@ -22,7 +22,7 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: Pretor
+      job_id: CMPretorian
     - type: Sprite
       layers:
         - state: green
@@ -37,7 +37,7 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: Quinn
+      job_id: CMQueen
     - type: Sprite
       layers:
         - state: green
@@ -51,7 +51,7 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: Runi
+      job_id: CMRuni
     - type: Sprite
       layers:
         - state: green

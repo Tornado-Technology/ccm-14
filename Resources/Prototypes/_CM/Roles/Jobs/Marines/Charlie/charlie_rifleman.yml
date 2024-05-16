@@ -1,19 +1,24 @@
 - type: job
-  id: CharlieMarine
-  name: job-name-charlie-marine
-  description: job-description-charlieamarine
-  playTimeTracker: JobCharlieMarine
-  startingGear: CMGearRifleman
-  icon: "JobIconCharlieMarine"
-  joinNotifyCrew: false
+  id: CMCharlieRifleman
+  name: job-name-charlie-rifleman
+  description: job-description-charliearifleman
+  playTimeTracker: CMJobCharlieRifleman
+  startingGear: CMGearCharlieRifleman
+  icon: "CMJobIconCharlieRifleman"
   supervisors: job-supervisors-commander
+  joinNotifyCrew: false
   canBeAntag: false
   accessGroups:
-  - Rifleman
+  - CMCharlieRifleman
   special:
   - !type:AddComponentSpecial
     components:
-    - type: JobRank
-      job: CharlieMarine
     - type: Skills
   hasIcon: false
+
+- type: startingGear
+  id: CMGearCharlieRifleman
+  equipment:
+    jumpsuit: CMJumpsuitCryo
+    ears: CMHeadsetCharlie
+    id: CMDogtagCharlieRifleman

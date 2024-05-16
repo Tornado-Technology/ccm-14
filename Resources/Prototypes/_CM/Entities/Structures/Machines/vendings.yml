@@ -22,8 +22,6 @@
         amount: 1
       - id: ClothingOuterArmorMarineHeavy
         amount: 1
-      - id: ClothingHeadHelmetMarine
-        amount: 1
     - name: Одежда
       entries:
       - id: ClothingHeadHatBeretEngineering
@@ -33,8 +31,6 @@
       - id: ClothingShoesBootsMarine
         amount: 1
       - id: CMHandsBlack
-        amount: 1
-      - id: ClothingUniformJumpsuitMarine
         amount: 1
       - id: ClothingHandsGlovesColorYellow
         amount: 5
@@ -102,10 +98,6 @@
         amount: 3
     - name: Вооружение
       entries:
-      - id: CMWeaponRifleM4RA
-        amount: 1
-      - id: CMWeaponRifleM41A
-        amount: 1
       - id: CMWeaponSubMachineGunM39
         amount: 1
       - id: CMWeaponSubMachineGunMSG23W-Y
@@ -205,8 +197,6 @@
       entries:
       - id: CMPouchMedicalSoc
         amount: 1
-      - id: CMPouchMedkit
-        amount: 2
       - id: CMPouchFirstResponder
         amount: 2
       - id: CMPouchMedical
@@ -214,10 +204,6 @@
 
     - name: Вооружение
       entries:
-      - id: CMWeaponRifleM4RA
-        amount: 1
-      - id: CMWeaponRifleM41A
-        amount: 1
       - id: CMWeaponSubMachineGunM39
         amount: 1
       - id: CMWeaponSubMachineGunMSG23W-Y
@@ -270,13 +256,9 @@
         amount: 1
     - name: Одежда
       entries:
-      - id: ClothingUniformJumpsuitMarine
-        amount: 1
       - id: CMHandsBlack
         amount: 1
       - id: ClothingShoesBootsMarine
-        amount: 1
-      - id: ClothingHeadHelmetMarine
         amount: 1
       - id: ClothingHeadAltyn
         amount: 1
@@ -287,8 +269,6 @@
       - id: ClothingHeadBeretPurple
         amount: 1
       - id: ClothingHeadBeretLightBlue
-        amount: 1
-      - id: ClothingHeadBeretYellow
         amount: 1
       - id: ClothingHeadBeretRed
         amount: 1
@@ -340,10 +320,6 @@
         amount: 1
     - name: Вооружение
       entries:
-      - id: CMWeaponRifleM4RA
-        amount: 1
-      - id: CMWeaponRifleM41A
-        amount: 1
       - id: CMWeaponSubMachineGunM39
         amount: 1
       - id: CMWeaponSubMachineGunMSG23W-Y
@@ -399,13 +375,9 @@
       entries:
       - id: ClothingOuterArmorSPEC
         amount: 1
-      - id: ClothingUniformJumpsuitMarine
-        amount: 1
       - id: CMHandsBlack
         amount: 1
       - id: ClothingShoesBootsMarine
-        amount: 1
-      - id: ClothingHeadHelmetMarine
         amount: 1
       - id: ClothingHeadBeretWhite
         amount: 1
@@ -414,8 +386,6 @@
       - id: ClothingHeadBeretPurple
         amount: 1
       - id: ClothingHeadBeretLightBlue
-        amount: 1
-      - id: ClothingHeadBeretYellow
         amount: 1
       - id: ClothingHeadBeretRed
         amount: 1
@@ -467,10 +437,6 @@
         amount: 1
     - name: Вооружение
       entries:
-      - id: CMWeaponRifleM4RA
-        amount: 1
-      - id: CMWeaponRifleM41A
-        amount: 1
       - id: CMWeaponSubMachineGunM39
         amount: 1
       - id: CMWeaponSubMachineGunMSG23W-Y
@@ -632,8 +598,6 @@
       entries:
       - id: CMWeaponDisablerSMG
         amount: 5
-      - id: CMWeaponRifleM41A
-        amount: 4
       - id: MagazineRifleM41A
         amount: 16
     - name: Утилиты

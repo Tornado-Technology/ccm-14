@@ -1,7 +1,6 @@
 - type: vendingMachineInventory
   id: EquipSquadLeaderVendInventory
   startingInventory:
-    ClothingUniformJumpsuitMarine: 1
     CMHandsBlack: 1
     ClothingShoesBootsMarine: 1
     BoxMRPFilled: 1
@@ -9,12 +8,10 @@
     FireExtinguisherMarine: 1
     ClothingOuterPrototypeC: 1
     ClothingOuterArmorSPEC: 1
-    ClothingHeadHelmetMarine: 1
     ClothingHeadBeretWhite: 1
     ClothingHeadBeretDark: 1
     ClothingHeadBeretPurple: 1
     ClothingHeadBeretLightBlue: 1
-    ClothingHeadBeretYellow: 1
     ClothingHeadBeretRed: 1
     ClothingHeadBeretMilitary: 1
     ClothingHeadBeretGray: 1
@@ -28,7 +25,6 @@
     ClothingMaskCoif: 1
     WeaponRifleM4RA: 1
     MagazineRifleM4RA: 5
-    CMWeaponRifleM41A: 1
     MagazineRifleM41A: 10
     WeaponSubMachineGunM39: 1
     MagazineRifleM39: 5

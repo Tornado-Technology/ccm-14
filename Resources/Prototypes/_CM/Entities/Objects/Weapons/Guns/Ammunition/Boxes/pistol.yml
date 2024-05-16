@@ -1,0 +1,98 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: CMBaseMagazineBoxPistol
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Boxes/ammo_box.rsi
+  - type: MagazineVisuals
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    mayTransfer: true
+
+# Desert boxes base
+# TODO пистолетам заменить спрайт коробки
+- type: entity
+  parent: CMBaseMagazineBoxPistol
+  id: CMMagazineBoxDesertPistol9
+  name: ammunition box DESERT (9mm)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magd-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_9
+  - type: MagazineVisuals
+    magState: magd
+  - type: BallisticAmmoProvider
+    capacity: 180
+    proto: CMCartridgePistol9
+    whitelist:
+      tags:
+      - CMCartridgePistol9
+
+- type: entity
+  parent: CMBaseMagazineBoxPistol
+  id: CMMagazineBoxDesertPistolAP9
+  name: ammunition box AP DESERT (9mm)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-d
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magdap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_9
+  - type: MagazineVisuals
+    magState: magdap
+  - type: BallisticAmmoProvider
+    capacity: 180
+    proto: CMCartridgePistolAP9
+    whitelist:
+      tags:
+      - CMCartridgePistol9
+
+# Jungle boxes
+- type: entity
+  parent: CMMagazineBoxDesertPistol9
+  id: CMMagazineBoxJunglePistol9
+  name: ammunition box JUNGLE (9mm)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magg-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_9
+  - type: MagazineVisuals
+    magState: magg
+
+- type: entity
+  parent: CMMagazineBoxDesertPistolAP9
+  id: CMMagazineBoxJunglePistolAP9
+  name: ammunition box AP JUNGLE (9mm)
+  components:
+  - type: Sprite
+    layers:
+    - state: base-g
+      map: ["enum.GunVisualLayers.Base"]
+    - state: maggap-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ap
+    - state: band_9
+  - type: MagazineVisuals
+    magState: maggap

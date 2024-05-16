@@ -356,7 +356,6 @@
         type: StrippableBoundUserInterface
       enum.CMSurgeryUIKey.Key:
         type: CMSurgeryBui
-  - type: ShowJobIcons
   - type: Huggable
   - type: Tackleable
   - type: Tackle

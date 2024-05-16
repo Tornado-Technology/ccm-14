@@ -1,0 +1,37 @@
+- type: entity
+  abstract: true
+  parent: BaseCartridge
+  id: CMBaseCartridgeMagnum
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    state: base
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: Tag
+    tags:
+      - CartridgeMagnum
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeMagnum
+  id: CMCartridgeMagnum45
+  name: cartridge (.45)
+  components:
+  - type: CartridgeAmmo
+    proto: CMBulletMagnum45
+
+- type: entity
+  noSpawn: true
+  parent: CMBaseCartridgeMagnum
+  id: CMCartridgeMagnumAP45
+  name: cartridge AP (.45)
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    state: ap
+    map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: CMBulletMagnumAP45

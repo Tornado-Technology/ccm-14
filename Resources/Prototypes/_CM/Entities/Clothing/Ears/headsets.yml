@@ -1,0 +1,453 @@
+- type: entity
+  abstract: true
+  parent: [ Clothing, ShowSecurityIcons ]
+  id: CMHeadsetBase
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Ears\Headsets\base.rsi
+    state: generic_headset
+  - type: Clothing
+    sprite: _CM\Clothing\Ears\Headsets\base.rsi
+    slots:
+    - ears
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 4
+  - type: Item
+    size: Small
+  - type: GuideHelp
+    guides:
+    - Radio
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetSeniorCommand
+  name: marine senior command headset
+  description: Issued only to senior command staff.
+  components:
+  - type: Sprite
+    state: head_headset
+  - type: EncryptionKeyHolder
+    keySlots: 5
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommand
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyMasterShip
+      - CMEncryptionKeyMasterSquad
+      - CMEncryptionKeyJTAC
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetFieldCommand
+  name: CMHeadsetFieldCommand name
+  description: CMHeadsetFieldCommand desc
+  components:
+  - type: Sprite
+    state: fc_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommand
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyMasterSquad
+      - CMEncryptionKeyJTAC
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetStaffOfficer
+  name: CMHeadsetStaffOfficer name
+  description: CMHeadsetStaffOfficer desc
+  components:
+  - type: Sprite
+    state: so_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommand
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyMasterShip
+      - CMEncryptionKeyJTAC
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetQM
+  name: quartermaster radio headset
+  description: A headset used by the quartermaster for controlling their slave(s).
+  components:
+  - type: Sprite
+    state: qm_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+      - CMEncryptionKeyRequisition
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetCE
+  name: chief engineer's headset
+  description: The headset of the guy in charge of spooling engines, managing MTs, and tearing up the floor for scrap metal. Of robust and sturdy construction.
+  components:
+  - type: Sprite
+    state: ce_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCE
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetCMO
+  name: chief medical officer's headset
+  description: A headset issued to the top brass of medical professionals.
+  components:
+  - type: Sprite
+    state: cmo_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCMO
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetOMP
+  name: marine military police radio headset
+  description: This is used by marine military police members.
+  components:
+  - type: Sprite
+    state: omp_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyOMP
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetShipEngineer
+  name: engineering radio headset
+  description: Useful for coordinating maintenance bars and orbital bombardments. Of robust and sturdy construction.
+  components:
+  - type: Sprite
+    state: eng_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyEngineer
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetRequisition
+  name: supply radio headset
+  description: Used by the lowly Cargo Technicians of the USCM, light weight and portable.
+  components:
+  - type: Sprite
+    state: req_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyRequisition
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetMedical
+  name: medical radio headset
+  description: A headset used by the highly trained staff of the medbay.
+  components:
+  - type: Sprite
+    state: med_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyMedical
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetResearcher
+  name: researcher radio headset
+  description: A headset used by medbay's skilled researchers.
+  components:
+  - type: Sprite
+    state: rnd_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyResearcher
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetMP
+  name: marine military police radio headset
+  description: This is used by marine military police members.
+  components:
+  - type: Sprite
+    state: sec_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyMP
+
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetJTAC
+  name: JTACK name
+  description: JTACK desc
+  components:
+  - type: Sprite
+    state: jtac_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+      - CMEncryptionKeyJTAC
+
+# Alpha
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetAlpha
+  name: marine alpha radio headset
+  description: This is used by Alpha squad members.
+  components:
+  - type: Sprite
+    state: alpha_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyAlpha
+
+- type: entity
+  parent: CMHeadsetAlpha
+  id: CMHeadsetAlphaLeader
+  name: marine alpha leader radio headset
+  description: This is used by the marine Alpha squad leader.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyJTAC
+      - CMEncryptionKeyAlpha
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+
+- type: entity
+  parent: CMHeadsetAlpha
+  id: CMHeadsetAlphaTech
+  name: marine alpha engineer radio headset
+  description: This is used by the marine Alpha combat engineers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyAlpha
+      - CMEncryptionKeyEngineer
+      - CMEncryptionKeyCommon
+
+- type: entity
+  parent: CMHeadsetAlpha
+  id: CMHeadsetAlphaMedic
+  name: marine alpha corpsman radio headset
+  description: This is used by the marine Alpha combat medics.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyAlpha
+      - CMEncryptionKeyMedical
+      - CMEncryptionKeyCommon
+
+# Bravo
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetBravo
+  name: marine bravo radio headset
+  description: This is used by Bravo squad members.
+  components:
+  - type: Sprite
+    state: bravo_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyBravo
+
+- type: entity
+  parent: CMHeadsetBravo
+  id: CMHeadsetBravoLeader
+  name: marine bravo leader radio headset
+  description: This is used by the marine Bravo squad leader.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyJTAC
+      - CMEncryptionKeyBravo
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+
+- type: entity
+  parent: CMHeadsetBravo
+  id: CMHeadsetBravoTech
+  name: marine bravo engineer radio headset
+  description: This is used by the marine Bravo combat engineers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyBravo
+      - CMEncryptionKeyEngineer
+      - CMEncryptionKeyCommon
+
+- type: entity
+  parent: CMHeadsetBravo
+  id: CMHeadsetBravoMedic
+  name: marine bravo corpsman radio headset
+  description: This is used by the marine Bravo combat medics.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyBravo
+      - CMEncryptionKeyMedical
+      - CMEncryptionKeyCommon
+
+# Delta
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetDelta
+  name: marine delta radio headset
+  description: This is used by Delta squad members.
+  components:
+  - type: Sprite
+    state: delta_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyDelta
+
+- type: entity
+  parent: CMHeadsetDelta
+  id: CMHeadsetDeltaLeader
+  name: marine delta leader radio headset
+  description: This is used by the marine Delta squad leader.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyJTAC
+      - CMEncryptionKeyDelta
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+
+- type: entity
+  parent: CMHeadsetDelta
+  id: CMHeadsetDeltaTech
+  name: marine delta engineer radio headset
+  description: This is used by the marine Delta combat engineers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyDelta
+      - CMEncryptionKeyEngineer
+      - CMEncryptionKeyCommon
+
+- type: entity
+  parent: CMHeadsetDelta
+  id: CMHeadsetDeltaMedic
+  name: marine delta corpsman radio headset
+  description: This is used by the marine Delta combat medics.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyDelta
+      - CMEncryptionKeyMedical
+      - CMEncryptionKeyCommon
+
+# Charlie
+- type: entity
+  parent: CMHeadsetBase
+  id: CMHeadsetCharlie
+  name: marine charlie radio headset
+  description: This is used by Charlie squad members.
+  components:
+  - type: Sprite
+    state: charlie_headset
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCharlie
+
+- type: entity
+  parent: CMHeadsetCharlie
+  id: CMHeadsetCharlieLeader
+  name: marine charlie leader radio headset
+  description: This is used by the marine Charlie squad leader.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyJTAC
+      - CMEncryptionKeyCharlie
+      - CMEncryptionKeyCommon
+      - CMEncryptionKeyCommand
+
+- type: entity
+  parent: CMHeadsetCharlie
+  id: CMHeadsetCharlieTech
+  name: marine charlie engineer radio headset
+  description: This is used by the marine Charlie combat engineers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCharlie
+      - CMEncryptionKeyEngineer
+      - CMEncryptionKeyCommon
+
+- type: entity
+  parent: CMHeadsetCharlie
+  id: CMHeadsetCharlieMedic
+  name: marine charlie corpsman radio headset
+  description: This is used by the marine Charlie combat medics.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCharlie
+      - CMEncryptionKeyMedical
+      - CMEncryptionKeyCommon
+
+# Other
+- type: entity
+  parent: ClothingHeadset
+  id: CMHeadsetColony
+  name: colony headset
+  description: A standard headset used by colonists.
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Ears\Headsets\base.rsi
+    state: generic_headset
+  - type: Clothing
+    sprite: _CM\Clothing\Ears\Headsets\base.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CMEncryptionKeyCommon

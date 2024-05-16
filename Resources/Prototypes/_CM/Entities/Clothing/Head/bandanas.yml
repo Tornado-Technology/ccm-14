@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingMaskBaseButcherable
+  id: CMMaskBalaclava
+  name: Balaclava skull name
+  description: Balaclava skull name
+  components:
+  - type: Sprite
+    sprite: _CM\Clothing\Mask\balaclava_skull.rsi
+  - type: Clothing
+    sprite: _CM\Clothing\Mask\balaclava_skull.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: HideLayerClothing
+    slots:
+    - Snout
+  - type: Item
+    storedRotation: -90
+  - type: Tag
+    tags:
+    - HidesHair

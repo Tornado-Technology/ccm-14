@@ -28,9 +28,8 @@
   - type: Access
     groups:
     - AllAccess
-    - ShipMasterAccess
-    - Corp
-    - Colony
+    - CMShipMasterAccess
+    - CMMarineMain
     tags:
     - NuclearOperative
     - SyndicateAgent

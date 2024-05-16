@@ -60,7 +60,7 @@
   components:
   - type: BloodPack
   - type: Sprite
-    sprite: _CM/Objects/Medical/blood_pack.rsi
+    sprite: _CM/Objects/Specific/Medical/blood_pack.rsi
     layers:
     - state: bloodpack1
       map: ["enum.SolutionContainerLayers.Fill"]
@@ -70,7 +70,7 @@
       map: ["enum.BloodPackVisuals.Label"]
   - type: Item
     size: Small
-    sprite: _CM/Objects/Medical/blood_pack.rsi
+    sprite: _CM/Objects/Specific/Medical/blood_pack.rsi
   - type: SolutionContainerManager
     solutions:
       pack:

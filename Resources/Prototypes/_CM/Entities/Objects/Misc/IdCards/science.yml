@@ -1,0 +1,7 @@
+﻿- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardResearcher
+  name: researcher's ID card
+  components:
+  - type: PresetIdCard
+    job: CMResearcher

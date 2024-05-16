@@ -1,28 +1,15 @@
 - type: job
-  id: StaffOfficer
+  id: CMStaffOfficer
   name: job-name-staffofficer
   description: job-description-staffofficer
-  playTimeTracker: JobStaffOfficer
-  requirements:
-  # - !type:RoleTimeRequirement
-  #   role: JobMilitaryPoliceOfficer
-  #   time: 3600 # 1 hrs
-  # - !type:RoleTimeRequirement
-  #   role: JobSupplyOfficer
-  #   time: 3600 # 1 hrs
-  - !type:RoleTimeRequirement
-    role: JobFieldCommander
-    time: 3600 # 1 hrs
-  - !type:DepartmentTimeRequirement
-    department: CMCommand
-    time: 3600 # 1 hrs
-  weight: 5
+  playTimeTracker: CMJobStaffOfficer
   startingGear: CMGearStaffOfficer
   icon: "CMJobIconStaffOfficer"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-head-operations
+# TODO CMCorvax проверить соответствие всех supervisors для КАЖДОЙ роли
   canBeAntag: false
   accessGroups:
-  - MarineMain
+  - CMShipMasterAccess
   special:
   - !type:AddComponentSpecial
     components:
@@ -43,9 +30,8 @@
 - type: startingGear
   id: CMGearStaffOfficer
   equipment:
-    jumpsuit: CMJumpsuitBO
-    back: CMSatchelMarine
-    shoes: CMShoesLaceup
-    head: CMHeadCap
+    jumpsuit: CMJumpsuitCO
+    back: CMSatchelGeneral
+    shoes: ClothingShoesBootsLaceup
+    ears: CMHeadsetStaffOfficer
     id: CMIDCardStaffOfficer
-    ears: CMHeadsetLeader
