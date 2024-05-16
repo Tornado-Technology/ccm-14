@@ -7,3 +7,12 @@
   id: CMStandartUniform
   equipment:
     jumpsuit: CMJumpsuitCryo
+
+- type: loadout
+  id: CMMarineFormal
+  equipment: CMGearMarineFormal
+
+- type: startingGear
+  id: CMGearMarineFormal
+  equipment:
+    jumpsuit: CMJumpsuitMarineFormal
